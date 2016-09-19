@@ -1,5 +1,10 @@
-﻿<CurrentSelectionProperties>
+﻿<MultiBoxProperties>
   <Layout>
+    <NoOfRows>6</NoOfRows>
+    <MaxNoOfRowsDropDown>10</MaxNoOfRowsDropDown>
+    <ColWidthLabel>300</ColWidthLabel>
+    <ColWidthDrop>42</ColWidthDrop>
+    <ColWidthData>300</ColWidthData>
     <Frame>
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
@@ -47,12 +52,12 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Selecciones actuales</v>
+        <v>Filtros</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
+      <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
       <AllowMaximize>false</AllowMaximize>
       <AllowInfo>true</AllowInfo>
@@ -68,7 +73,7 @@
       <LockIcon>false</LockIcon>
       <HelpText></HelpText>
       <ObjectId></ObjectId>
-      <ShrinkFrameToData>false</ShrinkFrameToData>
+      <ShrinkFrameToData>true</ShrinkFrameToData>
       <ShowCaption>true</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
@@ -216,40 +221,14 @@
       <ExtendedValues></ExtendedValues>
       <StateName></StateName>
     </Frame>
-    <ShowStatusColumn>true</ShowStatusColumn>
-    <ShowValueColumn>true</ShowValueColumn>
-    <ShowLabelRow>false</ShowLabelRow>
-    <MultiLine>2</MultiLine>
-    <HeaderMultiLine>0</HeaderMultiLine>
-    <ColWidths>
-      <int>300</int>
-      <int>60</int>
-      <int>600</int>
-    </ColWidths>
-    <BkgColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>255</Red>
-          <Green>255</Green>
-          <Blue>255</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
-    </BkgColor>
-    <TextColor></TextColor>
-    <LabelBkgColor>
+    <ReadOnly>false</ReadOnly>
+    <GridStyle>false</GridStyle>
+    <DropDownLimit>false</DropDownLimit>
+    <ClosedColor>
       <Mode>COLORAREA_DOUBLE_COLORS</Mode>
       <Luminosity>85</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
+      <FillPattern>COLORAREA_PATTERN2</FillPattern>
       <PrimaryCol>
         <Col>
           <Red>248</Red>
@@ -262,120 +241,18 @@
       </PrimaryCol>
       <SecondaryCol>
         <Col>
-          <Red>202</Red>
-          <Green>202</Green>
-          <Blue>202</Blue>
+          <Red>235</Red>
+          <Green>235</Green>
+          <Blue>235</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </SecondaryCol>
       <Alpha>255</Alpha>
-    </LabelBkgColor>
-    <LabelTextColor></LabelTextColor>
-    <BorderStyles>
-      <BorderStylesDef>
-        <Top>
-          <LineStyle>64</LineStyle>
-          <Color></Color>
-          <ExtraBorderSpace16>0</ExtraBorderSpace16>
-        </Top>
-        <Bottom>
-          <LineStyle>64</LineStyle>
-          <Color></Color>
-          <ExtraBorderSpace16>0</ExtraBorderSpace16>
-        </Bottom>
-        <Left>
-          <LineStyle>64</LineStyle>
-          <Color></Color>
-          <ExtraBorderSpace16>0</ExtraBorderSpace16>
-        </Left>
-        <Right>
-          <LineStyle>64</LineStyle>
-          <Color></Color>
-          <ExtraBorderSpace16>0</ExtraBorderSpace16>
-        </Right>
-      </BorderStylesDef>
-      <BorderStylesDef></BorderStylesDef>
-    </BorderStyles>
-    <CellStyles>
-      <CellStyleDef>
-        <NumAdjust>2</NumAdjust>
-        <TextAdjust>0</TextAdjust>
-        <DataVerticalAdjust>4</DataVerticalAdjust>
-        <LabelAdjust>0</LabelAdjust>
-        <LabelVerticalAdjust>4</LabelVerticalAdjust>
-        <SizeMod>0</SizeMod>
-        <FontStyleMod>FONTSTYLE_REGULAR</FontStyleMod>
-        <FgCol></FgCol>
-        <BgCol>
-          <Col>
-            <Red>150</Red>
-            <Green>150</Green>
-            <Blue>150</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </BgCol>
-        <BorderStyleIx>0</BorderStyleIx>
-        <CellImageStyleIx>0</CellImageStyleIx>
-        <EditableCell>0</EditableCell>
-        <CellType>LABEL_CELL</CellType>
-        <CellBorders>false</CellBorders>
-        <CellBorderColor></CellBorderColor>
-      </CellStyleDef>
-      <CellStyleDef>
-        <NumAdjust>2</NumAdjust>
-        <TextAdjust>0</TextAdjust>
-        <DataVerticalAdjust>4</DataVerticalAdjust>
-        <LabelAdjust>0</LabelAdjust>
-        <LabelVerticalAdjust>4</LabelVerticalAdjust>
-        <SizeMod>0</SizeMod>
-        <FontStyleMod>FONTSTYLE_REGULAR</FontStyleMod>
-        <FgCol></FgCol>
-        <BgCol>
-          <Col>
-            <Red>255</Red>
-            <Green>255</Green>
-            <Blue>255</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </BgCol>
-        <BorderStyleIx>1</BorderStyleIx>
-        <CellImageStyleIx>0</CellImageStyleIx>
-        <EditableCell>0</EditableCell>
-        <CellType>LABEL_CELL</CellType>
-        <CellBorders>false</CellBorders>
-        <CellBorderColor></CellBorderColor>
-      </CellStyleDef>
-    </CellStyles>
-    <LabelRow>
-      <TextCellContent>
-        <String>Fields</String>
-        <IsNum>false</IsNum>
-        <CellStyleIx>0</CellStyleIx>
-      </TextCellContent>
-      <TextCellContent></TextCellContent>
-      <TextCellContent>
-        <String>Values</String>
-        <IsNum>false</IsNum>
-        <CellStyleIx>0</CellStyleIx>
-      </TextCellContent>
-    </LabelRow>
-    <Striping>
-      <int>1</int>
-    </Striping>
-    <ReadOnly>false</ReadOnly>
-    <ShowEraserIcon>true</ShowEraserIcon>
-    <ShowLockUnlockIcon>false</ShowLockUnlockIcon>
-    <ShowDropdownSelectIcon>true</ShowDropdownSelectIcon>
+    </ClosedColor>
+    <Style>MULTIBOXSTYLE_LIGHT</Style>
   </Layout>
-  <Title>
-    <v>Selecciones actuales</v>
-  </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -465,6 +342,245 @@
     <SheetPrintDrawBackGround>false</SheetPrintDrawBackGround>
     <StrDevModeExtra></StrDevModeExtra>
   </PrintSettings>
-  <ErrorMessageOverrides></ErrorMessageOverrides>
+  <TextAdjust>0</TextAdjust>
+  <NumAdjust>2</NumAdjust>
+  <SortByApplicability>false</SortByApplicability>
+  <MemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Vendedor</v>
+      </Label>
+      <FieldDef>
+        <Name>NOMBREVENDEDOR</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Cliente</v>
+      </Label>
+      <FieldDef>
+        <Name>NAME</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>1</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Genero</v>
+      </Label>
+      <FieldDef>
+        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>1</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Referencia</v>
+      </Label>
+      <FieldDef>
+        <Name>Productos.CODARTICULO</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Color</v>
+      </Label>
+      <FieldDef>
+        <Name>Productos.COLOR</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Talla</v>
+      </Label>
+      <FieldDef>
+        <Name>Productos.TALLA</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+  </MemberAttributes>
   <OnSelectActionItems></OnSelectActionItems>
-</CurrentSelectionProperties>
+  <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+</MultiBoxProperties>

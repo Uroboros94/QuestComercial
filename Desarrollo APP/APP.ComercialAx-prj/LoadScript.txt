@@ -20,59 +20,31 @@ SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
 ///$tab Analisis
+Dimensiones:
 LOAD * INLINE [
     Dimensiones
-    Fecha
-    FechaDoc
-    CO
-    Estado
-    Nit
     Cliente
-    Vendedor
-    Sucursal
-    SucCli
     Genero
-    Linea
     Referencia
-    Entrada
-    Estilo
     Talla
     Color
-	PedFac
-	TipoDocumento
-    Consecutivo
-    CondicionPago
-    BloqueoCupo
-    BloqueoMora
-    BloqueoBloq
+    Causal devolucion
     ];
 
+Calculos:
 LOAD * INLINE [
     Calculos
     Und Pedidos
     Und Ventas
     Und Despachadas
     Und Pendientes
+    % Cumpli. Unds Despachadas
     Vlr Pedidos
     Vlr Ventas
     Vlr Despachado
     Vlr Pendiente
-    DifUnd Pedidos
-    DifVlr Pedidos
-    UndSinInv
-    VlrSinInv
-    Cump. Unds
-    Cump. Pesos
-    Cump. UndDespacho
-    Cump. VlrDespacho
-    SinStkCump. Unds
-    SinStkCump. Pesos
-    Stock
-    UndCompro
-    Vencida
-    Corriente
-    CarteraTotal
-    Cupo
-    Disponible
+    % Cumpli. Pesos Despachado
+    Und Devolucion
+    Vlr devolucion
     ];
     

@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Dia</v>
+        <v>Dimensiones</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -201,12 +201,12 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_SIX</ScrollStyle>
-      <ScrollWidth>38</ScrollWidth>
+      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
+      <ScrollWidth>29</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
-      <ShadowIntensity>SHADOW_NONE</ShadowIntensity>
+      <ShadowIntensity>SHADOW_SOFT</ShadowIntensity>
       <OnActivateActionItems></OnActivateActionItems>
       <OnDeactivateActionItems></OnDeactivateActionItems>
       <Extension></Extension>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <NumAdjust>2</NumAdjust>
     <TextAdjust>0</TextAdjust>
-    <MultiLine>1</MultiLine>
+    <MultiLine>0</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
@@ -246,9 +246,9 @@
       </Right>
     </Borders>
     <MultiColumn>true</MultiColumn>
-    <OrderByRow>true</OrderByRow>
+    <OrderByRow>false</OrderByRow>
     <HideExcluded>false</HideExcluded>
-    <SelectionStyle>SS_USER_PREF</SelectionStyle>
+    <SelectionStyle>SS_LED</SelectionStyle>
     <ImageRepresentation></ImageRepresentation>
     <SoftLock>false</SoftLock>
     <ExcludedValuesMode>0</ExcludedValuesMode>
@@ -260,17 +260,17 @@
     <HierarchySeparator>/</HierarchySeparator>
     <ShowAsTreeView>false</ShowAsTreeView>
     <CurrentInfoURL></CurrentInfoURL>
-    <SuppressSearchHighlight>false</SuppressSearchHighlight>
+    <SuppressSearchHighlight>true</SuppressSearchHighlight>
     <TextColor></TextColor>
     <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Calendario.dia</Name>
+    <Name>Dimensiones</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
-    <v>Dia</v>
+    <v>Dimensiones</v>
   </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
@@ -364,8 +364,8 @@
   <SortCriteria>
     <SortByState>1</SortByState>
     <SortByFrequency>0</SortByFrequency>
-    <SortByNumeric>1</SortByNumeric>
-    <SortByAscii>0</SortByAscii>
+    <SortByNumeric>0</SortByNumeric>
+    <SortByAscii>1</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>
@@ -374,7 +374,7 @@
   <NumberPresentation></NumberPresentation>
   <ExpandedNodes></ExpandedNodes>
   <OnSelectActionItems></OnSelectActionItems>
-  <SuppressAutoSortByState>false</SuppressAutoSortByState>
+  <SuppressAutoSortByState>true</SuppressAutoSortByState>
   <Expressions></Expressions>
   <NullSymbol>-</NullSymbol>
   <MissingSymbol>-</MissingSymbol>

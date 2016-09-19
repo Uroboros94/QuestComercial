@@ -18,16 +18,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </PrimaryCol>
-        <SecondaryCol>
-          <Col>
-            <Red>200</Red>
-            <Green>200</Green>
-            <Blue>200</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </SecondaryCol>
+        <SecondaryCol></SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
       <Font>
@@ -47,7 +38,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Dia</v>
+        <v>Asesor</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,21 +210,13 @@
     <ReadOnly>false</ReadOnly>
     <NumAdjust>2</NumAdjust>
     <TextAdjust>0</TextAdjust>
-    <MultiLine>1</MultiLine>
+    <MultiLine>0</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Top>
-      <Bottom>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Bottom>
+      <Top></Top>
+      <Bottom></Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>
@@ -245,8 +228,8 @@
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </Right>
     </Borders>
-    <MultiColumn>true</MultiColumn>
-    <OrderByRow>true</OrderByRow>
+    <MultiColumn>false</MultiColumn>
+    <OrderByRow>false</OrderByRow>
     <HideExcluded>false</HideExcluded>
     <SelectionStyle>SS_USER_PREF</SelectionStyle>
     <ImageRepresentation></ImageRepresentation>
@@ -266,11 +249,11 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Calendario.dia</Name>
+    <Name>NOMBREVENDEDOR</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
-    <v>Dia</v>
+    <v>Asesor</v>
   </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
@@ -364,8 +347,8 @@
   <SortCriteria>
     <SortByState>1</SortByState>
     <SortByFrequency>0</SortByFrequency>
-    <SortByNumeric>1</SortByNumeric>
-    <SortByAscii>0</SortByAscii>
+    <SortByNumeric>0</SortByNumeric>
+    <SortByAscii>1</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>

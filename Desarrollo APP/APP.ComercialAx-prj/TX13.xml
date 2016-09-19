@@ -1,4 +1,4 @@
-﻿<SliderProperties>
+﻿<TextObjectProperties>
   <Layout>
     <Frame>
       <BorderWidth>0</BorderWidth>
@@ -10,9 +10,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Red>232</Red>
+            <Green>232</Green>
+            <Blue>232</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -28,13 +28,13 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>0</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Arial</FontName>
+        <PointSize1000>18000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>false</Bold>
+        <Bold>true</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Calendario</v>
+        <v>Valor pendiente</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -55,7 +55,7 @@
       <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
       <AllowMaximize>false</AllowMaximize>
-      <AllowInfo>true</AllowInfo>
+      <AllowInfo>false</AllowInfo>
       <PrintIcon>false</PrintIcon>
       <CopyIcon>false</CopyIcon>
       <XLIcon>false</XLIcon>
@@ -78,9 +78,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Red>210</Red>
+            <Green>210</Green>
+            <Blue>210</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>0</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -105,9 +105,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Red>232</Red>
+            <Green>232</Green>
+            <Blue>232</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>0</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -133,8 +133,8 @@
         <PrimaryCol>
           <Col>
             <Red>255</Red>
-            <Green>255</Green>
-            <Blue>255</Blue>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -151,8 +151,8 @@
         <PrimaryCol>
           <Col>
             <Red>255</Red>
-            <Green>255</Green>
-            <Blue>255</Blue>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -173,7 +173,7 @@
       <Light>3FEE666666666666</Light>
       <Dark>3FC3333333333333</Dark>
       <Rainbow>false</Rainbow>
-      <TextAdjustHorizontal>0</TextAdjustHorizontal>
+      <TextAdjustHorizontal>1</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
       <Show></Show>
       <AllowMoveSize>true</AllowMoveSize>
@@ -216,37 +216,14 @@
       <ExtendedValues></ExtendedValues>
       <StateName></StateName>
     </Frame>
-    <NumberPresentation>
-      <Type>DATE</Type>
-      <nDec>10</nDec>
-      <UseThou>0</UseThou>
-      <Fmt>DD/MM/YYYY</Fmt>
-      <Dec></Dec>
-      <Thou></Thou>
-    </NumberPresentation>
-    <BkgMode>BKG_SOLID</BkgMode>
-    <SliderStyle>SLIDER_SOLID</SliderStyle>
-    <Vertical>false</Vertical>
-    <ShowScrollButtons>true</ShowScrollButtons>
-    <ShowTickMarks>true</ShowTickMarks>
-    <ShowTickMarkValues>true</ShowTickMarkValues>
-    <TickMarkPosition>0</TickMarkPosition>
-    <TickMarkAdjust>0</TickMarkAdjust>
-    <SelectionRange>SELRANGE_MULTI</SelectionRange>
-    <ValueMode>VALMODE_DISCRETE</ValueMode>
-    <FixedRange>false</FixedRange>
-    <UseStaticStep>false</UseStaticStep>
-    <Step></Step>
-    <Min></Min>
-    <Max></Max>
-    <NumberOfMajorTicks>-1</NumberOfMajorTicks>
-    <NumberOfMinorTicks>-1</NumberOfMinorTicks>
-    <NumberOfTickLabels>-1</NumberOfTickLabels>
-    <SoftLock>true</SoftLock>
-    <ShowPopupValues>true</ShowPopupValues>
-    <SliderAlpha>255</SliderAlpha>
-    <ScaleBkgAlpha>255</ScaleBkgAlpha>
-    <TickMarkColor>
+    <LegacyHelpModeThatHasNoEffectWhatSoEver>false</LegacyHelpModeThatHasNoEffectWhatSoEver>
+    <TextAdjustHorizontal>1</TextAdjustHorizontal>
+    <TextAdjustVertical>4</TextAdjustVertical>
+    <TopMargin>10</TopMargin>
+    <BottomMargin>10</BottomMargin>
+    <LeftMargin>10</LeftMargin>
+    <RightMargin>10</RightMargin>
+    <TextColor>
       <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
@@ -263,17 +240,17 @@
       </PrimaryCol>
       <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
-    </TickMarkColor>
-    <ScaleBkgColor>
+    </TextColor>
+    <BkgColor>
       <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>255</Red>
-          <Green>255</Green>
-          <Blue>255</Blue>
+          <Red>214</Red>
+          <Green>231</Green>
+          <Blue>248</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -281,90 +258,19 @@
       </PrimaryCol>
       <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
-    </ScaleBkgColor>
-    <SliderColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>229</Red>
-          <Green>229</Green>
-          <Blue>229</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
-    </SliderColor>
-    <ThumbColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>105</Red>
-          <Green>105</Green>
-          <Blue>105</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
-    </ThumbColor>
-    <RightBtnColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>105</Red>
-          <Green>105</Green>
-          <Blue>105</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
-    </RightBtnColor>
-    <LeftBtnColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>105</Red>
-          <Green>105</Green>
-          <Blue>105</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
-    </LeftBtnColor>
-    <LabelOrientation>0</LabelOrientation>
-    <InputStyle>INPUT_STYLE_CALENDAR</InputStyle>
-    <CalendarShowDayNames>false</CalendarShowDayNames>
-    <CalendarShowWeekNumbers>false</CalendarShowWeekNumbers>
-    <ReadOnly>false</ReadOnly>
+    </BkgColor>
+    <BkgImageSettings></BkgImageSettings>
+    <BkgMode>BKG_SOLID</BkgMode>
+    <Bmp enctype="base64"></Bmp>
+    <BkgAlpha>0</BkgAlpha>
+    <Text>
+      <v>=Num(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} (PRECIOUNITARIO * PENDIENTEENTREGA) - (PENDIENTEENTREGA*DESCUENTO)), '$ #.##0')</v>
+    </Text>
+    <ImageRepresentation></ImageRepresentation>
+    <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
+    <AllowHorizontalScrollBar>false</AllowHorizontalScrollBar>
+    <ActionItems></ActionItems>
   </Layout>
   <PrintSettings></PrintSettings>
-  <Name1>
-    <Name>Calendario.%_Fechakey</Name>
-    <Type>PRESENT</Type>
-  </Name1>
-  <Name2></Name2>
-  <SortCriteria></SortCriteria>
-</SliderProperties>
+  <UserSized>true</UserSized>
+</TextObjectProperties>
