@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>=if(sum(CarteraCliente.SALDOVENCIDOTOTAL)&gt;0,'Si','No')</v>
+        <v>if(sum(CarteraCliente.SALDOVENCIDOTOTAL)&gt;0,'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=if(Corriente+Vencido&gt;sum(cupo_credito),'Si','No')</v>
+        <v>if(Corriente+Vencido&gt;sum(CREDITMAX),'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(cupo_credito)</v>
+        <v>sum(CREDITMAX)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -424,7 +424,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -905,11 +905,11 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>AnabloqCupo</v>
+        <v>Análisis Bloqueo Cupo</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -1258,7 +1258,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>241</ColWidth>
+      <ColWidth>288</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1394,7 +1394,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -1811,7 +1811,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2296,7 +2296,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2781,7 +2781,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -3266,7 +3266,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -3757,7 +3757,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>true</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -3921,7 +3921,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.CONDICIONPAGO</Name>
+        <Name>CarteraCliente.TIPOPAGO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3943,7 +3943,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -4129,7 +4129,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -4297,7 +4297,7 @@
         <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>BloqMora</v>
+        <v>Mora Bloq.</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -4315,7 +4315,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -6068,7 +6068,7 @@
       <int>806</int>
       <int>328</int>
       <int>278</int>
-      <int>241</int>
+      <int>288</int>
       <int>363</int>
       <int>384</int>
       <int>363</int>
@@ -6637,7 +6637,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.CONDICIONPAGO</DimName>
+          <DimName>CarteraCliente.TIPOPAGO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6654,7 +6654,7 @@
           <InternalId>0</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=if(sum(CarteraCliente.SALDOVENCIDOTOTAL)&gt;0,'Si','No')</v>
+              <v>if(sum(CarteraCliente.SALDOVENCIDOTOTAL)&gt;0,'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6697,7 +6697,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -7244,7 +7244,7 @@
           <InternalId>2</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=if(Corriente+Vencido&gt;sum(cupo_credito),'Si','No')</v>
+              <v>if(Corriente+Vencido&gt;sum(CREDITMAX),'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7283,11 +7283,11 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>AnabloqCupo</v>
+              <v>Análisis Bloqueo Cupo</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -7636,7 +7636,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>241</ColWidth>
+            <ColWidth>288</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7834,7 +7834,7 @@
           <InternalId>1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(cupo_credito)</v>
+              <v>sum(CREDITMAX)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7877,7 +7877,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -8399,7 +8399,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -8989,7 +8989,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -9579,7 +9579,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -10169,7 +10169,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>

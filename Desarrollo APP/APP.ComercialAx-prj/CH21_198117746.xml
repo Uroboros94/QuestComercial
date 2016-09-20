@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Devoluciones</v>
+        <v>='Und ventas x '&amp;$(vNombreDimension)</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -204,7 +204,7 @@
       <ScrollStyle>SCROLL_SIX</ScrollStyle>
       <ScrollWidth>38</ScrollWidth>
       <AllowModify>true</AllowModify>
-      <CopyImageIcon>false</CopyImageIcon>
+      <CopyImageIcon>true</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
       <ShadowIntensity>SHADOW_NONE</ShadowIntensity>
       <OnActivateActionItems></OnActivateActionItems>
@@ -219,9 +219,9 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Devoluciones</v>
+      <v>='Und ventas x '&amp;$(vNombreDimension)</v>
     </WindowTitle>
-    <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
+    <GraphMode>GRAPH_MODE_LINE</GraphMode>
     <TotalString></TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CantidadVentas)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -263,14 +263,14 @@
       <ShowAsBar>true</ShowAsBar>
       <ShowAsLine>true</ShowAsLine>
       <ShowAsSymbol>false</ShowAsSymbol>
-      <ShowAsTextInChart>false</ShowAsTextInChart>
+      <ShowAsTextInChart>true</ShowAsTextInChart>
       <ShowAsTextOnAxis>false</ShowAsTextOnAxis>
-      <NumbersOnBars>false</NumbersOnBars>
+      <NumbersOnBars>true</NumbersOnBars>
       <BckAsBar>false</BckAsBar>
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Cantidad</v>
+        <v>Ventas</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -280,10 +280,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
-        <nDec>10</nDec>
+        <Type>REAL</Type>
+        <nDec>0</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>###########.###</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -628,313 +628,16 @@
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
       <SymbolMode>SYMBOLMODE_AUTO</SymbolMode>
-      <MiniChartCellSettings>
-        <Dimension></Dimension>
-        <SharedYScale>false</SharedYScale>
-        <SharedXScale>false</SharedXScale>
-        <Layout>
-          <GraphMode>GRAPH_MODE_COMBO</GraphMode>
-          <ShowAsBar>false</ShowAsBar>
-          <ShowAsLine>true</ShowAsLine>
-          <ShowAsSymbol>false</ShowAsSymbol>
-          <ShowAsWhisker>false</ShowAsWhisker>
-          <HighlightMinPoint>true</HighlightMinPoint>
-          <HighlightMaxPoint>true</HighlightMaxPoint>
-          <HighlightStartPoint>false</HighlightStartPoint>
-          <HighlightEndPoint>false</HighlightEndPoint>
-          <ColorMap>
-            <ColorAreaDef>
-              <Mode>COLORAREA_SOLID</Mode>
-              <Luminosity>85</Luminosity>
-              <FillDirection>COLORAREA_HORZ</FillDirection>
-              <FillPattern>COLORAREA_PATTERN1</FillPattern>
-              <PrimaryCol>
-                <Col>
-                  <Red>179</Red>
-                  <Green>179</Green>
-                  <Blue>179</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </PrimaryCol>
-              <SecondaryCol></SecondaryCol>
-              <Alpha>255</Alpha>
-            </ColorAreaDef>
-          </ColorMap>
-          <MinColor>
-            <Mode>COLORAREA_SOLID</Mode>
-            <Luminosity>85</Luminosity>
-            <FillDirection>COLORAREA_HORZ</FillDirection>
-            <FillPattern>COLORAREA_PATTERN1</FillPattern>
-            <PrimaryCol>
-              <Col>
-                <Red>252</Red>
-                <Green>115</Green>
-                <Blue>98</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </PrimaryCol>
-            <SecondaryCol></SecondaryCol>
-            <Alpha>255</Alpha>
-          </MinColor>
-          <MaxColor>
-            <Mode>COLORAREA_SOLID</Mode>
-            <Luminosity>85</Luminosity>
-            <FillDirection>COLORAREA_HORZ</FillDirection>
-            <FillPattern>COLORAREA_PATTERN1</FillPattern>
-            <PrimaryCol>
-              <Col>
-                <Red>104</Red>
-                <Green>152</Green>
-                <Blue>204</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </PrimaryCol>
-            <SecondaryCol></SecondaryCol>
-            <Alpha>255</Alpha>
-          </MaxColor>
-          <StartColor>
-            <Mode>COLORAREA_SOLID</Mode>
-            <Luminosity>85</Luminosity>
-            <FillDirection>COLORAREA_HORZ</FillDirection>
-            <FillPattern>COLORAREA_PATTERN1</FillPattern>
-            <PrimaryCol>
-              <Col>
-                <Red>140</Red>
-                <Green>140</Green>
-                <Blue>140</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </PrimaryCol>
-            <SecondaryCol></SecondaryCol>
-            <Alpha>255</Alpha>
-          </StartColor>
-          <EndColor>
-            <Mode>COLORAREA_SOLID</Mode>
-            <Luminosity>85</Luminosity>
-            <FillDirection>COLORAREA_HORZ</FillDirection>
-            <FillPattern>COLORAREA_PATTERN1</FillPattern>
-            <PrimaryCol>
-              <Col>
-                <Red>140</Red>
-                <Green>140</Green>
-                <Blue>140</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </PrimaryCol>
-            <SecondaryCol></SecondaryCol>
-            <Alpha>255</Alpha>
-          </EndColor>
-          <XAxis></XAxis>
-          <YAxis></YAxis>
-        </Layout>
-      </MiniChartCellSettings>
+      <MiniChartCellSettings></MiniChartCellSettings>
     </ExpressionVisualDef>
   </_ExpressionVisuals>
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Calendario.nomMes</Name>
-        <Type>PRESENT</Type>
+        <Name>Dimensiones despacho</Name>
+        <Type>IS_CYCLIC_GROUP</Type>
       </PseudoDef>
-      <Title>
-        <v>Mes</v>
-      </Title>
-      <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
-      <ShowAll>false</ShowAll>
-      <ShowLabel>true</ShowLabel>
-      <ShowLegend>true</ShowLegend>
-      <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
-      <LabelVerticalAdjust>4</LabelVerticalAdjust>
-      <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
-      <VerticalAdjust>4</VerticalAdjust>
-      <DimCellVariations>
-        <CellVariationDef>
-          <PreMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreMinorBorder>
-          <PostMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostMinorBorder>
-          <MajorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </MajorBorder>
-          <PreTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreTotalBorder>
-          <PostTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostTotalBorder>
-          <SizeMod>0</SizeMod>
-          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
-          <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
-          <BgColor>
-            <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </BgColor>
-          <TotalFgColor></TotalFgColor>
-          <TotalBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </TotalBgColor>
-          <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
-          <OtherFgColor></OtherFgColor>
-          <OtherBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </OtherBgColor>
-        </CellVariationDef>
-      </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
-      <ImageRepresentation></ImageRepresentation>
-      <ExcludedValuesMode>0</ExcludedValuesMode>
-      <DefaultSearchMode>0</DefaultSearchMode>
-      <SelectionStyle>SS_USER_PREF</SelectionStyle>
-      <MaxStringLength>0</MaxStringLength>
-      <AttributeExpressions></AttributeExpressions>
-      <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
-      <Spacing></Spacing>
-      <ColWidth>228</ColWidth>
-      <OverrideGroupSort>false</OverrideGroupSort>
-      <Show></Show>
-      <EnableCondition></EnableCondition>
-      <Comment></Comment>
-      <OtherTotalSpec>
-        <OtherMode>OTHER_OFF</OtherMode>
-        <OtherCounted>
-          <v>10</v>
-        </OtherCounted>
-        <OtherLimit>
-          <v>0.05</v>
-        </OtherLimit>
-        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
-        <ForceBadValueKeeping>true</ForceBadValueKeeping>
-        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
-        <GlobalOtherGrouping>false</GlobalOtherGrouping>
-        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
-        <TotalMode>TOTAL_OFF</TotalMode>
-        <ReferencedExpression></ReferencedExpression>
-      </OtherTotalSpec>
-      <OtherString></OtherString>
-    </ChartDimensionDataDef>
-    <ChartDimensionDataDef>
-      <PseudoDef>
-        <Name>ESTILO</Name>
-        <Type>PRESENT</Type>
-      </PseudoDef>
-      <Title>
-        <v>Estilo</v>
-      </Title>
+      <Title></Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
@@ -1086,379 +789,9 @@
       <MaxStringLength>0</MaxStringLength>
       <AttributeExpressions></AttributeExpressions>
       <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
-      <Spacing></Spacing>
-      <ColWidth>272</ColWidth>
-      <OverrideGroupSort>false</OverrideGroupSort>
-      <Show></Show>
-      <EnableCondition></EnableCondition>
-      <Comment></Comment>
-      <OtherTotalSpec>
-        <OtherMode>OTHER_OFF</OtherMode>
-        <OtherCounted>
-          <v>10</v>
-        </OtherCounted>
-        <OtherLimit>
-          <v>0.05</v>
-        </OtherLimit>
-        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
-        <ForceBadValueKeeping>true</ForceBadValueKeeping>
-        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
-        <GlobalOtherGrouping>false</GlobalOtherGrouping>
-        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
-        <TotalMode>TOTAL_OFF</TotalMode>
-        <ReferencedExpression></ReferencedExpression>
-      </OtherTotalSpec>
-      <OtherString></OtherString>
-    </ChartDimensionDataDef>
-    <ChartDimensionDataDef>
-      <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
-        <Type>PRESENT</Type>
-      </PseudoDef>
-      <Title>
-        <v>Genero</v>
-      </Title>
-      <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
-      <ShowAll>false</ShowAll>
-      <ShowLabel>true</ShowLabel>
-      <ShowLegend>true</ShowLegend>
-      <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
-      <LabelVerticalAdjust>4</LabelVerticalAdjust>
-      <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
-      <VerticalAdjust>4</VerticalAdjust>
-      <DimCellVariations>
-        <CellVariationDef>
-          <PreMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreMinorBorder>
-          <PostMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostMinorBorder>
-          <MajorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </MajorBorder>
-          <PreTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreTotalBorder>
-          <PostTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostTotalBorder>
-          <SizeMod>0</SizeMod>
-          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
-          <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
-          <BgColor>
-            <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </BgColor>
-          <TotalFgColor></TotalFgColor>
-          <TotalBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </TotalBgColor>
-          <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
-          <OtherFgColor></OtherFgColor>
-          <OtherBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </OtherBgColor>
-        </CellVariationDef>
-      </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
-      <ImageRepresentation></ImageRepresentation>
-      <ExcludedValuesMode>0</ExcludedValuesMode>
-      <DefaultSearchMode>0</DefaultSearchMode>
-      <SelectionStyle>SS_USER_PREF</SelectionStyle>
-      <MaxStringLength>0</MaxStringLength>
-      <AttributeExpressions></AttributeExpressions>
-      <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
-      <Spacing></Spacing>
-      <ColWidth>266</ColWidth>
-      <OverrideGroupSort>false</OverrideGroupSort>
-      <Show></Show>
-      <EnableCondition></EnableCondition>
-      <Comment></Comment>
-      <OtherTotalSpec>
-        <OtherMode>OTHER_OFF</OtherMode>
-        <OtherCounted>
-          <v>10</v>
-        </OtherCounted>
-        <OtherLimit>
-          <v>0.05</v>
-        </OtherLimit>
-        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
-        <ForceBadValueKeeping>true</ForceBadValueKeeping>
-        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
-        <GlobalOtherGrouping>false</GlobalOtherGrouping>
-        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
-        <TotalMode>TOTAL_OFF</TotalMode>
-        <ReferencedExpression></ReferencedExpression>
-      </OtherTotalSpec>
-      <OtherString></OtherString>
-    </ChartDimensionDataDef>
-    <ChartDimensionDataDef>
-      <PseudoDef>
-        <Name>CODARTICULO</Name>
-        <Type>PRESENT</Type>
-      </PseudoDef>
-      <Title>
-        <v>Referencia</v>
-      </Title>
-      <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
-      <ShowAll>false</ShowAll>
-      <ShowLabel>true</ShowLabel>
-      <ShowLegend>true</ShowLegend>
-      <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
-      <LabelVerticalAdjust>4</LabelVerticalAdjust>
-      <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
-      <VerticalAdjust>4</VerticalAdjust>
-      <DimCellVariations>
-        <CellVariationDef>
-          <PreMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreMinorBorder>
-          <PostMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostMinorBorder>
-          <MajorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </MajorBorder>
-          <PreTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreTotalBorder>
-          <PostTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostTotalBorder>
-          <SizeMod>0</SizeMod>
-          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
-          <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
-          <BgColor>
-            <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </BgColor>
-          <TotalFgColor></TotalFgColor>
-          <TotalBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </TotalBgColor>
-          <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
-          <OtherFgColor></OtherFgColor>
-          <OtherBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </OtherBgColor>
-        </CellVariationDef>
-      </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
-      <ImageRepresentation></ImageRepresentation>
-      <ExcludedValuesMode>0</ExcludedValuesMode>
-      <DefaultSearchMode>0</DefaultSearchMode>
-      <SelectionStyle>SS_USER_PREF</SelectionStyle>
-      <MaxStringLength>0</MaxStringLength>
-      <AttributeExpressions></AttributeExpressions>
-      <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
+      <MaxNumShown>
+        <v>10</v>
+      </MaxNumShown>
       <Spacing></Spacing>
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
@@ -1687,7 +1020,7 @@
       <RelativePosition></RelativePosition>
       <RelativePositionType>0</RelativePositionType>
       <Transparent>true</Transparent>
-      <Show>true</Show>
+      <Show>false</Show>
       <DockedPosition>POSITION_TOP</DockedPosition>
       <BgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -1732,7 +1065,14 @@
       <HorizontalAdjust>1</HorizontalAdjust>
     </Title>
     <Legend>
-      <Font></Font>
+      <Font>
+        <FontName>Arial</FontName>
+        <PointSize1000>8000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </Font>
       <Position>
         <Left>1120</Left>
         <Top>201</Top>
@@ -1928,7 +1268,7 @@
     <BorderColor></BorderColor>
     <PrimaryAxisIndex>0</PrimaryAxisIndex>
     <SecondaryAxisIndex>0</SecondaryAxisIndex>
-    <MajorDimensionTextMode>HORIZONTAL_TEXT</MajorDimensionTextMode>
+    <MajorDimensionTextMode>TILTED_TEXT</MajorDimensionTextMode>
     <MinorDimensionTextMode>HORIZONTAL_TEXT</MinorDimensionTextMode>
     <HatchedBrushesOnScreen>false</HatchedBrushesOnScreen>
     <HatchedBrushesOnPrinter>true</HatchedBrushesOnPrinter>
@@ -1954,7 +1294,7 @@
     <ScatterShowDirection>false</ScatterShowDirection>
     <ArrowMode>0</ArrowMode>
     <ArrowSize>7</ArrowSize>
-    <ScatterBubbles>false</ScatterBubbles>
+    <ScatterBubbles>true</ScatterBubbles>
     <ScatterFilledBubbles>true</ScatterFilledBubbles>
     <Bubblesize>24</Bubblesize>
     <GridAutoBubbleSize>1</GridAutoBubbleSize>
@@ -1966,9 +1306,9 @@
     <TrendLineWidth>5</TrendLineWidth>
     <ColorMap>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1984,9 +1324,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2002,9 +1342,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2020,9 +1360,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2038,9 +1378,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2056,9 +1396,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2074,9 +1414,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2092,9 +1432,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2110,9 +1450,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2128,9 +1468,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2146,9 +1486,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2164,9 +1504,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2182,9 +1522,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2200,9 +1540,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2218,9 +1558,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2236,9 +1576,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2254,9 +1594,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2272,9 +1612,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2290,9 +1630,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2308,9 +1648,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -2567,7 +1907,7 @@
     <MinorGridStyle>2</MinorGridStyle>
     <GridThickness>3</GridThickness>
     <MinorGridThickness>1</MinorGridThickness>
-    <XAxisScroll>false</XAxisScroll>
+    <XAxisScroll>true</XAxisScroll>
     <ErrorBarWidth>ERROR_BARS_MEDIUMWIDTH</ErrorBarWidth>
     <ErrorBarThickness>ERROR_BARS_THIN</ErrorBarThickness>
     <ErrorBarColor></ErrorBarColor>
@@ -2658,9 +1998,6 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>228</int>
-      <int>272</int>
-      <int>266</int>
       <int>300</int>
       <int>300</int>
     </ColWidths>
@@ -3157,13 +2494,10 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>0</int>
-      <int>2</int>
-      <int>3</int>
-      <int>4</int>
       <int>1</int>
     </InterFieldSortOrder>
     <ExpressionPosition>-1</ExpressionPosition>
-    <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
+    <NumberOfLeftDimensions>255</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
@@ -3193,53 +2527,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Calendario.nomMes</DimName>
-          <ElemNo>
-            <int>6</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAABxA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>ESTILO</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
-          <ElemNo>
-            <int>-2</int>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-            <Blob>
-                BE11amVyAA==
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CODARTICULO</DimName>
+          <DimName>Dimensiones despacho</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3256,7 +2544,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CantidadVentas)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3288,14 +2576,14 @@
             <ShowAsBar>true</ShowAsBar>
             <ShowAsLine>true</ShowAsLine>
             <ShowAsSymbol>false</ShowAsSymbol>
-            <ShowAsTextInChart>false</ShowAsTextInChart>
+            <ShowAsTextInChart>true</ShowAsTextInChart>
             <ShowAsTextOnAxis>false</ShowAsTextOnAxis>
-            <NumbersOnBars>false</NumbersOnBars>
+            <NumbersOnBars>true</NumbersOnBars>
             <BckAsBar>false</BckAsBar>
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Cantidad</v>
+              <v>Ventas</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -3305,10 +2593,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
-              <nDec>10</nDec>
+              <Type>REAL</Type>
+              <nDec>0</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>###########.###</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -3653,116 +2941,7 @@
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
             <SymbolMode>SYMBOLMODE_AUTO</SymbolMode>
-            <MiniChartCellSettings>
-              <Dimension></Dimension>
-              <SharedYScale>false</SharedYScale>
-              <SharedXScale>false</SharedXScale>
-              <Layout>
-                <GraphMode>GRAPH_MODE_COMBO</GraphMode>
-                <ShowAsBar>false</ShowAsBar>
-                <ShowAsLine>true</ShowAsLine>
-                <ShowAsSymbol>false</ShowAsSymbol>
-                <ShowAsWhisker>false</ShowAsWhisker>
-                <HighlightMinPoint>true</HighlightMinPoint>
-                <HighlightMaxPoint>true</HighlightMaxPoint>
-                <HighlightStartPoint>false</HighlightStartPoint>
-                <HighlightEndPoint>false</HighlightEndPoint>
-                <ColorMap>
-                  <ColorAreaDef>
-                    <Mode>COLORAREA_SOLID</Mode>
-                    <Luminosity>85</Luminosity>
-                    <FillDirection>COLORAREA_HORZ</FillDirection>
-                    <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                    <PrimaryCol>
-                      <Col>
-                        <Red>179</Red>
-                        <Green>179</Green>
-                        <Blue>179</Blue>
-                        <Alpha>255</Alpha>
-                      </Col>
-                      <IsCalculated>false</IsCalculated>
-                      <ColorExpr></ColorExpr>
-                    </PrimaryCol>
-                    <SecondaryCol></SecondaryCol>
-                    <Alpha>255</Alpha>
-                  </ColorAreaDef>
-                </ColorMap>
-                <MinColor>
-                  <Mode>COLORAREA_SOLID</Mode>
-                  <Luminosity>85</Luminosity>
-                  <FillDirection>COLORAREA_HORZ</FillDirection>
-                  <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                  <PrimaryCol>
-                    <Col>
-                      <Red>252</Red>
-                      <Green>115</Green>
-                      <Blue>98</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </PrimaryCol>
-                  <SecondaryCol></SecondaryCol>
-                  <Alpha>255</Alpha>
-                </MinColor>
-                <MaxColor>
-                  <Mode>COLORAREA_SOLID</Mode>
-                  <Luminosity>85</Luminosity>
-                  <FillDirection>COLORAREA_HORZ</FillDirection>
-                  <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                  <PrimaryCol>
-                    <Col>
-                      <Red>104</Red>
-                      <Green>152</Green>
-                      <Blue>204</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </PrimaryCol>
-                  <SecondaryCol></SecondaryCol>
-                  <Alpha>255</Alpha>
-                </MaxColor>
-                <StartColor>
-                  <Mode>COLORAREA_SOLID</Mode>
-                  <Luminosity>85</Luminosity>
-                  <FillDirection>COLORAREA_HORZ</FillDirection>
-                  <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                  <PrimaryCol>
-                    <Col>
-                      <Red>140</Red>
-                      <Green>140</Green>
-                      <Blue>140</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </PrimaryCol>
-                  <SecondaryCol></SecondaryCol>
-                  <Alpha>255</Alpha>
-                </StartColor>
-                <EndColor>
-                  <Mode>COLORAREA_SOLID</Mode>
-                  <Luminosity>85</Luminosity>
-                  <FillDirection>COLORAREA_HORZ</FillDirection>
-                  <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                  <PrimaryCol>
-                    <Col>
-                      <Red>140</Red>
-                      <Green>140</Green>
-                      <Blue>140</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </PrimaryCol>
-                  <SecondaryCol></SecondaryCol>
-                  <Alpha>255</Alpha>
-                </EndColor>
-                <XAxis></XAxis>
-                <YAxis></YAxis>
-              </Layout>
-            </MiniChartCellSettings>
+            <MiniChartCellSettings></MiniChartCellSettings>
           </ExpressionVisual>
           <AxisData>
             <Units></Units>

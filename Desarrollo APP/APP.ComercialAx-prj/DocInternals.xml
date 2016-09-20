@@ -378,7 +378,7 @@
     <String>Ventas</String>
     <String>124</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>125</String>
     <String>1</String>
     <String>Productos</String>
@@ -392,12 +392,12 @@
     <String>1</String>
     <String>Productos</String>
     <String>129</String>
+    <String>1</String>
+    <String>Productos</String>
+    <String>130</String>
     <String>2</String>
     <String>Productos</String>
     <String>MasterProductAttributes</String>
-    <String>130</String>
-    <String>1</String>
-    <String>Productos</String>
     <String>131</String>
     <String>1</String>
     <String>Productos</String>
@@ -508,7 +508,7 @@
     <String>Productos</String>
     <String>167</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>168</String>
     <String>1</String>
     <String>MasterProductAttributes</String>
@@ -580,7 +580,7 @@
     <String>MasterProductAttributes</String>
     <String>191</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>192</String>
     <String>1</String>
     <String>CarteraCliente</String>
@@ -679,10 +679,10 @@
     <String>CarteraCliente</String>
     <String>224</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>225</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>226</String>
     <String>1</String>
     <String>DefaultDimensions</String>
@@ -763,14 +763,20 @@
     <String>DefaultDimensions</String>
     <String>252</String>
     <String>1</String>
-    <String>Dimensiones</String>
+    <String>DefaultDimensions</String>
     <String>253</String>
     <String>1</String>
-    <String>Calculos</String>
+    <String>DefaultDimensions</String>
     <String>254</String>
     <String>1</String>
-    <String>Centro de Operaciones</String>
+    <String>Dimensiones</String>
     <String>255</String>
+    <String>1</String>
+    <String>Calculos</String>
+    <String>256</String>
+    <String>1</String>
+    <String>Centro de Operaciones</String>
+    <String>257</String>
     <String>1</String>
     <String>Centro de Operaciones</String>
   </FieldSrcTables>
@@ -1019,6 +1025,7 @@
           <String>CarteraCliente.NOMBREVENCIDA</String>
           <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
+          <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
@@ -1139,6 +1146,7 @@
           <String>CarteraCliente.NOMBREVENCIDA</String>
           <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
+          <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_CENTRO_DE_COSTO</String>
@@ -1219,6 +1227,7 @@
           <String>VALORLIQUIDADO</String>
           <String>VENCIDA</String>
           <String>CREATEDDATETIME</String>
+          <String>CantidadVentas</String>
           <String>Productos.TIPOPRODUCTO</String>
           <String>Productos.PRODUCTRECID</String>
           <String>CATEGORYRECID</String>
@@ -1311,8 +1320,10 @@
           <String>FECHAFACTURA</String>
           <String>FECHAVENCIMIENTO</String>
           <String>MODULOGENERACION</String>
+          <String>SALDOCORRIENTETOTAL</String>
           <String>ULTIMAFECHALIQUIDACION</String>
           <String>VENCIDA</String>
+          <String>CantidadVentas</String>
           <String>Productos.TIPOPRODUCTO</String>
           <String>Productos.PRODUCTRECID</String>
           <String>CATEGORYRECID</String>
@@ -1340,6 +1351,7 @@
           <String>CarteraCliente.CONDICIONPAGO</String>
           <String>CarteraCliente.DIASVENCIDOS</String>
           <String>CarteraCliente.VENCIDA</String>
+          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
           <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
           <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
           <String>CarteraCliente.MODULOGENERACION</String>

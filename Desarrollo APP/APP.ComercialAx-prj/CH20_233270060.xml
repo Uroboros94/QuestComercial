@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>='% Cump. Und despachadas x '&amp;$(vNombreDimension)</v>
+        <v>='Und despachadas x '&amp;$(vNombreDimension)</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,9 +219,9 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>='% Cump. Und despachadas x '&amp;$(vNombreDimension)</v>
+      <v>='Und despachadas x '&amp;$(vNombreDimension)</v>
     </WindowTitle>
-    <GraphMode>GRAPH_MODE_FUNNEL</GraphMode>
+    <GraphMode>GRAPH_MODE_LINE</GraphMode>
     <TotalString></TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>if(($(vUndDespachadas)) &gt; 0, Num((($(vUndDespachadas))/($(vUndPedidas))), '#.##0%'))</v>
+        <v>$(vUndPedidas) - Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -270,7 +270,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Unidades despachadas</v>
+        <v>Despachadas</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -628,48 +628,7 @@
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
       <SymbolMode>SYMBOLMODE_AUTO</SymbolMode>
-      <MiniChartCellSettings>
-        <Dimension></Dimension>
-        <SharedYScale>false</SharedYScale>
-        <SharedXScale>false</SharedXScale>
-        <Layout>
-          <GraphMode>GRAPH_MODE_COMBO</GraphMode>
-          <ShowAsBar>false</ShowAsBar>
-          <ShowAsLine>true</ShowAsLine>
-          <ShowAsSymbol>false</ShowAsSymbol>
-          <ShowAsWhisker>false</ShowAsWhisker>
-          <HighlightMinPoint>true</HighlightMinPoint>
-          <HighlightMaxPoint>true</HighlightMaxPoint>
-          <HighlightStartPoint>false</HighlightStartPoint>
-          <HighlightEndPoint>false</HighlightEndPoint>
-          <ColorMap>
-            <ColorAreaDef>
-              <Mode>COLORAREA_SOLID</Mode>
-              <Luminosity>85</Luminosity>
-              <FillDirection>COLORAREA_HORZ</FillDirection>
-              <FillPattern>COLORAREA_PATTERN1</FillPattern>
-              <PrimaryCol>
-                <Col>
-                  <Red>179</Red>
-                  <Green>179</Green>
-                  <Blue>179</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </PrimaryCol>
-              <SecondaryCol></SecondaryCol>
-              <Alpha>255</Alpha>
-            </ColorAreaDef>
-          </ColorMap>
-          <MinColor></MinColor>
-          <MaxColor></MaxColor>
-          <StartColor></StartColor>
-          <EndColor></EndColor>
-          <XAxis></XAxis>
-          <YAxis></YAxis>
-        </Layout>
-      </MiniChartCellSettings>
+      <MiniChartCellSettings></MiniChartCellSettings>
     </ExpressionVisualDef>
   </_ExpressionVisuals>
   <Dimensions>
@@ -684,7 +643,7 @@
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -830,7 +789,9 @@
       <MaxStringLength>0</MaxStringLength>
       <AttributeExpressions></AttributeExpressions>
       <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
+      <MaxNumShown>
+        <v>10</v>
+      </MaxNumShown>
       <Spacing></Spacing>
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
@@ -843,7 +804,7 @@
           <v>10</v>
         </OtherCounted>
         <OtherLimit>
-          <v>0%</v>
+          <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
         <SuppressOther>false</SuppressOther>
@@ -860,7 +821,7 @@
   </Dimensions>
   <Memory></Memory>
   <Cacheable>true</Cacheable>
-  <SortByYValue>-1</SortByYValue>
+  <SortByYValue>0</SortByYValue>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -1059,7 +1020,7 @@
       <RelativePosition></RelativePosition>
       <RelativePositionType>0</RelativePositionType>
       <Transparent>true</Transparent>
-      <Show>true</Show>
+      <Show>false</Show>
       <DockedPosition>POSITION_TOP</DockedPosition>
       <BgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -1104,7 +1065,14 @@
       <HorizontalAdjust>1</HorizontalAdjust>
     </Title>
     <Legend>
-      <Font></Font>
+      <Font>
+        <FontName>Arial</FontName>
+        <PointSize1000>8000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </Font>
       <Position>
         <Left>1120</Left>
         <Top>201</Top>
@@ -1300,7 +1268,7 @@
     <BorderColor></BorderColor>
     <PrimaryAxisIndex>0</PrimaryAxisIndex>
     <SecondaryAxisIndex>0</SecondaryAxisIndex>
-    <MajorDimensionTextMode>HORIZONTAL_TEXT</MajorDimensionTextMode>
+    <MajorDimensionTextMode>TILTED_TEXT</MajorDimensionTextMode>
     <MinorDimensionTextMode>HORIZONTAL_TEXT</MinorDimensionTextMode>
     <HatchedBrushesOnScreen>false</HatchedBrushesOnScreen>
     <HatchedBrushesOnPrinter>true</HatchedBrushesOnPrinter>
@@ -1338,9 +1306,9 @@
     <TrendLineWidth>5</TrendLineWidth>
     <ColorMap>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1356,9 +1324,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1374,9 +1342,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1392,9 +1360,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1410,9 +1378,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1428,9 +1396,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1446,9 +1414,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1464,9 +1432,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1482,9 +1450,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1500,9 +1468,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1518,9 +1486,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1536,9 +1504,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1554,9 +1522,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1572,9 +1540,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1590,9 +1558,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1608,9 +1576,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1626,9 +1594,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1644,9 +1612,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1662,9 +1630,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1680,9 +1648,9 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_VERT</FillDirection>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
@@ -1939,7 +1907,7 @@
     <MinorGridStyle>2</MinorGridStyle>
     <GridThickness>3</GridThickness>
     <MinorGridThickness>1</MinorGridThickness>
-    <XAxisScroll>false</XAxisScroll>
+    <XAxisScroll>true</XAxisScroll>
     <ErrorBarWidth>ERROR_BARS_MEDIUMWIDTH</ErrorBarWidth>
     <ErrorBarThickness>ERROR_BARS_THIN</ErrorBarThickness>
     <ErrorBarColor></ErrorBarColor>
@@ -2576,7 +2544,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(($(vUndDespachadas)) &gt; 0, Num((($(vUndDespachadas))/($(vUndPedidas))), '#.##0%'))</v>
+              <v>$(vUndPedidas) - Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -2615,7 +2583,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Unidades despachadas</v>
+              <v>Despachadas</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -2973,48 +2941,7 @@
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
             <SymbolMode>SYMBOLMODE_AUTO</SymbolMode>
-            <MiniChartCellSettings>
-              <Dimension></Dimension>
-              <SharedYScale>false</SharedYScale>
-              <SharedXScale>false</SharedXScale>
-              <Layout>
-                <GraphMode>GRAPH_MODE_COMBO</GraphMode>
-                <ShowAsBar>false</ShowAsBar>
-                <ShowAsLine>true</ShowAsLine>
-                <ShowAsSymbol>false</ShowAsSymbol>
-                <ShowAsWhisker>false</ShowAsWhisker>
-                <HighlightMinPoint>true</HighlightMinPoint>
-                <HighlightMaxPoint>true</HighlightMaxPoint>
-                <HighlightStartPoint>false</HighlightStartPoint>
-                <HighlightEndPoint>false</HighlightEndPoint>
-                <ColorMap>
-                  <ColorAreaDef>
-                    <Mode>COLORAREA_SOLID</Mode>
-                    <Luminosity>85</Luminosity>
-                    <FillDirection>COLORAREA_HORZ</FillDirection>
-                    <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                    <PrimaryCol>
-                      <Col>
-                        <Red>179</Red>
-                        <Green>179</Green>
-                        <Blue>179</Blue>
-                        <Alpha>255</Alpha>
-                      </Col>
-                      <IsCalculated>false</IsCalculated>
-                      <ColorExpr></ColorExpr>
-                    </PrimaryCol>
-                    <SecondaryCol></SecondaryCol>
-                    <Alpha>255</Alpha>
-                  </ColorAreaDef>
-                </ColorMap>
-                <MinColor></MinColor>
-                <MaxColor></MaxColor>
-                <StartColor></StartColor>
-                <EndColor></EndColor>
-                <XAxis></XAxis>
-                <YAxis></YAxis>
-              </Layout>
-            </MiniChartCellSettings>
+            <MiniChartCellSettings></MiniChartCellSettings>
           </ExpressionVisual>
           <AxisData>
             <Units></Units>

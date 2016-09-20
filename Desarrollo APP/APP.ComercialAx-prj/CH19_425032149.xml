@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>='Und Pendientes x '&amp;$(vNombreDimension)</v>
+        <v>='Und Pedidas x '&amp;$(vNombreDimension)</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>='Und Pendientes x '&amp;$(vNombreDimension)</v>
+      <v>='Und Pedidas x '&amp;$(vNombreDimension)</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_BAR</GraphMode>
     <TotalString></TotalString>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CANTIDAD)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -270,7 +270,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Und pendientes</v>
+        <v>Und pedidas</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -628,48 +628,7 @@
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
       <SymbolMode>SYMBOLMODE_AUTO</SymbolMode>
-      <MiniChartCellSettings>
-        <Dimension></Dimension>
-        <SharedYScale>false</SharedYScale>
-        <SharedXScale>false</SharedXScale>
-        <Layout>
-          <GraphMode>GRAPH_MODE_COMBO</GraphMode>
-          <ShowAsBar>false</ShowAsBar>
-          <ShowAsLine>true</ShowAsLine>
-          <ShowAsSymbol>false</ShowAsSymbol>
-          <ShowAsWhisker>false</ShowAsWhisker>
-          <HighlightMinPoint>true</HighlightMinPoint>
-          <HighlightMaxPoint>true</HighlightMaxPoint>
-          <HighlightStartPoint>false</HighlightStartPoint>
-          <HighlightEndPoint>false</HighlightEndPoint>
-          <ColorMap>
-            <ColorAreaDef>
-              <Mode>COLORAREA_SOLID</Mode>
-              <Luminosity>85</Luminosity>
-              <FillDirection>COLORAREA_HORZ</FillDirection>
-              <FillPattern>COLORAREA_PATTERN1</FillPattern>
-              <PrimaryCol>
-                <Col>
-                  <Red>179</Red>
-                  <Green>179</Green>
-                  <Blue>179</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </PrimaryCol>
-              <SecondaryCol></SecondaryCol>
-              <Alpha>255</Alpha>
-            </ColorAreaDef>
-          </ColorMap>
-          <MinColor></MinColor>
-          <MaxColor></MaxColor>
-          <StartColor></StartColor>
-          <EndColor></EndColor>
-          <XAxis></XAxis>
-          <YAxis></YAxis>
-        </Layout>
-      </MiniChartCellSettings>
+      <MiniChartCellSettings></MiniChartCellSettings>
     </ExpressionVisualDef>
   </_ExpressionVisuals>
   <Dimensions>
@@ -2578,7 +2537,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CANTIDAD)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -2617,7 +2576,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Und pendientes</v>
+              <v>Und pedidas</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -2975,48 +2934,7 @@
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
             <SymbolMode>SYMBOLMODE_AUTO</SymbolMode>
-            <MiniChartCellSettings>
-              <Dimension></Dimension>
-              <SharedYScale>false</SharedYScale>
-              <SharedXScale>false</SharedXScale>
-              <Layout>
-                <GraphMode>GRAPH_MODE_COMBO</GraphMode>
-                <ShowAsBar>false</ShowAsBar>
-                <ShowAsLine>true</ShowAsLine>
-                <ShowAsSymbol>false</ShowAsSymbol>
-                <ShowAsWhisker>false</ShowAsWhisker>
-                <HighlightMinPoint>true</HighlightMinPoint>
-                <HighlightMaxPoint>true</HighlightMaxPoint>
-                <HighlightStartPoint>false</HighlightStartPoint>
-                <HighlightEndPoint>false</HighlightEndPoint>
-                <ColorMap>
-                  <ColorAreaDef>
-                    <Mode>COLORAREA_SOLID</Mode>
-                    <Luminosity>85</Luminosity>
-                    <FillDirection>COLORAREA_HORZ</FillDirection>
-                    <FillPattern>COLORAREA_PATTERN1</FillPattern>
-                    <PrimaryCol>
-                      <Col>
-                        <Red>179</Red>
-                        <Green>179</Green>
-                        <Blue>179</Blue>
-                        <Alpha>255</Alpha>
-                      </Col>
-                      <IsCalculated>false</IsCalculated>
-                      <ColorExpr></ColorExpr>
-                    </PrimaryCol>
-                    <SecondaryCol></SecondaryCol>
-                    <Alpha>255</Alpha>
-                  </ColorAreaDef>
-                </ColorMap>
-                <MinColor></MinColor>
-                <MaxColor></MaxColor>
-                <StartColor></StartColor>
-                <EndColor></EndColor>
-                <XAxis></XAxis>
-                <YAxis></YAxis>
-              </Layout>
-            </MiniChartCellSettings>
+            <MiniChartCellSettings></MiniChartCellSettings>
           </ExpressionVisual>
           <AxisData>
             <Units></Units>
