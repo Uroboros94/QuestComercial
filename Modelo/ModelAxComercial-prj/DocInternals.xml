@@ -11,9 +11,6 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
-    <bool>false</bool>
-    <bool>false</bool>
-    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -679,7 +676,7 @@
     <String>CarteraCliente</String>
     <String>224</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>225</String>
     <String>1</String>
     <String>DefaultDimensions</String>
@@ -763,16 +760,7 @@
     <String>DefaultDimensions</String>
     <String>252</String>
     <String>1</String>
-    <String>Dimensiones</String>
-    <String>253</String>
-    <String>1</String>
-    <String>Calculos</String>
-    <String>254</String>
-    <String>1</String>
-    <String>Centro de Operaciones</String>
-    <String>255</String>
-    <String>1</String>
-    <String>Centro de Operaciones</String>
+    <String>DefaultDimensions</String>
   </FieldSrcTables>
   <TableViewData>
     <Pos></Pos>
@@ -781,8 +769,8 @@
         <Tables>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>1021</Left>
-              <Top>426</Top>
+              <Left>1230</Left>
+              <Top>395</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -790,17 +778,17 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>567</Left>
-              <Top>426</Top>
-              <Width>100</Width>
+              <Left>244</Left>
+              <Top>407</Top>
+              <Width>105</Width>
               <Height>208</Height>
             </Pos>
             <Caption>MaestroClientes</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>637</Left>
-              <Top>219</Top>
+              <Left>299</Left>
+              <Top>299</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -808,8 +796,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>61</Left>
-              <Top>23</Top>
+              <Left>37</Left>
+              <Top>22</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -817,8 +805,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>768</Left>
-              <Top>103</Top>
+              <Left>960</Left>
+              <Top>148</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -826,8 +814,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>1021</Left>
-              <Top>23</Top>
+              <Left>1230</Left>
+              <Top>22</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -835,48 +823,21 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>67</Left>
-              <Top>436</Top>
-              <Width>368</Width>
+              <Left>37</Left>
+              <Top>395</Top>
+              <Width>140</Width>
               <Height>208</Height>
             </Pos>
             <Caption>CarteraCliente</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>515</Left>
-              <Top>23</Top>
+              <Left>695</Left>
+              <Top>22</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
             <Caption>DefaultDimensions</Caption>
-          </TableViewTableWinSaveInfo>
-          <TableViewTableWinSaveInfo>
-            <Pos>
-              <Left>1205</Left>
-              <Top>315</Top>
-              <Width>100</Width>
-              <Height>46</Height>
-            </Pos>
-            <Caption>Dimensiones</Caption>
-          </TableViewTableWinSaveInfo>
-          <TableViewTableWinSaveInfo>
-            <Pos>
-              <Left>1205</Left>
-              <Top>524</Top>
-              <Width>100</Width>
-              <Height>46</Height>
-            </Pos>
-            <Caption>Calculos</Caption>
-          </TableViewTableWinSaveInfo>
-          <TableViewTableWinSaveInfo>
-            <Pos>
-              <Left>1205</Left>
-              <Top>87</Top>
-              <Width>100</Width>
-              <Height>64</Height>
-            </Pos>
-            <Caption>Centro de Operaciones</Caption>
           </TableViewTableWinSaveInfo>
         </Tables>
         <BroomPoints></BroomPoints>
@@ -1019,6 +980,7 @@
           <String>CarteraCliente.NOMBREVENCIDA</String>
           <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
+          <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
@@ -1028,9 +990,6 @@
           <String>DefaultDimensions.DESC_MARCA</String>
           <String>DefaultDimensions.DESC_SUBLINEA</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
-          <String>Dimensiones</String>
-          <String>Calculos</String>
-          <String>PDV.TITULO</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1139,6 +1098,7 @@
           <String>CarteraCliente.NOMBREVENCIDA</String>
           <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
+          <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_CENTRO_DE_COSTO</String>
@@ -1151,9 +1111,6 @@
           <String>DefaultDimensions.DESC_PROYECTO</String>
           <String>DefaultDimensions.DESC_SUBLINEA</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
-          <String>Dimensiones</String>
-          <String>Calculos</String>
-          <String>PDV.TITULO</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1261,7 +1218,6 @@
           <String>DefaultDimensions.RECID</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
           <String>DefaultDimensions.CREATEDDATETIME</String>
-          <String>CO_dcto</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1340,13 +1296,13 @@
           <String>CarteraCliente.CONDICIONPAGO</String>
           <String>CarteraCliente.DIASVENCIDOS</String>
           <String>CarteraCliente.VENCIDA</String>
+          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
           <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
           <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
           <String>CarteraCliente.MODULOGENERACION</String>
           <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
-          <String>CO_dcto</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>

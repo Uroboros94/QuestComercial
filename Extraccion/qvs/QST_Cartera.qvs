@@ -1,0 +1,51 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+ 	Extracción de Dimensiones: Cartera
+-------------------------------------------------------------------------------------------------
+Fecha		|	Desarrollador	|	Modificación
+-------------------------------------------------------------------------------------------------
+09/20/2016	|	malemos			|	Inicio de Configuración
+*****************************************************************************************************/
+QST_Cartera:
+	SQL SELECT 
+		CUENTACLIENTE,
+		FECHAFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORFACTURA,
+		IDFACTURA,
+		ULTIMAFECHALIQUIDACION,
+		ULTIMOASIENTOLIQUIDACION,
+		SALDOTOTAL,
+		FECHAVENCIMIENTO,
+		VALORDIVISALIQUIDADA,
+		VALORLIQUIDADO,
+		NOMBRECLIENTE,
+		SALDOVENCIDOTOTAL,
+		DIVISA,
+		CREATEDDATETIME,
+		CREATEDBY,
+		DATAAREAID,
+		RECVERSION,
+		PARTITION,
+		RECID,
+		SALDOTOTALDIVISA,
+		ESTADOFACTURA,
+		NOMBREESTADOFACTURA,
+		CONDICIONPAGO,
+		DIASVENCIDOS,
+		VENCIDA,
+		NOMBREVENCIDA,
+		SALDOCORRIENTETOTAL,
+		ASIENTOFACTURA,
+		TIPOPAGO,
+		SALESID,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		MODULOGENERACION,
+		NOMBREMODULOGENERACION
+	FROM MicrosoftDynamicsAX.dbo."QST_MODELCARTERA";
+
+	STORE QST_Cartera INTO [..\QVD\QST_Cartera.QVD](qvd);
+	DROP TABLE QST_Cartera;

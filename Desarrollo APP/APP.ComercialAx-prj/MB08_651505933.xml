@@ -1,8 +1,8 @@
 ﻿<MultiBoxProperties>
   <Layout>
-    <NoOfRows>5</NoOfRows>
+    <NoOfRows>6</NoOfRows>
     <MaxNoOfRowsDropDown>10</MaxNoOfRowsDropDown>
-    <ColWidthLabel>300</ColWidthLabel>
+    <ColWidthLabel>250</ColWidthLabel>
     <ColWidthDrop>42</ColWidthDrop>
     <ColWidthData>300</ColWidthData>
     <Frame>
@@ -77,10 +77,10 @@
       <ShowCaption>true</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
-        <FillPattern>COLORAREA_PATTERN1</FillPattern>
+        <FillPattern>COLORAREA_PATTERN2</FillPattern>
         <PrimaryCol>
           <Col>
             <Red>255</Red>
@@ -104,7 +104,7 @@
         <Alpha>255</Alpha>
       </ActiveBgColor>
       <BgColor>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -346,6 +346,45 @@
   <NumAdjust>2</NumAdjust>
   <SortByApplicability>false</SortByApplicability>
   <MemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Vendedor</v>
+      </Label>
+      <FieldDef>
+        <Name>NOMBREVENDEDOR</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>2</NumAdjust>
+      <TextAdjust>0</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
     <MultiBoxMemberAttributes>
       <Label>
         <v>Cliente</v>

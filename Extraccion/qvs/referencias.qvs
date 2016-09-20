@@ -1,0 +1,58 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+ 	Extracción de Dimensiones: Referencias
+-------------------------------------------------------------------------------------------------
+Fecha		|	Desarrollador	|	Modificación
+-------------------------------------------------------------------------------------------------
+09/20/2016	|	malemos			|	Inicio de Configuración
+*****************************************************************************************************/
+Referencias:
+	SQL SELECT 
+		ANO,
+	    BOTA,
+	    "CATEGORIA_4",
+	    CODARTICULO,
+	    CODBARRAS,
+	    CODBARRAS2,
+	    COLECCION,
+	    COLOR,
+	    COSTESTOCK,
+	    CREATIVO,
+	    "CTA_AJUSTE_C",
+	    "CTA_AJUSTE_D",
+	    "CTA_COSTO",
+	    "CTA_DEVOLUCION",
+	    "CTA_ENTRADA",
+	    "CTA_INVENTARIO",
+	    "CTA_VENTA",
+	    CUELLO,
+	    DESCRIPCION,
+	    DIMENSION,
+	    DPTO,
+	    EAN13,
+	    ESTILO,
+	    FAMILIA,
+	    FECHAMODIFICADO,
+	    MANGAS,
+	    MARCA,
+	    MATERIAL,
+	    MOLDE,
+	    "NOMBRE_DPTO",
+	    "NOMBRE_SECCION",
+	    "NUMERO_IMPORTACION",
+	    ORIGEN,
+	    PROCESO,
+	    REFPROVEEDOR,
+	    SECCION,
+	    SUBFAMILIA,
+	    TALLA,
+	    "TIPO_DE_AJUSTE",
+	    TIRO,
+	    "UND_NEGOCIO",
+	    UNID1C
+	FROM BIQUEST.dbo."DIM_ARTICULOS";
+	Store Referencias Into [..\QVD\Referencias.QVD] (qvd);
+	DROP TABLE Referencias;
+

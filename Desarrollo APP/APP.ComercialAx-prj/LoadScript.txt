@@ -48,3 +48,12 @@ LOAD * INLINE [
     Vlr devolucion
     ];
     
+///$tab Configuraciones del Negocio
+[Centro de Operaciones]:
+LOAD * INLINE [
+    CO_dcto, PDV.TITULO
+    004, Q004 - Multimarca
+    300, Q300 - Multimarca
+    350, Q350 - Concesiones
+    400, Q400 - Franquicias
+];
