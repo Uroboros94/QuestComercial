@@ -19,6 +19,10 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
+LET vGrafDespacho = 'Pendiente';
+
+LET vColHighlight = 'rgb(255, 0, 0)';
+LET vColNoHighlight = 'rgb(192, 192, 192)';
 ///$tab Analisis
 Dimensiones:
 LOAD * INLINE [
@@ -29,6 +33,16 @@ LOAD * INLINE [
     Talla
     Color
     Causal devolucion
+    Departamento Cliente
+    Ciudad cliente
+    Estructura Comercial
+    Vendedor
+    NIT
+    Pedido
+    Condición pago
+    Línea
+    Estilo
+    Colección
     ];
 
 Calculos:
@@ -46,6 +60,11 @@ LOAD * INLINE [
     % Cumpli. Pesos Despachado
     Und Devolucion
     Vlr devolucion
+    Cupo
+    Corriente
+    Vencido
+    Total
+    Disponible
     ];
     
 ///$tab Configuraciones del Negocio
