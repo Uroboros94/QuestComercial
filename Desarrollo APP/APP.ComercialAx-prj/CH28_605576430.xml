@@ -47,12 +47,12 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>=If(vGrafDespacho = 'Despacho', 'Cumplimiento Despacho', 'Despachos Pendientes')</v>
+        <v>='Tabla de: '  &amp; vGrafDespacho</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
+      <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
@@ -219,11 +219,28 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>=If(vGrafDespacho = 'Despacho', 'Cumplimiento Despacho', 'Despachos Pendientes')</v>
+      <v>='Tabla de: '  &amp; vGrafDespacho</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString></TotalString>
-    <ErrorMessageOverrides></ErrorMessageOverrides>
+    <ErrorMessageOverrides>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr>
+        <v>Por favor seleccione una de las opciones de gráfico disponible</v>
+      </StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+    </ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
   </GraphLayout>
   <_ExpressionDatas>
@@ -10330,7 +10347,9 @@
   <CubeData></CubeData>
   <SuppressZero>true</SuppressZero>
   <SuppressMissing>true</SuppressMissing>
-  <EvaluationCondition></EvaluationCondition>
+  <EvaluationCondition>
+    <v>vGrafDespacho &lt;&gt; ''</v>
+  </EvaluationCondition>
   <ChartProperties>
     <FastChangeInChart>false</FastChangeInChart>
     <ChartMarginSize>21</ChartMarginSize>
@@ -12322,11 +12341,6 @@
       <int>300</int>
       <int>288</int>
       <int>278</int>
-      <int>384</int>
-      <int>363</int>
-      <int>300</int>
-      <int>363</int>
-      <int>300</int>
       <int>222</int>
       <int>306</int>
     </ColWidths>
@@ -12839,11 +12853,6 @@
       <int>14</int>
       <int>15</int>
       <int>16</int>
-      <int>17</int>
-      <int>18</int>
-      <int>19</int>
-      <int>20</int>
-      <int>21</int>
     </InterFieldSortOrder>
     <ExpressionPosition>13</ExpressionPosition>
     <NumberOfLeftDimensions>13</NumberOfLeftDimensions>
@@ -14866,7 +14875,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -15459,7 +15468,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -16045,7 +16054,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -16570,7 +16579,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -17156,7 +17165,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -18913,8 +18922,8 @@
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
-            <Type>COND_EX_TRUE</Type>
-            <Expression>vGrafDespacho = 'Despacho'</Expression>
+            <Type>COND_EX_COND</Type>
+            <Expression>vGrafDespacho &lt;&gt; 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -19499,8 +19508,8 @@
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
-            <Type>COND_EX_TRUE</Type>
-            <Expression>vGrafDespacho = 'Despacho'</Expression>
+            <Type>COND_EX_COND</Type>
+            <Expression>vGrafDespacho &lt;&gt; 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>

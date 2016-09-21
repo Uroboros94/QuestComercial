@@ -47,12 +47,12 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>=If(vGrafDespacho = 'Despacho', 'Cumplimiento Despacho', 'Despachos Pendientes')</v>
+        <v>='Gradico de: '  &amp; vGrafDespacho</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
+      <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
@@ -219,11 +219,28 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>=If(vGrafDespacho = 'Despacho', 'Cumplimiento Despacho', 'Despachos Pendientes')</v>
+      <v>='Gradico de: '  &amp; vGrafDespacho</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString></TotalString>
-    <ErrorMessageOverrides></ErrorMessageOverrides>
+    <ErrorMessageOverrides>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr>
+        <v>Por favor seleccione una de las opciones de gráfico disponible</v>
+      </StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+    </ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
   </GraphLayout>
   <_ExpressionDatas>
@@ -3547,10 +3564,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>MONEY</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3566,7 +3583,9 @@
       </SavedPresentation>
       <SetAxis>true</SetAxis>
       <VisualCues>
-        <LowLimit></LowLimit>
+        <LowLimit>
+          <v>0</v>
+        </LowLimit>
         <HighLimit></HighLimit>
         <LowCue>
           <Color>
@@ -3890,7 +3909,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>322</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4022,7 +4041,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Dias Pendientes</v>
+        <v>Promed. Pendientes</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -5345,7 +5364,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>288</ColWidth>
+      <ColWidth>363</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -5830,7 +5849,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>188</ColWidth>
+      <ColWidth>225</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6315,7 +6334,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>306</ColWidth>
+      <ColWidth>328</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7285,7 +7304,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>328</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7770,7 +7789,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>338</ColWidth>
+      <ColWidth>325</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -8255,7 +8274,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>291</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -9535,7 +9554,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Ciudad cliente</v>
+        <v>Ciudad Cliente</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -10651,7 +10670,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Condición pago</v>
+        <v>Condición Pago</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -12232,7 +12251,9 @@
   <CubeData></CubeData>
   <SuppressZero>true</SuppressZero>
   <SuppressMissing>true</SuppressMissing>
-  <EvaluationCondition></EvaluationCondition>
+  <EvaluationCondition>
+    <v>vGrafDespacho &lt;&gt; ''</v>
+  </EvaluationCondition>
   <ChartProperties>
     <FastChangeInChart>false</FastChangeInChart>
     <ChartMarginSize>21</ChartMarginSize>
@@ -14415,16 +14436,8 @@
       <int>134</int>
       <int>278</int>
       <int>288</int>
-      <int>150</int>
-      <int>288</int>
-      <int>188</int>
-      <int>306</int>
-      <int>300</int>
-      <int>300</int>
-      <int>338</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
+      <int>225</int>
+      <int>328</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -14920,11 +14933,11 @@
     <InterFieldSortOrder>
       <int>0</int>
       <int>1</int>
-      <int>3</int>
-      <int>6</int>
       <int>2</int>
+      <int>3</int>
       <int>4</int>
       <int>5</int>
+      <int>6</int>
       <int>7</int>
       <int>8</int>
       <int>9</int>
@@ -14937,14 +14950,6 @@
       <int>16</int>
       <int>17</int>
       <int>18</int>
-      <int>19</int>
-      <int>20</int>
-      <int>21</int>
-      <int>22</int>
-      <int>23</int>
-      <int>24</int>
-      <int>25</int>
-      <int>26</int>
     </InterFieldSortOrder>
     <ExpressionPosition>15</ExpressionPosition>
     <NumberOfLeftDimensions>15</NumberOfLeftDimensions>
@@ -14966,7 +14971,7 @@
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
-    <PivotTableTotalPosition>TOTAL_AT_BOTTOM</PivotTableTotalPosition>
+    <PivotTableTotalPosition>TOTAL_AT_TOP</PivotTableTotalPosition>
     <BorderAboveSpacing>false</BorderAboveSpacing>
     <SuppressHeader>false</SuppressHeader>
     <NullSymbol>-</NullSymbol>
@@ -15058,32 +15063,16 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo>
-            <int>26</int>
-            <int>69</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFF1ZXN0IE5vLjQ2IC0gQ3VjdXRhIENlbnRybwA=
-            </Blob>
-            <Blob>
-                BFF1ZXN0IE5vLiA5NSAtIEJvZ290YSBMaWNpdGFjaW9uZXMA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>NOMBREVENDEDOR</DimName>
-          <ElemNo>
-            <int>3</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BEFMRUpBTkRSQSBNQVJJQSBWQUxFTkNJQQA=
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -15104,14 +15093,8 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>IDCLIENTE</DimName>
-          <ElemNo>
-            <int>1149</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAP0o2cdB
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -15182,14 +15165,8 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>CITYVALUE</DimName>
-          <ElemNo>
-            <int>26</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BEJvZ290w6EgRC5DLgA=
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>
@@ -16897,7 +16874,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -17490,7 +17467,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -18083,7 +18060,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -18669,7 +18646,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -18730,10 +18707,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>MONEY</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -18749,7 +18726,9 @@
             </SavedPresentation>
             <SetAxis>true</SetAxis>
             <VisualCues>
-              <LowLimit></LowLimit>
+              <LowLimit>
+                <v>0</v>
+              </LowLimit>
               <HighLimit></HighLimit>
               <LowCue>
                 <Color>
@@ -19073,7 +19052,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>322</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -19255,7 +19234,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -19306,7 +19285,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Dias Pendientes</v>
+              <v>Promed. Pendientes</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -19841,7 +19820,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+            <Expression>vGrafDespacho = 'Pendiente' or vGrafDespacho = 'Estado Cartera'</Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
@@ -20831,7 +20810,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>288</ColWidth>
+            <ColWidth>363</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -21597,7 +21576,10 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition></EnableCondition>
+          <EnableCondition>
+            <Type>COND_EX_COND</Type>
+            <Expression>vGrafDespacho &lt;&gt; 'Estado Cartera'</Expression>
+          </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -22000,7 +21982,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>306</ColWidth>
+            <ColWidth>328</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -22180,7 +22162,10 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition></EnableCondition>
+          <EnableCondition>
+            <Type>COND_EX_COND</Type>
+            <Expression>vGrafDespacho &lt;&gt; 'Estado Cartera'</Expression>
+          </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -23169,7 +23154,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>328</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -23755,7 +23740,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>338</ColWidth>
+            <ColWidth>325</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -24341,7 +24326,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>291</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

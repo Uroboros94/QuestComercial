@@ -17,7 +17,7 @@
           </Col>
           <IsCalculated>true</IsCalculated>
           <ColorExpr>
-            <v>=If(vGrafDespacho = 'Despacho', $(vColHighlight), $(vColNoHighlight))</v>
+            <v>=If(vGrafDespacho = 'Estado Cartera', RGB(255,0,0),RGB(192,192,192))</v>
           </ColorExpr>
         </PrimaryCol>
         <SecondaryCol></SecondaryCol>
@@ -246,7 +246,7 @@
         </Col>
         <IsCalculated>true</IsCalculated>
         <ColorExpr>
-          <v>=If(vGrafDespacho = 'Despacho', $(vColHighlight), $(vColNoHighlight))</v>
+          <v>=If(vGrafDespacho = 'Estado Cartera', RGB(255,0,0), RGB(192,192,192))</v>
         </ColorExpr>
       </PrimaryCol>
       <SecondaryCol></SecondaryCol>
@@ -257,7 +257,7 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
     <Text>
-      <v>Cumplimiento Despacho</v>
+      <v>Estado de Cartera</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
@@ -270,7 +270,7 @@
             <v>vGrafDespacho</v>
           </StringExpr>
           <StringExpr>
-            <v>Despacho</v>
+            <v>=if(vGrafDespacho = 'Estado Cartera','','Estado Cartera')</v>
           </StringExpr>
         </Parameters>
         <StateName></StateName>

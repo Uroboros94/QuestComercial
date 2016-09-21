@@ -10,14 +10,14 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Red>4</Red>
+            <Green>108</Green>
+            <Blue>193</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>true</IsCalculated>
           <ColorExpr>
-            <v>=If(vGrafDespacho = 'Pendiente', $(vColHighlight), $(vColNoHighlight))</v>
+            <v>=If(vGrafDespacho = 'Despacho', RGB(255,0,0),RGB(192,192,192))</v>
           </ColorExpr>
         </PrimaryCol>
         <SecondaryCol></SecondaryCol>
@@ -239,26 +239,17 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>214</Red>
-          <Green>231</Green>
-          <Blue>248</Blue>
+          <Red>192</Red>
+          <Green>192</Green>
+          <Blue>192</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>true</IsCalculated>
         <ColorExpr>
-          <v>=If(vGrafDespacho = 'Pendiente', $(vColHighlight), $(vColNoHighlight))</v>
+          <v>=If(vGrafDespacho = 'Despacho', RGB(255,0,0), RGB(192,192,192))</v>
         </ColorExpr>
       </PrimaryCol>
-      <SecondaryCol>
-        <Col>
-          <Red>255</Red>
-          <Green>0</Green>
-          <Blue>0</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </SecondaryCol>
+      <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
     </BkgColor>
     <BkgImageSettings></BkgImageSettings>
@@ -266,7 +257,7 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
     <Text>
-      <v>Despacho Pendiente</v>
+      <v>Cumplimiento Despacho</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
@@ -279,7 +270,7 @@
             <v>vGrafDespacho</v>
           </StringExpr>
           <StringExpr>
-            <v>Pendiente</v>
+            <v>=if(vGrafDespacho = 'Despacho','','Despacho')</v>
           </StringExpr>
         </Parameters>
         <StateName></StateName>
