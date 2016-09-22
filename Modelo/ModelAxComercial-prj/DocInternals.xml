@@ -191,16 +191,16 @@
     <String>1</String>
     <String>MaestroClientes</String>
     <String>64</String>
-    <String>2</String>
-    <String>PedidosVenta</String>
-    <String>Ventas</String>
+    <String>1</String>
+    <String>MaestroClientes</String>
     <String>65</String>
     <String>2</String>
     <String>PedidosVenta</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>66</String>
-    <String>1</String>
+    <String>2</String>
     <String>PedidosVenta</String>
+    <String>Productos</String>
     <String>67</String>
     <String>1</String>
     <String>PedidosVenta</String>
@@ -280,12 +280,12 @@
     <String>1</String>
     <String>PedidosVenta</String>
     <String>93</String>
+    <String>1</String>
+    <String>PedidosVenta</String>
+    <String>94</String>
     <String>2</String>
     <String>PedidosVenta</String>
     <String>DefaultDimensions</String>
-    <String>94</String>
-    <String>1</String>
-    <String>PedidosVenta</String>
     <String>95</String>
     <String>1</String>
     <String>PedidosVenta</String>
@@ -297,7 +297,7 @@
     <String>PedidosVenta</String>
     <String>98</String>
     <String>1</String>
-    <String>Ventas</String>
+    <String>PedidosVenta</String>
     <String>99</String>
     <String>1</String>
     <String>Ventas</String>
@@ -384,7 +384,7 @@
     <String>Ventas</String>
     <String>127</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>128</String>
     <String>1</String>
     <String>Productos</String>
@@ -398,12 +398,12 @@
     <String>1</String>
     <String>Productos</String>
     <String>132</String>
+    <String>1</String>
+    <String>Productos</String>
+    <String>133</String>
     <String>2</String>
     <String>Productos</String>
     <String>MasterProductAttributes</String>
-    <String>133</String>
-    <String>1</String>
-    <String>Productos</String>
     <String>134</String>
     <String>1</String>
     <String>Productos</String>
@@ -514,7 +514,7 @@
     <String>Productos</String>
     <String>170</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>171</String>
     <String>1</String>
     <String>MasterProductAttributes</String>
@@ -586,7 +586,7 @@
     <String>MasterProductAttributes</String>
     <String>194</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>195</String>
     <String>1</String>
     <String>CarteraCliente</String>
@@ -688,7 +688,7 @@
     <String>CarteraCliente</String>
     <String>228</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>229</String>
     <String>1</String>
     <String>DefaultDimensions</String>
@@ -770,6 +770,9 @@
     <String>255</String>
     <String>1</String>
     <String>DefaultDimensions</String>
+    <String>256</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
   </FieldSrcTables>
   <TableViewData>
     <Pos></Pos>
@@ -779,7 +782,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>1230</Left>
-              <Top>395</Top>
+              <Top>410</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -788,7 +791,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>244</Left>
-              <Top>407</Top>
+              <Top>422</Top>
               <Width>105</Width>
               <Height>208</Height>
             </Pos>
@@ -797,7 +800,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>299</Left>
-              <Top>299</Top>
+              <Top>314</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -806,7 +809,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>37</Left>
-              <Top>22</Top>
+              <Top>37</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -815,7 +818,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>960</Left>
-              <Top>148</Top>
+              <Top>163</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -824,7 +827,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>1230</Left>
-              <Top>22</Top>
+              <Top>37</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -833,7 +836,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>37</Left>
-              <Top>395</Top>
+              <Top>410</Top>
               <Width>140</Width>
               <Height>208</Height>
             </Pos>
@@ -842,7 +845,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>695</Left>
-              <Top>22</Top>
+              <Top>37</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -922,6 +925,7 @@
           <String>PAYMMODEVALUE</String>
           <String>NOMBREMANDATORYCREDITLIMIT</String>
           <String>NOMBREVENDEDOR</String>
+          <String>SALESDISTRICT</String>
           <String>IDPEDIDO</String>
           <String>NOMBRETIPOPEDIDO</String>
           <String>NOMBREESTADOPEDIDO</String>
@@ -1036,6 +1040,7 @@
           <String>PAYMMODEVALUE</String>
           <String>NOMBREMANDATORYCREDITLIMIT</String>
           <String>NOMBREVENDEDOR</String>
+          <String>SALESDISTRICT</String>
           <String>IDPEDIDO</String>
           <String>NOMBRECLIENTE</String>
           <String>NOMBRETIPOPEDIDO</String>

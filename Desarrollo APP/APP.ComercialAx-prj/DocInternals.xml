@@ -194,16 +194,16 @@
     <String>1</String>
     <String>MaestroClientes</String>
     <String>64</String>
-    <String>2</String>
-    <String>PedidosVenta</String>
-    <String>Ventas</String>
+    <String>1</String>
+    <String>MaestroClientes</String>
     <String>65</String>
     <String>2</String>
     <String>PedidosVenta</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>66</String>
-    <String>1</String>
+    <String>2</String>
     <String>PedidosVenta</String>
+    <String>Productos</String>
     <String>67</String>
     <String>1</String>
     <String>PedidosVenta</String>
@@ -283,24 +283,24 @@
     <String>1</String>
     <String>PedidosVenta</String>
     <String>93</String>
+    <String>1</String>
+    <String>PedidosVenta</String>
+    <String>94</String>
     <String>2</String>
     <String>PedidosVenta</String>
     <String>DefaultDimensions</String>
-    <String>94</String>
-    <String>1</String>
-    <String>PedidosVenta</String>
     <String>95</String>
     <String>1</String>
     <String>PedidosVenta</String>
     <String>96</String>
     <String>1</String>
-    <String>Ventas</String>
+    <String>PedidosVenta</String>
     <String>97</String>
     <String>1</String>
-    <String>Ventas</String>
+    <String>PedidosVenta</String>
     <String>98</String>
     <String>1</String>
-    <String>Ventas</String>
+    <String>PedidosVenta</String>
     <String>99</String>
     <String>1</String>
     <String>Ventas</String>
@@ -381,13 +381,13 @@
     <String>Ventas</String>
     <String>125</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>126</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>127</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>128</String>
     <String>1</String>
     <String>Productos</String>
@@ -395,9 +395,8 @@
     <String>1</String>
     <String>Productos</String>
     <String>130</String>
-    <String>2</String>
+    <String>1</String>
     <String>Productos</String>
-    <String>MasterProductAttributes</String>
     <String>131</String>
     <String>1</String>
     <String>Productos</String>
@@ -405,8 +404,9 @@
     <String>1</String>
     <String>Productos</String>
     <String>133</String>
-    <String>1</String>
+    <String>2</String>
     <String>Productos</String>
+    <String>MasterProductAttributes</String>
     <String>134</String>
     <String>1</String>
     <String>Productos</String>
@@ -511,13 +511,13 @@
     <String>Productos</String>
     <String>168</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>169</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>170</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>171</String>
     <String>1</String>
     <String>MasterProductAttributes</String>
@@ -583,13 +583,13 @@
     <String>MasterProductAttributes</String>
     <String>192</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>193</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>194</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>195</String>
     <String>1</String>
     <String>CarteraCliente</String>
@@ -685,13 +685,13 @@
     <String>CarteraCliente</String>
     <String>226</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>227</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>228</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>229</String>
     <String>1</String>
     <String>DefaultDimensions</String>
@@ -769,14 +769,23 @@
     <String>DefaultDimensions</String>
     <String>254</String>
     <String>1</String>
-    <String>Dimensiones</String>
+    <String>DefaultDimensions</String>
     <String>255</String>
     <String>1</String>
-    <String>Calculos</String>
+    <String>DefaultDimensions</String>
     <String>256</String>
     <String>1</String>
-    <String>Centro de Operaciones</String>
+    <String>DefaultDimensions</String>
     <String>257</String>
+    <String>1</String>
+    <String>Dimensiones</String>
+    <String>258</String>
+    <String>1</String>
+    <String>Calculos</String>
+    <String>259</String>
+    <String>1</String>
+    <String>Centro de Operaciones</String>
+    <String>260</String>
     <String>1</String>
     <String>Centro de Operaciones</String>
   </FieldSrcTables>
@@ -894,7 +903,7 @@
     <Mode>0</Mode>
   </TableViewData>
   <Bookmarks></Bookmarks>
-  <SavedByVersion>12.0.20001.0</SavedByVersion>
+  <SavedByVersion>12.0.20400.0</SavedByVersion>
   <ForceBackEndMacroExecution>false</ForceBackEndMacroExecution>
   <FieldTags>
     <ScriptBased>
@@ -958,6 +967,7 @@
           <String>PAYMMODEVALUE</String>
           <String>NOMBREMANDATORYCREDITLIMIT</String>
           <String>NOMBREVENDEDOR</String>
+          <String>SALESDISTRICT</String>
           <String>IDPEDIDO</String>
           <String>NOMBRETIPOPEDIDO</String>
           <String>NOMBREESTADOPEDIDO</String>
@@ -969,6 +979,8 @@
           <String>ESTILO</String>
           <String>SITIO</String>
           <String>UNIDADMEDIDA</String>
+          <String>RAZONDEVOLUCION</String>
+          <String>RAZONGRUPO</String>
           <String>ASIENTOFACTURA</String>
           <String>DIVISA</String>
           <String>NOMBREESTADOFACTURA</String>
@@ -1072,6 +1084,7 @@
           <String>PAYMMODEVALUE</String>
           <String>NOMBREMANDATORYCREDITLIMIT</String>
           <String>NOMBREVENDEDOR</String>
+          <String>SALESDISTRICT</String>
           <String>IDPEDIDO</String>
           <String>NOMBRECLIENTE</String>
           <String>NOMBRETIPOPEDIDO</String>
@@ -1085,6 +1098,8 @@
           <String>ESTILO</String>
           <String>SITIO</String>
           <String>UNIDADMEDIDA</String>
+          <String>RAZONDEVOLUCION</String>
+          <String>RAZONGRUPO</String>
           <String>ASIENTOFACTURA</String>
           <String>DIVISA</String>
           <String>NOMBREESTADOFACTURA</String>
