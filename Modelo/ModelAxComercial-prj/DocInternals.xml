@@ -300,10 +300,10 @@
     <String>PedidosVenta</String>
     <String>99</String>
     <String>1</String>
-    <String>Ventas</String>
+    <String>PedidosVenta</String>
     <String>100</String>
     <String>1</String>
-    <String>Ventas</String>
+    <String>PedidosVenta</String>
     <String>101</String>
     <String>1</String>
     <String>Ventas</String>
@@ -387,10 +387,10 @@
     <String>Ventas</String>
     <String>128</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>129</String>
     <String>1</String>
-    <String>Productos</String>
+    <String>Ventas</String>
     <String>130</String>
     <String>1</String>
     <String>Productos</String>
@@ -401,15 +401,15 @@
     <String>1</String>
     <String>Productos</String>
     <String>133</String>
-    <String>2</String>
+    <String>1</String>
     <String>Productos</String>
-    <String>MasterProductAttributes</String>
     <String>134</String>
     <String>1</String>
     <String>Productos</String>
     <String>135</String>
-    <String>1</String>
+    <String>2</String>
     <String>Productos</String>
+    <String>MasterProductAttributes</String>
     <String>136</String>
     <String>1</String>
     <String>Productos</String>
@@ -517,10 +517,10 @@
     <String>Productos</String>
     <String>171</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>172</String>
     <String>1</String>
-    <String>MasterProductAttributes</String>
+    <String>Productos</String>
     <String>173</String>
     <String>1</String>
     <String>MasterProductAttributes</String>
@@ -589,10 +589,10 @@
     <String>MasterProductAttributes</String>
     <String>195</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>196</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>MasterProductAttributes</String>
     <String>197</String>
     <String>1</String>
     <String>CarteraCliente</String>
@@ -691,22 +691,22 @@
     <String>CarteraCliente</String>
     <String>229</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>230</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>231</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>232</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>233</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>234</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>CarteraCliente</String>
     <String>235</String>
     <String>1</String>
     <String>DefaultDimensions</String>
@@ -771,6 +771,24 @@
     <String>1</String>
     <String>DefaultDimensions</String>
     <String>256</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>257</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>258</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>259</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>260</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>261</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>262</String>
     <String>1</String>
     <String>DefaultDimensions</String>
   </FieldSrcTables>
@@ -939,6 +957,7 @@
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
+          <String>TAXGROUPNAME</String>
           <String>ASIENTOFACTURA</String>
           <String>DIVISA</String>
           <String>NOMBREESTADOFACTURA</String>
@@ -995,8 +1014,9 @@
           <String>CarteraCliente.NOMBREVENCIDA</String>
           <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
-          <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
+          <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
+          <String>CarteraCliente.NOMBREVENDEDOR</String>
           <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
           <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
@@ -1056,6 +1076,7 @@
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
+          <String>TAXGROUPNAME</String>
           <String>ASIENTOFACTURA</String>
           <String>DIVISA</String>
           <String>NOMBREESTADOFACTURA</String>
@@ -1118,6 +1139,8 @@
           <String>CarteraCliente.SALESID</String>
           <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
+          <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
+          <String>CarteraCliente.NOMBREVENDEDOR</String>
           <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_CENTRO_DE_COSTO</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
@@ -1232,6 +1255,7 @@
           <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
           <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
           <String>CarteraCliente.MODULOGENERACION</String>
+          <String>CarteraCliente.PORCENTAJEPRONTOPAGO</String>
           <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
@@ -1321,6 +1345,7 @@
           <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
           <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
           <String>CarteraCliente.MODULOGENERACION</String>
+          <String>CarteraCliente.PORCENTAJEPRONTOPAGO</String>
           <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
