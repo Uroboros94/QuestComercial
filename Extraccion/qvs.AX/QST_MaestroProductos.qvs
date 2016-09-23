@@ -1,0 +1,57 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: QST_MaestroProductos
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+QST_MaestroProductos:
+    SQL SELECT 
+        NUMEROPRODUCTODISPLAY,
+        NOMBREBUSQUEDA,
+        TIPOPRODUCTO,
+        NOMBRETIPOPRODUCTO,
+        PRODUCTRECID,
+        CATEGORYRECID,
+        CATEGORYHIERARCHYRECID,
+        CODARTICULO,
+        NOMBREPRODUCTO,
+        NOMBRECATEGORIA,
+        DESCGRUPODIMPRODUCTO,
+        PRODUCTDIMENSIONGROUPRECID,
+        INVENTTABLERECID,
+        DEFAULTDIMENSION,
+        NOMBREGRUPODIMPRODUCTO,
+        NOMBREGRUPODIMALMAC,
+        DESCGRUPODIMALMAC,
+        STORAGEDIMENSIONGROUPRECID,
+        NOMBREGRUPODIMSEGUIMIENTO,
+        DESCGRUPODIMSEGUIMIENTO,
+        PRODUCTINVENTDIMID,
+        EMPRESA,
+        DATAAREAID,
+        RECVERSION,
+        PARTITION,
+        RECID,
+        EMITIDO,
+        NOMBREEMITIDO,
+        SUBTIPOPRODUCTO,
+        NOMBRESUBTIPOPRODUCTO,
+        NOMBREJERARQUIACATEGORIA,
+        NUMEROPRODUCTO,
+        UBICACION,
+        SERIAL,
+        ALMACEN,
+        CODIGOBARRAS,
+        NUMEROVARIANTE,
+        COLOR,
+        ESTILO,
+        SITIO,
+        TALLA,
+        TRACKINGDIMENSIONGROUPRECID,
+        PRODUCTPARENT
+    FROM MicrosoftDynamicsAX.dbo."QST_MODELPRODUCTOS";
+
+STORE QST_MaestroProductos INTO [..\QVD\QST_MaestroProductos.QVD](qvd);
+DROP TABLE QST_MaestroProductos;
