@@ -47,7 +47,11 @@ Salesline:
         IDVENDEDOR,
         NOMBREVENDEDOR,
         RAZONDEVOLUCION,
-        RAZONGRUPO
+        RAZONGRUPO,
+        TAXGROUP,
+        TAXGROUPNAME,
+        GRUPOVENTAS,
+        PORCENTAJE
     FROM "QST_MODELSALESLINE";
 
 STORE Salesline INTO [..\QVD\Salesline.QVD](qvd);
