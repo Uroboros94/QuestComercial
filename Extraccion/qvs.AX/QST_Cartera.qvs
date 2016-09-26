@@ -7,9 +7,10 @@ Fecha : 20/09/2016
 Fecha		|	Desarrollador	|	Modificación
 -------------------------------------------------------------------------------------------------
 09/20/2016	|	malemos			|	Inicio de Configuración
+09/24/2016  | alejandro s | Agregar campos PORCENTAJEPRONTOPAGO, DESCRIPCIONPRONTOPAGO, IDVENDEDOR, NOMBREVENDEDOR.
 *****************************************************************************************************/
 QST_Cartera:
-	SQL SELECT 
+	SQL SELECT
 		CUENTACLIENTE,
 		FECHAFACTURA,
 		VALORFACTURADIVISATRANS,
@@ -44,7 +45,11 @@ QST_Cartera:
 		DIMENSIONDEFAULTFACTSERV,
 		DIMENSIONDEFAULTSALES,
 		MODULOGENERACION,
-		NOMBREMODULOGENERACION
+		NOMBREMODULOGENERACION,
+    PORCENTAJEPRONTOPAGO,
+    DESCRIPCIONPRONTOPAGO,
+    IDVENDEDOR,
+    NOMBREVENDEDOR
 	FROM MicrosoftDynamicsAX.dbo."QST_MODELCARTERA";
 
 	STORE QST_Cartera INTO [..\QVD\QST_Cartera.QVD](qvd);

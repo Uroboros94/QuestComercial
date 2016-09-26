@@ -7,9 +7,10 @@ Fecha : 20/09/2016
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/20/2016  |   malemos         |   Inicio de Configuración
+09/24/2016  |   alejandro saa g |   Agregar campo: SALESDISTRICT
 *****************************************************************************************************/
 QST_MaestroClientes:
-SQL SELECT 
+SQL SELECT
 	ACCOUNTNUM,
 	DIGIT,
 	IDENTIFICATIONTYPE,
@@ -48,7 +49,8 @@ SQL SELECT
 	NOMBREMANDATORYCREDITLIMIT,
 	DIMENSIONDEFAULT,
 	IDVENDEDOR,
-	NOMBREVENDEDOR
+	NOMBREVENDEDOR,
+  SALESDISTRICT
 FROM MicrosoftDynamicsAX.dbo."QST_MODELCUSTTABLE";
 
 STORE QST_MaestroClientes INTO [..\QVD\QST_MaestroClientes.QVD](qvd);
