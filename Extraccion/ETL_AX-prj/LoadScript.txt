@@ -17,10 +17,14 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 ///$tab Conexion Ax
+/*PRD*/
 //OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsAX;Data Source=QUEST-DBAX;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is dYEQeIRNJbaICSIGQJMKTcC);
 
+/*Pruebas*/
 OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsAX;Data Source=10.75.28.43;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is CXYMYIRNJbaICSIGQJMKTVB);
 
+/*Pre-PRD*/
+//OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=PreProductivoAX;Data Source=10.75.28.46;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-85086;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is DfTOSIRNJbaICSIGQJMKDdD);
 ///$tab Dimensiones
 /****************** Cargue de Dimensiones ******************/
 
@@ -46,7 +50,6 @@ $(Must_Include=qvs.ax\qst_maestroclientes.qvs);
 /*Cartera*/
 $(Must_Include=qvs.ax\qst_cartera.qvs);
 
-EXIT SCRIPT;
 ///$tab Contabilidad
 Contabilidad:
 LOAD LEDGERACCOUNT,
