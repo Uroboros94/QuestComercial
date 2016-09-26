@@ -51,7 +51,7 @@ QST_MaestroProductos:
         TALLA,
         TRACKINGDIMENSIONGROUPRECID,
         PRODUCTPARENT
-    FROM MicrosoftDynamicsAX.dbo."QST_MODELPRODUCTOS";
+    FROM "QST_MODELPRODUCTOS";
 
 STORE QST_MaestroProductos INTO [..\QVD\QST_MaestroProductos.QVD](qvd);
 DROP TABLE QST_MaestroProductos;

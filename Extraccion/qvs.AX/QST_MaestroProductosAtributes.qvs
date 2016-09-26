@@ -60,7 +60,7 @@ QST_MaestroProductosAtributes:
         RECVERSION,
         PARTITION,
         RECID
-    FROM MicrosoftDynamicsAX.dbo."QST_MODELCATEGORYATTRIBUTE";
+    FROM "QST_MODELCATEGORYATTRIBUTE";
 
 STORE QST_MaestroProductosAtributes INTO [..\QVD\QST_MaestroProductosAtributes.QVD](qvd);
 DROP TABLE QST_MaestroProductosAtributes;
