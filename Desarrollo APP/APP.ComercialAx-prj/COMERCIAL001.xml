@@ -222,14 +222,20 @@
       <v>Cto de Balanceos</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
-    <TotalString></TotalString>
+    <TotalString>
+      <v>Totales</v>
+    </TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
   </GraphLayout>
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+        <v>sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	TIPOPEDIDO={&quot;3&quot;}
+	&gt;} CANTIDAD)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +260,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+        <v>[Unidades Solicitadas]-[Ptes X Despachar]</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -279,7 +285,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Unidades Solicitadas] / [Unidades Movidas]</v>
+        <v>[Unidades Depachadas]/[Unidades Solicitadas] </v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +310,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Unidades Solicitadas]- [Unidades Movidas]</v>
+        <v>sum({&lt;	
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	TIPOPEDIDO={&quot;3&quot;}
+	&gt;} 	PENDIENTEENTREGA)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -830,7 +840,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Unidades Movidas</v>
+        <v>Unidades Depachadas</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -1800,7 +1810,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Ptes X Mover</v>
+        <v>Ptes X Despachar</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -1810,10 +1820,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>INTEGER</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -2432,10 +2442,13 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>106</ColWidth>
+      <ColWidth>122</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_TRUE</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -3991,7 +4004,7 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>106</int>
+      <int>122</int>
       <int>544</int>
       <int>278</int>
       <int>278</int>
@@ -4004,8 +4017,8 @@
     <StyleNumber>11</StyleNumber>
     <MultiLine>0</MultiLine>
     <HeaderMultiLine>2</HeaderMultiLine>
-    <TableTotalPosition>0</TableTotalPosition>
-    <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
+    <TableTotalPosition>1</TableTotalPosition>
+    <UseTotalLabelForStraight>true</UseTotalLabelForStraight>
     <LabelCellVariation>
       <PreMinorBorder>
         <LineStyle>32</LineStyle>
@@ -4491,11 +4504,11 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>1</int>
+      <int>5</int>
       <int>0</int>
       <int>2</int>
       <int>3</int>
       <int>4</int>
-      <int>5</int>
     </InterFieldSortOrder>
     <ExpressionPosition>2</ExpressionPosition>
     <NumberOfLeftDimensions>2</NumberOfLeftDimensions>
@@ -4556,7 +4569,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+              <v>sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	TIPOPEDIDO={&quot;3&quot;}
+	&gt;} CANTIDAD)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5139,7 +5156,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+              <v>[Unidades Solicitadas]-[Ptes X Despachar]</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5178,7 +5195,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Unidades Movidas</v>
+              <v>Unidades Depachadas</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -5722,7 +5739,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Unidades Solicitadas] / [Unidades Movidas]</v>
+              <v>[Unidades Depachadas]/[Unidades Solicitadas] </v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6305,7 +6322,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Unidades Solicitadas]- [Unidades Movidas]</v>
+              <v>sum({&lt;	
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	TIPOPEDIDO={&quot;3&quot;}
+	&gt;} 	PENDIENTEENTREGA)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6344,7 +6365,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Ptes X Mover</v>
+              <v>Ptes X Despachar</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -6354,10 +6375,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>INTEGER</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
