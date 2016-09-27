@@ -8204,6 +8204,192 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
+        <Name>CONDICIONPAGO</Name>
+        <Type>PRESENT</Type>
+      </PseudoDef>
+      <Title>
+        <v>Condición Pago</v>
+      </Title>
+      <TotalString></TotalString>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowAll>false</ShowAll>
+      <ShowLabel>true</ShowLabel>
+      <ShowLegend>true</ShowLegend>
+      <NullSuppression>false</NullSuppression>
+      <ShowPartialSums>0</ShowPartialSums>
+      <LabelAdjust>0</LabelAdjust>
+      <LabelVerticalAdjust>4</LabelVerticalAdjust>
+      <TextAdjust>0</TextAdjust>
+      <NumAdjust>2</NumAdjust>
+      <VerticalAdjust>4</VerticalAdjust>
+      <DimCellVariations>
+        <CellVariationDef>
+          <PreMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreMinorBorder>
+          <PostMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostMinorBorder>
+          <MajorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </MajorBorder>
+          <PreTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreTotalBorder>
+          <PostTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostTotalBorder>
+          <SizeMod>0</SizeMod>
+          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+          <TotalSizeMod>0</TotalSizeMod>
+          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+          <FgColor>
+            <Col>
+              <Red>54</Red>
+              <Green>54</Green>
+              <Blue>54</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </FgColor>
+          <BgColor>
+            <Col>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </BgColor>
+          <TotalFgColor></TotalFgColor>
+          <TotalBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </TotalBgColor>
+          <OtherSizeMod>0</OtherSizeMod>
+          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherFgColor></OtherFgColor>
+          <OtherBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </OtherBgColor>
+        </CellVariationDef>
+      </DimCellVariations>
+      <DropdownSelect>false</DropdownSelect>
+      <ImageRepresentation></ImageRepresentation>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <MaxStringLength>0</MaxStringLength>
+      <AttributeExpressions></AttributeExpressions>
+      <PageBreaks>NO_BREAKS</PageBreaks>
+      <MaxNumShown></MaxNumShown>
+      <Spacing></Spacing>
+      <ColWidth>300</ColWidth>
+      <OverrideGroupSort>false</OverrideGroupSort>
+      <Show></Show>
+      <EnableCondition></EnableCondition>
+      <Comment></Comment>
+      <OtherTotalSpec>
+        <OtherMode>OTHER_OFF</OtherMode>
+        <OtherCounted>
+          <v>10</v>
+        </OtherCounted>
+        <OtherLimit>
+          <v>0.05</v>
+        </OtherLimit>
+        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
+        <SuppressOther>false</SuppressOther>
+        <ForceBadValueKeeping>true</ForceBadValueKeeping>
+        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
+        <GlobalOtherGrouping>false</GlobalOtherGrouping>
+        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
+        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <TotalMode>TOTAL_OFF</TotalMode>
+        <ReferencedExpression></ReferencedExpression>
+      </OtherTotalSpec>
+      <OtherString></OtherString>
+    </ChartDimensionDataDef>
+    <ChartDimensionDataDef>
+      <PseudoDef>
         <Name>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
@@ -12328,6 +12514,7 @@
     <ColWidths>
       <int>300</int>
       <int>300</int>
+      <int>300</int>
       <int>463</int>
       <int>300</int>
       <int>300</int>
@@ -12843,7 +13030,6 @@
     <InterFieldSortOrder>
       <int>0</int>
       <int>1</int>
-      <int>2</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
@@ -12855,6 +13041,8 @@
       <int>11</int>
       <int>12</int>
       <int>13</int>
+      <int>22</int>
+      <int>2</int>
       <int>14</int>
       <int>15</int>
       <int>16</int>
@@ -12864,8 +13052,8 @@
       <int>20</int>
       <int>21</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>13</ExpressionPosition>
-    <NumberOfLeftDimensions>13</NumberOfLeftDimensions>
+    <ExpressionPosition>14</ExpressionPosition>
+    <NumberOfLeftDimensions>14</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
@@ -12893,93 +13081,43 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>CODARTICULO</DimName>
-          <ElemNo>
-            <int>3</int>
-            <int>17</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFE5NTExMDE2MDA5OTkA
-            </Blob>
-            <Blob>
-                BFE5NTEwOTE1MDAwMDMA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>TALLA</DimName>
-          <ElemNo>
-            <int>3</int>
-            <int>10</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAADxA
-            </Blob>
-            <Blob>
-                AgAAAAAAADpA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>COLOR</DimName>
-          <ElemNo>
-            <int>3</int>
-            <int>9</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAADBA
-            </Blob>
-            <Blob>
-                AgAAAAAAgExA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo>
-            <int>26</int>
-            <int>69</int>
-            <int>75</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFF1ZXN0IE5vLjQ2IC0gQ3VjdXRhIENlbnRybwA=
-            </Blob>
-            <Blob>
-                BFF1ZXN0IE5vLiA5NSAtIEJvZ290YSBMaWNpdGFjaW9uZXMA
-            </Blob>
-            <Blob>
-                BFF1ZXN0IE5vLjQwMCAtRnJhbnF1aWNpYXMA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BE11amVyAA==
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -12994,134 +13132,64 @@
         <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>NOMBREVENDEDOR</DimName>
-          <ElemNo>
-            <int>0</int>
-            <int>1</int>
-            <int>2</int>
-            <int>4</int>
-            <int>7</int>
-            <int>12</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-            <Blob>
-                BE5JRElBIEdPTlpBTEVaAA==
-            </Blob>
-            <Blob>
-                BEFEUklBTkEgR0lSQUxETwA=
-            </Blob>
-            <Blob>
-                BE5IT1JBIEFMVkFSRVoA
-            </Blob>
-            <Blob>
-                BFpPUkFJREEgQVJBTkdPAA==
-            </Blob>
-            <Blob>
-                BEpVQU4gQ0FNSUxPIEJFTklURVoA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>IDPEDIDO</DimName>
-          <ElemNo>
-            <int>19</int>
-            <int>30</int>
-            <int>219</int>
-            <int>232</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFBWLTAwMDAwNTUA
-            </Blob>
-            <Blob>
-                BFBWLTAwMDAwNzIA
-            </Blob>
-            <Blob>
-                BFBWLTAwMDExMjQA
-            </Blob>
-            <Blob>
-                BFBWLTAwMDExNDEA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>ESTILO</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>NUMEROLINEA</DimName>
-          <ElemNo>
-            <int>0</int>
-            <int>1</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAAPA/
-            </Blob>
-            <Blob>
-                AgAAAAAAAABA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>MasterProductAttributes.ATVAL_COLECCION</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BDIwMTYtMDEA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>STATEVALUE</DimName>
-          <ElemNo>
-            <int>-2</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>CITYVALUE</DimName>
-          <ElemNo>
-            <int>-2</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>CONDICIONPAGO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>
