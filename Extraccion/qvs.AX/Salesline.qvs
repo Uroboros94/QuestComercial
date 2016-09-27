@@ -51,7 +51,8 @@ Salesline:
         TAXGROUP,
         TAXGROUPNAME,
         GRUPOVENTAS,
-        PORCENTAJE
+        PORCENTAJE,
+        STOCK
     FROM "QST_MODELSALESLINE";
 
 STORE Salesline INTO [..\QVD\Salesline.QVD](qvd);
