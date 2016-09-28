@@ -1,6 +1,8 @@
+﻿/*
 Fecha : 20/09/2016
 ----------------------------------------------------------------------------------------------------
  Detalle :
+	 Creación del Modelo: Calendario
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
@@ -10,5 +12,29 @@ Fecha       |   Desarrollador   |   Modificación
 QUALIFY *;
 UNQUALIFY SK.FECHA;
 Calendario:
+	 LOAD num(Fecha)				As SK.FECHA,
+		  //num(Fecha)			    As SK.FECHA1,
+		  Año					  	As ano, 
+		  Mes						As nomMes, 
+		  MonthYear, 
+		  %_Fechakey, 
+		  NumericMonthYear, 
+		  NumericMonth, 
+		  Semestre, 
+		  Trimestre					As nomTrim,
+		  trimestre, 
+		  Week						As semana,
+		  SemanaMes, 
+		  Weekday					As nombreDia, 
+		  Dia						As dia, 
+		  DateMMDD,
+		  CYTD,
+		  FPYTD,
+		  Festivo, 
+		  EsFestivo
+	 FROM
+		  [..\QVD\Calendario_Final.QVD]
+		  (qvd)
+	 WHERE Fecha >= '01/01/2016';
 
 UNQUALIFY *;
