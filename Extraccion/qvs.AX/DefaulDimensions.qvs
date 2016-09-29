@@ -7,7 +7,8 @@ Fecha       |   Desarrollador   |   Modificación
 09/22/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
 DefaulDimensions:
-	SQL SELECT 
+	SQL SELECT
+    SUBSTRING("DIMENSION_ESTRUCTURA_COMERCIAL",3,5) As CodHomologacion,
 		DATAAREAID,
 		RECVERSION,
 		PARTITION,
