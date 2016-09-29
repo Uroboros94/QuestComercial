@@ -24,7 +24,7 @@ OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikvie
 /****************** Cargue de Dimensiones ******************/
 
 /*Dimensión estructura comercial*/
-$(Must_Include=qvs.ax\dim_frontsgeneral.qvs);
+$(Must_Include=qvs.BIQUEST\dim_frontsgeneral.qvs);
 
 /*Dimesión Presupuesto*/
-$(Must_Include=qvs.ax\presupuesto_dia2.qvs);
+$(Must_Include=qvs.BIQUEST\presupuesto_dia2.qvs);
