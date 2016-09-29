@@ -14,6 +14,7 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -805,14 +806,63 @@
     <String>DefaultDimensions</String>
     <String>266</String>
     <String>1</String>
-    <String>Dimensiones</String>
+    <String>DefaultDimensions</String>
     <String>267</String>
     <String>1</String>
-    <String>Calculos</String>
+    <String>DefaultDimensions</String>
     <String>268</String>
     <String>1</String>
-    <String>Centro de Operaciones</String>
+    <String>DefaultDimensions</String>
     <String>269</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>270</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>271</String>
+    <String>1</String>
+    <String>DefaultDimensions</String>
+    <String>272</String>
+    <String>2</String>
+    <String>DefaultDimensions</String>
+    <String>Presupuesto_Dia</String>
+    <String>273</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>274</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>275</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>276</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>277</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>278</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>279</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>280</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>281</String>
+    <String>1</String>
+    <String>Presupuesto_Dia</String>
+    <String>282</String>
+    <String>1</String>
+    <String>Dimensiones</String>
+    <String>283</String>
+    <String>1</String>
+    <String>Calculos</String>
+    <String>284</String>
+    <String>1</String>
+    <String>Centro de Operaciones</String>
+    <String>285</String>
     <String>1</String>
     <String>Centro de Operaciones</String>
   </FieldSrcTables>
@@ -920,6 +970,15 @@
             </Pos>
             <Caption>Centro de Operaciones</Caption>
           </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>80</Left>
+              <Top>26</Top>
+              <Width>130</Width>
+              <Height>208</Height>
+            </Pos>
+            <Caption>Presupuesto_Dia</Caption>
+          </TableViewTableWinSaveInfo>
         </Tables>
         <BroomPoints></BroomPoints>
         <ConnectionPoints></ConnectionPoints>
@@ -945,6 +1004,7 @@
           <String>SK.KEYPRODUCT</String>
           <String>SK.DEFAULTDIMENSION</String>
           <String>CATEGORYRECID</String>
+          <String>CodICG</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1077,6 +1137,11 @@
           <String>DefaultDimensions.DESC_MARCA</String>
           <String>DefaultDimensions.DESC_SUBLINEA</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
+          <String>DefaultDimensions.NombreCoordinador</String>
+          <String>DefaultDimensions.Pais</String>
+          <String>DefaultDimensions.Ciudad</String>
+          <String>DefaultDimensions.ZonaGeografica</String>
+          <String>PresupuestoEstilo</String>
           <String>PDV.TITULO</String>
         </FieldNames>
       </FieldTagData>
@@ -1206,6 +1271,12 @@
           <String>DefaultDimensions.DESC_PROYECTO</String>
           <String>DefaultDimensions.DESC_SUBLINEA</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
+          <String>DefaultDimensions.NombreCoordinador</String>
+          <String>DefaultDimensions.Pais</String>
+          <String>DefaultDimensions.Departamento</String>
+          <String>DefaultDimensions.Ciudad</String>
+          <String>DefaultDimensions.ZonaGeografica</String>
+          <String>PresupuestoEstilo</String>
           <String>Dimensiones</String>
           <String>Calculos</String>
           <String>PDV.TITULO</String>
@@ -1320,6 +1391,15 @@
           <String>DefaultDimensions.RECID</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
           <String>DefaultDimensions.CREATEDDATETIME</String>
+          <String>DefaultDimensions.CodCoordinador</String>
+          <String>DIA</String>
+          <String>MES</String>
+          <String>ANO</String>
+          <String>FECHA</String>
+          <String>LINEA</String>
+          <String>CODBARRAS</String>
+          <String>UNIDADES</String>
+          <String>PESOS</String>
           <String>CO_dcto</String>
         </FieldNames>
       </FieldTagData>
@@ -1411,6 +1491,14 @@
           <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
+          <String>DefaultDimensions.CodCoordinador</String>
+          <String>DIA</String>
+          <String>MES</String>
+          <String>ANO</String>
+          <String>FECHA</String>
+          <String>LINEA</String>
+          <String>CODBARRAS</String>
+          <String>PESOS</String>
           <String>CO_dcto</String>
         </FieldNames>
       </FieldTagData>
@@ -1432,6 +1520,7 @@
           <String>CarteraCliente.CREATEDDATETIME</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
           <String>DefaultDimensions.CREATEDDATETIME</String>
+          <String>FECHA</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1447,6 +1536,7 @@
           <String>FECHAVENCIMIENTO</String>
           <String>CarteraCliente.FECHAFACTURA</String>
           <String>CarteraCliente.FECHAVENCIMIENTO</String>
+          <String>FECHA</String>
         </FieldNames>
       </FieldTagData>
     </ScriptBased>

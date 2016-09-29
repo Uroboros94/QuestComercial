@@ -1,0 +1,20 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: DIM_FrontsGeneral
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/28/2016  |   Alejandro Saa G.|   Inicio de Configuración
+*****************************************************************************************************/
+DIM_FrontsGeneral:
+SQL SELECT PDV as CodHomologacion,
+      COORDINADOR as CodCoordinador,
+      NOMVENDEDOR as NombreCoordinador,
+      PAIS as Pais,
+      DEPARTAMENTO as Departamento,
+      CIUDAD as Ciudad,
+      ZONA_GEOGRAFICA as ZonaGeografica
+  FROM DIM_FrontsGeneral;
+
+STORE DIM_FrontsGeneral INTO [..\QVD\DIM_FrontsGeneral.QVD](qvd);
+DROP TABLE DIM_FrontsGeneral;
