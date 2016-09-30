@@ -53,7 +53,7 @@
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
+      <AutoMinimize>true</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
@@ -70,7 +70,7 @@
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
       <ShowCaption>true</ShowCaption>
-      <MultiLine>0</MultiLine>
+      <MultiLine>2</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
@@ -303,8 +303,8 @@
       <SortCriteria>
         <SortByState>0</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByNumeric>-1</SortByNumeric>
+        <SortByAscii>-1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -1780,7 +1780,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>DefaultDimensions.ZonaGeografica</Name>
-        <Type>NOT_PRESENT</Type>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Zona Geografica</v>
@@ -1969,7 +1969,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>DefaultDimensions.NombreCoordinador</Name>
-        <Type>NOT_PRESENT</Type>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Coordinador</v>
@@ -2720,7 +2720,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>FECHA</Name>
-        <Type>NOT_PRESENT</Type>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title></Title>
       <TotalString></TotalString>
@@ -4189,8 +4189,11 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>406</int>
+      <int>300</int>
       <int>300</int>
       <int>469</int>
+      <int>300</int>
       <int>300</int>
       <int>391</int>
       <int>391</int>
@@ -4688,6 +4691,7 @@
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
+      <int>8</int>
       <int>6</int>
       <int>3</int>
       <int>2</int>
@@ -4696,7 +4700,6 @@
       <int>4</int>
       <int>5</int>
       <int>7</int>
-      <int>8</int>
     </InterFieldSortOrder>
     <ExpressionPosition>6</ExpressionPosition>
     <NumberOfLeftDimensions>6</NumberOfLeftDimensions>
@@ -5980,8 +5983,8 @@
             <SortCriteria>
               <SortByState>0</SortByState>
               <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
+              <SortByNumeric>-1</SortByNumeric>
+              <SortByAscii>-1</SortByAscii>
               <SortByLoadOrder>0</SortByLoadOrder>
               <SortByExpression>0</SortByExpression>
               <Expression></Expression>
