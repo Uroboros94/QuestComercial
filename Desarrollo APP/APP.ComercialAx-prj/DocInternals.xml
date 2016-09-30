@@ -14,7 +14,6 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
-    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -806,63 +805,14 @@
     <String>DefaultDimensions</String>
     <String>266</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>Dimensiones</String>
     <String>267</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
+    <String>Calculos</String>
     <String>268</String>
     <String>1</String>
-    <String>DefaultDimensions</String>
-    <String>269</String>
-    <String>1</String>
-    <String>DefaultDimensions</String>
-    <String>270</String>
-    <String>1</String>
-    <String>DefaultDimensions</String>
-    <String>271</String>
-    <String>1</String>
-    <String>DefaultDimensions</String>
-    <String>272</String>
-    <String>2</String>
-    <String>DefaultDimensions</String>
-    <String>Presupuesto_Dia</String>
-    <String>273</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>274</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>275</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>276</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>277</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>278</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>279</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>280</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>281</String>
-    <String>1</String>
-    <String>Presupuesto_Dia</String>
-    <String>282</String>
-    <String>1</String>
-    <String>Dimensiones</String>
-    <String>283</String>
-    <String>1</String>
-    <String>Calculos</String>
-    <String>284</String>
-    <String>1</String>
     <String>Centro de Operaciones</String>
-    <String>285</String>
+    <String>269</String>
     <String>1</String>
     <String>Centro de Operaciones</String>
   </FieldSrcTables>
@@ -1004,7 +954,6 @@
           <String>SK.KEYPRODUCT</String>
           <String>SK.DEFAULTDIMENSION</String>
           <String>CATEGORYRECID</String>
-          <String>CodICG</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1042,11 +991,9 @@
           <String>CURRENCY</String>
           <String>FIRSTNAME</String>
           <String>MIDDLENAME</String>
-          <String>LASTNAME</String>
           <String>MAINURL</String>
           <String>PAYMTERMID</String>
           <String>COUNTRYID</String>
-          <String>COUNTRYVALUE</String>
           <String>CUSTGROUPVALUE</String>
           <String>DATAAREAID</String>
           <String>PAYMTERMVALUE</String>
@@ -1068,6 +1015,7 @@
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
+          <String>TAXGROUP</String>
           <String>TAXGROUPNAME</String>
           <String>GRUPOVENTAS</String>
           <String>ASIENTOFACTURA</String>
@@ -1078,6 +1026,7 @@
           <String>ULTIMOASIENTOLIQUIDACION</String>
           <String>NOMBREVENCIDA</String>
           <String>CREATEDBY</String>
+          <String>Productos.NOMBRECATEGORIA</String>
           <String>Productos.DESCGRUPODIMPRODUCTO</String>
           <String>Productos.NOMBREGRUPODIMPRODUCTO</String>
           <String>Productos.NOMBREGRUPODIMALMAC</String>
@@ -1092,6 +1041,7 @@
           <String>Productos.SERIAL</String>
           <String>Productos.ALMACEN</String>
           <String>Productos.NUMEROVARIANTE</String>
+          <String>Productos.ESTILO</String>
           <String>Productos.SITIO</String>
           <String>MasterProductAttributes.ATVAL_APARIENCIA_DETALLADA</String>
           <String>MasterProductAttributes.ATVAL_APARIENCIA_GENERAL</String>
@@ -1118,7 +1068,6 @@
           <String>MasterProductAttributes.NC</String>
           <String>CarteraCliente.IDFACTURA</String>
           <String>CarteraCliente.ULTIMOASIENTOLIQUIDACION</String>
-          <String>CarteraCliente.NOMBRECLIENTE</String>
           <String>CarteraCliente.DIVISA</String>
           <String>CarteraCliente.CREATEDBY</String>
           <String>CarteraCliente.DATAAREAID</String>
@@ -1126,6 +1075,7 @@
           <String>CarteraCliente.NOMBREVENCIDA</String>
           <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
+          <String>CarteraCliente.TIPOPAGO</String>
           <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
           <String>CarteraCliente.NOMBREVENDEDOR</String>
@@ -1135,13 +1085,8 @@
           <String>DefaultDimensions.DESC_LINEA</String>
           <String>DefaultDimensions.DESC_MAINACCOUNT</String>
           <String>DefaultDimensions.DESC_MARCA</String>
-          <String>DefaultDimensions.DESC_SUBLINEA</String>
+          <String>DefaultDimensions.DESC_PROYECTO</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
-          <String>DefaultDimensions.NombreCoordinador</String>
-          <String>DefaultDimensions.Pais</String>
-          <String>DefaultDimensions.Ciudad</String>
-          <String>DefaultDimensions.ZonaGeografica</String>
-          <String>PresupuestoEstilo</String>
           <String>PDV.TITULO</String>
         </FieldNames>
       </FieldTagData>
@@ -1194,6 +1139,7 @@
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
+          <String>TAXGROUP</String>
           <String>TAXGROUPNAME</String>
           <String>GRUPOVENTAS</String>
           <String>ASIENTOFACTURA</String>
@@ -1204,6 +1150,8 @@
           <String>ULTIMOASIENTOLIQUIDACION</String>
           <String>NOMBREVENCIDA</String>
           <String>CREATEDBY</String>
+          <String>Productos.NOMBREBUSQUEDA</String>
+          <String>Productos.NOMBRETIPOPRODUCTO</String>
           <String>Productos.NOMBRECATEGORIA</String>
           <String>Productos.DESCGRUPODIMPRODUCTO</String>
           <String>Productos.NOMBREGRUPODIMPRODUCTO</String>
@@ -1221,6 +1169,7 @@
           <String>Productos.SERIAL</String>
           <String>Productos.ALMACEN</String>
           <String>Productos.NUMEROVARIANTE</String>
+          <String>Productos.ESTILO</String>
           <String>Productos.SITIO</String>
           <String>MasterProductAttributes.ATVAL_APARIENCIA_DETALLADA</String>
           <String>MasterProductAttributes.ATVAL_APARIENCIA_GENERAL</String>
@@ -1270,13 +1219,8 @@
           <String>DefaultDimensions.DESC_MARCA</String>
           <String>DefaultDimensions.DESC_PROYECTO</String>
           <String>DefaultDimensions.DESC_SUBLINEA</String>
+          <String>DefaultDimensions.DESC_TERCERO</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
-          <String>DefaultDimensions.NombreCoordinador</String>
-          <String>DefaultDimensions.Pais</String>
-          <String>DefaultDimensions.Departamento</String>
-          <String>DefaultDimensions.Ciudad</String>
-          <String>DefaultDimensions.ZonaGeografica</String>
-          <String>PresupuestoEstilo</String>
           <String>Dimensiones</String>
           <String>Calculos</String>
           <String>PDV.TITULO</String>
@@ -1317,17 +1261,18 @@
           <String>FECHACREACIONPEDIDO</String>
           <String>FECHACREACIONPEDIDOTZID</String>
           <String>PENDIENTEENTREGA</String>
+          <String>CODARTICULO</String>
           <String>NUMEROLINEA</String>
           <String>PRECIOUNITARIO</String>
           <String>CANTIDAD</String>
           <String>ESTADOLINEA</String>
           <String>VALORNETO</String>
           <String>DESCUENTO</String>
+          <String>COLOR</String>
           <String>SK.DEFAULTDIMENSION</String>
           <String>RECIDLINE</String>
           <String>PORCENTAJE</String>
           <String>STOCK</String>
-          <String>CUENTACLIENTE</String>
           <String>DIASVENCIDOS</String>
           <String>DIMENSIONDEFAULTFACTSERV</String>
           <String>DIMENSIONDEFAULTSALES</String>
@@ -1391,15 +1336,6 @@
           <String>DefaultDimensions.RECID</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
           <String>DefaultDimensions.CREATEDDATETIME</String>
-          <String>DefaultDimensions.CodCoordinador</String>
-          <String>DIA</String>
-          <String>MES</String>
-          <String>ANO</String>
-          <String>FECHA</String>
-          <String>LINEA</String>
-          <String>CODBARRAS</String>
-          <String>UNIDADES</String>
-          <String>PESOS</String>
           <String>CO_dcto</String>
         </FieldNames>
       </FieldTagData>
@@ -1437,13 +1373,15 @@
           <String>TIPOPEDIDO</String>
           <String>FECHACREACIONPEDIDOTZID</String>
           <String>PENDIENTEENTREGA</String>
+          <String>CODARTICULO</String>
           <String>CANTIDAD</String>
           <String>ESTADOLINEA</String>
+          <String>DESCUENTO</String>
+          <String>COLOR</String>
           <String>SK.DEFAULTDIMENSION</String>
           <String>RECIDLINE</String>
           <String>PORCENTAJE</String>
           <String>STOCK</String>
-          <String>CUENTACLIENTE</String>
           <String>DIASVENCIDOS</String>
           <String>DIMENSIONDEFAULTFACTSERV</String>
           <String>DIMENSIONDEFAULTSALES</String>
@@ -1452,7 +1390,6 @@
           <String>FECHAFACTURA</String>
           <String>FECHAVENCIMIENTO</String>
           <String>MODULOGENERACION</String>
-          <String>SALDOCORRIENTETOTAL</String>
           <String>ULTIMAFECHALIQUIDACION</String>
           <String>VENCIDA</String>
           <String>CantidadVentas</String>
@@ -1474,8 +1411,6 @@
           <String>CarteraCliente.FECHAFACTURA</String>
           <String>CarteraCliente.ULTIMAFECHALIQUIDACION</String>
           <String>CarteraCliente.FECHAVENCIMIENTO</String>
-          <String>CarteraCliente.VALORDIVISALIQUIDADA</String>
-          <String>CarteraCliente.VALORLIQUIDADO</String>
           <String>CarteraCliente.RECVERSION</String>
           <String>CarteraCliente.PARTITION</String>
           <String>CarteraCliente.RECID</String>
@@ -1483,7 +1418,6 @@
           <String>CarteraCliente.CONDICIONPAGO</String>
           <String>CarteraCliente.DIASVENCIDOS</String>
           <String>CarteraCliente.VENCIDA</String>
-          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
           <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
           <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
           <String>CarteraCliente.MODULOGENERACION</String>
@@ -1491,14 +1425,6 @@
           <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
-          <String>DefaultDimensions.CodCoordinador</String>
-          <String>DIA</String>
-          <String>MES</String>
-          <String>ANO</String>
-          <String>FECHA</String>
-          <String>LINEA</String>
-          <String>CODBARRAS</String>
-          <String>PESOS</String>
           <String>CO_dcto</String>
         </FieldNames>
       </FieldTagData>
@@ -1520,7 +1446,6 @@
           <String>CarteraCliente.CREATEDDATETIME</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
           <String>DefaultDimensions.CREATEDDATETIME</String>
-          <String>FECHA</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1536,7 +1461,6 @@
           <String>FECHAVENCIMIENTO</String>
           <String>CarteraCliente.FECHAFACTURA</String>
           <String>CarteraCliente.FECHAVENCIMIENTO</String>
-          <String>FECHA</String>
         </FieldNames>
       </FieldTagData>
     </ScriptBased>

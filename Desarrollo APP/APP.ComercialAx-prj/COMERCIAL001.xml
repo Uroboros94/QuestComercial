@@ -2284,7 +2284,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>DefaultDimensions.NombreCoordinador</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Nombre Coordinador</v>
@@ -2470,7 +2470,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>DefaultDimensions.Ciudad</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Ciudad</v>
@@ -3349,7 +3349,14 @@
         <Logscale>false</Logscale>
         <MidAxisLabel>false</MidAxisLabel>
         <AxisPosition>POSITION_LEFT</AxisPosition>
-        <Font></Font>
+        <Font>
+          <FontName>Arial</FontName>
+          <PointSize1000>7000</PointSize1000>
+          <Underline>false</Underline>
+          <Bold>false</Bold>
+          <Italic>false</Italic>
+          <DropShadow>false</DropShadow>
+        </Font>
         <Color>
           <Mode>COLORAREA_SOLID</Mode>
           <Luminosity>85</Luminosity>
@@ -4376,8 +4383,6 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>722</int>
-      <int>300</int>
       <int>122</int>
       <int>544</int>
       <int>278</int>
@@ -7248,7 +7253,14 @@
             <Logscale>false</Logscale>
             <MidAxisLabel>false</MidAxisLabel>
             <AxisPosition>POSITION_LEFT</AxisPosition>
-            <Font></Font>
+            <Font>
+              <FontName>Arial</FontName>
+              <PointSize1000>7000</PointSize1000>
+              <Underline>false</Underline>
+              <Bold>false</Bold>
+              <Italic>false</Italic>
+              <DropShadow>false</DropShadow>
+            </Font>
             <Color>
               <Mode>COLORAREA_SOLID</Mode>
               <Luminosity>85</Luminosity>
