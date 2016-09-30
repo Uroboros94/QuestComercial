@@ -13462,8 +13462,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Num(PORCENTAJE,'%#,##')</Name>
-        <Type>IS_EXPR</Type>
+        <Name>PORCENTAJE</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>% Descuento</v>
@@ -17681,8 +17681,17 @@
       <int>300</int>
       <int>266</int>
       <int>272</int>
+      <int>384</int>
+      <int>363</int>
+      <int>300</int>
+      <int>363</int>
+      <int>322</int>
+      <int>300</int>
+      <int>300</int>
       <int>225</int>
       <int>328</int>
+      <int>172</int>
+      <int>300</int>
       <int>300</int>
     </ColWidths>
     <Striping>
@@ -18202,6 +18211,15 @@
       <int>22</int>
       <int>23</int>
       <int>24</int>
+      <int>25</int>
+      <int>26</int>
+      <int>27</int>
+      <int>28</int>
+      <int>29</int>
+      <int>30</int>
+      <int>31</int>
+      <int>32</int>
+      <int>33</int>
     </InterFieldSortOrder>
     <ExpressionPosition>20</ExpressionPosition>
     <NumberOfLeftDimensions>20</NumberOfLeftDimensions>
@@ -18455,7 +18473,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Num(PORCENTAJE,'%#,##')</DimName>
+          <DimName>CONDICIONPAGO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -18463,7 +18481,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CONDICIONPAGO</DimName>
+          <DimName>PORCENTAJE</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
