@@ -13462,8 +13462,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Num(PORCENTAJE,'%#,##')</Name>
-        <Type>IS_EXPR</Type>
+        <Name>PORCENTAJE</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>% Descuento</v>
@@ -18473,7 +18473,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Num(PORCENTAJE,'%#,##')</DimName>
+          <DimName>CONDICIONPAGO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -18481,7 +18481,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CONDICIONPAGO</DimName>
+          <DimName>PORCENTAJE</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
