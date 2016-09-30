@@ -20,7 +20,7 @@ Presupuesto_Dia2:
     UNIDADES,
     PESOS
   FROM PRESUPUESTO_DIA2
-  WHERE ANO = 2016 AND MES > 8;
+  WHERE ANO = 2016 AND MES >= 8;
 
   STORE Presupuesto_Dia2 INTO [..\QVD\Presupuesto_Dia2.QVD](qvd);
   DROP TABLE Presupuesto_Dia2;
