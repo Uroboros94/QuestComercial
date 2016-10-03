@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>='Gradico de: '  &amp; vGrafDespacho</v>
+        <v>='Grafico de: '  &amp; vGrafDespacho</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>='Gradico de: '  &amp; vGrafDespacho</v>
+      <v>='Grafico de: '  &amp; vGrafDespacho</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -11404,7 +11404,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>TIPOPEDIDO</Name>
+        <Name>NOMBRETIPOPEDIDO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -18449,14 +18449,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>TIPOPEDIDO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>PRECIOUNITARIO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -18482,6 +18474,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>PORCENTAJE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>NOMBRETIPOPEDIDO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
