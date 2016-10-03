@@ -235,7 +235,8 @@
 	TIPOPEDIDO = {&quot;3&quot;}
 	&gt;} VALORNETO))
 	/
-(Sum({&lt;FECHA = {&quot;&gt;=$(=date(min(Calendario.%_Fechakey),'YYYYMMDD')) &lt;=$(=date(max(Calendario.%_Fechakey),'YYYYMMDD'))&quot;}&gt;} PESOS))</v>
+(Sum({&lt;ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, MES = {&quot;$(=Calendario.NumericMonth)&quot;}, SemanaPresupuesto = {&quot;$(=Calendario.SemanaMes)&quot;}&gt;} PESOS))
+//(Sum({&lt;FECHA = {&quot;&gt;=$(=date(min(Calendario.%_Fechakey),'YYYYMMDD')) &lt;=$(=date(max(Calendario.%_Fechakey),'YYYYMMDD'))&quot;}&gt;} PESOS))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -3246,7 +3247,7 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>300</int>
+      <int>800</int>
       <int>309</int>
       <int>328</int>
       <int>156</int>
@@ -3802,7 +3803,8 @@
 	TIPOPEDIDO = {&quot;3&quot;}
 	&gt;} VALORNETO))
 	/
-(Sum({&lt;FECHA = {&quot;&gt;=$(=date(min(Calendario.%_Fechakey),'YYYYMMDD')) &lt;=$(=date(max(Calendario.%_Fechakey),'YYYYMMDD'))&quot;}&gt;} PESOS))</v>
+(Sum({&lt;ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, MES = {&quot;$(=Calendario.NumericMonth)&quot;}, SemanaPresupuesto = {&quot;$(=Calendario.SemanaMes)&quot;}&gt;} PESOS))
+//(Sum({&lt;FECHA = {&quot;&gt;=$(=date(min(Calendario.%_Fechakey),'YYYYMMDD')) &lt;=$(=date(max(Calendario.%_Fechakey),'YYYYMMDD'))&quot;}&gt;} PESOS))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
