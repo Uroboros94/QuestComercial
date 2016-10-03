@@ -2,7 +2,7 @@
 Fecha : 20/09/2016
 ----------------------------------------------------------------------------------------------------
  Detalle :
-     Creación del Modelo: Maestro de Productos
+	 Creación del Modelo: Maestro de Productos
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   CarteraCliente
 -------------------------------------------------------------------------------------------------
@@ -11,48 +11,48 @@ Fecha       |   Desarrollador   |   CarteraCliente
 QUALIFY *;
 UNQUALIFY IDCLIENTE;
 CarteraCliente:
-     LOAD 
-          CUENTACLIENTE                 as IDCLIENTE, 
-          FECHAFACTURA, 
-          VALORFACTURADIVISATRANS, 
-          VALORFACTURA, 
-          IDFACTURA, 
-          ULTIMAFECHALIQUIDACION, 
-          ULTIMOASIENTOLIQUIDACION, 
-          SALDOTOTAL, 
-          FECHAVENCIMIENTO, 
-          VALORDIVISALIQUIDADA, 
-          VALORLIQUIDADO, 
-          NOMBRECLIENTE, 
-          SALDOVENCIDOTOTAL, 
-          DIVISA, 
-          CREATEDDATETIME, 
-          CREATEDBY, 
-          DATAAREAID, 
-          RECVERSION, 
-          PARTITION, 
-          RECID, 
-          SALDOTOTALDIVISA, 
-          ESTADOFACTURA,
-          NOMBREESTADOFACTURA, 
-          CONDICIONPAGO, 
-          DIASVENCIDOS, 
-          VENCIDA,
-          NOMBREVENCIDA, 
-          SALDOCORRIENTETOTAL, 
-          ASIENTOFACTURA, 
-          SALESID,
-          TIPOPAGO,
-          DIMENSIONDEFAULTFACTSERV, 
-          DIMENSIONDEFAULTSALES, 
-          MODULOGENERACION,
-          NOMBREMODULOGENERACION,
-          PORCENTAJEPRONTOPAGO,
-          DESCRIPCIONPRONTOPAGO,
-          IDVENDEDOR,
-          NOMBREVENDEDOR
-     FROM
-     [..\QVD\QST_Cartera.QVD]
-     (qvd);
+	LOAD 
+		ASIENTOFACTURA,
+		CONDICIONPAGO, 
+		CREATEDBY, 
+		CREATEDDATETIME, 
+		CUENTACLIENTE                 as IDCLIENTE,
+		DATAAREAID,
+		DESCRIPCIONPRONTOPAGO,
+		DIASVENCIDOS,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		DIVISA,
+		ESTADOFACTURA,
+		FECHAFACTURA,
+		FECHAVENCIMIENTO,
+		IDFACTURA,
+		IDVENDEDOR,
+		MODULOGENERACION,
+		NOMBRECLIENTE,
+		NOMBREESTADOFACTURA,
+		NOMBREMODULOGENERACION,
+		NOMBREVENCIDA,
+		NOMBREVENDEDOR,
+		PARTITION,
+		PORCENTAJEPRONTOPAGO,
+		RECID,
+		RECVERSION,
+		SALDOCORRIENTETOTAL,
+		SALDOTOTAL,
+		SALDOTOTALDIVISA,
+		SALDOVENCIDOTOTAL,
+		SALESID,
+		TIPOPAGO,
+		ULTIMAFECHALIQUIDACION,
+		ULTIMOASIENTOLIQUIDACION,
+		VALORDIVISALIQUIDADA,
+		VALORFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORLIQUIDADO,
+		VENCIDA
+	FROM
+	[..\QVD\QST_Cartera.QVD]
+	(qvd);
 
 UNQUALIFY *;

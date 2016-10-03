@@ -596,7 +596,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>PRECIOUNITARIO * ([Und Despachadas])</v>
+        <v>Sum(VALORNETO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -7536,7 +7536,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Vlr Despachado</v>
+        <v>Importe Neto</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -11553,7 +11553,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -11563,7 +11563,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>147</ColWidth>
+      <ColWidth>178</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -11742,7 +11742,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -11752,7 +11752,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>206</ColWidth>
+      <ColWidth>219</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -17659,7 +17659,7 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>147</int>
+      <int>172</int>
       <int>206</int>
       <int>341</int>
       <int>300</int>
@@ -17689,6 +17689,7 @@
       <int>300</int>
       <int>300</int>
       <int>225</int>
+      <int>328</int>
       <int>328</int>
       <int>172</int>
       <int>300</int>
@@ -18220,6 +18221,7 @@
       <int>31</int>
       <int>32</int>
       <int>33</int>
+      <int>34</int>
     </InterFieldSortOrder>
     <ExpressionPosition>20</ExpressionPosition>
     <NumberOfLeftDimensions>20</NumberOfLeftDimensions>
@@ -26665,7 +26667,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>PRECIOUNITARIO * ([Und Despachadas])</v>
+              <v>Sum(VALORNETO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -26704,7 +26706,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Vlr Despachado</v>
+              <v>Importe Neto</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -27239,7 +27241,7 @@
           <AttributeExpressions></AttributeExpressions>
           <EnableCondition>
             <Type>COND_EX_COND</Type>
-            <Expression>vGrafDespacho = 'Despacho'</Expression>
+            <Expression>vGrafDespacho = 'Despacho' or vGrafDespacho = 'Pendiente' </Expression>
           </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
