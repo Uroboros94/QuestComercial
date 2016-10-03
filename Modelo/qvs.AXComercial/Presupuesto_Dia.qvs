@@ -2,24 +2,25 @@
 Fecha : 28/09/2016
 ----------------------------------------------------------------------------------------------------
  Detalle :
-     Creación del Modelo: Presupuesto_Dia
+	Creación del Modelo: Presupuesto_Dia
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/28/2016  |   Alejandro Saa G.|   Inicio de Configuración
 *****************************************************************************************************/
 Presupuesto_Dia:
-LOAD DIA,
-     MES,
-     ANO,
-     Date(FECHA, 'YYYYMMDD') as FECHA,
-     'Semana '&Ceil(Day(FECHA)/7) as SemanaPresupuesto,
-     LINEA,
-     CODBARRAS,
-     PresupuestoEstilo,
-     CodICG,
-     UNIDADES,
-     PESOS
-FROM
-[..\QVD\Presupuesto_Dia2.QVD]
-(qvd);
+	LOAD 
+		DIA,
+		MES,
+		ANO,
+		Date(FECHA, 'YYYYMMDD') as FECHA,
+		'Semana '&Ceil(Day(FECHA)/7) as SemanaPresupuesto,
+		LINEA,
+		CODBARRAS,
+		PresupuestoEstilo,
+		CodICG,
+		UNIDADES,
+		PESOS
+	FROM
+	[..\QVD\Presupuesto_Dia2.QVD]
+	(qvd);
