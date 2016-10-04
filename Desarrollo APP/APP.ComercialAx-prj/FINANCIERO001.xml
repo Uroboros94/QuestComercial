@@ -2831,7 +2831,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.NOMBRECLIENTE</Name>
+        <Name>Cliente.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4217,7 +4217,7 @@
     <ScatterShowDirection>false</ScatterShowDirection>
     <ArrowMode>0</ArrowMode>
     <ArrowSize>7</ArrowSize>
-    <ScatterBubbles>false</ScatterBubbles>
+    <ScatterBubbles>true</ScatterBubbles>
     <ScatterFilledBubbles>true</ScatterFilledBubbles>
     <Bubblesize>24</Bubblesize>
     <GridAutoBubbleSize>1</GridAutoBubbleSize>
@@ -5492,14 +5492,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.NOMBRECLIENTE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>CarteraCliente.IDFACTURA</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5517,6 +5509,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>CarteraCliente.FECHAVENCIMIENTO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

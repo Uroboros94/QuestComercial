@@ -1763,7 +1763,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NOMBREVENDEDOR</Name>
+        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1949,7 +1949,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NAME</Name>
+        <Name>Cliente.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3953,21 +3953,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>NOMBREVENDEDOR</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-          </ElemValues>
+          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>NAME</DimName>
+          <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

@@ -271,7 +271,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>if(Corriente+Vencido&gt;sum(CREDITMAX),'Si','No')</v>
+        <v>if(Corriente+Vencido&gt;sum(Cliente.Cupo),'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -371,7 +371,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(CREDITMAX)</v>
+        <v>sum(Cliente.Cupo)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -646,7 +646,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>([Vlr Despachado]) / ([Vlr Pedidos])</v>
+        <v>([Importe Neto]) / ([Vlr Pedidos])</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -11968,7 +11968,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NOMBREVENDEDOR</Name>
+        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12340,7 +12340,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NAME</Name>
+        <Name>Cliente.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12526,7 +12526,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>STATEVALUE</Name>
+        <Name>Cliente.Departamento</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12712,7 +12712,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CITYVALUE</Name>
+        <Name>Cliente.Ciudad</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -17681,8 +17681,15 @@
       <int>300</int>
       <int>266</int>
       <int>272</int>
+      <int>150</int>
+      <int>363</int>
       <int>225</int>
       <int>328</int>
+      <int>300</int>
+      <int>328</int>
+      <int>325</int>
+      <int>291</int>
+      <int>300</int>
       <int>300</int>
     </ColWidths>
     <Striping>
@@ -18202,6 +18209,13 @@
       <int>22</int>
       <int>23</int>
       <int>24</int>
+      <int>25</int>
+      <int>26</int>
+      <int>27</int>
+      <int>28</int>
+      <int>29</int>
+      <int>30</int>
+      <int>31</int>
     </InterFieldSortOrder>
     <ExpressionPosition>20</ExpressionPosition>
     <NumberOfLeftDimensions>20</NumberOfLeftDimensions>
@@ -18329,28 +18343,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>NOMBREVENDEDOR</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>NAME</DimName>
-          <ElemNo>
-            <int>1146</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BElOU1RJVFVUTyBOQUNJT05BTCBQRU5JVEVOQ0lBUklPIFkgQ0FSQ0VMQVJJTyBJTlBFQwA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>IDCLIENTE</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -18401,28 +18393,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>STATEVALUE</DimName>
-          <ElemNo>
-            <int>-2</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CITYVALUE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>GRUPOVENTAS</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -18464,6 +18434,38 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>NOMBRETIPOPEDIDO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Departamento</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Ciudad</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -19070,7 +19072,7 @@
           <InternalId>1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(Corriente+Vencido&gt;sum(CREDITMAX),'Si','No')</v>
+              <v>if(Corriente+Vencido&gt;sum(Cliente.Cupo),'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -21432,7 +21434,7 @@
           <InternalId>5</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(CREDITMAX)</v>
+              <v>sum(Cliente.Cupo)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -27819,7 +27821,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>([Vlr Despachado]) / ([Vlr Pedidos])</v>
+              <v>([Importe Neto]) / ([Vlr Pedidos])</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -31321,7 +31323,10 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition></EnableCondition>
+          <EnableCondition>
+            <Type>COND_EX_COND</Type>
+            <Expression>vGrafDespacho = 'Pendiente'</Expression>
+          </EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
