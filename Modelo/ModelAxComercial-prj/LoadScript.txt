@@ -17,10 +17,12 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
+
+	
 ///$tab Carga
 $(Include=qvs.axcomercial\calendario.qvs);
 
-$(Include=qvs.axcomercial\maestroclientes.qvs);
+$(Include=qvs.axcomercial\clientes.qvs);
 
 $(Include=qvs.axcomercial\pedidosventa.qvs);
 

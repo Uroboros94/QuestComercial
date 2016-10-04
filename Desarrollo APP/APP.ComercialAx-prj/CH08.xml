@@ -287,7 +287,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>If(((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) + (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) &gt; Sum(CREDITMAX),'Si','No')</v>
+        <v>If(((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) + (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) &gt; Sum(Cliente.Cupo),'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -387,7 +387,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(CREDITMAX)</v>
+        <v>Sum(Cliente.Cupo)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -412,7 +412,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) - (Sum(CREDITMAX)) //(Corriente + Vencido) - Cupo</v>
+        <v>((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) - (Sum(Cliente.Cupo)) //(Corriente + Vencido) - Cupo</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -437,7 +437,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>DIASVENCIDOS</v>
+        <v>avg(DIASVENCIDOS)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -10255,7 +10255,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NOMBREVENDEDOR</Name>
+        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10525,7 +10525,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NAME</Name>
+        <Name>Cliente.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10660,7 +10660,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>STATEVALUE</Name>
+        <Name>Cliente.Departamento</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10795,7 +10795,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CITYVALUE</Name>
+        <Name>Cliente.Ciudad</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -15261,6 +15261,7 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
+      <int>300</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -15559,6 +15560,7 @@
       <int>18</int>
       <int>19</int>
       <int>20</int>
+      <int>21</int>
     </InterFieldSortOrder>
     <ExpressionPosition>21</ExpressionPosition>
     <NumberOfLeftDimensions>21</NumberOfLeftDimensions>
@@ -15596,14 +15598,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>NAME</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -15620,31 +15614,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>STATEVALUE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CITYVALUE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>NOMBREVENDEDOR</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15757,6 +15727,38 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>NOMBRETIPOPEDIDO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Departamento</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Ciudad</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -16314,7 +16316,7 @@
           <InternalId>1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>If(((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) + (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) &gt; Sum(CREDITMAX),'Si','No')</v>
+              <v>If(((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) + (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) &gt; Sum(Cliente.Cupo),'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -18472,7 +18474,7 @@
           <InternalId>5</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CREDITMAX)</v>
+              <v>Sum(Cliente.Cupo)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -19011,7 +19013,7 @@
           <InternalId>6</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) - (Sum(CREDITMAX)) //(Corriente + Vencido) - Cupo</v>
+              <v>((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) - (Sum(Cliente.Cupo)) //(Corriente + Vencido) - Cupo</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -19550,7 +19552,7 @@
           <InternalId>7</InternalId>
           <ExpressionData>
             <Definition>
-              <v>DIASVENCIDOS</v>
+              <v>avg(DIASVENCIDOS)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -1,0 +1,56 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Creación del Modelo: MaestroClientes
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+Clientes:
+	LOAD 
+		ACCOUNTNUM				as IDCLIENTE,
+		ADDRESSING				as Cliente.Direccion,
+		CITYID					as Cliente.IdCiudad,
+		CITYVALUE					as Cliente.Ciudad,
+		COUNTRYID					as Cliente.IdPais,
+		COUNTRYVALUE				as Cliente.Pais,
+		CREDITMAX					as Cliente.Cupo,
+		//CURRENCY,
+		CUSTGROUPID				as Cliente.GrupoCliente,
+		//CUSTGROUPVALUE,
+		//DATAAREAID,
+		DIGIT					as Cliente.DigitoVerificacion,
+		//DIMENSIONDEFAULT,
+		DIRPARTYTYPE				as Cliente.IdTipoCliente,
+		//FIRSTNAME					as Cliente.PrimerNombre,
+		IDENTIFICATIONNUM			as Cliente.Identificacion,
+		//IDENTIFICATIONTYPE			as Cliente.TipoIdentificacion,
+		//IDVENDEDOR,
+		//LASTNAME,
+		MAINEMAIL					as Cliente.CorreoPpal,
+		MAINPHONE					as Cliente.TelefonoPpal,
+		MAINURL					as Cliente.PaginaWeb,
+		//MANDATORYCREDITLIMIT		,
+		//MIDDLENAME,
+		NAME 					as Cliente.NombreCompleto,
+		NOMBREDIRPARTYTYPE			as Cliente.TipoCliente,
+		NOMBREIDENTIFICATIONTYPE		as Cliente.TipoIdentificacion,
+		//NOMBREMANDATORYCREDITLIMIT,
+		//NOMBREVENDEDOR,
+		//PARTITION,
+		//PAYMMODEID,
+		//PAYMMODEVALUE,
+		//PAYMTERMID,
+		//PAYMTERMVALUE,
+		//RECID,
+		//RECVERSION,
+		SALESDISTRICT				as Cliente.Zona,
+		//SECONDLASTNAME,
+		STATEID					as Cliente.IdDepartamento,
+		STATEVALUE				as Cliente.Departamento
+	FROM
+	[..\QVD\QST_MaestroClientes.QVD]
+	(qvd);
+
