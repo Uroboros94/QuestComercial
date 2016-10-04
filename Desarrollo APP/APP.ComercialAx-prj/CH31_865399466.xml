@@ -2321,7 +2321,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>STATEVALUE</Name>
+        <Name>Cliente.Departamento</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2507,7 +2507,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CITYVALUE</Name>
+        <Name>Cliente.Ciudad</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2693,7 +2693,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>ADDRESSING</Name>
+        <Name>Cliente.Direccion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2879,7 +2879,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MAINPHONE</Name>
+        <Name>Cliente.TelefonoPpal</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3251,8 +3251,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Date(CarteraCliente.FECHAFACTURA, 'DD/MM/YYYY')</Name>
-        <Type>IS_EXPR</Type>
+        <Name>CarteraCliente.FECHAFACTURA</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Fecha documento</v>
@@ -3410,7 +3410,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>434</ColWidth>
+      <ColWidth>316</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3437,8 +3437,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Date(CarteraCliente.FECHAVENCIMIENTO, 'DD/MM/YYYY')</Name>
-        <Type>IS_EXPR</Type>
+        <Name>CarteraCliente.FECHAVENCIMIENTO</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Fecha vencimiento</v>
@@ -3596,7 +3596,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>434</ColWidth>
+      <ColWidth>334</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -5100,8 +5100,8 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>434</int>
-      <int>434</int>
+      <int>316</int>
+      <int>334</int>
       <int>300</int>
       <int>347</int>
       <int>453</int>
@@ -5675,34 +5675,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Date(CarteraCliente.FECHAFACTURA, 'DD/MM/YYYY')</DimName>
-          <ElemNo>
-            <int>8</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAADgyuRA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Date(CarteraCliente.FECHAVENCIMIENTO, 'DD/MM/YYYY')</DimName>
-          <ElemNo>
-            <int>8</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAADgyuRA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>CarteraCliente.DIASVENCIDOS</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5719,35 +5691,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>STATEVALUE</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFZhbGxlIGRlbCBDYXVjYQA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CITYVALUE</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BENhbGkA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>ADDRESSING</DimName>
+          <DimName>Cliente.Departamento</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5755,7 +5699,39 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MAINPHONE</DimName>
+          <DimName>Cliente.Ciudad</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Direccion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.TelefonoPpal</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>CarteraCliente.FECHAFACTURA</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>CarteraCliente.FECHAVENCIMIENTO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

@@ -3625,7 +3625,7 @@ Sum({&lt;
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>144</ColWidth>
+      <ColWidth>181</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7771,8 +7771,8 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>TIENEFOTO</Name>
-        <Type>PRESENT</Type>
+        <Name>=if(isNull(TIENEFOTO),'No',TIENEFOTO)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Foto</v>
@@ -9883,7 +9883,7 @@ Sum({&lt;
       <int>300</int>
       <int>300</int>
       <int>269</int>
-      <int>144</int>
+      <int>181</int>
       <int>300</int>
       <int>269</int>
       <int>166</int>
@@ -10483,7 +10483,7 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>TIENEFOTO</DimName>
+          <DimName>=if(isNull(TIENEFOTO),'No',TIENEFOTO)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -14188,7 +14188,7 @@ Sum({&lt;
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>144</ColWidth>
+            <ColWidth>181</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
