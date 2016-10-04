@@ -1,0 +1,17 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: FotosStyle
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+FotosStyle:
+LOAD Code,
+    FilePath;
+SQL SELECT Code,
+	FilePath
+FROM "_FotosStyle_";
+
+STORE FotosStyle INTO [..\QVD\FotosStyle.QVD](qvd);
+DROP TABLE FotosStyle;
