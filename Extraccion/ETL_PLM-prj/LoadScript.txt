@@ -1,0 +1,25 @@
+﻿///$tab Main
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$#.##0,00;-$#.##0,00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY h:mm:ss[.fff] TT';
+SET MonthNames='Ene.;Feb.;Mar.;Abr.;May.;Jun.;Jul.;Ago.;Sept.;Oct.;Nov.;Dic.';
+SET DayNames='lun.;mar.;mié.;jue.;vie.;sáb.;dom.';
+SET LongMonthNames='Enero;Febrero;Marzo;Abril;Mayo;Junio;Julio;Agosto;Septiembre;Octubre;Noviembre;Diciembre';
+SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET FirstWeekDay=0;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='es-CO';
+
+///$tab Conexión
+/* Conexión a INTERFAZPLM. */
+OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=INTERFAZPLM;Data Source=QUEST-SQL1;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=QUEST-QLINK;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is HWVLUYRNJbaICSIGQJMKTRC);
+///$tab Dimensiones
+/* Tabla de fotos de productos. */
+$(Must_Include=qvs.plm\fotosstyle.qvs);
