@@ -731,9 +731,8 @@
     <String>1</String>
     <String>DefaultDimensions</String>
     <String>240</String>
-    <String>2</String>
+    <String>1</String>
     <String>DefaultDimensions</String>
-    <String>Presupuesto_Dia</String>
     <String>241</String>
     <String>1</String>
     <String>DefaultDimensions</String>
@@ -828,8 +827,9 @@
     <String>1</String>
     <String>DefaultDimensions</String>
     <String>272</String>
-    <String>1</String>
+    <String>2</String>
     <String>DefaultDimensions</String>
+    <String>Presupuesto_Dia</String>
     <String>273</String>
     <String>1</String>
     <String>Presupuesto_Dia</String>
@@ -1231,20 +1231,20 @@
           <String>MasterProductAttributes.ATVAL_TIPO_DE_PRODUCTO</String>
           <String>MasterProductAttributes.ATVAL_TIPOLOGIA_DE_TEJIDO</String>
           <String>MasterProductAttributes.NC</String>
-          <String>CarteraCliente.ASIENTOFACTURA</String>
+          <String>CarteraCliente.IDFACTURA</String>
+          <String>CarteraCliente.ULTIMOASIENTOLIQUIDACION</String>
+          <String>CarteraCliente.NOMBRECLIENTE</String>
+          <String>CarteraCliente.DIVISA</String>
           <String>CarteraCliente.CREATEDBY</String>
           <String>CarteraCliente.DATAAREAID</String>
-          <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
-          <String>CarteraCliente.DIVISA</String>
-          <String>CarteraCliente.IDFACTURA</String>
-          <String>CarteraCliente.NOMBRECLIENTE</String>
           <String>CarteraCliente.NOMBREESTADOFACTURA</String>
-          <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>CarteraCliente.NOMBREVENCIDA</String>
-          <String>CarteraCliente.NOMBREVENDEDOR</String>
+          <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
-          <String>CarteraCliente.ULTIMOASIENTOLIQUIDACION</String>
-          <String>DefaultDimensions.Ciudad</String>
+          <String>CarteraCliente.NOMBREMODULOGENERACION</String>
+          <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
+          <String>CarteraCliente.NOMBREVENDEDOR</String>
+          <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
           <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
           <String>DefaultDimensions.DESC_LINEA</String>
@@ -1254,8 +1254,8 @@
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
           <String>DefaultDimensions.NombreCoordinador</String>
           <String>DefaultDimensions.Pais</String>
+          <String>DefaultDimensions.Ciudad</String>
           <String>DefaultDimensions.ZonaGeografica</String>
-          <String>DefaultDimensions.DATAAREAID</String>
           <String>SemanaPresupuesto</String>
           <String>PresupuestoEstilo</String>
           <String>DescripcionDiario</String>
@@ -1372,22 +1372,21 @@
           <String>MasterProductAttributes.ATVAL_TIPO_DE_PRODUCTO</String>
           <String>MasterProductAttributes.ATVAL_TIPOLOGIA_DE_TEJIDO</String>
           <String>MasterProductAttributes.NC</String>
-          <String>CarteraCliente.ASIENTOFACTURA</String>
+          <String>CarteraCliente.IDFACTURA</String>
+          <String>CarteraCliente.ULTIMOASIENTOLIQUIDACION</String>
+          <String>CarteraCliente.NOMBRECLIENTE</String>
+          <String>CarteraCliente.DIVISA</String>
           <String>CarteraCliente.CREATEDBY</String>
           <String>CarteraCliente.DATAAREAID</String>
-          <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
-          <String>CarteraCliente.DIVISA</String>
-          <String>CarteraCliente.IDFACTURA</String>
-          <String>CarteraCliente.NOMBRECLIENTE</String>
           <String>CarteraCliente.NOMBREESTADOFACTURA</String>
-          <String>CarteraCliente.NOMBREMODULOGENERACION</String>
           <String>CarteraCliente.NOMBREVENCIDA</String>
-          <String>CarteraCliente.NOMBREVENDEDOR</String>
+          <String>CarteraCliente.ASIENTOFACTURA</String>
           <String>CarteraCliente.SALESID</String>
           <String>CarteraCliente.TIPOPAGO</String>
-          <String>CarteraCliente.ULTIMOASIENTOLIQUIDACION</String>
-          <String>DefaultDimensions.Ciudad</String>
-          <String>DefaultDimensions.Departamento</String>
+          <String>CarteraCliente.NOMBREMODULOGENERACION</String>
+          <String>CarteraCliente.DESCRIPCIONPRONTOPAGO</String>
+          <String>CarteraCliente.NOMBREVENDEDOR</String>
+          <String>DefaultDimensions.DATAAREAID</String>
           <String>DefaultDimensions.DESC_CENTRO_DE_COSTO</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
           <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
@@ -1400,8 +1399,9 @@
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
           <String>DefaultDimensions.NombreCoordinador</String>
           <String>DefaultDimensions.Pais</String>
+          <String>DefaultDimensions.Departamento</String>
+          <String>DefaultDimensions.Ciudad</String>
           <String>DefaultDimensions.ZonaGeografica</String>
-          <String>DefaultDimensions.DATAAREAID</String>
           <String>SemanaPresupuesto</String>
           <String>PresupuestoEstilo</String>
           <String>DescripcionDiario</String>
@@ -1500,35 +1500,35 @@
           <String>Productos.SUBTIPOPRODUCTO</String>
           <String>Productos.TRACKINGDIMENSIONGROUPRECID</String>
           <String>Productos.PRODUCTPARENT</String>
-          <String>CarteraCliente.CONDICIONPAGO</String>
+          <String>CarteraCliente.FECHAFACTURA</String>
+          <String>CarteraCliente.VALORFACTURADIVISATRANS</String>
+          <String>CarteraCliente.VALORFACTURA</String>
+          <String>CarteraCliente.ULTIMAFECHALIQUIDACION</String>
+          <String>CarteraCliente.SALDOTOTAL</String>
+          <String>CarteraCliente.FECHAVENCIMIENTO</String>
+          <String>CarteraCliente.VALORDIVISALIQUIDADA</String>
+          <String>CarteraCliente.VALORLIQUIDADO</String>
+          <String>CarteraCliente.SALDOVENCIDOTOTAL</String>
           <String>CarteraCliente.CREATEDDATETIME</String>
+          <String>CarteraCliente.RECVERSION</String>
+          <String>CarteraCliente.PARTITION</String>
+          <String>CarteraCliente.RECID</String>
+          <String>CarteraCliente.SALDOTOTALDIVISA</String>
+          <String>CarteraCliente.ESTADOFACTURA</String>
+          <String>CarteraCliente.CONDICIONPAGO</String>
           <String>CarteraCliente.DIASVENCIDOS</String>
+          <String>CarteraCliente.VENCIDA</String>
+          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
           <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
           <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
-          <String>CarteraCliente.ESTADOFACTURA</String>
-          <String>CarteraCliente.FECHAFACTURA</String>
-          <String>CarteraCliente.FECHAVENCIMIENTO</String>
           <String>CarteraCliente.MODULOGENERACION</String>
-          <String>CarteraCliente.PARTITION</String>
           <String>CarteraCliente.PORCENTAJEPRONTOPAGO</String>
-          <String>CarteraCliente.RECID</String>
-          <String>CarteraCliente.RECVERSION</String>
-          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
-          <String>CarteraCliente.SALDOTOTAL</String>
-          <String>CarteraCliente.SALDOTOTALDIVISA</String>
-          <String>CarteraCliente.SALDOVENCIDOTOTAL</String>
-          <String>CarteraCliente.ULTIMAFECHALIQUIDACION</String>
-          <String>CarteraCliente.VALORDIVISALIQUIDADA</String>
-          <String>CarteraCliente.VALORFACTURA</String>
-          <String>CarteraCliente.VALORFACTURADIVISATRANS</String>
-          <String>CarteraCliente.VALORLIQUIDADO</String>
-          <String>CarteraCliente.VENCIDA</String>
-          <String>DefaultDimensions.CodCoordinador</String>
-          <String>DefaultDimensions.CREATEDDATETIME</String>
-          <String>DefaultDimensions.MODIFIEDDATETIME</String>
+          <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
-          <String>DefaultDimensions.RECVERSION</String>
+          <String>DefaultDimensions.MODIFIEDDATETIME</String>
+          <String>DefaultDimensions.CREATEDDATETIME</String>
+          <String>DefaultDimensions.CodCoordinador</String>
           <String>DIA</String>
           <String>MES</String>
           <String>ANO</String>
@@ -1621,27 +1621,27 @@
           <String>Productos.SUBTIPOPRODUCTO</String>
           <String>Productos.TRACKINGDIMENSIONGROUPRECID</String>
           <String>Productos.PRODUCTPARENT</String>
-          <String>CarteraCliente.CONDICIONPAGO</String>
-          <String>CarteraCliente.DIASVENCIDOS</String>
-          <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
-          <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
-          <String>CarteraCliente.ESTADOFACTURA</String>
           <String>CarteraCliente.FECHAFACTURA</String>
-          <String>CarteraCliente.FECHAVENCIMIENTO</String>
-          <String>CarteraCliente.MODULOGENERACION</String>
-          <String>CarteraCliente.PARTITION</String>
-          <String>CarteraCliente.PORCENTAJEPRONTOPAGO</String>
-          <String>CarteraCliente.RECID</String>
-          <String>CarteraCliente.RECVERSION</String>
-          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
           <String>CarteraCliente.ULTIMAFECHALIQUIDACION</String>
+          <String>CarteraCliente.FECHAVENCIMIENTO</String>
           <String>CarteraCliente.VALORDIVISALIQUIDADA</String>
           <String>CarteraCliente.VALORLIQUIDADO</String>
+          <String>CarteraCliente.RECVERSION</String>
+          <String>CarteraCliente.PARTITION</String>
+          <String>CarteraCliente.RECID</String>
+          <String>CarteraCliente.ESTADOFACTURA</String>
+          <String>CarteraCliente.CONDICIONPAGO</String>
+          <String>CarteraCliente.DIASVENCIDOS</String>
           <String>CarteraCliente.VENCIDA</String>
-          <String>DefaultDimensions.CodCoordinador</String>
+          <String>CarteraCliente.SALDOCORRIENTETOTAL</String>
+          <String>CarteraCliente.DIMENSIONDEFAULTFACTSERV</String>
+          <String>CarteraCliente.DIMENSIONDEFAULTSALES</String>
+          <String>CarteraCliente.MODULOGENERACION</String>
+          <String>CarteraCliente.PORCENTAJEPRONTOPAGO</String>
+          <String>DefaultDimensions.RECVERSION</String>
           <String>DefaultDimensions.PARTITION</String>
           <String>DefaultDimensions.RECID</String>
-          <String>DefaultDimensions.RECVERSION</String>
+          <String>DefaultDimensions.CodCoordinador</String>
           <String>DIA</String>
           <String>MES</String>
           <String>ANO</String>
@@ -1676,11 +1676,11 @@
           <String>FECHAFACTURA</String>
           <String>FECHAVENCIMIENTO</String>
           <String>CREATEDDATETIME</String>
-          <String>CarteraCliente.CREATEDDATETIME</String>
           <String>CarteraCliente.FECHAFACTURA</String>
           <String>CarteraCliente.FECHAVENCIMIENTO</String>
-          <String>DefaultDimensions.CREATEDDATETIME</String>
+          <String>CarteraCliente.CREATEDDATETIME</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
+          <String>DefaultDimensions.CREATEDDATETIME</String>
           <String>FECHA</String>
           <String>DATEPHYSICAL</String>
           <String>DATEFINANCIAL</String>
