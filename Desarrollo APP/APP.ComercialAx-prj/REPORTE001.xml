@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>if(Corriente+Vencido&gt;sum(CREDITMAX),'Si','No')</v>
+        <v>if(Corriente+Vencido&gt;sum(Cliente.Cupo),'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -6854,7 +6854,7 @@
           <InternalId>2</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(Corriente+Vencido&gt;sum(CREDITMAX),'Si','No')</v>
+              <v>if(Corriente+Vencido&gt;sum(Cliente.Cupo),'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -929,7 +929,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>ESTILO</Name>
+        <Name>Productos.Estilo</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1301,7 +1301,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CODARTICULO</Name>
+        <Name>Productos.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3185,20 +3185,6 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>ESTILO</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
         <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
@@ -3209,7 +3195,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CODARTICULO</DimName>
+          <DimName>Productos.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Productos.Estilo</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
