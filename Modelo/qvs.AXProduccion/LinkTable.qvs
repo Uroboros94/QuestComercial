@@ -1,0 +1,25 @@
+/*****************************************************************************************************
+Fecha : 05/10/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+     Modelo de LinkTable
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   	|   Modificación
+-------------------------------------------------------------------------------------------------
+05/10/2016  |   Malemos			|   Inicio de Configuración
+*****************************************************************************************************/
+LinkTable:
+	LOAD 
+		%OrdenesCompraKey,
+		%DEFAULTDIMENSION 					as SK.DEFAULTDIMENSION,
+		%KEYPRODUCT							as SK.KEYPRODUCT,
+		%FECHAKEY							as SK.FECHA
+	Resident OrdenesCompra;
+	Concatenate(LinkTable)
+	LOAD 
+		%OrdenesProduccionKey,
+		%DEFAULTDIMENSION 					as SK.DEFAULTDIMENSION,
+		%KEYPRODUCT						as SK.KEYPRODUCT,
+		%FECHAKEY							as SK.FECHA
+	Resident OrdenProd;	
+	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT; 

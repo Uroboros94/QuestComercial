@@ -1,0 +1,47 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Creación del Modelo: BOMCalcTrans
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+QUALIFY *;
+	BOMCalcTrans:
+		LOAD 
+			BOMID, 
+			PRICECALCID, 
+			ITEMID, 
+			INVENTSIZEID, 
+			INVENTCOLORID, 
+			COSTPRICE_CAB, 
+			COSTMARKUP_CAB, 
+			SALESPRICE_CAB, 
+			SALESMARKUP_CAB, 
+			QTY_CAB, 
+			TRANSDATE, 
+			CALCGROUPID, 
+			RESOURCE_, 
+			LEVEL_, 
+			COSTGROUPID, 
+			OPRID, 
+			CONSUMPTIONVARIABLE, 
+			UNITID, 
+			COSTPRICE, 
+			SALESPRICE, 
+			QTY, 
+			COSTPRICEQTY, 
+			SALESPRICEQTY, 
+			LINENUM, 
+			OPRNUM, 
+			COSTPRICEUNIT, 
+			COSTMARKUPQTY, 
+			SALESMARKUPQTY, 
+			INVENTDIMID, 
+			ROUTEID
+		FROM
+		[..\QVD\BOMCalcTrans.QVD]
+		(qvd);
+UNQUALIFY *;

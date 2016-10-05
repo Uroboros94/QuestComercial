@@ -1,0 +1,70 @@
+/*****************************************************************************************************
+	Fecha : 05/10/2016
+	-------------------------------------------------------------------------------------------------
+	 Detalle :
+		Creación del Modelo: RecepcionesOP
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   CarteraCliente
+	-------------------------------------------------------------------------------------------------
+	05/10/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+VendPackingLip_tmp:
+	LOAD
+		PURCHID, 
+		PACKINGSLIPID, 
+		DELIVERYDATE, 
+		RECID				as VENDPACKINGSLIPJOUR
+	FROM
+	[..\QVD\VendPackingSlipJour.QVD]
+	(qvd);
+
+	left Join (VendPackingLip_tmp)
+	LOAD 
+		LINENUM, 
+		INVENTTRANSID, 
+		ITEMID, 
+		ORDERED, 
+		QTY, 
+		REMAIN, 
+		PRICEUNIT, 
+		VALUEMST, 
+		INVENTDIMID, 
+		VENDPACKINGSLIPJOUR 
+	FROM
+	[..\QVD\VendPackingSlipTrans.QVD]
+	(qvd);
+
+	left Join (VendPackingLip_tmp)
+	LOAD 
+		INVENTDIMID, 
+		INVENTSIZEID, 
+		INVENTCOLORID
+	FROM
+	[..\QVD\InventDim.QVD]
+	(qvd);
+
+QUALIFY*;
+UNQUALIFY VENPACKINGLIPID;
+	NoConcatenate
+	RecepcionesOP:
+		LOAD
+			PURCHID, 
+			PACKINGSLIPID, 
+			DELIVERYDATE,  
+			LINENUM, 
+			INVENTTRANSID,
+			PURCHID&INVENTTRANSID as VENPACKINGLIPID,
+			ITEMID, 
+			ORDERED, 
+			QTY, 
+			REMAIN, 
+			PRICEUNIT, 
+			VALUEMST,  
+			VENDPACKINGSLIPJOUR,
+			INVENTDIMID, 
+			INVENTSIZEID, 
+			INVENTCOLORID
+		Resident VendPackingLip_tmp;
+		DROP Table VendPackingLip_tmp;
+UNQUALIFY *;
+
