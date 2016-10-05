@@ -12,26 +12,27 @@ Fecha       |   Desarrollador   |   Modificación
 QUALIFY *;
 UNQUALIFY SK.FECHA;
 Calendario:
-	 LOAD num(Fecha)				As SK.FECHA,
-		  //num(Fecha)			    As SK.FECHA1,
-		  Año					  	As ano, 
-		  Mes						As nomMes, 
-		  MonthYear, 
-		  %_Fechakey, 
-		  NumericMonthYear, 
-		  NumericMonth, 
-		  Semestre, 
-		  Trimestre					As nomTrim,
-		  trimestre, 
-		  Week						As semana,
-		  SemanaMes, 
-		  Weekday					As nombreDia, 
-		  Dia						As dia, 
-		  DateMMDD,
-		  CYTD,
-		  FPYTD,
-		  Festivo, 
-		  EsFestivo
+	 LOAD 
+	 	num(Fecha)				As SK.FECHA,
+		//num(Fecha)			    As SK.FECHA1,
+		Año					  	As ano, 
+		Mes						As nomMes, 
+		MonthYear, 
+		%_Fechakey, 
+		NumericMonthYear, 
+		NumericMonth, 
+		Semestre, 
+		Trimestre				As nomTrim,
+		trimestre, 
+		Week					As semana,
+		SemanaMes, 
+		Weekday					As nombreDia, 
+		Dia						As dia, 
+		DateMMDD,
+		CYTD,
+		FPYTD,
+		Festivo, 
+		EsFestivo
 	 FROM
 		  [..\QVD\Calendario_Final.QVD]
 		  (qvd)

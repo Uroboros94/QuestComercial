@@ -20,27 +20,27 @@ SET CollationLocale='es-CO';
 
 	
 ///$tab Carga
-$(Include=qvs.axcomercial\calendario.qvs);
+$(must_Include=qvs.componentes\calendario.qvs);
 
-$(Include=qvs.axcomercial\clientes.qvs);
+$(must_Include=qvs.componentes\defaultdimensions.qvs);
 
-$(Include=qvs.axcomercial\pedidosventa.qvs);
+$(must_Include=qvs.componentes\maestroproductos.qvs);
 
-$(Include=qvs.axcomercial\ventas.qvs);
+$(must_Include=qvs.axcomercial\clientes.qvs);
 
-$(Include=qvs.axcomercial\maestroproductos.qvs);
+$(must_Include=qvs.axcomercial\pedidosventa.qvs);
 
-$(Include=qvs.axcomercial\carteracliente.qvs);
+$(must_Include=qvs.axcomercial\ventas.qvs);
 
-$(Include=qvs.axcomercial\defaultdimensions.qvs);
+$(must_Include=qvs.axcomercial\carteracliente.qvs);
 
-$(Include=qvs.axcomercial\presupuesto_dia.qvs);
+$(must_Include=qvs.axcomercial\presupuesto_dia.qvs);
 
-$(Include=qvs.axcomercial\actividadesproducto.qvs);
+$(must_Include=qvs.axcomercial\actividadesproducto.qvs);
 
-$(Include=qvs.axcomercial\inventtransop.qvs);
+$(must_Include=qvs.axcomercial\inventtransop.qvs);
 
-//$(Include=qvs.axcomercial\fotosstyle.qvs);
+//$(must_Include=qvs.axcomercial\fotosstyle.qvs);
 ///$tab Exit Script
 TRACE Modelo Finalizado;
 EXIT SCRIPT;
