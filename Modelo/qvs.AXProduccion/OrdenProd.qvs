@@ -114,7 +114,8 @@ OrdenesProduccion_tmp:
 	LOAD 
 		INVENTDIMID, 
 		INVENTSIZEID, 
-		INVENTCOLORID
+		INVENTCOLORID,
+		INVENTBATCHID
 	FROM
 	[..\QVD\InventDim.QVD]
 	(qvd);
