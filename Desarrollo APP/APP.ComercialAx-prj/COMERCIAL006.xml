@@ -7213,7 +7213,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.CODARTICULO</Name>
+        <Name>Productos.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -7399,7 +7399,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.COLOR</Name>
+        <Name>Productos.IdColor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10467,23 +10467,23 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.CODARTICULO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.COLOR</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>=if(isNull(TIENEFOTO),'No',TIENEFOTO)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Productos.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Productos.IdColor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
