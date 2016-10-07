@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Inventario en Proceso</v>
+        <v>Total Aplicado en Inventario en Proceso</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -70,7 +70,7 @@
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
       <ShowCaption>true</ShowCaption>
-      <MultiLine>0</MultiLine>
+      <MultiLine>2</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Inventario en Proceso</v>
+      <v>Total Aplicado en Inventario en Proceso</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;COSTGROUPID = {&quot;TELA&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;COSTGROUPID = {&quot;EMPAQUE&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -329,7 +329,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;COSTGROUPID = {&quot;ETIQUETAS&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -354,7 +354,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;COSTGROUPID = {&quot;INSUMOS&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -379,7 +379,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;CONFECCION&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -404,7 +404,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;TERMINACION&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -429,7 +429,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;LAVANDERIA&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -454,7 +454,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;CORTE&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -479,7 +479,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;ESTAMPADO&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -504,7 +504,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;TINTORERIA&quot;}&gt;} BOMQTY)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1551,10 +1551,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -2036,10 +2036,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -2521,10 +2521,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3006,10 +3006,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3491,10 +3491,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3976,10 +3976,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -4461,10 +4461,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -4946,10 +4946,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -5431,10 +5431,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -5916,10 +5916,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -6401,10 +6401,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,000</Fmt>
+        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -11131,7 +11131,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;COSTGROUPID = {&quot;TELA&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -11180,10 +11180,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -11714,7 +11714,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;COSTGROUPID = {&quot;EMPAQUE&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -11763,10 +11763,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -12297,7 +12297,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;COSTGROUPID = {&quot;ETIQUETAS&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12346,10 +12346,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -12880,7 +12880,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;COSTGROUPID = {&quot;INSUMOS&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12929,10 +12929,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -13463,7 +13463,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;CONFECCION&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -13512,10 +13512,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -14046,7 +14046,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;TERMINACION&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14095,10 +14095,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -14629,7 +14629,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;LAVANDERIA&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14678,10 +14678,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -15212,7 +15212,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;CORTE&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -15261,10 +15261,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -15795,7 +15795,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;ESTAMPADO&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -15844,10 +15844,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -16378,7 +16378,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;AP_QST_ITEMNAME = {&quot;TINTORERIA&quot;}&gt;} BOMQTY)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16427,10 +16427,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -17011,10 +17011,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,000</Fmt>
+              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>

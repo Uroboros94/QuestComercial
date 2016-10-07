@@ -10,22 +10,19 @@ Fecha       |   Desarrollador   	|   Modificación
 *****************************************************************************************************/
 ListaMaterialesProduccion:
 SQL SELECT
+    pb.PRODID,
     pt.AP_QST_MASTERPRODORDID,
     pb.ITEMID,
-    it.AP_QST_ITEMNAME,
-    it.COSTGROUPID,
     pb.INVENTDIMID,
     pb.UNITID,
     pb.PRODLINETYPE,
     pb.BOMQTY,
     pb.VENDID
   FROM PRODBOM pb join PRODTABLE pt on (pt.PRODID = pb.PRODID)
-    join INVENTTABLE it on (it.ITEMID = pb.ITEMID)
   group by
+    pb.PRODID,
     pt.AP_QST_MASTERPRODORDID,
     pb.ITEMID,
-    it.AP_QST_ITEMNAME,
-    it.COSTGROUPID,
     pb.INVENTDIMID,
     pb.UNITID,
     pb.PRODLINETYPE,
