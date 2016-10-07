@@ -1,0 +1,20 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Creación del Modelo: Maestro de Insumos.
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador     |   Modificación
+-------------------------------------------------------------------------------------------------
+06/10/2016  |   Alejandro Saa G.  |   Inicio de Configuración
+*****************************************************************************************************/
+MaestroInsumos:
+LOAD ITEMID          as IdInsumo, 
+     AP_QST_ITEMNAME as NombreInsumo,
+     NAMEALIAS       as AliasInsumo,
+     BOMUNITID       as UnidadInsumo,
+     COSTGROUPID     as IdGrupoCosto,
+     NAME            as NombreGrupoCosto
+FROM
+[..\QVD\MaestroInsumos.QVD]
+(qvd);

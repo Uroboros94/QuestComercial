@@ -9,16 +9,17 @@ Fecha       |   Desarrollador   	|   Modificación
 05/10/2016  |   Malemos			|   Inicio de Configuración
 *****************************************************************************************************/
 QUALIFY *;
-UNQUALIFY COLLECTREFPRODID;
+UNQUALIFY COLLECTREFPRODID, OrdenMaterial;
 	ProdCalcTrans:
 		LOAD
+      COLLECTREFPRODID&RESOURCE_ as OrdenMaterial,
 			COLLECTREFPRODID,
 			RESOURCE_,
 			COSTGROUPID,
 			CALCGROUPID,
 			INVENTDIMSTR,
 			LINENUM,
-			UNITID, 
+			UNITID,
 			OPRID,
 			OPRNUM,
 			QTY,
