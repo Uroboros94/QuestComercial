@@ -311,20 +311,21 @@
     <String>1</String>
     <String>MasterProductAttributes</String>
     <String>101</String>
-    <String>2</String>
+    <String>3</String>
     <String>OrdenProd</String>
     <String>ProdCalcTrans</String>
+    <String>AP_QST_ProdReport</String>
     <String>102</String>
     <String>2</String>
     <String>OrdenProd</String>
     <String>InventTransOP</String>
     <String>103</String>
-    <String>1</String>
-    <String>OrdenProd</String>
-    <String>104</String>
     <String>2</String>
     <String>OrdenProd</String>
     <String>LinkTable</String>
+    <String>104</String>
+    <String>1</String>
+    <String>OrdenProd</String>
     <String>105</String>
     <String>1</String>
     <String>OrdenProd</String>
@@ -1236,7 +1237,7 @@
     <String>AP_QST_ProdReport</String>
     <String>407</String>
     <String>1</String>
-    <String>AP_QST_ProdReport</String>
+    <String>BOMCalcTrans</String>
     <String>408</String>
     <String>1</String>
     <String>BOMCalcTrans</String>
@@ -1326,14 +1327,14 @@
     <String>BOMCalcTrans</String>
     <String>437</String>
     <String>1</String>
-    <String>BOMCalcTrans</String>
-    <String>438</String>
-    <String>1</String>
     <String>ListaMaterialesProduccion</String>
-    <String>439</String>
+    <String>438</String>
     <String>2</String>
     <String>ListaMaterialesProduccion</String>
     <String>MaestroInsumos</String>
+    <String>439</String>
+    <String>1</String>
+    <String>ListaMaterialesProduccion</String>
     <String>440</String>
     <String>1</String>
     <String>ListaMaterialesProduccion</String>
@@ -1348,7 +1349,7 @@
     <String>ListaMaterialesProduccion</String>
     <String>444</String>
     <String>1</String>
-    <String>ListaMaterialesProduccion</String>
+    <String>MaestroInsumos</String>
     <String>445</String>
     <String>1</String>
     <String>MaestroInsumos</String>
@@ -1363,11 +1364,8 @@
     <String>MaestroInsumos</String>
     <String>449</String>
     <String>1</String>
-    <String>MaestroInsumos</String>
-    <String>450</String>
-    <String>1</String>
     <String>INLFED</String>
-    <String>451</String>
+    <String>450</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -1378,8 +1376,8 @@
         <Tables>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>721</Left>
-              <Top>408</Top>
+              <Left>719</Left>
+              <Top>336</Top>
               <Width>100</Width>
               <Height>208</Height>
             </Pos>
@@ -1405,8 +1403,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>886</Left>
-              <Top>24</Top>
+              <Left>1001</Left>
+              <Top>25</Top>
               <Width>230</Width>
               <Height>118</Height>
             </Pos>
@@ -1415,7 +1413,7 @@
           <TableViewTableWinSaveInfo>
             <Pos>
               <Left>828</Left>
-              <Top>199</Top>
+              <Top>251</Top>
               <Width>220</Width>
               <Height>208</Height>
             </Pos>
@@ -1470,25 +1468,25 @@
             <Pos>
               <Left>720</Left>
               <Top>25</Top>
-              <Width>100</Width>
+              <Width>212</Width>
               <Height>208</Height>
             </Pos>
             <Caption>OrdenProd</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>583</Left>
-              <Top>429</Top>
-              <Width>100</Width>
+              <Left>573</Left>
+              <Top>408</Top>
+              <Width>138</Width>
               <Height>208</Height>
             </Pos>
             <Caption>AP_QST_ProdReport</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>1024</Left>
-              <Top>412</Top>
-              <Width>100</Width>
+              <Left>1094</Left>
+              <Top>407</Top>
+              <Width>205</Width>
               <Height>208</Height>
             </Pos>
             <Caption>BOMCalcTrans</Caption>
@@ -1632,7 +1630,6 @@
           <String>MasterProductAttributes.NC</String>
           <String>COLLECTREFPRODID</String>
           <String>PRODID</String>
-          <String>AP_QST_MASTERPRODORDID</String>
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.PRODGROUPID</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
@@ -1661,6 +1658,7 @@
           <String>OrdenProd.PMFCONSORDID</String>
           <String>OrdenProd.CREATEDBY</String>
           <String>OrdenProd.DATAAREAID</String>
+          <String>OrdenProd.AP_QST_MASTERPRODORDID</String>
           <String>OrdenProd.AP_QST_PROCESSNAME</String>
           <String>OrdenProd.AP_QST_MOVJOURNALID</String>
           <String>OrdenProd.AP_QST_SALESID</String>
@@ -1704,24 +1702,23 @@
           <String>AP_QST_ProdReport.AP_QST_MASTERPRODORDID</String>
           <String>AP_QST_ProdReport.DIMCOLLECTION</String>
           <String>AP_QST_ProdReport.GARMENTTYPE</String>
-          <String>AP_QST_ProdReport.PRODID</String>
           <String>AP_QST_ProdReport.PRODPOOLID</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID1</String>
+          <String>AP_QST_ProdReport.TallerCorte</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID2</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID3</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID4</String>
+          <String>AP_QST_ProdReport.TallerEstampado</String>
+          <String>AP_QST_ProdReport.TallerLavado</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID5</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID6</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID7</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID8</String>
+          <String>AP_QST_ProdReport.TallerTerminado</String>
           <String>AP_QST_ProdReport.OPRNAME1</String>
-          <String>AP_QST_ProdReport.OPRNAME2</String>
-          <String>AP_QST_ProdReport.OPRNAME3</String>
-          <String>AP_QST_ProdReport.OPRNAME4</String>
+          <String>AP_QST_ProdReport.OperacionCorte</String>
+          <String>AP_QST_ProdReport.OperacionEstampado</String>
+          <String>AP_QST_ProdReport.OperacionLavado</String>
           <String>AP_QST_ProdReport.OPRNAME5</String>
           <String>AP_QST_ProdReport.OPRNAME6</String>
           <String>AP_QST_ProdReport.OPRNAME7</String>
-          <String>AP_QST_ProdReport.OPRNAME8</String>
+          <String>AP_QST_ProdReport.OperacionTerminado</String>
           <String>AP_QST_ProdReport.BRAND</String>
           <String>AP_QST_ProdReport.LINE</String>
           <String>AP_QST_ProdReport.SUBLINE</String>
@@ -1803,7 +1800,6 @@
           <String>MasterProductAttributes.NC</String>
           <String>COLLECTREFPRODID</String>
           <String>PRODID</String>
-          <String>AP_QST_MASTERPRODORDID</String>
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.PRODGROUPID</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
@@ -1832,6 +1828,7 @@
           <String>OrdenProd.PMFCONSORDID</String>
           <String>OrdenProd.CREATEDBY</String>
           <String>OrdenProd.DATAAREAID</String>
+          <String>OrdenProd.AP_QST_MASTERPRODORDID</String>
           <String>OrdenProd.AP_QST_PROCESSNAME</String>
           <String>OrdenProd.AP_QST_MOVJOURNALID</String>
           <String>OrdenProd.AP_QST_SALESID</String>
@@ -1875,24 +1872,23 @@
           <String>AP_QST_ProdReport.AP_QST_MASTERPRODORDID</String>
           <String>AP_QST_ProdReport.DIMCOLLECTION</String>
           <String>AP_QST_ProdReport.GARMENTTYPE</String>
-          <String>AP_QST_ProdReport.PRODID</String>
           <String>AP_QST_ProdReport.PRODPOOLID</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID1</String>
+          <String>AP_QST_ProdReport.TallerCorte</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID2</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID3</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID4</String>
+          <String>AP_QST_ProdReport.TallerEstampado</String>
+          <String>AP_QST_ProdReport.TallerLavado</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID5</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID6</String>
           <String>AP_QST_ProdReport.ROUTEWRKCTRID7</String>
-          <String>AP_QST_ProdReport.ROUTEWRKCTRID8</String>
+          <String>AP_QST_ProdReport.TallerTerminado</String>
           <String>AP_QST_ProdReport.OPRNAME1</String>
-          <String>AP_QST_ProdReport.OPRNAME2</String>
-          <String>AP_QST_ProdReport.OPRNAME3</String>
-          <String>AP_QST_ProdReport.OPRNAME4</String>
+          <String>AP_QST_ProdReport.OperacionCorte</String>
+          <String>AP_QST_ProdReport.OperacionEstampado</String>
+          <String>AP_QST_ProdReport.OperacionLavado</String>
           <String>AP_QST_ProdReport.OPRNAME5</String>
           <String>AP_QST_ProdReport.OPRNAME6</String>
           <String>AP_QST_ProdReport.OPRNAME7</String>
-          <String>AP_QST_ProdReport.OPRNAME8</String>
+          <String>AP_QST_ProdReport.OperacionTerminado</String>
           <String>AP_QST_ProdReport.BRAND</String>
           <String>AP_QST_ProdReport.LINE</String>
           <String>AP_QST_ProdReport.SUBLINE</String>
@@ -1958,7 +1954,7 @@
           <String>OrdenProd.PRODTYPE</String>
           <String>OrdenProd.SCHEDSTATUS</String>
           <String>OrdenProd.SCHEDDATE</String>
-          <String>OrdenProd.QTYSCHED</String>
+          <String>OrdenProd.CantProgramada</String>
           <String>OrdenProd.QTYSTUP</String>
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.STUPDATE</String>
@@ -1981,7 +1977,7 @@
           <String>OrdenProd.CALCDATE</String>
           <String>OrdenProd.ROUTEJOBS</String>
           <String>OrdenProd.CHECKROUTE</String>
-          <String>OrdenProd.REMAININVENTPHYSICAL</String>
+          <String>OrdenProd.PdteEnsamblar</String>
           <String>OrdenProd.REFLOOKUP</String>
           <String>OrdenProd.LATESTSCHEDDIRECTION</String>
           <String>OrdenProd.LATESTSCHEDDATE</String>
@@ -2074,11 +2070,11 @@
           <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
           <String>AP_QST_ProdReport.CALCDATE</String>
           <String>AP_QST_ProdReport.DLVDATE</String>
-          <String>AP_QST_ProdReport.FINISHEDDATE</String>
-          <String>AP_QST_ProdReport.ITEMCREATEDATE</String>
-          <String>AP_QST_ProdReport.PRODORDERCREATEDATE</String>
-          <String>AP_QST_ProdReport.QTYCALC</String>
-          <String>AP_QST_ProdReport.QTYSTUP</String>
+          <String>AP_QST_ProdReport.FechaRealEntrega</String>
+          <String>AP_QST_ProdReport.FechaCreacion</String>
+          <String>AP_QST_ProdReport.FechaCreacionOrden</String>
+          <String>AP_QST_ProdReport.CantidadEstimada</String>
+          <String>AP_QST_ProdReport.CantidadConfirmada</String>
           <String>AP_QST_ProdReport.REALDATE</String>
           <String>AP_QST_ProdReport.RELEASEDDATE</String>
           <String>AP_QST_ProdReport.ROUTEDATEDIFF1</String>
@@ -2089,14 +2085,14 @@
           <String>AP_QST_ProdReport.ROUTEDATEDIFF6</String>
           <String>AP_QST_ProdReport.ROUTEDATEDIFF7</String>
           <String>AP_QST_ProdReport.ROUTEDATEDIFF8</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE1</String>
+          <String>AP_QST_ProdReport.FechaEstimadaCorte</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE2</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE3</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE4</String>
+          <String>AP_QST_ProdReport.FechaEstimadaEstampado</String>
+          <String>AP_QST_ProdReport.FechaEstimadaLavado</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE5</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE6</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE7</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE8</String>
+          <String>AP_QST_ProdReport.FechaEstimadaTerminado</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD1</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD2</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD3</String>
@@ -2106,20 +2102,20 @@
           <String>AP_QST_ProdReport.ROUTEQTYGOOD7</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD8</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE1</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE2</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE3</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE4</String>
+          <String>AP_QST_ProdReport.FechaRealCorte</String>
+          <String>AP_QST_ProdReport.FechaRealEstampado</String>
+          <String>AP_QST_ProdReport.FechaRealLavado</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE5</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE6</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE7</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE8</String>
-          <String>AP_QST_ProdReport.SCHEDDATE</String>
-          <String>AP_QST_ProdReport.SCHEDEND</String>
+          <String>AP_QST_ProdReport.FechaRealTerminado</String>
+          <String>AP_QST_ProdReport.FechaEstimadaEntrega</String>
+          <String>AP_QST_ProdReport.FechaProgramacion</String>
           <String>AP_QST_ProdReport.PRODSTATUS</String>
           <String>AP_QST_ProdReport.ROUTEINILDATE1</String>
-          <String>AP_QST_ProdReport.ROUTEINIDATE2</String>
+          <String>AP_QST_ProdReport.FechaInicioCorte</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE3</String>
-          <String>AP_QST_ProdReport.ROUTEINIDATE4</String>
+          <String>AP_QST_ProdReport.FechaInicioLavado</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE5</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE6</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE7</String>
@@ -2195,7 +2191,7 @@
           <String>OrdenProd.PRODTYPE</String>
           <String>OrdenProd.SCHEDSTATUS</String>
           <String>OrdenProd.SCHEDDATE</String>
-          <String>OrdenProd.QTYSCHED</String>
+          <String>OrdenProd.CantProgramada</String>
           <String>OrdenProd.QTYSTUP</String>
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.STUPDATE</String>
@@ -2218,7 +2214,7 @@
           <String>OrdenProd.CALCDATE</String>
           <String>OrdenProd.ROUTEJOBS</String>
           <String>OrdenProd.CHECKROUTE</String>
-          <String>OrdenProd.REMAININVENTPHYSICAL</String>
+          <String>OrdenProd.PdteEnsamblar</String>
           <String>OrdenProd.REFLOOKUP</String>
           <String>OrdenProd.LATESTSCHEDDIRECTION</String>
           <String>OrdenProd.LATESTSCHEDDATE</String>
@@ -2299,11 +2295,11 @@
           <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
           <String>AP_QST_ProdReport.CALCDATE</String>
           <String>AP_QST_ProdReport.DLVDATE</String>
-          <String>AP_QST_ProdReport.FINISHEDDATE</String>
-          <String>AP_QST_ProdReport.ITEMCREATEDATE</String>
-          <String>AP_QST_ProdReport.PRODORDERCREATEDATE</String>
-          <String>AP_QST_ProdReport.QTYCALC</String>
-          <String>AP_QST_ProdReport.QTYSTUP</String>
+          <String>AP_QST_ProdReport.FechaRealEntrega</String>
+          <String>AP_QST_ProdReport.FechaCreacion</String>
+          <String>AP_QST_ProdReport.FechaCreacionOrden</String>
+          <String>AP_QST_ProdReport.CantidadEstimada</String>
+          <String>AP_QST_ProdReport.CantidadConfirmada</String>
           <String>AP_QST_ProdReport.REALDATE</String>
           <String>AP_QST_ProdReport.RELEASEDDATE</String>
           <String>AP_QST_ProdReport.ROUTEDATEDIFF1</String>
@@ -2314,14 +2310,14 @@
           <String>AP_QST_ProdReport.ROUTEDATEDIFF6</String>
           <String>AP_QST_ProdReport.ROUTEDATEDIFF7</String>
           <String>AP_QST_ProdReport.ROUTEDATEDIFF8</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE1</String>
+          <String>AP_QST_ProdReport.FechaEstimadaCorte</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE2</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE3</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE4</String>
+          <String>AP_QST_ProdReport.FechaEstimadaEstampado</String>
+          <String>AP_QST_ProdReport.FechaEstimadaLavado</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE5</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE6</String>
           <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE7</String>
-          <String>AP_QST_ProdReport.ROUTEESTIMATEDDATE8</String>
+          <String>AP_QST_ProdReport.FechaEstimadaTerminado</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD1</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD2</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD3</String>
@@ -2331,20 +2327,20 @@
           <String>AP_QST_ProdReport.ROUTEQTYGOOD7</String>
           <String>AP_QST_ProdReport.ROUTEQTYGOOD8</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE1</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE2</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE3</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE4</String>
+          <String>AP_QST_ProdReport.FechaRealCorte</String>
+          <String>AP_QST_ProdReport.FechaRealEstampado</String>
+          <String>AP_QST_ProdReport.FechaRealLavado</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE5</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE6</String>
           <String>AP_QST_ProdReport.ROUTEREALDATE7</String>
-          <String>AP_QST_ProdReport.ROUTEREALDATE8</String>
-          <String>AP_QST_ProdReport.SCHEDDATE</String>
-          <String>AP_QST_ProdReport.SCHEDEND</String>
+          <String>AP_QST_ProdReport.FechaRealTerminado</String>
+          <String>AP_QST_ProdReport.FechaEstimadaEntrega</String>
+          <String>AP_QST_ProdReport.FechaProgramacion</String>
           <String>AP_QST_ProdReport.PRODSTATUS</String>
           <String>AP_QST_ProdReport.ROUTEINILDATE1</String>
-          <String>AP_QST_ProdReport.ROUTEINIDATE2</String>
+          <String>AP_QST_ProdReport.FechaInicioCorte</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE3</String>
-          <String>AP_QST_ProdReport.ROUTEINIDATE4</String>
+          <String>AP_QST_ProdReport.FechaInicioLavado</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE5</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE6</String>
           <String>AP_QST_ProdReport.ROUTEINIDATE7</String>
@@ -2392,8 +2388,8 @@
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
           <String>RecepcionesOP.DELIVERYDATE</String>
           <String>AP_QST_ProdReport.DLVDATE</String>
-          <String>AP_QST_ProdReport.ITEMCREATEDATE</String>
-          <String>AP_QST_ProdReport.PRODORDERCREATEDATE</String>
+          <String>AP_QST_ProdReport.FechaCreacion</String>
+          <String>AP_QST_ProdReport.FechaCreacionOrden</String>
           <String>BOMCalcTrans.TRANSDATE</String>
         </FieldNames>
       </FieldTagData>
@@ -2411,8 +2407,8 @@
           <String>InventTransOP.DATEFINANCIAL</String>
           <String>RecepcionesOP.DELIVERYDATE</String>
           <String>AP_QST_ProdReport.DLVDATE</String>
-          <String>AP_QST_ProdReport.ITEMCREATEDATE</String>
-          <String>AP_QST_ProdReport.PRODORDERCREATEDATE</String>
+          <String>AP_QST_ProdReport.FechaCreacion</String>
+          <String>AP_QST_ProdReport.FechaCreacionOrden</String>
           <String>BOMCalcTrans.TRANSDATE</String>
         </FieldNames>
       </FieldTagData>
