@@ -17,13 +17,23 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
-///$tab Carga
+///$tab Dimensiones
+/*Carga de Dimensiones*/
+/*Calendario*/
 $(Include=qvs.componentes\calendario.qvs);
 
+/*Dafault Dimensions*/
 $(Include=qvs.componentes\defaultdimensions.qvs);
 
+/*Maestro de Productos*/
 $(Include=qvs.componentes\maestroproductos.qvs);
 
+/*Lista de Materiales de Producción*/
+$(Include=qvs.axproduccion\listamaterialesproduccion.qvs);
+
+/*Maestro de Insumos*/
+$(Include=qvs.componentes\maestroinsumos.qvs);
+///$tab Hechos
 $(Include=qvs.axproduccion\ordenprod.qvs);
 
 $(Include=qvs.axproduccion\prodcalctrans.qvs);
@@ -35,14 +45,10 @@ $(Include=qvs.axproduccion\ordenescompra.qvs);
 $(Include=qvs.axproduccion\linktable.qvs);
 
 $(Include=qvs.axproduccion\recepcionesop.qvs);
-
-$(Include=qvs.axproduccion\ap_qst_prodreport.qvs);
-
-$(Include=qvs.axproduccion\bomcalctrans.qvs);
-
-$(Include=qvs.axproduccion\listamaterialesproduccion.qvs);
-
-$(Include=qvs.componentes\maestroinsumos.qvs);
 ///$tab Exit
 TRACE Modelo Finalizado;
 EXIT SCRIPT;
+///$tab Temp
+$(Include=qvs.axproduccion\ap_qst_prodreport.qvs);
+
+$(Include=qvs.axproduccion\bomcalctrans.qvs);

@@ -19,7 +19,7 @@ LinkTable:
 	LOAD 
 		%OrdenesProduccionKey,
 		%DEFAULTDIMENSION 					as SK.DEFAULTDIMENSION,
-		%KEYPRODUCT						as SK.KEYPRODUCT,
+		%KEYPRODUCT							as SK.KEYPRODUCT,
 		%FECHAKEY							as SK.FECHA
 	Resident OrdenProd;	
 	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT; 
