@@ -20,31 +20,34 @@ SET CollationLocale='es-CO';
 ///$tab Dimensiones
 /*Carga de Dimensiones*/
 /*Calendario*/
-$(Include=qvs.componentes\calendario.qvs);
+$(Must_Include=qvs.componentes\calendario.qvs);
 
 /*Dafault Dimensions*/
-$(Include=qvs.componentes\defaultdimensions.qvs);
+$(Must_Include=qvs.componentes\defaultdimensions.qvs);
 
 /*Maestro de Productos*/
-$(Include=qvs.componentes\maestroproductos.qvs);
+$(Must_Include=qvs.componentes\maestroproductos.qvs);
 
 /*Lista de Materiales de Producción*/
-$(Include=qvs.axproduccion\listamaterialesproduccion.qvs);
+$(Must_Include=qvs.axproduccion\listamaterialesproduccion.qvs);
 
 /*Maestro de Insumos*/
-$(Include=qvs.componentes\maestroinsumos.qvs);
+$(Must_Include=qvs.componentes\maestroinsumos.qvs);
 ///$tab Hechos
-$(Include=qvs.axproduccion\ordenprod.qvs);
+$(Must_Include=qvs.axproduccion\ordenprod.qvs);
 
-$(Include=qvs.axproduccion\prodcalctrans.qvs);
+$(Must_Include=qvs.axproduccion\prodcalctrans.qvs);
 
-$(Include=qvs.axproduccion\inventtransop.qvs);
+$(Must_Include=qvs.axproduccion\inventtransop.qvs);
 
-$(Include=qvs.axproduccion\ordenescompra.qvs);
+$(Must_Include=qvs.axproduccion\ordenescompra.qvs);
 
-$(Include=qvs.axproduccion\linktable.qvs);
+$(Must_Include=qvs.axproduccion\linktable.qvs);
 
-$(Include=qvs.axproduccion\recepcionesop.qvs);
+$(Must_Include=qvs.axproduccion\recepcionesop.qvs);
+
+/*Costos Indirectos de Producción*/
+$(Must_Include=qvs.axproduccion\cif.qvs);
 ///$tab Exit
 TRACE Modelo Finalizado;
 EXIT SCRIPT;

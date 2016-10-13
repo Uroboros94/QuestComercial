@@ -15,12 +15,14 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
-    <String>2</String>
+    <String>3</String>
     <String>Calendario</String>
     <String>LinkTable</String>
+    <String>CIF</String>
     <String>7</String>
     <String>1</String>
     <String>Calendario</String>
@@ -985,6 +987,18 @@
     <String>324</String>
     <String>1</String>
     <String>RecepcionesOP</String>
+    <String>325</String>
+    <String>1</String>
+    <String>CIF</String>
+    <String>326</String>
+    <String>1</String>
+    <String>CIF</String>
+    <String>327</String>
+    <String>1</String>
+    <String>CIF</String>
+    <String>328</String>
+    <String>1</String>
+    <String>CIF</String>
   </FieldSrcTables>
   <TableViewData>
     <Pos></Pos>
@@ -993,10 +1007,10 @@
         <Tables>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>289</Left>
-              <Top>46</Top>
-              <Width>236</Width>
-              <Height>112</Height>
+              <Left>324</Left>
+              <Top>417</Top>
+              <Width>104</Width>
+              <Height>57</Height>
             </Pos>
             <Caption>Calendario</Caption>
           </TableViewTableWinSaveInfo>
@@ -1011,8 +1025,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>991</Left>
-              <Top>497</Top>
+              <Left>941</Left>
+              <Top>366</Top>
               <Width>258</Width>
               <Height>111</Height>
             </Pos>
@@ -1020,8 +1034,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>998</Left>
-              <Top>348</Top>
+              <Left>940</Left>
+              <Top>496</Top>
               <Width>245</Width>
               <Height>118</Height>
             </Pos>
@@ -1029,8 +1043,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>715</Left>
-              <Top>182</Top>
+              <Left>708</Left>
+              <Top>225</Top>
               <Width>257</Width>
               <Height>104</Height>
             </Pos>
@@ -1038,26 +1052,26 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>576</Left>
-              <Top>306</Top>
-              <Width>100</Width>
+              <Left>478</Left>
+              <Top>338</Top>
+              <Width>195</Width>
               <Height>118</Height>
             </Pos>
             <Caption>LinkTable</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>211</Left>
-              <Top>541</Top>
+              <Left>186</Left>
+              <Top>521</Top>
               <Width>255</Width>
-              <Height>103</Height>
+              <Height>102</Height>
             </Pos>
             <Caption>DefaultDimensions</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>715</Left>
-              <Top>57</Top>
+              <Left>708</Left>
+              <Top>87</Top>
               <Width>195</Width>
               <Height>109</Height>
             </Pos>
@@ -1065,18 +1079,18 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>197</Left>
-              <Top>228</Top>
+              <Left>168</Left>
+              <Top>92</Top>
               <Width>273</Width>
-              <Height>115</Height>
+              <Height>86</Height>
             </Pos>
             <Caption>Productos</Caption>
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>118</Left>
-              <Top>353</Top>
-              <Width>386</Width>
+              <Left>167</Left>
+              <Top>186</Top>
+              <Width>264</Width>
               <Height>105</Height>
             </Pos>
             <Caption>MasterProductAttributes</Caption>
@@ -1092,9 +1106,9 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>714</Left>
-              <Top>347</Top>
-              <Width>237</Width>
+              <Left>706</Left>
+              <Top>419</Top>
+              <Width>199</Width>
               <Height>111</Height>
             </Pos>
             <Caption>OrdenProd</Caption>
@@ -1110,8 +1124,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>1140</Left>
-              <Top>152</Top>
+              <Left>1099</Left>
+              <Top>180</Top>
               <Width>100</Width>
               <Height>172</Height>
             </Pos>
@@ -1119,12 +1133,21 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>971</Left>
-              <Top>23</Top>
-              <Width>100</Width>
+              <Left>936</Left>
+              <Top>44</Top>
+              <Width>127</Width>
               <Height>136</Height>
             </Pos>
             <Caption>MaestroInsumos</Caption>
+          </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>323</Left>
+              <Top>348</Top>
+              <Width>101</Width>
+              <Height>61</Height>
+            </Pos>
+            <Caption>CIF</Caption>
           </TableViewTableWinSaveInfo>
         </Tables>
         <BroomPoints></BroomPoints>
@@ -1304,6 +1327,7 @@
           <String>RecepcionesOP.PURCHID</String>
           <String>RecepcionesOP.INVENTTRANSID</String>
           <String>RecepcionesOP.INVENTDIMID</String>
+          <String>CIF.CuentaN2</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1438,6 +1462,7 @@
           <String>RecepcionesOP.PURCHID</String>
           <String>RecepcionesOP.INVENTTRANSID</String>
           <String>RecepcionesOP.INVENTDIMID</String>
+          <String>CIF.CuentaN2</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1595,6 +1620,9 @@
           <String>RecepcionesOP.PRICEUNIT</String>
           <String>RecepcionesOP.VALUEMST</String>
           <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
+          <String>CIF.Fecha</String>
+          <String>CIF.IdCuentaN2</String>
+          <String>CIF.Neto</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1737,6 +1765,8 @@
           <String>RecepcionesOP.PRICEUNIT</String>
           <String>RecepcionesOP.VALUEMST</String>
           <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
+          <String>CIF.Fecha</String>
+          <String>CIF.IdCuentaN2</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1755,6 +1785,7 @@
           <String>InventTransOP.DATEFINANCIAL</String>
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
           <String>RecepcionesOP.DELIVERYDATE</String>
+          <String>CIF.Fecha</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1770,6 +1801,7 @@
           <String>OrdenProd.DLVTIME</String>
           <String>InventTransOP.DATEFINANCIAL</String>
           <String>RecepcionesOP.DELIVERYDATE</String>
+          <String>CIF.Fecha</String>
         </FieldNames>
       </FieldTagData>
     </ScriptBased>
