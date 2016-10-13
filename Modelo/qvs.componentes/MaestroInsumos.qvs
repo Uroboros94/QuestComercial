@@ -9,12 +9,14 @@ Fecha       |   Desarrollador     |   Modificación
 06/10/2016  |   Alejandro Saa G.  |   Inicio de Configuración
 *****************************************************************************************************/
 MaestroInsumos:
-LOAD ITEMID          as IdInsumo, 
-     AP_QST_ITEMNAME as NombreInsumo,
-     NAMEALIAS       as AliasInsumo,
-     BOMUNITID       as UnidadInsumo,
-     COSTGROUPID     as IdGrupoCosto,
-     NAME            as NombreGrupoCosto
+LOAD 
+	ITEMID          as IdInsumo, 
+	ITEMID			as SK.Insumo,
+    AP_QST_ITEMNAME as NombreInsumo,
+    NAMEALIAS       as AliasInsumo,
+    BOMUNITID       as UnidadInsumo,
+    COSTGROUPID     as IdGrupoCosto,
+    NAME            as NombreGrupoCosto
 FROM
 [..\QVD\MaestroInsumos.QVD]
 (qvd);
