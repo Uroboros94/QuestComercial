@@ -6,7 +6,7 @@ Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/26/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
-Contabilidad:
+QST_Modelledgertrans:
     SQL SELECT     
         LEDGERACCOUNT,
         TRANSACTIONCURRENCYCODE,
@@ -73,6 +73,5 @@ Contabilidad:
         DIA
     FROM "QST_MODELLEDGERTRANS";
 
-STORE Contabilidad INTO [..\QVD\Contabilidad.QVD](qvd);
-DROP TABLE Contabilidad;
-
+STORE QST_Modelledgertrans INTO [..\QVD\QST_Modelledgertrans.QVD](qvd);
+DROP TABLE QST_Modelledgertrans;

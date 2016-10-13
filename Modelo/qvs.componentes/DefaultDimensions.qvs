@@ -48,7 +48,7 @@ DefaultDimensions_temp:
 	LOAD
 		Ciudad,
 		CodCoordinador,
-	    CodHomologacion,
+		CodHomologacion,
 		Departamento,
 		NombreCoordinador,
 		Pais,
@@ -97,6 +97,6 @@ DefaultDimensions:
 		SK.DEFAULTDIMENSION,
 		ZonaGeografica,
 		DATAAREAID
-    Resident DefaultDimensions_temp;
-    DROP Table DefaultDimensions_temp;
+	Resident DefaultDimensions_temp;
+	DROP Table DefaultDimensions_temp;
 UNQUALIFY *;
