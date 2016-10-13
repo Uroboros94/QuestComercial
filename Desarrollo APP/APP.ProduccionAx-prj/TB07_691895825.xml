@@ -38,7 +38,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>InsumoMaestro</v>
+        <v>ListaMaterialesProduccion</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -218,6 +218,158 @@
       <LTableColLayout>
         <Label></Label>
         <Field>
+          <Name>BOMQTY</Name>
+          <Type>PRESENT</Type>
+        </Field>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <ColWidth>194</ColWidth>
+        <TextAdjust>0</TextAdjust>
+        <NumAdjust>2</NumAdjust>
+        <LabelAdjust>0</LabelAdjust>
+        <LabelVerticalAdjust>4</LabelVerticalAdjust>
+        <NullSuppression>false</NullSuppression>
+        <DimCellVariations>
+          <CellVariationDef>
+            <PreMinorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PreMinorBorder>
+            <PostMinorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PostMinorBorder>
+            <MajorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </MajorBorder>
+            <PreTotalBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PreTotalBorder>
+            <PostTotalBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PostTotalBorder>
+            <SizeMod>0</SizeMod>
+            <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+            <TotalSizeMod>0</TotalSizeMod>
+            <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+            <FgColor>
+              <Col>
+                <Red>54</Red>
+                <Green>54</Green>
+                <Blue>54</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </FgColor>
+            <BgColor>
+              <Col>
+                <Red>255</Red>
+                <Green>255</Green>
+                <Blue>255</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </BgColor>
+            <TotalFgColor></TotalFgColor>
+            <TotalBgColor>
+              <Col>
+                <Red>245</Red>
+                <Green>245</Green>
+                <Blue>245</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </TotalBgColor>
+            <OtherSizeMod>0</OtherSizeMod>
+            <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+            <OtherFgColor></OtherFgColor>
+            <OtherBgColor>
+              <Col>
+                <Red>245</Red>
+                <Green>245</Green>
+                <Blue>245</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </OtherBgColor>
+          </CellVariationDef>
+        </DimCellVariations>
+        <DropdownSelect>false</DropdownSelect>
+        <ImageRepresentation></ImageRepresentation>
+        <SelectionStyle>SS_USER_PREF</SelectionStyle>
+        <NumberPresentation></NumberPresentation>
+        <ExcludedValuesMode>0</ExcludedValuesMode>
+        <DefaultSearchMode>0</DefaultSearchMode>
+        <Presentation>MODE_TEXT</Presentation>
+      </LTableColLayout>
+      <LTableColLayout>
+        <Label></Label>
+        <Field>
           <Name>IdInsumo</Name>
           <Type>PRESENT</Type>
         </Field>
@@ -231,7 +383,7 @@
           <Expression></Expression>
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
-        <ColWidth>378</ColWidth>
+        <ColWidth>275</ColWidth>
         <TextAdjust>0</TextAdjust>
         <NumAdjust>2</NumAdjust>
         <LabelAdjust>0</LabelAdjust>
@@ -370,7 +522,7 @@
       <LTableColLayout>
         <Label></Label>
         <Field>
-          <Name>NombreInsumo</Name>
+          <Name>IdOrdenProd</Name>
           <Type>PRESENT</Type>
         </Field>
         <SortCriteria>
@@ -383,7 +535,7 @@
           <Expression></Expression>
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
-        <ColWidth>309</ColWidth>
+        <ColWidth>238</ColWidth>
         <TextAdjust>0</TextAdjust>
         <NumAdjust>2</NumAdjust>
         <LabelAdjust>0</LabelAdjust>
@@ -522,20 +674,324 @@
       <LTableColLayout>
         <Label></Label>
         <Field>
-          <Name>AliasInsumo</Name>
+          <Name>INVENTDIMID</Name>
+          <Type>PRESENT</Type>
+        </Field>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>0</SortByNumeric>
+          <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <ColWidth>263</ColWidth>
+        <TextAdjust>0</TextAdjust>
+        <NumAdjust>2</NumAdjust>
+        <LabelAdjust>0</LabelAdjust>
+        <LabelVerticalAdjust>4</LabelVerticalAdjust>
+        <NullSuppression>false</NullSuppression>
+        <DimCellVariations>
+          <CellVariationDef>
+            <PreMinorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PreMinorBorder>
+            <PostMinorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PostMinorBorder>
+            <MajorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </MajorBorder>
+            <PreTotalBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PreTotalBorder>
+            <PostTotalBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PostTotalBorder>
+            <SizeMod>0</SizeMod>
+            <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+            <TotalSizeMod>0</TotalSizeMod>
+            <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+            <FgColor>
+              <Col>
+                <Red>54</Red>
+                <Green>54</Green>
+                <Blue>54</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </FgColor>
+            <BgColor>
+              <Col>
+                <Red>255</Red>
+                <Green>255</Green>
+                <Blue>255</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </BgColor>
+            <TotalFgColor></TotalFgColor>
+            <TotalBgColor>
+              <Col>
+                <Red>245</Red>
+                <Green>245</Green>
+                <Blue>245</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </TotalBgColor>
+            <OtherSizeMod>0</OtherSizeMod>
+            <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+            <OtherFgColor></OtherFgColor>
+            <OtherBgColor>
+              <Col>
+                <Red>245</Red>
+                <Green>245</Green>
+                <Blue>245</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </OtherBgColor>
+          </CellVariationDef>
+        </DimCellVariations>
+        <DropdownSelect>false</DropdownSelect>
+        <ImageRepresentation></ImageRepresentation>
+        <SelectionStyle>SS_USER_PREF</SelectionStyle>
+        <NumberPresentation></NumberPresentation>
+        <ExcludedValuesMode>0</ExcludedValuesMode>
+        <DefaultSearchMode>0</DefaultSearchMode>
+        <Presentation>MODE_TEXT</Presentation>
+      </LTableColLayout>
+      <LTableColLayout>
+        <Label></Label>
+        <Field>
+          <Name>OrdenMaterial</Name>
+          <Type>PRESENT</Type>
+        </Field>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>0</SortByNumeric>
+          <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <ColWidth>447</ColWidth>
+        <TextAdjust>0</TextAdjust>
+        <NumAdjust>2</NumAdjust>
+        <LabelAdjust>0</LabelAdjust>
+        <LabelVerticalAdjust>4</LabelVerticalAdjust>
+        <NullSuppression>false</NullSuppression>
+        <DimCellVariations>
+          <CellVariationDef>
+            <PreMinorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PreMinorBorder>
+            <PostMinorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PostMinorBorder>
+            <MajorBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </MajorBorder>
+            <PreTotalBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PreTotalBorder>
+            <PostTotalBorder>
+              <LineStyle>32</LineStyle>
+              <Color>
+                <Col>
+                  <Red>220</Red>
+                  <Green>220</Green>
+                  <Blue>220</Blue>
+                  <Alpha>255</Alpha>
+                </Col>
+                <IsCalculated>false</IsCalculated>
+                <ColorExpr></ColorExpr>
+              </Color>
+              <ExtraBorderSpace16>0</ExtraBorderSpace16>
+            </PostTotalBorder>
+            <SizeMod>0</SizeMod>
+            <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+            <TotalSizeMod>0</TotalSizeMod>
+            <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+            <FgColor>
+              <Col>
+                <Red>54</Red>
+                <Green>54</Green>
+                <Blue>54</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </FgColor>
+            <BgColor>
+              <Col>
+                <Red>255</Red>
+                <Green>255</Green>
+                <Blue>255</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </BgColor>
+            <TotalFgColor></TotalFgColor>
+            <TotalBgColor>
+              <Col>
+                <Red>245</Red>
+                <Green>245</Green>
+                <Blue>245</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </TotalBgColor>
+            <OtherSizeMod>0</OtherSizeMod>
+            <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+            <OtherFgColor></OtherFgColor>
+            <OtherBgColor>
+              <Col>
+                <Red>245</Red>
+                <Green>245</Green>
+                <Blue>245</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </OtherBgColor>
+          </CellVariationDef>
+        </DimCellVariations>
+        <DropdownSelect>false</DropdownSelect>
+        <ImageRepresentation></ImageRepresentation>
+        <SelectionStyle>SS_USER_PREF</SelectionStyle>
+        <NumberPresentation></NumberPresentation>
+        <ExcludedValuesMode>0</ExcludedValuesMode>
+        <DefaultSearchMode>0</DefaultSearchMode>
+        <Presentation>MODE_TEXT</Presentation>
+      </LTableColLayout>
+      <LTableColLayout>
+        <Label></Label>
+        <Field>
+          <Name>PRODLINETYPE</Name>
           <Type>PRESENT</Type>
         </Field>
         <SortCriteria>
           <SortByState>1</SortByState>
           <SortByFrequency>0</SortByFrequency>
           <SortByNumeric>1</SortByNumeric>
-          <SortByAscii>1</SortByAscii>
+          <SortByAscii>0</SortByAscii>
           <SortByLoadOrder>0</SortByLoadOrder>
           <SortByExpression>0</SortByExpression>
           <Expression></Expression>
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
-        <ColWidth>306</ColWidth>
+        <ColWidth>284</ColWidth>
         <TextAdjust>0</TextAdjust>
         <NumAdjust>2</NumAdjust>
         <LabelAdjust>0</LabelAdjust>
@@ -674,7 +1130,7 @@
       <LTableColLayout>
         <Label></Label>
         <Field>
-          <Name>UnidadInsumo</Name>
+          <Name>UNITID</Name>
           <Type>PRESENT</Type>
         </Field>
         <SortCriteria>
@@ -687,7 +1143,7 @@
           <Expression></Expression>
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
-        <ColWidth>266</ColWidth>
+        <ColWidth>147</ColWidth>
         <TextAdjust>0</TextAdjust>
         <NumAdjust>2</NumAdjust>
         <LabelAdjust>0</LabelAdjust>
@@ -826,172 +1282,20 @@
       <LTableColLayout>
         <Label></Label>
         <Field>
-          <Name>IdGrupoCosto</Name>
+          <Name>VENDID</Name>
           <Type>PRESENT</Type>
         </Field>
         <SortCriteria>
           <SortByState>1</SortByState>
           <SortByFrequency>0</SortByFrequency>
-          <SortByNumeric>0</SortByNumeric>
-          <SortByAscii>1</SortByAscii>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
           <SortByLoadOrder>0</SortByLoadOrder>
           <SortByExpression>0</SortByExpression>
           <Expression></Expression>
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
-        <ColWidth>253</ColWidth>
-        <TextAdjust>0</TextAdjust>
-        <NumAdjust>2</NumAdjust>
-        <LabelAdjust>0</LabelAdjust>
-        <LabelVerticalAdjust>4</LabelVerticalAdjust>
-        <NullSuppression>false</NullSuppression>
-        <DimCellVariations>
-          <CellVariationDef>
-            <PreMinorBorder>
-              <LineStyle>32</LineStyle>
-              <Color>
-                <Col>
-                  <Red>220</Red>
-                  <Green>220</Green>
-                  <Blue>220</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </Color>
-              <ExtraBorderSpace16>0</ExtraBorderSpace16>
-            </PreMinorBorder>
-            <PostMinorBorder>
-              <LineStyle>32</LineStyle>
-              <Color>
-                <Col>
-                  <Red>220</Red>
-                  <Green>220</Green>
-                  <Blue>220</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </Color>
-              <ExtraBorderSpace16>0</ExtraBorderSpace16>
-            </PostMinorBorder>
-            <MajorBorder>
-              <LineStyle>32</LineStyle>
-              <Color>
-                <Col>
-                  <Red>220</Red>
-                  <Green>220</Green>
-                  <Blue>220</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </Color>
-              <ExtraBorderSpace16>0</ExtraBorderSpace16>
-            </MajorBorder>
-            <PreTotalBorder>
-              <LineStyle>32</LineStyle>
-              <Color>
-                <Col>
-                  <Red>220</Red>
-                  <Green>220</Green>
-                  <Blue>220</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </Color>
-              <ExtraBorderSpace16>0</ExtraBorderSpace16>
-            </PreTotalBorder>
-            <PostTotalBorder>
-              <LineStyle>32</LineStyle>
-              <Color>
-                <Col>
-                  <Red>220</Red>
-                  <Green>220</Green>
-                  <Blue>220</Blue>
-                  <Alpha>255</Alpha>
-                </Col>
-                <IsCalculated>false</IsCalculated>
-                <ColorExpr></ColorExpr>
-              </Color>
-              <ExtraBorderSpace16>0</ExtraBorderSpace16>
-            </PostTotalBorder>
-            <SizeMod>0</SizeMod>
-            <StyleMod>FONTSTYLE_REGULAR</StyleMod>
-            <TotalSizeMod>0</TotalSizeMod>
-            <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-            <FgColor>
-              <Col>
-                <Red>54</Red>
-                <Green>54</Green>
-                <Blue>54</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </FgColor>
-            <BgColor>
-              <Col>
-                <Red>255</Red>
-                <Green>255</Green>
-                <Blue>255</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </BgColor>
-            <TotalFgColor></TotalFgColor>
-            <TotalBgColor>
-              <Col>
-                <Red>245</Red>
-                <Green>245</Green>
-                <Blue>245</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </TotalBgColor>
-            <OtherSizeMod>0</OtherSizeMod>
-            <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
-            <OtherFgColor></OtherFgColor>
-            <OtherBgColor>
-              <Col>
-                <Red>245</Red>
-                <Green>245</Green>
-                <Blue>245</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </OtherBgColor>
-          </CellVariationDef>
-        </DimCellVariations>
-        <DropdownSelect>false</DropdownSelect>
-        <ImageRepresentation></ImageRepresentation>
-        <SelectionStyle>SS_USER_PREF</SelectionStyle>
-        <NumberPresentation></NumberPresentation>
-        <ExcludedValuesMode>0</ExcludedValuesMode>
-        <DefaultSearchMode>0</DefaultSearchMode>
-        <Presentation>MODE_TEXT</Presentation>
-      </LTableColLayout>
-      <LTableColLayout>
-        <Label></Label>
-        <Field>
-          <Name>NombreGrupoCosto</Name>
-          <Type>PRESENT</Type>
-        </Field>
-        <SortCriteria>
-          <SortByState>1</SortByState>
-          <SortByFrequency>0</SortByFrequency>
-          <SortByNumeric>0</SortByNumeric>
-          <SortByAscii>1</SortByAscii>
-          <SortByLoadOrder>0</SortByLoadOrder>
-          <SortByExpression>0</SortByExpression>
-          <Expression></Expression>
-          <SortByGreyness>0</SortByGreyness>
-        </SortCriteria>
-        <ColWidth>353</ColWidth>
+        <ColWidth>181</ColWidth>
         <TextAdjust>0</TextAdjust>
         <NumAdjust>2</NumAdjust>
         <LabelAdjust>0</LabelAdjust>
@@ -1227,12 +1531,14 @@
   <Memory></Memory>
   <StyleNumber>11</StyleNumber>
   <InterFieldSortOrder>
-    <int>2</int>
-    <int>4</int>
     <int>0</int>
-    <int>5</int>
     <int>1</int>
+    <int>2</int>
     <int>3</int>
+    <int>4</int>
+    <int>5</int>
+    <int>6</int>
+    <int>7</int>
   </InterFieldSortOrder>
   <LabelCellVariation>
     <PreMinorBorder>
