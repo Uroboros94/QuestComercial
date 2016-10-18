@@ -2278,8 +2278,8 @@ sum(Contabilidad.MOVIMIENTO)</v>
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PDV.TITULO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>EC.NombreCompleto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Pdv</v>
@@ -4542,6 +4542,7 @@ sum(Contabilidad.MOVIMIENTO)</v>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>300</int>
       <int>731</int>
       <int>484</int>
       <int>300</int>
@@ -5116,7 +5117,7 @@ sum(Contabilidad.MOVIMIENTO)</v>
       <ExpansionData>
         <ExcludeList>true</ExcludeList>
         <Pos>
-          <DimName>PDV.TITULO</DimName>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

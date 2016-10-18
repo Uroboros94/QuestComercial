@@ -5,44 +5,46 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
-    <String>1</String>
+    <String>2</String>
+    <String>EstructuraComercial</String>
     <String>Contabilidad</String>
     <String>7</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>8</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>9</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>10</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>11</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>12</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>13</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>14</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>15</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>16</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>17</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EstructuraComercial</String>
     <String>18</String>
     <String>1</String>
     <String>Contabilidad</String>
@@ -201,6 +203,42 @@
     <String>Contabilidad</String>
     <String>70</String>
     <String>1</String>
+    <String>Contabilidad</String>
+    <String>71</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>72</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>73</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>74</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>75</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>76</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>77</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>78</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>79</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>80</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>81</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>82</String>
+    <String>1</String>
     <String>INLFED</String>
   </FieldSrcTables>
   <TableViewData>
@@ -219,8 +257,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>491</Left>
-              <Top>18</Top>
+              <Left>614</Left>
+              <Top>95</Top>
               <Width>256</Width>
               <Height>477</Height>
             </Pos>
@@ -246,8 +284,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>758</Left>
-              <Top>651</Top>
+              <Left>945</Left>
+              <Top>353</Top>
               <Width>100</Width>
               <Height>46</Height>
             </Pos>
@@ -327,9 +365,9 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>333</Left>
-              <Top>18</Top>
-              <Width>100</Width>
+              <Left>322</Left>
+              <Top>95</Top>
+              <Width>234</Width>
               <Height>190</Height>
             </Pos>
             <Caption>EstructuraComercial</Caption>
@@ -353,6 +391,7 @@
         <FieldNames>
           <String>$Field</String>
           <String>$Table</String>
+          <String>SK.ID_CO</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -383,6 +422,12 @@
           <String>$Field</String>
           <String>$Table</String>
           <String>$Info</String>
+          <String>EC.Canal</String>
+          <String>EC.NombreCompleto</String>
+          <String>EC.Cuidad</String>
+          <String>EC.Coordinador</String>
+          <String>EC.Pais</String>
+          <String>EC.Zona</String>
           <String>Contabilidad.TRANSACTIONCURRENCYCODE</String>
           <String>Contabilidad.TRIMESTRE</String>
           <String>Contabilidad.VOUCHER</String>
@@ -413,6 +458,13 @@
           <String>$Field</String>
           <String>$Table</String>
           <String>$Info</String>
+          <String>EC.Canal</String>
+          <String>EC.NombreCompleto</String>
+          <String>EC.Cuidad</String>
+          <String>EC.Departamento</String>
+          <String>EC.Coordinador</String>
+          <String>EC.Pais</String>
+          <String>EC.Zona</String>
           <String>Contabilidad.TRANSACTIONCURRENCYCODE</String>
           <String>Contabilidad.TRIMESTRE</String>
           <String>Contabilidad.VOUCHER</String>
@@ -446,6 +498,10 @@
           <String>$Rows</String>
           <String>$Fields</String>
           <String>$FieldNo</String>
+          <String>EC.IdICG</String>
+          <String>EC.IdEC</String>
+          <String>EC.IdCanal</String>
+          <String>EC.IdCoordinador</String>
           <String>Contabilidad.TRANSACTIONCURRENCYAMOUNT</String>
           <String>Contabilidad.ACCOUNTINGCURRENCYAMOUNT</String>
           <String>Contabilidad.REPORTINGCURRENCYAMOUNT</String>
@@ -484,6 +540,10 @@
           <String>$Rows</String>
           <String>$Fields</String>
           <String>$FieldNo</String>
+          <String>EC.IdICG</String>
+          <String>EC.IdEC</String>
+          <String>EC.IdCanal</String>
+          <String>EC.IdCoordinador</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.NOMMES</String>
           <String>Contabilidad.DIA</String>
