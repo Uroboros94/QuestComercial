@@ -3936,8 +3936,8 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'5160','5165','5260','5265'} , Contabilidad.A
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PDV.TITULO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>EC.NombreCompleto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Almacen</v>
@@ -5684,6 +5684,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'5160','5165','5260','5265'} , Contabilidad.A
       <int>300</int>
       <int>300</int>
       <int>300</int>
+      <int>300</int>
       <int>347</int>
       <int>263</int>
       <int>316</int>
@@ -6230,7 +6231,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'5160','5165','5260','5265'} , Contabilidad.A
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>PDV.TITULO</DimName>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

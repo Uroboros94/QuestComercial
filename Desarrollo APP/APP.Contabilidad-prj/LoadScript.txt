@@ -1,11 +1,12 @@
 ﻿///$tab Main
 Binary [..\modelo\aql.ax.financiero.qvw];
+//Binary [..\modelo\app.quest_contabilidad.v.1.1.qvw];
 
 SET ThousandSep='.';
 SET DecimalSep=',';
 SET MoneyThousandSep='.';
 SET MoneyDecimalSep=',';
-SET MoneyFormat='$ #.##0;($ #.##0)';
+SET MoneyFormat='$ #.##0,00;($ #.##0,00)';
 SET TimeFormat='hh:mm:ss TT';
 SET DateFormat='DD/MM/YYYY';
 SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff] TT';

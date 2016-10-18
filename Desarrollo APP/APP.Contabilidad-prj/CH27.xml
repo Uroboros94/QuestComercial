@@ -3313,8 +3313,8 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PDV.TITULO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>EC.NombreCompleto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Puntos de Venta</v>
@@ -5364,12 +5364,12 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>691</int>
       <int>300</int>
       <int>300</int>
       <int>103</int>
       <int>325</int>
       <int>300</int>
-      <int>447</int>
       <int>300</int>
       <int>303</int>
     </ColWidths>
@@ -5866,14 +5866,13 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>0</int>
-      <int>7</int>
-      <int>8</int>
-      <int>2</int>
       <int>1</int>
+      <int>2</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
       <int>6</int>
+      <int>7</int>
     </InterFieldSortOrder>
     <ExpressionPosition>3</ExpressionPosition>
     <NumberOfLeftDimensions>3</NumberOfLeftDimensions>
@@ -5911,14 +5910,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>PDV.TITULO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Contabilidad.CUENTA_N3</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5928,6 +5919,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Contabilidad.CUENTA_N5</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
