@@ -1,16 +1,19 @@
 /*----------------------------------------------------------------------------------------------------
  Detalle :
-    Extracción de Dimensiones: FotosStyle
+    Extracción de Dimensiones: Productos PLM
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
-09/22/2016  |   malemos         |   Inicio de Configuración
+10/18/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
-FotosStyle:
-SQL SELECT 
-	Code,
-	FilePath
-FROM "_FotosStyle_";
 
-STORE FotosStyle INTO [..\QVD\PLM\FotosStyle.QVD](qvd);
-DROP TABLE FotosStyle;
+ProductRefs:
+SQL SELECT
+	fromID,
+	toID,
+	attrName,
+	mapkey
+FROM "DESCARGA_PLM".dbo."Style_refs";
+
+STORE ProductRefs INTO [..\QVD\PLM\ProductRefs.QVD](qvd);
+DROP TABLE ProductRefs;

@@ -1,0 +1,78 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Listado de Materiales (Detalle)
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+10/18/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+/* Lines */
+LineListaMaterial:
+Sql Select
+	Case LM.UnidadMedidaMaterial
+		When '01' Then 'Metros'
+		When '02' Then 'Kilogramos'
+		When '03' Then 'Unidades'
+		When '04' Then 'Yardas'
+	End As UnitId
+	, LM.CodigoMaterial As ItemId
+	, Round(LM.CantidadComun, 2) As BOMQty
+	, Replace(LM.Descripcion, ' - ', '_') + '_' + RTrim(TallaProducto) +  '_' + RTrim(ColorProducto) As BOM_Name
+	, RTrim(LM.CodigoProducto) As ItemBOMId
+	, 'Si' As BOM_Approved
+	, Case SubString(LM.CodigoMaterial, 1, 2)
+		When 'TE' Then 'MP001'
+		Else 'MP002'
+	End As InventLocationId
+	, 'QUEST_GRAL' As InventSiteId
+	, Row_Number() Over(Partition By RTrim(CodigoProducto) + RTrim(TallaProducto) + RTrim(ColorProducto) Order By LM.CodigoMaterial Desc) As LineNum
+	, RTrim(CodigoProducto) + RTrim(TallaProducto) + RTrim(ColorProducto) As BOM_BOMId
+	, RTrim(TallaMaterial) As InventSizeId
+	, RTrim(ColorMaterial) As InventColorId
+	, Case SubString(LM.CodigoMaterial, 1, 2)
+		When 'TE' Then '10' -- Tela
+		When 'IN' Then '20' -- Insumo
+		When 'ET' Then '90' -- Etiqueta
+		When 'EM' Then '90' -- Empaque
+		When 'SE' Then --Servicios
+			Case Rtrim(LM.CodigoMaterial)
+				When 'SE00001' Then '40' --Bordado
+				When 'SE00002' Then '30' --Corte/confeccion (Corte Sesgo)
+				When 'SE00004' Then '50' --Estampado
+				When 'SE00005' Then 'SO' --Laser
+				When 'SE00006' Then '60' --Lavandería
+				When 'SE00007' Then '70' --Manualidad
+				When 'SE00008' Then 'SO' --Planchado
+				When 'SE00009' Then '80' --Tinturado
+				When 'SE00012' Then '20' --Confección
+				When 'SE00013' Then '90' --Terminacion
+				When 'SE00014' Then '10' --Corte
+				Else 'Por Clasificar'
+			End
+		Else 'Por Clasificar'
+	End As OprNum
+	, Case SubString(LM.CodigoMaterial, 1, 2)
+		When 'SE' Then 'Proveedor'
+		Else 'Artículo'
+	End As BOMType
+From [INTERFAZPLM].dbo.[ListaMateriales] As LM
+Union all
+Select 
+	UnitId, 
+	ItemId, 
+	BOMQty, 
+	BOM_Name, 
+	ItemBOMId, 
+	BOM_Approved, 
+	InventLocationId, 
+	InventSiteId, 
+	LineNum, 
+	BOM_BOMId, 
+	InventSizeId, 
+	InventColorId, 
+	OprNum, BOMType
+From [INTERFAZPLM].dbo.TempServicios;
+	
+STORE LineListaMaterial INTO [..\QVD\PLM\LineListaMaterial.QVD](qvd);
+DROP TABLE LineListaMaterial;

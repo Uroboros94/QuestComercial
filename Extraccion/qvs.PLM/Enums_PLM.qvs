@@ -1,16 +1,25 @@
 /*----------------------------------------------------------------------------------------------------
  Detalle :
-    Extracción de Dimensiones: FotosStyle
+    Extracción de Dimensiones: Detalle  de codigos
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
-09/22/2016  |   malemos         |   Inicio de Configuración
+10/18/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
-FotosStyle:
+Enums_PLM:
 SQL SELECT 
-	Code,
-	FilePath
-FROM "_FotosStyle_";
+	"_id_",
+	"Node Name",
+	Description,
+	Custom,
+	DependsOn,
+	Description2,
+	"Node Name2",
+	Internal,
+	"_DisplayName_",
+	"_ExportedDate_"
+FROM "DESCARGA_PLM".dbo.Enums;
 
-STORE FotosStyle INTO [..\QVD\PLM\FotosStyle.QVD](qvd);
-DROP TABLE FotosStyle;
+STORE Enums_PLM INTO [..\QVD\PLM\Enums_PLM.QVD](qvd);
+
+DROP TABLE Enums_PLM;

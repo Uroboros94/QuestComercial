@@ -1,0 +1,92 @@
+/*****************************************************************************************************
+	Detalle :
+	Extracción de Dimensiones: BOM (TELAS)
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	10/18/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+Placement:
+	LOAD 
+		_id_, 
+		[Node Name], 
+		__Parent__,
+		Code 										as CodePBOM, 
+		QST_MaterialAttr_SISPRO_codeart_string2 	as CodeSISPROBOM,
+		QtyDefault, 
+		Actual, 
+		QST_Mat_Type_Enum,
+		Composition,
+		_ExportedDate_
+	FROM
+	[..\QVD\PLM\StylePlacement.QVD]
+	(qvd);
+
+PlacementRefs:
+	LOAD 
+		fromID, 
+		toID, 
+		attrName, 
+		mapkey
+	FROM
+	[..\QVD\PLM\StylePlacementRefs.QVD]
+	(qvd);
+	Left Join(PlacementRefs)
+	LOAD
+		_id_				as fromID,
+		QtyDefault, 
+		Actual, 
+		QST_Mat_Type_Enum,
+		CodePBOM,
+		CodeSISPROBOM,
+		Composition
+	Resident Placement;	
+	DROP Table Placement;
+	
+NoConcatenate
+BOMTelas:
+	LOAD
+		fromID 			as CodPlacement, 
+		toID			as CodBOM, 
+		Actual			as DesBOMTela,
+		Composition		as DesBOMTelaComposition,
+		QtyDefault		as BOMConsumo,
+		CodePBOM,
+		CodeSISPROBOM
+	Resident PlacementRefs
+	where attrName='__Parent__' and QST_Mat_Type_Enum='Telas';
+	DROP Table PlacementRefs;
+
+NoConcatenate
+StyleMaterialBOMRefs:
+	LOAD 
+		fromID, 
+		toID, 
+		attrName, 
+		mapkey
+	FROM
+	[..\QVD\PLM\StyleMaterialBOMRefs.QVD]
+	(qvd);
+
+NoConcatenate
+BOM:
+	LOAD
+		fromID				as CodBOM, 
+		toID 				as CodPLM
+	Resident StyleMaterialBOMRefs
+	where attrName='__Parent__';
+	DROP Table StyleMaterialBOMRefs;
+	
+	Left Join(BOM)
+	LOAD
+		CodPlacement, 
+		CodBOM, 
+		DesBOMTela,
+		DesBOMTelaComposition,
+		BOMConsumo,
+		CodePBOM,
+		CodeSISPROBOM
+	Resident BOMTelas;
+	DROP Table BOMTelas;
+
