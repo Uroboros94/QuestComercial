@@ -1,0 +1,127 @@
+﻿/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Presupuestos
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+10/18/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+Maestro_Ppto:
+	LOAD 
+		Nombre, 
+	    Version, 
+	    Observacion,
+	    Marca
+	FROM
+	[..\Fuentes\PRESUPUESTO.xlsx]
+	(ooxml, embedded labels, table is Maestro);
+STORE Maestro_Ppto INTO [..\QVD\PLM\Maestro_Ppto.QVD](qvd);
+
+LET Marca =QvdNoOfRecords('..\QVD\PLM\Maestro_Ppto.QVD');
+FOR counter = 1 to $(Marca) step 1
+	LET vTabName = Peek('Nombre', $(counter)-1, 'Maestro_Ppto');
+	LET vMarca = Peek('Marca', $(counter)-1, 'Maestro_Ppto');
+	LET vVersion = Replace(Peek('Version', $(counter)-1, 'Maestro_Ppto'), ',', '.');
+	
+	MatrizPpto:
+		LOAD 
+			COLECCIÓN, 
+			GENERO, 
+			LINEA, 
+			[NOMBRE LINEA], 
+			SUBLINEA, 
+			[TIPO DE PRODUCTO], 
+			ORIGEN, 
+			[TAMAÑO DE LOTE], 
+			PRESUPUESTO, 
+			[TOTAL LINEA], 
+			NEGRO, 
+			BLANCO, 
+			[COLORES O TONOS], 
+			OSCURO, 
+			MEDIO, 
+			CLARO, 
+			HIELO, 
+			BOTON, 
+			CREMALLERA, 
+			[SIN CIERRE], 
+			CORDON, 
+			LARGA, 
+			TIRAS, 
+			[3 CUARTOS], 
+			SISA, 
+			RANGLA, 
+			CORTA, 
+			BLUSON, 
+			[BLUSA CORTE], 
+			CAMISERA, 
+			ACTIVE, 
+			CASUAL, 
+			ESPECIALES, 
+			[RAYA/EST o PRET], 
+			CUADROS, 
+			BLOQUES, 
+			[ESTAMPACION /PRINTS], 
+			[SOLO TONO], 
+			CV, 
+			POLO, 
+			[CUELLO R CARTERA], 
+			[CUELLO CARTERA SIN BOTON], 
+			CR, 
+			CAPUCHA, 
+			[SUPER SKINNY], 
+			SKINNY, 
+			STRAIGHT, 
+			[BOOT CUT (REEMPLAZO DEL FLARE)], 
+			[JOOG JEANS], 
+			BOYFRIEND, 
+			SLIM, 
+			ORIGINAL, 
+			CUSTOM, 
+			CHINOS, 
+			LEGGINS, 
+			[20 CMS], 
+			[19 CMS], 
+			[17 CMS], 
+			[15,5  CMS], 
+			[14 CMS], 
+			URBANO, 
+			TENIS, 
+			CASUAL1, 
+			BOTA, 
+			ZAPATO, 
+			[PLAYERA SUELA LISA CAP PLASTICO], 
+			[PLAYERA SUELA SANDWICH EMPEINE CAPELLADA GRUESA PLASTICA O TEXTIL], 
+			[PLAYERA SUELA ESPECIAL EMPEINE CAPELLADA PLASTICO O TEXTIL], 
+			[CUERO 3 PUNTADAS], 
+			ESPECIALES1, 
+			[DRIL, O LONA], 
+			PLANO, 
+			PUNTO, 
+			[140-160 GRS], 
+			[INDIGO RESINADO O TELA PREMIUM], 
+			ALGODÓN, 
+			[180 GRS], 
+			[150 GRS], 
+			[180 GRS1], 
+			[220 GRS], 
+			FLAME, 
+			JERSEY, 
+			PIQUE, 
+			[ALGODÓN LYCRA - microfibra], 
+			[SINTETICO (PU)],
+			'Ppto'&$(vVersion)								as VersionPpto,
+			'Ppto' 											as Flag,
+			'$(vMarca)'										as Marca,
+			if('$(vMarca)'='QUEST','UE',
+				if('$(vMarca)'='QURUBA','QU','OTRA'))		as CodMarca
+			FROM
+			[..\Fuentes\PRESUPUESTO.xlsx]
+			(ooxml, embedded labels, header is 2 lines, table is [$(vTabName)]);
+NEXT;
+
+STORE MatrizPpto INTO [..\QVD\PLM\MatrizPpto.QVD](qvd);
+DROP Tables MatrizPpto,Maestro_Ppto;
+LET vTabName = Null();
+LET vVersion = Null();

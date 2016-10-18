@@ -17,9 +17,48 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
-///$tab Conexión
+///$tab Dim
+/* Presupuestos de las colecciones */
+$(Must_Include=qvs.plm\matrizppto.qvs);
+///$tab Dim - Descarga
+/* Conexión DESCARGA_PLM*/
+OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=csidba;Initial Catalog=DESCARGA_PLM;Data Source=QUESTSQLDB\SQLSRV2012_PLM;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is fMfFRRNOJDZEWQRC);
+
+/* Detalle de los Colores*/
+$(Must_Include=qvs.plm\colores.qvs);
+
+/* Detalle de la enumeración de cada codigo*/
+$(Must_Include=qvs.plm\enums_plm.qvs);
+
+/* Productos de PLM*/
+$(Must_Include=qvs.plm\product_plm.qvs);
+
+/* Referencia de los productos de PLM*/
+$(Must_Include=qvs.plm\productrefs.qvs);
+
+/* Materiales PLM*/
+$(Must_Include=qvs.plm\stylematerialbom.qvs);
+
+/* Referencias: Materiales PLM*/
+$(Must_Include=qvs.plm\stylematerialbomrefs.qvs);
+
+/* Style Placement*/
+$(Must_Include=qvs.plm\styleplacement.qvs);
+
+/* Style Placement Referencias*/
+$(Must_Include=qvs.plm\styleplacementrefs.qvs);
+///$tab Dim - Interfaz
 /* Conexión a INTERFAZPLM. */
 OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=INTERFAZPLM;Data Source=QUEST-SQL1;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=QUEST-QLINK;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is HWVLUYRNJbaICSIGQJMKTRC);
-///$tab Dimensiones
+
 /* Tabla de fotos de productos. */
 $(Must_Include=qvs.plm\fotosstyle.qvs);
+
+/* Cabecera de Listado de Materiales */
+$(Must_Include=qvs.plm\headlistadomaterial.qvs);
+
+/* Detalle de Listado de Materiales */
+$(Must_Include=qvs.plm\linelistamaterial.qvs);
+///$tab Exit Script
+TRACE Extracción Finalizada;
+EXIT SCRIPT;
