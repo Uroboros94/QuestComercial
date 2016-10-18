@@ -1,0 +1,38 @@
+﻿///$tab Main
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$#.##0,00;-$#.##0,00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY h:mm:ss[.fff] TT';
+SET MonthNames='ene.;feb.;mar.;abr.;may.;jun.;jul.;ago.;sep.;oct.;nov.;dic.';
+SET DayNames='lun.;mar.;mié.;jue.;vie.;sáb.;dom.';
+SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
+SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET FirstWeekDay=0;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='es-CO';
+
+///$tab Cargue
+$(Must_Include=qvs.componentes\calendario.qvs);
+
+$(Must_Include=qvs.plm\bom.qvs);
+
+$(Must_Include=qvs.plm\enums.qvs);
+
+$(Must_Include=qvs.plm\headlistamaterial.qvs);
+
+$(Must_Include=qvs.plm\linelistamaterial.qvs);
+
+$(Must_Include=qvs.plm\presupuesto.qvs);
+
+$(Must_Include=qvs.plm\product.qvs);
+
+$(Must_Include=qvs.plm\productcolors.qvs);
+///$tab Exit Script
+TRACE Modelo Finalizado;
+EXIT SCRIPT;

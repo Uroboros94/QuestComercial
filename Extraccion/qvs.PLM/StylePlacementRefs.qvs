@@ -1,0 +1,19 @@
+/*----------------------------------------------------------------------------------------------------
+	 Detalle :
+		Extracción de Dimensiones: Style Placement Refs
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	10/18/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+StylePlacementRefs:
+SQL SELECT
+	fromID,
+	toID,
+	attrName,
+	mapkey
+FROM "DESCARGA_PLM".dbo."StylePlacement_refs";
+
+STORE StylePlacementRefs INTO [..\QVD\PLM\StylePlacementRefs.QVD](qvd);
+DROP TABLE StylePlacementRefs;

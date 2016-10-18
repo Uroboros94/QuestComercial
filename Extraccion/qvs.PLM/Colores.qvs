@@ -1,16 +1,20 @@
 /*----------------------------------------------------------------------------------------------------
  Detalle :
-    Extracción de Dimensiones: FotosStyle
+    Extracción de Dimensiones: Colores
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
-09/22/2016  |   malemos         |   Inicio de Configuración
+10/18/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
-FotosStyle:
-SQL SELECT 
-	Code,
-	FilePath
-FROM "_FotosStyle_";
 
-STORE FotosStyle INTO [..\QVD\PLM\FotosStyle.QVD](qvd);
-DROP TABLE FotosStyle;
+Colores:
+SQL SELECT
+	"_id_",
+	"Node Name",
+	"QST_ColorSpec_codeQuest_string",
+	"QST_ColorSpec_colorQuest_string",
+	"_ExportedDate_"
+FROM "DESCARGA_PLM".dbo.Colores;
+
+STORE Colores INTO [..\QVD\PLM\Colores.QVD](qvd);
+DROP TABLE Colores;
