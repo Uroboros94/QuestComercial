@@ -48,10 +48,12 @@ $(Must_Include=qvs.axproduccion\recepcionesop.qvs);
 
 /*Costos Indirectos de Producción*/
 $(Must_Include=qvs.axproduccion\cif.qvs);
+
+$(Include=qvs.axproduccion\ap_qst_prodreport.qvs);
 ///$tab Exit
 TRACE Modelo Finalizado;
 EXIT SCRIPT;
 ///$tab Temp
-$(Include=qvs.axproduccion\ap_qst_prodreport.qvs);
+
 
 $(Include=qvs.axproduccion\bomcalctrans.qvs);

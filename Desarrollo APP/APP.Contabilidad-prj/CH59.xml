@@ -6180,8 +6180,8 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PDV.TITULO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>EC.NombreCompleto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Almacen</v>
@@ -8302,6 +8302,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>691</int>
       <int>409</int>
       <int>369</int>
       <int>369</int>
@@ -8638,7 +8639,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>PDV.TITULO</DimName>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

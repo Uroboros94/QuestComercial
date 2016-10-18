@@ -240,16 +240,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>-1</SortByNumeric>
-        <SortByAscii>-1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -271,16 +262,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>-1</SortByNumeric>
-        <SortByAscii>-1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -297,16 +279,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -322,16 +295,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -361,7 +325,7 @@
         <SortByState>0</SortByState>
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -392,16 +356,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -427,16 +382,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -3842,8 +3788,8 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PDV.TITULO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>EC.NombreCompleto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>P.D.V.</v>
@@ -5938,6 +5884,7 @@
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>691</int>
+      <int>691</int>
       <int>453</int>
       <int>103</int>
       <int>391</int>
@@ -6486,14 +6433,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>PDV.TITULO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>=Contabilidad.CUENTA_N2 &amp;'-'&amp; Contabilidad.NOMBRE_CUENTA_N2</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6503,6 +6442,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N3 &amp;'-'&amp; Contabilidad.NOMBRE_CUENTA_N3</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6528,16 +6475,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>-1</SortByNumeric>
-              <SortByAscii>-1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -7117,16 +7055,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>-1</SortByNumeric>
-              <SortByAscii>-1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -7704,16 +7633,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -8290,16 +8210,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -8897,7 +8808,7 @@
               <SortByState>0</SortByState>
               <SortByFrequency>0</SortByFrequency>
               <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
+              <SortByAscii>0</SortByAscii>
               <SortByLoadOrder>0</SortByLoadOrder>
               <SortByExpression>0</SortByExpression>
               <Expression></Expression>
@@ -9493,16 +9404,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -10093,16 +9995,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
