@@ -9,9 +9,9 @@
 
 // Consulta las sublineas de la tabla de enumeraciones
 Sublinea_Enum:
-Mapping LOAD
-	num([Node Name]) as CodSubLinea,
-	_DisplayName_ as DesSublinea
+LOAD 
+	num([Node Name]) as CodSubLinea, 
+	_DisplayName_ as DesSublinea 
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
 (qvd)
@@ -19,8 +19,8 @@ where [Node Name2]='QST_sublinea_enum';
 
 // Consulta las Bandas de Precios de la tabla de enumeraciones
 BandaPrecio_Enum:
-Mapping LOAD
-	num([Node Name]) as CodBandaPrecio,
+LOAD 
+	num([Node Name]) as CodBandaPrecio, 
 	_DisplayName_ as DesBandaPrecio
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -29,7 +29,7 @@ where [Node Name2]='QST_bandaprecio_enum';
 
 // Consulta los generos de la tabla de enumeraciones
 Genero_Enum:
-Mapping LOAD
+LOAD 
 	num([Node Name]) as CodGenero,
 	_DisplayName_ as DesGenero
 FROM
@@ -39,8 +39,8 @@ where [Node Name2]='QST_genero_enum';
 
 // Consulta las lineas de la tabla de enumeraciones
 Linea_Enum:
-Mapping LOAD
-	num([Node Name]) as CodLinea,
+LOAD 
+	num([Node Name]) as CodLinea, 
 	_DisplayName_ as DesLinea
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -49,8 +49,8 @@ where [Node Name2]='QST_linea_enum';
 
 // Consulta las marcas de la tabla de enumeraciones
 Marca_Enum:
-Mapping LOAD
-	[Node Name] as CodMarca,
+LOAD 
+	[Node Name] as CodMarca, 
 	_DisplayName_ as DesMarca
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -59,17 +59,18 @@ where [Node Name2]='QST_marca_enum';
 
 // Consulta los Estados de Aprobacion de la tabla de enumeraciones
 Estado_Enum:
-Mapping LOAD
-	num([Node Name]) as CodEstadoAprobacion,
+LOAD 
+	num([Node Name]) as CodEstadoAprobacion, 
 	_DisplayName_ as DesEstadoAprobacion
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
 (qvd)
 where [Node Name2]='QST_estadoaprobacion_enum';
 
+
 Estado_Enum:
-Mapping LOAD
-	num([Node Name]) as CodEstadoComite,
+LOAD 
+	num([Node Name]) as CodEstadoComite, 
 	_DisplayName_ as DesEstadoComite
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -78,8 +79,8 @@ where [Node Name2]='QST_estadoaprobacion_enum';
 
 // Consulta los Diseñadores de la tabla de enumeraciones
 Disenador_Enum:
-Mapping LOAD
-	num([Node Name]) as CodDiseñador,
+LOAD 
+	num([Node Name]) as CodDiseñador, 
 	_DisplayName_ as DesDiseñador
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -88,8 +89,8 @@ where [Node Name2]='QST_disenador_enum';
 
 // Consulta las Empresas de la tabla de enumeraciones
 Empresa_Enum:
-Mapping LOAD
-	trim([Node Name]) as CodEmpresa,
+LOAD 
+	trim([Node Name]) as CodEmpresa, 
 	_DisplayName_ as DesEmpresa
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -98,8 +99,8 @@ where [Node Name2]='QST_empresa_enum';
 
 // Consulta los Niveles de Moda de la tabla de enumeraciones
 NivelModa_Enum:
-Mapping LOAD
-	num([Node Name]) as CodNivelModa,
+LOAD 
+	num([Node Name]) as CodNivelModa, 
 	_DisplayName_ as DesNivelModa
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -108,8 +109,8 @@ where [Node Name2]='QST_nivelmoda_enum';
 
 // Consulta los cuellos de la tabla de enumeraciones
 Cuello_Enum:
-Mapping LOAD
-	num([Node Name]) as CodCuello,
+LOAD 
+	num([Node Name]) as CodCuello, 
 	_DisplayName_ as DesCuello
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -118,8 +119,8 @@ where [Node Name2]='QST_cuello_enum';
 
 // Consulta las mangas de la tabla de enumeraciones
 Manga_Enum:
-Mapping LOAD
-	num([Node Name]) as CodManga,
+LOAD 
+	num([Node Name]) as CodManga, 
 	_DisplayName_ as DesManga
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -128,8 +129,8 @@ where [Node Name2]='QST_manga_enum';
 
 // Consulta las Siluetas de la tabla de enumeraciones
 Silueta_Enum:
-Mapping LOAD
-	num([Node Name]) as CodSilueta,
+LOAD 
+	num([Node Name]) as CodSilueta, 
 	_DisplayName_ as DesSilueta
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -138,8 +139,8 @@ where [Node Name2]='QST_silueta_enum';
 
 // Consulta los tipos de adquisicion de la tabla de enumeraciones
 TipoAdquisicion_Enum:
-Mapping LOAD
-	num([Node Name]) as CodTipoAdquisicion,
+LOAD 
+	num([Node Name]) as CodTipoAdquisicion, 
 	_DisplayName_ as DesTipoAdquisicion
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -147,8 +148,8 @@ FROM
 where [Node Name2]='QST_tipoadquisicion_enum';
 
 TipoProducto_Enum:
-Mapping LOAD
-	num([Node Name]) as CodTipoProducto,
+LOAD 
+	num([Node Name]) as CodTipoProducto, 
 	_DisplayName_ as DesTipoProducto
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -157,8 +158,8 @@ where [Node Name2]='QST_tipoProducto_enum';
 
 // Consulta los tipos de prenda de la tabla de enumeraciones
 TipoPrenda_Enum:
-Mapping LOAD
-	num([Node Name]) as CodTipoPrenda,
+LOAD 
+	num([Node Name]) as CodTipoPrenda, 
 	_DisplayName_ as DesTipoPrenda
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -167,8 +168,8 @@ where [Node Name2]='QST_tipoPrenda_enum';
 
 // Consulta los Grupos de Productos de la tabla de enumeraciones
 GrupoProductos_Enum:
-Mapping LOAD
-	num([Node Name]) as CodGrupoProductos,
+LOAD 
+	num([Node Name]) as CodGrupoProductos, 
 	_DisplayName_ as DesGrupoProductos
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -177,8 +178,8 @@ where [Node Name2]='QST_grupoproductos_enum';
 
 // Consulta las apariencias detalladas de la tabla de enumeraciones
 AparienciaDetallada_Enum:
-Mapping LOAD
-	num([Node Name]) as CodAparienciaDetallada,
+LOAD 
+	num([Node Name]) as CodAparienciaDetallada, 
 	_DisplayName_ as DesAparienciaDetallada
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -187,8 +188,8 @@ where [Node Name2]='QST_aparienciadetallada_enum';
 
 // Consulta las apariencias generales de la tabla de enumeraciones
 AparienciaGeneral_Enum:
-Mapping LOAD
-	num([Node Name]) as CodAparienciaGeneral,
+LOAD 
+	num([Node Name]) as CodAparienciaGeneral, 
 	_DisplayName_ as DesAparienciaGeneral
 FROM
 [..\QVD\PLM\Enums_PLM.QVD]
@@ -197,8 +198,8 @@ where [Node Name2]='QST_aparienciageneral_enum';
 
 // Consulta las tipologias de Tejido de la tabla de enumeraciones
 TipologiaTejido_Enum:
-	Mapping LOAD
-		num([Node Name]) as CodTipologiaTejido,
+	LOAD 
+		num([Node Name]) as CodTipologiaTejido, 
 	    _DisplayName_ as DesTipologiaTejido
 	FROM
 	[..\QVD\PLM\Enums_PLM.QVD]
@@ -207,8 +208,8 @@ TipologiaTejido_Enum:
 
 // Consulta los lavados de la tabla de enumeraciones
 Lavado_Enum:
-	Mapping LOAD
-		num([Node Name]) as CodLavado,
+	LOAD 
+		num([Node Name]) as CodLavado, 
 		_DisplayName_ as DesLavado
 	FROM
 	[..\QVD\PLM\Enums_PLM.QVD]
@@ -217,8 +218,8 @@ Lavado_Enum:
 
 //Fotos de la Referencia
 FotosStyle:
-	Mapping LOAD
-		Code           as CodReferencia,
+	LOAD 
+		Code           as CodReferencia, 
 		replace(FilePath,'\Filevault','Z:\') as FotoStyle
 	FROM
 	[..\QVD\PLM\FotosStyle.QVD]

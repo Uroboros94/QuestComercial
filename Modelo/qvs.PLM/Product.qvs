@@ -5,11 +5,10 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	10/18/2016  |   malemos         |   Inicio de Configuración
-	10/18/2016  |   Alejandro Saa G |   Aplicar ApplyMap sobre los campos de códigos.
 *****************************************************************************************************/
 
 LotePpto_tmp:
-	LOAD
+	LOAD 
 		'Q'						as CodEmpresa,
 		COLECCIÓN 				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -17,17 +16,17 @@ LotePpto_tmp:
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 		as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
+		[TIPO DE PRODUCTO] 		as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
 		[TAMAÑO DE LOTE] 		as Lote,
-		PRESUPUESTO				as UndsPresupuesto
+		PRESUPUESTO				as UndsPresupuesto     
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
 	(qvd);
 
 NoConcatenate
 Product:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		Lote,
@@ -37,8 +36,8 @@ Product:
 
 NoConcatenate
 Product_tmp:
-	LOAD
-		date(left(___CT,5),'yyyymmdd') 						as SK.FECHA,
+	LOAD 
+		date(left(___CT,5),'yyyymmdd') 						as SK.FECHA,	
 		if(QST_StyleAttr_Empresa_enum='01','Q') 			as CodEmpresa,
 		ParentSeason										as CodColeccion,
 		QST_StyleAttr_Marca_enum							as CodMarca,
@@ -48,24 +47,24 @@ Product_tmp:
 		QST_StyleAttr_sublinea_enum							as CodSubLinea,
 		QST_StyleAttr_TipoProducto_enum						as CodTipoProducto,
 		QST_StyleAttr_TipoAdquisicion_enum					as CodTipoAdquisicion,
-		_id_												as CodPLM,
+		_id_												as CodPLM, 
 		Code												as CodReferencia,
 		[Node Name]											as DescReferencia,
-		QST_StyleAttr_BandaPrecio_enum 						as CodBandaPrecio,
-		QST_StyleAttr_CodigoDisenador_enum					as CodDiseñador,
-		QST_StyleAttr_NivelModa_enum						as CodNivelModa,
+		QST_StyleAttr_BandaPrecio_enum 						as CodBandaPrecio, 
+		QST_StyleAttr_CodigoDisenador_enum					as CodDiseñador, 
+		QST_StyleAttr_NivelModa_enum						as CodNivelModa, 
 		QST_StyleAttr_SemanaEntrada_enum					as SemanaEntrada,
-		QST_StyleAttr_TamanoLoteAprobado_enum,
-		QST_StyleAttr_TamanoLotePropuesto_enum,
-		QST_StyleAttr_TipoPrenda_enum						as CodTipoPrenda,
-		QST_StyleAttr_GrupoProductos_enum					as CodGrupoProductos,
-		QST_StyleAttr_Cuello_enum							as CodCuello,
-		QST_StyleAttr_Manga_enum							as CodManga,
-		QST_StyleAttr_Silueta_enum							as CodSilueta,
+		QST_StyleAttr_TamanoLoteAprobado_enum, 
+		QST_StyleAttr_TamanoLotePropuesto_enum, 
+		QST_StyleAttr_TipoPrenda_enum						as CodTipoPrenda,  
+		QST_StyleAttr_GrupoProductos_enum					as CodGrupoProductos, 
+		QST_StyleAttr_Cuello_enum							as CodCuello, 
+		QST_StyleAttr_Manga_enum							as CodManga, 
+		QST_StyleAttr_Silueta_enum							as CodSilueta, 
 		if(isnull(QST_StyleAttr_EstadoAprobacion_enum),'1',QST_StyleAttr_EstadoAprobacion_enum)				as CodEstadoAprobacion,
-		if(isnull(QST_StyleAttr_AprobComite_enum),'1',QST_StyleAttr_AprobComite_enum)						as CodEstadoComite,
-		QST_AparienciaDetalladaStyle_enum					as CodAparienciaDetallada,
-		QST_AparienciaGeneral_enum							as CodAparienciaGeneral,
+		if(isnull(QST_StyleAttr_AprobComite_enum),'1',QST_StyleAttr_AprobComite_enum)						as CodEstadoComite, 
+		QST_AparienciaDetalladaStyle_enum					as CodAparienciaDetallada, 
+		QST_AparienciaGeneral_enum							as CodAparienciaGeneral, 
 		QST_tipologiatejido_enum							as CodTipologiaTejido,
 		QST_StyleAttr_Lavado_enum							as CodLavado,
 		(QST_styleAttr_costototal_double
@@ -80,13 +79,13 @@ Product_tmp:
 		QST_styleAttr_costototal_double						as CostoTotal,
 		QST_styleAttr_Precioventa_double					as PrecioVenta,
 		QST_Style_ComiteComent_string 						as ComentariosComite,
-		QST_Style_StatusBOM_enum,
-		QST_Style_StatusBOM_string,
-		ProductType,
-		___CR,
-		QST_Style_Descripcion_string,
-		QST_StyleAttr_SisproCode_string,
-		Theme,
+		QST_Style_StatusBOM_enum, 
+		QST_Style_StatusBOM_string, 
+		ProductType, 
+		___CR, 
+		QST_Style_Descripcion_string, 
+		QST_StyleAttr_SisproCode_string, 
+		Theme, 
 		_ExportedDate_,
 		'Product'											as Flag
 	FROM
@@ -97,61 +96,169 @@ Concatenate(Product)
 	LOAD
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		SK.FECHA,
-		ApplyMap('Empresa_Enum', CodEmpresa) as DesEmpresa,
+		___CR, 
+		_ExportedDate_,
+		CodAparienciaDetallada, 
+		CodAparienciaGeneral, 
+		CodBandaPrecio, 
 		CodColeccion,
-		ApplyMap('Marca_Enum', CodMarca) as DesMarca,
-		ApplyMap('Genero_Enum', CodGenero) as DesGenero,
-		CodLineaQuest,
-		ApplyMap('Linea_Enum', CodLinea) as DesLinea,
-		ApplyMap('Sublinea_Enum', CodSubLinea) as DesSublinea,
-		ApplyMap('TipoProducto_Enum', CodTipoProducto) as DesTipoProducto,
-		ApplyMap('TipoAdquisicion_Enum', CodTipoAdquisicion) as DesTipoAdquisicion,
-		CodPLM,
-		CodReferencia,
-		ApplyMap('FotosStyle', CodReferencia) as FotoStyle,
-		DescReferencia,
-		ApplyMap('BandaPrecio_Enum', CodBandaPrecio) as DesBandaPrecio,
-		ApplyMap('Disenador_Enum', CodDiseñador) as DesDiseñador,
-		ApplyMap('NivelModa_Enum', CodNivelModa) as DesNivelModa,
-		SemanaEntrada,
-		QST_StyleAttr_TamanoLoteAprobado_enum,
-		QST_StyleAttr_TamanoLotePropuesto_enum,
-		ApplyMap('TipoPrenda_Enum', CodTipoPrenda) as DesTipoPrenda,
-		ApplyMap('GrupoProductos_Enum', CodGrupoProductos) as DesGrupoProductos,
-		ApplyMap('Cuello_Enum', CodCuello) as DesCuello,
-		ApplyMap('Manga_Enum', CodManga) as DesManga,
-		ApplyMap('Silueta_Enum', CodSilueta) as DesSilueta,
+		CodCuello, 
+		CodDiseñador, 
+		CodEmpresa,
 		CodEstadoAprobacion,
-		ApplyMap('Estado_Enum', CodEstadoAprobacion) as DesEstadoAprobacion,
-		CodEstadoComite,
-		ApplyMap('Estado_Enum', CodEstadoComite) as DesEstadoComite,
-		ApplyMap('AparienciaDetallada_Enum', CodAparienciaDetallada) as DesAparienciaDetallada,
-		ApplyMap('AparienciaGeneral_Enum', CodAparienciaGeneral) as DesAparienciaGeneral,
-		ApplyMap('TipologiaTejido_Enum', CodTipologiaTejido) as DesTipologiaTejido,
-		ApplyMap('Lavado_Enum', CodLavado) as DesLavado,
-		QST_Style_StatusBOM_enum,
-		QST_Style_StatusBOM_string,
-		CostoMateriales,
+		CodEstadoComite, 
+		CodGenero,
+		CodGrupoProductos, 
+		CodLavado,
+		CodLinea,
+		CodLineaQuest,
+		CodManga, 
+		CodMarca,
+		CodNivelModa, 
+		CodPLM, 
+		CodReferencia,
+		CodSilueta, 
+		CodSubLinea,
+		CodTipoAdquisicion,
+		CodTipologiaTejido, 
+		CodTipoPrenda,  
+		CodTipoProducto,
+		ComentariosComite, 
 		CostoListaOperaciones,
+		CostoMateriales, 
+		CostoTotal,
+		DescReferencia,
+		Flag,
+		ManufacCIF,
 		PNPImportadoCIF,
 		PNPNacionalCIF,
-		ManufacCIF,
-		CostoTotal,
 		PrecioVenta,
-		ComentariosComite,
-		ProductType,
-		___CR,
-		QST_Style_Descripcion_string,
-		QST_StyleAttr_SisproCode_string,
-		Theme,
+		ProductType, 
+		QST_Style_Descripcion_string, 
+		QST_Style_StatusBOM_enum, 
+		QST_Style_StatusBOM_string,
+		QST_StyleAttr_SisproCode_string, 
+		QST_StyleAttr_TamanoLoteAprobado_enum, 
+		QST_StyleAttr_TamanoLotePropuesto_enum, 
+		SemanaEntrada,
+		Theme
+	Resident Product_tmp;
+	DROP Table Product_tmp;
+
+NoConcatenate
+Product_tmp:
+	LOAD 
+		date(left(___CT,5),'yyyymmdd') 						as SK.FECHA,	
+		if(QST_StyleAttr_Empresa_enum='01','Q') 			as CodEmpresa,
+		ParentSeason										as CodColeccion,
+		QST_StyleAttr_Marca_enum							as CodMarca,
+		QST_StyleAttr_Genero_enum							as CodGenero,
+		QST_StyleAttr_Genero_enum&mid(Code,5,2) 			as CodLineaQuest,
+		mid(Code,5,2)										as CodLinea,
+		QST_StyleAttr_sublinea_enum							as CodSubLinea,
+		QST_StyleAttr_TipoProducto_enum						as CodTipoProducto,
+		QST_StyleAttr_TipoAdquisicion_enum					as CodTipoAdquisicion,
+		_id_												as CodPLM, 
+		Code												as CodReferencia,
+		[Node Name]											as DescReferencia,
+		QST_StyleAttr_BandaPrecio_enum 						as CodBandaPrecio, 
+		QST_StyleAttr_CodigoDisenador_enum					as CodDiseñador, 
+		QST_StyleAttr_NivelModa_enum						as CodNivelModa, 
+		QST_StyleAttr_SemanaEntrada_enum					as SemanaEntrada,
+		QST_StyleAttr_TamanoLoteAprobado_enum, 
+		QST_StyleAttr_TamanoLotePropuesto_enum, 
+		QST_StyleAttr_TipoPrenda_enum						as CodTipoPrenda,  
+		QST_StyleAttr_GrupoProductos_enum					as CodGrupoProductos, 
+		QST_StyleAttr_Cuello_enum							as CodCuello, 
+		QST_StyleAttr_Manga_enum							as CodManga, 
+		QST_StyleAttr_Silueta_enum							as CodSilueta, 
+		if(isnull(QST_StyleAttr_EstadoAprobacion_enum),'1',QST_StyleAttr_EstadoAprobacion_enum)				as CodEstadoAprobacion,
+		if(isnull(QST_StyleAttr_AprobComite_enum),'1',QST_StyleAttr_AprobComite_enum)						as CodEstadoComite, 
+		QST_AparienciaDetalladaStyle_enum					as CodAparienciaDetallada, 
+		QST_AparienciaGeneral_enum							as CodAparienciaGeneral, 
+		QST_tipologiatejido_enum							as CodTipologiaTejido,
+		QST_StyleAttr_Lavado_enum							as CodLavado,
+		(QST_styleAttr_costototal_double
+			- QST_StyleAttr_RoutingCost_double
+			- QST_StyleAttr_PNPImportadoCIF_double
+			- QST_StyleAttr_PNPNacionalCIF_double
+			- QST_StyleAttr_ManufacturadoCIF_double)		as CostoMateriales,
+		QST_StyleAttr_RoutingCost_double					as CostoListaOperaciones,
+		QST_StyleAttr_PNPImportadoCIF_double				as PNPImportadoCIF,
+		QST_StyleAttr_PNPNacionalCIF_double					as PNPNacionalCIF,
+		QST_StyleAttr_ManufacturadoCIF_double				as ManufacCIF,
+		QST_styleAttr_costototal_double						as CostoTotal,
+		QST_styleAttr_Precioventa_double					as PrecioVenta,
+		QST_Style_ComiteComent_string 						as ComentariosComite,
+		QST_Style_StatusBOM_enum, 
+		QST_Style_StatusBOM_string, 
+		ProductType, 
+		___CR, 
+		QST_Style_Descripcion_string, 
+		QST_StyleAttr_SisproCode_string, 
+		Theme, 
 		_ExportedDate_,
-		Flag
+		'Product'											as Flag
+	FROM
+	[..\QVD\PLM\QStyle.QVD]
+	(qvd);
+
+Concatenate(Product)
+	LOAD
+		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
+		SK.FECHA,
+		___CR, 
+		_ExportedDate_,
+		CodAparienciaDetallada, 
+		CodAparienciaGeneral, 
+		CodBandaPrecio, 
+		CodColeccion,
+		CodCuello, 
+		CodDiseñador, 
+		CodEmpresa,
+		CodEstadoAprobacion,
+		CodEstadoComite, 
+		CodGenero,
+		CodGrupoProductos, 
+		CodLavado,
+		CodLinea,
+		CodLineaQuest,
+		CodManga, 
+		CodMarca,
+		CodNivelModa, 
+		CodPLM, 
+		CodReferencia,
+		CodSilueta, 
+		CodSubLinea,
+		CodTipoAdquisicion,
+		CodTipologiaTejido, 
+		CodTipoPrenda,  
+		CodTipoProducto,
+		ComentariosComite, 
+		CostoListaOperaciones,
+		CostoMateriales, 
+		CostoTotal,
+		DescReferencia,
+		Flag,
+		ManufacCIF,
+		PNPImportadoCIF,
+		PNPNacionalCIF,
+		PrecioVenta,
+		ProductType, 
+		QST_Style_Descripcion_string, 
+		QST_Style_StatusBOM_enum, 
+		QST_Style_StatusBOM_string,
+		QST_StyleAttr_SisproCode_string, 
+		QST_StyleAttr_TamanoLoteAprobado_enum, 
+		QST_StyleAttr_TamanoLotePropuesto_enum, 
+		SemanaEntrada,
+		Theme
 	Resident Product_tmp;
 	DROP Table Product_tmp;
 
 LotePpto_tmp:
 CrossTable(Lavado, PptoLavado, 9)
-	LOAD
+	LOAD 
 		'Q'						as CodEmpresa,
 		COLECCIÓN 				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -159,14 +266,14 @@ CrossTable(Lavado, PptoLavado, 9)
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO]	 	as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
-		NEGRO,
-		BLANCO,
-		[COLORES O TONOS],
-		OSCURO,
-		MEDIO,
-		CLARO,
+		[TIPO DE PRODUCTO]	 	as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
+		NEGRO, 
+		BLANCO, 
+		[COLORES O TONOS], 
+		OSCURO, 
+		MEDIO, 
+		CLARO, 
 		HIELO
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
@@ -175,7 +282,7 @@ CrossTable(Lavado, PptoLavado, 9)
 // se cargan los tonos al presupuesto de control
 Concatenate(Product)
 PptoControl:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		if(Lavado='NEGRO','007',
@@ -199,7 +306,7 @@ PptoControl:
 // se cargan las mangas al presupuesto de control
 LotePpto_tmp:
 CrossTable(Manga, PptoManga, 9)
-	LOAD
+	LOAD 
 		'Q'						as CodEmpresa,
 		COLECCIÓN				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -207,21 +314,21 @@ CrossTable(Manga, PptoManga, 9)
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 		as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
-		LARGA,
-		TIRAS,
-		[3 CUARTOS],
-		SISA,
-		RANGLA,
-		CORTA
+		[TIPO DE PRODUCTO] 		as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
+		LARGA, 
+		TIRAS, 
+		[3 CUARTOS], 
+		SISA, 
+		RANGLA, 
+		CORTA 
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
 	(qvd);
 
 Concatenate(Product)
 Mangas:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		if(Manga='LARGA','003',
@@ -243,7 +350,7 @@ Mangas:
 // se cargan la apariencia general al presupuesto de control
 LotePpto_tmp:
 CrossTable(AparienciaGeneral, PptoAparienciaGeneral, 9)
-	LOAD
+	LOAD 
 		'Q'						as CodEmpresa,
 		COLECCIÓN 				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -251,12 +358,12 @@ CrossTable(AparienciaGeneral, PptoAparienciaGeneral, 9)
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 		as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
-		[RAYA/EST o PRET],
-		CUADROS,
-		BLOQUES,
-		[ESTAMPACION /PRINTS],
+		[TIPO DE PRODUCTO] 		as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
+		[RAYA/EST o PRET], 
+		CUADROS, 
+		BLOQUES, 
+		[ESTAMPACION /PRINTS], 
 		[SOLO TONO]
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
@@ -264,7 +371,7 @@ CrossTable(AparienciaGeneral, PptoAparienciaGeneral, 9)
 
 Concatenate(Product)
 AparienciaGeneral:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		if(AparienciaGeneral='RAYA/EST o PRET','4',
@@ -284,7 +391,7 @@ AparienciaGeneral:
 // se cargan los cuellos al presupuesto de control
 LotePpto_tmp:
 CrossTable(Cuellos, PptoCuellos, 9)
-	LOAD
+	LOAD 
 		'Q'						as CodEmpresa,
 		COLECCIÓN 				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -292,13 +399,13 @@ CrossTable(Cuellos, PptoCuellos, 9)
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 		as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
-		CV,
-		POLO,
-		[CUELLO R CARTERA],
-		[CUELLO CARTERA SIN BOTON],
-		CR,
+		[TIPO DE PRODUCTO] 		as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
+		CV, 
+		POLO, 
+		[CUELLO R CARTERA], 
+		[CUELLO CARTERA SIN BOTON], 
+		CR, 
 		CAPUCHA
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
@@ -306,7 +413,7 @@ CrossTable(Cuellos, PptoCuellos, 9)
 
 Concatenate(Product)
 Cuellos:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		if(Cuellos='CV','002',
@@ -320,7 +427,7 @@ Cuellos:
 // se cargan las siluetas al presupuesto de control
 LotePpto_tmp:
 CrossTable(Silueta, PptoSilueta, 9)
-	LOAD
+	LOAD 
 		'Q'						as CodEmpresa,
 		COLECCIÓN 				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -328,18 +435,18 @@ CrossTable(Silueta, PptoSilueta, 9)
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 		as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
-		[SUPER SKINNY],
-		SKINNY,
-		STRAIGHT,
-		[BOOT CUT (REEMPLAZO DEL FLARE)],
-		[JOOG JEANS],
-		BOYFRIEND,
-		SLIM,
-		ORIGINAL,
-		CUSTOM,
-		CHINOS,
+		[TIPO DE PRODUCTO] 		as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
+		[SUPER SKINNY], 
+		SKINNY, 
+		STRAIGHT, 
+		[BOOT CUT (REEMPLAZO DEL FLARE)], 
+		[JOOG JEANS], 
+		BOYFRIEND, 
+		SLIM, 
+		ORIGINAL, 
+		CUSTOM, 
+		CHINOS, 
 		LEGGINS
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
@@ -347,7 +454,7 @@ CrossTable(Silueta, PptoSilueta, 9)
 
 Concatenate(Product)
 Silueta:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		if(Silueta='SUPER SKINNY','0001',
@@ -375,7 +482,7 @@ Silueta:
 // se cargan los tipos de tejido al presupuesto de control
 LotePpto_tmp:
 CrossTable(TipoTejido, PptoTipoTejido, 9)
-	LOAD
+	LOAD 
 		'Q'					as CodEmpresa,
 		COLECCIÓN 				as CodColeccion,
 		CodMarca				as CodMarca,
@@ -383,11 +490,11 @@ CrossTable(TipoTejido, PptoTipoTejido, 9)
 		[NOMBRE LINEA]			as CodLinea,
 		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
 		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 	as CodTipoProducto,
-		ORIGEN					as CodTipoAdquisicion,
-		ESPECIALES1,
-		[DRIL, O LONA],
-		PLANO,
+		[TIPO DE PRODUCTO] 	as CodTipoProducto, 
+		ORIGEN					as CodTipoAdquisicion, 
+		ESPECIALES1, 
+		[DRIL, O LONA], 
+		PLANO, 
 		PUNTO
 	FROM
 	[..\QVD\PLM\MatrizPpto.QVD]
@@ -395,7 +502,7 @@ CrossTable(TipoTejido, PptoTipoTejido, 9)
 
 Concatenate(Product)
 Silueta:
-	LOAD
+	LOAD 
 		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
 		CodEmpresa,CodColeccion,CodMarca,CodGenero,CodLineaQuest,CodLinea,CodSubLinea,CodTipoProducto,CodTipoAdquisicion,
 		if(TipoTejido='ESPECIALES1','',
