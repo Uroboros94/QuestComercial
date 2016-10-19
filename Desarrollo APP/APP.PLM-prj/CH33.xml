@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Count({&lt;CodEstadoAprobacion={'2'}&gt;}CodReferencia)</v>
+        <v>Count(DISTINCT{&lt;CodEstadoAprobacion={'2'}&gt;}CodReferencia)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -7287,7 +7287,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count({&lt;CodEstadoAprobacion={'2'}&gt;}CodReferencia)</v>
+              <v>Count(DISTINCT{&lt;CodEstadoAprobacion={'2'}&gt;}CodReferencia)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
