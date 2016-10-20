@@ -33,16 +33,16 @@ PlacementRefs:
 	[..\QVD\PLM\StylePlacementRefs.QVD]
 	(qvd);
 	Left Join(PlacementRefs)
-	LOAD
-		_id_				as fromID,
-		QtyDefault, 
-		Actual, 
-		QST_Mat_Type_Enum,
-		CodePBOM,
-		CodeSISPROBOM,
-		Composition
-	Resident Placement;	
-	DROP Table Placement;
+		LOAD
+			_id_				as fromID,
+			QtyDefault, 
+			Actual, 
+			QST_Mat_Type_Enum,
+			CodePBOM,
+			CodeSISPROBOM,
+			Composition
+		Resident Placement;	
+		DROP Table Placement;
 	
 NoConcatenate
 BOMTelas:
