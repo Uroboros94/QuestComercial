@@ -1765,7 +1765,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Fecha Creación Orden Pedido</v>
+        <v>Fecha Creación Orden Producción</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3039,7 +3039,10 @@
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_TRUE</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -3225,7 +3228,10 @@
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_COND</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -5059,8 +5065,10 @@
     <ShowSelectIndicators>true</ShowSelectIndicators>
     <DisplayOrder>
       <int>5</int>
-      <int>2</int>
-      <int>3</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
     </DisplayOrder>
     <IndentMode>false</IndentMode>
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
