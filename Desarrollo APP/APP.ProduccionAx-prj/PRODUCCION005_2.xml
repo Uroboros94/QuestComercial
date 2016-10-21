@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Total Aplicado en Inventario en Proceso</v>
+        <v>Total por Aplicar al Inventario en Proceso</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Total Aplicado en Inventario en Proceso</v>
+      <v>Total por Aplicar al Inventario en Proceso</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -231,7 +231,7 @@
       <Definition>
         <v>Sum(OrdenProd.CantProgramada)</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -329,7 +329,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -354,7 +354,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -379,7 +379,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -404,7 +404,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -429,7 +429,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -454,7 +454,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -479,7 +479,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -504,7 +504,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -9338,7 +9338,6 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>269</int>
       <int>244</int>
       <int>341</int>
       <int>375</int>
@@ -9859,7 +9858,6 @@
       <int>12</int>
       <int>13</int>
       <int>14</int>
-      <int>15</int>
     </InterFieldSortOrder>
     <ExpressionPosition>3</ExpressionPosition>
     <NumberOfLeftDimensions>3</NumberOfLeftDimensions>
@@ -9967,7 +9965,7 @@
             <Definition>
               <v>Sum(OrdenProd.CantProgramada)</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>
@@ -11131,7 +11129,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -11714,7 +11712,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12297,7 +12295,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12880,7 +12878,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -13463,7 +13461,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14046,7 +14044,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14629,7 +14627,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -15212,7 +15210,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -15795,7 +15793,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16378,7 +16376,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.CantProgramada)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
