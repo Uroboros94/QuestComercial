@@ -1763,7 +1763,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>COLLECTREFPRODID</Name>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -5860,14 +5860,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>COLLECTREFPRODID</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>RpProduccion.FechaCreacionOrden</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5917,6 +5909,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>RpProduccion.CantidadConfirmada</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

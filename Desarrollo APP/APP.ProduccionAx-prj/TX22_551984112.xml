@@ -246,7 +246,10 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
     <Text>
-      <v>=If(RpProduccion.NombreOperacion = 'Corte', RpProduccion.IdTaller, 'ggg')</v>
+      <v>=(
+	Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT) + 
+	Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado', 'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT)
+) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT))</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
