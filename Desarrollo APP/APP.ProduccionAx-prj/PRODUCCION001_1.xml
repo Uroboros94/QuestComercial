@@ -1623,7 +1623,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Nombre</Name>
+        <Name>Productos.Tipo</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2158,7 +2158,7 @@
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
-        <Type>COND_EX_COND</Type>
+        <Type>COND_EX_TRUE</Type>
         <Expression>0</Expression>
       </EnableCondition>
       <Comment></Comment>
@@ -4693,81 +4693,35 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>MasterProductAttributes.ATVAL_COLECCION</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BDIwMTYtMDEA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>MasterProductAttributes.ATVAL_LINEA_MATERIAL</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Nombre</DimName>
-          <ElemNo>
-            <int>87</int>
-            <int>2600</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BENhbWlzZXRhIFNsaW0gLSBNQyAwMgA=
-            </Blob>
-            <Blob>
-                BEpFQU4gT1JJR0lOQUwgODg4AA==
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Productos.Referencia</DimName>
-          <ElemNo>
-            <int>93</int>
-            <int>6852</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFE5NTExMjE1MDAwMDIA
-            </Blob>
-            <Blob>
-                BFE5NTExMDE2MDA4ODgA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>OrdenProd.INVENTBATCHID</DimName>
-          <ElemNo>
-            <int>-2</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -4810,6 +4764,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>Productos.Tipo</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
