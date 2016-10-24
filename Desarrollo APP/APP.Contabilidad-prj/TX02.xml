@@ -212,24 +212,7 @@
     <BottomMargin>10</BottomMargin>
     <LeftMargin>10</LeftMargin>
     <RightMargin>10</RightMargin>
-    <TextColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>255</Red>
-          <Green>255</Green>
-          <Blue>255</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
-    </TextColor>
+    <TextColor></TextColor>
     <BkgColor>
       <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>
@@ -253,7 +236,7 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>0</BkgAlpha>
     <Text>
-      <v>Fecha Ultima Actualización</v>
+      <v>='Fecha Última Actualización: '&amp;ReloadTime()</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
