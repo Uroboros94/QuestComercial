@@ -824,12 +824,12 @@
     <String>1</String>
     <String>OrdenesCompra</String>
     <String>270</String>
+    <String>1</String>
+    <String>OrdenesCompra</String>
+    <String>271</String>
     <String>2</String>
     <String>OrdenesCompra</String>
     <String>RecepcionesOP</String>
-    <String>271</String>
-    <String>1</String>
-    <String>OrdenesCompra</String>
     <String>272</String>
     <String>1</String>
     <String>OrdenesCompra</String>
@@ -949,7 +949,7 @@
     <String>OrdenesCompra</String>
     <String>311</String>
     <String>1</String>
-    <String>RecepcionesOP</String>
+    <String>OrdenesCompra</String>
     <String>312</String>
     <String>1</String>
     <String>RecepcionesOP</String>
@@ -994,7 +994,7 @@
     <String>RecepcionesOP</String>
     <String>326</String>
     <String>1</String>
-    <String>CIF</String>
+    <String>RecepcionesOP</String>
     <String>327</String>
     <String>1</String>
     <String>CIF</String>
@@ -1006,7 +1006,7 @@
     <String>CIF</String>
     <String>330</String>
     <String>1</String>
-    <String>RpProduccion</String>
+    <String>CIF</String>
     <String>331</String>
     <String>1</String>
     <String>RpProduccion</String>
@@ -1110,6 +1110,9 @@
     <String>1</String>
     <String>RpProduccion</String>
     <String>365</String>
+    <String>1</String>
+    <String>RpProduccion</String>
+    <String>366</String>
     <String>1</String>
     <String>RpProduccion</String>
   </FieldSrcTables>
@@ -1566,6 +1569,7 @@
           <String>ProdCalcTrans.UNITID</String>
           <String>ProdCalcTrans.OPRID</String>
           <String>OrdenesCompra.PURCHID</String>
+          <String>OrdenesCompra.PURCHNAME</String>
           <String>OrdenesCompra.CREATEDBY</String>
           <String>OrdenesCompra.CURRENCYCODE</String>
           <String>OrdenesCompra.PAYMENT</String>
@@ -1901,7 +1905,6 @@
           <String>OrdenesCompra.PURCHASETYPE</String>
           <String>OrdenesCompra.LineasOC.SHIPPINGDATEREQUESTED</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
-          <String>OrdenesCompra.LineasOC.QTYORDERED</String>
           <String>OrdenesCompra.LineasOC.PURCHRECEIVEDNOW</String>
           <String>OrdenesCompra.LineasOC.REMAINPURCHPHYSICAL</String>
           <String>OrdenesCompra.LineasOC.REMAINPURCHFINANCIAL</String>
@@ -1913,7 +1916,6 @@
           <String>OrdenesCompra.LineasOC.PURCHMARKUP</String>
           <String>OrdenesCompra.LineasOC.PURCHSTATUS</String>
           <String>OrdenesCompra.LineasOC.PURCHASETYPE</String>
-          <String>OrdenesCompra.LineasOC.REMAININVENTPHYSICAL</String>
           <String>OrdenesCompra.LineasOC.SHIPPINGDATECONFIRMED</String>
           <String>OrdenesCompra.LineasOC.BLOCKED</String>
           <String>OrdenesCompra.LineasOC.COMPLETE</String>
