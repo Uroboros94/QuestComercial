@@ -46,7 +46,7 @@
       <DropShadow>false</DropShadow>
     </CaptionFont>
     <Name>
-      <v>B/ce Gral Comparativo</v>
+      <v>B/ce Gral Compañía</v>
     </Name>
     <Bmp enctype="base64"></Bmp>
     <BmpMode>0</BmpMode>
@@ -209,15 +209,29 @@
     <OnActivateActionItems></OnActivateActionItems>
     <OnDeactivateActionItems></OnDeactivateActionItems>
     <Extension></Extension>
-    <Background></Background>
+    <Background>
+      <Color>
+        <Mode>COLORAREA_SOLID</Mode>
+        <Luminosity>85</Luminosity>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
+        <FillPattern>COLORAREA_PATTERN1</FillPattern>
+        <PrimaryCol></PrimaryCol>
+        <SecondaryCol></SecondaryCol>
+        <Alpha>0</Alpha>
+      </Color>
+      <ImageBlob enctype="base64"></ImageBlob>
+      <ImageLayout></ImageLayout>
+      <UseColor>true</UseColor>
+      <UseImage>false</UseImage>
+    </Background>
     <MenuIcon>false</MenuIcon>
     <ExtendedProperties></ExtendedProperties>
     <ExtendedValues></ExtendedValues>
     <StateName></StateName>
   </Frame>
   <PrintSettings></PrintSettings>
-  <Mode>CONTAINERMODE_SINGLEOBJECT</Mode>
-  <SingleObjectMode>TABS_TOP</SingleObjectMode>
+  <Mode>CONTAINERMODE_GRID</Mode>
+  <SingleObjectMode>TABS_LEFT</SingleObjectMode>
   <SingleObjectStyle>CONTAINERSTYLE_PLAIN</SingleObjectStyle>
   <ShowObjectTypeIcons>true</ShowObjectTypeIcons>
   <TextColor>
@@ -239,14 +253,15 @@
     <Alpha>255</Alpha>
   </TextColor>
   <TabColor></TabColor>
-  <SingleObjectActiveIndex>4</SingleObjectActiveIndex>
-  <GridRows>2</GridRows>
-  <GridColumns>2</GridColumns>
+  <SingleObjectActiveIndex>0</SingleObjectActiveIndex>
+  <GridRows>5</GridRows>
+  <GridColumns>1</GridColumns>
   <GridCellSpacing>3</GridCellSpacing>
-  <GridVerticalDividers>
-    <double>3FE0000000000000</double>
-  </GridVerticalDividers>
+  <GridVerticalDividers></GridVerticalDividers>
   <GridHorizontalDividers>
-    <double>3FE0000000000000</double>
+    <double>3FD36652EC99AD13</double>
+    <double>3FE3F9CB3F9CB3FA</double>
+    <double>3FE942B7142B7143</double>
+    <double>3FEBED61BED61BED</double>
   </GridHorizontalDividers>
 </ContainerProperties>

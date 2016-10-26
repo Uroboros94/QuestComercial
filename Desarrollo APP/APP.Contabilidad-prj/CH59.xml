@@ -47,14 +47,14 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>='EJECUCION PRESUPUESTAL'&amp;Chr(10)&amp;Chr(13)&amp;'MES DE '&amp;Upper(Date(Contabilidad.FECHA,'MMMM'))</v>
+        <v>='Ejecución Presupestal: '&amp; Date(Max(Contabilidad.ACCOUNTINGDATE),'MMMM') </v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>false</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
-      <AllowMaximize>false</AllowMaximize>
+      <AllowMinimize>true</AllowMinimize>
+      <AutoMinimize>true</AutoMinimize>
+      <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
       <CopyIcon>false</CopyIcon>
@@ -70,7 +70,7 @@
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
       <ShowCaption>true</ShowCaption>
-      <MultiLine>0</MultiLine>
+      <MultiLine>2</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>='EJECUCION PRESUPUESTAL'&amp;Chr(10)&amp;Chr(13)&amp;'MES DE '&amp;Upper(Date(Contabilidad.FECHA,'MMMM'))</v>
+      <v>='Ejecución Presupestal: '&amp; Date(Max(Contabilidad.ACCOUNTINGDATE),'MMMM') </v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString>
@@ -888,7 +888,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>409</ColWidth>
+      <ColWidth>259</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1319,7 +1319,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>369</ColWidth>
+      <ColWidth>288</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1750,7 +1750,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>369</ColWidth>
+      <ColWidth>288</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2181,7 +2181,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>169</ColWidth>
+      <ColWidth>191</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2612,7 +2612,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>325</ColWidth>
+      <ColWidth>238</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3043,7 +3043,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>344</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3474,7 +3474,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>172</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3905,7 +3905,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>166</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4336,7 +4336,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>169</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6297,7 +6297,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>691</ColWidth>
+      <ColWidth>497</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -8302,16 +8302,16 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>691</int>
-      <int>409</int>
-      <int>369</int>
-      <int>369</int>
+      <int>497</int>
+      <int>259</int>
+      <int>288</int>
+      <int>288</int>
+      <int>191</int>
+      <int>238</int>
+      <int>300</int>
+      <int>172</int>
+      <int>166</int>
       <int>169</int>
-      <int>325</int>
-      <int>344</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
       <int>359</int>
       <int>359</int>
       <int>347</int>
@@ -8608,7 +8608,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
       <int>12</int>
       <int>13</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>1</ExpressionPosition>
+    <ExpressionPosition>0</ExpressionPosition>
     <NumberOfLeftDimensions>1</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
@@ -8994,7 +8994,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>409</ColWidth>
+            <ColWidth>259</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -9523,7 +9523,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>369</ColWidth>
+            <ColWidth>288</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -10052,7 +10052,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>369</ColWidth>
+            <ColWidth>288</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -10581,7 +10581,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>169</ColWidth>
+            <ColWidth>191</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -11117,7 +11117,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>325</ColWidth>
+            <ColWidth>238</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -11653,7 +11653,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>344</ColWidth>
+            <ColWidth>300</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -12189,7 +12189,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>172</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -12725,7 +12725,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>166</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -13273,7 +13273,7 @@ sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccio
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>169</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
