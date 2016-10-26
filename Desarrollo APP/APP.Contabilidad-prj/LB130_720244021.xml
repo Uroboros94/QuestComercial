@@ -10,15 +10,24 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>4</Red>
-            <Green>108</Green>
-            <Blue>193</Blue>
+            <Red>255</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </PrimaryCol>
-        <SecondaryCol></SecondaryCol>
+        <SecondaryCol>
+          <Col>
+            <Red>200</Red>
+            <Green>200</Green>
+            <Blue>200</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
       <Font>
@@ -38,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Linea</v>
+        <v>Contabilidad.ANO</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -63,15 +72,15 @@
       <ShowCaption>false</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
-        <FillPattern>COLORAREA_PATTERN1</FillPattern>
+        <FillPattern>COLORAREA_PATTERN2</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>210</Red>
-            <Green>210</Green>
-            <Blue>210</Blue>
+            <Red>255</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -90,15 +99,15 @@
         <Alpha>255</Alpha>
       </ActiveBgColor>
       <BgColor>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>232</Red>
-            <Green>232</Green>
-            <Blue>232</Blue>
+            <Red>255</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -123,9 +132,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>54</Red>
-            <Green>54</Green>
-            <Blue>54</Blue>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -141,9 +150,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>54</Red>
-            <Green>54</Green>
-            <Blue>54</Blue>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -192,8 +201,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_SIX</ScrollStyle>
-      <ScrollWidth>38</ScrollWidth>
+      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
+      <ScrollWidth>29</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -208,15 +217,23 @@
       <StateName></StateName>
     </Frame>
     <ReadOnly>false</ReadOnly>
-    <NumAdjust>2</NumAdjust>
-    <TextAdjust>0</TextAdjust>
+    <NumAdjust>1</NumAdjust>
+    <TextAdjust>1</TextAdjust>
     <MultiLine>0</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top></Top>
-      <Bottom></Bottom>
+      <Top>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Top>
+      <Bottom>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>
@@ -228,8 +245,8 @@
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </Right>
     </Borders>
-    <MultiColumn>false</MultiColumn>
-    <OrderByRow>false</OrderByRow>
+    <MultiColumn>true</MultiColumn>
+    <OrderByRow>true</OrderByRow>
     <HideExcluded>false</HideExcluded>
     <SelectionStyle>SS_USER_PREF</SelectionStyle>
     <ImageRepresentation></ImageRepresentation>
@@ -237,7 +254,7 @@
     <ExcludedValuesMode>0</ExcludedValuesMode>
     <DefaultSearchMode>0</DefaultSearchMode>
     <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>-1</FixedColumnsCount>
+    <FixedColumnsCount>2</FixedColumnsCount>
     <LayoutDependentPrint>true</LayoutDependentPrint>
     <PrintAllValues>false</PrintAllValues>
     <HierarchySeparator>/</HierarchySeparator>
@@ -249,12 +266,10 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Contabilidad.DESC_LINEA</Name>
+    <Name>Contabilidad.ANO</Name>
     <Type>PRESENT</Type>
   </Def>
-  <Title>
-    <v>Linea</v>
-  </Title>
+  <Title></Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -345,10 +360,10 @@
     <StrDevModeExtra></StrDevModeExtra>
   </PrintSettings>
   <SortCriteria>
-    <SortByState>1</SortByState>
+    <SortByState>0</SortByState>
     <SortByFrequency>0</SortByFrequency>
-    <SortByNumeric>0</SortByNumeric>
-    <SortByAscii>1</SortByAscii>
+    <SortByNumeric>1</SortByNumeric>
+    <SortByAscii>0</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>
