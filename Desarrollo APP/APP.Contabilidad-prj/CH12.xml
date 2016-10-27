@@ -289,12 +289,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(Column(1) - Column(2)) / Column(2)
-
-
-//(((sum({&lt;Contabilidad.CUENTA_N1 = {'4'} , Contabilidad.NOMMES = &gt;} Contabilidad.MOVIMIENTO)*-1)) - 
-//	(sum({&lt;Contabilidad.CUENTA_N3 = {'6120','6135'} , Contabilidad.NOMMES = &gt;} Contabilidad.MOVIMIENTO))) / 
-//		((sum({&lt;Contabilidad.CUENTA_N1 = {'4'} , Contabilidad.NOMMES = &gt;} Contabilidad.MOVIMIENTO)*-1))</v>
+        <v>(Column(1) - Column(2)) / Column(2)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2939,8 +2934,8 @@
     <BarModeStacked>false</BarModeStacked>
     <GroupSpacingFactor>3FE0000000000000</GroupSpacingFactor>
     <BarSpacingFactor>3FD0000000000000</BarSpacingFactor>
-    <LineWidth>10</LineWidth>
-    <SymbolSize>12</SymbolSize>
+    <LineWidth>16</LineWidth>
+    <SymbolSize>8</SymbolSize>
     <TrendLineWidth>5</TrendLineWidth>
     <ColorMap>
       <ColorAreaDef>
@@ -3398,7 +3393,7 @@
     <RadarChartMode>RADARCHART_NORMAL</RadarChartMode>
     <GaugeChartMode>GAUGECHART_SPEEDOMETER</GaugeChartMode>
     <SplitAxis>false</SplitAxis>
-    <PrimaryShare>67</PrimaryShare>
+    <PrimaryShare>60</PrimaryShare>
     <GaugeSettings>
       <GaugeSegments>
         <GaugeSegmentDef>
@@ -5309,12 +5304,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(Column(1) - Column(2)) / Column(2)
-
-
-//(((sum({&lt;Contabilidad.CUENTA_N1 = {'4'} , Contabilidad.NOMMES = &gt;} Contabilidad.MOVIMIENTO)*-1)) - 
-//	(sum({&lt;Contabilidad.CUENTA_N3 = {'6120','6135'} , Contabilidad.NOMMES = &gt;} Contabilidad.MOVIMIENTO))) / 
-//		((sum({&lt;Contabilidad.CUENTA_N1 = {'4'} , Contabilidad.NOMMES = &gt;} Contabilidad.MOVIMIENTO)*-1))</v>
+              <v>(Column(1) - Column(2)) / Column(2)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

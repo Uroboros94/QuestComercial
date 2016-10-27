@@ -1,12 +1,12 @@
-/*
-Fecha : 20/09/2016
-----------------------------------------------------------------------------------------------------
- Detalle :
+/****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
 	Creación del Modelo: Maestro de Productos
--------------------------------------------------------------------------------------------------
-Fecha       |   Desarrollador   |   Modificación
--------------------------------------------------------------------------------------------------
-09/22/2016  |   malemos         |   Inicio de Configuración
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
 QUALIFY *;
 UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
@@ -58,8 +58,8 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 			//UBICACION     
 		FROM
 		[..\QVD\QST_MaestroProductos.QVD]
-		(qvd)
-		where EMPRESA = 'qst';
+		(qvd);
+		//where EMPRESA = 'qst';
 		//Where CATEGORYHIERARCHYRECID <> '0'; /*Verifica si es producto*/
 
 	MasterProductAttributes:
@@ -69,7 +69,7 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 			ATVAL_BANDA_DE_PRECIO, 
 			ATVAL_CLASIFICACION_INVENTARIO, 
 			ATVAL_CLIMA, 
-			ATVAL_COLECCION, 
+			//ATVAL_COLECCION, 
 			ATVAL_CUELLO, 
 			ATVAL_DISENADOR, 
 			ATVAL_GENERO, 
@@ -93,3 +93,60 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 		[..\QVD\QST_MaestroProductosAtributes.QVD]
 		(qvd);
 UNQUALIFY *;
+
+//******************************************************************************************
+DimFinanTemp:
+	LOAD 
+		ItemId, 	    
+		Name, 
+		DISPLAYVALUE, 
+		DESCRIPTION
+	FROM
+	[..\QVD\DimensionesFinancieras.QVD]
+	(qvd)
+	Where Match(Name,'LINEA','SUBLINEA','MARCA','COLECCION');
+
+Campos:
+	LOAD Distinct
+		Capitalize(Name) As Campo
+	Resident DimFinanTemp;
+
+LET contador = 0;
+LET vCampo = Peek('Campo', $(contador)-1, 'Campos');
+
+DimFinan:
+	LOAD
+		ItemId 			as IdItemp,
+		DISPLAYVALUE 	as Id$(vCampo),
+		DESCRIPTION		as $(vCampo)
+	Resident DimFinanTemp
+	Where Capitalize(Name) = '$(vCampo)';
+
+FOR contador = 1 to 4 step 1
+
+LET vCampo = Peek('Campo', $(contador)-1, 'Campos');
+TRACE $(vCampo);
+Left Join
+	LOAD
+		ItemId 			as IdItemp,
+		DISPLAYVALUE 	as Id$(vCampo),
+		DESCRIPTION		as $(vCampo)
+	Resident DimFinanTemp
+	Where Capitalize(Name) = '$(vCampo)';
+NEXT;
+
+Left Join (Productos)
+	LOAD 
+		IdColeccion		as Productos.Coleccion,
+		IdItemp			as Productos.Referencia,
+		IdLinea			as Productos.IdLinea,
+		IdMarca			as Productos.IdMarca,
+		IdSublinea		as Productos.IdSublinea,
+		Linea			as Productos.Linea,
+		Marca			as Productos.Marca,
+		Sublinea 		as Productos.Sublinea
+	Resident DimFinan;
+
+LET contador = Null();
+LET vCampo = Null();
+DROP Tables Campos,DimFinanTemp,DimFinan;

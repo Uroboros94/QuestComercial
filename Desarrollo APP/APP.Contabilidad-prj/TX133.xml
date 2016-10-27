@@ -23,7 +23,7 @@
       </Color>
       <Font>
         <FontName>Arial</FontName>
-        <PointSize1000>9000</PointSize1000>
+        <PointSize1000>14000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -219,9 +219,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>54</Red>
-          <Green>54</Green>
-          <Blue>54</Blue>
+          <Red>255</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -254,8 +254,8 @@
     <BkgAlpha>0</BkgAlpha>
     <Text>
       <v>=if (Count(DISTINCT Contabilidad.NOMMES) &gt; 1 ,
-	'ANALISIS DUPONT ACUMULADO A ' &amp; Upper( MonthName(Max(Contabilidad.FECHA))),
-	'ANALISIS DUPONT MES ' &amp; Upper( MonthName(Max(Contabilidad.FECHA)))
+	'ANALISIS DUPONT ACUMULADO A ' &amp; Upper( MonthName(Max(Contabilidad.ACCOUNTINGDATE))),
+	'ANALISIS DUPONT MES ' &amp; Upper( MonthName(Max(Contabilidad.ACCOUNTINGDATE)))
 )</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>

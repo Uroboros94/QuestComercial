@@ -104,8 +104,8 @@
           <Type>IS_EXPR</Type>
         </FieldDefEx>
         <FieldDefEx>
-          <Name>Terceros.RAZON_SOCIAL</Name>
-          <Type>NOT_PRESENT</Type>
+          <Name>Contabilidad.DESC_TERCERO</Name>
+          <Type>PRESENT</Type>
         </FieldDefEx>
       </FieldDefs>
       <Labels>
@@ -119,7 +119,7 @@
         <String>Centro de Costos 4</String>
         <String>Centro de Costos 5</String>
         <String>P.D.V</String>
-        <String>Tercero</String>
+        <String>Terceros</String>
       </Labels>
       <SortCriterias>
         <SortCriteria>
@@ -243,15 +243,13 @@
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
         <SortCriteria>
-          <SortByState>0</SortByState>
+          <SortByState>1</SortByState>
           <SortByFrequency>0</SortByFrequency>
           <SortByNumeric>0</SortByNumeric>
-          <SortByAscii>0</SortByAscii>
+          <SortByAscii>1</SortByAscii>
           <SortByLoadOrder>0</SortByLoadOrder>
-          <SortByExpression>1</SortByExpression>
-          <Expression>
-            <v>PK_TERCEROS</v>
-          </Expression>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
           <SortByGreyness>0</SortByGreyness>
         </SortCriteria>
       </SortCriterias>
@@ -2942,13 +2940,22 @@
       </DefaultNumberPresentation>
       <NumberPresentationSurvive>true</NumberPresentationSurvive>
       <ShowAlternatives>false</ShowAlternatives>
-      <SortCriteria></SortCriteria>
+      <SortCriteria>
+        <SortByState>0</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
       <DefaultTextAdjust>0</DefaultTextAdjust>
       <DefaultNumAdjust>2</DefaultNumAdjust>
       <DefaultMultiLine>0</DefaultMultiLine>
-      <DefaultMultiColumn>false</DefaultMultiColumn>
-      <DefaultOrderByRow>false</DefaultOrderByRow>
-      <DefaultShowBorders>false</DefaultShowBorders>
+      <DefaultMultiColumn>true</DefaultMultiColumn>
+      <DefaultOrderByRow>true</DefaultOrderByRow>
+      <DefaultShowBorders>true</DefaultShowBorders>
       <RangeLoInclusive>true</RangeLoInclusive>
       <RangeHiInclusive>true</RangeHiInclusive>
       <FixRangeLen>0000000000000000</FixRangeLen>
@@ -3084,7 +3091,7 @@
       <DefaultTextAdjust>0</DefaultTextAdjust>
       <DefaultNumAdjust>2</DefaultNumAdjust>
       <DefaultMultiLine>0</DefaultMultiLine>
-      <DefaultMultiColumn>true</DefaultMultiColumn>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
       <DefaultOrderByRow>true</DefaultOrderByRow>
       <DefaultShowBorders>true</DefaultShowBorders>
       <RangeLoInclusive>true</RangeLoInclusive>
@@ -5690,12 +5697,12 @@
       DwAAAAEAAQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAA
       AAAAAAAAAAABAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAEBARAAAAAPAAAAAAAAAQAABAAAAAAAAAAA
       AAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-      AAAAAAAAAgAAAAAAAAAAEAAAAA8AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEB
+      AAAAAAAAAgAAAAAAAQEBEAAAAA8AAAAAAAEAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEB
       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAA
       DwAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAA
       AAAAAAAAAAABAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAEBARAAAAAPAAAAAAABAAAABAAAAAAAAAAA
       AAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-      AAAAAAAAAgAAAAAAAQEBEAAAAA8AAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEB
+      AAAAAAAAAgAAAAAAAAEBEAAAAA8AAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEB
       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAA
       DwAAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAA
       AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAABAAAAAPAAAAAQAAAQAABAAAAAAAAAAA
