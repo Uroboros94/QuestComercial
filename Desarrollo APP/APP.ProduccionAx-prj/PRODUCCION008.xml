@@ -2647,7 +2647,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>OrdenProd.INVENTBATCHID</Name>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6055,14 +6055,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>OrdenProd.INVENTBATCHID</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Productos.Estilo</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6120,6 +6112,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Productos.Coleccion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
