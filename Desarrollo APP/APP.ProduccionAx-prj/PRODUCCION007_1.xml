@@ -40,7 +40,7 @@
       </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
-        <PointSize1000>10000</PointSize1000>
+        <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -1763,11 +1763,11 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>COLLECTREFPRODID</Name>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Orden de Producción</v>
+        <v>OPM</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -2297,7 +2297,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>153</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -5271,7 +5271,7 @@
     <ColWidths>
       <int>300</int>
       <int>338</int>
-      <int>300</int>
+      <int>153</int>
       <int>231</int>
       <int>300</int>
       <int>213</int>
@@ -5844,14 +5844,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>COLLECTREFPRODID</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>RpProduccion.FechaCreacionOrden</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5917,6 +5909,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Productos.Coleccion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
