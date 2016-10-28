@@ -40,7 +40,7 @@
       </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
-        <PointSize1000>10000</PointSize1000>
+        <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -2432,7 +2432,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>150</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -3213,7 +3213,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Código Color</v>
+        <v>Cod. Color</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3581,11 +3581,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>OrdenProd.INVENTBATCHID</Name>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>OP</v>
+        <v>OPM</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -5672,7 +5672,7 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>300</int>
+      <int>150</int>
       <int>300</int>
       <int>338</int>
       <int>231</int>
@@ -5690,8 +5690,8 @@
       <int>1</int>
     </Striping>
     <StyleNumber>11</StyleNumber>
-    <MultiLine>0</MultiLine>
-    <HeaderMultiLine>3</HeaderMultiLine>
+    <MultiLine>2</MultiLine>
+    <HeaderMultiLine>2</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
     <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
     <LabelCellVariation>
@@ -6270,14 +6270,6 @@
         <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>OrdenProd.DLVDATE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>OrdenProd.INVENTBATCHID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
