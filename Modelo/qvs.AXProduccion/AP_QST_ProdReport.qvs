@@ -21,6 +21,14 @@ Id,desc
 7,Terminado
 ];
 
+Taller:
+Mapping
+LOAD WRKCTRID,
+     NAME
+FROM
+[..\QVD\WrkCtrTable.QVD]
+(qvd);
+
 FOR counter =1 to 8 step 1
 Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$(counter));
 	RpProduccion:
@@ -52,7 +60,7 @@ Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$
 			PRODID												as RpProduccion.IdOPHija,
 			AP_QST_MASTERPRODORDID								as RpProduccion.IdOPMaestra,
 			DIMSUBLINE											as RpProduccion.IdSublinea,
-			ROUTEWRKCTRID$(counter)								as RpProduccion.IdTaller,
+			ApplyMap('Taller', ROUTEWRKCTRID$(counter), Null())								as RpProduccion.IdTaller,
 			WORKERAUDIT											as RpProduccion.IdTrabAudita,
 			INVENTDIMID											as RpProduccion.KeyTemp,
 			LINE												as RpProduccion.Linea,
@@ -61,7 +69,7 @@ Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$
 			OPRNAME$(counter)									as RpProduccion.NombreOperacion,
 			ITEMID												as RpProduccion.Referencia,
 			PRODID                              		    	as COLLECTREFPRODID,
-			SUBLINE												as RpProduccion.Sublinea										
+			SUBLINE												as RpProduccion.Sublinea
 		FROM
 		[..\QVD\AP_QST_ProdReport.QVD]
 		(qvd);
