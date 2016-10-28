@@ -8,17 +8,25 @@
 	-------------------------------------------------------------------------------------------------
 	09/22/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
+Colores:
+	Mapping LOAD Color as IdColor,
+		QST_ColorSpec_colorQuest_string as NombreColor
+	FROM
+	[..\QVD\MaestroColores.QVD]
+	(qvd);
+
 QUALIFY *;
 UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 	Productos:
-		LOAD 
+		LOAD
 			NOMBRECATEGORIA 					as Categoria,
-			CATEGORYRECID 						as CATEGORYRECID,      
+			CATEGORYRECID 						as CATEGORYRECID,
 			CODIGOBARRAS    					as CodigoBarras,
 			NOMBREEMITIDO   					as Emitido,
 			ESTILO  							as Estilo,
 			NUMEROPRODUCTO  					as Id,
 			COLOR   							as IdColor,
+			ApplyMap('Colores', COLOR, Null()) as NombreColor,
 			SUBTIPOPRODUCTO 					as IdSubTipo,
 			NUMEROPRODUCTODISPLAY   			as IdTallaColor,
 			NOMBREPRODUCTO  					as Nombre,
@@ -29,33 +37,33 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 			TALLA   							as Talla,
 			NOMBRETIPOPRODUCTO  				as Tipo
 			//EMPRESA,
-			//ALMACEN,      
-			//CATEGORYHIERARCHYRECID,       
-			//DATAAREAID,       
-			//DEFAULTDIMENSION,     
-			//DESCGRUPODIMALMAC,        
-			//DESCGRUPODIMPRODUCTO,     
-			//EMITIDO,      
-			//INVENTTABLERECID,     
-			//NOMBREBUSQUEDA,       
-			//NOMBREGRUPODIMALMAC,      
-			//NOMBREGRUPODIMPRODUCTO,       
-			//NOMBREGRUPODIMSEGUIMIENTO,        
-			//NOMBREJERARQUIACATEGORIA,     
-			//NUMEROVARIANTE,       
-			//PARTITION,        
-			//PRODUCTDIMENSIONGROUPRECID,       
-			//PRODUCTINVENTDIMID,       
-			//PRODUCTPARENT,        
-			//PRODUCTRECID,     
-			//RECID,        
-			//RECVERSION,       
-			//SERIAL,       
-			//SITIO,        
-			//STORAGEDIMENSIONGROUPRECID,       
-			//TIPOPRODUCTO,     
-			//TRACKINGDIMENSIONGROUPRECID,      
-			//UBICACION     
+			//ALMACEN,
+			//CATEGORYHIERARCHYRECID,
+			//DATAAREAID,
+			//DEFAULTDIMENSION,
+			//DESCGRUPODIMALMAC,
+			//DESCGRUPODIMPRODUCTO,
+			//EMITIDO,
+			//INVENTTABLERECID,
+			//NOMBREBUSQUEDA,
+			//NOMBREGRUPODIMALMAC,
+			//NOMBREGRUPODIMPRODUCTO,
+			//NOMBREGRUPODIMSEGUIMIENTO,
+			//NOMBREJERARQUIACATEGORIA,
+			//NUMEROVARIANTE,
+			//PARTITION,
+			//PRODUCTDIMENSIONGROUPRECID,
+			//PRODUCTINVENTDIMID,
+			//PRODUCTPARENT,
+			//PRODUCTRECID,
+			//RECID,
+			//RECVERSION,
+			//SERIAL,
+			//SITIO,
+			//STORAGEDIMENSIONGROUPRECID,
+			//TIPOPRODUCTO,
+			//TRACKINGDIMENSIONGROUPRECID,
+			//UBICACION
 		FROM
 		[..\QVD\QST_MaestroProductos.QVD]
 		(qvd);
@@ -64,30 +72,30 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 
 	MasterProductAttributes:
 		LOAD
-			ATVAL_APARIENCIA_DETALLADA, 
-			ATVAL_APARIENCIA_GENERAL, 
-			ATVAL_BANDA_DE_PRECIO, 
-			ATVAL_CLASIFICACION_INVENTARIO, 
-			ATVAL_CLIMA, 
-			//ATVAL_COLECCION, 
-			ATVAL_CUELLO, 
-			ATVAL_DISENADOR, 
-			ATVAL_GENERO, 
-			ATVAL_GENERO_MATERIAL, 
-			ATVAL_GRUPO_DE_PRODUCTOS, 
-			ATVAL_LAVADO, 
-			ATVAL_LINEA_MATERIAL, 
-			ATVAL_MANGA, 
-			ATVAL_MATERIAL_INSUMO, 
-			ATVAL_NIVEL_DE_MODA, 
-			ATVAL_OPERACION_USO, 
-			ATVAL_PATRONISTA, 
-			ATVAL_SILUETA, 
-			ATVAL_TIPO_DE_ADQUISICION, 
-			ATVAL_TIPO_DE_PRENDA, 
-			ATVAL_TIPO_DE_PRODUCTO, 
-			ATVAL_TIPOLOGIA_DE_TEJIDO, 
-			NOMBRECATEGORIA as NC, 
+			ATVAL_APARIENCIA_DETALLADA,
+			ATVAL_APARIENCIA_GENERAL,
+			ATVAL_BANDA_DE_PRECIO,
+			ATVAL_CLASIFICACION_INVENTARIO,
+			ATVAL_CLIMA,
+			//ATVAL_COLECCION,
+			ATVAL_CUELLO,
+			ATVAL_DISENADOR,
+			ATVAL_GENERO,
+			ATVAL_GENERO_MATERIAL,
+			ATVAL_GRUPO_DE_PRODUCTOS,
+			ATVAL_LAVADO,
+			ATVAL_LINEA_MATERIAL,
+			ATVAL_MANGA,
+			ATVAL_MATERIAL_INSUMO,
+			ATVAL_NIVEL_DE_MODA,
+			ATVAL_OPERACION_USO,
+			ATVAL_PATRONISTA,
+			ATVAL_SILUETA,
+			ATVAL_TIPO_DE_ADQUISICION,
+			ATVAL_TIPO_DE_PRENDA,
+			ATVAL_TIPO_DE_PRODUCTO,
+			ATVAL_TIPOLOGIA_DE_TEJIDO,
+			NOMBRECATEGORIA as NC,
 			CATEGORYRECID
 		FROM
 		[..\QVD\QST_MaestroProductosAtributes.QVD]
@@ -96,10 +104,10 @@ UNQUALIFY *;
 
 //******************************************************************************************
 DimFinanTemp:
-	LOAD 
-		ItemId, 	    
-		Name, 
-		DISPLAYVALUE, 
+	LOAD
+		ItemId,
+		Name,
+		DISPLAYVALUE,
 		DESCRIPTION
 	FROM
 	[..\QVD\DimensionesFinancieras.QVD]
@@ -136,7 +144,7 @@ Left Join
 NEXT;
 
 Left Join (Productos)
-	LOAD 
+	LOAD
 		IdColeccion		as Productos.Coleccion,
 		IdItemp			as Productos.Referencia,
 		IdLinea			as Productos.IdLinea,

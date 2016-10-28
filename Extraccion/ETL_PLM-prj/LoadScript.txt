@@ -24,8 +24,8 @@ $(Must_Include=qvs.plm\matrizppto.qvs);
 /* Conexión DESCARGA_PLM*/
 OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=csidba;Initial Catalog=DESCARGA_PLM;Data Source=QUESTSQLDB\SQLSRV2012_PLM;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is fMfFRRNOJDZEWQRC);
 
-/* Detalle de los Colores*/
-$(Must_Include=qvs.plm\colores.qvs);
+/* Detalle de los Colores
+$(Must_Include=qvs.plm\colores.qvs);*/
 
 /* Detalle de la enumeración de cada codigo*/
 $(Must_Include=qvs.plm\enums_plm.qvs);
@@ -59,6 +59,9 @@ $(Must_Include=qvs.plm\headlistadomaterial.qvs);
 
 /* Detalle de Listado de Materiales */
 $(Must_Include=qvs.plm\linelistamaterial.qvs);
+
+/* Maestro de colores. */
+$(Must_Include=qvs.plm\maestrocolores.qvs);
 ///$tab Exit Script
 TRACE Extracción Finalizada;
 EXIT SCRIPT;

@@ -229,9 +229,11 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>[Costo Total] /
-((Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)) - 
-(Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)))</v>
+        <v>[Costo Total]/
+((
+	Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT) + 
+	Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado', 'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT)
+) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT)))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -256,7 +258,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT))</v>
+        <v>(
+	Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT) + 
+	Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado', 'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)
+) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -307,10 +312,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>FIX</Type>
+        <Type>INTEGER</Type>
         <nDec>2</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0,00%</Fmt>
+        <Fmt>#.##0%</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -650,7 +655,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>375</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2855,7 +2860,7 @@
     <ColWidths>
       <int>459</int>
       <int>300</int>
-      <int>300</int>
+      <int>375</int>
       <int>328</int>
     </ColWidths>
     <Striping>
@@ -3424,9 +3429,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Costo Total] /
-((Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)) - 
-(Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)))</v>
+              <v>[Costo Total]/
+((
+	Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT) + 
+	Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado', 'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT)
+) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} TOTAL ProdCalcTrans.COSTAMOUNT)))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3475,10 +3482,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>FIX</Type>
+              <Type>INTEGER</Type>
               <nDec>2</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0,00%</Fmt>
+              <Fmt>#.##0%</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -3818,7 +3825,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>375</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4009,7 +4016,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT))</v>
+              <v>(
+	Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT) + 
+	Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado', 'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)
+) - (Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
