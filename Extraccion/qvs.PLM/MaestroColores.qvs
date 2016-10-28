@@ -1,0 +1,16 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: _TempColoresMaestro_
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+28/10/2016  |   Alejandro Saa G |   Inicio de Configuración
+*****************************************************************************************************/
+ColoresMaestro:
+  SQL SELECT
+    DISTINCT Color,
+    QST_ColorSpec_colorQuest_string
+    FROM _TempColoresMaestro_;
+
+STORE ColoresMaestro INTO [..\QVD\MaestroColores.QVD](qvd);
+DROP TABLE ColoresMaestro;
