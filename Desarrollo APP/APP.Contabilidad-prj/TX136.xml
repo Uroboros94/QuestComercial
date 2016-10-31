@@ -882,7 +882,20 @@
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
     <AllowHorizontalScrollBar>false</AllowHorizontalScrollBar>
-    <ActionItems></ActionItems>
+    <ActionItems>
+      <ActionItemDef>
+        <Type>TYPE_SET_VALUE</Type>
+        <Parameters>
+          <StringExpr>
+            <v>vSwichMenu</v>
+          </StringExpr>
+          <StringExpr>
+            <v>=if(vSwichMenu=1,0,1)</v>
+          </StringExpr>
+        </Parameters>
+        <StateName></StateName>
+      </ActionItemDef>
+    </ActionItems>
   </Layout>
   <PrintSettings></PrintSettings>
   <UserSized>true</UserSized>
