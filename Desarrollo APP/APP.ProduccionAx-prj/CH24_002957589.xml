@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Total Aplicado en Inventario en Proceso</v>
+        <v>Total por Aplicar al Inventario en Proceso</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Total Aplicado en Inventario en Proceso</v>
+      <v>Total por Aplicar al Inventario en Proceso</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -231,7 +231,7 @@
       <Definition>
         <v>Sum(OrdenProd.CantProgramada)</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -329,7 +329,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -354,7 +354,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -379,7 +379,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -404,7 +404,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -429,7 +429,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -454,7 +454,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -479,7 +479,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -504,7 +504,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -924,7 +924,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>416</ColWidth>
+      <ColWidth>269</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1409,7 +1409,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>416</ColWidth>
+      <ColWidth>244</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1554,7 +1554,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -1894,7 +1894,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>375</ColWidth>
+      <ColWidth>341</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2039,7 +2039,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -2524,7 +2524,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3009,7 +3009,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3494,7 +3494,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -3979,7 +3979,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -4464,7 +4464,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -4949,7 +4949,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -5434,7 +5434,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -5919,7 +5919,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -6404,7 +6404,7 @@
         <Type>MONEY</Type>
         <nDec>3</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -7043,14 +7043,14 @@
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
         <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
-        <TotalMode>TOTAL_EXPR</TotalMode>
+        <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
       <OtherString></OtherString>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>OrdenProd.INVENTBATCHID</Name>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -9338,9 +9338,8 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>416</int>
-      <int>416</int>
-      <int>375</int>
+      <int>244</int>
+      <int>341</int>
       <int>375</int>
       <int>375</int>
       <int>375</int>
@@ -9845,11 +9844,11 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>0</int>
-      <int>2</int>
-      <int>5</int>
       <int>1</int>
+      <int>2</int>
       <int>3</int>
       <int>4</int>
+      <int>5</int>
       <int>6</int>
       <int>7</int>
       <int>8</int>
@@ -9859,7 +9858,6 @@
       <int>12</int>
       <int>13</int>
       <int>14</int>
-      <int>15</int>
     </InterFieldSortOrder>
     <ExpressionPosition>3</ExpressionPosition>
     <NumberOfLeftDimensions>3</NumberOfLeftDimensions>
@@ -9938,19 +9936,9 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>OrdenProd.INVENTBATCHID</DimName>
-          <ElemNo>
-            <int>0</int>
-            <int>1</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-            <Blob>
-                BENPTEVDQ0lPTl8xAA==
-            </Blob>
-          </ElemValues>
+          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>
@@ -9967,7 +9955,7 @@
             <Definition>
               <v>Sum(OrdenProd.CantProgramada)</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>
@@ -10357,7 +10345,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>416</ColWidth>
+            <ColWidth>269</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -10940,7 +10928,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>416</ColWidth>
+            <ColWidth>244</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -11131,7 +11119,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;TELA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -11183,7 +11171,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -11523,7 +11511,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>375</ColWidth>
+            <ColWidth>341</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -11714,7 +11702,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;EMPAQUE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -11766,7 +11754,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -12297,7 +12285,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;ETIQUETAS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12349,7 +12337,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -12880,7 +12868,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;IdGrupoCosto = {&quot;INSUMOS&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12932,7 +12920,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -13463,7 +13451,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;CONFECCION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -13515,7 +13503,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -14046,7 +14034,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;TERMINACION&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14098,7 +14086,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -14629,7 +14617,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;LAVANDERIA&quot;}, IdGrupoCosto = {&quot;SUB_CONTRA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14681,7 +14669,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -15212,7 +15200,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;CORTE&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -15264,7 +15252,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -15795,7 +15783,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;ESTAMPADO&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -15847,7 +15835,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -16378,7 +16366,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;NombreInsumo = {&quot;TINTORERIA&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT * OrdenProd.PdteEnsamblar)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16430,7 +16418,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -17014,7 +17002,7 @@
               <Type>MONEY</Type>
               <nDec>3</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
