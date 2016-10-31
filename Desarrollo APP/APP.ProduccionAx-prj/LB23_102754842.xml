@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Línea</v>
+        <v>Calendario.ano</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -69,7 +69,7 @@
       <HelpText></HelpText>
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
-      <ShowCaption>true</ShowCaption>
+      <ShowCaption>false</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -175,12 +175,7 @@
       <Rainbow>false</Rainbow>
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
-      <Show>
-        <Always>false</Always>
-        <Expression>
-          <v>vSwichMenu = 1</v>
-        </Expression>
-      </Show>
+      <Show></Show>
       <AllowMoveSize>true</AllowMoveSize>
       <AllowCopyClone>true</AllowCopyClone>
       <dummy></dummy>
@@ -224,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <NumAdjust>2</NumAdjust>
     <TextAdjust>0</TextAdjust>
-    <MultiLine>0</MultiLine>
+    <MultiLine>1</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
@@ -250,8 +245,8 @@
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </Right>
     </Borders>
-    <MultiColumn>false</MultiColumn>
-    <OrderByRow>false</OrderByRow>
+    <MultiColumn>true</MultiColumn>
+    <OrderByRow>true</OrderByRow>
     <HideExcluded>false</HideExcluded>
     <SelectionStyle>SS_USER_PREF</SelectionStyle>
     <ImageRepresentation></ImageRepresentation>
@@ -259,7 +254,7 @@
     <ExcludedValuesMode>0</ExcludedValuesMode>
     <DefaultSearchMode>0</DefaultSearchMode>
     <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>-1</FixedColumnsCount>
+    <FixedColumnsCount>2</FixedColumnsCount>
     <LayoutDependentPrint>true</LayoutDependentPrint>
     <PrintAllValues>false</PrintAllValues>
     <HierarchySeparator>/</HierarchySeparator>
@@ -271,12 +266,10 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Productos.Marca</Name>
+    <Name>Calendario.ano</Name>
     <Type>PRESENT</Type>
   </Def>
-  <Title>
-    <v>Línea</v>
-  </Title>
+  <Title></Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -370,7 +363,7 @@
     <SortByState>1</SortByState>
     <SortByFrequency>0</SortByFrequency>
     <SortByNumeric>0</SortByNumeric>
-    <SortByAscii>1</SortByAscii>
+    <SortByAscii>0</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>

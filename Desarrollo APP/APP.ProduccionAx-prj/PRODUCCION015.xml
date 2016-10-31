@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Listado Órdenes Servicio</v>
+        <v>Listado Ordenes Servicio</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Listado Órdenes Servicio</v>
+      <v>Listado Ordenes Servicio</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -1301,7 +1301,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
+        <Name>OrdenProd.INVENTBATCHID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2204,7 +2204,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>353</ColWidth>
+      <ColWidth>434</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3581,8 +3581,7 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>300</int>
-      <int>353</int>
+      <int>434</int>
       <int>269</int>
       <int>300</int>
     </ColWidths>
@@ -4124,11 +4123,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>OrdenesCompra.ORDERACCOUNT</DimName>
-=======
           <DimName>OrdenProd.INVENTBATCHID</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4136,11 +4131,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>OrdenesCompra.LineasOC.PURCHQTY</DimName>
-=======
           <DimName>OrdenesCompra.ORDERACCOUNT</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4148,11 +4139,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>OrdenesCompra.PURCHID</DimName>
-=======
           <DimName>OrdenesCompra.LineasOC.PURCHQTY</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4160,11 +4147,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>Productos.Estilo</DimName>
-=======
           <DimName>OrdenesCompra.PURCHID</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4172,11 +4155,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>OrdenesCompra.DELIVERYDATE</DimName>
-=======
           <DimName>Productos.Estilo</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4184,11 +4163,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>=Num(OrdenesCompra.LineasOC.PURCHPRICE, '$#.##0')</DimName>
-=======
           <DimName>OrdenesCompra.DELIVERYDATE</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4196,11 +4171,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>Productos.Coleccion</DimName>
-=======
           <DimName>=Num(OrdenesCompra.LineasOC.PURCHPRICE, '$#.##0')</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4208,11 +4179,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>Productos.IdLinea</DimName>
-=======
           <DimName>Productos.Coleccion</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4220,11 +4187,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-<<<<<<< HEAD
-          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
-=======
           <DimName>Productos.IdLinea</DimName>
->>>>>>> refs/remotes/origin/master
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
