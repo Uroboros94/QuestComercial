@@ -3570,7 +3570,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>Productos.Color</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Color</v>
@@ -3914,7 +3914,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>272</ColWidth>
+      <ColWidth>247</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4999,7 +4999,14 @@
         <Logscale>false</Logscale>
         <MidAxisLabel>false</MidAxisLabel>
         <AxisPosition>POSITION_LEFT</AxisPosition>
-        <Font></Font>
+        <Font>
+          <FontName>Arial</FontName>
+          <PointSize1000>7000</PointSize1000>
+          <Underline>false</Underline>
+          <Bold>false</Bold>
+          <Italic>false</Italic>
+          <DropShadow>false</DropShadow>
+        </Font>
         <Color>
           <Mode>COLORAREA_SOLID</Mode>
           <Luminosity>85</Luminosity>
@@ -6033,8 +6040,7 @@
       <int>231</int>
       <int>144</int>
       <int>234</int>
-      <int>300</int>
-      <int>272</int>
+      <int>247</int>
       <int>194</int>
       <int>300</int>
       <int>300</int>
@@ -6677,7 +6683,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.NombreColor</DimName>
+          <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.NombreOperacion), COLLECTREFPRODID)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6685,7 +6691,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.NombreOperacion), COLLECTREFPRODID)</DimName>
+          <DimName>Productos.Color</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -8981,7 +8987,14 @@
             <Logscale>false</Logscale>
             <MidAxisLabel>false</MidAxisLabel>
             <AxisPosition>POSITION_LEFT</AxisPosition>
-            <Font></Font>
+            <Font>
+              <FontName>Arial</FontName>
+              <PointSize1000>7000</PointSize1000>
+              <Underline>false</Underline>
+              <Bold>false</Bold>
+              <Italic>false</Italic>
+              <DropShadow>false</DropShadow>
+            </Font>
             <Color>
               <Mode>COLORAREA_SOLID</Mode>
               <Luminosity>85</Luminosity>
