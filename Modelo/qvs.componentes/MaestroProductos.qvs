@@ -26,7 +26,7 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 			ESTILO  							as Estilo,
 			NUMEROPRODUCTO  					as Id,
 			COLOR   							as IdColor,
-			ApplyMap('Colores', COLOR, Null()) as NombreColor,
+			ApplyMap('Colores', COLOR, Null()) as Color,
 			SUBTIPOPRODUCTO 					as IdSubTipo,
 			NUMEROPRODUCTODISPLAY   			as IdTallaColor,
 			NOMBREPRODUCTO  					as Nombre,
