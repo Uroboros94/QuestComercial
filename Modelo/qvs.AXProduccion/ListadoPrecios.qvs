@@ -1,0 +1,22 @@
+/*----------------------------------------------------------------------------------------------------
+    Detalle :
+    Extracción de Dimensiones: Modelamiento del listado de precios
+    -------------------------------------------------------------------------------------------------
+    Fecha       |   Desarrollador   |   Modificación
+    -------------------------------------------------------------------------------------------------
+    11/01/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+ListadoPrecios:
+	LOAD
+		ITEMRELATION						as SK.Producto,	 
+		Capitalize(NAME)					as Precio.Canal,
+		ACCOUNTRELATION						as Precio.IdCanal,
+		ITEMRELATION						as Precio.IdProducto,
+		UNITID 								as Precio.Metrica,
+		Num(AMOUNT) 						as Precio.Importe,
+		CURRENCY							as Precio.Divisa,
+		Date(FROMDATE,'DD/MM/YYYY')			as Precio.FechaAplicacion,
+		Date(TODATE,'DD/MM/YYYY')			as Precio.FechaVigencia,
+		Date(MODIFIEDDATETIME,'DD/MM/YYYY')	as Precio.FechaModificacion
+	FROM [..\QVD\ListadoPrecios.QVD] (qvd);
