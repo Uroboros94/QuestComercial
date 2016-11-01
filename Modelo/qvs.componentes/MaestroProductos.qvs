@@ -16,7 +16,7 @@ Colores:
 	(qvd);
 
 QUALIFY *;
-UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
+UNQUALIFY SK.Producto,SK.KEYPRODUCT,CATEGORYRECID;
 	Productos:
 		LOAD
 			NOMBRECATEGORIA 					as Categoria,
@@ -26,12 +26,13 @@ UNQUALIFY SK.KEYPRODUCT,CATEGORYRECID;
 			ESTILO  							as Estilo,
 			NUMEROPRODUCTO  					as Id,
 			COLOR   							as IdColor,
-			ApplyMap('Colores', COLOR, Null()) as Color,
+			ApplyMap('Colores', COLOR) 			as Color,
 			SUBTIPOPRODUCTO 					as IdSubTipo,
 			NUMEROPRODUCTODISPLAY   			as IdTallaColor,
 			NOMBREPRODUCTO  					as Nombre,
 			CODARTICULO 						as Referencia,
 			DESCGRUPODIMSEGUIMIENTO	 			as Seguimiento,
+			CODARTICULO							as SK.Producto,
 			CODARTICULO&TALLA&COLOR 			as SK.KEYPRODUCT,
 			NOMBRESUBTIPOPRODUCTO  				as SubTipo,
 			TALLA   							as Talla,
