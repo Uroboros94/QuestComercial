@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Detalle Ingresos</v>
+        <v>Detalle CIF</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Detalle Ingresos</v>
+      <v>Detalle CIF</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'4'}&gt;}Contabilidad.DEBITO)</v>
+        <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'73'}&gt;}Contabilidad.DEBITO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'4'}&gt;}Contabilidad.CREDITO)</v>
+        <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'73'}&gt;}Contabilidad.CREDITO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2108,7 +2108,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>188</ColWidth>
+      <ColWidth>200</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2480,7 +2480,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>141</ColWidth>
+      <ColWidth>113</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3038,7 +3038,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>156</ColWidth>
+      <ColWidth>144</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3410,7 +3410,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>278</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3782,7 +3782,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>306</ColWidth>
+      <ColWidth>309</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -6023,21 +6023,21 @@
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>191</int>
-      <int>250</int>
+      <int>200</int>
       <int>163</int>
-      <int>141</int>
+      <int>113</int>
       <int>84</int>
       <int>244</int>
-      <int>156</int>
+      <int>144</int>
       <int>228</int>
-      <int>300</int>
+      <int>278</int>
       <int>200</int>
-      <int>306</int>
+      <int>309</int>
       <int>116</int>
       <int>128</int>
       <int>125</int>
       <int>150</int>
-      <int>300</int>
+      <int>88</int>
       <int>300</int>
       <int>300</int>
       <int>300</int>
@@ -6726,7 +6726,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'4'}&gt;}Contabilidad.DEBITO)</v>
+              <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'73'}&gt;}Contabilidad.DEBITO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7309,7 +7309,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'4'}&gt;}Contabilidad.CREDITO)</v>
+              <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'73'}&gt;}Contabilidad.CREDITO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -1,7 +1,7 @@
 ﻿<TextObjectProperties>
   <Layout>
     <Frame>
-      <BorderWidth>0</BorderWidth>
+      <BorderWidth>12</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
         <Mode>COLORAREA_SOLID</Mode>
@@ -10,9 +10,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>4</Red>
-            <Green>108</Green>
-            <Blue>193</Blue>
+            <Red>64</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -21,14 +21,7 @@
         <SecondaryCol></SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
-      <Font>
-        <FontName>Century Gothic</FontName>
-        <PointSize1000>9000</PointSize1000>
-        <Underline>false</Underline>
-        <Bold>false</Bold>
-        <Italic>false</Italic>
-        <DropShadow>false</DropShadow>
-      </Font>
+      <Font></Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
         <PointSize1000>10000</PointSize1000>
@@ -164,8 +157,13 @@
       <Rainbow>false</Rainbow>
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
-      <Show></Show>
-      <AllowMoveSize>true</AllowMoveSize>
+      <Show>
+        <Always>false</Always>
+        <Expression>
+          <v>vSwichMenu = 1</v>
+        </Expression>
+      </Show>
+      <AllowMoveSize>false</AllowMoveSize>
       <AllowCopyClone>true</AllowCopyClone>
       <dummy></dummy>
       <CustomObjectGuid enctype="base64"></CustomObjectGuid>
@@ -195,7 +193,7 @@
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
-      <ShadowIntensity>SHADOW_NONE</ShadowIntensity>
+      <ShadowIntensity>SHADOW_INTENSE</ShadowIntensity>
       <OnActivateActionItems></OnActivateActionItems>
       <OnDeactivateActionItems></OnDeactivateActionItems>
       <Extension></Extension>
@@ -212,7 +210,24 @@
     <BottomMargin>10</BottomMargin>
     <LeftMargin>10</LeftMargin>
     <RightMargin>10</RightMargin>
-    <TextColor></TextColor>
+    <TextColor>
+      <Mode>COLORAREA_SOLID</Mode>
+      <Luminosity>85</Luminosity>
+      <FillDirection>COLORAREA_HORZ</FillDirection>
+      <FillPattern>COLORAREA_PATTERN1</FillPattern>
+      <PrimaryCol>
+        <Col>
+          <Red>54</Red>
+          <Green>54</Green>
+          <Blue>54</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </PrimaryCol>
+      <SecondaryCol></SecondaryCol>
+      <Alpha>255</Alpha>
+    </TextColor>
     <BkgColor>
       <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>
@@ -220,9 +235,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>214</Red>
-          <Green>231</Green>
-          <Blue>248</Blue>
+          <Red>106</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -234,10 +249,8 @@
     <BkgImageSettings></BkgImageSettings>
     <BkgMode>BKG_SOLID</BkgMode>
     <Bmp enctype="base64"></Bmp>
-    <BkgAlpha>0</BkgAlpha>
-    <Text>
-      <v>='Fecha Última Actualización: '&amp;ReloadTime()</v>
-    </Text>
+    <BkgAlpha>130</BkgAlpha>
+    <Text></Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
     <AllowHorizontalScrollBar>false</AllowHorizontalScrollBar>
