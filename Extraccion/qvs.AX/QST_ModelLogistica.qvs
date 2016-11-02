@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Contabilidad
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+01/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+PedidosTransfer:
+  SQL SELECT CODTRANSFERENCIA,
+    	CODALMACENORIGEN,
+    	NOMBREALMACENDESTINO,
+    	CODALMACENDESTINO,
+    	NOMBREALMACENORIGEN,
+    	ESTADOTRANSFERENCIA,
+    	ORDENPRODUCMAESTRA,
+    	CODICG,
+    	CODARTICULO,
+    	COLORID,
+    	TALLA,
+    	UBICACION,
+    	CANTTRANSFERENCIA
+    FROM QST_MODELLOGISTICA;
+
+STORE PedidosTransfer INTO [..\QVD\PedidosTransfer.QVD](qvd);
+DROP TABLE PedidosTransfer;
