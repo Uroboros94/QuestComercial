@@ -163,11 +163,11 @@ VendInvoiceJour:
         APDETRACTIONDATE,
         MODIFIEDDATETIME,
         CREATEDDATETIME,
-        CREATEDBY,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID
+        CREATEDBY
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
     FROM VENDINVOICEJOUR;
 
 STORE VendInvoiceJour INTO [..\QVD\VendInvoiceJour.QVD](qvd);

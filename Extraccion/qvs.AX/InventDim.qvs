@@ -27,11 +27,11 @@ InventDim:
         SHA1HASH,
         MODIFIEDDATETIME,
         MODIFIEDBY,
-        CREATEDDATETIME,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID
+        CREATEDDATETIME
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
     FROM INVENTDIM;
 
 STORE InventDim INTO [..\QVD\InventDim.QVD](qvd);

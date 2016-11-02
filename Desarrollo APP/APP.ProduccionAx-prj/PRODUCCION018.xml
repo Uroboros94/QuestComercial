@@ -53,7 +53,7 @@
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
+      <AutoMinimize>true</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
@@ -254,7 +254,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Precio.IdCanal = {'001'}&gt;}Precio.Importe)</v>
+        <v>Sum({&lt;
+	Precio.IdCanal = {'001'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -279,7 +282,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Precio.IdCanal = {'002'}&gt;}Precio.Importe)</v>
+        <v>Sum({&lt;
+	Precio.IdCanal = {'002'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -329,7 +335,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Precio.IdCanal = {'003'}&gt;}Precio.Importe)</v>
+        <v>Sum({&lt;
+	Precio.IdCanal = {'003'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -404,7 +413,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Precio.IdCanal = {'004'}&gt;}Precio.Importe)</v>
+        <v>Sum({&lt;
+	Precio.IdCanal = {'004'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -429,7 +441,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Precio.IdCanal = {'005'}&gt;}Precio.Importe)</v>
+        <v>Sum({&lt;
+	Precio.IdCanal = {'005'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -454,7 +469,10 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Precio.IdCanal = {'009'}&gt;}Precio.Importe)</v>
+        <v>Sum({&lt;
+	Precio.IdCanal = {'009'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -10499,7 +10517,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -10848,7 +10866,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>153</ColWidth>
+      <ColWidth>363</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -10984,7 +11002,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -11333,7 +11351,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>153</ColWidth>
+      <ColWidth>363</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -14884,7 +14902,7 @@
       <int>231</int>
       <int>191</int>
       <int>191</int>
-      <int>153</int>
+      <int>363</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -16058,7 +16076,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Precio.IdCanal = {'001'}&gt;}Precio.Importe)</v>
+              <v>Sum({&lt;
+	Precio.IdCanal = {'001'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16641,7 +16662,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Precio.IdCanal = {'002'}&gt;}Precio.Importe)</v>
+              <v>Sum({&lt;
+	Precio.IdCanal = {'002'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -17236,7 +17260,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Precio.IdCanal = {'003'}&gt;}Precio.Importe)</v>
+              <v>Sum({&lt;
+	Precio.IdCanal = {'003'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -17835,7 +17862,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Precio.IdCanal = {'004'}&gt;}Precio.Importe)</v>
+              <v>Sum({&lt;
+	Precio.IdCanal = {'004'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -18418,7 +18448,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Precio.IdCanal = {'005'}&gt;}Precio.Importe)</v>
+              <v>Sum({&lt;
+	Precio.IdCanal = {'005'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -19001,7 +19034,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Precio.IdCanal = {'009'}&gt;}Precio.Importe)</v>
+              <v>Sum({&lt;
+	Precio.IdCanal = {'009'},
+	Precio.FechaVigencia = {&quot;&gt;$(==date(Max(Calendario.%_Fechakey),'DD/MM/YYYY'))&quot;}
+	&gt;}Precio.Importe)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -21428,7 +21464,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>0</LabelAdjust>
+            <LabelAdjust>1</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>

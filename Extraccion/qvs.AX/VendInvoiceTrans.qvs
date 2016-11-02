@@ -141,11 +141,11 @@ VendInvoiceTrans:
         "VENDDIRECTIVE_PSN",
         "BUDGETRESERVATIONLINE_PSN",
         MODIFIEDDATETIME,
-        CREATEDDATETIME,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID
+        CREATEDDATETIME
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
     FROM VENDINVOICETRANS;
 
 STORE VendInvoiceTrans INTO [..\QVD\VendInvoiceTrans.QVD](qvd);

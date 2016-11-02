@@ -1,29 +1,31 @@
 /*----------------------------------------------------------------------------------------------------
  Detalle :
-    Extracción de Dimensiones: ActividadesProducto
+		Extracción de Dimensiones: ActividadesProducto
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/26/2016  |   Alejandro Saa G |   Inicio de Configuración
 *****************************************************************************************************/
 ActividadesProducto:
-SQL SELECT JOURNALNAME,
-      NAME,
-      JOURNALNUM, DEFAULTRELATION,
-      ACCOUNTCODE,
-      ACCOUNTRELATION,
-      ITEMCODE,
-      ITEMRELATION,
-      QTYAMOUNTFROM,
-      QTYAMOUNTTO,
-      UNIT,
-      AMOUNT,
-      FROMDATE,
-      TODATE,
-      COSTPRICEUNIT,
-      ITEMCOLOR,
-      ITEMSIZE
-  FROM QST_MODELACTIVIDADESPRODUCTO;
+	SQL SELECT 
+		JOURNALNAME,
+		NAME,
+		JOURNALNUM, 
+		DEFAULTRELATION,
+		ACCOUNTCODE,
+		ACCOUNTRELATION,
+		ITEMCODE,
+		ITEMRELATION,
+		QTYAMOUNTFROM,
+		QTYAMOUNTTO,
+		UNIT,
+		AMOUNT,
+		FROMDATE,
+		TODATE,
+		COSTPRICEUNIT,
+		ITEMCOLOR,
+		ITEMSIZE
+	FROM QST_MODELACTIVIDADESPRODUCTO;
 
 STORE ActividadesProducto INTO [..\QVD\QST_ActividadesProducto.QVD](qvd);
 DROP TABLE ActividadesProducto;

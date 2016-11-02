@@ -8,11 +8,11 @@ Fecha       |   Desarrollador   |   Modificación
 *****************************************************************************************************/
 DefaulDimensions:
 	SQL SELECT
-    SUBSTRING("DIMENSION_ESTRUCTURA_COMERCIAL",3,5) As CodHomologacion,
-		DATAAREAID,
-		RECVERSION,
-		PARTITION,
-		RECID,
+    	SUBSTRING("DIMENSION_ESTRUCTURA_COMERCIAL",3,5) As CodHomologacion,
+		//DATAAREAID,
+		//RECVERSION,
+		//PARTITION,
+		//RECID,
 		DEFAULTDIMENSION,
 		"DIMENSION_CENTRO_DE_COSTO",
 		"DIMENSION_COLECCION",
