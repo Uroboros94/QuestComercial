@@ -47,13 +47,13 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Informe Piking Pedidos</v>
+        <v>Infor Devo Pedi Ventas</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
+      <AutoMinimize>true</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Informe Piking Pedidos</v>
+      <v>Infor Devo Pedi Ventas</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -623,7 +623,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>375</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -747,7 +747,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Código Articulo</v>
+        <v>Código Articulos</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -929,18 +929,18 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
+        <Name>Productos.Nombre</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Línea</v>
+        <v>Descripción</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -1311,7 +1311,7 @@
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
+        <SortByNumeric>0</SortByNumeric>
         <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
@@ -2648,14 +2648,14 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>300</int>
+      <int>375</int>
     </ColWidths>
     <Striping>
       <int>1</int>
     </Striping>
     <StyleNumber>11</StyleNumber>
     <MultiLine>0</MultiLine>
-    <HeaderMultiLine>0</HeaderMultiLine>
+    <HeaderMultiLine>2</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
     <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
     <LabelCellVariation>
@@ -3142,11 +3142,11 @@
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
+      <int>2</int>
       <int>0</int>
       <int>1</int>
-      <int>2</int>
-      <int>3</int>
       <int>4</int>
+      <int>3</int>
     </InterFieldSortOrder>
     <ExpressionPosition>-1</ExpressionPosition>
     <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
@@ -3187,7 +3187,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
+          <DimName>Productos.Nombre</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3612,7 +3612,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>375</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

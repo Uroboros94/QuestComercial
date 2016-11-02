@@ -47,13 +47,13 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Informe Salida de Almacenes</v>
+        <v>Infor Factura. Canales</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
+      <AutoMinimize>true</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Informe Salida de Almacenes</v>
+      <v>Infor Factura. Canales</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -929,11 +929,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Nombre</Name>
+        <Name>Productos.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Nombre Producto</v>
+        <v>Línea</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -2655,7 +2655,7 @@
     </Striping>
     <StyleNumber>11</StyleNumber>
     <MultiLine>0</MultiLine>
-    <HeaderMultiLine>0</HeaderMultiLine>
+    <HeaderMultiLine>2</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
     <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
     <LabelCellVariation>
@@ -3143,8 +3143,8 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>2</int>
-      <int>1</int>
       <int>3</int>
+      <int>1</int>
       <int>4</int>
       <int>0</int>
     </InterFieldSortOrder>
@@ -3187,14 +3187,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Nombre</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Productos.Talla</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -3204,6 +3196,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Productos.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Productos.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

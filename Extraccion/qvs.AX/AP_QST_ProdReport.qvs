@@ -98,11 +98,11 @@ AP_QST_ProdReport:
         QTYCHARGE6,
         QTYCHARGE7,
         QTYCHARGE8,
-        WORKERAUDIT,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID
+        WORKERAUDIT
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
     FROM "AP_QST_PRODREPORT";
 
 STORE AP_QST_ProdReport INTO [..\QVD\AP_QST_ProdReport.QVD](qvd);

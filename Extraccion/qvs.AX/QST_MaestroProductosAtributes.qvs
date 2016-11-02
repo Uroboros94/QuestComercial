@@ -55,11 +55,11 @@ QST_MaestroProductosAtributes:
         "ATVAL_TIPO_DE_PRODUCTO",
         "ATVAL_TIPOLOGIA_DE_TEJIDO",
         NOMBRECATEGORIA,
-        CATEGORYRECID,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID
+        CATEGORYRECID
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
     FROM "QST_MODELCATEGORYATTRIBUTE";
 
 STORE QST_MaestroProductosAtributes INTO [..\QVD\QST_MaestroProductosAtributes.QVD](qvd);

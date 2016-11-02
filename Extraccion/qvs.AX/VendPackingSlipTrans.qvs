@@ -75,11 +75,11 @@ VendPackingSlipTrans:
         "STATISTICVALUE_LT",
         PDSCWORDERED,
         PDSCWQTY,
-        PDSCWREMAIN,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID
+        PDSCWREMAIN
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
     FROM VENDPACKINGSLIPTRANS;
 
 STORE VendPackingSlipTrans INTO [..\QVD\VendPackingSlipTrans.QVD](qvd);

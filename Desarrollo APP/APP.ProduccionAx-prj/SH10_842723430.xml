@@ -18543,7 +18543,12 @@
     <AccessSheetObjectProperties>true</AccessSheetObjectProperties>
     <AccessSheetProperties>true</AccessSheetProperties>
   </UserPermissions>
-  <Show></Show>
+  <Show>
+    <Always>false</Always>
+    <Expression>
+      <v>vSheetDsg='Logistica'</v>
+    </Expression>
+  </Show>
   <ReadOnly>false</ReadOnly>
   <ColorMap></ColorMap>
   <TabAttr>
@@ -18554,9 +18559,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>248</Red>
-          <Green>248</Green>
-          <Blue>248</Blue>
+          <Red>249</Red>
+          <Green>133</Green>
+          <Blue>107</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -18565,8 +18570,25 @@
       <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
     </BgColor>
-    <FgColor></FgColor>
-    <Mode>1</Mode>
+    <FgColor>
+      <Mode>COLORAREA_SOLID</Mode>
+      <Luminosity>85</Luminosity>
+      <FillDirection>COLORAREA_HORZ</FillDirection>
+      <FillPattern>COLORAREA_PATTERN1</FillPattern>
+      <PrimaryCol>
+        <Col>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </PrimaryCol>
+      <SecondaryCol></SecondaryCol>
+      <Alpha>255</Alpha>
+    </FgColor>
+    <Mode>2</Mode>
   </TabAttr>
   <OnActivateActionItems></OnActivateActionItems>
   <OnDeactivateActionItems></OnDeactivateActionItems>
