@@ -29,4 +29,10 @@ LinkTable:
     %KEYPRODUCT							as SK.KEYPRODUCT,
     %FECHAKEY							as SK.FECHA
   Resident OrdenesPedidosVenta;
+  Concatenate(LinkTable)
+  LOAD
+    %PedidosTransferKey,
+    %KEYPRODUCT							as SK.KEYPRODUCT
+  Resident PedidosTransfer;
+  
 	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT;

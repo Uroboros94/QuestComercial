@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(RpProduccion.CantidadConfirmada)</v>
+        <v>Sum(PedidosTransfer.CANTTRANSFERENCIA)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -743,17 +743,17 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.CodigoBarras</Name>
+        <Name>PedidosTransfer.CODTRANSFERENCIA</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Código Barras</v>
+        <v>Número Documento</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
+        <SortByNumeric>0</SortByNumeric>
         <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
@@ -1115,18 +1115,18 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Talla</Name>
+        <Name>Productos.Nombre</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Talla</v>
+        <v>Descripción Articulo</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -1301,18 +1301,18 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Color</v>
+        <v>Orden Producción</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -3142,11 +3142,11 @@
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
-      <int>2</int>
       <int>3</int>
+      <int>1</int>
       <int>0</int>
       <int>4</int>
-      <int>1</int>
+      <int>2</int>
     </InterFieldSortOrder>
     <ExpressionPosition>-1</ExpressionPosition>
     <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
@@ -3187,7 +3187,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Talla</DimName>
+          <DimName>PedidosTransfer.CODTRANSFERENCIA</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3195,7 +3195,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdColor</DimName>
+          <DimName>Productos.Nombre</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3203,7 +3203,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.CodigoBarras</DimName>
+          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3220,7 +3220,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(RpProduccion.CantidadConfirmada)</v>
+              <v>Sum(PedidosTransfer.CANTTRANSFERENCIA)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -45,8 +45,6 @@ $(Must_Include=qvs.axproduccion\inventtransop.qvs);
 
 $(Must_Include=qvs.axproduccion\ordenescompra.qvs);
 
-$(Must_Include=qvs.axproduccion\linktable.qvs);
-
 $(Must_Include=qvs.axproduccion\recepcionesop.qvs);
 
 /*Costos Indirectos de Producción*/
@@ -57,6 +55,11 @@ $(Must_Include=qvs.axproduccion\ap_qst_prodreport.qvs);
 
 /*Listado de precios*/
 $(Must_Include=qvs.axproduccion\listadoprecios.qvs);
+
+/* Pedidos de transferencias. */
+$(Must_Include=qvs.axproduccion\pedidostransfer.qvs);
+
+$(Must_Include=qvs.axproduccion\linktable.qvs);
 ///$tab Exit
 TRACE Modelo Finalizado;
 EXIT SCRIPT;
