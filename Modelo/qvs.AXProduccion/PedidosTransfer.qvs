@@ -1,0 +1,33 @@
+/*
+Fecha : 02/11/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+     Creación del Modelo: PedidosVenta
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+02/11/2016  |   Alejandro Saa G |   Inicio de Configuración
+*****************************************************************************************************/
+QUALIFY *;
+UNQUALIFY %PedidosTransferKey, %KEYPRODUCT;
+PedidosTransfer:
+  LOAD
+    AutoNumber(RecNo())				as %PedidosTransferKey,
+    CODARTICULO&TALLA&COLORID as %KEYPRODUCT,
+    CODTRANSFERENCIA,
+    CODALMACENORIGEN,
+    NOMBREALMACENDESTINO,
+    CODALMACENDESTINO,
+    NOMBREALMACENORIGEN,
+    ESTADOTRANSFERENCIA,
+    ORDENPRODUCMAESTRA,
+    CODICG,
+    CODARTICULO,
+    COLORID,
+    TALLA,
+    UBICACION,
+    CANTTRANSFERENCIA
+  FROM
+  [..\QVD\PedidosTransfer.QVD]
+  (qvd);
+UNQUALIFY *;

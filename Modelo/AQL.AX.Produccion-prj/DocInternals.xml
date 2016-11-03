@@ -19,13 +19,14 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
     <String>3</String>
     <String>Calendario</String>
-    <String>LinkTable</String>
     <String>CIF</String>
+    <String>LinkTable</String>
     <String>7</String>
     <String>1</String>
     <String>Calendario</String>
@@ -1284,6 +1285,49 @@
     <String>421</String>
     <String>1</String>
     <String>ListadoPrecios</String>
+    <String>422</String>
+    <String>2</String>
+    <String>PedidosTransfer</String>
+    <String>LinkTable</String>
+    <String>423</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>424</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>425</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>426</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>427</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>428</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>429</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>430</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>431</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>432</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>433</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>434</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>435</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
   </FieldSrcTables>
   <TableViewData>
     <Pos></Pos>
@@ -1493,6 +1537,7 @@
           <String>%OrdenesProduccionKey</String>
           <String>%OrdenesCompraKey</String>
           <String>VENPACKINGLIPID</String>
+          <String>%PedidosTransferKey</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1574,8 +1619,6 @@
           <String>IdOrdenProd</String>
           <String>INVENTDIMID</String>
           <String>UNITID</String>
-          <String>PRODLINETYPE</String>
-          <String>BOMQTY</String>
           <String>VENDID</String>
           <String>UnidadInsumo</String>
           <String>IdGrupoCosto</String>
@@ -1599,122 +1642,46 @@
           <String>GRUPOVENTAS</String>
           <String>COLLECTREFPRODID</String>
           <String>PRODID</String>
-          <String>%OrdenesProduccionKey</String>
-          <String>OrdenProd.PROJLINKEDTOORDER</String>
-          <String>OrdenProd.ITEMID</String>
-          <String>OrdenProd.INVENTSIZEID</String>
-          <String>OrdenProd.INVENTCOLORID</String>
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.NAME</String>
           <String>OrdenProd.PRODGROUPID</String>
-          <String>OrdenProd.PRODSTATUS</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
           <String>OrdenProd.QTYGOOD</String>
-          <String>OrdenProd.PRODPRIO</String>
-          <String>OrdenProd.PRODLOCKED</String>
-          <String>OrdenProd.PRODTYPE</String>
-          <String>OrdenProd.SCHEDSTATUS</String>
-          <String>OrdenProd.SCHEDDATE</String>
-          <String>OrdenProd.CantProgramada</String>
-          <String>OrdenProd.QTYSTUP</String>
-          <String>OrdenProd.DLVDATE</String>
-          <String>OrdenProd.STUPDATE</String>
-          <String>OrdenProd.FINISHEDDATE</String>
-          <String>OrdenProd.SCHEDSTART</String>
-          <String>OrdenProd.SCHEDEND</String>
-          <String>OrdenProd.HEIGHT</String>
-          <String>OrdenProd.WIDTH</String>
-          <String>OrdenProd.DEPTH</String>
-          <String>OrdenProd.DENSITY</String>
-          <String>OrdenProd.QTYCALC</String>
-          <String>OrdenProd.REALDATE</String>
-          <String>OrdenProd.RESERVATION</String>
-          <String>OrdenProd.PRODPOSTINGTYPE</String>
           <String>OrdenProd.INVENTTRANSID</String>
-          <String>OrdenProd.INVENTREFTYPE</String>
           <String>OrdenProd.INVENTREFID</String>
           <String>OrdenProd.INVENTREFTRANSID</String>
-          <String>OrdenProd.COLLECTREFLEVEL</String>
-          <String>OrdenProd.BOMDATE</String>
-          <String>OrdenProd.BACKORDERSTATUS</String>
           <String>OrdenProd.PRODPOOLID</String>
-          <String>OrdenProd.PROFITSET</String>
-          <String>OrdenProd.CALCDATE</String>
-          <String>OrdenProd.ROUTEJOBS</String>
-          <String>OrdenProd.CHECKROUTE</String>
           <String>OrdenProd.PROPERTYID</String>
-          <String>OrdenProd.PdteEnsamblar</String>
           <String>OrdenProd.BOMID</String>
           <String>OrdenProd.ROUTEID</String>
           <String>OrdenProd.REQPLANIDSCHED</String>
           <String>OrdenProd.REQPOID</String>
-          <String>OrdenProd.REFLOOKUP</String>
-          <String>OrdenProd.LATESTSCHEDDIRECTION</String>
-          <String>OrdenProd.LATESTSCHEDDATE</String>
           <String>OrdenProd.INVENTDIMID</String>
-          <String>OrdenProd.SCHEDTOTIME</String>
-          <String>OrdenProd.SCHEDFROMTIME</String>
-          <String>OrdenProd.LATESTSCHEDTIME</String>
-          <String>OrdenProd.DLVTIME</String>
           <String>OrdenProd.PRODORIGID</String>
-          <String>OrdenProd.GANTTCOLORID</String>
           <String>OrdenProd.PROJID</String>
-          <String>OrdenProd.PROJPOSTINGTYPE</String>
           <String>OrdenProd.PROJCATEGORYID</String>
           <String>OrdenProd.PROJLINEPROPERTYID</String>
           <String>OrdenProd.PROJTRANSID</String>
-          <String>OrdenProd.PROJCOSTPRICE</String>
-          <String>OrdenProd.PROJCOSTAMOUNT</String>
           <String>OrdenProd.PROJSALESCURRENCYID</String>
           <String>OrdenProd.PROJSALESUNITID</String>
-          <String>OrdenProd.PROJSALESPRICE</String>
           <String>OrdenProd.PROJTAXGROUPID</String>
           <String>OrdenProd.PROJTAXITEMGROUPID</String>
           <String>OrdenProd.ACTIVITYNUMBER</String>
           <String>OrdenProd.PRICEGROUP_RU</String>
           <String>OrdenProd.CURRENCYCODE_RU</String>
           <String>OrdenProd.PBAID</String>
-          <String>OrdenProd.PMFTOTALCOSTALLOCATION</String>
-          <String>OrdenProd.PDSCWBATCHEST</String>
-          <String>OrdenProd.PDSCWBATCHSCHED</String>
-          <String>OrdenProd.PDSCWBATCHSIZE</String>
-          <String>OrdenProd.PDSCWBATCHSTUP</String>
-          <String>OrdenProd.PDSCWREMAININVENTPHYSICAL</String>
-          <String>OrdenProd.PMFBULKORD</String>
-          <String>OrdenProd.PMFCOBYVARALLOW</String>
           <String>OrdenProd.PMFCONSORDID</String>
-          <String>OrdenProd.PMFREWORKBATCH</String>
-          <String>OrdenProd.PMFYIELDPCT</String>
-          <String>OrdenProd.PRODWHSRELEASEPOLICY</String>
-          <String>OrdenProd.RELEASEDDATE</String>
-          <String>OrdenProd.DEL_CREATEDTIME</String>
           <String>OrdenProd.CREATEDBY</String>
           <String>OrdenProd.DATAAREAID</String>
-          <String>OrdenProd.RECVERSION</String>
-          <String>OrdenProd.PARTITION</String>
-          <String>OrdenProd.RECID</String>
           <String>OrdenProd.AP_QST_MASTERPRODORDID</String>
           <String>OrdenProd.AP_QST_PROCESSNAME</String>
-          <String>OrdenProd.AP_QST_OPRNUM</String>
           <String>OrdenProd.AP_QST_MOVJOURNALID</String>
           <String>OrdenProd.AP_QST_SALESID</String>
-          <String>ProdCalcTrans.RESOURCE_</String>
           <String>ProdCalcTrans.COSTGROUPID</String>
           <String>ProdCalcTrans.CALCGROUPID</String>
           <String>ProdCalcTrans.INVENTDIMSTR</String>
-          <String>ProdCalcTrans.LINENUM</String>
           <String>ProdCalcTrans.UNITID</String>
           <String>ProdCalcTrans.OPRID</String>
-          <String>ProdCalcTrans.OPRNUM</String>
-          <String>ProdCalcTrans.QTY</String>
-          <String>ProdCalcTrans.COSTAMOUNT</String>
-          <String>ProdCalcTrans.ESTCOSTUNIT</String>
-          <String>ProdCalcTrans.SALESAMOUNT</String>
-          <String>ProdCalcTrans.CONSUMPVARIABLE</String>
-          <String>ProdCalcTrans.CONSUMPCONSTANT</String>
-          <String>ProdCalcTrans.REALCONSUMP</String>
-          <String>ProdCalcTrans.REALCOSTAMOUNT</String>
-          <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
           <String>ProdCalcTrans.REALCOSTUNIT</String>
           <String>InventTransOP.DATEFINANCIAL</String>
           <String>InventTransOP.QTY</String>
@@ -1768,45 +1735,30 @@
           <String>RecepcionesOP.INVENTSIZEID</String>
           <String>RecepcionesOP.INVENTCOLORID</String>
           <String>CIF.CuentaN2</String>
-          <String>RpProduccion.CantidadBuena</String>
-          <String>RpProduccion.CantidadConfirmada</String>
-          <String>RpProduccion.CantidadEstimada</String>
-          <String>RpProduccion.ClaseReferencia</String>
-          <String>RpProduccion.CobroTaller</String>
           <String>RpProduccion.Coleccion</String>
           <String>RpProduccion.EstadoProd</String>
-          <String>RpProduccion.FechaCreacionOrden</String>
-          <String>RpProduccion.FechaCreacionRef</String>
-          <String>RpProduccion.FechaEstimacion</String>
-          <String>RpProduccion.FechaEstimadaEntrega</String>
-          <String>RpProduccion.FechaEstimFinOper</String>
-          <String>RpProduccion.FechaInicioOperacion</String>
-          <String>RpProduccion.FechaLiberacion</String>
-          <String>RpProduccion.FechaProgFin</String>
-          <String>RpProduccion.FechaProgInicio</String>
-          <String>RpProduccion.FechaReal</String>
-          <String>RpProduccion.FechaRealEntrega</String>
-          <String>RpProduccion.FechaRealFinOper</String>
-          <String>RpProduccion.FechaTallerDiff</String>
           <String>RpProduccion.GrupoOP</String>
-          <String>RpProduccion.IdEstadoProd</String>
           <String>RpProduccion.IdLinea</String>
-          <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdOPHija</String>
           <String>RpProduccion.IdOPMaestra</String>
           <String>RpProduccion.IdSublinea</String>
           <String>RpProduccion.IdTaller</String>
-          <String>RpProduccion.IdTrabAudita</String>
           <String>RpProduccion.KeyTemp</String>
           <String>RpProduccion.Linea</String>
           <String>RpProduccion.Marca</String>
           <String>RpProduccion.Nivel</String>
           <String>RpProduccion.NombreOperacion</String>
-          <String>RpProduccion.Referencia</String>
           <String>RpProduccion.Sublinea</String>
           <String>Precio.Canal</String>
           <String>Precio.Metrica</String>
           <String>Precio.Divisa</String>
+          <String>PedidosTransfer.CODTRANSFERENCIA</String>
+          <String>PedidosTransfer.NOMBREALMACENDESTINO</String>
+          <String>PedidosTransfer.NOMBREALMACENORIGEN</String>
+          <String>PedidosTransfer.ESTADOTRANSFERENCIA</String>
+          <String>PedidosTransfer.ORDENPRODUCMAESTRA</String>
+          <String>PedidosTransfer.CODICG</String>
+          <String>PedidosTransfer.UBICACION</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1878,8 +1830,6 @@
           <String>IdOrdenProd</String>
           <String>INVENTDIMID</String>
           <String>UNITID</String>
-          <String>PRODLINETYPE</String>
-          <String>BOMQTY</String>
           <String>VENDID</String>
           <String>NombreInsumo</String>
           <String>UnidadInsumo</String>
@@ -1905,122 +1855,46 @@
           <String>GRUPOVENTAS</String>
           <String>COLLECTREFPRODID</String>
           <String>PRODID</String>
-          <String>%OrdenesProduccionKey</String>
-          <String>OrdenProd.PROJLINKEDTOORDER</String>
-          <String>OrdenProd.ITEMID</String>
-          <String>OrdenProd.INVENTSIZEID</String>
-          <String>OrdenProd.INVENTCOLORID</String>
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.NAME</String>
           <String>OrdenProd.PRODGROUPID</String>
-          <String>OrdenProd.PRODSTATUS</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
           <String>OrdenProd.QTYGOOD</String>
-          <String>OrdenProd.PRODPRIO</String>
-          <String>OrdenProd.PRODLOCKED</String>
-          <String>OrdenProd.PRODTYPE</String>
-          <String>OrdenProd.SCHEDSTATUS</String>
-          <String>OrdenProd.SCHEDDATE</String>
-          <String>OrdenProd.CantProgramada</String>
-          <String>OrdenProd.QTYSTUP</String>
-          <String>OrdenProd.DLVDATE</String>
-          <String>OrdenProd.STUPDATE</String>
-          <String>OrdenProd.FINISHEDDATE</String>
-          <String>OrdenProd.SCHEDSTART</String>
-          <String>OrdenProd.SCHEDEND</String>
-          <String>OrdenProd.HEIGHT</String>
-          <String>OrdenProd.WIDTH</String>
-          <String>OrdenProd.DEPTH</String>
-          <String>OrdenProd.DENSITY</String>
-          <String>OrdenProd.QTYCALC</String>
-          <String>OrdenProd.REALDATE</String>
-          <String>OrdenProd.RESERVATION</String>
-          <String>OrdenProd.PRODPOSTINGTYPE</String>
           <String>OrdenProd.INVENTTRANSID</String>
-          <String>OrdenProd.INVENTREFTYPE</String>
           <String>OrdenProd.INVENTREFID</String>
           <String>OrdenProd.INVENTREFTRANSID</String>
-          <String>OrdenProd.COLLECTREFLEVEL</String>
-          <String>OrdenProd.BOMDATE</String>
-          <String>OrdenProd.BACKORDERSTATUS</String>
           <String>OrdenProd.PRODPOOLID</String>
-          <String>OrdenProd.PROFITSET</String>
-          <String>OrdenProd.CALCDATE</String>
-          <String>OrdenProd.ROUTEJOBS</String>
-          <String>OrdenProd.CHECKROUTE</String>
           <String>OrdenProd.PROPERTYID</String>
-          <String>OrdenProd.PdteEnsamblar</String>
           <String>OrdenProd.BOMID</String>
           <String>OrdenProd.ROUTEID</String>
           <String>OrdenProd.REQPLANIDSCHED</String>
           <String>OrdenProd.REQPOID</String>
-          <String>OrdenProd.REFLOOKUP</String>
-          <String>OrdenProd.LATESTSCHEDDIRECTION</String>
-          <String>OrdenProd.LATESTSCHEDDATE</String>
           <String>OrdenProd.INVENTDIMID</String>
-          <String>OrdenProd.SCHEDTOTIME</String>
-          <String>OrdenProd.SCHEDFROMTIME</String>
-          <String>OrdenProd.LATESTSCHEDTIME</String>
-          <String>OrdenProd.DLVTIME</String>
           <String>OrdenProd.PRODORIGID</String>
-          <String>OrdenProd.GANTTCOLORID</String>
           <String>OrdenProd.PROJID</String>
-          <String>OrdenProd.PROJPOSTINGTYPE</String>
           <String>OrdenProd.PROJCATEGORYID</String>
           <String>OrdenProd.PROJLINEPROPERTYID</String>
           <String>OrdenProd.PROJTRANSID</String>
-          <String>OrdenProd.PROJCOSTPRICE</String>
-          <String>OrdenProd.PROJCOSTAMOUNT</String>
           <String>OrdenProd.PROJSALESCURRENCYID</String>
           <String>OrdenProd.PROJSALESUNITID</String>
-          <String>OrdenProd.PROJSALESPRICE</String>
           <String>OrdenProd.PROJTAXGROUPID</String>
           <String>OrdenProd.PROJTAXITEMGROUPID</String>
           <String>OrdenProd.ACTIVITYNUMBER</String>
           <String>OrdenProd.PRICEGROUP_RU</String>
           <String>OrdenProd.CURRENCYCODE_RU</String>
           <String>OrdenProd.PBAID</String>
-          <String>OrdenProd.PMFTOTALCOSTALLOCATION</String>
-          <String>OrdenProd.PDSCWBATCHEST</String>
-          <String>OrdenProd.PDSCWBATCHSCHED</String>
-          <String>OrdenProd.PDSCWBATCHSIZE</String>
-          <String>OrdenProd.PDSCWBATCHSTUP</String>
-          <String>OrdenProd.PDSCWREMAININVENTPHYSICAL</String>
-          <String>OrdenProd.PMFBULKORD</String>
-          <String>OrdenProd.PMFCOBYVARALLOW</String>
           <String>OrdenProd.PMFCONSORDID</String>
-          <String>OrdenProd.PMFREWORKBATCH</String>
-          <String>OrdenProd.PMFYIELDPCT</String>
-          <String>OrdenProd.PRODWHSRELEASEPOLICY</String>
-          <String>OrdenProd.RELEASEDDATE</String>
-          <String>OrdenProd.DEL_CREATEDTIME</String>
           <String>OrdenProd.CREATEDBY</String>
           <String>OrdenProd.DATAAREAID</String>
-          <String>OrdenProd.RECVERSION</String>
-          <String>OrdenProd.PARTITION</String>
-          <String>OrdenProd.RECID</String>
           <String>OrdenProd.AP_QST_MASTERPRODORDID</String>
           <String>OrdenProd.AP_QST_PROCESSNAME</String>
-          <String>OrdenProd.AP_QST_OPRNUM</String>
           <String>OrdenProd.AP_QST_MOVJOURNALID</String>
           <String>OrdenProd.AP_QST_SALESID</String>
-          <String>ProdCalcTrans.RESOURCE_</String>
           <String>ProdCalcTrans.COSTGROUPID</String>
           <String>ProdCalcTrans.CALCGROUPID</String>
           <String>ProdCalcTrans.INVENTDIMSTR</String>
-          <String>ProdCalcTrans.LINENUM</String>
           <String>ProdCalcTrans.UNITID</String>
           <String>ProdCalcTrans.OPRID</String>
-          <String>ProdCalcTrans.OPRNUM</String>
-          <String>ProdCalcTrans.QTY</String>
-          <String>ProdCalcTrans.COSTAMOUNT</String>
-          <String>ProdCalcTrans.ESTCOSTUNIT</String>
-          <String>ProdCalcTrans.SALESAMOUNT</String>
-          <String>ProdCalcTrans.CONSUMPVARIABLE</String>
-          <String>ProdCalcTrans.CONSUMPCONSTANT</String>
-          <String>ProdCalcTrans.REALCONSUMP</String>
-          <String>ProdCalcTrans.REALCOSTAMOUNT</String>
-          <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
           <String>ProdCalcTrans.REALCOSTUNIT</String>
           <String>InventTransOP.DATEFINANCIAL</String>
           <String>InventTransOP.QTY</String>
@@ -2076,45 +1950,31 @@
           <String>RecepcionesOP.INVENTSIZEID</String>
           <String>RecepcionesOP.INVENTCOLORID</String>
           <String>CIF.CuentaN2</String>
-          <String>RpProduccion.CantidadBuena</String>
-          <String>RpProduccion.CantidadConfirmada</String>
-          <String>RpProduccion.CantidadEstimada</String>
           <String>RpProduccion.ClaseReferencia</String>
-          <String>RpProduccion.CobroTaller</String>
           <String>RpProduccion.Coleccion</String>
           <String>RpProduccion.EstadoProd</String>
-          <String>RpProduccion.FechaCreacionOrden</String>
-          <String>RpProduccion.FechaCreacionRef</String>
-          <String>RpProduccion.FechaEstimacion</String>
-          <String>RpProduccion.FechaEstimadaEntrega</String>
-          <String>RpProduccion.FechaEstimFinOper</String>
-          <String>RpProduccion.FechaInicioOperacion</String>
-          <String>RpProduccion.FechaLiberacion</String>
-          <String>RpProduccion.FechaProgFin</String>
-          <String>RpProduccion.FechaProgInicio</String>
-          <String>RpProduccion.FechaReal</String>
-          <String>RpProduccion.FechaRealEntrega</String>
-          <String>RpProduccion.FechaRealFinOper</String>
-          <String>RpProduccion.FechaTallerDiff</String>
           <String>RpProduccion.GrupoOP</String>
-          <String>RpProduccion.IdEstadoProd</String>
           <String>RpProduccion.IdLinea</String>
-          <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdOPHija</String>
           <String>RpProduccion.IdOPMaestra</String>
           <String>RpProduccion.IdSublinea</String>
           <String>RpProduccion.IdTaller</String>
-          <String>RpProduccion.IdTrabAudita</String>
           <String>RpProduccion.KeyTemp</String>
           <String>RpProduccion.Linea</String>
           <String>RpProduccion.Marca</String>
           <String>RpProduccion.Nivel</String>
           <String>RpProduccion.NombreOperacion</String>
-          <String>RpProduccion.Referencia</String>
           <String>RpProduccion.Sublinea</String>
           <String>Precio.Canal</String>
           <String>Precio.Metrica</String>
           <String>Precio.Divisa</String>
+          <String>PedidosTransfer.CODTRANSFERENCIA</String>
+          <String>PedidosTransfer.NOMBREALMACENDESTINO</String>
+          <String>PedidosTransfer.NOMBREALMACENORIGEN</String>
+          <String>PedidosTransfer.ESTADOTRANSFERENCIA</String>
+          <String>PedidosTransfer.ORDENPRODUCMAESTRA</String>
+          <String>PedidosTransfer.CODICG</String>
+          <String>PedidosTransfer.UBICACION</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2148,6 +2008,8 @@
           <String>CATEGORYRECID</String>
           <String>Productos.IdSubTipo</String>
           <String>Productos.IdMarca</String>
+          <String>PRODLINETYPE</String>
+          <String>BOMQTY</String>
           <String>%OrdenesPedidoKey</String>
           <String>IDCLIENTE</String>
           <String>DEFAULTDIMENSIONPEDIDO</String>
@@ -2167,6 +2029,82 @@
           <String>RECIDLINE</String>
           <String>PORCENTAJE</String>
           <String>STOCK</String>
+          <String>%OrdenesProduccionKey</String>
+          <String>OrdenProd.PROJLINKEDTOORDER</String>
+          <String>OrdenProd.ITEMID</String>
+          <String>OrdenProd.INVENTSIZEID</String>
+          <String>OrdenProd.INVENTCOLORID</String>
+          <String>OrdenProd.PRODSTATUS</String>
+          <String>OrdenProd.PRODPRIO</String>
+          <String>OrdenProd.PRODLOCKED</String>
+          <String>OrdenProd.PRODTYPE</String>
+          <String>OrdenProd.SCHEDSTATUS</String>
+          <String>OrdenProd.SCHEDDATE</String>
+          <String>OrdenProd.CantProgramada</String>
+          <String>OrdenProd.QTYSTUP</String>
+          <String>OrdenProd.DLVDATE</String>
+          <String>OrdenProd.STUPDATE</String>
+          <String>OrdenProd.FINISHEDDATE</String>
+          <String>OrdenProd.SCHEDSTART</String>
+          <String>OrdenProd.SCHEDEND</String>
+          <String>OrdenProd.HEIGHT</String>
+          <String>OrdenProd.WIDTH</String>
+          <String>OrdenProd.DEPTH</String>
+          <String>OrdenProd.DENSITY</String>
+          <String>OrdenProd.QTYCALC</String>
+          <String>OrdenProd.REALDATE</String>
+          <String>OrdenProd.RESERVATION</String>
+          <String>OrdenProd.PRODPOSTINGTYPE</String>
+          <String>OrdenProd.INVENTREFTYPE</String>
+          <String>OrdenProd.COLLECTREFLEVEL</String>
+          <String>OrdenProd.BOMDATE</String>
+          <String>OrdenProd.BACKORDERSTATUS</String>
+          <String>OrdenProd.PROFITSET</String>
+          <String>OrdenProd.CALCDATE</String>
+          <String>OrdenProd.ROUTEJOBS</String>
+          <String>OrdenProd.CHECKROUTE</String>
+          <String>OrdenProd.PdteEnsamblar</String>
+          <String>OrdenProd.REFLOOKUP</String>
+          <String>OrdenProd.LATESTSCHEDDIRECTION</String>
+          <String>OrdenProd.LATESTSCHEDDATE</String>
+          <String>OrdenProd.SCHEDTOTIME</String>
+          <String>OrdenProd.SCHEDFROMTIME</String>
+          <String>OrdenProd.LATESTSCHEDTIME</String>
+          <String>OrdenProd.DLVTIME</String>
+          <String>OrdenProd.GANTTCOLORID</String>
+          <String>OrdenProd.PROJPOSTINGTYPE</String>
+          <String>OrdenProd.PROJCOSTPRICE</String>
+          <String>OrdenProd.PROJCOSTAMOUNT</String>
+          <String>OrdenProd.PROJSALESPRICE</String>
+          <String>OrdenProd.PMFTOTALCOSTALLOCATION</String>
+          <String>OrdenProd.PDSCWBATCHEST</String>
+          <String>OrdenProd.PDSCWBATCHSCHED</String>
+          <String>OrdenProd.PDSCWBATCHSIZE</String>
+          <String>OrdenProd.PDSCWBATCHSTUP</String>
+          <String>OrdenProd.PDSCWREMAININVENTPHYSICAL</String>
+          <String>OrdenProd.PMFBULKORD</String>
+          <String>OrdenProd.PMFCOBYVARALLOW</String>
+          <String>OrdenProd.PMFREWORKBATCH</String>
+          <String>OrdenProd.PMFYIELDPCT</String>
+          <String>OrdenProd.PRODWHSRELEASEPOLICY</String>
+          <String>OrdenProd.RELEASEDDATE</String>
+          <String>OrdenProd.DEL_CREATEDTIME</String>
+          <String>OrdenProd.RECVERSION</String>
+          <String>OrdenProd.PARTITION</String>
+          <String>OrdenProd.RECID</String>
+          <String>OrdenProd.AP_QST_OPRNUM</String>
+          <String>ProdCalcTrans.RESOURCE_</String>
+          <String>ProdCalcTrans.LINENUM</String>
+          <String>ProdCalcTrans.OPRNUM</String>
+          <String>ProdCalcTrans.QTY</String>
+          <String>ProdCalcTrans.COSTAMOUNT</String>
+          <String>ProdCalcTrans.ESTCOSTUNIT</String>
+          <String>ProdCalcTrans.SALESAMOUNT</String>
+          <String>ProdCalcTrans.CONSUMPVARIABLE</String>
+          <String>ProdCalcTrans.CONSUMPCONSTANT</String>
+          <String>ProdCalcTrans.REALCONSUMP</String>
+          <String>ProdCalcTrans.REALCOSTAMOUNT</String>
+          <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -2208,12 +2146,38 @@
           <String>CIF.Fecha</String>
           <String>CIF.IdCuentaN2</String>
           <String>CIF.Neto</String>
+          <String>RpProduccion.CantidadBuena</String>
+          <String>RpProduccion.CantidadConfirmada</String>
+          <String>RpProduccion.CantidadEstimada</String>
+          <String>RpProduccion.CobroTaller</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimacion</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
+          <String>RpProduccion.FechaEstimFinOper</String>
+          <String>RpProduccion.FechaInicioOperacion</String>
+          <String>RpProduccion.FechaLiberacion</String>
+          <String>RpProduccion.FechaProgFin</String>
+          <String>RpProduccion.FechaProgInicio</String>
+          <String>RpProduccion.FechaReal</String>
+          <String>RpProduccion.FechaRealEntrega</String>
+          <String>RpProduccion.FechaRealFinOper</String>
+          <String>RpProduccion.FechaTallerDiff</String>
+          <String>RpProduccion.IdEstadoProd</String>
+          <String>RpProduccion.IdMarca</String>
+          <String>RpProduccion.IdTrabAudita</String>
+          <String>RpProduccion.Referencia</String>
           <String>Precio.IdCanal</String>
           <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
           <String>Precio.FechaModificacion</String>
+          <String>%PedidosTransferKey</String>
+          <String>PedidosTransfer.CODALMACENORIGEN</String>
+          <String>PedidosTransfer.CODARTICULO</String>
+          <String>PedidosTransfer.COLORID</String>
+          <String>PedidosTransfer.CANTTRANSFERENCIA</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2245,6 +2209,8 @@
           <String>CATEGORYRECID</String>
           <String>Productos.IdSubTipo</String>
           <String>Productos.IdMarca</String>
+          <String>PRODLINETYPE</String>
+          <String>BOMQTY</String>
           <String>%OrdenesPedidoKey</String>
           <String>IDCLIENTE</String>
           <String>DEFAULTDIMENSIONPEDIDO</String>
@@ -2263,6 +2229,82 @@
           <String>RECIDLINE</String>
           <String>PORCENTAJE</String>
           <String>STOCK</String>
+          <String>%OrdenesProduccionKey</String>
+          <String>OrdenProd.PROJLINKEDTOORDER</String>
+          <String>OrdenProd.ITEMID</String>
+          <String>OrdenProd.INVENTSIZEID</String>
+          <String>OrdenProd.INVENTCOLORID</String>
+          <String>OrdenProd.PRODSTATUS</String>
+          <String>OrdenProd.PRODPRIO</String>
+          <String>OrdenProd.PRODLOCKED</String>
+          <String>OrdenProd.PRODTYPE</String>
+          <String>OrdenProd.SCHEDSTATUS</String>
+          <String>OrdenProd.SCHEDDATE</String>
+          <String>OrdenProd.CantProgramada</String>
+          <String>OrdenProd.QTYSTUP</String>
+          <String>OrdenProd.DLVDATE</String>
+          <String>OrdenProd.STUPDATE</String>
+          <String>OrdenProd.FINISHEDDATE</String>
+          <String>OrdenProd.SCHEDSTART</String>
+          <String>OrdenProd.SCHEDEND</String>
+          <String>OrdenProd.HEIGHT</String>
+          <String>OrdenProd.WIDTH</String>
+          <String>OrdenProd.DEPTH</String>
+          <String>OrdenProd.DENSITY</String>
+          <String>OrdenProd.QTYCALC</String>
+          <String>OrdenProd.REALDATE</String>
+          <String>OrdenProd.RESERVATION</String>
+          <String>OrdenProd.PRODPOSTINGTYPE</String>
+          <String>OrdenProd.INVENTREFTYPE</String>
+          <String>OrdenProd.COLLECTREFLEVEL</String>
+          <String>OrdenProd.BOMDATE</String>
+          <String>OrdenProd.BACKORDERSTATUS</String>
+          <String>OrdenProd.PROFITSET</String>
+          <String>OrdenProd.CALCDATE</String>
+          <String>OrdenProd.ROUTEJOBS</String>
+          <String>OrdenProd.CHECKROUTE</String>
+          <String>OrdenProd.PdteEnsamblar</String>
+          <String>OrdenProd.REFLOOKUP</String>
+          <String>OrdenProd.LATESTSCHEDDIRECTION</String>
+          <String>OrdenProd.LATESTSCHEDDATE</String>
+          <String>OrdenProd.SCHEDTOTIME</String>
+          <String>OrdenProd.SCHEDFROMTIME</String>
+          <String>OrdenProd.LATESTSCHEDTIME</String>
+          <String>OrdenProd.DLVTIME</String>
+          <String>OrdenProd.GANTTCOLORID</String>
+          <String>OrdenProd.PROJPOSTINGTYPE</String>
+          <String>OrdenProd.PROJCOSTPRICE</String>
+          <String>OrdenProd.PROJCOSTAMOUNT</String>
+          <String>OrdenProd.PROJSALESPRICE</String>
+          <String>OrdenProd.PMFTOTALCOSTALLOCATION</String>
+          <String>OrdenProd.PDSCWBATCHEST</String>
+          <String>OrdenProd.PDSCWBATCHSCHED</String>
+          <String>OrdenProd.PDSCWBATCHSIZE</String>
+          <String>OrdenProd.PDSCWBATCHSTUP</String>
+          <String>OrdenProd.PDSCWREMAININVENTPHYSICAL</String>
+          <String>OrdenProd.PMFBULKORD</String>
+          <String>OrdenProd.PMFCOBYVARALLOW</String>
+          <String>OrdenProd.PMFREWORKBATCH</String>
+          <String>OrdenProd.PMFYIELDPCT</String>
+          <String>OrdenProd.PRODWHSRELEASEPOLICY</String>
+          <String>OrdenProd.RELEASEDDATE</String>
+          <String>OrdenProd.DEL_CREATEDTIME</String>
+          <String>OrdenProd.RECVERSION</String>
+          <String>OrdenProd.PARTITION</String>
+          <String>OrdenProd.RECID</String>
+          <String>OrdenProd.AP_QST_OPRNUM</String>
+          <String>ProdCalcTrans.RESOURCE_</String>
+          <String>ProdCalcTrans.LINENUM</String>
+          <String>ProdCalcTrans.OPRNUM</String>
+          <String>ProdCalcTrans.QTY</String>
+          <String>ProdCalcTrans.COSTAMOUNT</String>
+          <String>ProdCalcTrans.ESTCOSTUNIT</String>
+          <String>ProdCalcTrans.SALESAMOUNT</String>
+          <String>ProdCalcTrans.CONSUMPVARIABLE</String>
+          <String>ProdCalcTrans.CONSUMPCONSTANT</String>
+          <String>ProdCalcTrans.REALCONSUMP</String>
+          <String>ProdCalcTrans.REALCOSTAMOUNT</String>
+          <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -2296,11 +2338,37 @@
           <String>OrdenesCompra.LineasOC.DISCPERCENT</String>
           <String>CIF.Fecha</String>
           <String>CIF.IdCuentaN2</String>
+          <String>RpProduccion.CantidadBuena</String>
+          <String>RpProduccion.CantidadConfirmada</String>
+          <String>RpProduccion.CantidadEstimada</String>
+          <String>RpProduccion.CobroTaller</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimacion</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
+          <String>RpProduccion.FechaEstimFinOper</String>
+          <String>RpProduccion.FechaInicioOperacion</String>
+          <String>RpProduccion.FechaLiberacion</String>
+          <String>RpProduccion.FechaProgFin</String>
+          <String>RpProduccion.FechaProgInicio</String>
+          <String>RpProduccion.FechaReal</String>
+          <String>RpProduccion.FechaRealEntrega</String>
+          <String>RpProduccion.FechaRealFinOper</String>
+          <String>RpProduccion.FechaTallerDiff</String>
+          <String>RpProduccion.IdEstadoProd</String>
+          <String>RpProduccion.IdMarca</String>
+          <String>RpProduccion.IdTrabAudita</String>
+          <String>RpProduccion.Referencia</String>
           <String>Precio.IdCanal</String>
           <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
+          <String>%PedidosTransferKey</String>
+          <String>PedidosTransfer.CODALMACENORIGEN</String>
+          <String>PedidosTransfer.CODARTICULO</String>
+          <String>PedidosTransfer.COLORID</String>
+          <String>PedidosTransfer.CANTTRANSFERENCIA</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2315,10 +2383,16 @@
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
           <String>FECHACREACIONPEDIDO</String>
           <String>FECHACREACIONPEDIDOTZID</String>
+          <String>OrdenProd.DLVDATE</String>
+          <String>OrdenProd.BOMDATE</String>
+          <String>OrdenProd.DLVTIME</String>
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
           <String>CIF.Fecha</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaModificacion</String>
         </FieldNames>
@@ -2332,9 +2406,15 @@
           <String>Calendario.NumericMonthYear</String>
           <String>Calendario.DateMMDD</String>
           <String>FECHACREACIONPEDIDOTZID</String>
+          <String>OrdenProd.DLVDATE</String>
+          <String>OrdenProd.BOMDATE</String>
+          <String>OrdenProd.DLVTIME</String>
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>CIF.Fecha</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>Precio.FechaAplicacion</String>
         </FieldNames>
       </FieldTagData>
