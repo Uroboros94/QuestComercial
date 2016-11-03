@@ -133,10 +133,10 @@ PurchTable:
         APOBSERVACIONES,
         CREATEDDATETIME,
         CREATEDBY,
-        DATAAREAID,
-        RECVERSION,
-        PARTITION,
-        RECID,
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID,
         APTAXCITY
     FROM PURCHTABLE;
 STORE PurchTable INTO [..\QVD\PurchTable.QVD](qvd);

@@ -47,13 +47,13 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Infor Entra. Mat. Empaque</v>
+        <v>Infor Factura. Canales</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
+      <AutoMinimize>true</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Infor Entra. Mat. Empaque</v>
+      <v>Infor Factura. Canales</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -743,11 +743,11 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PedidosTransfer.CODTRANSFERENCIA</Name>
+        <Name>DefaultDimensions.DESC_TIPO_DE_TIENDA</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Número Documento</v>
+        <v>Canal</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -929,17 +929,17 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Id</Name>
+        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Código Articulo</v>
+        <v>Genero</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
+        <SortByNumeric>0</SortByNumeric>
         <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
@@ -1115,18 +1115,18 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Nombre</Name>
+        <Name>Productos.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Descripción Articulo</v>
+        <v>Código Línea</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -1301,11 +1301,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
+        <Name>Productos.Linea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Orden Producción</v>
+        <v>Línea</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3143,9 +3143,9 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>3</int>
-      <int>1</int>
-      <int>0</int>
       <int>4</int>
+      <int>0</int>
+      <int>1</int>
       <int>2</int>
     </InterFieldSortOrder>
     <ExpressionPosition>-1</ExpressionPosition>
@@ -3179,7 +3179,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Id</DimName>
+          <DimName>Productos.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3187,7 +3187,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>PedidosTransfer.CODTRANSFERENCIA</DimName>
+          <DimName>DefaultDimensions.DESC_TIPO_DE_TIENDA</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3195,7 +3195,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Nombre</DimName>
+          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3203,7 +3203,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
+          <DimName>Productos.Linea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

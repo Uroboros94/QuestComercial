@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Vigencia Precio</v>
+        <v>Categ. Prodcto</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -229,8 +229,16 @@
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top></Top>
-      <Bottom></Bottom>
+      <Top>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Top>
+      <Bottom>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>
@@ -263,11 +271,11 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Precio.FechaVigencia</Name>
+    <Name>Productos.Categoria</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
-    <v>Vigencia Precio</v>
+    <v>Categ. Prodcto</v>
   </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
@@ -362,7 +370,7 @@
     <SortByState>1</SortByState>
     <SortByFrequency>0</SortByFrequency>
     <SortByNumeric>0</SortByNumeric>
-    <SortByAscii>0</SortByAscii>
+    <SortByAscii>1</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>

@@ -12,7 +12,7 @@ DefaultDimensions_temp:
 	LOAD 
 		CodHomologacion,
 		CREATEDDATETIME,
-		DATAAREAID,
+		//DATAAREAID,
 		DEFAULTDIMENSION                        AS SK.DEFAULTDIMENSION,
 		DESC_CENTRO_DE_COSTO,
 		DESC_COLECCION,
@@ -36,10 +36,10 @@ DefaultDimensions_temp:
 		DIMENSION_SUBLINEA,
 		DIMENSION_TERCERO,
 		DIMENSION_TIPO_DE_TIENDA,
-		MODIFIEDDATETIME,
-		PARTITION,
-		RECID,
-		RECVERSION
+		MODIFIEDDATETIME
+		//PARTITION,
+		//RECID,
+		//RECVERSION
 	FROM
 	[..\QVD\DefaulDimensions.QVD]
 	(qvd);
@@ -91,12 +91,12 @@ DefaultDimensions:
 		MODIFIEDDATETIME,
 		NombreCoordinador,
 		Pais,
-		PARTITION,
-		RECID,
-		RECVERSION,
+		//PARTITION,
+		//RECID,
+		//RECVERSION,
 		SK.DEFAULTDIMENSION,
-		ZonaGeografica,
-		DATAAREAID
+		ZonaGeografica
+		//DATAAREAID
 	Resident DefaultDimensions_temp;
 	DROP Table DefaultDimensions_temp;
 UNQUALIFY *;
