@@ -29,4 +29,33 @@ LinkTable:
     %KEYPRODUCT							as SK.KEYPRODUCT,
     %FECHAKEY							as SK.FECHA
   Resident OrdenesPedidosVenta;
+  Concatenate(LinkTable)
+  LOAD
+    %PedidosTransferKey,
+    %KEYPRODUCT							as SK.KEYPRODUCT
+  Resident PedidosTransfer;
+
+  RutasPicking_tmp:
+  LOAD
+    %RutasPickingKey,
+    RutasPicking.NUMEROPEDIDO,
+    %KEYPRODUCT							as SK.KEYPRODUCT,
+    %FECHAKEY							as SK.FECHA
+  Resident RutasPicking;
+  Left Join (RutasPicking_tmp)
+  LOAD
+    %OrdenesPedidoKey,
+    IDPEDIDO as RutasPicking.NUMEROPEDIDO,
+    %KEYPRODUCT as SK.KEYPRODUCT
+  Resident OrdenesPedidosVenta;
+
+  Concatenate(LinkTable)
+  LOAD
+    %RutasPickingKey,
+    %OrdenesPedidoKey,
+    SK.KEYPRODUCT,
+    SK.FECHA
+  Resident RutasPicking_tmp;
+
 	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT;
+  DROP Table RutasPicking_tmp;

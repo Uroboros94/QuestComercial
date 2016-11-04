@@ -21,13 +21,15 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
     <String>3</String>
     <String>Calendario</String>
-    <String>LinkTable</String>
     <String>CIF</String>
+    <String>LinkTable</String>
     <String>7</String>
     <String>1</String>
     <String>Calendario</String>
@@ -1263,9 +1265,110 @@
     <String>1</String>
     <String>ListadoPrecios</String>
     <String>414</String>
+    <String>2</String>
+    <String>PedidosTransfer</String>
+    <String>LinkTable</String>
+    <String>415</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>416</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>417</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>418</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>419</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>420</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>421</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>422</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>423</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>424</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>425</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>426</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>427</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>428</String>
+    <String>2</String>
+    <String>RutasPicking</String>
+    <String>LinkTable</String>
+    <String>429</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>430</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>431</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>432</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>433</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>434</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>435</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>436</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>437</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>438</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>439</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>440</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>441</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>442</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>443</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>444</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>445</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>446</String>
+    <String>1</String>
+    <String>RutasPicking</String>
+    <String>447</String>
     <String>1</String>
     <String>INLFED</String>
-    <String>415</String>
+    <String>448</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -1627,6 +1730,8 @@
           <String>%OrdenesProduccionKey</String>
           <String>%OrdenesCompraKey</String>
           <String>VENPACKINGLIPID</String>
+          <String>%PedidosTransferKey</String>
+          <String>%RutasPickingKey</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1822,45 +1927,41 @@
           <String>RecepcionesOP.INVENTSIZEID</String>
           <String>RecepcionesOP.INVENTCOLORID</String>
           <String>CIF.CuentaN2</String>
-          <String>RpProduccion.CantidadBuena</String>
-          <String>RpProduccion.CantidadConfirmada</String>
-          <String>RpProduccion.CantidadEstimada</String>
-          <String>RpProduccion.ClaseReferencia</String>
-          <String>RpProduccion.CobroTaller</String>
           <String>RpProduccion.Coleccion</String>
           <String>RpProduccion.EstadoProd</String>
-          <String>RpProduccion.FechaCreacionOrden</String>
-          <String>RpProduccion.FechaCreacionRef</String>
-          <String>RpProduccion.FechaEstimacion</String>
-          <String>RpProduccion.FechaEstimadaEntrega</String>
-          <String>RpProduccion.FechaEstimFinOper</String>
-          <String>RpProduccion.FechaInicioOperacion</String>
-          <String>RpProduccion.FechaLiberacion</String>
-          <String>RpProduccion.FechaProgFin</String>
-          <String>RpProduccion.FechaProgInicio</String>
-          <String>RpProduccion.FechaReal</String>
-          <String>RpProduccion.FechaRealEntrega</String>
-          <String>RpProduccion.FechaRealFinOper</String>
-          <String>RpProduccion.FechaTallerDiff</String>
           <String>RpProduccion.GrupoOP</String>
-          <String>RpProduccion.IdEstadoProd</String>
           <String>RpProduccion.IdLinea</String>
-          <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdOPHija</String>
           <String>RpProduccion.IdOPMaestra</String>
           <String>RpProduccion.IdSublinea</String>
           <String>RpProduccion.IdTaller</String>
-          <String>RpProduccion.IdTrabAudita</String>
           <String>RpProduccion.KeyTemp</String>
           <String>RpProduccion.Linea</String>
           <String>RpProduccion.Marca</String>
           <String>RpProduccion.Nivel</String>
           <String>RpProduccion.NombreOperacion</String>
-          <String>RpProduccion.Referencia</String>
           <String>RpProduccion.Sublinea</String>
           <String>Precio.Canal</String>
           <String>Precio.Metrica</String>
           <String>Precio.Divisa</String>
+          <String>PedidosTransfer.CODTRANSFERENCIA</String>
+          <String>PedidosTransfer.NOMBREALMACENDESTINO</String>
+          <String>PedidosTransfer.NOMBREALMACENORIGEN</String>
+          <String>PedidosTransfer.ESTADOTRANSFERENCIA</String>
+          <String>PedidosTransfer.ORDENPRODUCMAESTRA</String>
+          <String>PedidosTransfer.CODICG</String>
+          <String>PedidosTransfer.UBICACION</String>
+          <String>RutasPicking.RUTAPICKING</String>
+          <String>RutasPicking.CODIGOENVIO</String>
+          <String>RutasPicking.ESTADOMANIPULACION</String>
+          <String>RutasPicking.NUMEROPEDIDO</String>
+          <String>RutasPicking.NOMBRETRABAJADOR</String>
+          <String>RutasPicking.NOMBRECLIENTE</String>
+          <String>RutasPicking.CODIGOALMACEN</String>
+          <String>RutasPicking.ALMACEN</String>
+          <String>RutasPicking.UBICACION</String>
+          <String>RutasPicking.TALLA</String>
+          <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>Dimensiones</String>
           <String>Calculos</String>
         </FieldNames>
@@ -2052,45 +2153,42 @@
           <String>RecepcionesOP.INVENTSIZEID</String>
           <String>RecepcionesOP.INVENTCOLORID</String>
           <String>CIF.CuentaN2</String>
-          <String>RpProduccion.CantidadBuena</String>
-          <String>RpProduccion.CantidadConfirmada</String>
-          <String>RpProduccion.CantidadEstimada</String>
           <String>RpProduccion.ClaseReferencia</String>
-          <String>RpProduccion.CobroTaller</String>
           <String>RpProduccion.Coleccion</String>
           <String>RpProduccion.EstadoProd</String>
-          <String>RpProduccion.FechaCreacionOrden</String>
-          <String>RpProduccion.FechaCreacionRef</String>
-          <String>RpProduccion.FechaEstimacion</String>
-          <String>RpProduccion.FechaEstimadaEntrega</String>
-          <String>RpProduccion.FechaEstimFinOper</String>
-          <String>RpProduccion.FechaInicioOperacion</String>
-          <String>RpProduccion.FechaLiberacion</String>
-          <String>RpProduccion.FechaProgFin</String>
-          <String>RpProduccion.FechaProgInicio</String>
-          <String>RpProduccion.FechaReal</String>
-          <String>RpProduccion.FechaRealEntrega</String>
-          <String>RpProduccion.FechaRealFinOper</String>
-          <String>RpProduccion.FechaTallerDiff</String>
           <String>RpProduccion.GrupoOP</String>
-          <String>RpProduccion.IdEstadoProd</String>
           <String>RpProduccion.IdLinea</String>
-          <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdOPHija</String>
           <String>RpProduccion.IdOPMaestra</String>
           <String>RpProduccion.IdSublinea</String>
           <String>RpProduccion.IdTaller</String>
-          <String>RpProduccion.IdTrabAudita</String>
           <String>RpProduccion.KeyTemp</String>
           <String>RpProduccion.Linea</String>
           <String>RpProduccion.Marca</String>
           <String>RpProduccion.Nivel</String>
           <String>RpProduccion.NombreOperacion</String>
-          <String>RpProduccion.Referencia</String>
           <String>RpProduccion.Sublinea</String>
           <String>Precio.Canal</String>
           <String>Precio.Metrica</String>
           <String>Precio.Divisa</String>
+          <String>PedidosTransfer.CODTRANSFERENCIA</String>
+          <String>PedidosTransfer.NOMBREALMACENDESTINO</String>
+          <String>PedidosTransfer.NOMBREALMACENORIGEN</String>
+          <String>PedidosTransfer.ESTADOTRANSFERENCIA</String>
+          <String>PedidosTransfer.ORDENPRODUCMAESTRA</String>
+          <String>PedidosTransfer.CODICG</String>
+          <String>PedidosTransfer.UBICACION</String>
+          <String>RutasPicking.RUTAPICKING</String>
+          <String>RutasPicking.CODIGOENVIO</String>
+          <String>RutasPicking.ESTADOMANIPULACION</String>
+          <String>RutasPicking.NUMEROPEDIDO</String>
+          <String>RutasPicking.NOMBRETRABAJADOR</String>
+          <String>RutasPicking.NOMBRECLIENTE</String>
+          <String>RutasPicking.CODIGOALMACEN</String>
+          <String>RutasPicking.ALMACEN</String>
+          <String>RutasPicking.UBICACION</String>
+          <String>RutasPicking.TALLA</String>
+          <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>Dimensiones</String>
           <String>Calculos</String>
         </FieldNames>
@@ -2258,12 +2356,46 @@
           <String>CIF.Fecha</String>
           <String>CIF.IdCuentaN2</String>
           <String>CIF.Neto</String>
+          <String>RpProduccion.CantidadBuena</String>
+          <String>RpProduccion.CantidadConfirmada</String>
+          <String>RpProduccion.CantidadEstimada</String>
+          <String>RpProduccion.CobroTaller</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimacion</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
+          <String>RpProduccion.FechaEstimFinOper</String>
+          <String>RpProduccion.FechaInicioOperacion</String>
+          <String>RpProduccion.FechaLiberacion</String>
+          <String>RpProduccion.FechaProgFin</String>
+          <String>RpProduccion.FechaProgInicio</String>
+          <String>RpProduccion.FechaReal</String>
+          <String>RpProduccion.FechaRealEntrega</String>
+          <String>RpProduccion.FechaRealFinOper</String>
+          <String>RpProduccion.FechaTallerDiff</String>
+          <String>RpProduccion.IdEstadoProd</String>
+          <String>RpProduccion.IdMarca</String>
+          <String>RpProduccion.IdTrabAudita</String>
+          <String>RpProduccion.Referencia</String>
           <String>Precio.IdCanal</String>
           <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
           <String>Precio.FechaModificacion</String>
+          <String>%PedidosTransferKey</String>
+          <String>PedidosTransfer.CODALMACENORIGEN</String>
+          <String>PedidosTransfer.CODARTICULO</String>
+          <String>PedidosTransfer.COLORID</String>
+          <String>PedidosTransfer.CANTTRANSFERENCIA</String>
+          <String>%RutasPickingKey</String>
+          <String>RutasPicking.TIEMPOACTIVACION</String>
+          <String>RutasPicking.CODIGOTRABAJADOR</String>
+          <String>RutasPicking.CODIGOCLIENTE</String>
+          <String>RutasPicking.CODARTICULO</String>
+          <String>RutasPicking.CODCOLOR</String>
+          <String>RutasPicking.CANTSELECCIONADA</String>
+          <String>RutasPicking.CANTPROGRAMADA</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2418,11 +2550,44 @@
           <String>OrdenesCompra.LineasOC.DISCPERCENT</String>
           <String>CIF.Fecha</String>
           <String>CIF.IdCuentaN2</String>
+          <String>RpProduccion.CantidadBuena</String>
+          <String>RpProduccion.CantidadConfirmada</String>
+          <String>RpProduccion.CantidadEstimada</String>
+          <String>RpProduccion.CobroTaller</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimacion</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
+          <String>RpProduccion.FechaEstimFinOper</String>
+          <String>RpProduccion.FechaInicioOperacion</String>
+          <String>RpProduccion.FechaLiberacion</String>
+          <String>RpProduccion.FechaProgFin</String>
+          <String>RpProduccion.FechaProgInicio</String>
+          <String>RpProduccion.FechaReal</String>
+          <String>RpProduccion.FechaRealEntrega</String>
+          <String>RpProduccion.FechaRealFinOper</String>
+          <String>RpProduccion.FechaTallerDiff</String>
+          <String>RpProduccion.IdEstadoProd</String>
+          <String>RpProduccion.IdMarca</String>
+          <String>RpProduccion.IdTrabAudita</String>
+          <String>RpProduccion.Referencia</String>
           <String>Precio.IdCanal</String>
           <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
+          <String>%PedidosTransferKey</String>
+          <String>PedidosTransfer.CODALMACENORIGEN</String>
+          <String>PedidosTransfer.CODARTICULO</String>
+          <String>PedidosTransfer.COLORID</String>
+          <String>PedidosTransfer.CANTTRANSFERENCIA</String>
+          <String>%RutasPickingKey</String>
+          <String>RutasPicking.CODIGOTRABAJADOR</String>
+          <String>RutasPicking.CODIGOCLIENTE</String>
+          <String>RutasPicking.CODARTICULO</String>
+          <String>RutasPicking.CODCOLOR</String>
+          <String>RutasPicking.CANTSELECCIONADA</String>
+          <String>RutasPicking.CANTPROGRAMADA</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2444,8 +2609,12 @@
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
           <String>CIF.Fecha</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaModificacion</String>
+          <String>RutasPicking.TIEMPOACTIVACION</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2463,6 +2632,9 @@
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>CIF.Fecha</String>
+          <String>RpProduccion.FechaCreacionOrden</String>
+          <String>RpProduccion.FechaCreacionRef</String>
+          <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>Precio.FechaAplicacion</String>
         </FieldNames>
       </FieldTagData>
