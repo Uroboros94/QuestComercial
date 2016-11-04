@@ -56,6 +56,10 @@ LinkTable:
     SK.KEYPRODUCT,
     SK.FECHA
   Resident RutasPicking_tmp;
+  Concatenate(LinkTable)
+  LOAD
+    %KEYPRODUCT as SK.KEYPRODUCT
+  Resident InventarioDisponible;
 
 	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT;
   DROP Table RutasPicking_tmp;
