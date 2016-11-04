@@ -18,21 +18,36 @@ SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
 ///$tab Cargue
-$(Must_Include=qvs.componentes\calendario.qvs);
-
-$(Must_Include=qvs.plm\bom.qvs);
-
-$(Must_Include=qvs.plm\enums.qvs);
-
-$(Must_Include=qvs.plm\headlistamaterial.qvs);
-
-$(Must_Include=qvs.plm\linelistamaterial.qvs);
-
+/*Presupuestos*/
 $(Must_Include=qvs.plm\presupuesto.qvs);
 
-$(Must_Include=qvs.plm\product.qvs);
+/*Productos*/
+$(Must_Include=qvs.plm\producto.qvs);
+$(Include=qvs.plm\productocolor.qvs);
+$(Include=qvs.plm\productotalla.qvs);
 
-$(Must_Include=qvs.plm\productcolors.qvs);
+/*Listado de Materiales*/
+$(Must_Include=qvs.plm\headlistamaterial.qvs);
+$(Must_Include=qvs.plm\linelistamaterial.qvs);
+
+
+
 ///$tab Exit Script
 TRACE Modelo Finalizado;
+
 EXIT SCRIPT;
+///$tab Descarga-Old
+
+//$(Must_Include=qvs.plm\product.qvs);
+//
+//$(Must_Include=qvs.plm\productcolors.qvs);
+
+//$(Must_Include=qvs.componentes\calendario.qvs);
+//
+//$(Must_Include=qvs.plm\bom.qvs);
+//
+//$(Must_Include=qvs.plm\enums.qvs);
+//
+//$(Must_Include=qvs.plm\headlistamaterial.qvs);
+//
+//$(Must_Include=qvs.plm\linelistamaterial.qvs);

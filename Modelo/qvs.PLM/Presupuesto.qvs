@@ -1,38 +1,28 @@
 ﻿/*****************************************************************************************************
 	Detalle :
-	Extracción de Dimensiones: Presupuesto
+	Modelo: Presupuesto
 	-------------------------------------------------------------------------------------------------
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	10/18/2016  |   malemos         |   Inicio de Configuración
+	11/03/2016	| 	malemos			| 	Cambio de Base de Datos a que apunta De Descarga a Interfaz
 *****************************************************************************************************/
 
-Presupuesto_tmp:
+Presupuesto:
 	LOAD 
-		'Q'		 				as CodEmpresa,
-		COLECCIÓN				as CodColeccion,
-		CodMarca				as CodMarca,
-		GENERO 					as CodGenero,
-		[NOMBRE LINEA]			as CodLinea, 
-		GENERO&[NOMBRE LINEA]	as CodLineaQuest,
-		SUBLINEA 				as CodSubLinea,
-		[TIPO DE PRODUCTO] 		as CodTipoProducto, 
-		ORIGEN					as CodTipoAdquisicion,
-		[TAMAÑO DE LOTE] 		as LotePpto,
-		PRESUPUESTO				as UndsPpto,
-		VersionPpto 			as VrPpto
+		CK.IdLlaveProducto, 
+	    Ppto.Marca, 
+	    Ppto.IdGenero, 
+	    Ppto.IdLinea, 
+	    Ppto.IdSubLinea, 
+	    Ppto.IdTipoProducto, 
+	    Ppto.IdTipoAdquisicion, 
+	    Ppto.ColeccionVersion, 
+	    Ppto.LotePpto, 
+	    Ppto.UndsPpto, 
+	    Ppto.UndsTotalPpto, 
+	    Ppto.VrPpto
 	FROM
-	[..\QVD\PLM\MatrizPpto.QVD]
+	[..\QVD\PLM\_Presupuesto.QVD]
 	(qvd);
-
-NoConcatenate
-	Presupuesto:
-	LOAD 
-		AutoNumber(CodEmpresa&CodColeccion&CodMarca&CodGenero&CodLineaQuest&CodLinea&CodSubLinea&CodTipoProducto&CodTipoAdquisicion) as Llave,
-		CodColeccion & VrPpto 		as ColeccionVersion,
-		LotePpto,
-		UndsPpto,
-		UndsPpto*LotePpto 			as UndsTotalPpto,
-		VrPpto
-	Resident Presupuesto_tmp;
-	DROP Table Presupuesto_tmp;
+	

@@ -1,0 +1,66 @@
+﻿/*****************************************************************************************************
+	Detalle :
+	Extracción de Dimensiones: Product
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	10/18/2016  |   malemos         |   Inicio de Configuración
+	11/03/2016	|	malemos			|	Cambio de base de datos a que apunta De Descarga A Interfaz
+*****************************************************************************************************/
+
+Producto:
+	LOAD 
+		CK.IdLlaveProducto, 
+		SK.IdPLM,
+		Producto.IdProducto, 
+		Producto.Descripcion, 
+		Producto.Banda, 
+		Producto.Clima, 
+		Producto.Coleccion, 
+		Producto.Cuello, 
+		Producto.Error, 
+		Producto.Genero, 
+		Producto.GrupoProducto, 
+		Producto.Lavado, 
+		Producto.Linea, 
+		Producto.Manga, 
+		Producto.Marca, 
+		Producto.NivelModa, 
+		Producto.Patronista, 
+		Producto.Procedencia, 
+		Producto.Silueta, 
+		Producto.Sublinea, 
+		Producto.TipoAquision, 
+		Producto.TipoPrenda, 
+		Producto.TipoProducto, 
+		Producto.UnidadMedidaInventario, 
+		Producto.UnidadMedidaVenta, 
+		Producto.EstadoExportacion, 
+		Producto.EstadoSincronizacion, 
+		Producto.FechaActualizacion, 
+		Producto.FechaCreacion, 
+		Producto.IdBanda, 
+		Producto.IdClima, 
+		Producto.IdColeccion, 
+		Producto.IdCuello, 
+		Producto.IdGenero, 
+		Producto.IdGrupoProducto, 
+		Producto.IdLavado, 
+		Producto.IdLinea, 
+		Producto.IdManga, 
+		Producto.IdMarca, 
+		Producto.IdNivelModa, 
+		Producto.IdPatronista, 
+		Producto.IdPLM, 
+		Producto.IdProcedencia, 
+		Producto.IdSilueta, 
+		Producto.IdSublinea, 
+		Producto.IdTipoAdquisicion, 
+		Producto.IdTipoPrenda, 
+		Producto.IdTipoProducto, 
+		Producto.IdUnidadMedidaInventario, 
+		Producto.IdUnidadMedidaVenta
+	FROM
+	[..\QVD\PLM\_Producto.QVD]
+	(qvd);
+

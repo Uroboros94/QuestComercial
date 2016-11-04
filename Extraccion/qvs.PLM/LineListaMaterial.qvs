@@ -56,7 +56,7 @@ Sql Select
 		When 'SE' Then 'Proveedor'
 		Else 'Artículo'
 	End As BOMType
-From [INTERFAZPLM].dbo.[ListaMateriales] As LM
+From [INTERFAZPLM].dbo.[ListaMateriales_QV] As LM
 Union all
 Select 
 	UnitId, 
