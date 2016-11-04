@@ -1,0 +1,26 @@
+/*****************************************************************************************************
+	Detalle :
+	Transformacion de Dimensiones: Materiales - Colores
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/04/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+_MatColor: 
+	LOAD
+		CodigoMaterial			as SK.Material,
+
+		IdPLM					as MatColor.IdPLM,
+		CodigoMaterial			as MatColor.IdMaterial,
+		Color					as MatColor.IdColor,
+		DescripcionColor		as MatColor.Color,
+		FechaCreacion			as MatColor.FechaCreacion,
+		FechaActualizacion		as MatColor.FechaActualizacion,
+		EstadoSincronizacion	as MatColor.EstadoSincronizacion
+	FROM
+	[..\QVD\PLM\MateriaPrimaInsumosIColor_QV.QVD]
+	(qvd);
+
+STORE _MatColor INTO [..\QVD\PLM\_MatColor.QVD](qvd);
+DROP TABLE _MatColor;

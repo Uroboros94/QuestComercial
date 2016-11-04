@@ -26,3 +26,19 @@ $(Include=qvs.plm\_producto.qvs);
 $(Include=qvs.plm\_productocolor.qvs);
 $(Include=qvs.plm\_productotalla.qvs);
 
+/*Transformación de Materiales*/
+$(Include=qvs.plm\_material.qvs);
+$(Include=qvs.plm\_matcolor.qvs);
+$(Include=qvs.plm\_mattalla.qvs);
+
+
+
+
+///$tab Fact
+/*Transformación de lista de Materiales*/
+$(Include=qvs.plm\_listamateriales.qvs);
+	
+///$tab Exit
+TRACE Transformacion Finalizada;
+EXIT SCRIPT;
+

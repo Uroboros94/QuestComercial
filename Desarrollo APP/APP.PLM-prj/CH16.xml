@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Count(CodReferencia)</v>
+        <v>Count(Producto.IdProducto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -675,7 +675,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesEstadoAprobacion</Name>
+        <Name>Producto.EstadoAprobacion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1101,14 +1101,14 @@
     <Legend>
       <Font></Font>
       <Position>
-        <Left>738</Left>
-        <Top>9</Top>
+        <Left>775</Left>
+        <Top>19</Top>
         <Width>359</Width>
         <Height>594</Height>
       </Position>
       <RelativePosition>
-        <Left>3FE4A4B3055EE191</Left>
-        <Top>3F8D7DBF487FCB92</Top>
+        <Left>3FE5ADA67D508F37</Left>
+        <Top>3F9F212D77318FC5</Top>
         <Width>3FD4157B86440729</Width>
         <Height>3FEE69AD42C3C9EF</Height>
       </RelativePosition>
@@ -1695,13 +1695,13 @@
     <LeftAxisPosition>
       <Left>0</Left>
       <Top>201</Top>
-      <Width>140</Width>
+      <Width>9</Width>
       <Height>525</Height>
     </LeftAxisPosition>
     <RightAxisPosition>
       <Left>980</Left>
       <Top>201</Top>
-      <Width>332</Width>
+      <Width>228</Width>
       <Height>525</Height>
     </RightAxisPosition>
     <TopAxisPosition>
@@ -1716,7 +1716,7 @@
       <Width>1400</Width>
       <Height>174</Height>
     </BottomAxisPosition>
-    <LeftAxisUserSized>false</LeftAxisUserSized>
+    <LeftAxisUserSized>true</LeftAxisUserSized>
     <RightAxisUserSized>true</RightAxisUserSized>
     <TopAxisUserSized>false</TopAxisUserSized>
     <BottomAxisUserSized>false</BottomAxisUserSized>
@@ -2552,7 +2552,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesEstadoAprobacion</DimName>
+          <DimName>Producto.EstadoAprobacion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -2569,7 +2569,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count(CodReferencia)</v>
+              <v>Count(Producto.IdProducto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

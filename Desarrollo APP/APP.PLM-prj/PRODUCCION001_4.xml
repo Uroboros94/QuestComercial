@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>sum(LotePpto)</v>
+        <v>sum(Ppto.LotePpto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(UndsPpto)</v>
+        <v>sum(Ppto.UndsPpto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(UndsPpto)*sum(LotePpto)</v>
+        <v>sum(Ppto.UndsPpto)*sum(Ppto.LotePpto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Count({&lt;CodEstadoComite={'2'}&gt;}CodReferencia)
+        <v>Count({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}Producto.IdProducto)
 </v>
       </Definition>
       <Enable>true</Enable>
@@ -330,7 +330,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;CodEstadoComite={'2'}&gt;}QST_StyleAttr_TamanoLoteAprobado_enum)</v>
+        <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}Producto.LoteAprobado)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -380,7 +380,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Lote Aprobado]/sum(UndsTotalPpto)</v>
+        <v>[Lote Aprobado]/sum(Ppto.UndsTotalPpto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -3804,7 +3804,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CodLineaQuest</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3990,7 +3990,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesLinea</Name>
+        <Name>Producto.Linea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4176,7 +4176,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesSublinea</Name>
+        <Name>Producto.Sublinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6468,17 +6468,9 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CodLineaQuest</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>DesLinea</DimName>
+          <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6486,15 +6478,17 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesSublinea</DimName>
-          <ElemNo>
-            <int>-2</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-          </ElemValues>
+          <DimName>Producto.Linea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Sublinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>
@@ -6509,7 +6503,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(LotePpto)</v>
+              <v>sum(Ppto.LotePpto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7092,7 +7086,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(UndsPpto)</v>
+              <v>sum(Ppto.UndsPpto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7675,7 +7669,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(UndsPpto)*sum(LotePpto)</v>
+              <v>sum(Ppto.UndsPpto)*sum(Ppto.LotePpto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8258,7 +8252,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count({&lt;CodEstadoComite={'2'}&gt;}CodReferencia)
+              <v>Count({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}Producto.IdProducto)
 </v>
             </Definition>
             <Enable>true</Enable>
@@ -8849,7 +8843,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;CodEstadoComite={'2'}&gt;}QST_StyleAttr_TamanoLoteAprobado_enum)</v>
+              <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}Producto.LoteAprobado)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -10029,7 +10023,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Lote Aprobado]/sum(UndsTotalPpto)</v>
+              <v>[Lote Aprobado]/sum(Ppto.UndsTotalPpto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

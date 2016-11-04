@@ -1,0 +1,21 @@
+/*****************************************************************************************************
+	Detalle :
+	Modelo de Dimensiones: MatTalla
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/04/2016	|	malemos			|	Inicio de Configuración
+*****************************************************************************************************/
+
+MatTalla:
+	LOAD 
+		SK.Material, 
+		MatTalla.IdPLM, 
+		MatTalla.IdMaterial, 
+		MatTalla.IdTalla, 
+		MatTalla.FechaCreacion, 
+		MatTalla.FechaActualizacion, 
+		MatTalla.EstadoSincronizacion
+	FROM
+	[..\QVD\PLM\_MatTalla.QVD]
+	(qvd);
