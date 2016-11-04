@@ -24,7 +24,7 @@ HeadListadoMaterial:
 		, Convert(varchar, FechaCreacion, 103) As FromDate
 		, '31/12/2050' As ToDate
 		, 1 As FromQty
-	From [INTERFAZPLM].dbo.[ListaMateriales]
+	From [INTERFAZPLM].dbo.[ListaMateriales_QV]
 	Group By AprobadoPor
 		, Replace(Descripcion, ' - ', '_') + '_' + RTrim(TallaProducto) +  '_' + RTrim(ColorProducto)
 		, RTrim(CodigoProducto) + RTrim(TallaProducto) + RTrim(ColorProducto)

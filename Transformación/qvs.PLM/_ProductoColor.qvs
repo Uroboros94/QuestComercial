@@ -1,0 +1,24 @@
+/*****************************************************************************************************
+	Detalle :
+	Transformacion de Dimensiones: Producto-Colores
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/03/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+_ProductoColor:
+	LOAD
+		IdPLM					as SK.IdPLM, 
+		Color					as Color.Id, 	
+		DescripcionColor		as Color.Nombre, 
+		EstadoSincronizacion	as Color.EstadoSincronizacion, 
+		FechaActualizacion		as Color.FechaActualizacion, 
+		FechaCreacion			as Color.FechaCreado, 
+		IdPLM					as Color.IdPLM
+	FROM
+	[..\QVD\PLM\ProductoColor_QV.QVD]
+	(qvd);
+
+STORE _ProductoColor INTO [..\QVD\PLM\_ProductoColor.QVD](qvd);
+DROP TABLE _ProductoColor;
