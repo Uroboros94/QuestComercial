@@ -16,10 +16,11 @@ SET BrokenWeeks=1;
 SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
-
 ///$tab Dim
 /*Transformación de Ppto*/
 $(Include=qvs.plm\_presupuesto.qvs);
+$(Include=qvs.plm\_pptocontrol.qvs);
+
 
 /*Transformación Producto*/
 $(Include=qvs.plm\_producto.qvs);
@@ -41,4 +42,3 @@ $(Include=qvs.plm\_listamateriales.qvs);
 ///$tab Exit
 TRACE Transformacion Finalizada;
 EXIT SCRIPT;
-
