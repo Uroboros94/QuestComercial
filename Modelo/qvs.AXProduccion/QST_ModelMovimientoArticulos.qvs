@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Logistica
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+08/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+QUALIFY *;
+UNQUALIFY SK.KEYPRODUCT;
+MovimientosArticulos:
+  LOAD
+    CODARTICULO&TALLA&COLORID as SK.KEYPRODUCT,
+    DESCMOVIMIENTO,
+    CANTDIARIO,
+    NOMBREALMACEN,
+    CODALMACEN,
+    COLORID,
+    TALLA,
+    CODARTICULO,
+    FECHADIARIO,
+    CODIGODIARIO
+  FROM
+  [..\QVD\QST_ModelMovimientoArticulos.QVD]
+  (qvd);
+UNQUALIFY *;

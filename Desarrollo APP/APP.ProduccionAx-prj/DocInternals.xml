@@ -24,6 +24,7 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -227,8 +228,10 @@
     <String>Productos</String>
     <String>ListadoPrecios</String>
     <String>71</String>
-    <String>2</String>
+    <String>4</String>
     <String>Productos</String>
+    <String>InventarioDisponible</String>
+    <String>MovimientosArticulos</String>
     <String>LinkTable</String>
     <String>72</String>
     <String>1</String>
@@ -1309,15 +1312,15 @@
     <String>1</String>
     <String>PedidosTransfer</String>
     <String>428</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>429</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>430</String>
     <String>2</String>
     <String>RutasPicking</String>
     <String>LinkTable</String>
-    <String>429</String>
-    <String>1</String>
-    <String>RutasPicking</String>
-    <String>430</String>
-    <String>1</String>
-    <String>RutasPicking</String>
     <String>431</String>
     <String>1</String>
     <String>RutasPicking</String>
@@ -1368,10 +1371,10 @@
     <String>RutasPicking</String>
     <String>447</String>
     <String>1</String>
-    <String>InventarioDisponible</String>
+    <String>RutasPicking</String>
     <String>448</String>
     <String>1</String>
-    <String>InventarioDisponible</String>
+    <String>RutasPicking</String>
     <String>449</String>
     <String>1</String>
     <String>InventarioDisponible</String>
@@ -1428,8 +1431,41 @@
     <String>InventarioDisponible</String>
     <String>467</String>
     <String>1</String>
-    <String>INLFED</String>
+    <String>InventarioDisponible</String>
     <String>468</String>
+    <String>1</String>
+    <String>InventarioDisponible</String>
+    <String>469</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>470</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>471</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>472</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>473</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>474</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>475</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>476</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>477</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>478</String>
+    <String>1</String>
+    <String>INLFED</String>
+    <String>479</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -2025,6 +2061,9 @@
           <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>InventarioDisponible.NOMBREALMACEN</String>
           <String>InventarioDisponible.UBICACION</String>
+          <String>MovimientosArticulos.DESCMOVIMIENTO</String>
+          <String>MovimientosArticulos.NOMBREALMACEN</String>
+          <String>MovimientosArticulos.CODIGODIARIO</String>
           <String>Dimensiones</String>
           <String>Calculos</String>
         </FieldNames>
@@ -2254,6 +2293,9 @@
           <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>InventarioDisponible.NOMBREALMACEN</String>
           <String>InventarioDisponible.UBICACION</String>
+          <String>MovimientosArticulos.DESCMOVIMIENTO</String>
+          <String>MovimientosArticulos.NOMBREALMACEN</String>
+          <String>MovimientosArticulos.CODIGODIARIO</String>
           <String>Dimensiones</String>
           <String>Calculos</String>
         </FieldNames>
@@ -2449,10 +2491,11 @@
           <String>Precio.FechaVigencia</String>
           <String>Precio.FechaModificacion</String>
           <String>%PedidosTransferKey</String>
-          <String>PedidosTransfer.CODALMACENORIGEN</String>
           <String>PedidosTransfer.CODARTICULO</String>
           <String>PedidosTransfer.COLORID</String>
           <String>PedidosTransfer.CANTTRANSFERENCIA</String>
+          <String>PedidosTransfer.FECHARECIBIDO</String>
+          <String>PedidosTransfer.FECHAENVIO</String>
           <String>%RutasPickingKey</String>
           <String>RutasPicking.TIEMPOACTIVACION</String>
           <String>RutasPicking.CODIGOTRABAJADOR</String>
@@ -2475,6 +2518,8 @@
           <String>InventarioDisponible.InvenFisico</String>
           <String>InventarioDisponible.PedidoTotal</String>
           <String>InventarioDisponible.TotalDisponible</String>
+          <String>MovimientosArticulos.CANTDIARIO</String>
+          <String>MovimientosArticulos.FECHADIARIO</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2656,10 +2701,11 @@
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
           <String>%PedidosTransferKey</String>
-          <String>PedidosTransfer.CODALMACENORIGEN</String>
           <String>PedidosTransfer.CODARTICULO</String>
           <String>PedidosTransfer.COLORID</String>
           <String>PedidosTransfer.CANTTRANSFERENCIA</String>
+          <String>PedidosTransfer.FECHARECIBIDO</String>
+          <String>PedidosTransfer.FECHAENVIO</String>
           <String>%RutasPickingKey</String>
           <String>RutasPicking.CODIGOTRABAJADOR</String>
           <String>RutasPicking.CODIGOCLIENTE</String>
@@ -2675,6 +2721,7 @@
           <String>InventarioDisponible.ENORDEN</String>
           <String>InventarioDisponible.LLEGADA</String>
           <String>InventarioDisponible.ORDENADARESERVADA</String>
+          <String>MovimientosArticulos.FECHADIARIO</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2702,6 +2749,7 @@
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaModificacion</String>
           <String>RutasPicking.TIEMPOACTIVACION</String>
+          <String>MovimientosArticulos.FECHADIARIO</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2723,6 +2771,7 @@
           <String>RpProduccion.FechaCreacionRef</String>
           <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>Precio.FechaAplicacion</String>
+          <String>MovimientosArticulos.FECHADIARIO</String>
         </FieldNames>
       </FieldTagData>
     </ScriptBased>
