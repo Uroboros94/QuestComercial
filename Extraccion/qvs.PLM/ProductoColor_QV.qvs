@@ -1,0 +1,21 @@
+/*----------------------------------------------------------------------------------------------------
+	Detalle :
+	Extracción de Dimensiones: Extracción de Maestro de Colores de los Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/03/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+ProductoColor_QV:
+	SQL Select
+		//CodigoProducto,
+		Color,
+		DescripcionColor,
+		EstadoSincronizacion,
+		FechaActualizacion,
+		FechaCreacion,
+		IdPLM
+	From ProductoColor_QV;
+
+STORE ProductoColor_QV INTO [..\QVD\PLM\ProductoColor_QV.QVD](qvd);
+DROP TABLE ProductoColor_QV;

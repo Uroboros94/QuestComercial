@@ -1,0 +1,62 @@
+/*----------------------------------------------------------------------------------------------------
+	Detalle :
+	Extracción de Dimensiones: Extracción de Maestro de Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/03/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+Producto_QV:	
+	SQL Select	
+		CodigoProducto,
+		Descripcion,
+		DescripcionBanda,
+		DescripcionClima,
+		DescripcionColeccion,
+		DescripcionCuello,
+		DescripcionError,
+		DescripcionGenero,
+		DescripcionGrupoProducto,
+		DescripcionLavado,
+		DescripcionLinea,
+		DescripcionManga,
+		DescripcionMarca,
+		DescripcionNivelModa,
+		DescripcionPatronista,
+		DescripcionProcedencia,
+		DescripcionSilueta,
+		DescripcionSublinea,
+		DescripcionTipoAquision,
+		DescripcionTipoPrenda,
+		DescripcionTipoProducto,
+		DesUnidadMedidaInventario,
+		desUnidadMedidaVenta,
+		EstadoExportacion,
+		EstadoSincronizacion,
+		FechaActualizacion,
+		FechaCreacion,
+		IdBanda,
+		IdClima,
+		IdColeccion,
+		IdCuello,
+		IdGenero,
+		IdGrupoProducto,
+		IdLavado,
+		IdLinea,
+		IdManga,
+		IdMarca,
+		IdNivelModa,
+		IdPatronista,
+		IdPLM,
+		IdProcedencia,
+		IdSilueta,
+		IdSublinea,
+		IdTipoAquision,
+		IdTipoPrenda,
+		IdTipoProducto,
+		UnidadMedidaInventario,
+		UnidadMedidaVenta
+	From Producto_QV;
+
+STORE Producto_QV INTO [..\QVD\PLM\Producto_QV.QVD](qvd);
+DROP TABLE Producto_QV;	
