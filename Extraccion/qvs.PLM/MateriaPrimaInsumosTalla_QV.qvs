@@ -1,0 +1,21 @@
+/****************************************************************************************************
+ 	Detalle :
+    Extracción de Dimensiones: Maestro de Materia Prima e Insumos - Tallas 
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/03/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+MateriaPrimaInsumosTalla_QV:
+	SQL Select 
+		IdPLM,
+		CodigoMaterial,
+		Talla,
+		FechaCreacion,
+		FechaActualizacion,
+		EstadoSincronizacion
+	From MateriaPrimaInsumosTalla_QV;
+
+STORE MateriaPrimaInsumosTalla_QV INTO [..\QVD\PLM\MateriaPrimaInsumosTalla_QV.QVD](qvd);
+DROP TABLE MateriaPrimaInsumosTalla_QV;

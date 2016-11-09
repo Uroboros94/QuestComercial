@@ -1,0 +1,22 @@
+/*****************************************************************************************************
+	Detalle :
+	Modelo de Dimensiones: MatColor
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/04/2016	|	malemos			|	Inicio de Configuración
+*****************************************************************************************************/
+
+MatColor:
+	LOAD 
+		SK.Material, 
+		MatColor.IdPLM, 
+		MatColor.IdMaterial, 
+		MatColor.IdColor, 
+		MatColor.Color, 
+		MatColor.FechaCreacion, 
+		MatColor.FechaActualizacion, 
+		MatColor.EstadoSincronizacion
+	FROM
+	[..\QVD\PLM\_MatColor.QVD]
+	(qvd);

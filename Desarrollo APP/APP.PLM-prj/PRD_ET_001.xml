@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
@@ -52,7 +52,7 @@
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
+      <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Count(CodReferencia)</v>
+        <v>Count(Producto.IdProducto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -675,7 +675,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesEstadoComite</Name>
+        <Name>Producto.EstadoAprobacionComite</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -693,7 +693,7 @@
         <SortByGreyness>0</SortByGreyness>
       </SortCriteria>
       <ShowAll>false</ShowAll>
-      <ShowLabel>true</ShowLabel>
+      <ShowLabel>false</ShowLabel>
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
@@ -1101,21 +1101,21 @@
     <Legend>
       <Font></Font>
       <Position>
-        <Left>0</Left>
+        <Left>659</Left>
         <Top>0</Top>
-        <Width>313</Width>
-        <Height>144</Height>
+        <Width>328</Width>
+        <Height>469</Height>
       </Position>
       <RelativePosition>
-        <Left>0000000000000000</Left>
+        <Left>3FE506617FDF547C</Left>
         <Top>0000000000000000</Top>
-        <Width>3FD4467A4CB24468</Width>
-        <Height>3FC87A63F3C2CE06</Height>
+        <Width>3FD4EDE0DC85BE26</Width>
+        <Height>3FE2646464646464</Height>
       </RelativePosition>
       <RelativePositionType>2</RelativePositionType>
       <Show>true</Show>
       <ShowNumbers>false</ShowNumbers>
-      <DockedPosition>POSITION_TOP</DockedPosition>
+      <DockedPosition>POSITION_FREE</DockedPosition>
       <BgColor>
         <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
@@ -2552,7 +2552,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesEstadoComite</DimName>
+          <DimName>Producto.EstadoAprobacionComite</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -2569,7 +2569,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count(CodReferencia)</v>
+              <v>Count(Producto.IdProducto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

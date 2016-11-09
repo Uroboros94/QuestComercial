@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -201,8 +201,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_SIX</ScrollStyle>
-      <ScrollWidth>38</ScrollWidth>
+      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
+      <ScrollWidth>29</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>sum(LotePpto)</v>
+        <v>sum(Ppto.LotePpto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,8 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>//sum({&lt;CodEstadoAprobacion={'2'}&gt;}UndsPresupuesto)/Count({&lt;CodEstadoAprobacion={'2'}&gt;}UndsPresupuesto)
-sum(UndsPpto)</v>
+        <v>sum(Ppto.UndsPpto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -280,7 +279,7 @@ sum(UndsPpto)</v>
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Count({&lt;CodEstadoComite={'2'}&gt;}CodReferencia)</v>
+        <v>Count({&lt;Producto.EstadoAprobacionComite={'2'}&gt;}Producto.IdProducto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2274,7 +2273,7 @@ sum(UndsPpto)</v>
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesGenero</Name>
+        <Name>Producto.Genero</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2460,7 +2459,7 @@ sum(UndsPpto)</v>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CodLineaQuest</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2646,193 +2645,7 @@ sum(UndsPpto)</v>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesLinea</Name>
-        <Type>PRESENT</Type>
-      </PseudoDef>
-      <Title>
-        <v>Linea</v>
-      </Title>
-      <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
-      <ShowAll>false</ShowAll>
-      <ShowLabel>true</ShowLabel>
-      <ShowLegend>true</ShowLegend>
-      <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
-      <LabelVerticalAdjust>4</LabelVerticalAdjust>
-      <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
-      <VerticalAdjust>4</VerticalAdjust>
-      <DimCellVariations>
-        <CellVariationDef>
-          <PreMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreMinorBorder>
-          <PostMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostMinorBorder>
-          <MajorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </MajorBorder>
-          <PreTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreTotalBorder>
-          <PostTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostTotalBorder>
-          <SizeMod>0</SizeMod>
-          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
-          <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
-          <BgColor>
-            <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </BgColor>
-          <TotalFgColor></TotalFgColor>
-          <TotalBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </TotalBgColor>
-          <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
-          <OtherFgColor></OtherFgColor>
-          <OtherBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </OtherBgColor>
-        </CellVariationDef>
-      </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
-      <ImageRepresentation></ImageRepresentation>
-      <ExcludedValuesMode>0</ExcludedValuesMode>
-      <DefaultSearchMode>0</DefaultSearchMode>
-      <SelectionStyle>SS_USER_PREF</SelectionStyle>
-      <MaxStringLength>0</MaxStringLength>
-      <AttributeExpressions></AttributeExpressions>
-      <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
-      <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
-      <OverrideGroupSort>false</OverrideGroupSort>
-      <Show></Show>
-      <EnableCondition></EnableCondition>
-      <Comment></Comment>
-      <OtherTotalSpec>
-        <OtherMode>OTHER_OFF</OtherMode>
-        <OtherCounted>
-          <v>10</v>
-        </OtherCounted>
-        <OtherLimit>
-          <v>0.05</v>
-        </OtherLimit>
-        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
-        <ForceBadValueKeeping>true</ForceBadValueKeeping>
-        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
-        <GlobalOtherGrouping>false</GlobalOtherGrouping>
-        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
-        <TotalMode>TOTAL_OFF</TotalMode>
-        <ReferencedExpression></ReferencedExpression>
-      </OtherTotalSpec>
-      <OtherString></OtherString>
-    </ChartDimensionDataDef>
-    <ChartDimensionDataDef>
-      <PseudoDef>
-        <Name>DesSublinea</Name>
+        <Name>Producto.Sublinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3018,7 +2831,7 @@ sum(UndsPpto)</v>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesTipoProducto</Name>
+        <Name>Producto.TipoProducto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3204,7 +3017,7 @@ sum(UndsPpto)</v>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesTipoAdquisicion</Name>
+        <Name>Producto.TipoAquision</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3390,7 +3203,7 @@ sum(UndsPpto)</v>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CodReferencia</Name>
+        <Name>Producto.IdProducto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3552,10 +3365,7 @@ sum(UndsPpto)</v>
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition>
-        <Type>COND_EX_TRUE</Type>
-        <Expression>1=2</Expression>
-      </EnableCondition>
+      <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4936,7 +4746,6 @@ sum(UndsPpto)</v>
       <int>172</int>
       <int>300</int>
       <int>300</int>
-      <int>300</int>
       <int>528</int>
       <int>300</int>
       <int>153</int>
@@ -5442,20 +5251,19 @@ sum(UndsPpto)</v>
       <int>7</int>
       <int>8</int>
       <int>9</int>
-      <int>10</int>
       <int>0</int>
       <int>4</int>
       <int>5</int>
       <int>2</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>7</ExpressionPosition>
-    <NumberOfLeftDimensions>7</NumberOfLeftDimensions>
+    <ExpressionPosition>6</ExpressionPosition>
+    <NumberOfLeftDimensions>6</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
     <InnerPixWidth>300</InnerPixWidth>
     <AllowPivoting>true</AllowPivoting>
-    <PivotAlwaysFullyExpanded>false</PivotAlwaysFullyExpanded>
+    <PivotAlwaysFullyExpanded>true</PivotAlwaysFullyExpanded>
     <AllowMenuSort>true</AllowMenuSort>
     <ShowSortIndicators>true</ShowSortIndicators>
     <ShowSelectIndicators>true</ShowSelectIndicators>
@@ -5479,7 +5287,7 @@ sum(UndsPpto)</v>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesSublinea</DimName>
+          <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5487,15 +5295,7 @@ sum(UndsPpto)</v>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CodReferencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>DesGenero</DimName>
+          <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5503,7 +5303,7 @@ sum(UndsPpto)</v>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesTipoProducto</DimName>
+          <DimName>Producto.Sublinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5511,29 +5311,23 @@ sum(UndsPpto)</v>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesTipoAdquisicion</DimName>
-          <ElemNo>
-            <int>-2</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>CodLineaQuest</DimName>
+          <DimName>Producto.TipoProducto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesLinea</DimName>
+          <DimName>Producto.TipoAquision</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdProducto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5550,7 +5344,7 @@ sum(UndsPpto)</v>
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(LotePpto)</v>
+              <v>sum(Ppto.LotePpto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6133,8 +5927,7 @@ sum(UndsPpto)</v>
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>//sum({&lt;CodEstadoAprobacion={'2'}&gt;}UndsPresupuesto)/Count({&lt;CodEstadoAprobacion={'2'}&gt;}UndsPresupuesto)
-sum(UndsPpto)</v>
+              <v>sum(Ppto.UndsPpto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6717,7 +6510,7 @@ sum(UndsPpto)</v>
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count({&lt;CodEstadoComite={'2'}&gt;}CodReferencia)</v>
+              <v>Count({&lt;Producto.EstadoAprobacionComite={'2'}&gt;}Producto.IdProducto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

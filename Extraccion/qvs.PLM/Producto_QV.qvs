@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------------------------------------------
+﻿/*----------------------------------------------------------------------------------------------------
 	Detalle :
 	Extracción de Dimensiones: Extracción de Maestro de Productos
 	-------------------------------------------------------------------------------------------------
@@ -7,7 +7,11 @@
 	11/03/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
 Producto_QV:	
-	SQL Select	
+	SQL Select
+		___CT,	
+		QST_Style_StatusBOM_enum,
+		QST_StyleAttr_SisproCode_string,
+		Costo,
 		CodigoProducto,
 		Descripcion,
 		DescripcionBanda,
@@ -31,8 +35,11 @@ Producto_QV:
 		DescripcionTipoProducto,
 		DesUnidadMedidaInventario,
 		desUnidadMedidaVenta,
+		Diseñador,
 		EstadoExportacion,
 		EstadoSincronizacion,
+		EstadoAprobacion,
+		EstadoAprobacionComite,
 		FechaActualizacion,
 		FechaCreacion,
 		IdBanda,
@@ -54,6 +61,8 @@ Producto_QV:
 		IdTipoAquision,
 		IdTipoPrenda,
 		IdTipoProducto,
+		Semanaentrada,
+		LoteAprobado,
 		UnidadMedidaInventario,
 		UnidadMedidaVenta
 	From Producto_QV;

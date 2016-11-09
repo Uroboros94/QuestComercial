@@ -1,4 +1,4 @@
-/*****************************************************************************************************
+﻿/*****************************************************************************************************
 	Detalle :
 	Transformacion de Dimensiones: Producto
 	-------------------------------------------------------------------------------------------------
@@ -6,70 +6,126 @@
 	-------------------------------------------------------------------------------------------------
 	11/03/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
+
 Producto_temp:
 	LOAD
 		*
 	FROM [..\QVD\PLM\Producto_QV.QVD](qvd);
 
-QUALIFY *;
-UNQUALIFY CK.IdLlaveProducto,SK.IdPLM;
-	Producto:
-		LOAD
-			IdColeccion&Upper(DescripcionMarca)&IdGenero
-			&Right(IdLinea,2)&Right(IdSublinea,2)&IdTipoProducto&IdTipoAquision 						as CK.IdLlaveProducto,
-			IdPLM 																						as SK.IdPLM,
+Mapping
+Generos:
+	LOAD Distinct
+		IdGenero,
+		DescripcionGenero
+	Resident Producto_temp;
 
-			CodigoProducto																				as IdProducto,
-			Descripcion 																				as Descripcion,	
-			DescripcionBanda																			as Banda,
-			DescripcionClima 																			as Clima,
-			DescripcionColeccion																		as Coleccion,
-			DescripcionCuello 																			as Cuello,
-			DescripcionError 																			as Error,
-			DescripcionGenero 																			as Genero,
-			DescripcionGrupoProducto																	as GrupoProducto,
-			DescripcionLavado																			as Lavado,
-			DescripcionLinea																			as Linea,
-			DescripcionManga																			as Manga,
-			DescripcionMarca																			as Marca,
-			DescripcionNivelModa																		as NivelModa,
-			DescripcionPatronista																		as Patronista,
-			DescripcionProcedencia																		as Procedencia,
-			DescripcionSilueta																			as Silueta,
-			DescripcionSublinea																			as Sublinea,
-			DescripcionTipoAquision																		as TipoAquision,
-			DescripcionTipoPrenda																		as TipoPrenda,
-			DescripcionTipoProducto																		as TipoProducto,
-			DesUnidadMedidaInventario																	as UnidadMedidaInventario,
-			desUnidadMedidaVenta																		as UnidadMedidaVenta,
-			EstadoExportacion 																			as EstadoExportacion,
-			EstadoSincronizacion 																		as EstadoSincronizacion,
-			FechaActualizacion 																			as FechaActualizacion,
-			FechaCreacion 																				as FechaCreacion,
-			IdBanda 																					as IdBanda,
-			IdClima 																					as IdClima,
-			IdColeccion 																				as IdColeccion,
-			IdCuello 																					as IdCuello,
-			IdGenero 																					as IdGenero,
-			IdGrupoProducto 																			as IdGrupoProducto,
-			IdLavado 																					as IdLavado,
-			IdGenero & Right(IdLinea,2) 																as IdLinea,
-			IdManga 																					as IdManga,
-			IdMarca 																					as IdMarca,
-			IdNivelModa 																				as IdNivelModa,
-			IdPatronista 																				as IdPatronista,
-			IdPLM 																						as IdPLM,
-			IdProcedencia 																				as IdProcedencia,
-			IdSilueta 																					as IdSilueta,
-			Right(IdSublinea,2)																			as IdSublinea,
-			IdTipoAquision 																				as IdTipoAdquisicion,
-			IdTipoPrenda 																				as IdTipoPrenda,
-			IdTipoProducto 																				as IdTipoProducto,
-			UnidadMedidaInventario 																		as IdUnidadMedidaInventario,
-			UnidadMedidaVenta 																			as IdUnidadMedidaVenta
-		Resident Producto_temp;
-		Drop Table Producto_temp;
-UNQUALIFY *;
+Mapping
+Lineas:
+	LOAD Distinct
+		IdGenero & Right(IdLinea,2),
+		DescripcionLinea
+	Resident Producto_temp;
+
+Mapping
+Sublineas:
+	LOAD Distinct
+		Right(IdSublinea,2),
+		DescripcionSublinea
+	Resident Producto_temp;
+
+
+
+Producto:
+	LOAD
+		IdColeccion&Upper(DescripcionMarca)&IdGenero
+		&Right(IdLinea,2)&Right(IdSublinea,2)&IdTipoProducto&IdTipoAquision 		as CK.IdLlaveProducto,
+		//***********************************************************************************************
+		IdColeccion&Upper(DescripcionMarca)&IdGenero
+		&Right(IdLinea,2)&Right(IdSublinea,2)&IdTipoProducto&IdTipoAquision 		as Temp,
+		//***********************************************************************************************
+		IdPLM 																		as SK.IdPLM,
+		CodigoProducto																as SK.Producto,
+		Date(___CT)																	as SK.Fecha,
+		Date(___CT)																	as Producto.Fecha,
+		CodigoProducto																as Producto.IdProducto,
+		Costo																		as Producto.Costo,
+		Descripcion 																as Producto.Descripcion,	
+		DescripcionBanda															as Producto.Banda,
+		DescripcionClima 															as Producto.Clima,
+		DescripcionColeccion														as Producto.Coleccion,
+		DescripcionCuello 															as Producto.Cuello,
+		DescripcionError 															as Producto.Error,
+		DescripcionGenero 															as Producto.Genero,
+		DescripcionGrupoProducto													as Producto.GrupoProducto,
+		DescripcionLavado															as Producto.Lavado,
+		DescripcionLinea															as Producto.Linea,
+		DescripcionManga															as Producto.Manga,
+		DescripcionMarca															as Producto.Marca,
+		DescripcionNivelModa														as Producto.NivelModa,
+		DescripcionPatronista														as Producto.Patronista,
+		DescripcionProcedencia														as Producto.Procedencia,
+		DescripcionSilueta															as Producto.Silueta,
+		DescripcionSublinea															as Producto.Sublinea,
+		DescripcionTipoAquision														as Producto.TipoAquision,
+		DescripcionTipoPrenda														as Producto.TipoPrenda,
+		DescripcionTipoProducto														as Producto.TipoProducto,
+		DesUnidadMedidaInventario													as Producto.UnidadMedidaInventario,
+		desUnidadMedidaVenta														as Producto.UnidadMedidaVenta,
+		Diseñador																	as Producto.Diseñador,
+		EstadoAprobacion															as Producto.EstadoAprobacion,
+		If(IsNull(EstadoAprobacionComite),'En Desarrollo',EstadoAprobacionComite)	as Producto.EstadoAprobacionComite,	
+		EstadoExportacion 															as Producto.EstadoExportacion,
+		EstadoSincronizacion 														as Producto.EstadoSincronizacion,
+		FechaActualizacion 															as Producto.FechaActualizacion,
+		FechaCreacion 																as Producto.FechaCreacion,
+		IdBanda 																	as Producto.IdBanda,
+		IdClima 																	as Producto.IdClima,
+		IdColeccion 																as Producto.IdColeccion,
+		IdCuello 																	as Producto.IdCuello,
+		IdGenero 																	as Producto.IdGenero,
+		IdGrupoProducto 															as Producto.IdGrupoProducto,
+		IdLavado 																	as Producto.IdLavado,
+		IdGenero & Right(IdLinea,2) 												as Producto.IdLinea,
+		IdManga 																	as Producto.IdManga,
+		IdMarca 																	as Producto.IdMarca,
+		IdNivelModa 																as Producto.IdNivelModa,
+		IdPatronista 																as Producto.IdPatronista,
+		IdPLM 																		as Producto.IdPLM,
+		IdProcedencia 																as Producto.IdProcedencia,
+		IdSilueta 																	as Producto.IdSilueta,
+		Right(IdSublinea,2)															as Producto.IdSublinea,
+		IdTipoAquision 																as Producto.IdTipoAdquisicion,
+		IdTipoPrenda 																as Producto.IdTipoPrenda,
+		IdTipoProducto 																as Producto.IdTipoProducto,
+		LoteAprobado																as Producto.LoteAprobado,
+		QST_Style_StatusBOM_enum													as Producto.EstadoBOM,
+		QST_StyleAttr_SisproCode_string												as Producto.IdSisproCode,
+		Semanaentrada																as Producto.Semanaentrada,
+		UnidadMedidaInventario 														as Producto.IdUnidadMedidaInventario,
+		UnidadMedidaVenta 															as Producto.IdUnidadMedidaVenta
+	Resident Producto_temp;
+	Drop Table Producto_temp;
+	Concatenate	
+	LOAD 
+		CK.IdLlaveProducto, 
+		Ppto.Marca 											as Producto.Marca, 
+		Ppto.IdGenero 										as Producto.IdGenero,
+		ApplyMap('Generos',Ppto.IdGenero,null()) 			as Producto.Genero,
+		Ppto.IdLinea 										as Producto.IdLinea, 
+		ApplyMap('Lineas',Ppto.IdLinea,null()) 				as Producto.Linea,
+		Ppto.IdSubLinea 									as Producto.IdSublinea, 
+		ApplyMap('Sublineas',Ppto.IdSubLinea,null()) 		as Producto.Sublinea,
+		Ppto.IdTipoProducto									as Producto.IdTipoProducto, 
+		Ppto.IdTipoAdquisicion								as Producto.IdTipoAdquisicion,
+		Ppto.IdColeccion									as Producto.IdColeccion, 
+		Ppto.IdColeccion									as Producto.Coleccion, 
+		'En desarrollo'										as Producto.EstadoAprobacion,
+		'En desarrollo'										as Producto.EstadoAprobacionComite
+	FROM
+	[..\QVD\PLM\_Presupuesto.QVD]
+	(qvd)
+	Where not Exists(Temp,CK.IdLlaveProducto);
 
 STORE Producto INTO [..\QVD\PLM\_Producto.QVD](qvd);
+DROP Field Temp;
 DROP TABLE Producto;	

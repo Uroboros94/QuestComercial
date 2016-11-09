@@ -1,0 +1,25 @@
+/*****************************************************************************************************
+	Detalle :
+	Transformacion de Dimensiones: Materiales - Tallas 
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/04/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+_MatTalla:
+	LOAD
+		CodigoMaterial			as SK.Material,
+
+		IdPLM					as MatTalla.IdPLM,
+		CodigoMaterial			as MatTalla.IdMaterial,
+		Talla					as MatTalla.IdTalla,
+		FechaCreacion			as MatTalla.FechaCreacion,
+		FechaActualizacion		as MatTalla.FechaActualizacion,
+		EstadoSincronizacion	as MatTalla.EstadoSincronizacion
+	FROM
+	[..\QVD\PLM\MateriaPrimaInsumosTalla_QV.QVD]
+	(qvd);
+
+STORE _MatTalla INTO [..\QVD\PLM\_MatTalla.QVD](qvd);
+DROP TABLE _MatTalla;

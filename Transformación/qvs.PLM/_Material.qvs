@@ -1,0 +1,55 @@
+/*****************************************************************************************************
+	Detalle :
+	Transformacion de Dimensiones: Materiales
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/04/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+_Material:
+	LOAD
+		CodigoMaterial						as SK.Material,
+
+		Ancho								as Material.Ancho,
+		CodigoMaterial						as Material.Id,
+		Composicion							as Material.Composicion,
+		Descripcion							as Material.Descripcion,
+		DescripcionAparienciaDetallada		as Material.DescripcionAparienciaDetallada,
+		DescripcionAparienciaGeneral		as Material.DescripcionAparienciaGeneral,
+		DescripcionClasificacionInventarir	as Material.DescripcionClasificacionInventarir,
+		DescripcionError					as Material.DescripcionError,
+		DescripcionGeneroMaterial			as Material.DescripcionGeneroMaterial,
+		DescripcionLineaInsumo				as Material.DescripcionLineaInsumo,
+		DescripcionMarca					as Material.DescripcionMarca,
+		DescripcionMaterialInsumo			as Material.DescripcionMaterialInsumo,
+		DescripcionOperacionUso				as Material.DescripcionOperacionUso,
+		DescripcionPaisOrigen				as Material.DescripcionPaisOrigen,
+		DescripcionSublineaInsumo			as Material.DescripcionSublineaInsumo,
+		DescripcionTipologiaTejido			as Material.DescripcionTipologiaTejido,
+		DesUnidadMedidaCompra				as Material.DesUnidadMedidaCompra,
+		DesUnidadMedidaInventario			as Material.DesUnidadMedidaInventario,
+		EstadoExportacion					as Material.EstadoExportacion,
+		IdAparienciaDetalla					as Material.IdAparienciaDetalla,
+		IdAparienciaGeneral					as Material.IdAparienciaGeneral,
+		IdClasificacionInventario			as Material.IdClasificacionInventario,
+		IdColeccion							as Material.IdColeccion,
+		IdGeneroMaterial					as Material.IdGeneroMaterial,
+		IdLineaInsumo						as Material.IdLineaInsumo,
+		IdMarca								as Material.IdMarca,
+		IdMaterialInsumo					as Material.IdMaterialInsumo,
+		IdOperacionUso						as Material.IdOperacionUso,
+		IdPaisOrigen						as Material.IdPaisOrigen,
+		IdPlm								as Material.IdPlm,
+		IdSublineInsumo						as Material.IdSublineInsumo,
+		IdTipologiaTejido					as Material.IdTipologiaTejido,
+		IdTipoMaterial						as Material.IdTipoMaterial,
+		Rendimiento							as Material.Rendimiento,
+		UnidadMedidaCompra					as Material.UnidadMedidaCompra,
+		UnidadMedidaInventario				as Material.UnidadMedidaInventario
+	FROM
+	[..\QVD\PLM\MateriaPrimaInsumos_QV.QVD]
+	(qvd);
+
+STORE _Material INTO [..\QVD\PLM\_Material.QVD](qvd);
+DROP TABLE _Material;
