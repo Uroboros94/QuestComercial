@@ -75,6 +75,9 @@ $(Must_Include=qvs.ax\dimensionesfinancieras.qvs);
 
 /* Dimensión de talleres */
 $(Must_Include=qvs.ax\wrkctrtable.qvs);
+
+/* Inventario disponible. */
+$(Must_Include=qvs.ax\qst_modelinventariodisponible.qvs);
 ///$tab Hechos
 /****************** Cargue de Hechos ******************/
 
@@ -125,6 +128,9 @@ $(Must_Include=qvs.ax\listadoprecios.qvs);
 
 /* Rutas de picking. */
 $(Must_Include=qvs.ax\qst_modelpicking.qvs);
+
+/* Movimientos de articulos. */
+$(Must_Include=qvs.ax\qst_modelmovimientoarticulos.qvs);
 ///$tab Exit Script
 TRACE Extracción Finalizada;
 EXIT SCRIPT;
