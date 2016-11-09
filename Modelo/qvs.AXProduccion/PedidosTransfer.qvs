@@ -26,7 +26,9 @@ PedidosTransfer:
     COLORID,
     TALLA,
     UBICACION,
-    CANTTRANSFERENCIA
+    CANTTRANSFERENCIA,
+    Date(FECHARECIBIDO, 'DD/MM/YYYY') as FECHARECIBIDO,
+    Date(FECHAENVIO, 'DD/MM/YYYY') as FECHAENVIO
   FROM
   [..\QVD\PedidosTransfer.QVD]
   (qvd);

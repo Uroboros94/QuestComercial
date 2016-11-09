@@ -4,26 +4,20 @@
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador    |   Modificación
 -------------------------------------------------------------------------------------------------
-01/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+08/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
 *****************************************************************************************************/
-PedidosTransfer:
+MovimientosArticulos:
   SQL SELECT
-      CODTRANSFERENCIA,
-    	CODALMACENORIGEN,
-    	NOMBREALMACENDESTINO,
-    	CODALMACENDESTINO,
-    	NOMBREALMACENORIGEN,
-    	ESTADOTRANSFERENCIA,
-    	ORDENPRODUCMAESTRA,
-    	CODICG,
-    	CODARTICULO,
-    	COLORID,
-    	TALLA,
-    	UBICACION,
-    	CANTTRANSFERENCIA,
-      FECHARECIBIDO,
-      FECHAENVIO
-    FROM QST_MODELLOGISTICA;
+    DESCMOVIMIENTO,
+	  CANTDIARIO,
+    NOMBREALMACEN,
+    CODALMACEN,
+	  COLORID,
+	  TALLA,
+	  CODARTICULO,
+	  FECHADIARIO,
+	  CODIGODIARIO
+  FROM QST_MODELMOVIMIENTOARTICULOS;
 
-STORE PedidosTransfer INTO [..\QVD\PedidosTransfer.QVD](qvd);
-DROP TABLE PedidosTransfer;
+STORE MovimientosArticulos INTO [..\QVD\QST_ModelMovimientoArticulos.QVD](qvd);
+DROP TABLE MovimientosArticulos;
