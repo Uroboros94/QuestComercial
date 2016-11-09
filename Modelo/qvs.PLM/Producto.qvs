@@ -13,7 +13,7 @@ Producto:
 		CK.IdLlaveProducto, 
 		SK.IdPLM, 
 		SK.Producto, 
-		num(SK.Fecha,'#0')			as SK.FECHA,
+		num(Date#(Left(SK.Fecha,10),'DD/MM/YYYY'))						as SK.FECHA,
 
 		Producto.Fecha,
 		Producto.Diseñador,
