@@ -18,7 +18,7 @@ MovimientosArticulos:
     COLORID,
     TALLA,
     CODARTICULO,
-    FECHADIARIO,
+    Date(FECHADIARIO)         as FECHADIARIO,
     CODIGODIARIO
   FROM
   [..\QVD\QST_ModelMovimientoArticulos.QVD]
