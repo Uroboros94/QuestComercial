@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
@@ -52,9 +52,9 @@
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
+      <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
-      <AllowMaximize>false</AllowMaximize>
+      <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
       <CopyIcon>false</CopyIcon>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -229,12 +229,12 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Count(CodReferencia)</v>
+        <v>Count(Producto.IdProducto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
       <Relative>true</Relative>
-      <BrutalSum>false</BrutalSum>
+      <BrutalSum>true</BrutalSum>
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
@@ -675,7 +675,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesEstadoAprobacion</Name>
+        <Name>Producto.EstadoAprobacion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1101,16 +1101,16 @@
     <Legend>
       <Font></Font>
       <Position>
-        <Left>622</Left>
+        <Left>928</Left>
         <Top>0</Top>
-        <Width>325</Width>
-        <Height>444</Height>
+        <Width>484</Width>
+        <Height>759</Height>
       </Position>
       <RelativePosition>
-        <Left>3FE4D1F10112358E</Left>
+        <Left>3FE4C07DF1549E25</Left>
         <Top>0000000000000000</Top>
-        <Width>3FD5C1DFDDB94E31</Width>
-        <Height>3FEE4B53838C480D</Height>
+        <Width>3FD5A57A8B2E5583</Width>
+        <Height>3FEE3F1F8FC7E3F2</Height>
       </RelativePosition>
       <RelativePositionType>2</RelativePositionType>
       <Show>true</Show>
@@ -2518,11 +2518,11 @@
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
-      <int>1</int>
       <int>0</int>
+      <int>1</int>
     </InterFieldSortOrder>
     <ExpressionPosition>-1</ExpressionPosition>
-    <NumberOfLeftDimensions>255</NumberOfLeftDimensions>
+    <NumberOfLeftDimensions>1</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
@@ -2552,7 +2552,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesEstadoAprobacion</DimName>
+          <DimName>Producto.EstadoAprobacion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -2569,12 +2569,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count(CodReferencia)</v>
+              <v>Count(Producto.IdProducto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
             <Relative>true</Relative>
-            <BrutalSum>false</BrutalSum>
+            <BrutalSum>true</BrutalSum>
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>

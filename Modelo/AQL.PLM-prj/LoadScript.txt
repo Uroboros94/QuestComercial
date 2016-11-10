@@ -17,7 +17,11 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
-///$tab Cargue
+///$tab Dim
+/*Calendario*/
+$(Must_Include=qvs.componentes\calendario.qvs);
+$(Must_Include=qvs.plm\pptocontrol.qvs);
+
 /*Presupuestos*/
 $(Must_Include=qvs.plm\presupuesto.qvs);
 
@@ -26,15 +30,19 @@ $(Must_Include=qvs.plm\producto.qvs);
 $(Include=qvs.plm\productocolor.qvs);
 $(Include=qvs.plm\productotalla.qvs);
 
+/*Materliales*/
+$(Include=qvs.plm\material.qvs);
+$(Include=qvs.plm\matcolor.qvs);
+$(Include=qvs.plm\mattalla.qvs);
+
 /*Listado de Materiales*/
 $(Must_Include=qvs.plm\headlistamaterial.qvs);
 $(Must_Include=qvs.plm\linelistamaterial.qvs);
-
-
-
+///$tab Fact
+/*Listado de Materiales*/
+$(Include=qvs.plm\listamateriales.qvs);
 ///$tab Exit Script
 TRACE Modelo Finalizado;
-
 EXIT SCRIPT;
 ///$tab Descarga-Old
 

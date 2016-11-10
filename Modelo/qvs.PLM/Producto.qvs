@@ -1,6 +1,6 @@
 ﻿/*****************************************************************************************************
 	Detalle :
-	Extracción de Dimensiones: Product
+	Modelo de Dimensiones: Producto
 	-------------------------------------------------------------------------------------------------
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
@@ -11,8 +11,14 @@
 Producto:
 	LOAD 
 		CK.IdLlaveProducto, 
-		SK.IdPLM,
+		SK.IdPLM, 
+		SK.Producto, 
+		num(Date#(Left(SK.Fecha,10),'DD/MM/YYYY'))						as SK.FECHA,
+
+		Producto.Fecha,
+		Producto.Diseñador,
 		Producto.IdProducto, 
+		Producto.Costo, 
 		Producto.Descripcion, 
 		Producto.Banda, 
 		Producto.Clima, 
@@ -35,6 +41,8 @@ Producto:
 		Producto.TipoProducto, 
 		Producto.UnidadMedidaInventario, 
 		Producto.UnidadMedidaVenta, 
+		Producto.EstadoAprobacion, 
+		Producto.EstadoAprobacionComite, 
 		Producto.EstadoExportacion, 
 		Producto.EstadoSincronizacion, 
 		Producto.FechaActualizacion, 
@@ -58,6 +66,10 @@ Producto:
 		Producto.IdTipoAdquisicion, 
 		Producto.IdTipoPrenda, 
 		Producto.IdTipoProducto, 
+		Producto.LoteAprobado, 
+		Producto.EstadoBOM, 
+		Producto.IdSisproCode, 
+		Producto.Semanaentrada, 
 		Producto.IdUnidadMedidaInventario, 
 		Producto.IdUnidadMedidaVenta
 	FROM

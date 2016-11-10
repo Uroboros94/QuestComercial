@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
@@ -40,7 +40,7 @@
       </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
-        <PointSize1000>9000</PointSize1000>
+        <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -70,7 +70,7 @@
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
       <ShowCaption>true</ShowCaption>
-      <MultiLine>0</MultiLine>
+      <MultiLine>2</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
@@ -96,7 +96,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -123,7 +123,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;CodEstadoComite={'2'}&gt;}CostoMateriales)</v>
+        <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}CostoMateriales)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;CodEstadoComite={'2'}&gt;}CostoListaOperaciones)</v>
+        <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}CostoListaOperaciones)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -306,7 +306,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;CodEstadoComite={'2'}&gt;}CostoTotal)</v>
+        <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}Producto.Costo)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -331,7 +331,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;CodEstadoComite={'2'}&gt;}PrecioVenta)</v>
+        <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}PrecioVenta)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2785,7 +2785,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CodColeccion</Name>
+        <Name>Producto.Coleccion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2971,7 +2971,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesMarca</Name>
+        <Name>Producto.Marca</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3157,7 +3157,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesGenero</Name>
+        <Name>Producto.Genero</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3343,7 +3343,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CodLineaQuest</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3529,7 +3529,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesLinea</Name>
+        <Name>Producto.Linea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3715,7 +3715,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesSublinea</Name>
+        <Name>Producto.Sublinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3901,7 +3901,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>QST_StyleAttr_SisproCode_string</Name>
+        <Name>Producto.IdSisproCode</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4087,7 +4087,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DesTipoAdquisicion</Name>
+        <Name>Producto.TipoAquision</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4273,8 +4273,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>ComentariosComite</Name>
-        <Type>PRESENT</Type>
+        <Name>=Producto.EstadoBOM</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Comentarios del Comité</v>
@@ -6440,25 +6440,9 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CodLineaQuest</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>DesLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>DesSublinea</DimName>
+          <DimName>Producto.Coleccion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6466,7 +6450,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CodColeccion</DimName>
+          <DimName>Producto.Marca</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6474,7 +6458,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesMarca</DimName>
+          <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6482,7 +6466,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesGenero</DimName>
+          <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6490,7 +6474,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>QST_StyleAttr_SisproCode_string</DimName>
+          <DimName>Producto.Linea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6498,7 +6482,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DesTipoAdquisicion</DimName>
+          <DimName>Producto.Sublinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6506,7 +6490,23 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>ComentariosComite</DimName>
+          <DimName>Producto.IdSisproCode</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.TipoAquision</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Producto.EstadoBOM</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6523,7 +6523,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;CodEstadoComite={'2'}&gt;}CostoMateriales)</v>
+              <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}CostoMateriales)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7106,7 +7106,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;CodEstadoComite={'2'}&gt;}CostoListaOperaciones)</v>
+              <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}CostoListaOperaciones)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8281,7 +8281,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;CodEstadoComite={'2'}&gt;}CostoTotal)</v>
+              <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}Producto.Costo)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8871,7 +8871,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;CodEstadoComite={'2'}&gt;}PrecioVenta)</v>
+              <v>sum({&lt;Producto.EstadoAprobacionComite={'Aprobado'}&gt;}PrecioVenta)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -1,0 +1,43 @@
+﻿/*----------------------------------------------------------------------------------------------------
+	Detalle :
+	Transformacion de Hechos: Extracción de lista de materiales para 
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/04/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+ListaMateriales_Tmp:
+	LOAD 
+		CodigoBom,
+		AprobacionDiseño,
+		CodigoProducto,
+		CodigoMaterial,
+		AprobadoPor,
+		CantidadComun,
+		UnidadMedidaMaterial,
+		FechaCreacion
+	FROM
+	[..\QVD\PLM\ListaMateriales_QV.QVD]
+	(qvd);
+
+_ListaMateriales:
+	LOAD 
+		CodigoProducto 					as SK.Producto,
+		CodigoMaterial 					as SK.Material,
+		Date(FechaCreacion) 			as SK.FechaCreacion,
+
+
+		CodigoBom 						as LMAT.CodigoBom,
+		Capitalize(AprobacionDiseño) 	as LMAT.AprobacionDiseño,
+		CodigoProducto 					as LMAT.IdProducto,
+		CodigoMaterial 					as LMAT.IdMaterial,
+		AprobadoPor 					as LMAT.AprobadoPor,
+		Num(CantidadComun) 				as LMAT.CantidadComun,
+		UnidadMedidaMaterial 			as LMAT.UnidadMedidaMaterial,
+		Date(FechaCreacion) 			as LMAT.FechaCreacion
+	Resident ListaMateriales_Tmp;
+	DROP Table ListaMateriales_Tmp;
+
+STORE _ListaMateriales INTO [..\QVD\PLM\_ListaMateriales.QVD](qvd);
+DROP TABLE _ListaMateriales;

@@ -27,6 +27,7 @@ NoConcatenate
 _Presupuesto:
 	LOAD 
 		IdColeccion&Upper(Marca)&IdGenero&IdLinea&IdSubLinea&IdTipoProducto&IdTipoAdquisicion 		as CK.IdLlaveProducto,
+		IdColeccion																					as Ppto.IdColeccion,
 		Upper(Marca)																				as Ppto.Marca,
 		IdGenero																					as Ppto.IdGenero,
 		IdGenero & IdLinea																			as Ppto.IdLinea, 
