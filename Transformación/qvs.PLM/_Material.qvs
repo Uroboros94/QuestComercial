@@ -49,7 +49,8 @@ _Material:
 		UnidadMedidaInventario				as Material.UnidadMedidaInventario
 	FROM
 	[..\QVD\PLM\MateriaPrimaInsumos_QV.QVD]
-	(qvd);
+	(qvd)
+	Where CodigoMaterial like 'TE*';
 
 STORE _Material INTO [..\QVD\PLM\_Material.QVD](qvd);
 DROP TABLE _Material;
