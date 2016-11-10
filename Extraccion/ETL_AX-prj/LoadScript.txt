@@ -78,6 +78,9 @@ $(Must_Include=qvs.ax\wrkctrtable.qvs);
 
 /* Inventario disponible. */
 $(Must_Include=qvs.ax\qst_modelinventariodisponible.qvs);
+
+/* Maestro de localidades. */
+$(Must_Include=qvs.ax\maestrolocalidades.qvs);
 ///$tab Hechos
 /****************** Cargue de Hechos ******************/
 
@@ -131,6 +134,9 @@ $(Must_Include=qvs.ax\qst_modelpicking.qvs);
 
 /* Movimientos de articulos. */
 $(Must_Include=qvs.ax\qst_modelmovimientoarticulos.qvs);
+
+/* Diaria de entrada de producto. */
+$(Must_Include=qvs.ax\qst_modelentradaproducto.qvs);
 ///$tab Exit Script
 TRACE Extracción Finalizada;
 EXIT SCRIPT;

@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Logistica
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+09/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+QUALIFY *;
+UNQUALIFY %EntradaProductoKey, %KEYPRODUCT, %FECHAKEY, %IDLOCALIDAD;
+EntradaProducto:
+  LOAD
+    AutoNumber(RecNo())				as %EntradaProductoKey,
+    CODARTICULO&TALLA&COLORID as %KEYPRODUCT,
+    Date(Floor(FECHATRANSF)) 	as %FECHAKEY,
+    CODDIARIO,
+    TIPOTRANSF,
+    Date(FECHATRANSF, 'DD/MM/YYYY') as FECHATRANSF,
+    CODLOCALIDAD as %IDLOCALIDAD,
+    CODARTICULO,
+    COLORID,
+    TALLA,
+    CANTTRANSFE,
+    CODORDENPROD
+  FROM
+  [C:\Users\alejandro.saa\Documents\QuestComercial\QVD\QST_ModelEntradaProducto.QVD]
+  (qvd);
+UNQUALIFY *;

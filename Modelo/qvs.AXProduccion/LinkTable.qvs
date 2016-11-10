@@ -29,11 +29,25 @@ LinkTable:
     %KEYPRODUCT							as SK.KEYPRODUCT,
     %FECHAKEY							as SK.FECHA
   Resident OrdenesPedidosVenta;
+
+  PedidosTransfer_tmp:
+  LOAD
+    %PedidosTransferKey,
+    %KEYPRODUCT							as SK.KEYPRODUCT,
+    PedidosTransfer.ORDENPRODUCMAESTRA
+  Resident PedidosTransfer;
+  Left Join(PedidosTransfer_tmp)
+  LOAD
+    %OrdenesProduccionKey,
+    OrdenProd.AP_QST_MASTERPRODORDID as PedidosTransfer.ORDENPRODUCMAESTRA
+  Resident OrdenProd;
+
   Concatenate(LinkTable)
   LOAD
     %PedidosTransferKey,
-    %KEYPRODUCT							as SK.KEYPRODUCT
-  Resident PedidosTransfer;
+    %OrdenesProduccionKey,
+    SK.KEYPRODUCT
+  Resident PedidosTransfer_tmp;
 
   RutasPicking_tmp:
   LOAD
@@ -65,5 +79,28 @@ LinkTable:
     SK.KEYPRODUCT
   Resident MovimientosArticulos;
 
-	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT;
-  DROP Table RutasPicking_tmp;
+  EntradaProducto_tmp:
+  LOAD
+    %EntradaProductoKey,
+    %KEYPRODUCT			as SK.KEYPRODUCT,
+		%FECHAKEY				as SK.FECHA,
+    %IDLOCALIDAD    as SK.IDLOCALIDAD,
+    EntradaProducto.CODORDENPROD
+  Resident EntradaProducto;
+  Left Join(EntradaProducto_tmp)
+  LOAD
+    %OrdenesProduccionKey,
+    PRODID as EntradaProducto.CODORDENPROD
+  Resident OrdenProd;
+
+  Concatenate(LinkTable)
+  LOAD
+    %EntradaProductoKey,
+    %OrdenesProduccionKey,
+    SK.KEYPRODUCT,
+		SK.FECHA,
+    SK.IDLOCALIDAD
+  Resident EntradaProducto_tmp;
+
+	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT, %IDLOCALIDAD;
+  DROP Tables RutasPicking_tmp, PedidosTransfer_tmp, EntradaProducto_tmp;
