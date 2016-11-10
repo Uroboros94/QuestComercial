@@ -36,6 +36,9 @@ $(Must_Include=qvs.componentes\maestroinsumos.qvs);
 
 /* Pedidos Ventas */
 $(Must_Include=qvs.axproduccion\ordenespedidosventa.qvs);
+
+/* Maestro de localidades. */
+$(Must_Include=qvs.componentes\maestrolocalidades.qvs);
 ///$tab Hechos
 $(Must_Include=qvs.axproduccion\ordenprod.qvs);
 
@@ -67,6 +70,9 @@ $(Must_Include=qvs.axproduccion\qst_modelinventariodisponible.qvs);
 
 /* Movimiento articulos. */
 $(Must_Include=qvs.axproduccion\qst_modelmovimientoarticulos.qvs);
+
+/* Entrada de producto terminado. */
+$(Must_Include=qvs.axproduccion\qst_modelentradaproducto.qvs);
 
 $(Must_Include=qvs.axproduccion\linktable.qvs);
 ///$tab Exit

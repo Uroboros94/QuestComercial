@@ -1,0 +1,17 @@
+/*
+Fecha : 09/11/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Creación del Modelo: Maestro de Localidades.
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador     |   Modificación
+-------------------------------------------------------------------------------------------------
+09/11/2016  |   Alejandro Saa G.  |   Inicio de Configuración
+*****************************************************************************************************/
+MaestroLocalidades:
+  LOAD
+    INVENTLOCATIONID as SK.IDLOCALIDAD,
+    NAME as NombreLocalidad
+  FROM
+  [..\QVD\MaestroLocalidades.QVD]
+  (qvd);
