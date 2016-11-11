@@ -9,7 +9,7 @@ Fecha       |   Desarrollador   |   Modificación
 02/11/2016  |   Alejandro Saa G |   Inicio de Configuración
 *****************************************************************************************************/
 QUALIFY *;
-UNQUALIFY %PedidosTransferKey, %KEYPRODUCT;
+UNQUALIFY %PedidosTransferKey, %KEYPRODUCT, %FECHAKEY;
 PedidosTransfer:
   LOAD
     AutoNumber(RecNo())				as %PedidosTransferKey,
@@ -27,6 +27,7 @@ PedidosTransfer:
     TALLA,
     UBICACION,
     CANTTRANSFERENCIA,
+    Num(Date(Floor(FECHARECIBIDO)))			as %FECHAKEY,
     Date(FECHARECIBIDO, 'DD/MM/YYYY') as FECHARECIBIDO,
     Date(FECHAENVIO, 'DD/MM/YYYY') as FECHAENVIO
   FROM
