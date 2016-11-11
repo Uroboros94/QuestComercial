@@ -33,6 +33,19 @@ Sublineas:
 		DescripcionSublinea
 	Resident Producto_temp;
 
+Mapping
+TiposAquision:
+	LOAD Distinct
+		IdTipoAquision,
+		DescripcionTipoAquision
+	Resident Producto_temp;
+
+Mapping
+TiposProducto:
+	LOAD Distinct
+		IdTipoProducto,
+		DescripcionTipoProducto
+	Resident Producto_temp;
 
 
 Producto:
@@ -108,19 +121,21 @@ Producto:
 	Concatenate	
 	LOAD 
 		CK.IdLlaveProducto, 
-		Ppto.Marca 											as Producto.Marca, 
-		Ppto.IdGenero 										as Producto.IdGenero,
-		ApplyMap('Generos',Ppto.IdGenero,null()) 			as Producto.Genero,
-		Ppto.IdLinea 										as Producto.IdLinea, 
-		ApplyMap('Lineas',Ppto.IdLinea,null()) 				as Producto.Linea,
-		Ppto.IdSubLinea 									as Producto.IdSublinea, 
-		ApplyMap('Sublineas',Ppto.IdSubLinea,null()) 		as Producto.Sublinea,
-		Ppto.IdTipoProducto									as Producto.IdTipoProducto, 
-		Ppto.IdTipoAdquisicion								as Producto.IdTipoAdquisicion,
-		Ppto.IdColeccion									as Producto.IdColeccion, 
-		Ppto.IdColeccion									as Producto.Coleccion, 
-		'En desarrollo'										as Producto.EstadoAprobacion,
-		'En desarrollo'										as Producto.EstadoAprobacionComite
+		Ppto.Marca 												as Producto.Marca,
+		Ppto.IdGenero 											as Producto.IdGenero,
+		ApplyMap('Generos',Ppto.IdGenero,null()) 				as Producto.Genero,
+		Ppto.IdLinea 											as Producto.IdLinea,
+		ApplyMap('Lineas',Ppto.IdLinea,null()) 					as Producto.Linea,
+		Ppto.IdSubLinea 										as Producto.IdSublinea,
+		ApplyMap('Sublineas',Ppto.IdSubLinea,null()) 			as Producto.Sublinea,
+		Ppto.IdTipoProducto										as Producto.IdTipoProducto,
+		ApplyMap('TiposProducto',Ppto.IdTipoProducto,null())	as Producto.TipoProducto,
+		Ppto.IdTipoAdquisicion									as Producto.IdTipoAdquisicion,
+		ApplyMap('TiposAquision',Ppto.IdTipoAdquisicion,null())	as Producto.TipoAquision,
+		Ppto.IdColeccion										as Producto.IdColeccion, 
+		Ppto.IdColeccion										as Producto.Coleccion, 
+		'En desarrollo'											as Producto.EstadoAprobacion,
+		'En desarrollo'											as Producto.EstadoAprobacionComite
 	FROM
 	[..\QVD\PLM\_Presupuesto.QVD]
 	(qvd)
