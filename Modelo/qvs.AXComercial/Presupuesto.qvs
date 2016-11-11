@@ -1,4 +1,4 @@
-/*
+﻿/*
 Fecha : 28/09/2016
 ----------------------------------------------------------------------------------------------------
  Detalle :
@@ -7,20 +7,21 @@ Fecha : 28/09/2016
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/28/2016  |   Alejandro Saa G.|   Inicio de Configuración
+11/11/2016	|	Malemos			|	Solución a nombre de campos para modelamiento
 *****************************************************************************************************/
-Presupuesto_Dia:
+Presupuesto:
 	LOAD 
-		DIA,
-		MES,
-		ANO,
-		Date(FECHA, 'YYYYMMDD') as FECHA,
-		'Semana '&Ceil(Day(FECHA)/7) as SemanaPresupuesto,
-		LINEA,
-		CODBARRAS,
-		PresupuestoEstilo,
-		CodICG,
-		UNIDADES,
-		PESOS
+		DIA 							as Ppto.Dia,
+		MES 							as Ppto.Mes,
+		ANO 							as Ppto.Año,
+		Date(FECHA, 'YYYYMMDD') 		as Ppto.Fecha,
+		'Semana '&Ceil(Day(FECHA)/7) 	as Ppto.Semana,
+		LINEA							as Ppto.Linea,
+		CODBARRAS						as Ppto.CodBarras,
+		PresupuestoEstilo				as Ppto.PresupuestoEstilo,
+		CodICG							as CodICG,
+		UNIDADES						as Ppto.Unidades,
+		PESOS							as Ppto.Pesos
 	FROM
 	[..\QVD\Presupuesto_Dia2.QVD]
 	(qvd);

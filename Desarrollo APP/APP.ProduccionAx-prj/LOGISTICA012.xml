@@ -53,7 +53,7 @@
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
+      <AutoMinimize>true</AutoMinimize>
       <AllowMaximize>true</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
@@ -744,7 +744,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>Contabilidad.DESC_CENTRO_DE_COSTO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Centro Costo</v>
@@ -930,7 +930,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>Contabilidad.NOMBRE_AUXILIAR</Name>
-        <Type>NOT_PRESENT</Type>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Gastos</v>
@@ -2458,6 +2458,8 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>300</int>
+      <int>831</int>
       <int>300</int>
       <int>300</int>
     </ColWidths>
