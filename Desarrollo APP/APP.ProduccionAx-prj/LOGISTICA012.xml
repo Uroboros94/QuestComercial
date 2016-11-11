@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Contabilidad.CUENTA_N1 = {&quot;5&quot;}, Contabilidad.DIMENSION_CENTRO_DE_COSTO = {&quot;200202&quot;, &quot;200203&quot;}, Contabilidad.ANO = {&quot;$(=Year(Today()))&quot;}&gt;} Contabilidad.MOVIMIENTO)</v>
+        <v>Sum({&lt;Contabilidad.CUENTA_N1 = {&quot;5&quot;}, Contabilidad.DIMENSION_CENTRO_DE_COSTO = {&quot;200202&quot;, &quot;200203&quot;}, Calendario.ano = {&quot;$(=Year(Today()))&quot;}&gt;} Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -3026,7 +3026,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Contabilidad.CUENTA_N1 = {&quot;5&quot;}, Contabilidad.DIMENSION_CENTRO_DE_COSTO = {&quot;200202&quot;, &quot;200203&quot;}, Contabilidad.ANO = {&quot;$(=Year(Today()))&quot;}&gt;} Contabilidad.MOVIMIENTO)</v>
+              <v>Sum({&lt;Contabilidad.CUENTA_N1 = {&quot;5&quot;}, Contabilidad.DIMENSION_CENTRO_DE_COSTO = {&quot;200202&quot;, &quot;200203&quot;}, Calendario.ano = {&quot;$(=Year(Today()))&quot;}&gt;} Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
