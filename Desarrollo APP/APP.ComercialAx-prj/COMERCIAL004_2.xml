@@ -229,14 +229,15 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+        <v>(Sum({&lt;  
 	TIPOPEDIDO = {&quot;3&quot;}
 	&gt;} VALORNETO))
 	/
-(Sum({&lt;ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, MES = {&quot;$(=Calendario.NumericMonth)&quot;}, SemanaPresupuesto = {&quot;$(=Calendario.SemanaMes)&quot;}&gt;} PESOS))
-//(Sum({&lt;FECHA = {&quot;&gt;=$(=date(min(Calendario.%_Fechakey),'YYYYMMDD')) &lt;=$(=date(max(Calendario.%_Fechakey),'YYYYMMDD'))&quot;}&gt;} PESOS))</v>
+(Sum({&lt;
+	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	Ppto.Mes = {&quot;$(=Calendario.NumericMonth)&quot;}, 
+	Ppto.Semana = {&quot;$(=Calendario.SemanaMes)&quot;}
+	&gt;} Ppto.Pesos))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -267,7 +268,10 @@
 	TIPOPEDIDO = {&quot;3&quot;}
 	&gt;} VALORNETO))
 	/
-(Sum({&lt;ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, MES = {&quot;$(=Calendario.NumericMonth)&quot;}&gt;} PESOS))</v>
+(Sum({&lt;
+	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	Ppto.Mes = {&quot;$(=Calendario.NumericMonth)&quot;}
+	&gt;} Ppto.Pesos))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -4405,14 +4409,15 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+              <v>(Sum({&lt;  
 	TIPOPEDIDO = {&quot;3&quot;}
 	&gt;} VALORNETO))
 	/
-(Sum({&lt;ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, MES = {&quot;$(=Calendario.NumericMonth)&quot;}, SemanaPresupuesto = {&quot;$(=Calendario.SemanaMes)&quot;}&gt;} PESOS))
-//(Sum({&lt;FECHA = {&quot;&gt;=$(=date(min(Calendario.%_Fechakey),'YYYYMMDD')) &lt;=$(=date(max(Calendario.%_Fechakey),'YYYYMMDD'))&quot;}&gt;} PESOS))</v>
+(Sum({&lt;
+	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	Ppto.Mes = {&quot;$(=Calendario.NumericMonth)&quot;}, 
+	Ppto.Semana = {&quot;$(=Calendario.SemanaMes)&quot;}
+	&gt;} Ppto.Pesos))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5008,7 +5013,10 @@
 	TIPOPEDIDO = {&quot;3&quot;}
 	&gt;} VALORNETO))
 	/
-(Sum({&lt;ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, MES = {&quot;$(=Calendario.NumericMonth)&quot;}&gt;} PESOS))</v>
+(Sum({&lt;
+	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	Ppto.Mes = {&quot;$(=Calendario.NumericMonth)&quot;}
+	&gt;} Ppto.Pesos))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
