@@ -25,7 +25,7 @@
         <FontName>Century Gothic</FontName>
         <PointSize1000>36000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>false</Bold>
+        <Bold>true</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
@@ -212,7 +212,24 @@
     <BottomMargin>10</BottomMargin>
     <LeftMargin>10</LeftMargin>
     <RightMargin>10</RightMargin>
-    <TextColor></TextColor>
+    <TextColor>
+      <Mode>COLORAREA_SOLID</Mode>
+      <Luminosity>85</Luminosity>
+      <FillDirection>COLORAREA_HORZ</FillDirection>
+      <FillPattern>COLORAREA_PATTERN1</FillPattern>
+      <PrimaryCol>
+        <Col>
+          <Red>255</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </PrimaryCol>
+      <SecondaryCol></SecondaryCol>
+      <Alpha>255</Alpha>
+    </TextColor>
     <BkgColor>
       <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>

@@ -229,12 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
-	PedidosTransfer.ESTADOTRANSFERENCIA = {&quot;Enviados&quot;}
-	&gt;} PedidosTransfer.CANTTRANSFERENCIA) 
-+ 
-Sum(EntradaProducto.CANTTRANSFE)</v>
+        <v>Sum({&lt;Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}&gt;} PedidosTransfer.CANTTRANSFERENCIA) + Sum(EntradaProducto.CANTTRANSFE)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -341,10 +336,10 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>INTEGER</Type>
+        <Type>UNKNOWN</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0</Fmt>
+        <Fmt></Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -4009,12 +4004,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
-	PedidosTransfer.ESTADOTRANSFERENCIA = {&quot;Enviados&quot;}
-	&gt;} PedidosTransfer.CANTTRANSFERENCIA) 
-+ 
-Sum(EntradaProducto.CANTTRANSFE)</v>
+              <v>Sum({&lt;Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}&gt;} PedidosTransfer.CANTTRANSFERENCIA) + Sum(EntradaProducto.CANTTRANSFE)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4063,10 +4053,10 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>INTEGER</Type>
+              <Type>UNKNOWN</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0</Fmt>
+              <Fmt></Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
