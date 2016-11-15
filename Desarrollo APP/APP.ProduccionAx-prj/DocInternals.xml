@@ -1557,41 +1557,8 @@
     <String>Contabilidad</String>
     <String>507</String>
     <String>1</String>
-    <String>Contabilidad</String>
-    <String>508</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>509</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>510</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>511</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>512</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>513</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>514</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>515</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>516</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>517</String>
-    <String>1</String>
-    <String>Contabilidad</String>
-    <String>518</String>
-    <String>1</String>
     <String>INLFED</String>
-    <String>519</String>
+    <String>508</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -2038,6 +2005,7 @@
           <String>DefaultDimensions.Ciudad</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
           <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
+          <String>DefaultDimensions.DESC_FLUJO_DE_EFECTIVO</String>
           <String>DefaultDimensions.DESC_MAINACCOUNT</String>
           <String>DefaultDimensions.DESC_MARCA</String>
           <String>DefaultDimensions.DESC_PROYECTO</String>
@@ -2079,9 +2047,10 @@
           <String>Productos.Marca</String>
           <String>OrdenMaterial</String>
           <String>IdOrdenProd</String>
+          <String>SK.Insumo</String>
           <String>INVENTDIMID</String>
           <String>UNITID</String>
-          <String>VENDID</String>
+          <String>IdInsumo</String>
           <String>UnidadInsumo</String>
           <String>IdGrupoCosto</String>
           <String>NombreGrupoCosto</String>
@@ -2095,7 +2064,6 @@
           <String>NUMEROVARIANTE</String>
           <String>ESTILO</String>
           <String>SITIO</String>
-          <String>ALMACEN</String>
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
@@ -2143,11 +2111,6 @@
           <String>ProdCalcTrans.INVENTDIMSTR</String>
           <String>ProdCalcTrans.UNITID</String>
           <String>ProdCalcTrans.OPRID</String>
-          <String>ProdCalcTrans.REALCOSTUNIT</String>
-          <String>InventTransOP.DATEFINANCIAL</String>
-          <String>InventTransOP.QTY</String>
-          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
-          <String>InventTransOP.COSTAMOUNTPOSTED</String>
           <String>OrdenesCompra.PURCHID</String>
           <String>OrdenesCompra.CREATEDBY</String>
           <String>OrdenesCompra.CURRENCYCODE</String>
@@ -2163,6 +2126,7 @@
           <String>OrdenesCompra.DLVMODE</String>
           <String>OrdenesCompra.CONTACTPERSONID</String>
           <String>OrdenesCompra.INVENTSITEID</String>
+          <String>OrdenesCompra.INVENTLOCATIONID</String>
           <String>OrdenesCompra.PURCHPOOLID</String>
           <String>OrdenesCompra.PAYMMODE</String>
           <String>OrdenesCompra.PAYMSPEC</String>
@@ -2170,6 +2134,7 @@
           <String>OrdenesCompra.PURCHDOCUMENTSTATENAME</String>
           <String>OrdenesCompra.PURCHASETYPENAME</String>
           <String>VENPACKINGLIPID</String>
+          <String>OrdenesCompra.LineasOC.ITEMID</String>
           <String>OrdenesCompra.LineasOC.TAXGROUP</String>
           <String>OrdenesCompra.LineasOC.CURRENCYCODE</String>
           <String>OrdenesCompra.LineasOC.EXTERNALITEMID</String>
@@ -2179,20 +2144,10 @@
           <String>OrdenesCompra.LineasOC.INVENTDIMID</String>
           <String>OrdenesCompra.LineasOC.ASSETGROUP</String>
           <String>RecepcionesOP.PURCHID</String>
-          <String>RecepcionesOP.PACKINGSLIPID</String>
-          <String>RecepcionesOP.DELIVERYDATE</String>
-          <String>RecepcionesOP.LINENUM</String>
           <String>RecepcionesOP.INVENTTRANSID</String>
           <String>RecepcionesOP.ITEMID</String>
-          <String>RecepcionesOP.ORDERED</String>
-          <String>RecepcionesOP.QTY</String>
-          <String>RecepcionesOP.REMAIN</String>
-          <String>RecepcionesOP.PRICEUNIT</String>
-          <String>RecepcionesOP.VALUEMST</String>
-          <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
           <String>RecepcionesOP.INVENTDIMID</String>
           <String>RecepcionesOP.INVENTSIZEID</String>
-          <String>RecepcionesOP.INVENTCOLORID</String>
           <String>CIF.CuentaN2</String>
           <String>RpProduccion.Coleccion</String>
           <String>RpProduccion.EstadoProd</String>
@@ -2205,7 +2160,6 @@
           <String>RpProduccion.KeyTemp</String>
           <String>RpProduccion.Linea</String>
           <String>RpProduccion.Marca</String>
-          <String>RpProduccion.Nivel</String>
           <String>RpProduccion.NombreOperacion</String>
           <String>RpProduccion.Sublinea</String>
           <String>Precio.Canal</String>
@@ -2222,6 +2176,7 @@
           <String>RutasPicking.CODIGOENVIO</String>
           <String>RutasPicking.ESTADOMANIPULACION</String>
           <String>RutasPicking.NUMEROPEDIDO</String>
+          <String>RutasPicking.CODIGOTRABAJADOR</String>
           <String>RutasPicking.NOMBRETRABAJADOR</String>
           <String>RutasPicking.NOMBRECLIENTE</String>
           <String>RutasPicking.CODIGOALMACEN</String>
@@ -2231,16 +2186,11 @@
           <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>InventarioDisponible.NOMBREALMACEN</String>
           <String>InventarioDisponible.UBICACION</String>
-          <String>MovimientosArticulos.DESCMOVIMIENTO</String>
           <String>MovimientosArticulos.NOMBREALMACEN</String>
           <String>MovimientosArticulos.CODIGODIARIO</String>
           <String>EntradaProducto.CODDIARIO</String>
           <String>EntradaProducto.TALLA</String>
           <String>EntradaProducto.CODORDENPROD</String>
-          <String>Contabilidad.DIMENSION_COLECCION</String>
-          <String>Contabilidad.DIMENSION_LINEA</String>
-          <String>Contabilidad.DIMENSION_SUBLINEA</String>
-          <String>Contabilidad.DIMENSION_TIPO_DE_TIENDA</String>
           <String>Contabilidad.NOMBRE_CUENTA_N1</String>
           <String>Contabilidad.NOMBRE_CUENTA_N2</String>
           <String>Contabilidad.NOMBRE_CUENTA_N3</String>
@@ -2314,10 +2264,12 @@
           <String>Productos.Sublinea</String>
           <String>OrdenMaterial</String>
           <String>IdOrdenProd</String>
+          <String>SK.Insumo</String>
           <String>INVENTDIMID</String>
           <String>UNITID</String>
-          <String>VENDID</String>
+          <String>IdInsumo</String>
           <String>NombreInsumo</String>
+          <String>AliasInsumo</String>
           <String>UnidadInsumo</String>
           <String>IdGrupoCosto</String>
           <String>NombreGrupoCosto</String>
@@ -2332,7 +2284,6 @@
           <String>NUMEROVARIANTE</String>
           <String>ESTILO</String>
           <String>SITIO</String>
-          <String>ALMACEN</String>
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
@@ -2381,11 +2332,6 @@
           <String>ProdCalcTrans.INVENTDIMSTR</String>
           <String>ProdCalcTrans.UNITID</String>
           <String>ProdCalcTrans.OPRID</String>
-          <String>ProdCalcTrans.REALCOSTUNIT</String>
-          <String>InventTransOP.DATEFINANCIAL</String>
-          <String>InventTransOP.QTY</String>
-          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
-          <String>InventTransOP.COSTAMOUNTPOSTED</String>
           <String>OrdenesCompra.PURCHID</String>
           <String>OrdenesCompra.PURCHNAME</String>
           <String>OrdenesCompra.CREATEDBY</String>
@@ -2402,6 +2348,7 @@
           <String>OrdenesCompra.DLVMODE</String>
           <String>OrdenesCompra.CONTACTPERSONID</String>
           <String>OrdenesCompra.INVENTSITEID</String>
+          <String>OrdenesCompra.INVENTLOCATIONID</String>
           <String>OrdenesCompra.PURCHPOOLID</String>
           <String>OrdenesCompra.PAYMMODE</String>
           <String>OrdenesCompra.PAYMSPEC</String>
@@ -2409,6 +2356,7 @@
           <String>OrdenesCompra.PURCHDOCUMENTSTATENAME</String>
           <String>OrdenesCompra.PURCHASETYPENAME</String>
           <String>VENPACKINGLIPID</String>
+          <String>OrdenesCompra.LineasOC.ITEMID</String>
           <String>OrdenesCompra.LineasOC.NAME</String>
           <String>OrdenesCompra.LineasOC.TAXGROUP</String>
           <String>OrdenesCompra.LineasOC.CURRENCYCODE</String>
@@ -2420,19 +2368,10 @@
           <String>OrdenesCompra.LineasOC.ASSETGROUP</String>
           <String>RecepcionesOP.PURCHID</String>
           <String>RecepcionesOP.PACKINGSLIPID</String>
-          <String>RecepcionesOP.DELIVERYDATE</String>
-          <String>RecepcionesOP.LINENUM</String>
           <String>RecepcionesOP.INVENTTRANSID</String>
           <String>RecepcionesOP.ITEMID</String>
-          <String>RecepcionesOP.ORDERED</String>
-          <String>RecepcionesOP.QTY</String>
-          <String>RecepcionesOP.REMAIN</String>
-          <String>RecepcionesOP.PRICEUNIT</String>
-          <String>RecepcionesOP.VALUEMST</String>
-          <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
           <String>RecepcionesOP.INVENTDIMID</String>
           <String>RecepcionesOP.INVENTSIZEID</String>
-          <String>RecepcionesOP.INVENTCOLORID</String>
           <String>CIF.CuentaN2</String>
           <String>RpProduccion.ClaseReferencia</String>
           <String>RpProduccion.Coleccion</String>
@@ -2446,7 +2385,6 @@
           <String>RpProduccion.KeyTemp</String>
           <String>RpProduccion.Linea</String>
           <String>RpProduccion.Marca</String>
-          <String>RpProduccion.Nivel</String>
           <String>RpProduccion.NombreOperacion</String>
           <String>RpProduccion.Sublinea</String>
           <String>Precio.Canal</String>
@@ -2463,6 +2401,7 @@
           <String>RutasPicking.CODIGOENVIO</String>
           <String>RutasPicking.ESTADOMANIPULACION</String>
           <String>RutasPicking.NUMEROPEDIDO</String>
+          <String>RutasPicking.CODIGOTRABAJADOR</String>
           <String>RutasPicking.NOMBRETRABAJADOR</String>
           <String>RutasPicking.NOMBRECLIENTE</String>
           <String>RutasPicking.CODIGOALMACEN</String>
@@ -2479,10 +2418,6 @@
           <String>EntradaProducto.TIPOTRANSF</String>
           <String>EntradaProducto.TALLA</String>
           <String>EntradaProducto.CODORDENPROD</String>
-          <String>Contabilidad.DIMENSION_COLECCION</String>
-          <String>Contabilidad.DIMENSION_LINEA</String>
-          <String>Contabilidad.DIMENSION_SUBLINEA</String>
-          <String>Contabilidad.DIMENSION_TIPO_DE_TIENDA</String>
           <String>Contabilidad.DESC_CENTRO_DE_COSTO</String>
           <String>Contabilidad.NOMBRE_CUENTA_N1</String>
           <String>Contabilidad.NOMBRE_CUENTA_N2</String>
@@ -2603,7 +2538,6 @@
           <String>OrdenProd.RELEASEDDATE</String>
           <String>OrdenProd.DEL_CREATEDTIME</String>
           <String>OrdenProd.AP_QST_OPRNUM</String>
-          <String>ProdCalcTrans.RESOURCE_</String>
           <String>ProdCalcTrans.LINENUM</String>
           <String>ProdCalcTrans.OPRNUM</String>
           <String>ProdCalcTrans.QTY</String>
@@ -2615,6 +2549,11 @@
           <String>ProdCalcTrans.REALCONSUMP</String>
           <String>ProdCalcTrans.REALCOSTAMOUNT</String>
           <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
+          <String>ProdCalcTrans.REALCOSTUNIT</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
+          <String>InventTransOP.QTY</String>
+          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
+          <String>InventTransOP.COSTAMOUNTPOSTED</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -2653,6 +2592,14 @@
           <String>OrdenesCompra.LineasOC.DISCAMOUNT</String>
           <String>OrdenesCompra.LineasOC.DISCPERCENT</String>
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
+          <String>RecepcionesOP.DELIVERYDATE</String>
+          <String>RecepcionesOP.LINENUM</String>
+          <String>RecepcionesOP.ORDERED</String>
+          <String>RecepcionesOP.QTY</String>
+          <String>RecepcionesOP.REMAIN</String>
+          <String>RecepcionesOP.PRICEUNIT</String>
+          <String>RecepcionesOP.VALUEMST</String>
+          <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
           <String>CIF.Fecha</String>
           <String>CIF.IdCuentaN2</String>
           <String>CIF.Neto</String>
@@ -2676,7 +2623,9 @@
           <String>RpProduccion.IdEstadoProd</String>
           <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdTrabAudita</String>
+          <String>RpProduccion.Nivel</String>
           <String>RpProduccion.Referencia</String>
+          <String>Precio.IdCanal</String>
           <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
@@ -2690,7 +2639,6 @@
           <String>PedidosTransfer.FECHAENVIO</String>
           <String>%RutasPickingKey</String>
           <String>RutasPicking.TIEMPOACTIVACION</String>
-          <String>RutasPicking.CODIGOTRABAJADOR</String>
           <String>RutasPicking.CODIGOCLIENTE</String>
           <String>RutasPicking.CODARTICULO</String>
           <String>RutasPicking.CODCOLOR</String>
@@ -2716,7 +2664,6 @@
           <String>EntradaProducto.FECHATRANSF</String>
           <String>EntradaProducto.CANTTRANSFE</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
-          <String>Contabilidad.DIMENSION_MAINACCOUNT</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
           <String>Contabilidad.CUENTA_N3</String>
@@ -2726,7 +2673,6 @@
           <String>Contabilidad.CREDITO</String>
           <String>Contabilidad.MOVIMIENTO</String>
           <String>Contabilidad.ANO</String>
-          <String>Contabilidad.ISCREDIT</String>
           <String>Contabilidad.FECHAVENCIMIENTO</String>
         </FieldNames>
       </FieldTagData>
@@ -2837,18 +2783,13 @@
           <String>OrdenProd.RELEASEDDATE</String>
           <String>OrdenProd.DEL_CREATEDTIME</String>
           <String>OrdenProd.AP_QST_OPRNUM</String>
-          <String>ProdCalcTrans.RESOURCE_</String>
           <String>ProdCalcTrans.LINENUM</String>
           <String>ProdCalcTrans.OPRNUM</String>
           <String>ProdCalcTrans.QTY</String>
-          <String>ProdCalcTrans.COSTAMOUNT</String>
-          <String>ProdCalcTrans.ESTCOSTUNIT</String>
-          <String>ProdCalcTrans.SALESAMOUNT</String>
-          <String>ProdCalcTrans.CONSUMPVARIABLE</String>
           <String>ProdCalcTrans.CONSUMPCONSTANT</String>
-          <String>ProdCalcTrans.REALCONSUMP</String>
-          <String>ProdCalcTrans.REALCOSTAMOUNT</String>
           <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
+          <String>InventTransOP.QTY</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -2880,6 +2821,13 @@
           <String>OrdenesCompra.LineasOC.LINENUMBER</String>
           <String>OrdenesCompra.LineasOC.DISCAMOUNT</String>
           <String>OrdenesCompra.LineasOC.DISCPERCENT</String>
+          <String>RecepcionesOP.DELIVERYDATE</String>
+          <String>RecepcionesOP.LINENUM</String>
+          <String>RecepcionesOP.ORDERED</String>
+          <String>RecepcionesOP.QTY</String>
+          <String>RecepcionesOP.REMAIN</String>
+          <String>RecepcionesOP.PRICEUNIT</String>
+          <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
           <String>CIF.Fecha</String>
           <String>CIF.IdCuentaN2</String>
           <String>RpProduccion.CantidadBuena</String>
@@ -2902,7 +2850,9 @@
           <String>RpProduccion.IdEstadoProd</String>
           <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdTrabAudita</String>
+          <String>RpProduccion.Nivel</String>
           <String>RpProduccion.Referencia</String>
+          <String>Precio.IdCanal</String>
           <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
@@ -2914,7 +2864,6 @@
           <String>PedidosTransfer.FECHARECIBIDO</String>
           <String>PedidosTransfer.FECHAENVIO</String>
           <String>%RutasPickingKey</String>
-          <String>RutasPicking.CODIGOTRABAJADOR</String>
           <String>RutasPicking.CODIGOCLIENTE</String>
           <String>RutasPicking.CODARTICULO</String>
           <String>RutasPicking.CODCOLOR</String>
@@ -2932,14 +2881,12 @@
           <String>%EntradaProductoKey</String>
           <String>EntradaProducto.FECHATRANSF</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
-          <String>Contabilidad.DIMENSION_MAINACCOUNT</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
           <String>Contabilidad.CUENTA_N3</String>
           <String>Contabilidad.CUENTA_N4</String>
           <String>Contabilidad.CUENTA_N5</String>
           <String>Contabilidad.ANO</String>
-          <String>Contabilidad.ISCREDIT</String>
           <String>Contabilidad.FECHAVENCIMIENTO</String>
         </FieldNames>
       </FieldTagData>
@@ -2957,9 +2904,11 @@
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.BOMDATE</String>
           <String>OrdenProd.DLVTIME</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
+          <String>RecepcionesOP.DELIVERYDATE</String>
           <String>CIF.Fecha</String>
           <String>RpProduccion.FechaCreacionOrden</String>
           <String>RpProduccion.FechaCreacionRef</String>
@@ -2983,8 +2932,10 @@
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.BOMDATE</String>
           <String>OrdenProd.DLVTIME</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
+          <String>RecepcionesOP.DELIVERYDATE</String>
           <String>CIF.Fecha</String>
           <String>RpProduccion.FechaCreacionOrden</String>
           <String>RpProduccion.FechaCreacionRef</String>
