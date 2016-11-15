@@ -229,12 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
-	PedidosTransfer.ESTADOTRANSFERENCIA = {&quot;Enviados&quot;}
-	&gt;} PedidosTransfer.CANTTRANSFERENCIA) 
-+ 
-Sum(EntradaProducto.CANTTRANSFE)</v>
+        <v>Sum({&lt;Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}&gt;} PedidosTransfer.CANTTRANSFERENCIA) + Sum(EntradaProducto.CANTTRANSFE)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -261,10 +256,9 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
       <Definition>
         <v>Sum(
 	{&lt;
-		Contabilidad.CUENTA_N1 = {&quot;5&quot;}, 
-		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {&quot;200202&quot;, &quot;200203&quot;}, 
-		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
-		Contabilidad.CUENTA_N4 = {&quot;523550&quot;}
+		Contabilidad.CUENTA_N4 = {'523550'}, 
+		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
+		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
 	&gt;} Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
@@ -684,7 +678,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>153</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1169,7 +1163,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>375</ColWidth>
+      <ColWidth>209</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1311,10 +1305,10 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>MONEY</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -1654,7 +1648,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>163</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1778,7 +1772,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Canal</v>
+        <v>Auxiliar</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -1933,7 +1927,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>472</ColWidth>
+      <ColWidth>563</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -1987,8 +1981,8 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
       <ShowPartialSums>0</ShowPartialSums>
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
-      <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
+      <TextAdjust>1</TextAdjust>
+      <NumAdjust>1</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <DimCellVariations>
         <CellVariationDef>
@@ -3446,11 +3440,11 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>472</int>
+      <int>563</int>
       <int>300</int>
-      <int>300</int>
-      <int>375</int>
-      <int>300</int>
+      <int>153</int>
+      <int>209</int>
+      <int>163</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -4009,12 +4003,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
-	PedidosTransfer.ESTADOTRANSFERENCIA = {&quot;Enviados&quot;}
-	&gt;} PedidosTransfer.CANTTRANSFERENCIA) 
-+ 
-Sum(EntradaProducto.CANTTRANSFE)</v>
+              <v>Sum({&lt;Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}&gt;} PedidosTransfer.CANTTRANSFERENCIA) + Sum(EntradaProducto.CANTTRANSFE)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4406,7 +4395,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>153</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4599,10 +4588,9 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
             <Definition>
               <v>Sum(
 	{&lt;
-		Contabilidad.CUENTA_N1 = {&quot;5&quot;}, 
-		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {&quot;200202&quot;, &quot;200203&quot;}, 
-		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
-		Contabilidad.CUENTA_N4 = {&quot;523550&quot;}
+		Contabilidad.CUENTA_N4 = {'523550'}, 
+		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
+		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
 	&gt;} Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
@@ -4995,7 +4983,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>375</ColWidth>
+            <ColWidth>284</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -5242,10 +5230,10 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>MONEY</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -5585,7 +5573,7 @@ Sum(EntradaProducto.CANTTRANSFE)</v>
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>163</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

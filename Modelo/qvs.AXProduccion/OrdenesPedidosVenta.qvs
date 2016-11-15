@@ -1,63 +1,64 @@
-/*
-Fecha : 20/09/2016
-----------------------------------------------------------------------------------------------------
- Detalle :
-     Creación del Modelo: PedidosVenta
--------------------------------------------------------------------------------------------------
-Fecha       |   Desarrollador   |   Modificación
--------------------------------------------------------------------------------------------------
-09/22/2016  |   malemos         |   Inicio de Configuración
+/*****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+		Detalle :
+		Creación del Modelo: PedidosVenta
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016	|	malemos		|	Inicio de Configuración
+	11/15/2016	|	malemos		|	Ajuste en la carga de Fechas, formateo de (**Fecha Pedidos)			
 *****************************************************************************************************/
 OrdenesPedidosVenta:
-     LOAD
-          AutoNumber(RecNo())				as %OrdenesPedidoKey,
-          IDPEDIDO,
-     	CODARTICULO&TALLA&COLOR as %KEYPRODUCT,
-          IDCLIENTE,
-          //NOMBRECLIENTE,
-          DEFAULTDIMENSIONPEDIDO,
-          ESTADOPEDIDO,
-          TIPOPEDIDO,
-          NOMBRETIPOPEDIDO,
-          NOMBREESTADOPEDIDO,
-          CONDICIONPAGO,
-          FECHACREACIONPEDIDO,
-          date(floor(FECHACREACIONPEDIDO)) as %FECHAKEY,
-          FECHACREACIONPEDIDOTZID,
-          PENDIENTEENTREGA,
-          PEDIDOCREADOPOR,
-     //     DATAAREAID,
-     //     RECVERSION,
-     //     PARTITION,
-     //     RECID,
-          GRUPOCOMISION,
-          CODARTICULO,
-          NUMEROLINEA,
-          NOMBREARTICULO,
-          PRECIOUNITARIO,
-          CANTIDAD,
-          ESTADOLINEA,
-          NOMBREESTADOLINEA,
-          VALORNETO,
-          DESCUENTO,
-          NUMEROVARIANTE,
-          TALLA,
-          COLOR,
-          ESTILO,
-          SITIO,
-          ALMACEN,
-          DEFAULTDIMENSIONLINEA as %DEFAULTDIMENSION,
-          RECIDLINE,
-          UNIDADMEDIDA,
-     //     IDVENDEDOR,
-     //     NOMBREVENDEDOR,
-     	 If(Len(RAZONDEVOLUCION) > 0, RAZONDEVOLUCION, 'NO ESPECIFICADO') as RAZONDEVOLUCION,
-     	 RAZONGRUPO,
-     	 TAXGROUP,
-     	 TAXGROUPNAME,
-          GRUPOVENTAS,
-          PORCENTAJE,
-          STOCK
-     FROM
-     [..\QVD\Salesline.QVD]
-     (qvd);
+	LOAD
+		AutoNumber(RecNo())							as %OrdenesPedidoKey,
+		IDPEDIDO,
+		CODARTICULO&TALLA&COLOR						as %KEYPRODUCT,
+		IDCLIENTE,
+		//NOMBRECLIENTE,
+		DEFAULTDIMENSIONPEDIDO,
+		ESTADOPEDIDO,
+		TIPOPEDIDO,
+		NOMBRETIPOPEDIDO,
+		NOMBREESTADOPEDIDO,
+		CONDICIONPAGO,
+		Date(left(FECHACREACIONPEDIDO,10))                as FECHACREACIONPEDIDO,
+		Date(floor(FECHACREACIONPEDIDO))                  as %FECHAKEY,
+		//FECHACREACIONPEDIDOTZID,
+		PENDIENTEENTREGA,
+		PEDIDOCREADOPOR,
+	//     DATAAREAID,
+	//     RECVERSION,
+	//     PARTITION,
+	//     RECID,
+		GRUPOCOMISION,
+		CODARTICULO,
+		NUMEROLINEA,
+		NOMBREARTICULO,
+		PRECIOUNITARIO,
+		CANTIDAD,
+		ESTADOLINEA,
+		NOMBREESTADOLINEA,
+		VALORNETO,
+		DESCUENTO,
+		NUMEROVARIANTE,
+		TALLA,
+		COLOR,
+		ESTILO,
+		SITIO,
+		ALMACEN,
+		DEFAULTDIMENSIONLINEA						as %DEFAULTDIMENSION,
+		RECIDLINE,
+		UNIDADMEDIDA,
+	//     IDVENDEDOR,
+	//     NOMBREVENDEDOR,
+		If(Len(RAZONDEVOLUCION)>0,RAZONDEVOLUCION,'NO ESPECIFICADO') as RAZONDEVOLUCION,
+		RAZONGRUPO,
+		TAXGROUP,
+		TAXGROUPNAME,
+		GRUPOVENTAS,
+		PORCENTAJE,
+		STOCK
+	FROM
+	[..\QVD\Salesline.QVD]
+	(qvd);
