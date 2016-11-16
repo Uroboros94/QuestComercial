@@ -7,7 +7,7 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	09/22/2016	|	malemos		|	Inicio de Configuración
-	11/15/2016	|	malemos		|	Ajuste en la carga de Fechas, formateo de (**Fecha Pedidos)			
+	11/15/2016	|	malemos		|	Ajuste en la carga de Fechas, formateo de (**Fecha Pedidos)
 *****************************************************************************************************/
 OrdenesPedidosVenta:
 	LOAD
@@ -58,7 +58,9 @@ OrdenesPedidosVenta:
 		TAXGROUPNAME,
 		GRUPOVENTAS,
 		PORCENTAJE,
-		STOCK
+		STOCK,
+		NUMEROFACTURA,
+		NOMBREFACTURADOR
 	FROM
 	[..\QVD\Salesline.QVD]
 	(qvd);

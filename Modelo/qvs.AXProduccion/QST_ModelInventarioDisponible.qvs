@@ -30,7 +30,7 @@ InventarioDisponible:
     ORDENADA,
     LLEGADA,
     ORDENADARESERVADA,
-    (((CANTPUBLICADA + CANTRECIBIDA + CANTREGISTRADA) - CANTDEDUCIDA) - CANTRECOGIDA) as InvenFisico,
+    InvenFisico,
     (ORDENADA + LLEGADA) as PedidoTotal,
     ((InvenFisico - CANTRESERVADA) + (((ORDENADA + LLEGADA) - ORDENADARESERVADA) - ENORDEN)) as TotalDisponible;
   LOAD
@@ -52,8 +52,8 @@ InventarioDisponible:
     ORDENADA,
     LLEGADA,
     ORDENADARESERVADA,
-    (((CANTPUBLICADA + CANTRECIBIDA + CANTREGISTRADA) - CANTDEDUCIDA) - CANTRECOGIDA) as InvenFisico,
-    (ORDENADA + LLEGADA) as PedidoTotal//,
+    (((CANTPUBLICADA + CANTRECIBIDA + CANTREGISTRADA) - CANTDEDUCIDA) - CANTRECOGIDA) as InvenFisico//,
+    //(ORDENADA + LLEGADA) as PedidoTotal,
     //((InvenFisico - CANTRESERVADA) + (((ORDENADA + LLEGADA) - ORDENADARESERVADA) - ENORDEN)) as TotalDisponible
   FROM
   [..\QVD\QST_ModelInventarioDisponible.QVD]
