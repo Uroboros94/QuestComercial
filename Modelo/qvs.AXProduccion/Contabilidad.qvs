@@ -6,6 +6,19 @@ Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 10/12/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
+Mapping
+MapCanalEC:
+	LOAD * Inline [
+		idCanal,Canal
+		01,Retail
+		05,Sede principal
+		06,E-Commerce
+		07,Multimarca	
+		08,Concesiones
+		09,Franquicias
+		10,Licitaciones 
+		14,Quruba];
+		
 QUALIFY *;
 UNQUALIFY SK.FECHA;
 	Contabilidad:
@@ -36,6 +49,8 @@ UNQUALIFY SK.FECHA;
 			//DIMENSION_COLECCION,
 			//DIMENSION_ESTRUCTURA_COMERCIAL						as SK.ID_CO,
 			DIMENSION_ESTRUCTURA_COMERCIAL,
+			ApplyMap('MapCanalEC',Left(DIMENSION_ESTRUCTURA_COMERCIAL,2),Null()) 	as EC.Canal,
+
 			//DIMENSION_FLUJO_DE_EFECTIVO,
 			//DIMENSION_LINEA,
 			//DIMENSION_MARCA,
