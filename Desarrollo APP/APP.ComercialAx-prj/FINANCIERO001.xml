@@ -221,7 +221,7 @@
     <WindowTitle>
       <v>Informe de Cartera</v>
     </WindowTitle>
-    <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
+    <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString></TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
@@ -2277,7 +2277,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Estructura Comercial</v>
+        <v>EC</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -2295,7 +2295,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2422,7 +2422,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -2432,7 +2432,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>153</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2480,7 +2480,7 @@
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
+      <ShowPartialSums>1</ShowPartialSums>
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
@@ -2852,7 +2852,7 @@
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
+      <ShowPartialSums>1</ShowPartialSums>
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
@@ -3176,7 +3176,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>259</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3207,7 +3207,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Fecha de Facturación</v>
+        <v>Facturación</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3362,7 +3362,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>306</ColWidth>
+      <ColWidth>225</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3393,7 +3393,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Fecha de Vencimiento</v>
+        <v>Vencimiento</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3548,7 +3548,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>325</ColWidth>
+      <ColWidth>228</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4956,13 +4956,13 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>153</int>
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>300</int>
-      <int>300</int>
-      <int>306</int>
-      <int>325</int>
+      <int>259</int>
+      <int>225</int>
+      <int>228</int>
       <int>278</int>
       <int>272</int>
       <int>253</int>
@@ -5479,7 +5479,7 @@
     <OuterPixWidth>300</OuterPixWidth>
     <InnerPixWidth>300</InnerPixWidth>
     <AllowPivoting>true</AllowPivoting>
-    <PivotAlwaysFullyExpanded>false</PivotAlwaysFullyExpanded>
+    <PivotAlwaysFullyExpanded>true</PivotAlwaysFullyExpanded>
     <AllowMenuSort>true</AllowMenuSort>
     <ShowSortIndicators>true</ShowSortIndicators>
     <ShowSelectIndicators>true</ShowSelectIndicators>
