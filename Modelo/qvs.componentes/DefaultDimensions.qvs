@@ -8,8 +8,21 @@
 	-------------------------------------------------------------------------------------------------
 	09/22/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
+Mapping
+MapCanalEC:
+	LOAD * Inline [
+		idCanal,Canal
+		01,Retail
+		05,Sede principal
+		06,E-Commerce
+		07,Multimarca
+		08,Concesiones
+		09,Franquicias
+		10,Licitaciones
+		14,Quruba];
+
 DefaultDimensions_temp:
-	LOAD 
+	LOAD
 		CodHomologacion,
 		CREATEDDATETIME,
 		//DATAAREAID,
@@ -36,6 +49,8 @@ DefaultDimensions_temp:
 		DIMENSION_SUBLINEA,
 		DIMENSION_TERCERO,
 		DIMENSION_TIPO_DE_TIENDA,
+		Left(DIMENSION_ESTRUCTURA_COMERCIAL, 2) 									              as EC.IdCanal,
+		ApplyMap('MapCanalEC', Left(DIMENSION_ESTRUCTURA_COMERCIAL, 2), Null())	as EC.Canal,
 		MODIFIEDDATETIME
 		//PARTITION,
 		//RECID,
@@ -52,7 +67,7 @@ DefaultDimensions_temp:
 		Departamento,
 		NombreCoordinador,
 		Pais,
-		ZonaGeografica	
+		ZonaGeografica
 	FROM
 	[..\QVD\DIM_FrontsGeneral.QVD]
 	(qvd);
@@ -94,6 +109,8 @@ DefaultDimensions:
 		//PARTITION,
 		//RECID,
 		//RECVERSION,
+		EC.IdCanal,
+		EC.Canal,
 		SK.DEFAULTDIMENSION,
 		ZonaGeografica
 		//DATAAREAID
