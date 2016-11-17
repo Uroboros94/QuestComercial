@@ -230,6 +230,88 @@
         </SortCriteria>
       </SortCriterias>
     </GroupProperties>
+    <GroupProperties>
+      <Name>Asesor-Cliente</Name>
+      <Present>true</Present>
+      <IsCyclic>true</IsCyclic>
+      <FieldDefs>
+        <FieldDefEx>
+          <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Cliente.NombreCompleto</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+      </FieldDefs>
+      <Labels>
+        <String>Asesor</String>
+        <String>Cliente</String>
+      </Labels>
+      <SortCriterias>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>0</SortByNumeric>
+          <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>0</SortByNumeric>
+          <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+      </SortCriterias>
+    </GroupProperties>
+    <GroupProperties>
+      <Name>(id)Asesor-Cliente</Name>
+      <Present>true</Present>
+      <IsCyclic>true</IsCyclic>
+      <FieldDefs>
+        <FieldDefEx>
+          <Name>CarteraCliente.IDVENDEDOR</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>IDCLIENTE</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+      </FieldDefs>
+      <Labels>
+        <String>Id Asesor</String>
+        <String>id Cliente</String>
+      </Labels>
+      <SortCriterias>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+      </SortCriterias>
+    </GroupProperties>
   </GroupProperties>
   <VariableProperties>
     <VariableProperties>

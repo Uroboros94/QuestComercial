@@ -1,57 +1,29 @@
 /*----------------------------------------------------------------------------------------------------
  Detalle :
-    Extracción de Dimensiones: QST_MaestroProductos
+	Extracción de Dimensiones: QST_MaestroProductos
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/22/2016  |   malemos         |   Inicio de Configuración
+11/17/2016	|	malemos			|	Ajuste: Extracción de referencias aprobadas y migradas desde SISPRO
 *****************************************************************************************************/
 QST_MaestroProductos:
-    SQL SELECT 
-        NUMEROPRODUCTODISPLAY,
-        NOMBREBUSQUEDA,
-        TIPOPRODUCTO,
-        NOMBRETIPOPRODUCTO,
-        PRODUCTRECID,
-        CATEGORYRECID,
-        CATEGORYHIERARCHYRECID,
-        CODARTICULO,
-        NOMBREPRODUCTO,
-        NOMBRECATEGORIA,
-        DESCGRUPODIMPRODUCTO,
-        PRODUCTDIMENSIONGROUPRECID,
-        INVENTTABLERECID,
-        DEFAULTDIMENSION,
-        NOMBREGRUPODIMPRODUCTO,
-        NOMBREGRUPODIMALMAC,
-        DESCGRUPODIMALMAC,
-        STORAGEDIMENSIONGROUPRECID,
-        NOMBREGRUPODIMSEGUIMIENTO,
-        DESCGRUPODIMSEGUIMIENTO,
-        PRODUCTINVENTDIMID,
-        EMPRESA,
-        //DATAAREAID,
-        //RECVERSION,
-        //PARTITION,
-        //RECID,
-        EMITIDO,
-        NOMBREEMITIDO,
-        SUBTIPOPRODUCTO,
-        NOMBRESUBTIPOPRODUCTO,
-        NOMBREJERARQUIACATEGORIA,
-        NUMEROPRODUCTO,
-        UBICACION,
-        SERIAL,
-        ALMACEN,
-        CODIGOBARRAS,
-        NUMEROVARIANTE,
-        COLOR,
-        ESTILO,
-        SITIO,
-        TALLA,
-        TRACKINGDIMENSIONGROUPRECID,
-        PRODUCTPARENT
-    FROM "QST_MODELPRODUCTOS";
+	SQL SELECT 
+		NOMBRECATEGORIA,
+		CATEGORYRECID,
+		CODIGOBARRAS,
+		NOMBREEMITIDO,
+		ESTILO,
+		COLOR,
+		SUBTIPOPRODUCTO,
+		NOMBREPRODUCTO,
+		CODARTICULO,
+		DESCGRUPODIMSEGUIMIENTO,
+		NOMBRESUBTIPOPRODUCTO,
+		TALLA,
+		NOMBRETIPOPRODUCTO
+	FROM "QST_MODELPRODUCTOS"
+	where CODARTICULO in (Select ITEMID from InventItemGroupItem where ITEMGROUPID in ('COMERC','IMPORT','MANUFAC','MODIFICADO'));
 
 STORE QST_MaestroProductos INTO [..\QVD\QST_MaestroProductos.QVD](qvd);
 DROP TABLE QST_MaestroProductos;

@@ -2,51 +2,51 @@
 Fecha : 20/09/2016
 ----------------------------------------------------------------------------------------------------
  Detalle :
-     Creación del Modelo: Ventas
+	Creación del Modelo: Ventas
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/22/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
 Ventas:
-LOAD 
-     ASIENTOFACTURA, 
-//     CONDICIONPAGO, 
-     CUENTACLIENTE, 
-     DIASVENCIDOS, 
-     DIMENSIONDEFAULTFACTSERV, 
-     DIMENSIONDEFAULTSALES, 
-     DIVISA, 
-     ESTADOFACTURA,
-     NOMBREESTADOFACTURA, 
-     FECHACIERRE, 
-     FECHAFACTURA, 
-     FECHAVENCIMIENTO, 
-     IDFACTURA, 
-     MODULOGENERACION,
-     NOMBREMODULOGENERACION, 
-//     NOMBRECLIENTE, 
-     SALDOCORRIENTETOTAL, 
-     SALDOTOTAL, 
-     SALDOTOTALDIVISA, 
-     SALDOVENCIDOTOTAL, 
-     SALESID			as IDPEDIDO, 
-     ULTIMAFECHALIQUIDACION, 
-     ULTIMOASIENTOLIQUIDACION, 
-     VALORDIVISALIQUIDADA, 
-     VALORFACTURA, 
-     VALORFACTURADIVISATRANS, 
-     VALORLIQUIDADO, 
-     VENCIDA,
-     NOMBREVENCIDA, 
-     CREATEDDATETIME, 
-     CREATEDBY,
-	CANTIDAD as CantidadVentas
-//     DATAAREAID, 
-//     RECVERSION, 
-//     PARTITION, 
-//     RECID
-FROM
-[..\QVD\CustInvoiceTrans.QVD]
-(qvd);
+	LOAD 
+		ASIENTOFACTURA, 
+		//CONDICIONPAGO, 
+		CUENTACLIENTE, 
+		DIASVENCIDOS, 
+		DIMENSIONDEFAULTFACTSERV, 
+		DIMENSIONDEFAULTSALES, 
+		DIVISA, 
+		ESTADOFACTURA,
+		NOMBREESTADOFACTURA, 
+		FECHACIERRE, 
+		FECHAFACTURA, 
+		FECHAVENCIMIENTO, 
+		IDFACTURA, 
+		MODULOGENERACION,
+		NOMBREMODULOGENERACION, 
+		//NOMBRECLIENTE, 
+		SALDOCORRIENTETOTAL, 
+		SALDOTOTAL, 
+		SALDOTOTALDIVISA, 
+		SALDOVENCIDOTOTAL, 
+		SALESID						as IDPEDIDO, 
+		ULTIMAFECHALIQUIDACION, 
+		ULTIMOASIENTOLIQUIDACION, 
+		VALORDIVISALIQUIDADA, 
+		VALORFACTURA, 
+		VALORFACTURADIVISATRANS, 
+		VALORLIQUIDADO, 
+		VENCIDA,
+		NOMBREVENCIDA, 
+		CREATEDDATETIME, 
+		CREATEDBY,
+		CANTIDAD 					as CantidadVentas
+		//DATAAREAID, 
+		//RECVERSION, 
+		//PARTITION, 
+		//RECID
+	FROM
+	[..\QVD\CustInvoiceTrans.QVD]
+	(qvd);
 
