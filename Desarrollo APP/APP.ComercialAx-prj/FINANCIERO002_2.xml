@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+        <v>Sum(Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -255,8 +255,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -307,7 +307,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(CarteraCliente.VALORLIQUIDADO)</v>
+        <v>sum(Cartera.ValorLiquidado)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2786,7 +2786,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.IDVENDEDOR</Name>
+        <Name>Cartera.IdVendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2972,7 +2972,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+        <Name>Cartera.Vendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -5148,7 +5148,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.IDVENDEDOR</DimName>
+          <DimName>Cartera.IdVendedor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5156,7 +5156,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
+          <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5173,7 +5173,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+              <v>Sum(Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5764,8 +5764,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6946,7 +6946,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(CarteraCliente.VALORLIQUIDADO)</v>
+              <v>sum(Cartera.ValorLiquidado)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

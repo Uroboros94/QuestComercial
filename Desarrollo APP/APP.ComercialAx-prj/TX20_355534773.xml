@@ -264,7 +264,14 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>0</BkgAlpha>
     <Text>
-      <v>=Num(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} (PRECIOUNITARIO * PENDIENTEENTREGA) - (PENDIENTEENTREGA*DESCUENTO)), '$ #.##0')</v>
+      <v>=Num(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido={&quot;3&quot;}
+		&gt;} (PedidosVenta.PrecioUnitario * PedidosVenta.PendienteXEntrega) 
+		- (PedidosVenta.PendienteXEntrega * PedidosVenta.Descuento))
+	, '$ #.##0')</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>

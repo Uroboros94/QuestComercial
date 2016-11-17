@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+        <v>Sum(Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+        <v>Sum(Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(CarteraCliente.DIASVENCIDOS)</v>
+        <v>sum(Cartera.DiasVencidos)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2273,7 +2273,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2459,7 +2459,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+        <Name>Cartera.Vendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2645,7 +2645,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>IDCLIENTE</Name>
+        <Name>Cliente.Id</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3017,7 +3017,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.IDFACTURA</Name>
+        <Name>Cartera.IdFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3203,7 +3203,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.FECHAFACTURA</Name>
+        <Name>Cartera.FechaFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3362,7 +3362,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>225</ColWidth>
+      <ColWidth>263</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3389,7 +3389,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.FECHAVENCIMIENTO</Name>
+        <Name>Cartera.FechaVencimiento</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3548,7 +3548,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>228</ColWidth>
+      <ColWidth>275</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4961,8 +4961,8 @@
       <int>300</int>
       <int>300</int>
       <int>259</int>
-      <int>225</int>
-      <int>228</int>
+      <int>263</int>
+      <int>275</int>
       <int>278</int>
       <int>272</int>
       <int>253</int>
@@ -5503,55 +5503,55 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>IDCLIENTE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CarteraCliente.IDFACTURA</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CarteraCliente.FECHAFACTURA</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CarteraCliente.FECHAVENCIMIENTO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.IdEC</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.Vendedor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Id</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.IdFactura</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.FechaFactura</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.FechaVencimiento</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5568,7 +5568,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+              <v>Sum(Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6158,7 +6158,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+              <v>Sum(Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7338,7 +7338,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(CarteraCliente.DIASVENCIDOS)</v>
+              <v>sum(Cartera.DiasVencidos)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

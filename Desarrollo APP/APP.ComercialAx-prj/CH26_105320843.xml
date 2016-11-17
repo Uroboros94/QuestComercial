@@ -229,7 +229,10 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -929,7 +932,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Estilo</Name>
+        <Name>Producto.Estilo</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1115,7 +1118,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
+        <Name>Producto.Genero</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1301,7 +1304,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Referencia</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3199,9 +3202,9 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
+          <DimName>Producto.Estilo</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3209,7 +3212,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Referencia</DimName>
+          <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3217,7 +3220,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Estilo</DimName>
+          <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3234,7 +3237,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>if(sum(CarteraCliente.SALDOVENCIDOTOTAL)&gt;0,'Si','No')</v>
+        <v>if(sum(Cartera.SaldoVencidoTotal)&gt;0,'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+        <v>sum(Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -329,7 +329,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+        <v>sum(Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2160,7 +2160,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>278</ColWidth>
+      <ColWidth>284</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2645,7 +2645,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>331</ColWidth>
+      <ColWidth>284</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3130,7 +3130,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>294</ColWidth>
+      <ColWidth>306</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4293,7 +4293,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.TIPOPAGO</Name>
+        <Name>Cartera.TipoPago</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6253,15 +6253,15 @@
     <ColWidths>
       <int>219</int>
       <int>200</int>
-      <int>575</int>
+      <int>500</int>
       <int>231</int>
-      <int>169</int>
+      <int>434</int>
       <int>191</int>
       <int>203</int>
       <int>334</int>
-      <int>278</int>
-      <int>331</int>
-      <int>294</int>
+      <int>284</int>
+      <int>284</int>
+      <int>306</int>
       <int>325</int>
     </ColWidths>
     <Striping>
@@ -6803,14 +6803,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.TIPOPAGO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6840,6 +6832,14 @@
           <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.TipoPago</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
     </ExpansionInfo>
     <CellBackgroundAlpha>255</CellBackgroundAlpha>
     <CellBorderAlpha>255</CellBorderAlpha>
@@ -6852,7 +6852,7 @@
           <InternalId>0</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(sum(CarteraCliente.SALDOVENCIDOTOTAL)&gt;0,'Si','No')</v>
+              <v>if(sum(Cartera.SaldoVencidoTotal)&gt;0,'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8554,7 +8554,7 @@
           <InternalId>3</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+              <v>sum(Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8946,7 +8946,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>278</ColWidth>
+            <ColWidth>284</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -9144,7 +9144,7 @@
           <InternalId>4</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+              <v>sum(Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -9536,7 +9536,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>331</ColWidth>
+            <ColWidth>284</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -10126,7 +10126,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>294</ColWidth>
+            <ColWidth>306</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

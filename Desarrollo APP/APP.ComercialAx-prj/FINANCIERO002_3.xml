@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+        <v>Sum(Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -255,8 +255,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -282,8 +282,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -309,8 +309,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -336,8 +336,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;90&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;90&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -3305,7 +3305,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3859,7 +3859,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.IDFACTURA</Name>
+        <Name>Cartera.IdFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6111,24 +6111,6 @@
       <ExpansionData>
         <ExcludeList>true</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo>
-            <int>-2</int>
-            <int>145</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-            <Blob>
-                AgAAAAAAhLxA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
           <DimName>(id)Asesor-Cliente</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6145,7 +6127,25 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.IDFACTURA</DimName>
+          <DimName>EC.IdEC</DimName>
+          <ElemNo>
+            <int>-2</int>
+            <int>72</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AA==
+            </Blob>
+            <Blob>
+                AgAAAAAAhLxA
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.IdFactura</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6162,7 +6162,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+              <v>Sum(Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6753,8 +6753,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7345,8 +7345,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7937,8 +7937,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8529,8 +8529,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;90&quot;}
-	&gt;}	CarteraCliente.SALDOVENCIDOTOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;90&quot;}
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

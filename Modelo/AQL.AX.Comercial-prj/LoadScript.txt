@@ -34,6 +34,11 @@ $(must_Include=qvs.axcomercial\clientes.qvs);
 /*Estructura Comercial*/
 $(must_Include=qvs.componentes\estructuracomercial.qvs);
 
+/*Cartera*/
+$(must_Include=qvs.axcomercial\carteracliente.qvs);
+
+/*Ventas*/
+$(must_Include=qvs.axcomercial\ventas.qvs);
 
 /*Pedidos y ventas*/
 $(must_Include=qvs.axcomercial\pedidosventa.qvs);
@@ -51,6 +56,16 @@ LinkTable_Temp:
 		PedidosVenta.Fecha 			as FECHA,
 		PedidosVenta.Id_CO			as ID_CO
 	Resident PedidosVenta;
+	Concatenate
+	LOAD
+		Cartera.IdCliente			as IDCLIENTE,
+		Cartera.FechaFactura		as FECHA
+	Resident CarteraCliente;
+	Concatenate
+	LOAD
+		Venta.IdCliente				as IDCLIENTE,
+		Venta.FechaFactura			as FECHA
+	Resident Venta;
 	
 LinkTable:
 	LOAD
@@ -72,7 +87,6 @@ TRACE Modelo Finalizado;
 EXIT SCRIPT;
 
 
-$(must_Include=qvs.axcomercial\ventas.qvs);
 
 $(must_Include=qvs.axcomercial\carteracliente.qvs);
 

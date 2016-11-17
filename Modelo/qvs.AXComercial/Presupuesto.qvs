@@ -17,6 +17,22 @@ CodigosEC:
 	FROM [..\QVD\DefaulDimensions.QVD]
 	(qvd);
 
+Presupuesto_Temp:
+	LOAD
+		DIA,
+		MES,
+		ANO,
+		FECHA,
+		LINEA,
+		CODBARRAS,
+		PresupuestoEstilo,
+		CodICG,
+		UNIDADES,
+		PESOS
+	FROM
+	[..\QVD\Presupuesto_Dia2.QVD]
+	(qvd);
+
 Presupuesto:
 	LOAD
 		ApplyMap('CodigosEC',CodICG)&Date(FECHA, 'YYYYMMDD')	as CK.ID_COFecha,
@@ -33,6 +49,5 @@ Presupuesto:
 		CodICG							as Ppto.IdICG,
 		UNIDADES						as Ppto.Unidades,
 		PESOS							as Ppto.Pesos
-	FROM
-	[..\QVD\Presupuesto_Dia2.QVD]
-	(qvd);
+	Resident Presupuesto_Temp;
+	DROP Table Presupuesto_Temp;

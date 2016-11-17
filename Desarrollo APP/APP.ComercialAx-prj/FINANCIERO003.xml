@@ -246,7 +246,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.VALORFACTURA)</v>
+        <v>Sum(Cartera.ValorFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -271,7 +271,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.VALORLIQUIDADO)</v>
+        <v>Sum(Cartera.ValorLiquidado)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -321,7 +321,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.DESCRIPCIONPRONTOPAGO)</v>
+        <v>Sum(Cartera.ProntoPago)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2290,7 +2290,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.FECHAFACTURA</Name>
+        <Name>Cartera.FechaFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2479,7 +2479,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.IDFACTURA</Name>
+        <Name>Cartera.IdFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2638,7 +2638,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>256</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2665,7 +2665,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.ULTIMOASIENTOLIQUIDACION</Name>
+        <Name>Cartera.FechaUltAsiento</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2854,11 +2854,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Estructura Comercial</v>
+        <v>EC</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3013,7 +3013,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>141</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -4970,7 +4970,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.FECHAFACTURA</DimName>
+          <DimName>Cartera.FechaFactura</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4978,7 +4978,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.IDFACTURA</DimName>
+          <DimName>Cartera.IdFactura</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4986,7 +4986,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
+          <DimName>Cartera.FechaUltAsiento</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4994,7 +4994,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.ULTIMOASIENTOLIQUIDACION</DimName>
+          <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5011,7 +5011,7 @@
           <InternalId>0</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.VALORFACTURA)</v>
+              <v>Sum(Cartera.ValorFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5601,7 +5601,7 @@
           <InternalId>1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.VALORLIQUIDADO)</v>
+              <v>Sum(Cartera.ValorLiquidado)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6781,7 +6781,7 @@
           <InternalId>3</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.DESCRIPCIONPRONTOPAGO)</v>
+              <v>Sum(Cartera.ProntoPago)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

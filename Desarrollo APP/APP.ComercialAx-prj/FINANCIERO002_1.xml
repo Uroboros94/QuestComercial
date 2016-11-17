@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+        <v>Sum(Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -255,8 +255,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -282,8 +282,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -309,8 +309,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -336,8 +336,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;90&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;90&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1245,7 +1245,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>347</ColWidth>
+      <ColWidth>366</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1730,7 +1730,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>366</ColWidth>
+      <ColWidth>384</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2215,7 +2215,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>344</ColWidth>
+      <ColWidth>363</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2700,7 +2700,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>319</ColWidth>
+      <ColWidth>338</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3305,7 +3305,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3859,7 +3859,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.IDFACTURA</Name>
+        <Name>Cartera.IdFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -5571,10 +5571,10 @@
       <int>300</int>
       <int>300</int>
       <int>284</int>
-      <int>347</int>
       <int>366</int>
-      <int>344</int>
-      <int>319</int>
+      <int>384</int>
+      <int>363</int>
+      <int>338</int>
       <int>363</int>
     </ColWidths>
     <Striping>
@@ -6111,24 +6111,6 @@
       <ExpansionData>
         <ExcludeList>true</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo>
-            <int>-2</int>
-            <int>145</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AA==
-            </Blob>
-            <Blob>
-                AgAAAAAAhLxA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
           <DimName>(id)Asesor-Cliente</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6145,7 +6127,21 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.IDFACTURA</DimName>
+          <DimName>EC.IdEC</DimName>
+          <ElemNo>
+            <int>72</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AgAAAAAAhLxA
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.IdFactura</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6162,7 +6158,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+              <v>Sum(Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6753,8 +6749,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7345,8 +7341,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7937,8 +7933,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8529,8 +8525,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;90&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;90&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

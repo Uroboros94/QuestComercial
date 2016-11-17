@@ -282,9 +282,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} VALORFACTURA)) 
+        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Venta.ValorFactura)) 
 /
-(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
+(Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -309,7 +311,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)*$(vIva))
+        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)*$(vIva))
 /
 (sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Ppto.Pesos)*$(vIva))</v>
       </Definition>
@@ -336,7 +338,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)</v>
+        <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2790,7 +2792,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_TIPO_DE_TIENDA</Name>
+        <Name>EC.Canal</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2976,7 +2978,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -5145,7 +5147,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DESC_TIPO_DE_TIENDA</DimName>
+          <DimName>EC.Canal</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5153,7 +5155,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6353,9 +6355,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} VALORFACTURA)) 
+              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Venta.ValorFactura)) 
 /
-(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
+(Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6945,7 +6949,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)*$(vIva))
+              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)*$(vIva))
 /
 (sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Ppto.Pesos)*$(vIva))</v>
             </Definition>
@@ -7537,7 +7541,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)</v>
+              <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

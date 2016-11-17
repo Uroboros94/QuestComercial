@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>if(DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL like('*300*'),'OK')</v>
+        <v>if(EC.Canal = 'Multimarca' ,'OK')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>if(DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL like('*Retail*'),'OK')</v>
+        <v>if(EC.Canal = 'Retail','OK')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -280,17 +280,17 @@
     <ExpressionData>
       <Definition>
         <v>if(
-		(Sum({&lt;
-			Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-			SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-			TIPOPEDIDO={&quot;3&quot;}
-			&gt;} CANTIDAD) 
-			- 
-		Sum({&lt;	
-			Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-			SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-			TIPOPEDIDO={&quot;3&quot;}
-			&gt;} PENDIENTEENTREGA))&gt;=1,'Si','No')</v>
+	(Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+		&gt;} PedidosVenta.Cantidad) 
+	- 
+	Sum({&lt;	
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+		&gt;} PedidosVenta.PendienteXEntrega))&gt;=1,'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -734,7 +734,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>219</ColWidth>
+      <ColWidth>166</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1219,7 +1219,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>128</ColWidth>
+      <ColWidth>103</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2794,7 +2794,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Coleccion</Name>
+        <Name>Producto.Coleccion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2980,7 +2980,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3166,7 +3166,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
+        <Name>Producto.Genero</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3352,7 +3352,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Referencia</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3538,7 +3538,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
+        <Name>Producto.IdColor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3724,7 +3724,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Categoria</Name>
+        <Name>Producto.Categoria</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3911,7 +3911,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>MasterProductAttributes.ATVAL_GENERO_MATERIAL</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Tela</v>
@@ -4072,7 +4072,10 @@
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_COND</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4097,7 +4100,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>MasterProductAttributes.ATVAL_MATERIAL_INSUMO</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Composición de la Tela</v>
@@ -4258,7 +4261,10 @@
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_COND</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4282,7 +4288,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_TIPO_DE_ADQUISICION</Name>
+        <Name>Producto.TipoAdquisicion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4468,7 +4474,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_SILUETA</Name>
+        <Name>Producto.Silueta</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6112,11 +6118,9 @@
       <int>153</int>
       <int>300</int>
       <int>300</int>
-      <int>300</int>
-      <int>300</int>
       <int>281</int>
-      <int>219</int>
-      <int>128</int>
+      <int>166</int>
+      <int>103</int>
       <int>300</int>
       <int>300</int>
       <int>488</int>
@@ -6664,14 +6668,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>MasterProductAttributes.ATVAL_GENERO_MATERIAL</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6688,7 +6684,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_TIPO_DE_ADQUISICION</DimName>
+          <DimName>Producto.Coleccion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6696,7 +6692,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_SILUETA</DimName>
+          <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6704,7 +6700,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Referencia</DimName>
+          <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6712,7 +6708,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdColor</DimName>
+          <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6720,7 +6716,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Categoria</DimName>
+          <DimName>Producto.IdColor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6728,7 +6724,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Coleccion</DimName>
+          <DimName>Producto.Categoria</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6736,7 +6732,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
+          <DimName>Producto.TipoAdquisicion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Silueta</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6753,7 +6757,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL like('*300*'),'OK')</v>
+              <v>if(EC.Canal = 'Multimarca' ,'OK')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7145,7 +7149,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>219</ColWidth>
+            <ColWidth>166</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7343,7 +7347,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL like('*Retail*'),'OK')</v>
+              <v>if(EC.Canal = 'Retail','OK')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7735,7 +7739,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>128</ColWidth>
+            <ColWidth>103</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7934,17 +7938,17 @@
           <ExpressionData>
             <Definition>
               <v>if(
-		(Sum({&lt;
-			Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-			SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-			TIPOPEDIDO={&quot;3&quot;}
-			&gt;} CANTIDAD) 
-			- 
-		Sum({&lt;	
-			Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-			SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-			TIPOPEDIDO={&quot;3&quot;}
-			&gt;} PENDIENTEENTREGA))&gt;=1,'Si','No')</v>
+	(Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+		&gt;} PedidosVenta.Cantidad) 
+	- 
+	Sum({&lt;	
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+		&gt;} PedidosVenta.PendienteXEntrega))&gt;=1,'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
