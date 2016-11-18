@@ -33,12 +33,11 @@ $(Must_Include=qvs.ax\defauldimensions.qvs);
 
 /*Maestro de Productos*/
 $(Must_Include=qvs.ax\qst_maestroproductos.qvs);
+$(Must_Include=qvs.ax\qst_maestroproductosatributes.qvs);/*Atributos del Producto*/
+//$(Must_Include=qvs.ax\productmaster.qvs);///*Maestro de Productos*/
 
-/*Atributos del Producto*/
-$(Must_Include=qvs.ax\qst_maestroproductosatributes.qvs);
-
-/*Estructura Comercial*/
-$(Must_Include=qvs.ax\estructuracomercial.qvs);
+///*Estructura Comercial*/
+//$(Must_Include=qvs.ax\estructuracomercial.qvs);
 
 /*Maestro de Clientes*/
 $(Must_Include=qvs.ax\qst_maestroclientes.qvs);
@@ -48,9 +47,6 @@ $(Must_Include=qvs.ax\ordenesproduccion.qvs);
 
 /*Ordenes de Producción detalle*/
 $(Must_Include=qvs.ax\prodcalctrans.qvs);
-
-/*Maestro de Productos*/
-$(Must_Include=qvs.ax\productmaster.qvs);
 
 /*Inventarios*/
 $(Must_Include=qvs.ax\inventdim.qvs);
