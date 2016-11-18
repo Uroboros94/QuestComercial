@@ -1859,8 +1859,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Id</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Referencia</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Código Articulo</v>
@@ -2045,8 +2045,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.IdLinea</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Línea</v>
@@ -2231,8 +2231,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.IdColor</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Color</v>
@@ -2417,8 +2417,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Talla</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Talla</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Talla</v>
@@ -4321,14 +4321,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>PedidosTransfer.CODTRANSFERENCIA</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -4369,31 +4361,39 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Id</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.IdColor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Talla</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>PedidosTransfer.FECHAENVIO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdLinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Talla</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

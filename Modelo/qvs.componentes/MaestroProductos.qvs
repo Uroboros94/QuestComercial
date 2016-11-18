@@ -37,6 +37,7 @@ Producto_Temp:
 Producto_Temp2:
 	LOAD
 		CODARTICULO&TALLA&COLOR 			as CK.ProductoTallaColor,
+		CODARTICULO&TALLA&COLOR 			as SK.KEYPRODUCT,
 		CODARTICULO							as SK.Producto,
 		CATEGORYRECID 						as CATEGORYRECID,
 		CODARTICULO 						as Referencia,
@@ -145,6 +146,7 @@ noConcatenate
 Producto:
 	LOAD
 		CK.ProductoTallaColor,
+		SK.KEYPRODUCT,
 		SK.Producto,
 		IdColor								as Producto.IdColor,
 		IdLinea								as Producto.IdLinea,

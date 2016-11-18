@@ -1761,8 +1761,8 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Coleccion</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Coleccion</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Colección</v>
@@ -1947,8 +1947,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.IdLinea</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Línea</v>
@@ -2133,8 +2133,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Tipo</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Tipo</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Prenda</v>
@@ -2319,8 +2319,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Referencia</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Referencia</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Referencia</v>
@@ -2505,8 +2505,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.IdColor</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Color</v>
@@ -2691,8 +2691,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_SILUETA</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Silueta</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Silueta</v>
@@ -2877,8 +2877,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_TIPO_DE_ADQUISICION</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.TipoAdquisicion</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Tipo Origen</v>
@@ -5108,50 +5108,6 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>Productos.Referencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>Productos.IdColor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>MasterProductAttributes.ATVAL_TIPO_DE_ADQUISICION</DimName>
-          <ElemNo>
-            <int>1</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BE1hbnVmYWN0dXJhZG8A
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>MasterProductAttributes.ATVAL_SILUETA</DimName>
-          <ElemNo>
-            <int>1</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFNsaW0A
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
@@ -5160,9 +5116,9 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Tipo</DimName>
+          <DimName>Producto.Coleccion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5170,7 +5126,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Coleccion</DimName>
+          <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5178,7 +5134,39 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
+          <DimName>Producto.Tipo</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Silueta</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.TipoAdquisicion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

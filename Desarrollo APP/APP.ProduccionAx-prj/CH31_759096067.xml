@@ -929,8 +929,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Genero</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Genero</v>
@@ -1115,8 +1115,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.IdLinea</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Código Línea</v>
@@ -1301,8 +1301,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Linea</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Linea</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Línea</v>
@@ -3193,14 +3193,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>DefaultDimensions.DESC_TIPO_DE_TIENDA</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -3209,7 +3201,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
+          <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3217,7 +3209,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Linea</DimName>
+          <DimName>Producto.IdLinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Linea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
