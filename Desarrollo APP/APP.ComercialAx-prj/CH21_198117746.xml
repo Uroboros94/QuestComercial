@@ -229,7 +229,10 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CantidadVentas)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido={&quot;3&quot;}&gt;} Venta.CantidadVentas)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2578,7 +2581,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CantidadVentas)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido={&quot;3&quot;}&gt;} Venta.CantidadVentas)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

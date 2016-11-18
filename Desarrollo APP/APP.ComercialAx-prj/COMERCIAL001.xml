@@ -232,10 +232,10 @@
     <ExpressionData>
       <Definition>
         <v>sum({&lt;
-	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} CANTIDAD)</v>
+	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -313,8 +313,8 @@
         <v>sum({&lt;	
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} 	PENDIENTEENTREGA)</v>
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} 	PedidosVenta.PendienteXEntrega)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -359,7 +359,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>1</LabelAdjust>
+      <LabelAdjust>0</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -844,7 +844,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>1</LabelAdjust>
+      <LabelAdjust>0</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -1329,7 +1329,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>1</LabelAdjust>
+      <LabelAdjust>0</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -1814,7 +1814,7 @@
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
-      <LabelAdjust>1</LabelAdjust>
+      <LabelAdjust>0</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2283,7 +2283,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.NombreCoordinador</Name>
+        <Name>EC.Coordinador</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2432,7 +2432,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -2469,7 +2469,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.Ciudad</Name>
+        <Name>EC.Cuidad</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2618,7 +2618,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -2655,7 +2655,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2677,7 +2677,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>1</LabelAdjust>
+      <LabelAdjust>0</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2804,7 +2804,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -2844,7 +2844,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2866,7 +2866,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>1</LabelAdjust>
+      <LabelAdjust>0</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2993,7 +2993,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -4955,7 +4955,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
+          <DimName>EC.Coordinador</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4963,7 +4963,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
+          <DimName>EC.Cuidad</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4971,7 +4971,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.NombreCoordinador</DimName>
+          <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4979,7 +4979,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.Ciudad</DimName>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4997,10 +4997,10 @@
           <ExpressionData>
             <Definition>
               <v>sum({&lt;
-	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} CANTIDAD)</v>
+	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5043,7 +5043,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>1</LabelAdjust>
+            <LabelAdjust>0</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -5633,7 +5633,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>1</LabelAdjust>
+            <LabelAdjust>0</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -6223,7 +6223,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>1</LabelAdjust>
+            <LabelAdjust>0</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>
@@ -6773,8 +6773,8 @@
               <v>sum({&lt;	
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} 	PENDIENTEENTREGA)</v>
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} 	PedidosVenta.PendienteXEntrega)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6817,7 +6817,7 @@
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
-            <LabelAdjust>1</LabelAdjust>
+            <LabelAdjust>0</LabelAdjust>
             <LabelVerticalAdjust>4</LabelVerticalAdjust>
             <TextAdjust>0</TextAdjust>
             <NumAdjust>2</NumAdjust>

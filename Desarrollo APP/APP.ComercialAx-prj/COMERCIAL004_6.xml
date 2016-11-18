@@ -282,9 +282,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} VALORFACTURA)) 
+        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Venta.ValorFactura)) 
 /
-(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
+(Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -309,7 +311,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)*$(vIva))
+        <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)*$(vIva))
 /
 (sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Ppto.Pesos)*$(vIva))</v>
       </Definition>
@@ -336,7 +338,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)</v>
+        <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2790,7 +2792,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_TIPO_DE_TIENDA</Name>
+        <Name>EC.Canal</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2976,7 +2978,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3136,6 +3138,192 @@
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
       <ColWidth>434</ColWidth>
+      <OverrideGroupSort>false</OverrideGroupSort>
+      <Show></Show>
+      <EnableCondition></EnableCondition>
+      <Comment></Comment>
+      <OtherTotalSpec>
+        <OtherMode>OTHER_OFF</OtherMode>
+        <OtherCounted>
+          <v>10</v>
+        </OtherCounted>
+        <OtherLimit>
+          <v>0.05</v>
+        </OtherLimit>
+        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
+        <SuppressOther>false</SuppressOther>
+        <ForceBadValueKeeping>true</ForceBadValueKeeping>
+        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
+        <GlobalOtherGrouping>false</GlobalOtherGrouping>
+        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
+        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <TotalMode>TOTAL_OFF</TotalMode>
+        <ReferencedExpression></ReferencedExpression>
+      </OtherTotalSpec>
+      <OtherString></OtherString>
+    </ChartDimensionDataDef>
+    <ChartDimensionDataDef>
+      <PseudoDef>
+        <Name>Calendario.MonthYear</Name>
+        <Type>PRESENT</Type>
+      </PseudoDef>
+      <Title>
+        <v>Período</v>
+      </Title>
+      <TotalString></TotalString>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowAll>false</ShowAll>
+      <ShowLabel>true</ShowLabel>
+      <ShowLegend>true</ShowLegend>
+      <NullSuppression>false</NullSuppression>
+      <ShowPartialSums>0</ShowPartialSums>
+      <LabelAdjust>0</LabelAdjust>
+      <LabelVerticalAdjust>4</LabelVerticalAdjust>
+      <TextAdjust>0</TextAdjust>
+      <NumAdjust>2</NumAdjust>
+      <VerticalAdjust>4</VerticalAdjust>
+      <DimCellVariations>
+        <CellVariationDef>
+          <PreMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreMinorBorder>
+          <PostMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostMinorBorder>
+          <MajorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </MajorBorder>
+          <PreTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreTotalBorder>
+          <PostTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostTotalBorder>
+          <SizeMod>0</SizeMod>
+          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+          <TotalSizeMod>0</TotalSizeMod>
+          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+          <FgColor>
+            <Col>
+              <Red>54</Red>
+              <Green>54</Green>
+              <Blue>54</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </FgColor>
+          <BgColor>
+            <Col>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </BgColor>
+          <TotalFgColor></TotalFgColor>
+          <TotalBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </TotalBgColor>
+          <OtherSizeMod>0</OtherSizeMod>
+          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherFgColor></OtherFgColor>
+          <OtherBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </OtherBgColor>
+        </CellVariationDef>
+      </DimCellVariations>
+      <DropdownSelect>false</DropdownSelect>
+      <ImageRepresentation></ImageRepresentation>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <MaxStringLength>0</MaxStringLength>
+      <AttributeExpressions></AttributeExpressions>
+      <PageBreaks>NO_BREAKS</PageBreaks>
+      <MaxNumShown></MaxNumShown>
+      <Spacing></Spacing>
+      <ColWidth>156</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4608,6 +4796,7 @@
     <ColWidths>
       <int>300</int>
       <int>434</int>
+      <int>300</int>
       <int>391</int>
       <int>391</int>
       <int>300</int>
@@ -5108,14 +5297,15 @@
     <InterFieldSortOrder>
       <int>4</int>
       <int>5</int>
+      <int>7</int>
       <int>0</int>
       <int>1</int>
       <int>2</int>
       <int>3</int>
       <int>6</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>2</ExpressionPosition>
-    <NumberOfLeftDimensions>2</NumberOfLeftDimensions>
+    <ExpressionPosition>3</ExpressionPosition>
+    <NumberOfLeftDimensions>3</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
@@ -5145,7 +5335,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DESC_TIPO_DE_TIENDA</DimName>
+          <DimName>EC.Canal</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5153,7 +5343,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
+          <DimName>EC.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Calendario.MonthYear</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6353,9 +6551,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} VALORFACTURA)) 
+              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Venta.ValorFactura)) 
 /
-(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
+(Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}&gt;} Ppto.Pesos))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6945,7 +7145,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)*$(vIva))
+              <v>(sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)*$(vIva))
 /
 (sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;} Ppto.Pesos)*$(vIva))</v>
             </Definition>
@@ -7537,7 +7737,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  VALORFACTURA)</v>
+              <v>sum({&lt;Calendario.ano = {$(=Max(Calendario.ano))}&gt;}  Venta.ValorFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

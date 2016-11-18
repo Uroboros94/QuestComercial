@@ -229,7 +229,12 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>If([Devolución] &lt;&gt; 0, Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CANTIDAD), 0)</v>
+        <v>If([Devolución] &lt;&gt; 0, 
+	Sum({&lt;
+		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+		&gt;} PedidosVenta.Cantidad), 0)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +259,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido={&quot;4&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1763,7 +1772,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+        <Name>PedidosVenta.Vendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3981,7 +3990,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
+          <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3989,7 +3998,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Cliente.NombreCompleto</DimName>
+          <DimName>PedidosVenta.Vendedor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4006,7 +4015,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>If([Devolución] &lt;&gt; 0, Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CANTIDAD), 0)</v>
+              <v>If([Devolución] &lt;&gt; 0, 
+	Sum({&lt;
+		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+		&gt;} PedidosVenta.Cantidad), 0)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4585,10 +4599,7 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_TRUE</Type>
-            <Expression>If((Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)) = 0, 0)</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -4599,7 +4610,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido={&quot;4&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5768,10 +5783,7 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_TRUE</Type>
-            <Expression>If((Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)) = 0, 0)</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>

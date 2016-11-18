@@ -31,18 +31,18 @@
         <Alpha>0</Alpha>
       </Color>
       <Font>
-        <FontName>Arial</FontName>
-        <PointSize1000>16000</PointSize1000>
+        <FontName>Century Gothic</FontName>
+        <PointSize1000>18000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
+        <FontName>Century Gothic</FontName>
         <PointSize1000>12000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>true</Bold>
+        <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
@@ -70,7 +70,7 @@
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
       <ShowCaption>true</ShowCaption>
-      <MultiLine>2</MultiLine>
+      <MultiLine>0</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
@@ -264,7 +264,12 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>0</BkgAlpha>
     <Text>
-      <v>=Num(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PRECIOUNITARIO * CantidadVentas), '$ #.##0')</v>
+      <v>=Num(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido={&quot;3&quot;}
+		&gt;} PedidosVenta.PrecioUnitario * Venta.CantidadVentas), '$ #.##0')</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>

@@ -232,8 +232,8 @@
         <v>sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} CANTIDAD)</v>
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -258,13 +258,13 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>PRECIOUNITARIO 
+        <v>PedidosVenta.PrecioUnitario 
 	* 
 Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} CANTIDAD)</v>
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -339,7 +339,17 @@ Sum({&lt;
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CANTIDAD) - Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad) 
+- 
+Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} PedidosVenta.PendienteXEntrega)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -364,7 +374,7 @@ Sum({&lt;
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>PRECIOUNITARIO * ([Facturación-Unidades])</v>
+        <v>PedidosVenta.PrecioUnitario * ([Facturación-Unidades])</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -489,7 +499,7 @@ Sum({&lt;
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(STOCK)</v>
+        <v>Sum(PedidosVenta.Stock)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -5779,7 +5789,7 @@ Sum({&lt;
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>PENDIENTE POR FACTURAR UNIDADES</v>
+        <v>Pendiente Por Facturar Unidades     </v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -6264,7 +6274,7 @@ Sum({&lt;
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>PENDIENTE POR FACTURAR PESOS</v>
+        <v>Pendiente X Facturar Pesos </v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -6277,7 +6287,7 @@ Sum({&lt;
         <Type>MONEY</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -6737,7 +6747,7 @@ Sum({&lt;
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
+        <Name>Producto.Genero</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6896,7 +6906,7 @@ Sum({&lt;
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>216</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -6923,7 +6933,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Coleccion</Name>
+        <Name>Producto.Coleccion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -7082,7 +7092,7 @@ Sum({&lt;
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>225</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -7109,7 +7119,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -7268,7 +7278,7 @@ Sum({&lt;
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>153</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -7295,7 +7305,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Referencia</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -7481,7 +7491,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
+        <Name>Producto.IdColor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -7640,7 +7650,7 @@ Sum({&lt;
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>150</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -7667,7 +7677,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_CLASIFICACION_INVENTARIO</Name>
+        <Name>Producto.ClasificacionInventario</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -8012,7 +8022,7 @@ Sum({&lt;
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>138</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -10050,13 +10060,13 @@ Sum({&lt;
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
+      <int>216</int>
+      <int>225</int>
+      <int>153</int>
       <int>300</int>
+      <int>150</int>
       <int>300</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
+      <int>138</int>
       <int>219</int>
       <int>256</int>
       <int>300</int>
@@ -10567,12 +10577,11 @@ Sum({&lt;
       <int>1</int>
       <int>2</int>
       <int>3</int>
-      <int>5</int>
-      <int>8</int>
-      <int>19</int>
       <int>4</int>
+      <int>5</int>
       <int>6</int>
       <int>7</int>
+      <int>8</int>
       <int>9</int>
       <int>10</int>
       <int>11</int>
@@ -10583,6 +10592,7 @@ Sum({&lt;
       <int>16</int>
       <int>17</int>
       <int>18</int>
+      <int>19</int>
     </InterFieldSortOrder>
     <ExpressionPosition>7</ExpressionPosition>
     <NumberOfLeftDimensions>7</NumberOfLeftDimensions>
@@ -10615,22 +10625,6 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>MasterProductAttributes.ATVAL_CLASIFICACION_INVENTARIO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>=if(isNull(TIENEFOTO),'No',TIENEFOTO)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -10639,7 +10633,7 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Referencia</DimName>
+          <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10647,7 +10641,7 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdColor</DimName>
+          <DimName>Producto.Coleccion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10655,7 +10649,7 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Coleccion</DimName>
+          <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10663,7 +10657,23 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.ClasificacionInventario</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10683,8 +10693,8 @@ Sum({&lt;
               <v>sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} CANTIDAD)</v>
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -11206,13 +11216,13 @@ Sum({&lt;
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>PRECIOUNITARIO 
+              <v>PedidosVenta.PrecioUnitario 
 	* 
 Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO={&quot;3&quot;}
-	&gt;} CANTIDAD)</v>
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -12914,7 +12924,17 @@ Sum({&lt;
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CANTIDAD) - Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} PedidosVenta.Cantidad) 
+- 
+Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} PedidosVenta.PendienteXEntrega)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -13507,7 +13527,7 @@ Sum({&lt;
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>PRECIOUNITARIO * ([Facturación-Unidades])</v>
+              <v>PedidosVenta.PrecioUnitario * ([Facturación-Unidades])</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16460,7 +16480,7 @@ Sum({&lt;
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(STOCK)</v>
+              <v>Sum(PedidosVenta.Stock)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -17089,7 +17109,7 @@ Sum({&lt;
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>PENDIENTE POR FACTURAR UNIDADES</v>
+              <v>Pendiente Por Facturar Unidades     </v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -17679,7 +17699,7 @@ Sum({&lt;
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>PENDIENTE POR FACTURAR PESOS</v>
+              <v>Pendiente X Facturar Pesos </v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -17692,7 +17712,7 @@ Sum({&lt;
               <Type>MONEY</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#.##0,00;-$#.##0,00</Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>

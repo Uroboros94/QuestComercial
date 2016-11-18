@@ -17,30 +17,79 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
+// Declaración Librería...
+$(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
+
 
 	
 ///$tab Carga
-$(must_Include=qvs.componentes\calendario.qvs);
-
-$(must_Include=qvs.componentes\defaultdimensions.qvs);
-
+/*Productos Aprobados desde PLM*/
 $(must_Include=qvs.componentes\maestroproductos.qvs);
+$(must_Include=qvs.axcomercial\actividadesproducto.qvs);
+$(must_Include=qvs.axcomercial\inventtransop.qvs);
 
+/*Clientes*/
 $(must_Include=qvs.axcomercial\clientes.qvs);
 
+/*Estructura Comercial*/
+$(must_Include=qvs.componentes\estructuracomercial.qvs);
+
+/*Cartera*/
+$(must_Include=qvs.axcomercial\carteracliente.qvs);
+
+/*Ventas*/
+$(must_Include=qvs.axcomercial\ventas.qvs);
+
+/*Pedidos y ventas*/
 $(must_Include=qvs.axcomercial\pedidosventa.qvs);
 
-$(must_Include=qvs.axcomercial\ventas.qvs);
+/*Presupuesto*/
+$(must_Include=qvs.axcomercial\presupuesto.qvs);
+
+/*Calendario*/
+$(must_Include=qvs.componentes\calendario.qvs);
+///$tab Main 4
+LinkTable_Temp:
+	LOAD
+		PedidosVenta.Id				as IDPEDIDO,
+		PedidosVenta.IdCliente		as IDCLIENTE,
+		PedidosVenta.Fecha 			as FECHA,
+		PedidosVenta.Id_CO			as ID_CO
+	Resident PedidosVenta;
+	Concatenate
+	LOAD
+		Cartera.IdCliente			as IDCLIENTE,
+		Cartera.FechaFactura		as FECHA
+	Resident CarteraCliente;
+	Concatenate
+	LOAD
+		Venta.IdCliente				as IDCLIENTE,
+		Venta.FechaFactura			as FECHA
+	Resident Venta;
+	
+LinkTable:
+	LOAD
+		IDPEDIDO&IDCLIENTE&FECHA	as CK.PedidoClienteFecha,
+		ID_CO&FECHA					as CK.ID_COFecha,
+		/**************************************************************************/
+		ID_CO						as SK.ID_CO,
+		IDPEDIDO					as SK.Pedido,
+		IDCLIENTE					as SK.Cliente,
+		FECHA						as SK.FECHA
+	Resident LinkTable_Temp;
+	DROP Table LinkTable_Temp;
+	
+	
+
+///$tab Exit Script
+CALL Qvc.Cleanup;
+TRACE Modelo Finalizado;
+EXIT SCRIPT;
+
+
 
 $(must_Include=qvs.axcomercial\carteracliente.qvs);
 
-$(must_Include=qvs.axcomercial\presupuesto.qvs);
 
-$(must_Include=qvs.axcomercial\actividadesproducto.qvs);
-
-$(must_Include=qvs.axcomercial\inventtransop.qvs);
 
 //$(must_Include=qvs.axcomercial\fotosstyle.qvs);
-///$tab Exit Script
-TRACE Modelo Finalizado;
-EXIT SCRIPT;

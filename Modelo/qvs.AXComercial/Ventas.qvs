@@ -2,51 +2,52 @@
 Fecha : 20/09/2016
 ----------------------------------------------------------------------------------------------------
  Detalle :
-     Creación del Modelo: Ventas
+	Creación del Modelo: Ventas
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/22/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
-Ventas:
-LOAD 
-     ASIENTOFACTURA, 
-//     CONDICIONPAGO, 
-     CUENTACLIENTE, 
-     DIASVENCIDOS, 
-     DIMENSIONDEFAULTFACTSERV, 
-     DIMENSIONDEFAULTSALES, 
-     DIVISA, 
-     ESTADOFACTURA,
-     NOMBREESTADOFACTURA, 
-     FECHACIERRE, 
-     FECHAFACTURA, 
-     FECHAVENCIMIENTO, 
-     IDFACTURA, 
-     MODULOGENERACION,
-     NOMBREMODULOGENERACION, 
-//     NOMBRECLIENTE, 
-     SALDOCORRIENTETOTAL, 
-     SALDOTOTAL, 
-     SALDOTOTALDIVISA, 
-     SALDOVENCIDOTOTAL, 
-     SALESID			as IDPEDIDO, 
-     ULTIMAFECHALIQUIDACION, 
-     ULTIMOASIENTOLIQUIDACION, 
-     VALORDIVISALIQUIDADA, 
-     VALORFACTURA, 
-     VALORFACTURADIVISATRANS, 
-     VALORLIQUIDADO, 
-     VENCIDA,
-     NOMBREVENCIDA, 
-     CREATEDDATETIME, 
-     CREATEDBY,
-	CANTIDAD as CantidadVentas
-//     DATAAREAID, 
-//     RECVERSION, 
-//     PARTITION, 
-//     RECID
-FROM
-[..\QVD\CustInvoiceTrans.QVD]
-(qvd);
+Venta:
+	LOAD 
+		CUENTACLIENTE								as SK.Cliente,
+		ESTADOFACTURA 								as Venta.IdEstadoFactura,
+		CUENTACLIENTE								as Venta.IdCliente,
+		IDFACTURA									as Venta.IdFactura, 
+		SALESID										as Venta.IdPedido, 
+		ASIENTOFACTURA								as Venta.AsientoFactura, 
+		DIASVENCIDOS								as Venta.DiasVencidos, 
+		DIMENSIONDEFAULTFACTSERV					as Venta.FactServ, 
+		DIMENSIONDEFAULTSALES						as Venta.Sales, 
+		DIVISA 										as Venta.Divisa, 
+		NOMBREESTADOFACTURA							as Venta.EstadoFactura, 
+		Date(FECHAFACTURA,'YYYYMMDD')				as Venta.FechaFactura,
+		Date(FECHACIERRE,'YYYYMMDD')				as Venta.FechaCierre,
+		Date(FECHAVENCIMIENTO,'YYYYMMDD')			as Venta.FechaVencimiento,
+		Date(ULTIMAFECHALIQUIDACION,'YYYYMMDD')		as Venta.FechaUltLiquidacion, 
+		Num(SALDOCORRIENTETOTAL)					as Venta.SaldoCorrienteTotal, 
+		Num(SALDOTOTAL)								as Venta.SaldoTotal, 
+		Num(SALDOTOTALDIVISA)						as Venta.SaldoTotalDivisa, 
+		Num(SALDOVENCIDOTOTAL)						as Venta.SaldoVencidoTotal, 
+		ULTIMOASIENTOLIQUIDACION					as Venta.UltimoAsientoLiquidacion,
+		Num(VALORDIVISALIQUIDADA)					as Venta.ValorDivisaLiquidada, 
+		Num(VALORFACTURA)							as Venta.ValorFactura, 
+		Num(VALORFACTURADIVISATRANS)				as Venta.ValorFacturaDivisaTrans, 
+		Num(VALORLIQUIDADO)							as Venta.ValorLiquidado, 
+		VENCIDA 									as Venta.EsVencida,
+		NOMBREVENCIDA								as Venta.NombreVencida, 
+		Date(CREATEDDATETIME)						as Venta.FechaCreacion, 
+		CREATEDBY									as Venta.Creador,
+		Num(CANTIDAD) 								as Venta.CantidadVentas
+		//MODULOGENERACION,
+		//NOMBREMODULOGENERACION, 
+		//CONDICIONPAGO, 
+		//NOMBRECLIENTE, 
+		//DATAAREAID, 
+		//RECVERSION, 
+		//PARTITION, 
+		//RECID
+	FROM
+	[..\QVD\CustInvoiceTrans.QVD]
+	(qvd);
 

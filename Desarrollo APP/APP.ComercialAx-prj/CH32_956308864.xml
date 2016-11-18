@@ -230,10 +230,8 @@
     <ExpressionData>
       <Definition>
         <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
 (Sum({&lt;	
 	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
@@ -266,10 +264,8 @@
     <ExpressionData>
       <Definition>
         <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
 (Sum({&lt;
 	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
@@ -299,9 +295,17 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((Sum({&lt; TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO)) - (Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} COSTPRICEUNIT * CANTIDAD)))
+        <v>((Sum({&lt; 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)) 
+- 
+((Sum({&lt; 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} COSTPRICEUNIT * PedidosVenta.Cantidad)))
 	/
-(Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO))</v>
+((Sum({&lt; 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2295,7 +2299,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.ZonaGeografica</Name>
+        <Name>EC.Zona</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2484,7 +2488,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.NombreCoordinador</Name>
+        <Name>EC.Coordinador</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2673,7 +2677,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2862,7 +2866,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.NombreCompleto</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -5159,22 +5163,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.NombreCoordinador</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Calendario.%_Fechakey</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5183,7 +5171,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.ZonaGeografica</DimName>
+          <DimName>EC.Zona</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5191,7 +5179,23 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
+          <DimName>EC.Coordinador</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.IdEC</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5209,10 +5213,8 @@
           <ExpressionData>
             <Definition>
               <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
 (Sum({&lt;	
 	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
@@ -5810,10 +5812,8 @@
           <ExpressionData>
             <Definition>
               <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
 (Sum({&lt;
 	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
@@ -6408,9 +6408,17 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((Sum({&lt; TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO)) - (Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} COSTPRICEUNIT * CANTIDAD)))
+              <v>((Sum({&lt; 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)) 
+- 
+((Sum({&lt; 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} COSTPRICEUNIT * PedidosVenta.Cantidad)))
 	/
-(Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO))</v>
+((Sum({&lt; 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

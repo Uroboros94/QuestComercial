@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+        <v>Sum(Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -255,8 +255,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -307,7 +307,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(CarteraCliente.VALORLIQUIDADO)</v>
+        <v>sum(Cartera.ValorLiquidado)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -726,7 +726,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>341</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1211,7 +1211,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>341</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1696,7 +1696,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>341</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2181,7 +2181,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>341</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2313,7 +2313,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>% de cumplimiento</v>
+        <v>% Cumplimiento</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -2666,7 +2666,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>259</ColWidth>
+      <ColWidth>269</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2786,7 +2786,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.IDVENDEDOR</Name>
+        <Name>Cartera.IdVendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2972,7 +2972,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+        <Name>Cartera.Vendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4611,11 +4611,11 @@
     <ColWidths>
       <int>234</int>
       <int>469</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
-      <int>259</int>
+      <int>341</int>
+      <int>341</int>
+      <int>341</int>
+      <int>341</int>
+      <int>269</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -5148,7 +5148,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.IDVENDEDOR</DimName>
+          <DimName>Cartera.IdVendedor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5156,7 +5156,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
+          <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5173,7 +5173,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+              <v>Sum(Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5565,7 +5565,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>341</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -5764,8 +5764,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		CarteraCliente.DIASVENCIDOS ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	CarteraCliente.SALDOCORRIENTETOTAL)</v>
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
+	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6157,7 +6157,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>341</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6748,7 +6748,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>341</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6946,7 +6946,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(CarteraCliente.VALORLIQUIDADO)</v>
+              <v>sum(Cartera.ValorLiquidado)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7338,7 +7338,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>341</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7575,7 +7575,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>% de cumplimiento</v>
+              <v>% Cumplimiento</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -7928,7 +7928,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>259</ColWidth>
+            <ColWidth>269</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

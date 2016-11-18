@@ -229,7 +229,12 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD))</v>
+        <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +259,12 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD * PRECIOUNITARIO))</v>
+        <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad * PedidosVenta.PrecioUnitario))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1253,7 +1263,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RAZONDEVOLUCION</Name>
+        <Name>PedidosVenta.RazonDevolucion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3211,7 +3221,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>RAZONDEVOLUCION</DimName>
+          <DimName>PedidosVenta.RazonDevolucion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3228,7 +3238,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD))</v>
+              <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3818,7 +3833,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD * PRECIOUNITARIO))</v>
+              <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad * PedidosVenta.PrecioUnitario))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
