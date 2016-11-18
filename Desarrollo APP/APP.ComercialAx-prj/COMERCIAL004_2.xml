@@ -230,8 +230,8 @@
     <ExpressionData>
       <Definition>
         <v>(Sum({&lt;  
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
 (Sum({&lt;
 	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
@@ -263,15 +263,10 @@
     <ExpressionData>
       <Definition>
         <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
-(Sum({&lt;
-	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	Ppto.Mes = {&quot;$(=Calendario.NumericMonth)&quot;}
-	&gt;} Ppto.Pesos))</v>
+(Sum(Ppto.Pesos))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -296,9 +291,17 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((Sum({&lt; TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO)) - (Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} COSTPRICEUNIT * CANTIDAD)))
+        <v>((Sum({&lt;
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)) 
+- 
+(Sum({&lt;
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} COSTPRICEUNIT * PedidosVenta.Cantidad)))
 	/
-(Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO))</v>
+(Sum({&lt;
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -4410,8 +4413,8 @@
           <ExpressionData>
             <Definition>
               <v>(Sum({&lt;  
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
 (Sum({&lt;
 	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
@@ -5008,15 +5011,10 @@
           <ExpressionData>
             <Definition>
               <v>(Sum({&lt; 
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	//SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {&quot;3&quot;}
-	&gt;} VALORNETO))
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto))
 	/
-(Sum({&lt;
-	Ppto.Año = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	Ppto.Mes = {&quot;$(=Calendario.NumericMonth)&quot;}
-	&gt;} Ppto.Pesos))</v>
+(Sum(Ppto.Pesos))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5606,9 +5604,17 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((Sum({&lt; TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO)) - (Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} COSTPRICEUNIT * CANTIDAD)))
+              <v>((Sum({&lt;
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)) 
+- 
+(Sum({&lt;
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} COSTPRICEUNIT * PedidosVenta.Cantidad)))
 	/
-(Sum({&lt;TIPOPEDIDO = {&quot;3&quot;}&gt;} VALORNETO))</v>
+(Sum({&lt;
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

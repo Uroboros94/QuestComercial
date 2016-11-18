@@ -1487,7 +1487,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Id</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1673,7 +1673,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1859,7 +1859,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
+        <Name>Producto.IdColor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2045,7 +2045,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Talla</Name>
+        <Name>Producto.Talla</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4136,30 +4136,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Id</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Talla</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.IdColor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>MovimientosArticulos.CODIGODIARIO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -4200,7 +4176,31 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdLinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Talla</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

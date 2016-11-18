@@ -3030,7 +3030,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3216,7 +3216,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Linea</Name>
+        <Name>Producto.Linea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -5309,22 +5309,6 @@
       <ExpansionData>
         <ExcludeList>true</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Linea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5334,6 +5318,22 @@
         <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>DefaultDimensions.EC.Canal</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdLinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Linea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

@@ -1,35 +1,40 @@
-/*
-Fecha : 20/09/2016
-----------------------------------------------------------------------------------------------------
- Detalle :
+/******************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
 	Creación del Modelo: MaestroClientes
--------------------------------------------------------------------------------------------------
-Fecha       |   Desarrollador   |   Modificación
--------------------------------------------------------------------------------------------------
-09/22/2016  |   malemos         |   Inicio de Configuración
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016  |   malemos         |   Inicio de Configuración
+	11/17/2016	|	malemos			|	Correccion de Modelamiento de datos.
 *****************************************************************************************************/
 Clientes:
 	LOAD 
-		ACCOUNTNUM			as	IDCLIENTE,
-		CITYVALUE				as	Cliente.Ciudad,
-		MAINEMAIL				as	Cliente.CorreoPpal,
-		CREDITMAX				as	Cliente.Cupo,
-		STATEVALUE			as	Cliente.Departamento,
-		DIGIT				as	Cliente.DigitoVerificacion,
-		ADDRESSING			as	Cliente.Direccion,
-		CUSTGROUPID			as	Cliente.GrupoCliente,
-		CITYID				as	Cliente.IdCiudad,
-		STATEID				as	Cliente.IdDepartamento,
-		IDENTIFICATIONNUM		as	Cliente.Identificacion,
-		COUNTRYID				as	Cliente.IdPais,
-		DIRPARTYTYPE			as	Cliente.IdTipoCliente,
-		NAME					as	Cliente.NombreCompleto,
-		MAINURL				as	Cliente.PaginaWeb,
-		COUNTRYVALUE			as	Cliente.Pais,
-		MAINPHONE				as	Cliente.TelefonoPpal,
-		NOMBREDIRPARTYTYPE		as	Cliente.TipoCliente,
-		NOMBREIDENTIFICATIONTYPE	as	Cliente.TipoIdentificacion,
-		SALESDISTRICT			as	Cliente.Zona
+		ACCOUNTNUM					as SK.Cliente,
+		ACCOUNTNUM					as Cliente.Id,
+		CITYVALUE					as Cliente.Ciudad,
+		MAINEMAIL					as Cliente.CorreoPpal,
+		CREDITMAX					as Cliente.Cupo,
+		STATEVALUE					as Cliente.Departamento,
+		DIGIT						as Cliente.DigitoVerificacion,
+		ADDRESSING					as Cliente.Direccion,
+		CUSTGROUPID					as Cliente.GrupoCliente,
+		CITYID						as Cliente.IdCiudad,
+		STATEID						as Cliente.IdDepartamento,
+		IDENTIFICATIONNUM			as Cliente.Identificacion,
+		COUNTRYID					as Cliente.IdPais,
+		DIRPARTYTYPE				as Cliente.IdTipoCliente,
+		NAME						as Cliente.NombreCompleto,
+		MAINURL						as Cliente.PaginaWeb,
+		COUNTRYVALUE				as Cliente.Pais,
+		MAINPHONE					as Cliente.TelefonoPpal,
+		NOMBREDIRPARTYTYPE			as Cliente.TipoCliente,
+		NOMBREIDENTIFICATIONTYPE	as Cliente.TipoIdentificacion,
+		SALESDISTRICT				as Cliente.Zona
+	FROM
+	[..\QVD\QST_MaestroClientes.QVD]
+	(qvd);
 		//CURRENCY,		
 		//CUSTGROUPVALUE,		
 		//DATAAREAID,		
@@ -51,7 +56,4 @@ Clientes:
 		//RECVERSION,		
 		//SECONDLASTNAME,		
 
-	FROM
-	[..\QVD\QST_MaestroClientes.QVD]
-	(qvd);
 

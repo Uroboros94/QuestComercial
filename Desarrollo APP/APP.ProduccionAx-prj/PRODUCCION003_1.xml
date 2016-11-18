@@ -2445,7 +2445,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdLinea</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2817,7 +2817,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_TIPO_DE_PRENDA</Name>
+        <Name>Producto.TipoPrenda</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3003,11 +3003,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Estilo</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Estilo</v>
+        <v>Referencia</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3189,7 +3189,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Coleccion</Name>
+        <Name>Producto.Coleccion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3375,7 +3375,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
+        <Name>Producto.IdColor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6244,30 +6244,6 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>MasterProductAttributes.ATVAL_TIPO_DE_PRENDA</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Estilo</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.IdColor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>OrdenProd.SCHEDDATE</DimName>
@@ -6310,23 +6286,47 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Coleccion</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdLinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.TipoPrenda</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Coleccion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

@@ -3293,7 +3293,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_TIPO_DE_ADQUISICION</Name>
+        <Name>Producto.TipoAdquisicion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3665,7 +3665,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Referencia</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6479,22 +6479,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_TIPO_DE_ADQUISICION</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Productos.Referencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>NombreGrupoCosto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6520,6 +6504,22 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.TipoAdquisicion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

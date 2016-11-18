@@ -52,9 +52,9 @@
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
+      <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
-      <AllowMaximize>true</AllowMaximize>
+      <AllowMaximize>false</AllowMaximize>
       <AllowInfo>false</AllowInfo>
       <PrintIcon>true</PrintIcon>
       <CopyIcon>false</CopyIcon>
@@ -217,11 +217,25 @@
       <StateName></StateName>
     </Frame>
     <ReadOnly>false</ReadOnly>
-    <FastChange></FastChange>
+    <FastChange>
+      <Bar>false</Bar>
+      <Pie>true</Pie>
+      <Line>false</Line>
+      <Combo>false</Combo>
+      <Scatter>false</Scatter>
+      <Pivot>true</Pivot>
+      <Straight>false</Straight>
+      <Gauge>false</Gauge>
+      <Radar>false</Radar>
+      <Grid>false</Grid>
+      <Block>false</Block>
+      <Funnel>false</Funnel>
+      <Mekko>false</Mekko>
+    </FastChange>
     <WindowTitle>
       <v>Causas de devolución</v>
     </WindowTitle>
-    <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
+    <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString></TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
@@ -229,12 +243,17 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD))</v>
+        <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
-      <BrutalSum>false</BrutalSum>
+      <BrutalSum>true</BrutalSum>
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
@@ -254,12 +273,17 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD * PRECIOUNITARIO))</v>
+        <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad * PedidosVenta.PrecioUnitario))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
-      <BrutalSum>false</BrutalSum>
+      <BrutalSum>true</BrutalSum>
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
@@ -648,7 +672,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>347</ColWidth>
+      <ColWidth>172</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1253,7 +1277,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RAZONDEVOLUCION</Name>
+        <Name>PedidosVenta.RazonDevolucion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1412,7 +1436,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>494</ColWidth>
+      <ColWidth>834</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -1534,8 +1558,8 @@
   <DoctorMapField></DoctorMapField>
   <Detached>false</Detached>
   <CubeData></CubeData>
-  <SuppressZero>true</SuppressZero>
-  <SuppressMissing>true</SuppressMissing>
+  <SuppressZero>false</SuppressZero>
+  <SuppressMissing>false</SuppressMissing>
   <EvaluationCondition></EvaluationCondition>
   <ChartProperties>
     <FastChangeInChart>false</FastChangeInChart>
@@ -1953,11 +1977,11 @@
     <MajorDimensionTextMode>HORIZONTAL_TEXT</MajorDimensionTextMode>
     <MinorDimensionTextMode>HORIZONTAL_TEXT</MinorDimensionTextMode>
     <HatchedBrushesOnScreen>false</HatchedBrushesOnScreen>
-    <HatchedBrushesOnPrinter>true</HatchedBrushesOnPrinter>
+    <HatchedBrushesOnPrinter>false</HatchedBrushesOnPrinter>
     <MultiColoredX>false</MultiColoredX>
     <ThinBars>false</ThinBars>
     <CompressedXAxis>false</CompressedXAxis>
-    <PersistentColors>false</PersistentColors>
+    <PersistentColors>true</PersistentColors>
     <RepeatLastColor>false</RepeatLastColor>
     <NumbersOnBarsTextMode>HORIZONTAL_TEXT</NumbersOnBarsTextMode>
     <NumbersOnBarsAccumulated>true</NumbersOnBarsAccumulated>
@@ -1976,7 +2000,7 @@
     <ScatterShowDirection>false</ScatterShowDirection>
     <ArrowMode>0</ArrowMode>
     <ArrowSize>7</ArrowSize>
-    <ScatterBubbles>false</ScatterBubbles>
+    <ScatterBubbles>true</ScatterBubbles>
     <ScatterFilledBubbles>true</ScatterFilledBubbles>
     <Bubblesize>24</Bubblesize>
     <GridAutoBubbleSize>1</GridAutoBubbleSize>
@@ -2435,7 +2459,7 @@
     <ShowPopupLabels>true</ShowPopupLabels>
     <ComboChartMode>COMBOCHART_2D</ComboChartMode>
     <BarChartMode>BARCHART_2D</BarChartMode>
-    <PieChartMode>PIECHART_BEVEL</PieChartMode>
+    <PieChartMode>PIECHART_2D</PieChartMode>
     <LineChartMode>LINECHART_2D</LineChartMode>
     <ScatterChartMode>SCATTERCHART_BUBBLE_3DBALL</ScatterChartMode>
     <GridChartMode>GRIDCHART_3DBALL</GridChartMode>
@@ -2655,7 +2679,7 @@
     </AnimationProperties>
     <FunnelChartMode>FUNNELCHART_PLAIN</FunnelChartMode>
     <TopAngle_3dPie>4034000000000000</TopAngle_3dPie>
-    <SideAngle_3dPie>0000000000000000</SideAngle_3dPie>
+    <SideAngle_3dPie>4014000000000000</SideAngle_3dPie>
     <FunnelTipWidth>
       <v>0.3</v>
     </FunnelTipWidth>
@@ -2680,15 +2704,15 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>494</int>
-      <int>347</int>
+      <int>834</int>
+      <int>172</int>
       <int>300</int>
     </ColWidths>
     <Striping>
       <int>1</int>
     </Striping>
     <StyleNumber>11</StyleNumber>
-    <MultiLine>0</MultiLine>
+    <MultiLine>2</MultiLine>
     <HeaderMultiLine>0</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
     <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
@@ -3211,7 +3235,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>RAZONDEVOLUCION</DimName>
+          <DimName>PedidosVenta.RazonDevolucion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3228,12 +3252,17 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD))</v>
+              <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
-            <BrutalSum>false</BrutalSum>
+            <BrutalSum>true</BrutalSum>
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
@@ -3620,7 +3649,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>347</ColWidth>
+            <ColWidth>172</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3818,12 +3847,17 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD * PRECIOUNITARIO))</v>
+              <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido ={&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad * PedidosVenta.PrecioUnitario))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
-            <BrutalSum>false</BrutalSum>
+            <BrutalSum>true</BrutalSum>
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>

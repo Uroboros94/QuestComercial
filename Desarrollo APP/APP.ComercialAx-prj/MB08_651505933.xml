@@ -348,10 +348,10 @@
   <MemberAttributes>
     <MultiBoxMemberAttributes>
       <Label>
-        <v>Vendedor</v>
+        <v>Asesor</v>
       </Label>
       <FieldDef>
-        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+        <Name>Cartera.Vendedor</Name>
         <Type>PRESENT</Type>
       </FieldDef>
       <SortCriteria>
@@ -390,8 +390,8 @@
         <v>NIT Cliente</v>
       </Label>
       <FieldDef>
-        <Name>IDCLIENTE</Name>
-        <Type>PRESENT</Type>
+        <Name>=Cliente.Id</Name>
+        <Type>IS_EXPR</Type>
       </FieldDef>
       <SortCriteria>
         <SortByState>1</SortByState>
@@ -468,8 +468,8 @@
         <v>Genero</v>
       </Label>
       <FieldDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
-        <Type>PRESENT</Type>
+        <Name>=Producto.Genero</Name>
+        <Type>IS_EXPR</Type>
       </FieldDef>
       <SortCriteria>
         <SortByState>1</SortByState>
@@ -507,8 +507,8 @@
         <v>Referencia</v>
       </Label>
       <FieldDef>
-        <Name>Productos.Referencia</Name>
-        <Type>PRESENT</Type>
+        <Name>=Producto.Referencia</Name>
+        <Type>IS_EXPR</Type>
       </FieldDef>
       <SortCriteria>
         <SortByState>1</SortByState>
@@ -546,8 +546,8 @@
         <v>Color</v>
       </Label>
       <FieldDef>
-        <Name>Productos.IdColor</Name>
-        <Type>PRESENT</Type>
+        <Name>=Producto.Color</Name>
+        <Type>IS_EXPR</Type>
       </FieldDef>
       <SortCriteria>
         <SortByState>1</SortByState>
@@ -585,8 +585,8 @@
         <v>Talla</v>
       </Label>
       <FieldDef>
-        <Name>Productos.Talla</Name>
-        <Type>PRESENT</Type>
+        <Name>=Producto.Talla</Name>
+        <Type>IS_EXPR</Type>
       </FieldDef>
       <SortCriteria>
         <SortByState>1</SortByState>

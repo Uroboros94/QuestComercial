@@ -262,7 +262,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>if(Sum(CarteraCliente.SALDOVENCIDOTOTAL) &gt; 0,'Si','No')</v>
+        <v>if(Sum(Cartera.SaldoVencidoTotal) &gt; 0,'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -287,7 +287,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>If(((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) + (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) &gt; Sum(Cliente.Cupo),'Si','No')</v>
+        <v>If(((Sum(Cartera.SaldoCorrienteTotal)) + (Sum(Cartera.SaldoVencidoTotal))) &gt; Sum(Cliente.Cupo),'Si','No')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -312,7 +312,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+        <v>Sum(Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -337,7 +337,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+        <v>Sum(Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -362,7 +362,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL)) //Corriente + Vencido</v>
+        <v>(Sum(Cartera.SaldoCorrienteTotal)) * (Sum(Cartera.SaldoVencidoTotal)) </v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -383,7 +383,7 @@
       </SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
-      <Comment></Comment>
+      <Comment>Corriente + Vencido</Comment>
     </ExpressionData>
     <ExpressionData>
       <Definition>
@@ -412,7 +412,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) - (Sum(Cliente.Cupo)) //(Corriente + Vencido) - Cupo</v>
+        <v>((Sum(Cartera.SaldoCorrienteTotal)) * (Sum(Cartera.SaldoVencidoTotal))) - (Sum(Cliente.Cupo))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -433,11 +433,11 @@
       </SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
-      <Comment></Comment>
+      <Comment>(Corriente + Vencido) - Cupo</Comment>
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>avg(DIASVENCIDOS)</v>
+        <v>avg(Cartera.DiasVencidos)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -487,7 +487,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CantidadVentas)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} Venta.CantidadVentas)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -537,7 +541,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(STOCK)</v>
+        <v>sum(PedidosVenta.Stock)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -562,7 +566,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+        <v>sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.PendienteXEntrega)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -587,7 +595,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Num(([Und Despachadas]/[Und Pedidos]), '#.##0%')</v>
+        <v>[Und Despachadas]/[Und Pedidos]</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -612,7 +620,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} VALORNETO)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -637,7 +649,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PRECIOUNITARIO * CantidadVentas)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.PrecioUnitario * Venta.CantidadVentas)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -687,7 +703,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PRECIOUNITARIO * PENDIENTEENTREGA - (PENDIENTEENTREGA*DESCUENTO))</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.PrecioUnitario * PedidosVenta.PendienteXEntrega - (PedidosVenta.PendienteXEntrega * PedidosVenta.Descuento))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -712,7 +732,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Num(([Vlr Despachado]/[Vlr Pedidos]), '#.##0%')</v>
+        <v>[Vlr Despachado]/[Vlr Pedidos]</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -737,7 +757,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+        <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;4&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -762,7 +786,12 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD * PRECIOUNITARIO))</v>
+        <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido = {&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad * PedidosVenta.PrecioUnitario))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1964,7 +1993,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>256</ColWidth>
+      <ColWidth>269</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3688,7 +3717,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>475</ColWidth>
+      <ColWidth>491</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6406,7 +6435,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>='% Cumpli. Unds Despachadas'</v>
+        <v>% Cumpli. Unds Despachadas</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -6416,12 +6445,12 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
-        <nDec>0</nDec>
+        <Type>FIX</Type>
+        <nDec>2</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
-        <Dec></Dec>
-        <Thou></Thou>
+        <Fmt>#.##0,00%</Fmt>
+        <Dec>,</Dec>
+        <Thou>.</Thou>
       </NumberPresentation>
       <PrimaryAxis>true</PrimaryAxis>
       <ShowExpressionLabel>true</ShowExpressionLabel>
@@ -8571,12 +8600,12 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>FIX</Type>
         <nDec>2</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
-        <Dec></Dec>
-        <Thou></Thou>
+        <Fmt>#.##0,00%</Fmt>
+        <Dec>,</Dec>
+        <Thou>.</Thou>
       </NumberPresentation>
       <PrimaryAxis>true</PrimaryAxis>
       <ShowExpressionLabel>true</ShowExpressionLabel>
@@ -9842,7 +9871,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NOMBRETIPOPEDIDO</Name>
+        <Name>PedidosVenta.TipoPedido</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -9977,7 +10006,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>GRUPOVENTAS</Name>
+        <Name>PedidosVenta.GrupoVentas</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10112,7 +10141,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</Name>
+        <Name>EC.IdEC</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10247,7 +10276,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.NOMBREVENDEDOR</Name>
+        <Name>PedidosVenta.Vendedor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10382,7 +10411,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>IDCLIENTE</Name>
+        <Name>Cliente.Id</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10922,7 +10951,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>CarteraCliente.TIPOPAGO</Name>
+        <Name>Cartera.TipoPago</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -11057,7 +11086,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>DESCUENTO</Name>
+        <Name>PedidosVenta.Descuento</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -11192,8 +11221,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Num(PORCENTAJE,'%#,##')</Name>
-        <Type>IS_EXPR</Type>
+        <Name>PedidosVenta.Porcentaje</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>% Descuento</v>
@@ -11327,7 +11356,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>IDPEDIDO</Name>
+        <Name>PedidosVenta.Id</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -11462,7 +11491,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Coleccion</Name>
+        <Name>Producto.Coleccion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -11597,7 +11626,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NUMEROLINEA</Name>
+        <Name>Producto.IdLinea</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -11732,7 +11761,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MasterProductAttributes.ATVAL_GENERO</Name>
+        <Name>Producto.Genero</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -11867,7 +11896,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Referencia</Name>
+        <Name>Producto.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12002,7 +12031,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Talla</Name>
+        <Name>Producto.Talla</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12137,7 +12166,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.IdColor</Name>
+        <Name>Producto.IdColor</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12272,7 +12301,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Productos.Estilo</Name>
+        <Name>Producto.Estilo</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12407,7 +12436,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RAZONDEVOLUCION</Name>
+        <Name>PedidosVenta.RazonDevolucion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -12542,7 +12571,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>PRECIOUNITARIO</Name>
+        <Name>PedidosVenta.PrecioUnitario</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -15273,7 +15302,7 @@
       <int>1</int>
     </Striping>
     <StyleNumber>5</StyleNumber>
-    <MultiLine>0</MultiLine>
+    <MultiLine>2</MultiLine>
     <HeaderMultiLine>2</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
     <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
@@ -15604,110 +15633,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>MasterProductAttributes.ATVAL_GENERO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RAZONDEVOLUCION</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>IDCLIENTE</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>IDPEDIDO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CarteraCliente.TIPOPAGO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>NUMEROLINEA</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>GRUPOVENTAS</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>DESCUENTO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Num(PORCENTAJE,'%#,##')</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>PRECIOUNITARIO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>NOMBRETIPOPEDIDO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>CarteraCliente.NOMBREVENDEDOR</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -15732,7 +15657,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Referencia</DimName>
+          <DimName>PedidosVenta.TipoPedido</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15740,7 +15665,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Talla</DimName>
+          <DimName>PedidosVenta.GrupoVentas</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15748,7 +15673,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.IdColor</DimName>
+          <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15756,7 +15681,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Estilo</DimName>
+          <DimName>PedidosVenta.Vendedor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15764,7 +15689,111 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Productos.Coleccion</DimName>
+          <DimName>Cliente.Id</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cartera.TipoPago</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.Descuento</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.Porcentaje</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.Id</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Coleccion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdLinea</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Genero</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Talla</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Estilo</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.RazonDevolucion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.PrecioUnitario</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15781,7 +15810,7 @@
           <InternalId>0</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(Sum(CarteraCliente.SALDOVENCIDOTOTAL) &gt; 0,'Si','No')</v>
+              <v>if(Sum(Cartera.SaldoVencidoTotal) &gt; 0,'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16320,7 +16349,7 @@
           <InternalId>1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>If(((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) + (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) &gt; Sum(Cliente.Cupo),'Si','No')</v>
+              <v>If(((Sum(Cartera.SaldoCorrienteTotal)) + (Sum(Cartera.SaldoVencidoTotal))) &gt; Sum(Cliente.Cupo),'Si','No')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16859,7 +16888,7 @@
           <InternalId>2</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOCORRIENTETOTAL)</v>
+              <v>Sum(Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -17197,7 +17226,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>256</ColWidth>
+            <ColWidth>269</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -17398,7 +17427,7 @@
           <InternalId>3</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(CarteraCliente.SALDOVENCIDOTOTAL)</v>
+              <v>Sum(Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -17937,7 +17966,7 @@
           <InternalId>4</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL)) //Corriente + Vencido</v>
+              <v>(Sum(Cartera.SaldoCorrienteTotal)) * (Sum(Cartera.SaldoVencidoTotal)) </v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -17958,7 +17987,7 @@
             </SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
-            <Comment></Comment>
+            <Comment>Corriente + Vencido</Comment>
           </ExpressionData>
           <ExpressionVisual>
             <ExpressionTypes>
@@ -19015,7 +19044,7 @@
           <InternalId>6</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((Sum(CarteraCliente.SALDOCORRIENTETOTAL)) * (Sum(CarteraCliente.SALDOVENCIDOTOTAL))) - (Sum(Cliente.Cupo)) //(Corriente + Vencido) - Cupo</v>
+              <v>((Sum(Cartera.SaldoCorrienteTotal)) * (Sum(Cartera.SaldoVencidoTotal))) - (Sum(Cliente.Cupo))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -19036,7 +19065,7 @@
             </SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
-            <Comment></Comment>
+            <Comment>(Corriente + Vencido) - Cupo</Comment>
           </ExpressionData>
           <ExpressionVisual>
             <ExpressionTypes>
@@ -19353,7 +19382,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>475</ColWidth>
+            <ColWidth>491</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -19554,7 +19583,7 @@
           <InternalId>7</InternalId>
           <ExpressionData>
             <Definition>
-              <v>avg(DIASVENCIDOS)</v>
+              <v>avg(Cartera.DiasVencidos)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -20632,7 +20661,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} CantidadVentas)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido ={&quot;3&quot;}
+	&gt;} Venta.CantidadVentas)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -21710,7 +21743,7 @@
           <InternalId>10</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(STOCK)</v>
+              <v>sum(PedidosVenta.Stock)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -22249,7 +22282,11 @@
           <InternalId>8</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PENDIENTEENTREGA)</v>
+              <v>sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.PendienteXEntrega)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -22788,7 +22825,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Num(([Und Despachadas]/[Und Pedidos]), '#.##0%')</v>
+              <v>[Und Despachadas]/[Und Pedidos]</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -22827,7 +22864,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>='% Cumpli. Unds Despachadas'</v>
+              <v>% Cumpli. Unds Despachadas</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -22837,12 +22874,12 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
-              <nDec>0</nDec>
+              <Type>FIX</Type>
+              <nDec>2</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
-              <Dec></Dec>
-              <Thou></Thou>
+              <Fmt>#.##0,00%</Fmt>
+              <Dec>,</Dec>
+              <Thou>.</Thou>
             </NumberPresentation>
             <PrimaryAxis>true</PrimaryAxis>
             <ShowExpressionLabel>true</ShowExpressionLabel>
@@ -23327,7 +23364,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} VALORNETO)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.ValorNeto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -23866,7 +23907,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PRECIOUNITARIO * CantidadVentas)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.PrecioUnitario * Venta.CantidadVentas)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -24944,7 +24989,11 @@
           <InternalId>9</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;3&quot;}&gt;} PRECIOUNITARIO * PENDIENTEENTREGA - (PENDIENTEENTREGA*DESCUENTO))</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
+	&gt;} PedidosVenta.PrecioUnitario * PedidosVenta.PendienteXEntrega - (PedidosVenta.PendienteXEntrega * PedidosVenta.Descuento))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -25483,7 +25532,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Num(([Vlr Despachado]/[Vlr Pedidos]), '#.##0%')</v>
+              <v>[Vlr Despachado]/[Vlr Pedidos]</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -25532,12 +25581,12 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>FIX</Type>
               <nDec>2</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
-              <Dec></Dec>
-              <Thou></Thou>
+              <Fmt>#.##0,00%</Fmt>
+              <Dec>,</Dec>
+              <Thou>.</Thou>
             </NumberPresentation>
             <PrimaryAxis>true</PrimaryAxis>
             <ShowExpressionLabel>true</ShowExpressionLabel>
@@ -26022,7 +26071,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD)</v>
+              <v>Sum({&lt;
+	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	PedidosVenta.IdTipoPedido = {&quot;4&quot;}
+	&gt;} PedidosVenta.Cantidad)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -26561,7 +26614,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>fabs(Sum({&lt;Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, TIPOPEDIDO={&quot;4&quot;}&gt;} CANTIDAD * PRECIOUNITARIO))</v>
+              <v>fabs(
+	Sum({&lt;
+		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+		SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+		PedidosVenta.IdTipoPedido = {&quot;4&quot;}
+		&gt;} PedidosVenta.Cantidad * PedidosVenta.PrecioUnitario))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
