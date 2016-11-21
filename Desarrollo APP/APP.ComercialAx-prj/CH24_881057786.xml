@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>if(($(vUndDespachadas)) &gt; 0, Num((($(vUndDespachadas))/($(vUndPedidas))), '#.##0%'))</v>
+        <v>if(($(vUndDespachadas)) &gt; 0,(($(vUndDespachadas))/($(vUndPedidas))))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -280,10 +280,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>MONEY</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -2576,7 +2576,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(($(vUndDespachadas)) &gt; 0, Num((($(vUndDespachadas))/($(vUndPedidas))), '#.##0%'))</v>
+              <v>if(($(vUndDespachadas)) &gt; 0,(($(vUndDespachadas))/($(vUndPedidas))))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -2625,10 +2625,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>MONEY</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
