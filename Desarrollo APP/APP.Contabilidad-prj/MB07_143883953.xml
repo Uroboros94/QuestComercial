@@ -1,5 +1,10 @@
-﻿<ListBoxProperties>
+﻿<MultiBoxProperties>
   <Layout>
+    <NoOfRows>1</NoOfRows>
+    <MaxNoOfRowsDropDown>10</MaxNoOfRowsDropDown>
+    <ColWidthLabel>534</ColWidthLabel>
+    <ColWidthDrop>42</ColWidthDrop>
+    <ColWidthData>300</ColWidthData>
     <Frame>
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
@@ -32,9 +37,9 @@
       </Color>
       <Font>
         <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <PointSize1000>12000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>false</Bold>
+        <Bold>true</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
@@ -46,9 +51,7 @@
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
-      <Name>
-        <v>Tipo Pedido</v>
-      </Name>
+      <Name></Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
@@ -63,13 +66,13 @@
       <SelectPossibleIcon>false</SelectPossibleIcon>
       <SelectExcludedIcon>false</SelectExcludedIcon>
       <SelectAllIcon>false</SelectAllIcon>
-      <ClearIcon>true</ClearIcon>
+      <ClearIcon>false</ClearIcon>
       <ClearOtherIcon>false</ClearOtherIcon>
       <LockIcon>false</LockIcon>
       <HelpText></HelpText>
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
-      <ShowCaption>true</ShowCaption>
+      <ShowCaption>false</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -178,7 +181,7 @@
       <Show>
         <Always>false</Always>
         <Expression>
-          <v> vSwichMenu = 1</v>
+          <v>vSwichMenu = 1</v>
         </Expression>
       </Show>
       <AllowMoveSize>true</AllowMoveSize>
@@ -206,8 +209,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
-      <ScrollWidth>29</ScrollWidth>
+      <ScrollStyle>SCROLL_SIX</ScrollStyle>
+      <ScrollWidth>38</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -222,53 +225,37 @@
       <StateName></StateName>
     </Frame>
     <ReadOnly>false</ReadOnly>
-    <NumAdjust>2</NumAdjust>
-    <TextAdjust>0</TextAdjust>
-    <MultiLine>0</MultiLine>
-    <ShowFrequency>false</ShowFrequency>
-    <FrequencyInPercent>false</FrequencyInPercent>
-    <Longest></Longest>
-    <Borders>
-      <Top></Top>
-      <Bottom></Bottom>
-      <Left>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Left>
-      <Right>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Right>
-    </Borders>
-    <MultiColumn>false</MultiColumn>
-    <OrderByRow>false</OrderByRow>
-    <HideExcluded>false</HideExcluded>
-    <SelectionStyle>SS_USER_PREF</SelectionStyle>
-    <ImageRepresentation></ImageRepresentation>
-    <SoftLock>false</SoftLock>
-    <ExcludedValuesMode>0</ExcludedValuesMode>
-    <DefaultSearchMode>0</DefaultSearchMode>
-    <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>-1</FixedColumnsCount>
-    <LayoutDependentPrint>true</LayoutDependentPrint>
-    <PrintAllValues>false</PrintAllValues>
-    <HierarchySeparator>/</HierarchySeparator>
-    <ShowAsTreeView>false</ShowAsTreeView>
-    <CurrentInfoURL></CurrentInfoURL>
-    <SuppressSearchHighlight>false</SuppressSearchHighlight>
-    <TextColor></TextColor>
-    <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
-    <CellBorders>false</CellBorders>
+    <GridStyle>false</GridStyle>
+    <DropDownLimit>false</DropDownLimit>
+    <ClosedColor>
+      <Mode>COLORAREA_DOUBLE_COLORS</Mode>
+      <Luminosity>85</Luminosity>
+      <FillDirection>COLORAREA_HORZ</FillDirection>
+      <FillPattern>COLORAREA_PATTERN2</FillPattern>
+      <PrimaryCol>
+        <Col>
+          <Red>248</Red>
+          <Green>248</Green>
+          <Blue>248</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </PrimaryCol>
+      <SecondaryCol>
+        <Col>
+          <Red>235</Red>
+          <Green>235</Green>
+          <Blue>235</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </SecondaryCol>
+      <Alpha>255</Alpha>
+    </ClosedColor>
+    <Style>MULTIBOXSTYLE_BORDERS</Style>
   </Layout>
-  <Def>
-    <Name>PedidosVenta.TipoPedido</Name>
-    <Type>PRESENT</Type>
-  </Def>
-  <Title>
-    <v>Tipo Pedido</v>
-  </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -358,22 +345,50 @@
     <SheetPrintDrawBackGround>false</SheetPrintDrawBackGround>
     <StrDevModeExtra></StrDevModeExtra>
   </PrintSettings>
-  <SortCriteria>
-    <SortByState>1</SortByState>
-    <SortByFrequency>0</SortByFrequency>
-    <SortByNumeric>0</SortByNumeric>
-    <SortByAscii>0</SortByAscii>
-    <SortByLoadOrder>0</SortByLoadOrder>
-    <SortByExpression>0</SortByExpression>
-    <Expression></Expression>
-    <SortByGreyness>0</SortByGreyness>
-  </SortCriteria>
-  <NumberPresentation></NumberPresentation>
-  <ExpandedNodes></ExpandedNodes>
+  <TextAdjust>1</TextAdjust>
+  <NumAdjust>1</NumAdjust>
+  <SortByApplicability>false</SortByApplicability>
+  <MemberAttributes>
+    <MultiBoxMemberAttributes>
+      <Label>
+        <v>Capa de Registro</v>
+      </Label>
+      <FieldDef>
+        <Name>Contabilidad.POSTINGLAYER</Name>
+        <Type>PRESENT</Type>
+      </FieldDef>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowFrequency>false</ShowFrequency>
+      <FrequencyInPercent>false</FrequencyInPercent>
+      <HideExcluded>false</HideExcluded>
+      <ReadOnly>false</ReadOnly>
+      <IgnoreNull>false</IgnoreNull>
+      <NumAdjust>1</NumAdjust>
+      <TextAdjust>1</TextAdjust>
+      <MultiColumn>false</MultiColumn>
+      <OrderByRow>false</OrderByRow>
+      <MultiLine>0</MultiLine>
+      <ShowBorder>true</ShowBorder>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <ImageRepresentation></ImageRepresentation>
+      <SoftLock>false</SoftLock>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <NumberPresentation></NumberPresentation>
+      <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+      <SuppressAutoSortByState>false</SuppressAutoSortByState>
+      <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
+    </MultiBoxMemberAttributes>
+  </MemberAttributes>
   <OnSelectActionItems></OnSelectActionItems>
-  <SuppressAutoSortByState>false</SuppressAutoSortByState>
-  <Expressions></Expressions>
-  <NullSymbol>-</NullSymbol>
-  <MissingSymbol>-</MissingSymbol>
-  <MoreSearchSettings></MoreSearchSettings>
-</ListBoxProperties>
+  <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+</MultiBoxProperties>
