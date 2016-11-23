@@ -1,13 +1,13 @@
-/*
-Fecha : 20/09/2016
-----------------------------------------------------------------------------------------------------
- Detalle :
+﻿/****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
 	Extracción de Dimensiones: Cartera
--------------------------------------------------------------------------------------------------
-Fecha		|	Desarrollador	|	Modificación
--------------------------------------------------------------------------------------------------
-09/20/2016	|	malemos			|	Inicio de Configuración
-09/24/2016  | alejandro s 		| Agregar campos PORCENTAJEPRONTOPAGO, DESCRIPCIONPRONTOPAGO, IDVENDEDOR, NOMBREVENDEDOR.
+	-------------------------------------------------------------------------------------------------
+	Fecha		|	Desarrollador	|	Modificación
+	-------------------------------------------------------------------------------------------------
+	09/20/2016	|	malemos			|	Inicio de Configuración
+	09/24/2016  |	Alejandro S		|	Agregar campos PORCENTAJEPRONTOPAGO, DESCRIPCIONPRONTOPAGO, IDVENDEDOR, NOMBREVENDEDOR.
 *****************************************************************************************************/
 QST_Cartera:
 	SQL SELECT
@@ -16,6 +16,7 @@ QST_Cartera:
 		CREATEDBY,
 		CREATEDDATETIME,
 		CUENTACLIENTE,
+		CUENTACONTABLE,
 		DATAAREAID,
 		DESCRIPCIONPRONTOPAGO,
 		DIASVENCIDOS,
@@ -33,10 +34,7 @@ QST_Cartera:
 		NOMBREMODULOGENERACION,
 		NOMBREVENCIDA,
 		NOMBREVENDEDOR,
-		//PARTITION,
 		PORCENTAJEPRONTOPAGO,
-		//RECID,
-		//RECVERSION,
 		SALDOCORRIENTETOTAL,
 		SALDOTOTAL,
 		SALDOTOTALDIVISA,
@@ -51,6 +49,9 @@ QST_Cartera:
 		VALORLIQUIDADO,
 		VENCIDA
 	FROM "QST_MODELCARTERA";
+		//PARTITION,
+		//RECID,
+		//RECVERSION,
 
 	STORE QST_Cartera INTO [..\QVD\QST_Cartera.QVD](qvd);
 	DROP TABLE QST_Cartera;
