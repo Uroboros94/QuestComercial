@@ -259,10 +259,12 @@
     <BkgAlpha>0</BkgAlpha>
     <Text>
       <v>='Saldo Inicial: '&amp;
-Num(Sum(CarteraCliente.VALORFACTURA)-Sum(CarteraCliente.VALORLIQUIDADO),
+Num(Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorFactura)-Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorLiquidado),
 '$#.##0;-$#.##0') &amp;
  '| Saldo Final: ' &amp;
-Num(Sum(CarteraCliente.VALORFACTURA)-Sum(CarteraCliente.VALORLIQUIDADO),
+Num(
+	(Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorFactura)-Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorLiquidado)) +
+	(Sum(Cartera.ValorFactura)-Sum(Cartera.ValorLiquidado)),
 '$#.##0;-$#.##0')</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
