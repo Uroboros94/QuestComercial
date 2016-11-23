@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------------------------------------------
+﻿/*----------------------------------------------------------------------------------------------------
  Detalle :
     Modelo de Dimensiones: Contabilidad
 -------------------------------------------------------------------------------------------------
@@ -23,6 +23,15 @@ Mapp.Desc.Trime:
 		12, T4
 	];
 
+Mapping
+DescCapas:	
+	LOAD 
+		Num([Id del Enum])		as Id, 
+		Capitalize(Descripción)	as Descripción 
+	FROM
+	[..\Fuentes\DescEnumAX.xlsx]
+	(ooxml, embedded labels, table is [Capa de Registro]);
+
 QUALIFY *;
 UNQUALIFY ID_CO, SK.ID_CO;
 	Contabilidad:
@@ -45,7 +54,8 @@ UNQUALIFY ID_CO, SK.ID_CO;
 			SUBLEDGERVOUCHER, 
 			SUBLEDGERVOUCHERDATAAREAID, 
 			LEDGERDIMENSION, 
-			POSTINGLAYER, 
+			ApplyMap('DescCapas', POSTINGLAYER)				as LAYER, 
+			POSTINGLAYER,
 			POSTINGTYPE, 
 			MAINACCOUNTID, 
 			//VIEWRECID, 
@@ -55,7 +65,7 @@ UNQUALIFY ID_CO, SK.ID_CO;
 			//RECID, 
 			DIMENSION_CENTRO_DE_COSTO, 
 			DIMENSION_COLECCION, 
-			DIMENSION_ESTRUCTURA_COMERCIAL						as SK.ID_CO,
+			DIMENSION_ESTRUCTURA_COMERCIAL					as SK.ID_CO,
 			DIMENSION_ESTRUCTURA_COMERCIAL,  
 			DIMENSION_FLUJO_DE_EFECTIVO, 
 			DIMENSION_LINEA, 
