@@ -1,26 +1,9 @@
 ﻿<TextObjectProperties>
   <Layout>
     <Frame>
-      <BorderWidth>0</BorderWidth>
+      <BorderWidth>12</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
-      <Color>
-        <Mode>COLORAREA_SOLID</Mode>
-        <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_HORZ</FillDirection>
-        <FillPattern>COLORAREA_PATTERN1</FillPattern>
-        <PrimaryCol>
-          <Col>
-            <Red>4</Red>
-            <Green>108</Green>
-            <Blue>193</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </PrimaryCol>
-        <SecondaryCol></SecondaryCol>
-        <Alpha>255</Alpha>
-      </Color>
+      <Color></Color>
       <Font>
         <FontName>Arial</FontName>
         <PointSize1000>14000</PointSize1000>
@@ -212,7 +195,8 @@
     <BottomMargin>10</BottomMargin>
     <LeftMargin>10</LeftMargin>
     <RightMargin>10</RightMargin>
-    <TextColor>
+    <TextColor></TextColor>
+    <BkgColor>
       <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
@@ -229,29 +213,11 @@
       </PrimaryCol>
       <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
-    </TextColor>
-    <BkgColor>
-      <Mode>COLORAREA_SOLID</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN1</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>214</Red>
-          <Green>231</Green>
-          <Blue>248</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol></SecondaryCol>
-      <Alpha>255</Alpha>
     </BkgColor>
     <BkgImageSettings></BkgImageSettings>
     <BkgMode>BKG_SOLID</BkgMode>
     <Bmp enctype="base64"></Bmp>
-    <BkgAlpha>0</BkgAlpha>
+    <BkgAlpha>50</BkgAlpha>
     <Text>
       <v>=if (Count(DISTINCT Contabilidad.NOMMES) &gt; 1 ,
 	'ANALISIS DUPONT ACUMULADO A ' &amp; Upper( MonthName(Max(Contabilidad.ACCOUNTINGDATE))),
