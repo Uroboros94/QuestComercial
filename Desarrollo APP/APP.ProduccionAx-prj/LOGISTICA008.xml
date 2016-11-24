@@ -262,7 +262,7 @@
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} RutasPicking.CANTPROGRAMADA)</v>
+	&gt;} RutasPicking.CANTPROGRAMADA * PRECIOUNITARIO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -292,7 +292,7 @@
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}, 
 	ESTADOPEDIDO = {'3'}
-	&gt;} CANTIDAD)</v>
+	&gt;} CANTIDAD * PRECIOUNITARIO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -368,10 +368,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>INTEGER</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -853,10 +853,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>MONEY</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -1338,10 +1338,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
+        <Type>MONEY</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>$#.##0;-$#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -1823,10 +1823,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>INTEGER</Type>
-        <nDec>10</nDec>
+        <Type>FIX</Type>
+        <nDec>1</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0%</Fmt>
+        <Fmt>#.##0,0%</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -5403,10 +5403,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>INTEGER</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -5941,7 +5941,7 @@
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} RutasPicking.CANTPROGRAMADA)</v>
+	&gt;} RutasPicking.CANTPROGRAMADA * PRECIOUNITARIO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5990,10 +5990,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>MONEY</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -6529,7 +6529,7 @@
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}, 
 	ESTADOPEDIDO = {'3'}
-	&gt;} CANTIDAD)</v>
+	&gt;} CANTIDAD * PRECIOUNITARIO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6578,10 +6578,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
+              <Type>MONEY</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>$#.##0;-$#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -7161,10 +7161,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>INTEGER</Type>
-              <nDec>10</nDec>
+              <Type>FIX</Type>
+              <nDec>1</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0%</Fmt>
+              <Fmt>#.##0,0%</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
