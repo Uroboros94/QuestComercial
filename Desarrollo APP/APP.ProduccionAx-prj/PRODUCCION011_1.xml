@@ -256,7 +256,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(Sum(CIF.Neto))*-1</v>
+        <v>fabs(Sum({&lt;Contabilidad.CUENTA_N2={'73'}&gt;}Contabilidad.MOVIMIENTO))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -4405,7 +4405,7 @@
           <InternalId>0</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(Sum(CIF.Neto))*-1</v>
+              <v>fabs(Sum({&lt;Contabilidad.CUENTA_N2={'73'}&gt;}Contabilidad.MOVIMIENTO))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
