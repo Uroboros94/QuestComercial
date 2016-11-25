@@ -231,9 +231,9 @@
       <Definition>
         <v>Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} CANTIDAD)</v>
+	&gt;} Venta.CantidadVentas)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -260,9 +260,9 @@
       <Definition>
         <v>Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} RutasPicking.CANTPROGRAMADA * PRECIOUNITARIO)</v>
+	&gt;} RutasPicking.CANTSELECCIONADA * PRECIOUNITARIO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -289,10 +289,9 @@
       <Definition>
         <v>Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {'3'}, 
-	ESTADOPEDIDO = {'3'}
-	&gt;} CANTIDAD * PRECIOUNITARIO)</v>
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
+	TIPOPEDIDO = {'3'}//, ESTADOPEDIDO = {'3'}
+	&gt;} Venta.ValorLinea)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -5253,12 +5252,12 @@
     <InterFieldSortOrder>
       <int>0</int>
       <int>1</int>
+      <int>2</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
       <int>6</int>
       <int>7</int>
-      <int>2</int>
       <int>8</int>
       <int>9</int>
     </InterFieldSortOrder>
@@ -5352,9 +5351,9 @@
             <Definition>
               <v>Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} CANTIDAD)</v>
+	&gt;} Venta.CantidadVentas)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5939,9 +5938,9 @@
             <Definition>
               <v>Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} RutasPicking.CANTPROGRAMADA * PRECIOUNITARIO)</v>
+	&gt;} RutasPicking.CANTSELECCIONADA * PRECIOUNITARIO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6526,10 +6525,9 @@
             <Definition>
               <v>Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	TIPOPEDIDO = {'3'}, 
-	ESTADOPEDIDO = {'3'}
-	&gt;} CANTIDAD * PRECIOUNITARIO)</v>
+	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
+	TIPOPEDIDO = {'3'}//, ESTADOPEDIDO = {'3'}
+	&gt;} Venta.ValorLinea)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
