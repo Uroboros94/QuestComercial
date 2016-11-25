@@ -5,6 +5,8 @@
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 10/12/2016  |   malemos         |   Inicio de Configuración
+11/24/2016	|	malemos 		| 	Se agregaron los siguientes campos:(DIMENSION_LINEA,DESC_MARCA)
+**********	|	*******			|	POSTINGLAYER = 0
 *****************************************************************************************************/
 Mapping
 MapCanalEC:
@@ -52,23 +54,23 @@ UNQUALIFY SK.FECHA;
 			ApplyMap('MapCanalEC',Left(DIMENSION_ESTRUCTURA_COMERCIAL,2),Null()) 	as EC.Canal,
 
 			//DIMENSION_FLUJO_DE_EFECTIVO,
-			//DIMENSION_LINEA,
+			DIMENSION_LINEA,
 			//DIMENSION_MARCA,
 			//DIMENSION_PROYECTO,
 			//DIMENSION_SUBLINEA,
 			//DIMENSION_TERCERO,
 			//DIMENSION_MAINACCOUNT,
-      //DIMENSION_TIPO_DE_TIENDA,
-			/*DESC_MAINACCOUNT,
-			DESC_TIPO_DE_TIENDA,
-			DESC_TERCERO,
-			DESC_SUBLINEA,
-			DESC_PROYECTO,
+     		//DIMENSION_TIPO_DE_TIENDA,
+			//DESC_MAINACCOUNT,
+			//DESC_TIPO_DE_TIENDA,
+			//DESC_TERCERO,
+			//DESC_SUBLINEA,
+			//DESC_PROYECTO,
 			DESC_MARCA,
-			DESC_LINEA,
-			DESC_FLUJO_DE_EFECTIVO,
-			DESC_ESTRUCTURA_COMERCIAL,
-			DESC_COLECCION,*/
+			//DESC_LINEA,
+			//DESC_FLUJO_DE_EFECTIVO,
+			//DESC_ESTRUCTURA_COMERCIAL,
+			//DESC_COLECCION,
 			DESC_CENTRO_DE_COSTO,
 			CUENTA_N1,
 			CUENTA_N2,
@@ -91,5 +93,6 @@ UNQUALIFY SK.FECHA;
 			Date(FECHAVENCIMIENTO,'DD/MM/YYYY') 			as FECHAVENCIMIENTO
 		FROM
 		[..\QVD\QST_Modelledgertrans.QVD]
-		(qvd);
+		(qvd)
+		where POSTINGLAYER = 0;
 UNQUALIFY *;
