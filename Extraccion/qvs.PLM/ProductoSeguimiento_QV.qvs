@@ -9,140 +9,160 @@
 ProductoSeguimiento_QV:
 	SQL SELECT
 		[CodigoProducto],
-		[QST_Sample_AsigPatro_boolean],
-		[QST_Sample_AsigPatroDate_date],
-		[QST_Sample_AsigPatroUsr_string],
-		[QST_Sample_FinAjusFicCreaAprob_boolean],
-		[QST_Sample_FinAjusFicCreaAprobDate_date],	//Fin Ajuste ficha Creativa Aprobada
-		[QST_Sample_FinAjusFicCreaAprobUsr_string],
-		[QST_Sample_FinConf_boolean],
-		[QST_Sample_FinConfDate_date],
-		[QST_Sample_FinConfUsr_string],
-		[QST_Sample_FinCorte_boolean],
-		[QST_Sample_FinCorteDate_date],
-		[QST_Sample_FinCorteUsr_string],
-		[QST_Sample_FinEntGrupComit_boolean],
-		[QST_Sample_FinEntGrupComit_date],
-		[QST_Sample_FinEntGrupComitUsr_string],
-		[QST_Sample_FinEscaladoUsr_string],
-		[QST_Sample_FinEscalado_boolean],
-		[QST_Sample_FinEscaladoDate_date],
-		[QST_Sample_FinFichTecni_boolean],
-		[QST_Sample_FinFichTecniDate_date],
-		[QST_Sample_FinFichTecniUsr_string],
-		[QST_Sample_FinListaOperacio_boolean],
-		[QST_Sample_FinListaOperacioDate_date],
-		[QST_Sample_FinListaOperacioUsr_string],
-		[QST_Sample_FinModeAjust_boolean],	//Fin Ajuste Moldería 
-		[QST_Sample_FinModeAjustDate_date],
-		[QST_Sample_FinModeAjustUsr_string],
-		[QST_Sample_FinDes_boolean],	//Fin desarrollo
-		[QST_Sample_FinDesDate_date],
-		[QST_Sample_FinDesUsr_string],
-		[QST_Sample_FinPreoCost_boolean],
-		[QST_Sample_FinPreoCost_date],
-		[QST_Sample_FinPreoCostUsr_string],
-		[QST_Sample_FinPreConf_boolean],
-		[QST_Sample_FinPreConfDate_date],
-		[QST_Sample_FinPreConfUsr_string],
-		[QST_Sample_ProcExt1_boolean],
-		[QST_Sample_ProcExt1_Date_date],
-		[QST_Sample_ProcExt1Usr_string],
-		[QST_Sample_ProcExt2_boolean],
-		[QST_Sample_ProcExt2_Date_date],
-		[QST_Sample_ProcExt2Usr_string],
-		[QST_Sample_FinProcExt3_boolean],
-		[QST_Sample_FinProcExt3Date_date],
-		[QST_Sample_FinProcExt3Usr_string],
-		[QST_Sample_FinTerm_boolean],
-		[QST_Sample_FinTermDate_date],
-		[QST_Sample_FinTermUsr_string],
-		[QST_Sample_FinListaCompo_boolean],
-		[QST_Sample_FinListaCompoDate_date],
-		[QST_Sample_FinListaCompoUsr_string],
-		[QST_Sample_InicioCorteUsr_string],
-		[QST_Sample_IniAjusFicCreaAprob_boolean],
-		[QST_Sample_IniAjusFicCreaAprobDate_date],
-		[QST_Sample_IniAjusFicCreaAprobUsr_string],
-		[QST_Sample_IniConf_boolean],
-		[QST_Sample_IniConfDate_date],
-		[QST_Sample_IniConfUsr_string],
-		[QST_Sample_IniCorte_boolean],
-		[QST_Sample_IniCorteDate_date],
-		[QST_Sample_IniEntGrupComit_boolean],
-		[QST_Sample_IniEntGrupComit_date],
-		[QST_Sample_IniEntGrupComitUsr_string],
-		[QST_Sample_Iniescaldo_boolean],
-		[QST_Sample_IniescaldoDate_date],
-		[QST_Sample_IniescaldoUsr_string],
-		[QST_Sample_IniFichTecni_boolean],
-		[QST_Sample_IniFichTecniDate_date],
-		[QST_Sample_IniFichTecniUsr_string],
-		[QST_Sample_IniListaOperacioDate_date],
-		[QST_Sample_IniListaOperacio_boolean],
-		[QST_Sample_IniListaOperacioUsr_string],
-		[QST_Sample_IniModeAjust_boolean],
-		[QST_Sample_IniModeAjustDate_date],
-		[QST_Sample_IniModeAjustUsr_string],
-		[QST_Sample_InicDes_boolean],
-		[QST_Sample_InicDesDate_date],
-		[QST_Sample_InicDesUsr_string],
-		[QST_Sample_IniPreoCost_boolean],
-		[QST_Sample_IniPreoCostDate_date],
-		[QST_Sample_IniPreoCostUsr_string],
-		[QST_Sample_IniPreConf_boolean],
-		[QST_Sample_IniPreConfDate_date],
-		[QST_Sample_IniPreConfUsr_string],
-		[QST_Sample_IniProcExt1_boolean],
-		[QST_Sample_IniProcExt1Date_date],
-		[QST_Sample_IniProcExt1Usr_string],
-		[QST_Sample_IniProcExt2_boolean],
-		[QST_Sample_IniProcExt2Date_date],
-		[QST_Sample_IniProcExt2Usr_string],
-		[QST_Sample_IniProcExt3Date_date],
-		[QST_Sample_IniProcExt3_boolean],
-		[QST_Sample_IniProcExt3Usr_string],
-		[QST_Sample_IniTerm_boolean],
-		[QST_Sample_IniTermDate_date],
-		[QST_Sample_IniTermUsr_string],
-		[QST_Sample_IniListaCompo_boolean],
-		[QST_Sample_IniListaCompoDate_date],
-		[QST_Sample_IniListaCompoUsr_string],
 		[QST_Sample_LastStatusDate_time],
-		[QST_Sample_MediModelo_boolean],
-		[QST_Sample_MediModeloDate_date],	//Tallaje
-		[QST_Sample_MediModeloUsr_string],
-		[SampleFactory],
-		[RequestNumber],
-		[StorageName],
-		[SampleNotes],
-		[StorageBinNumber],
-		[SampleSRLineItem],
-		[SampleProductAlternative],
-		[__Parent__],
+
+		[QST_Sample_AsigPatro_boolean],	//--Asignacion de Patronista
+		[QST_Sample_AsigPatroDate_date],	//--Asignacion de Patronista
+		[QST_Sample_AsigPatroUsr_string],	//--Asignacion de Patronista
+		[QST_Style_AsigPatronista_boolean],	//--Asignacion de Patronista
+		[QST_Style_AsigPatronistaUsr_string],	//--Asignacion de Patronista
+		[QST_Style_AsigPatronistaDate_date],	//--Asignacion de Patronista
+
+		[QST_Sample_IniAjusFicCreaAprob_boolean],	//-- Inicio Ajuste Ficha Creacion Aprobada
+		[QST_Sample_IniAjusFicCreaAprobDate_date],	//-- Inicio Ajuste Ficha Creacion Aprobada
+		[QST_Sample_IniAjusFicCreaAprobUsr_string],	//-- Inicio Ajuste Ficha Creacion Aprobada
+		[QST_Sample_FinAjusFicCreaAprob_boolean],	//-- Fin Ajuste Ficha Creacion Aprobada
+		[QST_Sample_FinAjusFicCreaAprobDate_date],	//-- Fin Ajuste Ficha Creacion Aprobada
+		[QST_Sample_FinAjusFicCreaAprobUsr_string],	//-- Fin Ajuste Ficha Creacion Aprobada
+
+		[QST_Sample_IniConf_boolean],	//--Inicio Confeccion
+		[QST_Sample_IniConfDate_date],	//--Inicio Confeccion
+		[QST_Sample_IniConfUsr_string],	//--Inicio Confeccion
+		[QST_Sample_FinConf_boolean],	//--Fin Confeccion
+		[QST_Sample_FinConfDate_date],	//--Fin Confeccion
+		[QST_Sample_FinConfUsr_string],	//--Fin Confeccion
+
+		[QST_Sample_IniPreConf_boolean],	//--Inicio Preparacion Confeccion
+		[QST_Sample_IniPreConfDate_date],	//--Inicio Preparacion Confeccion
+		[QST_Sample_IniPreConfUsr_string],	//--Inicio Preparacion Confeccion
+		[QST_Sample_FinPreConf_boolean],	//--Fin Preparacion Confeccion
+		[QST_Sample_FinPreConfDate_date],	//--Fin Preparacion Confeccion
+		[QST_Sample_FinPreConfUsr_string],	//--Fin Preparacion Confeccion
+
+		[QST_Sample_FinCorteUsr_string],	//-- Inicio Corte
+		[QST_Sample_FinCorte_boolean],	//-- Inicio Corte
+		[QST_Sample_FinCorteDate_date],	//-- Inicio Corte
+		[QST_Sample_InicioCorteUsr_string],	//-- Fin Corte
+		[QST_Sample_IniCorte_boolean],	//-- Fin Corte
+		[QST_Sample_IniCorteDate_date],	//-- Fin Corte
+
+		[QST_Sample_IniEntGrupComitUsr_string],	//--Inicio Entrega Grupo de Comite
+		[QST_Sample_IniEntGrupComit_boolean],	//--Inicio Entrega Grupo de Comite
+		[QST_Sample_IniEntGrupComit_date],	//--Inicio Entrega Grupo de Comite
+		[QST_Sample_FinEntGrupComitUsr_string],	//--Fin Entrega Grupo de Comite
+		[QST_Sample_FinEntGrupComit_boolean],	//--Fin Entrega Grupo de Comite
+		[QST_Sample_FinEntGrupComit_date],	//--Fin Entrega Grupo de Comite
+
+		[QST_Sample_Iniescaldo_boolean],	//--Inicio Escalado,
+		[QST_Sample_IniescaldoDate_date],	//--Inicio Escalado,
+		[QST_Sample_IniescaldoUsr_string],	//--Inicio Escalado,
+		[QST_Sample_FinEscaladoUsr_string],	//--Fin Escalado,
+		[QST_Sample_FinEscalado_boolean],	//--Fin Escalado,
+		[QST_Sample_FinEscaladoDate_date],	//--Fin Escalado,
+
+		[QST_Sample_IniFichTecni_boolean],	//--Inicio Ficha Tecnica,
+		[QST_Sample_IniFichTecniDate_date],	//--Inicio Ficha Tecnica,
+		[QST_Sample_IniFichTecniUsr_string],	//--Inicio Ficha Tecnica,
+		[QST_Sample_FinFichTecni_boolean],	//--Fin Ficha Tecnica,
+		[QST_Sample_FinFichTecniDate_date],	//--Fin Ficha Tecnica,
+		[QST_Sample_FinFichTecniUsr_string],	//--Fin Ficha Tecnica,
+
+		[QST_Sample_IniListaOperacioDate_date],	//--Inicio Listad de Operaciones
+		[QST_Sample_IniListaOperacio_boolean],	//--Inicio Listad de Operaciones
+		[QST_Sample_IniListaOperacioUsr_string],	//--Inicio Listad de Operaciones
+		[QST_Sample_FinListaOperacio_boolean],	//--Fin Listad de Operaciones
+		[QST_Sample_FinListaOperacioDate_date],	//--Fin Listad de Operaciones
+		[QST_Sample_FinListaOperacioUsr_string],	//--Fin Listad de Operaciones
+
+		[QST_Sample_IniModeAjust_boolean],	//--Inicio Ajuste Moldería 
+		[QST_Sample_IniModeAjustDate_date],	//--Inicio Ajuste Moldería 
+		[QST_Sample_IniModeAjustUsr_string],	//--Inicio Ajuste Moldería 
+		[QST_Sample_FinModeAjust_boolean],	//--Fin Ajuste Moldería 
+		[QST_Sample_FinModeAjustDate_date],	//--Fin Ajuste Moldería 
+		[QST_Sample_FinModeAjustUsr_string],	//--Fin Ajuste Moldería 
+
+		[QST_Sample_InicDes_boolean], //--Inicio desarrollo
+		[QST_Sample_InicDesDate_date], //--Inicio desarrollo
+		[QST_Sample_InicDesUsr_string], //--Inicio desarrollo
+		[QST_Sample_FinDes_boolean], //--Fin desarrollo
+		[QST_Sample_FinDesDate_date], //--Fin desarrollo
+		[QST_Sample_FinDesUsr_string], //--Fin desarrollo
+
+		[QST_Sample_IniPreoCost_boolean], 	//--Inicio Precosteo 
+		[QST_Sample_IniPreoCostDate_date],	//--Inicio Precosteo 
+		[QST_Sample_IniPreoCostUsr_string],	//--Inicio Precosteo 
+		[QST_Sample_FinPreoCost_boolean],	//--Fin Precosteo 
+		[QST_Sample_FinPreoCost_date],	//--Fin Precosteo 
+		[QST_Sample_FinPreoCostUsr_string],	//--Fin Precosteo 
+
 		[QST_Sample_Proveedor_String],
+		[QST_Sample_IniProcExt1_boolean],	//--Inicio Proceso Externo 1
+		[QST_Sample_IniProcExt1Date_date],	//--Inicio Proceso Externo 1
+		[QST_Sample_IniProcExt1Usr_string],	//--Inicio Proceso Externo 1
+		[QST_Sample_ProcExt1_boolean],	//--Fin Proceso Externo 1
+		[QST_Sample_ProcExt1_Date_date],	//--Fin Proceso Externo 1
+		[QST_Sample_ProcExt1Usr_string],	//--Fin Proceso Externo 1
+
 		[QST_Sample_Proveedor2_String],
+		[QST_Sample_IniProcExt2_boolean], //--Inicio Proceso Externo 2
+		[QST_Sample_IniProcExt2Date_date], //--Inicio Proceso Externo 2
+		[QST_Sample_IniProcExt2Usr_string], //--Inicio Proceso Externo 2
+		[QST_Sample_ProcExt2_boolean], //--Fin Proceso Externo 2
+		[QST_Sample_ProcExt2_Date_date], //--Fin Proceso Externo 2
+		[QST_Sample_ProcExt2Usr_string], //--Fin Proceso Externo 2
+
 		[QST_Sample_Proveedor3_String],
-		[SampleReceivedDate],
-		[RequestedQty],
-		[SampleReviewDate],
-		[SampleStorage],
-		[ProductSize],
+		[QST_Sample_IniProcExt3Date_date],	//--Inicio Proceso Externo 3,
+		[QST_Sample_IniProcExt3_boolean],	//--Inicio Proceso Externo 3,
+		[QST_Sample_IniProcExt3Usr_string],	//--Inicio Proceso Externo 3,
+		[QST_Sample_FinProcExt3_boolean],	//--Fin Proceso Externo 3,
+		[QST_Sample_FinProcExt3Date_date],	//--Fin Proceso Externo 3,
+		[QST_Sample_FinProcExt3Usr_string],	//--Fin Proceso Externo 3,
+
+		[QST_Sample_IniTerm_boolean],	//--Inicio Terminacion
+		[QST_Sample_IniTermDate_date],	//--Inicio Terminacion
+		[QST_Sample_IniTermUsr_string],	//--Inicio Terminacion
+		[QST_Sample_FinTerm_boolean],	//--Fin Terminacion
+		[QST_Sample_FinTermDate_date],	//--Fin Terminacion
+		[QST_Sample_FinTermUsr_string],	//--Fin Terminacion
+
+		[QST_Sample_FinListaCompo_boolean],	//--Inicio Listado de Componentes
+		[QST_Sample_FinListaCompoDate_date],	//--Inicio Listado de Componentes
+		[QST_Sample_FinListaCompoUsr_string],	//--Inicio Listado de Componentes
+		[QST_Sample_IniListaCompo_boolean],	//--Fin Listado de Componentes
+		[QST_Sample_IniListaCompoDate_date],	//--Fin Listado de Componentes
+		[QST_Sample_IniListaCompoUsr_string],	//--Fin Listado de Componentes
+		
+		[QST_Sample_MediModelo_boolean],	//--Tallaje
+		[QST_Sample_MediModeloDate_date],	//--Tallaje
+		[QST_Sample_MediModeloUsr_string],	//--Tallaje
+
+		[__Parent__],
+
+		[RequestedQty],	//--Cantidad Solicitada
+		[SampleNotes]	//--Notas,
+		[ProductSize], //--Talla
 		[SampleType],
-		[QST_Sample_LastStatus_enum],
 		[QST_Sample_PresComite_boolean],
 		[QST_Sample_PresComiteDate_date],
-		[QST_Sample_PresComiteUsr_string],
-		[QST_Style_AsigPatronista_boolean],
-		[QST_Style_AsigPatronistaDate_date],
-		[QST_Style_AsigPatronistaUsr_string],
-		[_ExportedDate_]
+		[QST_Sample_PresComiteUsr_string]
 	FROM [ProductoSeguimiento_QV];
 
 STORE ProductoSeguimiento_QV INTO [..\QVD\PLM\ProductoSeguimiento_QV.QVD](qvd);
 DROP TABLE ProductoSeguimiento_QV;
-		//[QST_Style_CodInformes_String],
-		//[Node Name],
-		//[SampleStatus],
-		//[Description],
-		//[QST_Sample_CodigoMuestra_string],
+		//[QST_Sample_LastStatus_enum],
+		//[RequestNumber],
+		//--[StorageName],
+		//--[StorageBinNumber],
+		//--[SampleSRLineItem],
+		//--[SampleProductAlternative],
+		//--[SampleReceivedDate],
+		//--[SampleReviewDate],
+		//--[SampleStorage],
+		//--[SampleFactory],
+		//--[_ExportedDate_]
+		//--[QST_Style_CodInformes_String],
+		//--[Node Name],
+		//--[SampleStatus],
+		//--[Description],
+		//--[QST_Sample_CodigoMuestra_string],
