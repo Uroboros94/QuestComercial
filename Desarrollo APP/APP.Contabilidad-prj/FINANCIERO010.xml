@@ -279,7 +279,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Débitos]-[Créditos]</v>
+        <v>sum({&lt;Contabilidad.DIMENSION_TERCERO-={''}&gt;}Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1643,7 +1643,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>341</ColWidth>
+      <ColWidth>372</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4759,7 +4759,7 @@
       <int>481</int>
       <int>372</int>
       <int>403</int>
-      <int>341</int>
+      <int>372</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -6562,7 +6562,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Débitos]-[Créditos]</v>
+              <v>sum({&lt;Contabilidad.DIMENSION_TERCERO-={''}&gt;}Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
