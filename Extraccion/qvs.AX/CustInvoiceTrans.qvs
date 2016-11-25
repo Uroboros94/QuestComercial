@@ -7,7 +7,7 @@ Fecha       |   Desarrollador   |   Modificación
 09/26/2016  |   malemos         |   Inicio de Configuración
 *****************************************************************************************************/
 CustInvoiceTrans:
-    SQL SELECT 
+    SQL SELECT
         ASIENTOFACTURA,
         CONDICIONPAGO,
         CUENTACLIENTE,
@@ -43,7 +43,8 @@ CustInvoiceTrans:
         //RECVERSION,
         //PARTITION,
         //RECID,
-        CANTIDAD
+        CANTIDAD,
+        VALORLINEA
     FROM "QST_MODELFACTURAS";
 
 STORE CustInvoiceTrans INTO [..\QVD\CustInvoiceTrans.QVD](qvd);
