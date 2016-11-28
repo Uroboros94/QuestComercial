@@ -1,4 +1,4 @@
-/*****************************************************************************************************
+﻿/*****************************************************************************************************
 	Detalle :
     Extracción de Hechos: Seguimiento de Producto Interfaz
 	-------------------------------------------------------------------------------------------------
@@ -8,15 +8,25 @@
 *****************************************************************************************************/
 ProductoSeguimiento_QV:
 	SQL SELECT
-		[CodigoProducto],
+		[CodigoProducto],		
+		[__Parent__],
+		[RequestedQty],	//--Cantidad Solicitada
+		[SampleNotes]	//--Notas,
+		[ProductSize], //--Talla
+		[SampleType],	//--Tipo de Muestra
+
 		[QST_Sample_LastStatusDate_time],
+
+		[QST_Sample_PresComite_boolean],	//--Presentación al Comite
+		[QST_Sample_PresComiteDate_date],	//--Presentación al Comite
+		[QST_Sample_PresComiteUsr_string],	//--Presentación al Comite
 
 		[QST_Sample_AsigPatro_boolean],	//--Asignacion de Patronista
 		[QST_Sample_AsigPatroDate_date],	//--Asignacion de Patronista
 		[QST_Sample_AsigPatroUsr_string],	//--Asignacion de Patronista
-		[QST_Style_AsigPatronista_boolean],	//--Asignacion de Patronista
-		[QST_Style_AsigPatronistaUsr_string],	//--Asignacion de Patronista
-		[QST_Style_AsigPatronistaDate_date],	//--Asignacion de Patronista
+		//--[QST_Style_AsigPatronista_boolean],	//--Asignacion de Patronista
+		//--[QST_Style_AsigPatronistaUsr_string],	//--Asignacion de Patronista
+		//--[QST_Style_AsigPatronistaDate_date],	//--Asignacion de Patronista
 
 		[QST_Sample_IniAjusFicCreaAprob_boolean],	//-- Inicio Ajuste Ficha Creacion Aprobada
 		[QST_Sample_IniAjusFicCreaAprobDate_date],	//-- Inicio Ajuste Ficha Creacion Aprobada
@@ -74,12 +84,12 @@ ProductoSeguimiento_QV:
 		[QST_Sample_FinListaOperacioDate_date],	//--Fin Listad de Operaciones
 		[QST_Sample_FinListaOperacioUsr_string],	//--Fin Listad de Operaciones
 
-		[QST_Sample_IniModeAjust_boolean],	//--Inicio Ajuste Moldería 
-		[QST_Sample_IniModeAjustDate_date],	//--Inicio Ajuste Moldería 
-		[QST_Sample_IniModeAjustUsr_string],	//--Inicio Ajuste Moldería 
-		[QST_Sample_FinModeAjust_boolean],	//--Fin Ajuste Moldería 
-		[QST_Sample_FinModeAjustDate_date],	//--Fin Ajuste Moldería 
-		[QST_Sample_FinModeAjustUsr_string],	//--Fin Ajuste Moldería 
+		[QST_Sample_IniModeAjust_boolean],	//--Inicio Ajuste Moderia 
+		[QST_Sample_IniModeAjustDate_date],	//--Inicio Ajuste Moderia 
+		[QST_Sample_IniModeAjustUsr_string],	//--Inicio Ajuste Moderia 
+		[QST_Sample_FinModeAjust_boolean],	//--Fin Ajuste Moderia 
+		[QST_Sample_FinModeAjustDate_date],	//--Fin Ajuste Moderia 
+		[QST_Sample_FinModeAjustUsr_string],	//--Fin Ajuste Moderia 
 
 		[QST_Sample_InicDes_boolean], //--Inicio desarrollo
 		[QST_Sample_InicDesDate_date], //--Inicio desarrollo
@@ -135,17 +145,7 @@ ProductoSeguimiento_QV:
 		
 		[QST_Sample_MediModelo_boolean],	//--Tallaje
 		[QST_Sample_MediModeloDate_date],	//--Tallaje
-		[QST_Sample_MediModeloUsr_string],	//--Tallaje
-
-		[__Parent__],
-
-		[RequestedQty],	//--Cantidad Solicitada
-		[SampleNotes]	//--Notas,
-		[ProductSize], //--Talla
-		[SampleType],
-		[QST_Sample_PresComite_boolean],
-		[QST_Sample_PresComiteDate_date],
-		[QST_Sample_PresComiteUsr_string]
+		[QST_Sample_MediModeloUsr_string]	//--Tallaje
 	FROM [ProductoSeguimiento_QV];
 
 STORE ProductoSeguimiento_QV INTO [..\QVD\PLM\ProductoSeguimiento_QV.QVD](qvd);
