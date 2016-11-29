@@ -1,0 +1,78 @@
+﻿/******************************************************************************************************
+	Detalle :
+	Creación del APP: Adhoc
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/29/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+Dimensiones:
+LOAD * INLINE [
+		Dimensiones
+		Cliente
+		Genero
+		Referencia
+		Talla
+		Color
+		Causal devolucion
+		Departamento Cliente
+		Ciudad cliente
+		Estructura Comercial
+		Vendedor
+		NIT
+		Pedido
+		Condición pago
+		Línea
+		Estilo
+		Colección
+		Tipo de Pedido
+		Grupo de venta
+		Descuento
+		% Descuento
+		Precio Unitario
+	];
+
+Calculos:
+LOAD * INLINE [
+		Calculos
+		Und Pedidos
+		Und Ventas
+		Und Despachadas
+		Und Pendientes
+		% Cumpli. Unds Despachadas
+		Vlr Pedidos
+		Vlr Ventas
+		Vlr Despachado
+		Vlr Pendiente
+		% Cumpli. Pesos Despachado
+		Und Devolucion
+		Vlr devolucion
+		Cupo
+		Corriente
+		Vencido
+		Total
+		Disponible
+		Análisis Bloqueo Mora
+		Análisis Bloqueo Cupo
+		Promed. Pendientes
+		Stock
+	];
+	
+
+
+ReportesAdhoc:
+	LOAD * Inline [
+		NombreCampo, Modulo
+		Tipo Cliente, Base Datos Clientes
+		Digito Verificación, Base Datos Clientes
+		Tipo Identificación, Base Datos Clientes
+		Nombre Completo, Base Datos Clientes
+		Dirección, Base Datos Clientes
+		Teléfono, Base Datos Clientes
+		Página Web, Base Datos Clientes
+		Correo, Base Datos Clientes
+		Zona, Base Datos Clientes
+		Ciudad, Base Datos Clientes
+		Departamento, Base Datos Clientes
+		País, Base Datos Clientes
+	];

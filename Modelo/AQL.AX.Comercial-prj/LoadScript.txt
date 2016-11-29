@@ -51,6 +51,7 @@ $(must_Include=qvs.componentes\calendario.qvs);
 ///$tab LinkTable
 LinkTable_Temp:
 	LOAD
+		Distinct
 		PedidosVenta.Id				as IDPEDIDO,
 		PedidosVenta.IdCliente		as IDCLIENTE,
 		PedidosVenta.Fecha 			as FECHA,
@@ -58,11 +59,13 @@ LinkTable_Temp:
 	Resident PedidosVenta;
 	Concatenate
 	LOAD
+		Distinct
 		Cartera.IdCliente			as IDCLIENTE,
 		Cartera.FechaFactura		as FECHA
 	Resident CarteraCliente;
 	Concatenate
 	LOAD
+		Distinct
 		Venta.IdCliente				as IDCLIENTE,
 		Venta.FechaFactura			as FECHA
 	Resident Venta;

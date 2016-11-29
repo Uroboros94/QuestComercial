@@ -15,7 +15,7 @@ Clientes:
 		ACCOUNTNUM					as Cliente.Id,
 		CITYVALUE					as Cliente.Ciudad,
 		MAINEMAIL					as Cliente.CorreoPpal,
-		CREDITMAX					as Cliente.Cupo,
+		Num(CREDITMAX)				as Cliente.Cupo,
 		STATEVALUE					as Cliente.Departamento,
 		DIGIT						as Cliente.DigitoVerificacion,
 		ADDRESSING					as Cliente.Direccion,
