@@ -2461,8 +2461,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.IdLinea</Name>
-        <Type>PRESENT</Type>
+        <Name>=Left(RpProduccion.Referencia, 3)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Linea</v>
@@ -6115,14 +6115,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.IdLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6148,6 +6140,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.TipoPrenda</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Left(RpProduccion.Referencia, 3)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

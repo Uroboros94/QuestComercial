@@ -2462,8 +2462,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.IdLinea</Name>
-        <Type>PRESENT</Type>
+        <Name>=Left(RpProduccion.Referencia, 3)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Línea</v>
@@ -2621,7 +2621,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>172</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2801,7 +2801,10 @@
       <ColWidth>316</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_COND</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -2825,7 +2828,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.Referencia</Name>
+        <Name>RpProduccion.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2984,7 +2987,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>338</ColWidth>
+      <ColWidth>281</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3356,10 +3359,13 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>144</ColWidth>
+      <ColWidth>175</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_TRUE</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -3917,7 +3923,10 @@
       <ColWidth>247</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_TRUE</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4289,7 +4298,10 @@
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_TRUE</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4466,10 +4478,7 @@
       <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition>
-        <Type>COND_EX_COND</Type>
-        <Expression>0</Expression>
-      </EnableCondition>
+      <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4496,7 +4505,9 @@
         <Name>Producto.Talla</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
-      <Title></Title>
+      <Title>
+        <v>Talla</v>
+      </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
@@ -6062,7 +6073,7 @@
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>150</int>
-      <int>300</int>
+      <int>172</int>
       <int>316</int>
       <int>338</int>
       <int>231</int>
@@ -6573,21 +6584,21 @@
     <InterFieldSortOrder>
       <int>0</int>
       <int>1</int>
+      <int>2</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
       <int>6</int>
+      <int>7</int>
       <int>8</int>
+      <int>9</int>
       <int>10</int>
       <int>11</int>
+      <int>12</int>
+      <int>13</int>
       <int>14</int>
       <int>15</int>
-      <int>12</int>
       <int>16</int>
-      <int>2</int>
-      <int>7</int>
-      <int>9</int>
-      <int>13</int>
     </InterFieldSortOrder>
     <ExpressionPosition>13</ExpressionPosition>
     <NumberOfLeftDimensions>12</NumberOfLeftDimensions>
@@ -6680,30 +6691,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.IdLinea</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.Referencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.IdColor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.Color</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6721,6 +6708,30 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.Talla</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>RpProduccion.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.IdColor</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Left(RpProduccion.Referencia, 3)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
