@@ -743,8 +743,8 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.IdLinea</Name>
-        <Type>PRESENT</Type>
+        <Name>=Left(RpProduccion.Referencia, 3)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Línea</v>
@@ -3777,20 +3777,6 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.IdLinea</DimName>
-          <ElemNo>
-            <int>5</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BExQVDEwAA==
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
         <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.Referencia</DimName>
@@ -3804,6 +3790,20 @@
           <DimName>Producto.IdColor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Left(RpProduccion.Referencia, 3)</DimName>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AgAAAAAAgFtA
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>
