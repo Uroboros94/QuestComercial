@@ -1,0 +1,28 @@
+﻿/*****************************************************************************************************
+	Detalle :
+	Modelo de Dimensiones: Producto
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/28/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+Seguimiento:
+	LOAD 
+		SK.Producto, 
+		Seguimiento.IdProducto, 
+		Seguimiento.IdEtapa, 
+		Seguimiento.Cantidad, 
+		Seguimiento.TipoMuestra, 
+		Seguimiento.Etapa, 
+		Seguimiento.FechaInicio, 
+		Seguimiento.FechaFin, 
+		Seguimiento.Proceso, 
+		Seguimiento.ProcesoIniciado, 
+		Seguimiento.ProcesoFinalizado, 
+		Seguimiento.UsuarioInicio, 
+		Seguimiento.UsuarioFin, 
+		Seguimiento.TallerExterno
+	FROM
+	[..\QVD\PLM\_Seguimiento.QVD]
+	(qvd);

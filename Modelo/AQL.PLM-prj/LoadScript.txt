@@ -40,7 +40,12 @@ $(Must_Include=qvs.plm\headlistamaterial.qvs);
 $(Must_Include=qvs.plm\linelistamaterial.qvs);
 ///$tab Fact
 /*Listado de Materiales*/
-$(Include=qvs.plm\listamateriales.qvs);
+$(Must_Include=qvs.plm\listamateriales.qvs);
+
+/*Seguimiento de Muestra*/
+$(Must_Include=qvs.plm\seguimiento.qvs);
+
+
 ///$tab Exit Script
 TRACE Modelo Finalizado;
 EXIT SCRIPT;

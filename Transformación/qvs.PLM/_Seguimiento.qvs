@@ -1,0 +1,469 @@
+﻿/*****************************************************************************************************
+	Detalle :
+	Transformacion de Dimensiones: Seguimiento de Muestras
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/28/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+_SeguimientoTemp:
+	LOAD
+		CodigoProducto,
+		QST_Sample_LastStatusDate_time,
+		QST_Sample_PresComite_boolean,
+		QST_Sample_PresComiteDate_date,
+		QST_Sample_PresComiteUsr_string,
+		QST_Sample_AsigPatro_boolean,
+		QST_Sample_AsigPatroDate_date,
+		QST_Sample_AsigPatroUsr_string,
+		QST_Sample_IniAjusFicCreaAprob_boolean,
+		QST_Sample_IniAjusFicCreaAprobDate_date,
+		QST_Sample_IniAjusFicCreaAprobUsr_string,
+		QST_Sample_FinAjusFicCreaAprob_boolean,
+		QST_Sample_FinAjusFicCreaAprobDate_date,
+		QST_Sample_FinAjusFicCreaAprobUsr_string,
+		QST_Sample_IniConf_boolean,
+		QST_Sample_IniConfDate_date,
+		QST_Sample_IniConfUsr_string,
+		QST_Sample_FinConf_boolean,
+		QST_Sample_FinConfDate_date,
+		QST_Sample_FinConfUsr_string,
+		QST_Sample_IniPreConf_boolean,
+		QST_Sample_IniPreConfDate_date,
+		QST_Sample_IniPreConfUsr_string,
+		QST_Sample_FinPreConf_boolean,
+		QST_Sample_FinPreConfDate_date,
+		QST_Sample_FinPreConfUsr_string,
+		QST_Sample_FinCorteUsr_string,
+		QST_Sample_FinCorte_boolean,
+		QST_Sample_FinCorteDate_date,
+		QST_Sample_InicioCorteUsr_string,
+		QST_Sample_IniCorte_boolean,
+		QST_Sample_IniCorteDate_date,
+		QST_Sample_IniEntGrupComitUsr_string,
+		QST_Sample_IniEntGrupComit_boolean,
+		QST_Sample_IniEntGrupComit_date,
+		QST_Sample_FinEntGrupComitUsr_string,
+		QST_Sample_FinEntGrupComit_boolean,
+		QST_Sample_FinEntGrupComit_date,
+		QST_Sample_Iniescaldo_boolean,
+		QST_Sample_IniescaldoDate_date,
+		QST_Sample_IniescaldoUsr_string,
+		QST_Sample_FinEscaladoUsr_string,
+		QST_Sample_FinEscalado_boolean,
+		QST_Sample_FinEscaladoDate_date,
+		QST_Sample_IniFichTecni_boolean,
+		QST_Sample_IniFichTecniDate_date,
+		QST_Sample_IniFichTecniUsr_string,
+		QST_Sample_FinFichTecni_boolean,
+		QST_Sample_FinFichTecniDate_date,
+		QST_Sample_FinFichTecniUsr_string,
+		QST_Sample_IniListaOperacioDate_date,
+		QST_Sample_IniListaOperacio_boolean,
+		QST_Sample_IniListaOperacioUsr_string,
+		QST_Sample_FinListaOperacio_boolean,
+		QST_Sample_FinListaOperacioDate_date,
+		QST_Sample_FinListaOperacioUsr_string,
+		QST_Sample_IniModeAjust_boolean,
+		QST_Sample_IniModeAjustDate_date,
+		QST_Sample_IniModeAjustUsr_string,
+		QST_Sample_FinModeAjust_boolean,
+		QST_Sample_FinModeAjustDate_date,
+		QST_Sample_FinModeAjustUsr_string,
+		QST_Sample_InicDes_boolean,
+		QST_Sample_InicDesDate_date,
+		QST_Sample_InicDesUsr_string,
+		QST_Sample_FinDes_boolean,
+		QST_Sample_FinDesDate_date,
+		QST_Sample_FinDesUsr_string,
+		QST_Sample_IniPreoCost_boolean,
+		QST_Sample_IniPreoCostDate_date,
+		QST_Sample_IniPreoCostUsr_string,
+		QST_Sample_FinPreoCost_boolean,
+		QST_Sample_FinPreoCost_date,
+		QST_Sample_FinPreoCostUsr_string,
+		QST_Sample_Proveedor_String,
+		QST_Sample_IniProcExt1_boolean,
+		QST_Sample_IniProcExt1Date_date,
+		QST_Sample_IniProcExt1Usr_string,
+		QST_Sample_ProcExt1_boolean,
+		QST_Sample_ProcExt1_Date_date,
+		QST_Sample_ProcExt1Usr_string,
+		QST_Sample_Proveedor2_String,
+		QST_Sample_IniProcExt2_boolean,
+		QST_Sample_IniProcExt2Date_date,
+		QST_Sample_IniProcExt2Usr_string,
+		QST_Sample_ProcExt2_boolean,
+		QST_Sample_ProcExt2_Date_date,
+		QST_Sample_ProcExt2Usr_string,
+		QST_Sample_Proveedor3_String,
+		QST_Sample_IniProcExt3Date_date,
+		QST_Sample_IniProcExt3_boolean,
+		QST_Sample_IniProcExt3Usr_string,
+		QST_Sample_FinProcExt3_boolean,
+		QST_Sample_FinProcExt3Date_date,
+		QST_Sample_FinProcExt3Usr_string,
+		QST_Sample_IniTerm_boolean,
+		QST_Sample_IniTermDate_date,
+		QST_Sample_IniTermUsr_string,
+		QST_Sample_FinTerm_boolean,
+		QST_Sample_FinTermDate_date,
+		QST_Sample_FinTermUsr_string,
+		QST_Sample_FinListaCompo_boolean,
+		QST_Sample_FinListaCompoDate_date,
+		QST_Sample_FinListaCompoUsr_string,
+		QST_Sample_IniListaCompo_boolean,
+		QST_Sample_IniListaCompoDate_date,
+		QST_Sample_IniListaCompoUsr_string,
+		QST_Sample_MediModelo_boolean,
+		QST_Sample_MediModeloDate_date,
+		QST_Sample_MediModeloUsr_string,
+		__Parent__,
+		RequestedQty,
+		ProductSize,
+		SampleType
+		
+	FROM
+	[..\QVD\PLM\ProductoSeguimiento_QV.QVD]
+	(qvd);
+	
+_SeguimientoTemp2:
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'1. Asignación de Patronista'				as Proceso,
+		QST_Sample_AsigPatro_boolean				as ProcesoIniciado,
+		QST_Sample_AsigPatroDate_date				as FechaInicio,
+		QST_Sample_AsigPatroUsr_string				as UsuarioInicio
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'2. Corte'									as Proceso,
+		QST_Sample_IniCorte_boolean					as ProcesoIniciado,
+		QST_Sample_IniCorteDate_date				as FechaInicio,
+		QST_Sample_InicioCorteUsr_string			as UsuarioInicio,
+		QST_Sample_FinCorte_boolean					as ProcesoFinalizado,
+		QST_Sample_FinCorteDate_date				as FechaFin,
+		QST_Sample_FinCorteUsr_string				as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'3. Proceso Externo 1'						as Proceso,
+		QST_Sample_Proveedor_String					as TallerExterno,
+		QST_Sample_IniProcExt1_boolean				as ProcesoIniciado,
+		QST_Sample_IniProcExt1Date_date				as FechaInicio,
+		QST_Sample_IniProcExt1Usr_string			as UsuarioInicio,
+		QST_Sample_ProcExt1_boolean					as ProcesoFinalizado,
+		QST_Sample_ProcExt1_Date_date				as FechaFin,
+		QST_Sample_ProcExt1Usr_string				as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'4. Proceso Externo 2'						as Proceso,
+		QST_Sample_Proveedor2_String				as TallerExterno,
+		QST_Sample_IniProcExt2_boolean				as ProcesoIniciado, 
+		QST_Sample_IniProcExt2Date_date				as FechaInicio,
+		QST_Sample_IniProcExt2Usr_string			as UsuarioInicio,
+		QST_Sample_ProcExt2_boolean					as ProcesoFinalizado,
+		QST_Sample_ProcExt2_Date_date				as FechaFin,
+		QST_Sample_ProcExt2Usr_string				as UsuarioFin
+	Resident _SeguimientoTemp;
+		Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'5. Proceso Externo 3'						as Proceso,
+		QST_Sample_Proveedor3_String				as TallerExterno,
+		QST_Sample_IniProcExt3_boolean				as ProcesoIniciado, 
+		QST_Sample_IniProcExt3Date_date				as FechaInicio,
+		QST_Sample_IniProcExt3Usr_string			as UsuarioInicio,
+		QST_Sample_FinProcExt3_boolean				as ProcesoFinalizado,
+		QST_Sample_FinProcExt3Date_date				as FechaFin,
+		QST_Sample_FinProcExt3Usr_string			as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'6. Preparación Confección'					as Proceso,
+		QST_Sample_IniPreConf_boolean				as ProcesoIniciado,
+		QST_Sample_IniPreConfDate_date				as FechaInicio,
+		QST_Sample_IniPreConfUsr_string				as UsuarioInicio,
+		QST_Sample_FinPreConf_boolean				as ProcesoFinalizado,
+		QST_Sample_FinPreConfDate_date				as FechaFin,
+		QST_Sample_FinPreConfUsr_string				as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'7. Confección'								as Proceso,
+		QST_Sample_IniConf_boolean					as ProcesoIniciado,
+		QST_Sample_IniConfDate_date					as FechaInicio,
+		QST_Sample_IniConfUsr_string				as UsuarioInicio,
+		QST_Sample_FinConf_boolean					as ProcesoFinalizado,
+		QST_Sample_FinConfDate_date					as FechaFin,
+		QST_Sample_FinConfUsr_string				as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'8. Terminado'								as Proceso,
+		QST_Sample_IniTerm_boolean					as ProcesoIniciado,
+		QST_Sample_IniTermDate_date					as FechaInicio,
+		QST_Sample_IniTermUsr_string				as UsuarioInicio,
+		QST_Sample_FinTerm_boolean					as ProcesoFinalizado,
+		QST_Sample_FinTermDate_date					as FechaFin,
+		QST_Sample_FinTermUsr_string				as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'9. Precosteo'								as Proceso,
+		QST_Sample_IniPreoCost_boolean				as ProcesoIniciado,
+		QST_Sample_IniPreoCostDate_date				as FechaInicio,
+		QST_Sample_IniPreoCostUsr_string			as UsuarioInicio,
+		QST_Sample_FinPreoCost_boolean				as ProcesoFinalizado,
+		QST_Sample_FinPreoCost_date					as FechaFin,
+		QST_Sample_FinPreoCostUsr_string			as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'10. Medición de Tallaje'					as Proceso,
+		QST_Sample_MediModelo_boolean				as ProcesoIniciado,
+		QST_Sample_MediModeloDate_date				as FechaInicio,
+		QST_Sample_MediModeloUsr_string				as UsuarioInicio
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'11. Entrega Grupo Comité'					as Proceso,
+		QST_Sample_IniEntGrupComit_boolean			as ProcesoIniciado,
+		QST_Sample_IniEntGrupComit_date				as FechaInicio,
+		QST_Sample_IniEntGrupComitUsr_string		as UsuarioInicio,
+		QST_Sample_FinEntGrupComit_boolean			as ProcesoFinalizado,
+		QST_Sample_FinEntGrupComit_date				as FechaFin,
+		QST_Sample_FinEntGrupComitUsr_string		as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'12. Desarrollo'							as Proceso,
+		QST_Sample_InicDes_boolean					as ProcesoIniciado,
+		QST_Sample_InicDesDate_date					as FechaInicio,
+		QST_Sample_InicDesUsr_string				as UsuarioInicio,
+		QST_Sample_FinDes_boolean					as ProcesoFinalizado,
+		QST_Sample_FinDesDate_date					as FechaFin,
+		QST_Sample_FinDesUsr_string					as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'1. Ajuste Ficha Creativa'					as Proceso,
+		QST_Sample_IniAjusFicCreaAprob_boolean		as ProcesoIniciado,
+		QST_Sample_IniAjusFicCreaAprobDate_date		as FechaInicio,
+		QST_Sample_IniAjusFicCreaAprobUsr_string	as UsuarioInicio,
+		QST_Sample_FinDes_boolean					as ProcesoFinalizado,
+		QST_Sample_FinDesDate_date					as FechaFin,
+		QST_Sample_FinDesUsr_string					as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'2. Verificación de Componentes'			as Proceso,
+		QST_Sample_IniListaCompo_boolean			as ProcesoIniciado,
+		QST_Sample_IniListaCompoDate_date			as FechaInicio,
+		QST_Sample_IniListaCompoUsr_string			as UsuarioInicio,
+		QST_Sample_FinListaCompo_boolean			as ProcesoFinalizado,
+		QST_Sample_FinListaCompoDate_date			as FechaFin,
+		QST_Sample_FinListaCompoUsr_string			as UsuarioFin
+	Resident _SeguimientoTemp;	
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'3. Ajuste Modería'							as Proceso,
+		QST_Sample_IniModeAjust_boolean				as ProcesoIniciado,
+		QST_Sample_IniModeAjustDate_date			as FechaInicio,
+		QST_Sample_IniModeAjustUsr_string			as UsuarioInicio,
+		QST_Sample_FinModeAjust_boolean				as ProcesoFinalizado,
+		QST_Sample_FinModeAjustDate_date			as FechaFin,
+		QST_Sample_FinModeAjustUsr_string			as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'4. Escalado'								as Proceso,
+		QST_Sample_Iniescaldo_boolean				as ProcesoIniciado,
+		QST_Sample_IniescaldoDate_date				as FechaInicio,
+		QST_Sample_IniescaldoUsr_string				as UsuarioInicio,
+		QST_Sample_FinEscalado_boolean				as ProcesoFinalizado,
+		QST_Sample_FinEscaladoDate_date				as FechaFin,
+		QST_Sample_FinEscaladoUsr_string			as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'5. Lista de Operaciones'					as Proceso,
+		QST_Sample_IniListaOperacio_boolean			as ProcesoIniciado,
+		QST_Sample_IniListaOperacioDate_date		as FechaInicio,
+		QST_Sample_IniListaOperacioUsr_string		as UsuarioInicio,
+		QST_Sample_FinListaOperacio_boolean			as ProcesoFinalizado,
+		QST_Sample_FinListaOperacioDate_date		as FechaFin,
+		QST_Sample_FinListaOperacioUsr_string		as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'6. Ficha Técnica'							as Proceso,
+		QST_Sample_IniFichTecni_boolean				as ProcesoIniciado,
+		QST_Sample_IniFichTecniDate_date			as FechaInicio,
+		QST_Sample_IniFichTecniUsr_string			as UsuarioInicio,
+		QST_Sample_FinFichTecni_boolean				as ProcesoFinalizado,
+		QST_Sample_FinFichTecniDate_date			as FechaFin,
+		QST_Sample_FinFichTecniUsr_string			as UsuarioFin
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		1											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento Producto Aprobado'				as Etapa,
+		'7. Presentación al Comité'					as Proceso,
+		QST_Sample_PresComite_boolean				as ProcesoIniciado,
+		QST_Sample_PresComiteDate_date				as FechaInicio,
+		QST_Sample_PresComiteUsr_string				as UsuarioInicio
+	Resident _SeguimientoTemp;
+	DROP Table _SeguimientoTemp;
+
+_Seguimiento:
+	LOAD
+		SK.Producto,
+		IdProducto				as Seguimiento.IdProducto,
+		IdEtapa 				as Seguimiento.IdEtapa,
+		Cantidad 				as Seguimiento.Cantidad,
+		TipoMuestra				as Seguimiento.TipoMuestra,
+		Etapa 					as Seguimiento.Etapa,
+		FechaInicio				as Seguimiento.FechaInicio,
+		FechaFin				as Seguimiento.FechaFin,
+		Proceso 				as Seguimiento.Proceso,
+		ProcesoIniciado			as Seguimiento.ProcesoIniciado,
+		ProcesoFinalizado 		as Seguimiento.ProcesoFinalizado,
+		UsuarioInicio			as Seguimiento.UsuarioInicio,
+		UsuarioFin				as Seguimiento.UsuarioFin,
+		TallerExterno 			as Seguimiento.TallerExterno
+	Resident _SeguimientoTemp2;
+	DROP Table _SeguimientoTemp2;
+
+STORE _Seguimiento INTO [..\QVD\PLM\_Seguimiento.QVD](qvd);
+DROP TABLE _Seguimiento;

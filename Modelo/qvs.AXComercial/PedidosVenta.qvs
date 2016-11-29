@@ -29,6 +29,7 @@ PedidosVenta_Temp:
 		TIPOPEDIDO,
 		CODARTICULO,
 		TAXGROUP,
+		Num(NUMEROLINEA)								as NUMEROLINEA,
 		date(floor(FECHACREACIONPEDIDO),'YYYYMMDD')		as FECHACREACIONPEDIDO,
 		NOMBREESTADOPEDIDO,
 		NOMBRETIPOPEDIDO,
@@ -53,6 +54,7 @@ PedidosVenta_Temp:
 		TAXGROUPNAME,
 		GRUPOVENTAS,
 		Num(PORCENTAJE)							as PORCENTAJE,
+		ESTADODOCUMENTO,
 		STOCK;
 	LOAD	
 		IDPEDIDO,
@@ -63,6 +65,7 @@ PedidosVenta_Temp:
 		TIPOPEDIDO,
 		CODARTICULO,
 		TAXGROUP,
+		NUMEROLINEA,
 		TALLA,
 		DEFAULTDIMENSIONLINEA,
 		COLOR,
@@ -87,6 +90,7 @@ PedidosVenta_Temp:
 		TAXGROUPNAME,
 		GRUPOVENTAS,
 		PORCENTAJE,
+		ESTADODOCUMENTO,
 		STOCK
 	FROM
 	[..\QVD\Salesline.QVD]
@@ -99,6 +103,7 @@ PedidosVenta:
 		/*****************************************************************************/
 		DEFAULTDIMENSIONLINEA					as PedidosVenta.Id_CO, 
 		IDPEDIDO 								as PedidosVenta.Id,
+		NUMEROLINEA								as PedidosVenta.IdNumLinea,
 		IDCLIENTE								as PedidosVenta.IdCliente,
 		IDVENDEDOR								as PedidosVenta.IdVendedor,
 		ESTADOPEDIDO							as PedidosVenta.IdEstadoPedido, 
@@ -117,6 +122,7 @@ PedidosVenta:
 		PRECIOUNITARIO							as PedidosVenta.PrecioUnitario, 
 		CANTIDAD								as PedidosVenta.Cantidad, 
 		NOMBREESTADOLINEA						as PedidosVenta.EstadoLinea, 
+		ESTADODOCUMENTO							AS PedidosVenta.EstadoDocumento,
 		VALORNETO								as PedidosVenta.ValorNeto, 
 		DESCUENTO								as PedidosVenta.Descuento, 
 		SITIO									as PedidosVenta.Sitio, 
@@ -140,7 +146,6 @@ PedidosVenta:
 		//RECVERSION, 
 		//PARTITION, 
 		//RECID, 
-		//NUMEROLINEA, 
 		//NOMBREARTICULO, 
 		//NUMEROVARIANTE							as , 
 		//TALLA, 

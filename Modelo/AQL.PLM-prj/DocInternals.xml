@@ -15,6 +15,7 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -128,9 +129,10 @@
     <String>ProductoColor</String>
     <String>ProductoTalla</String>
     <String>41</String>
-    <String>2</String>
+    <String>3</String>
     <String>Producto</String>
     <String>ListaMateriales</String>
+    <String>Seguimiento</String>
     <String>42</String>
     <String>1</String>
     <String>Producto</String>
@@ -597,6 +599,45 @@
     <String>195</String>
     <String>1</String>
     <String>ListaMateriales</String>
+    <String>196</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>197</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>198</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>199</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>200</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>201</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>202</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>203</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>204</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>205</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>206</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>207</String>
+    <String>1</String>
+    <String>Seguimiento</String>
+    <String>208</String>
+    <String>1</String>
+    <String>Seguimiento</String>
   </FieldSrcTables>
   <TableViewData>
     <Pos></Pos>
@@ -884,8 +925,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>618</Left>
-              <Top>72</Top>
+              <Left>833</Left>
+              <Top>465</Top>
               <Width>189</Width>
               <Height>120</Height>
             </Pos>
@@ -893,8 +934,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>638</Left>
-              <Top>215</Top>
+              <Left>631</Left>
+              <Top>520</Top>
               <Width>163</Width>
               <Height>78</Height>
             </Pos>
@@ -902,8 +943,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>324</Left>
-              <Top>342</Top>
+              <Left>299</Left>
+              <Top>326</Top>
               <Width>206</Width>
               <Height>208</Height>
             </Pos>
@@ -911,8 +952,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>396</Left>
-              <Top>184</Top>
+              <Left>403</Left>
+              <Top>182</Top>
               <Width>100</Width>
               <Height>54</Height>
             </Pos>
@@ -920,7 +961,7 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>400</Left>
+              <Left>401</Left>
               <Top>248</Top>
               <Width>100</Width>
               <Height>66</Height>
@@ -929,8 +970,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>606</Left>
-              <Top>322</Top>
+              <Left>542</Left>
+              <Top>120</Top>
               <Width>202</Width>
               <Height>208</Height>
             </Pos>
@@ -944,6 +985,15 @@
               <Height>100</Height>
             </Pos>
             <Caption>PptoControl</Caption>
+          </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>556</Left>
+              <Top>393</Top>
+              <Width>205</Width>
+              <Height>75</Height>
+            </Pos>
+            <Caption>Seguimiento</Caption>
           </TableViewTableWinSaveInfo>
         </Tables>
         <BroomPoints></BroomPoints>
@@ -1111,6 +1161,15 @@
           <String>LMAT.IdProducto</String>
           <String>LMAT.IdMaterial</String>
           <String>LMAT.AprobadoPor</String>
+          <String>Seguimiento.IdProducto</String>
+          <String>Seguimiento.TipoMuestra</String>
+          <String>Seguimiento.Etapa</String>
+          <String>Seguimiento.Proceso</String>
+          <String>Seguimiento.ProcesoIniciado</String>
+          <String>Seguimiento.ProcesoFinalizado</String>
+          <String>Seguimiento.UsuarioInicio</String>
+          <String>Seguimiento.UsuarioFin</String>
+          <String>Seguimiento.TallerExterno</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1208,6 +1267,11 @@
           <String>LMAT.IdProducto</String>
           <String>LMAT.IdMaterial</String>
           <String>LMAT.AprobadoPor</String>
+          <String>Seguimiento.IdProducto</String>
+          <String>Seguimiento.TipoMuestra</String>
+          <String>Seguimiento.Etapa</String>
+          <String>Seguimiento.ProcesoIniciado</String>
+          <String>Seguimiento.ProcesoFinalizado</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1288,6 +1352,10 @@
           <String>LMAT.CantidadComun</String>
           <String>LMAT.UnidadMedidaMaterial</String>
           <String>LMAT.FechaCreacion</String>
+          <String>Seguimiento.IdEtapa</String>
+          <String>Seguimiento.Cantidad</String>
+          <String>Seguimiento.FechaInicio</String>
+          <String>Seguimiento.FechaFin</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1361,6 +1429,8 @@
           <String>LineListaMaterial.LineNum</String>
           <String>LineListaMaterial.OprNum</String>
           <String>LMAT.UnidadMedidaMaterial</String>
+          <String>Seguimiento.IdEtapa</String>
+          <String>Seguimiento.Cantidad</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -1375,6 +1445,8 @@
           <String>HeadListaMaterial.ToDate</String>
           <String>SK.FechaCreacion</String>
           <String>LMAT.FechaCreacion</String>
+          <String>Seguimiento.FechaInicio</String>
+          <String>Seguimiento.FechaFin</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
