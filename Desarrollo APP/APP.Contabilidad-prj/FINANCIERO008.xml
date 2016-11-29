@@ -283,7 +283,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Debito + Haber</v>
+        <v>Sum({&lt;
+	Contabilidad.CUENTA_N5={'13300501','22050501','22100501','23353501','23355001','23357001','23359501','23550501','23803001','23809502'}
+	&gt;} Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -5782,7 +5784,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Debito + Haber</v>
+              <v>Sum({&lt;
+	Contabilidad.CUENTA_N5={'13300501','22050501','22100501','23353501','23355001','23357001','23359501','23550501','23803001','23809502'}
+	&gt;} Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
