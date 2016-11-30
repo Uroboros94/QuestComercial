@@ -10,13 +10,6 @@ Fecha       |   Desarrollador   	|   Modificación
 *****************************************************************************************************/
 LinkTable:
 	LOAD
-		%OrdenesCompraKey,
-		%DEFAULTDIMENSION 					as SK.DEFAULTDIMENSION,
-		%KEYPRODUCT							as SK.KEYPRODUCT,
-		%FECHAKEY							as SK.FECHA
-	Resident OrdenesCompra;
-	Concatenate(LinkTable)
-	LOAD
 		%OrdenesProduccionKey,
 		%DEFAULTDIMENSION 					as SK.DEFAULTDIMENSION,
 		%KEYPRODUCT							as SK.KEYPRODUCT,
@@ -29,6 +22,29 @@ LinkTable:
     %KEYPRODUCT							as SK.KEYPRODUCT,
     %FECHAKEY							as SK.FECHA
   Resident OrdenesPedidosVenta;
+
+  OrdenesCompra_tmp:
+  	LOAD
+  		%OrdenesCompraKey,
+  		%DEFAULTDIMENSION 					as SK.DEFAULTDIMENSION,
+  		%KEYPRODUCT							as SK.KEYPRODUCT,
+  		%FECHAKEY							as SK.FECHA,
+      OrdenesCompra.LineasOC.INVENTREFID
+  	Resident OrdenesCompra;
+    Left Join(OrdenesCompra_tmp)
+    LOAD
+      %OrdenesProduccionKey,
+      PRODID as OrdenesCompra.LineasOC.INVENTREFID
+    Resident OrdenProd;
+
+  Concatenate(LinkTable)
+  LOAD
+    %OrdenesCompraKey,
+    SK.DEFAULTDIMENSION,
+    SK.KEYPRODUCT,
+    SK.FECHA,
+    %OrdenesProduccionKey
+  Resident OrdenesCompra_tmp;
 
   PedidosTransfer_tmp:
   LOAD
@@ -105,4 +121,4 @@ LinkTable:
   Resident EntradaProducto_tmp;
 
 	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT, %IDLOCALIDAD;
-  DROP Tables RutasPicking_tmp, PedidosTransfer_tmp, EntradaProducto_tmp;
+  DROP Tables OrdenesCompra_tmp, RutasPicking_tmp, PedidosTransfer_tmp, EntradaProducto_tmp;
