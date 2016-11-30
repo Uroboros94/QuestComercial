@@ -229,11 +229,12 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
+        <v>Aggr(Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} Venta.CantidadVentas)</v>
+	&gt;} Venta.CantidadVentas), 
+	Venta.IdFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -258,11 +259,12 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
+        <v>Aggr(Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} RutasPicking.CANTSELECCIONADA * PRECIOUNITARIO)</v>
+	&gt;} RutasPicking.CANTSELECCIONADA * PRECIOUNITARIO),
+	Venta.IdFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -287,11 +289,12 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
+        <v>Aggr(Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}//, ESTADOPEDIDO = {'3'}
-	&gt;} Venta.ValorLinea)</v>
+	&gt;} Venta.ValorLinea),
+	Venta.IdFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -5349,11 +5352,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
+              <v>Aggr(Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} Venta.CantidadVentas)</v>
+	&gt;} Venta.CantidadVentas), 
+	Venta.IdFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5936,11 +5940,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
+              <v>Aggr(Sum({&lt;
 	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}
-	&gt;} RutasPicking.CANTSELECCIONADA * PRECIOUNITARIO)</v>
+	&gt;} RutasPicking.CANTSELECCIONADA * PRECIOUNITARIO),
+	Venta.IdFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6523,11 +6528,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
+              <v>Aggr(Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
 	TIPOPEDIDO = {'3'}//, ESTADOPEDIDO = {'3'}
-	&gt;} Venta.ValorLinea)</v>
+	&gt;} Venta.ValorLinea),
+	Venta.IdFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
