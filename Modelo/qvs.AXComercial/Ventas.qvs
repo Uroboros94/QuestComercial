@@ -11,7 +11,9 @@
 *****************************************************************************************************/
 Venta:
 	LOAD 
-		CUENTACLIENTE								as SK.Cliente,
+		//CUENTACLIENTE								as SK.Cliente,
+		SALESID										as SK.Pedido, 
+
 		ESTADOFACTURA 								as Venta.IdEstadoFactura,
 		CUENTACLIENTE								as Venta.IdCliente,
 		IDFACTURA									as Venta.IdFactura, 

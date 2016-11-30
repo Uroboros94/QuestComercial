@@ -65,6 +65,7 @@ Producto_Temp2:
 		ATVAL_CLIMA							as Clima,
 		ATVAL_CUELLO						as Cuello,
 		ATVAL_DISENADOR						as Diseñador,
+		AT_GENERO 							as IdGenero,
 		ATVAL_GENERO 						as Genero,
 		ATVAL_GENERO_MATERIAL				as GeneroMat,
 		ATVAL_GRUPO_DE_PRODUCTOS			as GrupoProductos,
@@ -128,14 +129,14 @@ NEXT;
 
 Left Join (Producto_Temp2)
 	LOAD
-		IdColeccion		as Coleccion,
-		IdItemp			as Referencia,
-		IdLinea			as IdLinea,
-		IdMarca			as IdMarca,
-		IdSublinea		as IdSublinea,
-		Linea			as Linea,
-		Marca			as Marca,
-		Sublinea 		as Sublinea
+		IdColeccion			as Coleccion,
+		IdItemp				as Referencia,
+		Right(IdLinea,2)	as IdLinea,
+		IdMarca				as IdMarca,
+		IdSublinea			as IdSublinea,
+		Linea				as Linea,
+		Marca				as Marca,
+		Sublinea 			as Sublinea
 	Resident DimFinan;
 
 LET contador = Null();
@@ -149,7 +150,7 @@ Producto:
 		SK.KEYPRODUCT,
 		SK.Producto,
 		IdColor								as Producto.IdColor,
-		IdLinea								as Producto.IdLinea,
+		IdGenero&IdLinea					as Producto.IdLinea,
 		IdMarca								as Producto.IdMarca,
 		IdSublinea							as Producto.IdSublinea,
 		IdSubTipo							as Producto.IdSubTipo,

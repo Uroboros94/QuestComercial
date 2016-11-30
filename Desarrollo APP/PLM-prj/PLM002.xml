@@ -256,6 +256,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'1. Asignación de Patronista'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -285,6 +286,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'2. Corte'},
 	Seguimiento.ProcesoFinalizado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -314,6 +316,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'* Proceso Externo *'}
 	&gt;} Seguimiento.IdProducto)</v>
       </Definition>
@@ -342,6 +345,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'7. Confección'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -371,6 +375,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'7. Confección'},
 	Seguimiento.ProcesoFinalizado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -400,6 +405,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'8. Terminado'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -429,6 +435,7 @@
       <Definition>
         <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'8. Terminado'},
 	Seguimiento.ProcesoFinalizado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -794,7 +801,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -804,7 +811,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -1272,7 +1279,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -1283,7 +1290,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -1293,7 +1300,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -1761,7 +1768,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -1772,7 +1779,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -1782,7 +1789,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -2250,7 +2257,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -2261,7 +2268,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -2271,7 +2278,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -2739,7 +2746,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -2750,7 +2757,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -2760,7 +2767,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -3228,7 +3235,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -3239,7 +3246,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -3249,7 +3256,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -3717,7 +3724,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -3728,7 +3735,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -3738,7 +3745,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -4206,7 +4213,7 @@
         <GaugeSpan>270</GaugeSpan>
         <GaugeCenterAngle>0</GaugeCenterAngle>
         <GaugeFillToValue>false</GaugeFillToValue>
-        <GaugeShowIndicator>true</GaugeShowIndicator>
+        <GaugeShowIndicator>false</GaugeShowIndicator>
         <AutoSegmentWidth>true</AutoSegmentWidth>
         <RelativeSegmentWidths>false</RelativeSegmentWidths>
         <GaugeLEDColor>
@@ -4217,7 +4224,7 @@
           <PrimaryCol>
             <Col>
               <Red>0</Red>
-              <Green>255</Green>
+              <Green>128</Green>
               <Blue>0</Blue>
               <Alpha>255</Alpha>
             </Col>
@@ -4227,7 +4234,7 @@
           <SecondaryCol></SecondaryCol>
           <Alpha>255</Alpha>
         </GaugeLEDColor>
-        <GaugeLEDCount>5</GaugeLEDCount>
+        <GaugeLEDCount>4</GaugeLEDCount>
         <GaugeLEDStyle>0</GaugeLEDStyle>
         <HideBoundaries>false</HideBoundaries>
         <HideOutlines>false</HideOutlines>
@@ -7084,7 +7091,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -7094,7 +7101,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -7312,6 +7319,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'1. Asignación de Patronista'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -7664,7 +7672,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -7675,7 +7683,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -7685,7 +7693,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -7903,6 +7911,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'2. Corte'},
 	Seguimiento.ProcesoFinalizado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -8255,7 +8264,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -8266,7 +8275,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -8276,7 +8285,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -8494,6 +8503,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'* Proceso Externo *'}
 	&gt;} Seguimiento.IdProducto)</v>
             </Definition>
@@ -8845,7 +8855,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -8856,7 +8866,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -8866,7 +8876,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -9084,6 +9094,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'7. Confección'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -9436,7 +9447,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -9447,7 +9458,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -9457,7 +9468,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -9675,6 +9686,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'7. Confección'},
 	Seguimiento.ProcesoFinalizado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -10027,7 +10039,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -10038,7 +10050,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -10048,7 +10060,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -10266,6 +10278,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'8. Terminado'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -10618,7 +10631,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -10629,7 +10642,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -10639,7 +10652,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
@@ -10857,6 +10870,7 @@
             <Definition>
               <v>Count(
 	DISTINCT {&lt;
+	Producto.EstadoAprobacionComite = {'En Desarrollo'},
 	Seguimiento.Proceso = {'8. Terminado'},
 	Seguimiento.ProcesoFinalizado = {'true'}
 	&gt;} Seguimiento.IdProducto)</v>
@@ -11209,7 +11223,7 @@
               <GaugeSpan>270</GaugeSpan>
               <GaugeCenterAngle>0</GaugeCenterAngle>
               <GaugeFillToValue>false</GaugeFillToValue>
-              <GaugeShowIndicator>true</GaugeShowIndicator>
+              <GaugeShowIndicator>false</GaugeShowIndicator>
               <AutoSegmentWidth>true</AutoSegmentWidth>
               <RelativeSegmentWidths>false</RelativeSegmentWidths>
               <GaugeLEDColor>
@@ -11220,7 +11234,7 @@
                 <PrimaryCol>
                   <Col>
                     <Red>0</Red>
-                    <Green>255</Green>
+                    <Green>128</Green>
                     <Blue>0</Blue>
                     <Alpha>255</Alpha>
                   </Col>
@@ -11230,7 +11244,7 @@
                 <SecondaryCol></SecondaryCol>
                 <Alpha>255</Alpha>
               </GaugeLEDColor>
-              <GaugeLEDCount>5</GaugeLEDCount>
+              <GaugeLEDCount>4</GaugeLEDCount>
               <GaugeLEDStyle>0</GaugeLEDStyle>
               <HideBoundaries>false</HideBoundaries>
               <HideOutlines>false</HideOutlines>
