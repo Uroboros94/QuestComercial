@@ -1679,7 +1679,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>244</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2649,7 +2649,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>234</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2955,8 +2955,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Left(RpProduccion.Referencia, 3)
-//Producto.IdLinea</Name>
+        <Name>=If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -3514,7 +3513,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.Referencia</Name>
+        <Name>RpProduccion.Referencia</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -6647,9 +6646,9 @@
       <int>209</int>
       <int>156</int>
       <int>238</int>
+      <int>244</int>
       <int>300</int>
-      <int>300</int>
-      <int>300</int>
+      <int>234</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -7176,10 +7175,8 @@
     <DisplayOrder>
       <int>0</int>
       <int>1</int>
-      <int>10</int>
-      <int>1</int>
+      <int>12</int>
       <int>2</int>
-      <int>1</int>
       <int>1</int>
       <int>2</int>
     </DisplayOrder>
@@ -7258,14 +7255,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.Referencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.Coleccion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -7298,8 +7287,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Left(RpProduccion.Referencia, 3)
-//Producto.IdLinea</DimName>
+          <DimName>=If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3))</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>RpProduccion.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

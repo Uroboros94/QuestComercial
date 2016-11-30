@@ -19,7 +19,7 @@ CostosProduccion:
      CONSUMPCONSTANT,
      CONSUMPTYPE,
      CONSUMPVARIABLE,
-     COSTAMOUNT                    as CostoProduccion,
+     COSTAMOUNT                     as CostoProduccion,
      COSTGROUPID,
      COSTMARKUP,
      COSTPRICEMODELUSED,
@@ -46,6 +46,7 @@ CostosProduccion:
      SALESAMOUNT,
      SALESMARKUP,
      SALESPRICEMODELUSED,
+     Date(TRANSDATE, 'DD/MM/YYYY')  as TRANSDATE,
      TRANSREFTYPE,
      UNITID                         as UnidadVenta,
      VENDID
