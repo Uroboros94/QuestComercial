@@ -1,0 +1,55 @@
+/*****************************************************************************************************
+	Fecha : 29/11/2016
+	-------------------------------------------------------------------------------------------------
+	 Detalle :
+		Creación del Modelo: CostosProduccion
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   CarteraCliente
+	-------------------------------------------------------------------------------------------------
+	29/11/2016  |   Alejandro Saa   |   Inicio de Configuración
+*****************************************************************************************************/
+QUALIFY *;
+UNQUALIFY RpProduccion.IdOPMaestra;
+CostosProduccion:
+  LOAD AP_QST_QTYCHARGEACUM,
+     BOM,
+     CALCGROUPID,
+     CALCTYPE,
+     COLLECTREFLEVEL,
+     CONSUMPCONSTANT,
+     CONSUMPTYPE,
+     CONSUMPVARIABLE,
+     COSTAMOUNT                    as CostoProduccion,
+     COSTGROUPID,
+     COSTMARKUP,
+     COSTPRICEMODELUSED,
+     DERIVEDREFERENCE,
+     DERIVEDREFNUM,
+     FINANCIALINDIRECTAMOUNT_RU,
+     IDREFRECID,
+     IDREFTABLEID,
+     INVENTDIMID,
+     INVENTDIMSTR,
+     LINENUM,
+     MASTERPRODORDID								as RpProduccion.IdOPMaestra,
+     NUMITEMS,
+     OPRID,
+     OPRNUM,
+     PRICEDISCQTY,
+     PRODUCTION,
+     QTY                            as Cantidad,
+     REALCONSUMP,
+     REALCOSTADJUSTMENT,
+     REALCOSTAMOUNT                 as CostoReal,
+     REALQTY                        as CantidadReal,
+     RESOURCE_,
+     SALESAMOUNT,
+     SALESMARKUP,
+     SALESPRICEMODELUSED,
+     TRANSREFTYPE,
+     UNITID                         as UnidadVenta,
+     VENDID
+  FROM
+  [..\QVD\AP_QST_MasterCalcTrans.QVD]
+  (qvd);
+UNQUALIFY *;
