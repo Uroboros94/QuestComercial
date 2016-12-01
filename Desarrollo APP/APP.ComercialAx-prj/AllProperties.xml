@@ -231,24 +231,119 @@
       </SortCriterias>
     </GroupProperties>
     <GroupProperties>
-      <Name>Asesor-Cliente</Name>
+      <Name>Tiempo</Name>
       <Present>true</Present>
       <IsCyclic>true</IsCyclic>
       <FieldDefs>
         <FieldDefEx>
-          <Name>Cartera.Vendedor</Name>
+          <Name>Calendario.%_Fechakey</Name>
           <Type>PRESENT</Type>
         </FieldDefEx>
         <FieldDefEx>
-          <Name>Cliente.NombreCompleto</Name>
+          <Name>Calendario.ano</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.dia</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.MonthYear</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.NumericMonthYear</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.semana</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.SemanaMes</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.Semestre</Name>
+          <Type>PRESENT</Type>
+        </FieldDefEx>
+        <FieldDefEx>
+          <Name>Calendario.trimestre</Name>
           <Type>PRESENT</Type>
         </FieldDefEx>
       </FieldDefs>
       <Labels>
-        <String>Asesor</String>
-        <String>Cliente</String>
+        <String>Fecha</String>
+        <String>Año</String>
+        <String></String>
+        <String>Período</String>
+        <String></String>
+        <String></String>
+        <String></String>
+        <String></String>
+        <String></String>
       </Labels>
       <SortCriterias>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>0</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>0</SortByNumeric>
+          <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
         <SortCriteria>
           <SortByState>1</SortByState>
           <SortByFrequency>0</SortByFrequency>
@@ -264,6 +359,16 @@
           <SortByFrequency>0</SortByFrequency>
           <SortByNumeric>0</SortByNumeric>
           <SortByAscii>1</SortByAscii>
+          <SortByLoadOrder>0</SortByLoadOrder>
+          <SortByExpression>0</SortByExpression>
+          <Expression></Expression>
+          <SortByGreyness>0</SortByGreyness>
+        </SortCriteria>
+        <SortCriteria>
+          <SortByState>1</SortByState>
+          <SortByFrequency>0</SortByFrequency>
+          <SortByNumeric>1</SortByNumeric>
+          <SortByAscii>0</SortByAscii>
           <SortByLoadOrder>0</SortByLoadOrder>
           <SortByExpression>0</SortByExpression>
           <Expression></Expression>
