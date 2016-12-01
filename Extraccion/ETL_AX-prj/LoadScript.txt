@@ -25,7 +25,6 @@ OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikv
 
 /*Pre-PRD*/
 //OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftPRODAX;Data Source=10.75.28.46;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-85086;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is DfTOSIRNJbaICSIGQJMKDdD);
-
 ///$tab Dimensiones
 /****************** Cargue de Dimensiones ******************/
 
@@ -114,8 +113,8 @@ $(Must_Include=qvs.ax\vendinvoicejour.qvs);
 /*Vend Invoice Trans*/
 $(Must_Include=qvs.ax\vendinvoicetrans.qvs);
 
-/*Cust Invoice Trans*/
-$(Must_Include=qvs.ax\custinvoicetrans.qvs);
+/*Facturación de Lineas*/
+$(Must_Include=qvs.ax\QST_MODELFACTURAS.qvs);
 
 /*Ventas - Sales Line*/
 $(Must_Include=qvs.ax\salesline.qvs);
