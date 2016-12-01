@@ -2462,7 +2462,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Left(RpProduccion.Referencia, 3)</Name>
+        <Name>=If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -2648,7 +2648,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.IdTaller), COLLECTREFPRODID)</Name>
+        <Name>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.IdTaller), RpProduccion.IdOPMaestra)</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -4325,7 +4325,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.NombreOperacion), COLLECTREFPRODID)</Name>
+        <Name>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.NombreOperacion), RpProduccion.IdOPMaestra)</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -6667,22 +6667,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.IdTaller), COLLECTREFPRODID)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.NombreOperacion), COLLECTREFPRODID)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.TipoPrenda</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -6731,7 +6715,23 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Left(RpProduccion.Referencia, 3)</DimName>
+          <DimName>=If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3))</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.IdTaller), RpProduccion.IdOPMaestra)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.NombreOperacion), RpProduccion.IdOPMaestra)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

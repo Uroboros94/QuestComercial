@@ -43,6 +43,7 @@ AP_QST_MasterCalcTrans:
   	SALESAMOUNT,
   	SALESMARKUP,
   	SALESPRICEMODELUSED,
+    TRANSDATE,
     CASE TRANSREFTYPE
       WHEN 0 THEN 'Pedido de producción'
       WHEN 1 THEN 'Flujo de producción'
