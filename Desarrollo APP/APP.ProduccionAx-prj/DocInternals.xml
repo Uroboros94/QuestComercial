@@ -197,10 +197,9 @@
     <String>1</String>
     <String>Producto</String>
     <String>60</String>
-    <String>4</String>
+    <String>3</String>
     <String>Producto</String>
     <String>InventarioDisponible</String>
-    <String>MovimientosArticulos</String>
     <String>LinkTable</String>
     <String>61</String>
     <String>2</String>
@@ -1620,8 +1619,9 @@
     <String>1</String>
     <String>InventarioDisponible</String>
     <String>528</String>
-    <String>1</String>
+    <String>2</String>
     <String>MovimientosArticulos</String>
+    <String>LinkTable</String>
     <String>529</String>
     <String>1</String>
     <String>MovimientosArticulos</String>
@@ -1647,21 +1647,21 @@
     <String>1</String>
     <String>MovimientosArticulos</String>
     <String>537</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>538</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>539</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>540</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>541</String>
     <String>2</String>
     <String>EntradaProducto</String>
     <String>LinkTable</String>
-    <String>538</String>
-    <String>1</String>
-    <String>EntradaProducto</String>
-    <String>539</String>
-    <String>1</String>
-    <String>EntradaProducto</String>
-    <String>540</String>
-    <String>1</String>
-    <String>EntradaProducto</String>
-    <String>541</String>
-    <String>1</String>
-    <String>EntradaProducto</String>
     <String>542</String>
     <String>1</String>
     <String>EntradaProducto</String>
@@ -1676,16 +1676,16 @@
     <String>EntradaProducto</String>
     <String>546</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>547</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>548</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>549</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>550</String>
     <String>1</String>
     <String>Contabilidad</String>
@@ -1742,16 +1742,16 @@
     <String>Contabilidad</String>
     <String>568</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>569</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>570</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>571</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>572</String>
     <String>1</String>
     <String>Facturacion</String>
@@ -1766,8 +1766,20 @@
     <String>Facturacion</String>
     <String>576</String>
     <String>1</String>
-    <String>INLFED</String>
+    <String>Facturacion</String>
     <String>577</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>578</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>579</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>580</String>
+    <String>1</String>
+    <String>INLFED</String>
+    <String>581</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -2215,6 +2227,7 @@
           <String>VENPACKINGLIPID</String>
           <String>%PedidosTransferKey</String>
           <String>%RutasPickingKey</String>
+          <String>%MovimientoProductoKey</String>
           <String>%EntradaProductoKey</String>
         </FieldNames>
       </FieldTagData>
@@ -2474,6 +2487,9 @@
           <String>MovimientosArticulos.DESCMOVIMIENTO</String>
           <String>MovimientosArticulos.NOMBREALMACEN</String>
           <String>MovimientosArticulos.CODIGODIARIO</String>
+          <String>MovimientosArticulos.CONTABILIZADO</String>
+          <String>MovimientosArticulos.ORDENPRODMAESTRA</String>
+          <String>MovimientosArticulos.ORDENPRODUC</String>
           <String>EntradaProducto.CODDIARIO</String>
           <String>EntradaProducto.TIPOTRANSF</String>
           <String>EntradaProducto.TALLA</String>
@@ -2697,9 +2713,10 @@
           <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>InventarioDisponible.NOMBREALMACEN</String>
           <String>InventarioDisponible.UBICACION</String>
-          <String>MovimientosArticulos.DESCMOVIMIENTO</String>
           <String>MovimientosArticulos.NOMBREALMACEN</String>
           <String>MovimientosArticulos.CODIGODIARIO</String>
+          <String>MovimientosArticulos.ORDENPRODMAESTRA</String>
+          <String>MovimientosArticulos.ORDENPRODUC</String>
           <String>EntradaProducto.CODDIARIO</String>
           <String>EntradaProducto.TALLA</String>
           <String>EntradaProducto.CODORDENPROD</String>
@@ -2960,6 +2977,7 @@
           <String>InventarioDisponible.InvenFisico</String>
           <String>InventarioDisponible.PedidoTotal</String>
           <String>InventarioDisponible.TotalDisponible</String>
+          <String>%MovimientoProductoKey</String>
           <String>MovimientosArticulos.CANTDIARIO</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
           <String>%EntradaProductoKey</String>
@@ -3194,6 +3212,7 @@
           <String>InventarioDisponible.ENORDEN</String>
           <String>InventarioDisponible.LLEGADA</String>
           <String>InventarioDisponible.ORDENADARESERVADA</String>
+          <String>%MovimientoProductoKey</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
           <String>%EntradaProductoKey</String>
           <String>EntradaProducto.FECHATRANSF</String>
