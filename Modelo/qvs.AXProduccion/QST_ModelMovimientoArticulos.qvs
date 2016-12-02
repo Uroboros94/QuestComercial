@@ -7,10 +7,11 @@ Fecha       |   Desarrollador    |   Modificación
 08/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
 *****************************************************************************************************/
 QUALIFY *;
-UNQUALIFY SK.KEYPRODUCT;
+UNQUALIFY %MovimientoProductoKey, %KEYPRODUCT, %FECHAKEY;
 MovimientosArticulos:
   LOAD
-    CODARTICULO&TALLA&COLORID as SK.KEYPRODUCT,
+    AutoNumber(RecNo())				as %MovimientoProductoKey,
+    CODARTICULO&TALLA&COLORID as %KEYPRODUCT,
     DESCMOVIMIENTO,
     CANTDIARIO,
     NOMBREALMACEN,
@@ -19,7 +20,11 @@ MovimientosArticulos:
     TALLA,
     CODARTICULO,
     Date(FECHADIARIO)         as FECHADIARIO,
-    CODIGODIARIO
+    Date(FECHADIARIO)         as %FECHAKEY,
+    CODIGODIARIO,
+    CONTABILIZADO,
+    ORDENPRODMAESTRA,
+    ORDENPRODUC
   FROM
   [..\QVD\QST_ModelMovimientoArticulos.QVD]
   (qvd);
