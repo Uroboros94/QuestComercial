@@ -248,7 +248,6 @@
         <v>Count(
 	DISTINCT {&lt;
 	Producto.EstadoAprobacionComite = {'En Desarrollo'},
-//	Seguimiento.Proceso = {'1. Asignación de Patronista'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)
 	/
@@ -1290,7 +1289,16 @@ Sum(Ppto.UndsPpto)</v>
         <v>Proceso</v>
       </Title>
       <TotalString></TotalString>
-      <SortCriteria></SortCriteria>
+      <SortCriteria>
+        <SortByState>0</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
       <ShowAll>false</ShowAll>
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
@@ -1461,7 +1469,7 @@ Sum(Ppto.UndsPpto)</v>
   </Dimensions>
   <Memory></Memory>
   <Cacheable>true</Cacheable>
-  <SortByYValue>-1</SortByYValue>
+  <SortByYValue>0</SortByYValue>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -3238,7 +3246,6 @@ Sum(Ppto.UndsPpto)</v>
               <v>Count(
 	DISTINCT {&lt;
 	Producto.EstadoAprobacionComite = {'En Desarrollo'},
-//	Seguimiento.Proceso = {'1. Asignación de Patronista'},
 	Seguimiento.ProcesoIniciado = {'true'}
 	&gt;} Seguimiento.IdProducto)
 	/

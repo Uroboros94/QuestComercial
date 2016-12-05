@@ -21,12 +21,14 @@ ProductoSeguimiento_QV:
 		[QST_Sample_PresComiteDate_date],	//--Presentación al Comite
 		[QST_Sample_PresComiteUsr_string],	//--Presentación al Comite
 
-		[QST_Sample_AsigPatro_boolean],	//--Asignacion de Patronista
+		[QST_Sample_AsigPatro_boolean],		//--Asignacion de Patronista
 		[QST_Sample_AsigPatroDate_date],	//--Asignacion de Patronista
 		[QST_Sample_AsigPatroUsr_string],	//--Asignacion de Patronista
-		//--[QST_Style_AsigPatronista_boolean],	//--Asignacion de Patronista
-		//--[QST_Style_AsigPatronistaUsr_string],	//--Asignacion de Patronista
-		//--[QST_Style_AsigPatronistaDate_date],	//--Asignacion de Patronista
+		
+		[QST_Style_RecPatronaje_boolean],	//--Recepción de Patronaje
+		[QST_Style_RecPatronajeDate_date],	//--Recepción de Patronaje
+		[QST_Style_RecPatronajeUsr_string],	//--Recepción de Patronaje
+
 
 		[QST_Sample_IniAjusFicCreaAprob_boolean],	//-- Inicio Ajuste Ficha Creacion Aprobada
 		[QST_Sample_IniAjusFicCreaAprobDate_date],	//-- Inicio Ajuste Ficha Creacion Aprobada
@@ -91,12 +93,12 @@ ProductoSeguimiento_QV:
 		[QST_Sample_FinModeAjustDate_date],	//--Fin Ajuste Moderia 
 		[QST_Sample_FinModeAjustUsr_string],	//--Fin Ajuste Moderia 
 
-		[QST_Sample_InicDes_boolean], //--Inicio desarrollo
-		[QST_Sample_InicDesDate_date], //--Inicio desarrollo
-		[QST_Sample_InicDesUsr_string], //--Inicio desarrollo
-		[QST_Sample_FinDes_boolean], //--Fin desarrollo
-		[QST_Sample_FinDesDate_date], //--Fin desarrollo
-		[QST_Sample_FinDesUsr_string], //--Fin desarrollo
+		[QST_Sample_InicDes_boolean], //--Inicio Patronaje
+		[QST_Sample_InicDesDate_date], //--Inicio Patronaje
+		[QST_Sample_InicDesUsr_string], //--Inicio Patronaje
+		[QST_Sample_FinDes_boolean], //--Fin Patronaje
+		[QST_Sample_FinDesDate_date], //--Fin Patronaje
+		[QST_Sample_FinDesUsr_string], //--Fin Patronaje
 
 		[QST_Sample_IniPreoCost_boolean], 	//--Inicio Precosteo 
 		[QST_Sample_IniPreoCostDate_date],	//--Inicio Precosteo 
@@ -150,6 +152,9 @@ ProductoSeguimiento_QV:
 
 STORE ProductoSeguimiento_QV INTO [..\QVD\PLM\ProductoSeguimiento_QV.QVD](qvd);
 DROP TABLE ProductoSeguimiento_QV;
+		//--[QST_Style_AsigPatronista_boolean],	//--Asignacion de Patronista
+		//--[QST_Style_AsigPatronistaUsr_string],	//--Asignacion de Patronista
+		//--[QST_Style_AsigPatronistaDate_date],	//--Asignacion de Patronista
 		//[QST_Sample_LastStatus_enum],
 		//[RequestNumber],
 		//--[StorageName],

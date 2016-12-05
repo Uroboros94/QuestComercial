@@ -16,6 +16,9 @@ _SeguimientoTemp:
 		QST_Sample_AsigPatro_boolean,
 		QST_Sample_AsigPatroDate_date,
 		QST_Sample_AsigPatroUsr_string,
+		QST_Style_RecPatronaje_boolean, 
+		QST_Style_RecPatronajeDate_date, 
+		QST_Style_RecPatronajeUsr_string,
 		QST_Sample_IniAjusFicCreaAprob_boolean,
 		QST_Sample_IniAjusFicCreaAprobDate_date,
 		QST_Sample_IniAjusFicCreaAprobUsr_string,
@@ -126,13 +129,27 @@ _SeguimientoTemp:
 	FROM
 	[..\QVD\PLM\ProductoSeguimiento_QV.QVD]
 	(qvd);
-	
+
 _SeguimientoTemp2:
 	LOAD
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-		
+
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'0. Recepción de Muestra'					as Proceso,
+		QST_Style_RecPatronaje_boolean				as ProcesoIniciado,
+		QST_Style_RecPatronajeDate_date				as FechaInicio,
+		QST_Style_RecPatronajeUsr_string			as UsuarioInicio
+	Resident _SeguimientoTemp;
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -150,7 +167,27 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'2. Corte'									as Proceso,
+		'2. Patronaje'								as Proceso,
+		QST_Sample_InicDes_boolean					as ProcesoIniciado,
+		QST_Sample_InicDesDate_date					as FechaInicio,
+		QST_Sample_InicDesUsr_string				as UsuarioInicio,
+		QST_Sample_FinDes_boolean					as ProcesoFinalizado,
+		if(QST_Sample_InicDes_boolean='true' 
+			and IsNull(QST_Sample_FinDesDate_date),
+			Date(Today()),
+			QST_Sample_FinDesDate_date)				as FechaFin,
+		QST_Sample_FinDesUsr_string					as UsuarioFin
+	Resident _SeguimientoTemp;	
+	Concatenate
+	LOAD
+		CodigoProducto								as SK.Producto,
+		CodigoProducto								as IdProducto,
+		0											as IdEtapa,
+		
+		Num(RequestedQty)							as Cantidad,
+		SampleType									as TipoMuestra,
+		'Seguimiento de Muestra'					as Etapa,
+		'3. Corte'									as Proceso,
 		QST_Sample_IniCorte_boolean					as ProcesoIniciado,
 		QST_Sample_IniCorteDate_date				as FechaInicio,
 		QST_Sample_InicioCorteUsr_string			as UsuarioInicio,
@@ -167,7 +204,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'3. Proceso Externo 1'						as Proceso,
+		'4. Proceso Externo 1'						as Proceso,
 		QST_Sample_Proveedor_String					as TallerExterno,
 		QST_Sample_IniProcExt1_boolean				as ProcesoIniciado,
 		QST_Sample_IniProcExt1Date_date				as FechaInicio,
@@ -185,7 +222,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'4. Proceso Externo 2'						as Proceso,
+		'5. Proceso Externo 2'						as Proceso,
 		QST_Sample_Proveedor2_String				as TallerExterno,
 		QST_Sample_IniProcExt2_boolean				as ProcesoIniciado, 
 		QST_Sample_IniProcExt2Date_date				as FechaInicio,
@@ -203,7 +240,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'5. Proceso Externo 3'						as Proceso,
+		'6. Proceso Externo 3'						as Proceso,
 		QST_Sample_Proveedor3_String				as TallerExterno,
 		QST_Sample_IniProcExt3_boolean				as ProcesoIniciado, 
 		QST_Sample_IniProcExt3Date_date				as FechaInicio,
@@ -221,7 +258,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'6. Preparación Confección'					as Proceso,
+		'7. Preparación Confección'					as Proceso,
 		QST_Sample_IniPreConf_boolean				as ProcesoIniciado,
 		QST_Sample_IniPreConfDate_date				as FechaInicio,
 		QST_Sample_IniPreConfUsr_string				as UsuarioInicio,
@@ -238,7 +275,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'7. Confección'								as Proceso,
+		'8. Confección'								as Proceso,
 		QST_Sample_IniConf_boolean					as ProcesoIniciado,
 		QST_Sample_IniConfDate_date					as FechaInicio,
 		QST_Sample_IniConfUsr_string				as UsuarioInicio,
@@ -255,7 +292,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'8. Terminado'								as Proceso,
+		'9. Terminado'								as Proceso,
 		QST_Sample_IniTerm_boolean					as ProcesoIniciado,
 		QST_Sample_IniTermDate_date					as FechaInicio,
 		QST_Sample_IniTermUsr_string				as UsuarioInicio,
@@ -272,7 +309,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'9. Precosteo'								as Proceso,
+		'10. Precosteo'								as Proceso,
 		QST_Sample_IniPreoCost_boolean				as ProcesoIniciado,
 		QST_Sample_IniPreoCostDate_date				as FechaInicio,
 		QST_Sample_IniPreoCostUsr_string			as UsuarioInicio,
@@ -289,7 +326,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'10. Medición de Tallaje'					as Proceso,
+		'11. Medición de Tallaje'					as Proceso,
 		QST_Sample_MediModelo_boolean				as ProcesoIniciado,
 		QST_Sample_MediModeloDate_date				as FechaInicio,
 		QST_Sample_MediModeloUsr_string				as UsuarioInicio
@@ -303,7 +340,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
-		'11. Entrega Grupo Comité'					as Proceso,
+		'12. Entrega Grupo Comité'					as Proceso,
 		QST_Sample_IniEntGrupComit_boolean			as ProcesoIniciado,
 		QST_Sample_IniEntGrupComit_date				as FechaInicio,
 		QST_Sample_IniEntGrupComitUsr_string		as UsuarioInicio,
@@ -311,23 +348,7 @@ _SeguimientoTemp2:
 		QST_Sample_FinEntGrupComit_date				as FechaFin,
 		QST_Sample_FinEntGrupComitUsr_string		as UsuarioFin
 	Resident _SeguimientoTemp;
-	Concatenate
-	LOAD
-		CodigoProducto								as SK.Producto,
-		CodigoProducto								as IdProducto,
-		0											as IdEtapa,
-		
-		Num(RequestedQty)							as Cantidad,
-		SampleType									as TipoMuestra,
-		'Seguimiento de Muestra'					as Etapa,
-		'12. Desarrollo'							as Proceso,
-		QST_Sample_InicDes_boolean					as ProcesoIniciado,
-		QST_Sample_InicDesDate_date					as FechaInicio,
-		QST_Sample_InicDesUsr_string				as UsuarioInicio,
-		QST_Sample_FinDes_boolean					as ProcesoFinalizado,
-		QST_Sample_FinDesDate_date					as FechaFin,
-		QST_Sample_FinDesUsr_string					as UsuarioFin
-	Resident _SeguimientoTemp;
+
 	Concatenate
 	LOAD
 		CodigoProducto								as SK.Producto,
@@ -371,7 +392,7 @@ _SeguimientoTemp2:
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
-		'3. Ajuste Modería'							as Proceso,
+		'3. Ajuste Moldería'						as Proceso,
 		QST_Sample_IniModeAjust_boolean				as ProcesoIniciado,
 		QST_Sample_IniModeAjustDate_date			as FechaInicio,
 		QST_Sample_IniModeAjustUsr_string			as UsuarioInicio,

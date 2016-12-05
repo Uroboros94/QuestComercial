@@ -7,6 +7,7 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	09/22/2016  |   malemos         |   Inicio de Configuración
+	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros 
 *****************************************************************************************************/
 Colores:
 	Mapping LOAD Color as IdColor,
@@ -14,6 +15,16 @@ Colores:
 	FROM
 	[..\QVD\PLM\MaestroColores.QVD]
 	(qvd);
+
+Generos:
+	Mapping
+	LOAD
+		Producto.Genero  	as Genero, 
+		Producto.IdGenero	as Id
+	FROM
+	[..\QVD\PLM\_Producto.QVD]
+	(qvd);
+
 
 Producto_Temp:
 	LOAD
@@ -65,7 +76,6 @@ Producto_Temp2:
 		ATVAL_CLIMA							as Clima,
 		ATVAL_CUELLO						as Cuello,
 		ATVAL_DISENADOR						as Diseñador,
-		AT_GENERO 							as IdGenero,
 		ATVAL_GENERO 						as Genero,
 		ATVAL_GENERO_MATERIAL				as GeneroMat,
 		ATVAL_GRUPO_DE_PRODUCTOS			as GrupoProductos,
@@ -150,7 +160,7 @@ Producto:
 		SK.KEYPRODUCT,
 		SK.Producto,
 		IdColor								as Producto.IdColor,
-		IdGenero&IdLinea					as Producto.IdLinea,
+		ApplyMap('Generos',Genero)&IdLinea	as Producto.IdLinea,
 		IdMarca								as Producto.IdMarca,
 		IdSublinea							as Producto.IdSublinea,
 		IdSubTipo							as Producto.IdSubTipo,
