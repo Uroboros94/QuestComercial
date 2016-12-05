@@ -243,7 +243,10 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Count(DISTINCT Seguimiento.IdProducto)</v>
+        <v>Count(
+	DISTINCT
+	{&lt;Producto.EstadoAprobacionComite={'En Desarrollo'}
+	&gt;}  Producto.IdProducto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2537,7 +2540,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Count(DISTINCT Seguimiento.IdProducto)</v>
+              <v>Count(
+	DISTINCT
+	{&lt;Producto.EstadoAprobacionComite={'En Desarrollo'}
+	&gt;}  Producto.IdProducto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -23,57 +23,5 @@ LET vGrafDespacho = 'Pendiente';
 
 LET vColHighlight = 'rgb(255, 0, 0)';
 LET vColNoHighlight = 'rgb(192, 192, 192)';
-///$tab Analisis
-Dimensiones:
-LOAD * INLINE [
-    Dimensiones
-    Cliente
-    Genero
-    Referencia
-    Talla
-    Color
-    Causal devolucion
-    Departamento Cliente
-    Ciudad cliente
-    Estructura Comercial
-    Vendedor
-    NIT
-    Pedido
-    Condición pago
-    Línea
-    Estilo
-    Colección
-    Tipo de Pedido
-    Grupo de venta
-    Descuento
-	% Descuento
-	Precio Unitario
-    ];
-
-Calculos:
-LOAD * INLINE [
-    Calculos
-    Und Pedidos
-    Und Ventas
-    Und Despachadas
-    Und Pendientes
-    % Cumpli. Unds Despachadas
-    Vlr Pedidos
-    Vlr Ventas
-    Vlr Despachado
-    Vlr Pendiente
-    % Cumpli. Pesos Despachado
-    Und Devolucion
-    Vlr devolucion
-    Cupo
-    Corriente
-    Vencido
-    Total
-    Disponible
-    Análisis Bloqueo Mora
-    Análisis Bloqueo Cupo
-    Promed. Pendientes
-    Stock
-    ];
-    
-///$tab Configuraciones del Negocio
+///$tab Adhoc
+$(Must_Include=design.comercialax\adhoc.qvs);

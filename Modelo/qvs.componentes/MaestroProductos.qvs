@@ -7,6 +7,7 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	09/22/2016  |   malemos         |   Inicio de Configuración
+	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros 
 *****************************************************************************************************/
 Colores:
 	Mapping LOAD Color as IdColor,
@@ -14,6 +15,16 @@ Colores:
 	FROM
 	[..\QVD\PLM\MaestroColores.QVD]
 	(qvd);
+
+Generos:
+	Mapping
+	LOAD
+		Producto.Genero  	as Genero, 
+		Producto.IdGenero	as Id
+	FROM
+	[..\QVD\PLM\_Producto.QVD]
+	(qvd);
+
 
 Producto_Temp:
 	LOAD
@@ -128,14 +139,14 @@ NEXT;
 
 Left Join (Producto_Temp2)
 	LOAD
-		IdColeccion		as Coleccion,
-		IdItemp			as Referencia,
-		IdLinea			as IdLinea,
-		IdMarca			as IdMarca,
-		IdSublinea		as IdSublinea,
-		Linea			as Linea,
-		Marca			as Marca,
-		Sublinea 		as Sublinea
+		IdColeccion			as Coleccion,
+		IdItemp				as Referencia,
+		Right(IdLinea,2)	as IdLinea,
+		IdMarca				as IdMarca,
+		IdSublinea			as IdSublinea,
+		Linea				as Linea,
+		Marca				as Marca,
+		Sublinea 			as Sublinea
 	Resident DimFinan;
 
 LET contador = Null();
@@ -149,7 +160,7 @@ Producto:
 		SK.KEYPRODUCT,
 		SK.Producto,
 		IdColor								as Producto.IdColor,
-		IdLinea								as Producto.IdLinea,
+		ApplyMap('Generos',Genero)&IdLinea	as Producto.IdLinea,
 		IdMarca								as Producto.IdMarca,
 		IdSublinea							as Producto.IdSublinea,
 		IdSubTipo							as Producto.IdSubTipo,

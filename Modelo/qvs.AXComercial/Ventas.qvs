@@ -8,15 +8,18 @@
 	-------------------------------------------------------------------------------------------------
 	09/22/2016  |   malemos         |   Inicio de Configuración
 	11/17/2016	|	malemos			| 	Remodelamiento de datos, (Formateos necesarios para mayor rendimiento)
+	12/01/2016	|	malemos			|	Se ajusta el campo de asiento de la factura con Sk
+									|	Se modificá se consultó 
 *****************************************************************************************************/
 Venta:
 	LOAD 
-		CUENTACLIENTE								as SK.Cliente,
+		SALESID										as SK.Pedido, 
+
 		ESTADOFACTURA 								as Venta.IdEstadoFactura,
 		CUENTACLIENTE								as Venta.IdCliente,
 		IDFACTURA									as Venta.IdFactura, 
 		SALESID										as Venta.IdPedido, 
-		ASIENTOFACTURA								as Venta.AsientoFactura, 
+		ASIENTOFACTURA								as Venta.IdAsiento, 
 		DIASVENCIDOS								as Venta.DiasVencidos, 
 		DIMENSIONDEFAULTFACTSERV					as Venta.FactServ, 
 		DIMENSIONDEFAULTSALES						as Venta.Sales, 
@@ -32,7 +35,7 @@ Venta:
 		Num(SALDOVENCIDOTOTAL)						as Venta.SaldoVencidoTotal, 
 		ULTIMOASIENTOLIQUIDACION					as Venta.UltimoAsientoLiquidacion,
 		Num(VALORDIVISALIQUIDADA)					as Venta.ValorDivisaLiquidada, 
-		Num(VALORFACTURA)							as Venta.ValorFactura, 
+		Num(VALORLINEA)								as Venta.ValorFactura, 
 		Num(VALORFACTURADIVISATRANS)				as Venta.ValorFacturaDivisaTrans, 
 		Num(VALORLIQUIDADO)							as Venta.ValorLiquidado, 
 		VENCIDA 									as Venta.EsVencida,
@@ -40,6 +43,11 @@ Venta:
 		Date(CREATEDDATETIME)						as Venta.FechaCreacion, 
 		CREATEDBY									as Venta.Creador,
 		Num(CANTIDAD) 								as Venta.CantidadVentas
+	FROM
+	[..\QVD\QST_MODELFACTURAS.QVD]
+	(qvd);
+
+		//CUENTACLIENTE								as SK.Cliente,
 		//MODULOGENERACION,
 		//NOMBREMODULOGENERACION, 
 		//CONDICIONPAGO, 
@@ -48,7 +56,3 @@ Venta:
 		//RECVERSION, 
 		//PARTITION, 
 		//RECID
-	FROM
-	[..\QVD\CustInvoiceTrans.QVD]
-	(qvd);
-
