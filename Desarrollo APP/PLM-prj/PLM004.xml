@@ -245,7 +245,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Seguimiento.FechaFin - Seguimiento.FechaInicio</v>
+        <v>if(Producto.EstadoAprobacionComite='En Desarrollo', Seguimiento.FechaFin - Seguimiento.FechaInicio)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1252,7 +1252,7 @@
         <Thou>.</Thou>
       </NumberPresentation>
       <Show>true</Show>
-      <Grid>false</Grid>
+      <Grid>true</Grid>
       <Force0>false</Force0>
       <Logscale>false</Logscale>
       <MidAxisLabel>false</MidAxisLabel>
@@ -1793,12 +1793,12 @@
       <Left>0</Left>
       <Top>726</Top>
       <Width>1400</Width>
-      <Height>174</Height>
+      <Height>259</Height>
     </BottomAxisPosition>
     <LeftAxisUserSized>false</LeftAxisUserSized>
     <RightAxisUserSized>false</RightAxisUserSized>
     <TopAxisUserSized>false</TopAxisUserSized>
-    <BottomAxisUserSized>false</BottomAxisUserSized>
+    <BottomAxisUserSized>true</BottomAxisUserSized>
     <WorkArea>
       <Left>140</Left>
       <Top>203</Top>
@@ -2648,7 +2648,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Seguimiento.FechaFin - Seguimiento.FechaInicio</v>
+              <v>if(Producto.EstadoAprobacionComite='En Desarrollo', Seguimiento.FechaFin - Seguimiento.FechaInicio)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

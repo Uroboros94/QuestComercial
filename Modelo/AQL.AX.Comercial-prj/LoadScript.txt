@@ -23,7 +23,7 @@ $(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
 
 	
 ///$tab Carga
-/*Productos Aprobados desde PLM*/
+/*Productos Aprobados*/
 $(must_Include=qvs.componentes\maestroproductos.qvs);
 $(must_Include=qvs.axcomercial\actividadesproducto.qvs);
 $(must_Include=qvs.axcomercial\inventtransop.qvs);
@@ -51,6 +51,7 @@ $(must_Include=qvs.componentes\calendario.qvs);
 ///$tab LinkTable
 LinkTable_Temp:
 	LOAD
+		Distinct
 		PedidosVenta.Id				as IDPEDIDO,
 		PedidosVenta.IdCliente		as IDCLIENTE,
 		PedidosVenta.Fecha 			as FECHA,
@@ -58,11 +59,13 @@ LinkTable_Temp:
 	Resident PedidosVenta;
 	Concatenate
 	LOAD
+		Distinct
 		Cartera.IdCliente			as IDCLIENTE,
 		Cartera.FechaFactura		as FECHA
 	Resident CarteraCliente;
 	Concatenate
 	LOAD
+		Distinct
 		Venta.IdCliente				as IDCLIENTE,
 		Venta.FechaFactura			as FECHA
 	Resident Venta;
@@ -87,9 +90,3 @@ TRACE Modelo Finalizado;
 EXIT SCRIPT;
 
 
-
-$(must_Include=qvs.axcomercial\carteracliente.qvs);
-
-
-
-//$(must_Include=qvs.axcomercial\fotosstyle.qvs);
