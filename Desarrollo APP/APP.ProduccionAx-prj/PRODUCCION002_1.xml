@@ -279,7 +279,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Cantidad Programada] - [Total en Producción]</v>
+        <v>[Cantidad Programada] - [Total en Producción]
+//(Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) / ((Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) - (Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.PdteEnsamblar)))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2661,7 +2662,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -2788,7 +2789,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -3597,7 +3598,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -3724,7 +3725,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -4338,7 +4339,7 @@
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -4465,7 +4466,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -4475,7 +4476,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>225</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -6083,7 +6084,7 @@
       <int>247</int>
       <int>194</int>
       <int>300</int>
-      <int>300</int>
+      <int>225</int>
       <int>300</int>
       <int>250</int>
       <int>197</int>
@@ -6600,7 +6601,7 @@
       <int>15</int>
       <int>16</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>13</ExpressionPosition>
+    <ExpressionPosition>12</ExpressionPosition>
     <NumberOfLeftDimensions>12</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
@@ -7928,7 +7929,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Cantidad Programada] - [Total en Producción]</v>
+              <v>[Cantidad Programada] - [Total en Producción]
+//(Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) / ((Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) - (Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.PdteEnsamblar)))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

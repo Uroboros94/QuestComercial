@@ -229,7 +229,10 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}&gt;} PedidosTransfer.CANTTRANSFERENCIA) + Sum(EntradaProducto.CANTTRANSFE)</v>
+        <v>Sum({&lt;
+	MovimientosArticulos.DESCMOVIMIENTO = {'ENTRADA', 'SALIDA'}, 
+	Contabilidad.CUENTA_N4 = {'523550'}
+	&gt;} MovimientosArticulos.CANTDIARIO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -258,7 +261,8 @@
 	{&lt;
 		Contabilidad.CUENTA_N4 = {'523550'}, 
 		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
-		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
+		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
+		MovimientosArticulos.DESCMOVIMIENTO = {'ENTRADA', 'SALIDA'}
 	&gt;} Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
@@ -678,7 +682,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>153</ColWidth>
+      <ColWidth>209</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3442,7 +3446,7 @@
     <ColWidths>
       <int>563</int>
       <int>300</int>
-      <int>153</int>
+      <int>209</int>
       <int>284</int>
       <int>163</int>
     </ColWidths>
@@ -4003,7 +4007,10 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}&gt;} PedidosTransfer.CANTTRANSFERENCIA) + Sum(EntradaProducto.CANTTRANSFE)</v>
+              <v>Sum({&lt;
+	MovimientosArticulos.DESCMOVIMIENTO = {'ENTRADA', 'SALIDA'}, 
+	Contabilidad.CUENTA_N4 = {'523550'}
+	&gt;} MovimientosArticulos.CANTDIARIO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4395,7 +4402,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>153</ColWidth>
+            <ColWidth>209</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4590,7 +4597,8 @@
 	{&lt;
 		Contabilidad.CUENTA_N4 = {'523550'}, 
 		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
-		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
+		Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;},
+		MovimientosArticulos.DESCMOVIMIENTO = {'ENTRADA', 'SALIDA'}
 	&gt;} Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
