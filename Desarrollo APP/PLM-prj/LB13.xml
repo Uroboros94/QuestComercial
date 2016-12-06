@@ -40,7 +40,7 @@
       </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
-        <PointSize1000>9000</PointSize1000>
+        <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -175,8 +175,13 @@
       <Rainbow>false</Rainbow>
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
-      <Show></Show>
-      <AllowMoveSize>true</AllowMoveSize>
+      <Show>
+        <Always>true</Always>
+        <Expression>
+          <v>vSwichMenu = 1</v>
+        </Expression>
+      </Show>
+      <AllowMoveSize>false</AllowMoveSize>
       <AllowCopyClone>true</AllowCopyClone>
       <dummy></dummy>
       <CustomObjectGuid enctype="base64"></CustomObjectGuid>
