@@ -1183,7 +1183,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>356</ColWidth>
+      <ColWidth>263</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2831,18 +2831,18 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.IdMarca</Name>
+        <Name>Producto.Tipo</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Marca</v>
+        <v>Tipo</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -2990,13 +2990,10 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>166</ColWidth>
+      <ColWidth>156</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition>
-        <Type>COND_EX_COND</Type>
-        <Expression>0</Expression>
-      </EnableCondition>
+      <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -5699,7 +5696,7 @@
       <int>88</int>
       <int>81</int>
       <int>69</int>
-      <int>166</int>
+      <int>156</int>
       <int>225</int>
       <int>225</int>
       <int>181</int>
@@ -5708,7 +5705,7 @@
       <int>150</int>
       <int>300</int>
       <int>106</int>
-      <int>356</int>
+      <int>263</int>
       <int>250</int>
       <int>259</int>
     </ColWidths>
@@ -5716,8 +5713,8 @@
       <int>1</int>
     </Striping>
     <StyleNumber>11</StyleNumber>
-    <MultiLine>0</MultiLine>
-    <HeaderMultiLine>0</HeaderMultiLine>
+    <MultiLine>2</MultiLine>
+    <HeaderMultiLine>2</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
     <UseTotalLabelForStraight>false</UseTotalLabelForStraight>
     <LabelCellVariation>
@@ -6205,20 +6202,20 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>3</int>
-      <int>4</int>
       <int>5</int>
       <int>6</int>
       <int>7</int>
       <int>9</int>
       <int>2</int>
       <int>10</int>
+      <int>4</int>
       <int>11</int>
-      <int>12</int>
+      <int>13</int>
       <int>14</int>
       <int>8</int>
       <int>0</int>
       <int>1</int>
-      <int>13</int>
+      <int>12</int>
     </InterFieldSortOrder>
     <ExpressionPosition>11</ExpressionPosition>
     <NumberOfLeftDimensions>11</NumberOfLeftDimensions>
@@ -6265,14 +6262,6 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>OrdenProd.PRODSTATUSNAME</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.IdMarca</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6337,6 +6326,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.Color</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Tipo</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -7328,7 +7325,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>356</ColWidth>
+            <ColWidth>263</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
