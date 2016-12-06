@@ -86,7 +86,7 @@ Producto:
 		desUnidadMedidaVenta														as Producto.UnidadMedidaVenta,
 		Diseñador																	as Producto.Diseñador,
 		EstadoAprobacion															as Producto.EstadoAprobacion,
-		If(IsNull(EstadoAprobacionComite),'En Desarrollo',EstadoAprobacionComite)	as Producto.EstadoAprobacionComite,	
+		If(IsNull(EstadoAprobacionComite),'En desarrollo',EstadoAprobacionComite)	as Producto.EstadoAprobacionComite,	
 		EstadoExportacion 															as Producto.EstadoExportacion,
 		EstadoSincronizacion 														as Producto.EstadoSincronizacion,
 		FechaActualizacion 															as Producto.FechaActualizacion,

@@ -1,4 +1,5 @@
-﻿<ListBoxProperties>
+﻿<InputBoxProperties>
+  <PropChanged>false</PropChanged>
   <Layout>
     <Frame>
       <BorderWidth>4</BorderWidth>
@@ -46,20 +47,18 @@
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
-      <Name>
-        <v>SubLinea</v>
-      </Name>
+      <Name></Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
-      <AllowMinimize>false</AllowMinimize>
+      <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
       <AllowMaximize>false</AllowMaximize>
       <AllowInfo>true</AllowInfo>
       <PrintIcon>false</PrintIcon>
       <CopyIcon>false</CopyIcon>
       <XLIcon>false</XLIcon>
-      <SearchIcon>true</SearchIcon>
+      <SearchIcon>false</SearchIcon>
       <SelectPossibleIcon>false</SelectPossibleIcon>
       <SelectExcludedIcon>false</SelectExcludedIcon>
       <SelectAllIcon>false</SelectAllIcon>
@@ -69,8 +68,8 @@
       <HelpText></HelpText>
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
-      <ShowCaption>true</ShowCaption>
-      <MultiLine>0</MultiLine>
+      <ShowCaption>false</ShowCaption>
+      <MultiLine>2</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
@@ -176,7 +175,7 @@
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
       <Show>
-        <Always>true</Always>
+        <Always>false</Always>
         <Expression>
           <v>vSwichMenu = 1</v>
         </Expression>
@@ -206,8 +205,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
-      <ScrollWidth>29</ScrollWidth>
+      <ScrollStyle>SCROLL_SIX</ScrollStyle>
+      <ScrollWidth>38</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -221,62 +220,44 @@
       <ExtendedValues></ExtendedValues>
       <StateName></StateName>
     </Frame>
+    <NoOfRows>1</NoOfRows>
+    <ColWidthLabel>300</ColWidthLabel>
+    <ColWidthDrop>42</ColWidthDrop>
+    <ColWidthData>300</ColWidthData>
+    <MemberAttributes>
+      <LInputBoxMemberAttributes>
+        <Label>
+          <v>Limite del Top</v>
+        </Label>
+        <Name>
+          <v>vTop</v>
+        </Name>
+        <BkgColor>
+          <Mode>COLORAREA_SOLID</Mode>
+          <Luminosity>85</Luminosity>
+          <FillDirection>COLORAREA_HORZ</FillDirection>
+          <FillPattern>COLORAREA_PATTERN1</FillPattern>
+          <PrimaryCol>
+            <Col>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </PrimaryCol>
+          <SecondaryCol></SecondaryCol>
+          <Alpha>255</Alpha>
+        </BkgColor>
+        <TextColor></TextColor>
+        <TextAdjust>0</TextAdjust>
+      </LInputBoxMemberAttributes>
+    </MemberAttributes>
     <ReadOnly>false</ReadOnly>
-    <NumAdjust>2</NumAdjust>
-    <TextAdjust>0</TextAdjust>
-    <MultiLine>1</MultiLine>
-    <ShowFrequency>false</ShowFrequency>
-    <FrequencyInPercent>false</FrequencyInPercent>
-    <Longest></Longest>
-    <Borders>
-      <Top>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Top>
-      <Bottom>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Bottom>
-      <Left>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Left>
-      <Right>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Right>
-    </Borders>
-    <MultiColumn>true</MultiColumn>
-    <OrderByRow>true</OrderByRow>
-    <HideExcluded>false</HideExcluded>
-    <SelectionStyle>SS_USER_PREF</SelectionStyle>
-    <ImageRepresentation></ImageRepresentation>
-    <SoftLock>false</SoftLock>
-    <ExcludedValuesMode>0</ExcludedValuesMode>
-    <DefaultSearchMode>0</DefaultSearchMode>
-    <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>3</FixedColumnsCount>
-    <LayoutDependentPrint>true</LayoutDependentPrint>
-    <PrintAllValues>false</PrintAllValues>
-    <HierarchySeparator>/</HierarchySeparator>
-    <ShowAsTreeView>false</ShowAsTreeView>
-    <CurrentInfoURL></CurrentInfoURL>
-    <SuppressSearchHighlight>false</SuppressSearchHighlight>
-    <TextColor></TextColor>
-    <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
-    <CellBorders>false</CellBorders>
+    <GridStyle>false</GridStyle>
+    <ShowEqualSign>true</ShowEqualSign>
   </Layout>
-  <Def>
-    <Name>Producto.Sublinea</Name>
-    <Type>PRESENT</Type>
-  </Def>
-  <Title>
-    <v>SubLinea</v>
-  </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
@@ -366,22 +347,8 @@
     <SheetPrintDrawBackGround>false</SheetPrintDrawBackGround>
     <StrDevModeExtra></StrDevModeExtra>
   </PrintSettings>
-  <SortCriteria>
-    <SortByState>1</SortByState>
-    <SortByFrequency>0</SortByFrequency>
-    <SortByNumeric>0</SortByNumeric>
-    <SortByAscii>1</SortByAscii>
-    <SortByLoadOrder>0</SortByLoadOrder>
-    <SortByExpression>0</SortByExpression>
-    <Expression></Expression>
-    <SortByGreyness>0</SortByGreyness>
-  </SortCriteria>
-  <NumberPresentation></NumberPresentation>
-  <ExpandedNodes></ExpandedNodes>
+  <TextAdjust>0</TextAdjust>
+  <NumAdjust>0</NumAdjust>
+  <MultiColumn>false</MultiColumn>
   <OnSelectActionItems></OnSelectActionItems>
-  <SuppressAutoSortByState>false</SuppressAutoSortByState>
-  <Expressions></Expressions>
-  <NullSymbol>-</NullSymbol>
-  <MissingSymbol>-</MissingSymbol>
-  <MoreSearchSettings></MoreSearchSettings>
-</ListBoxProperties>
+</InputBoxProperties>

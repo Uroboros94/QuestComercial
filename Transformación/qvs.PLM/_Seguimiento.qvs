@@ -433,7 +433,7 @@ _SeguimientoTemp2:
 		If(QST_Sample_IniModeAjust_boolean='true'
 			and IsNull(QST_Sample_FinModeAjustDate_date),
 			Date(Today()),
-			QST_Sample_FinModeAjustDate_date) 	as FechaFin,
+			QST_Sample_FinModeAjustDate_date) 		as FechaFin,
 		QST_Sample_FinModeAjustUsr_string			as UsuarioFin
 	Resident _SeguimientoTemp;
 	Concatenate
@@ -473,7 +473,7 @@ _SeguimientoTemp2:
 		If(QST_Sample_IniListaOperacio_boolean='true'
 			and IsNull(QST_Sample_FinListaOperacioDate_date),
 			Date(Today()),
-			QST_Sample_FinListaOperacioDate_date) as FechaFin,
+			QST_Sample_FinListaOperacioDate_date) 	as FechaFin,
 		QST_Sample_FinListaOperacioUsr_string		as UsuarioFin
 	Resident _SeguimientoTemp;
 	Concatenate
