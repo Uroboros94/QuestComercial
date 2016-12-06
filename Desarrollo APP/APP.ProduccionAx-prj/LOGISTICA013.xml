@@ -232,8 +232,8 @@
         <v>Sum(
 	{&lt;
 		Contabilidad.CUENTA_N4 = {'523550'}, 
-		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
-		Contabilidad.ANO = {&quot;$(=Year(Today()))&quot;}
+//		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
+		Contabilidad.ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
 	&gt;} 	Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
@@ -3443,8 +3443,6 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>553</int>
-      <int>300</int>
       <int>375</int>
       <int>344</int>
     </ColWidths>
@@ -4007,8 +4005,8 @@
               <v>Sum(
 	{&lt;
 		Contabilidad.CUENTA_N4 = {'523550'}, 
-		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
-		Contabilidad.ANO = {&quot;$(=Year(Today()))&quot;}
+//		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
+		Contabilidad.ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
 	&gt;} 	Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
