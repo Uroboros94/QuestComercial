@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>SubLinea</v>
+        <v>Origen</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -59,11 +59,11 @@
       <PrintIcon>false</PrintIcon>
       <CopyIcon>false</CopyIcon>
       <XLIcon>false</XLIcon>
-      <SearchIcon>true</SearchIcon>
+      <SearchIcon>false</SearchIcon>
       <SelectPossibleIcon>false</SelectPossibleIcon>
       <SelectExcludedIcon>false</SelectExcludedIcon>
       <SelectAllIcon>false</SelectAllIcon>
-      <ClearIcon>false</ClearIcon>
+      <ClearIcon>true</ClearIcon>
       <ClearOtherIcon>false</ClearOtherIcon>
       <LockIcon>false</LockIcon>
       <HelpText></HelpText>
@@ -176,7 +176,7 @@
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
       <Show>
-        <Always>true</Always>
+        <Always>false</Always>
         <Expression>
           <v>vSwichMenu = 1</v>
         </Expression>
@@ -224,7 +224,7 @@
     <ReadOnly>false</ReadOnly>
     <NumAdjust>2</NumAdjust>
     <TextAdjust>0</TextAdjust>
-    <MultiLine>1</MultiLine>
+    <MultiLine>0</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
@@ -250,8 +250,8 @@
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </Right>
     </Borders>
-    <MultiColumn>true</MultiColumn>
-    <OrderByRow>true</OrderByRow>
+    <MultiColumn>false</MultiColumn>
+    <OrderByRow>false</OrderByRow>
     <HideExcluded>false</HideExcluded>
     <SelectionStyle>SS_USER_PREF</SelectionStyle>
     <ImageRepresentation></ImageRepresentation>
@@ -259,7 +259,7 @@
     <ExcludedValuesMode>0</ExcludedValuesMode>
     <DefaultSearchMode>0</DefaultSearchMode>
     <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>3</FixedColumnsCount>
+    <FixedColumnsCount>-1</FixedColumnsCount>
     <LayoutDependentPrint>true</LayoutDependentPrint>
     <PrintAllValues>false</PrintAllValues>
     <HierarchySeparator>/</HierarchySeparator>
@@ -271,11 +271,11 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Producto.Sublinea</Name>
+    <Name>Producto.TipoAquision</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
-    <v>SubLinea</v>
+    <v>Origen</v>
   </Title>
   <PrintSettings>
     <Landscape>true</Landscape>

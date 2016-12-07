@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>SubLinea</v>
+        <v>Aprobación Cómite</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -176,12 +176,12 @@
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
       <Show>
-        <Always>true</Always>
+        <Always>false</Always>
         <Expression>
           <v>vSwichMenu = 1</v>
         </Expression>
       </Show>
-      <AllowMoveSize>false</AllowMoveSize>
+      <AllowMoveSize>true</AllowMoveSize>
       <AllowCopyClone>true</AllowCopyClone>
       <dummy></dummy>
       <CustomObjectGuid enctype="base64"></CustomObjectGuid>
@@ -224,21 +224,13 @@
     <ReadOnly>false</ReadOnly>
     <NumAdjust>2</NumAdjust>
     <TextAdjust>0</TextAdjust>
-    <MultiLine>1</MultiLine>
+    <MultiLine>0</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Top>
-      <Bottom>
-        <LineStyle>32</LineStyle>
-        <Color></Color>
-        <ExtraBorderSpace16>0</ExtraBorderSpace16>
-      </Bottom>
+      <Top></Top>
+      <Bottom></Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>
@@ -250,8 +242,8 @@
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </Right>
     </Borders>
-    <MultiColumn>true</MultiColumn>
-    <OrderByRow>true</OrderByRow>
+    <MultiColumn>false</MultiColumn>
+    <OrderByRow>false</OrderByRow>
     <HideExcluded>false</HideExcluded>
     <SelectionStyle>SS_USER_PREF</SelectionStyle>
     <ImageRepresentation></ImageRepresentation>
@@ -259,7 +251,7 @@
     <ExcludedValuesMode>0</ExcludedValuesMode>
     <DefaultSearchMode>0</DefaultSearchMode>
     <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>3</FixedColumnsCount>
+    <FixedColumnsCount>-1</FixedColumnsCount>
     <LayoutDependentPrint>true</LayoutDependentPrint>
     <PrintAllValues>false</PrintAllValues>
     <HierarchySeparator>/</HierarchySeparator>
@@ -271,11 +263,11 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Producto.Sublinea</Name>
+    <Name>Producto.EstadoAprobacionComite</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
-    <v>SubLinea</v>
+    <v>Aprobación Cómite</v>
   </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
