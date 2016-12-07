@@ -304,7 +304,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(Cartera.DiasVencidos)</v>
+        <v>Avg(Cartera.DiasVencidos)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -5479,7 +5479,7 @@
     <OuterPixWidth>300</OuterPixWidth>
     <InnerPixWidth>300</InnerPixWidth>
     <AllowPivoting>true</AllowPivoting>
-    <PivotAlwaysFullyExpanded>true</PivotAlwaysFullyExpanded>
+    <PivotAlwaysFullyExpanded>false</PivotAlwaysFullyExpanded>
     <AllowMenuSort>true</AllowMenuSort>
     <ShowSortIndicators>true</ShowSortIndicators>
     <ShowSelectIndicators>true</ShowSelectIndicators>
@@ -5520,16 +5520,32 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cartera.Vendedor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>0</int>
+            <int>1</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BFNBTkRSQSBURVJFU0EgUk9KQVMA
+            </Blob>
+            <Blob>
+                BE5JRElBIExPUkVOQSBHT05aQUxFWgA=
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cliente.Id</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>986</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AgAAANizVIFB
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -7338,7 +7354,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(Cartera.DiasVencidos)</v>
+              <v>Avg(Cartera.DiasVencidos)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
