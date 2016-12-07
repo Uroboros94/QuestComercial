@@ -22,8 +22,8 @@ QST_MaestroProductos:
 		NOMBRESUBTIPOPRODUCTO,
 		TALLA,
 		NOMBRETIPOPRODUCTO
-	FROM "QST_MODELPRODUCTOS"
-	where CODARTICULO in (Select ITEMID from InventItemGroupItem where ITEMGROUPID in ('COMERC','IMPORT','MANUFAC','MODIFICADO'));
+	FROM "QST_MODELPRODUCTOS";
+	//where CODARTICULO in (Select ITEMID from InventItemGroupItem where ITEMGROUPID in ('COMERC','IMPORT','MANUFAC','MODIFICADO'));
 
 STORE QST_MaestroProductos INTO [..\QVD\QST_MaestroProductos.QVD](qvd);
 DROP TABLE QST_MaestroProductos;
