@@ -9,6 +9,7 @@
 _SeguimientoTemp:
 	LOAD
 		CodigoProducto,
+		QST_StyleAttr_FechaComite_time,
 		QST_Sample_LastStatusDate_time,
 		QST_Sample_PresComite_boolean,
 		QST_Sample_PresComiteDate_date,
@@ -135,7 +136,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -149,7 +150,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -163,7 +164,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -183,7 +184,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -203,7 +204,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -224,7 +225,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -245,7 +246,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -266,7 +267,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -286,7 +287,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -306,7 +307,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -326,7 +327,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -346,7 +347,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -360,7 +361,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		0											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento de Muestra'					as Etapa,
@@ -381,7 +382,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -401,7 +402,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -421,7 +422,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -441,7 +442,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -461,7 +462,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -481,7 +482,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -501,7 +502,7 @@ _SeguimientoTemp2:
 		CodigoProducto								as SK.Producto,
 		CodigoProducto								as IdProducto,
 		1											as IdEtapa,
-
+		Date(QST_StyleAttr_FechaComite_time)		as FechaComite,
 		Num(RequestedQty)							as Cantidad,
 		SampleType									as TipoMuestra,
 		'Seguimiento Producto Aprobado'				as Etapa,
@@ -520,6 +521,7 @@ _Seguimiento:
 		Cantidad 				as Seguimiento.Cantidad,
 		TipoMuestra				as Seguimiento.TipoMuestra,
 		Etapa 					as Seguimiento.Etapa,
+		FechaComite 			as Seguimiento.FechaComite,
 		FechaInicio				as Seguimiento.FechaInicio,
 		FechaFin				as Seguimiento.FechaFin,
 		Proceso 				as Seguimiento.Proceso,
