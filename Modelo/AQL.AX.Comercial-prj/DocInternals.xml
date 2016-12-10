@@ -525,15 +525,15 @@
     <String>1</String>
     <String>Venta</String>
     <String>173</String>
-    <String>1</String>
-    <String>Venta</String>
-    <String>174</String>
-    <String>1</String>
-    <String>Venta</String>
-    <String>175</String>
     <String>2</String>
     <String>PedidosVenta</String>
     <String>LinkTable</String>
+    <String>174</String>
+    <String>1</String>
+    <String>PedidosVenta</String>
+    <String>175</String>
+    <String>1</String>
+    <String>PedidosVenta</String>
     <String>176</String>
     <String>1</String>
     <String>PedidosVenta</String>
@@ -628,15 +628,15 @@
     <String>1</String>
     <String>PedidosVenta</String>
     <String>207</String>
-    <String>1</String>
-    <String>PedidosVenta</String>
-    <String>208</String>
-    <String>1</String>
-    <String>PedidosVenta</String>
-    <String>209</String>
     <String>2</String>
     <String>Presupuesto</String>
     <String>LinkTable</String>
+    <String>208</String>
+    <String>1</String>
+    <String>Presupuesto</String>
+    <String>209</String>
+    <String>1</String>
+    <String>Presupuesto</String>
     <String>210</String>
     <String>1</String>
     <String>Presupuesto</String>
@@ -668,15 +668,15 @@
     <String>1</String>
     <String>Presupuesto</String>
     <String>220</String>
-    <String>1</String>
-    <String>Presupuesto</String>
-    <String>221</String>
-    <String>1</String>
-    <String>Presupuesto</String>
-    <String>222</String>
     <String>2</String>
     <String>Calendario</String>
     <String>LinkTable</String>
+    <String>221</String>
+    <String>1</String>
+    <String>Calendario</String>
+    <String>222</String>
+    <String>1</String>
+    <String>Calendario</String>
     <String>223</String>
     <String>1</String>
     <String>Calendario</String>
@@ -723,12 +723,6 @@
     <String>1</String>
     <String>Calendario</String>
     <String>238</String>
-    <String>1</String>
-    <String>Calendario</String>
-    <String>239</String>
-    <String>1</String>
-    <String>Calendario</String>
-    <String>240</String>
     <String>1</String>
     <String>Calendario</String>
   </FieldSrcTables>
@@ -1004,7 +998,6 @@
           <String>UNIT</String>
           <String>ITEMCOLOR</String>
           <String>ITEMSIZE</String>
-          <String>INVENTSIZEID</String>
           <String>INVENTLOCATIONID</String>
           <String>WMSLOCATIONID</String>
           <String>INVENTSITEID</String>
@@ -1046,8 +1039,9 @@
           <String>Venta.Divisa</String>
           <String>Venta.EstadoFactura</String>
           <String>Venta.UltimoAsientoLiquidacion</String>
-          <String>Venta.NombreVencida</String>
+          <String>Venta.EsVencida</String>
           <String>Venta.Creador</String>
+          <String>CK.PedidoClienteFecha</String>
           <String>PedidosVenta.Id</String>
           <String>PedidosVenta.IdVendedor</String>
           <String>PedidosVenta.IdGrupoImpuestos</String>
@@ -1060,7 +1054,6 @@
           <String>PedidosVenta.EstadoLinea</String>
           <String>PedidosVenta.EstadoDocumento</String>
           <String>PedidosVenta.Sitio</String>
-          <String>PedidosVenta.Almacen</String>
           <String>PedidosVenta.UnidadMedida</String>
           <String>PedidosVenta.RazonDevolucion</String>
           <String>PedidosVenta.RazonGrupo</String>
@@ -1082,7 +1075,6 @@
           <String>$Table</String>
           <String>$Info</String>
           <String>Producto.IdSublinea</String>
-          <String>Producto.Categoria</String>
           <String>Producto.Clima</String>
           <String>Producto.Coleccion</String>
           <String>Producto.Emitido</String>
@@ -1091,7 +1083,6 @@
           <String>Producto.Linea</String>
           <String>Producto.Marca</String>
           <String>Producto.NonmbreCategoria</String>
-          <String>Producto.Sublinea</String>
           <String>Producto.SubTipo</String>
           <String>DescripcionDiario</String>
           <String>JOURNALNUM</String>
@@ -1101,7 +1092,6 @@
           <String>UNIT</String>
           <String>ITEMCOLOR</String>
           <String>ITEMSIZE</String>
-          <String>INVENTSIZEID</String>
           <String>INVENTLOCATIONID</String>
           <String>WMSLOCATIONID</String>
           <String>INVENTSITEID</String>
@@ -1136,8 +1126,9 @@
           <String>Venta.Divisa</String>
           <String>Venta.EstadoFactura</String>
           <String>Venta.UltimoAsientoLiquidacion</String>
-          <String>Venta.NombreVencida</String>
+          <String>Venta.EsVencida</String>
           <String>Venta.Creador</String>
+          <String>CK.PedidoClienteFecha</String>
           <String>PedidosVenta.Id</String>
           <String>PedidosVenta.IdVendedor</String>
           <String>PedidosVenta.IdGrupoImpuestos</String>
@@ -1149,7 +1140,6 @@
           <String>PedidosVenta.GrupoComision</String>
           <String>PedidosVenta.EstadoLinea</String>
           <String>PedidosVenta.Sitio</String>
-          <String>PedidosVenta.Almacen</String>
           <String>PedidosVenta.UnidadMedida</String>
           <String>PedidosVenta.RazonDevolucion</String>
           <String>PedidosVenta.RazonGrupo</String>
@@ -1170,19 +1160,8 @@
           <String>$Rows</String>
           <String>$Fields</String>
           <String>$FieldNo</String>
-          <String>Producto.IdLinea</String>
           <String>Producto.IdMarca</String>
           <String>Producto.IdSubTipo</String>
-          <String>Producto.BandaPrecio</String>
-          <String>Producto.Diseñador</String>
-          <String>Producto.Genero</String>
-          <String>Producto.GrupoProductos</String>
-          <String>Producto.NivelModa</String>
-          <String>Producto.Patronista</String>
-          <String>Producto.Silueta</String>
-          <String>Producto.TipoAdquisicion</String>
-          <String>Producto.TipoPrenda</String>
-          <String>Producto.TipoProducto</String>
           <String>JOURNALNAME</String>
           <String>QTYAMOUNTFROM</String>
           <String>QTYAMOUNTTO</String>
@@ -1190,7 +1169,6 @@
           <String>DesdeFecha</String>
           <String>HastaFecha</String>
           <String>COSTPRICEUNIT</String>
-          <String>ITEMID</String>
           <String>INVENTCOLORID</String>
           <String>DATEPHYSICAL</String>
           <String>DATEFINANCIAL</String>
@@ -1201,8 +1179,6 @@
           <String>Cliente.IdTipoCliente</String>
           <String>EC.IdCanal</String>
           <String>EC.IdCoordinador</String>
-          <String>Cartera.IdCliente</String>
-          <String>Cartera.IdVendedor</String>
           <String>Cartera.IdEstadoFactura</String>
           <String>Cartera.CuentaContable</String>
           <String>Cartera.CondicionPago</String>
@@ -1224,10 +1200,8 @@
           <String>Cartera.ValorLiquidado</String>
           <String>Cartera.Vencida</String>
           <String>Venta.IdEstadoFactura</String>
-          <String>Venta.IdCliente</String>
           <String>Venta.DiasVencidos</String>
           <String>Venta.FactServ</String>
-          <String>Venta.Sales</String>
           <String>Venta.FechaFactura</String>
           <String>Venta.FechaCierre</String>
           <String>Venta.FechaVencimiento</String>
@@ -1240,7 +1214,6 @@
           <String>Venta.ValorFactura</String>
           <String>Venta.ValorFacturaDivisaTrans</String>
           <String>Venta.ValorLiquidado</String>
-          <String>Venta.EsVencida</String>
           <String>Venta.FechaCreacion</String>
           <String>Venta.CantidadVentas</String>
           <String>PedidosVenta.Id_CO</String>
@@ -1287,19 +1260,8 @@
           <String>$Rows</String>
           <String>$Fields</String>
           <String>$FieldNo</String>
-          <String>Producto.IdLinea</String>
           <String>Producto.IdMarca</String>
           <String>Producto.IdSubTipo</String>
-          <String>Producto.BandaPrecio</String>
-          <String>Producto.Diseñador</String>
-          <String>Producto.Genero</String>
-          <String>Producto.GrupoProductos</String>
-          <String>Producto.NivelModa</String>
-          <String>Producto.Patronista</String>
-          <String>Producto.Silueta</String>
-          <String>Producto.TipoAdquisicion</String>
-          <String>Producto.TipoPrenda</String>
-          <String>Producto.TipoProducto</String>
           <String>JOURNALNAME</String>
           <String>QTYAMOUNTFROM</String>
           <String>QTYAMOUNTTO</String>
@@ -1307,7 +1269,6 @@
           <String>DesdeFecha</String>
           <String>HastaFecha</String>
           <String>COSTPRICEUNIT</String>
-          <String>ITEMID</String>
           <String>INVENTCOLORID</String>
           <String>DATEPHYSICAL</String>
           <String>DATEFINANCIAL</String>
@@ -1318,8 +1279,6 @@
           <String>Cliente.IdTipoCliente</String>
           <String>EC.IdCanal</String>
           <String>EC.IdCoordinador</String>
-          <String>Cartera.IdCliente</String>
-          <String>Cartera.IdVendedor</String>
           <String>Cartera.IdEstadoFactura</String>
           <String>Cartera.CuentaContable</String>
           <String>Cartera.CondicionPago</String>
@@ -1330,20 +1289,13 @@
           <String>Cartera.FechaVencimiento</String>
           <String>Cartera.PorcentajeProntoPago</String>
           <String>Cartera.SaldoCorrienteTotal</String>
-          <String>Cartera.SaldoTotal</String>
-          <String>Cartera.SaldoTotalDivisa</String>
-          <String>Cartera.SaldoVencidoTotal</String>
           <String>Cartera.FechaUltLiquidacion</String>
           <String>Cartera.ValorFivisaLiquidada</String>
-          <String>Cartera.ValorFactura</String>
-          <String>Cartera.ValorFacturaDivisaTrans</String>
           <String>Cartera.ValorLiquidado</String>
           <String>Cartera.Vencida</String>
           <String>Venta.IdEstadoFactura</String>
-          <String>Venta.IdCliente</String>
           <String>Venta.DiasVencidos</String>
           <String>Venta.FactServ</String>
-          <String>Venta.Sales</String>
           <String>Venta.FechaFactura</String>
           <String>Venta.FechaCierre</String>
           <String>Venta.FechaVencimiento</String>
@@ -1351,7 +1303,6 @@
           <String>Venta.SaldoCorrienteTotal</String>
           <String>Venta.ValorDivisaLiquidada</String>
           <String>Venta.ValorLiquidado</String>
-          <String>Venta.EsVencida</String>
           <String>Venta.CantidadVentas</String>
           <String>PedidosVenta.Id_CO</String>
           <String>PedidosVenta.IdNumLinea</String>
