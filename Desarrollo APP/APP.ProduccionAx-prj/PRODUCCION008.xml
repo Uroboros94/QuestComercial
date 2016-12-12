@@ -49,8 +49,6 @@
       <Name>
         <v>Información órdenes de producción</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -6535,12 +6533,12 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -9909,14 +9907,9 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <TruncateLabel>true</TruncateLabel>
     <ScaleChartSizeRects></ScaleChartSizeRects>
     <FastChangeRefSizeRect></FastChangeRefSizeRect>
-    <PieChartSectorOutlineColor>
-      <Red>100</Red>
-      <Green>100</Green>
-      <Blue>100</Blue>
-      <Alpha>100</Alpha>
-    </PieChartSectorOutlineColor>
+    <PieChartSectorOutlineColor></PieChartSectorOutlineColor>
     <ShowTotalWithInsideValues>false</ShowTotalWithInsideValues>
-    <GridBubbleScalingMode>AREA_SCALING</GridBubbleScalingMode>
+    <GridBubbleScalingMode>LINEAR_SCALING</GridBubbleScalingMode>
   </ChartProperties>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
@@ -10484,7 +10477,9 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -10507,31 +10502,15 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>OrdenProd.CREATEDBY</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Calendario.ano</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>OrdenProd.PRODSTATUSNAME</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>RpProduccion.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10547,6 +10526,22 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
+          <DimName>OrdenProd.PRODSTATUSNAME</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.CREATEDBY</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
           <DimName>Producto.TipoAdquisicion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -10555,7 +10550,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.TipoPrenda</DimName>
+          <DimName>Calendario.ano</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10563,7 +10558,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>RpProduccion.Referencia</DimName>
+          <DimName>Producto.TipoPrenda</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -10577,7 +10572,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>0</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>//Aggr(Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;}RpProduccion.IdTaller), RpProduccion.IdOPMaestra)
@@ -11168,7 +11163,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>1</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Aggr(If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3)), RpProduccion.IdOPMaestra)</v>
@@ -11751,7 +11746,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>2</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Aggr(Sum(OrdenProd.QTYCALC), RpProduccion.IdOPMaestra)</v>
@@ -12341,7 +12336,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>3</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>[Cantidad Programada] - (Aggr(Sum(OrdenProd.PdteEnsamblar), RpProduccion.IdOPMaestra))</v>
@@ -14097,7 +14092,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>5</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
@@ -15270,7 +15265,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>4</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Aggr(Sum({&lt;CostosProduccion.BOM -= {'1'}, CostosProduccion.COSTGROUPID = {'CIF_*'}&gt;} CostosProduccion.CostoProduccion), RpProduccion.IdOPMaestra)</v>
@@ -15853,7 +15848,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>6</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Aggr(Sum({&lt;CostosProduccion.BOM -= {'1'}&gt;} CostosProduccion.CostoProduccion), RpProduccion.IdOPMaestra)</v>
@@ -16436,7 +16431,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>7</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Aggr(Sum({&lt;CostosProduccion.BOM -= {'1'}&gt;} CostosProduccion.CostoReal), RpProduccion.IdOPMaestra)</v>

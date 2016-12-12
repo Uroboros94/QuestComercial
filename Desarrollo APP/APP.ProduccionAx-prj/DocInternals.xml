@@ -1507,12 +1507,12 @@
     <String>1</String>
     <String>PedidosTransfer</String>
     <String>491</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>492</String>
     <String>2</String>
     <String>RutasPicking</String>
     <String>LinkTable</String>
-    <String>492</String>
-    <String>1</String>
-    <String>RutasPicking</String>
     <String>493</String>
     <String>1</String>
     <String>RutasPicking</String>
@@ -1566,7 +1566,7 @@
     <String>RutasPicking</String>
     <String>510</String>
     <String>1</String>
-    <String>InventarioDisponible</String>
+    <String>RutasPicking</String>
     <String>511</String>
     <String>1</String>
     <String>InventarioDisponible</String>
@@ -1625,12 +1625,12 @@
     <String>1</String>
     <String>InventarioDisponible</String>
     <String>530</String>
+    <String>1</String>
+    <String>InventarioDisponible</String>
+    <String>531</String>
     <String>2</String>
     <String>MovimientosArticulos</String>
     <String>LinkTable</String>
-    <String>531</String>
-    <String>1</String>
-    <String>MovimientosArticulos</String>
     <String>532</String>
     <String>1</String>
     <String>MovimientosArticulos</String>
@@ -1665,12 +1665,12 @@
     <String>1</String>
     <String>MovimientosArticulos</String>
     <String>543</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>544</String>
     <String>2</String>
     <String>EntradaProducto</String>
     <String>LinkTable</String>
-    <String>544</String>
-    <String>1</String>
-    <String>EntradaProducto</String>
     <String>545</String>
     <String>1</String>
     <String>EntradaProducto</String>
@@ -1694,7 +1694,7 @@
     <String>EntradaProducto</String>
     <String>552</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>553</String>
     <String>1</String>
     <String>Contabilidad</String>
@@ -1760,7 +1760,7 @@
     <String>Contabilidad</String>
     <String>574</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>575</String>
     <String>1</String>
     <String>Facturacion</String>
@@ -1784,8 +1784,11 @@
     <String>Facturacion</String>
     <String>582</String>
     <String>1</String>
-    <String>INLFED</String>
+    <String>Facturacion</String>
     <String>583</String>
+    <String>1</String>
+    <String>INLFED</String>
+    <String>584</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -2206,7 +2209,7 @@
     <Mode>0</Mode>
   </TableViewData>
   <Bookmarks></Bookmarks>
-  <SavedByVersion>12.0.20400.0</SavedByVersion>
+  <SavedByVersion>12.10.10000.0</SavedByVersion>
   <ForceBackEndMacroExecution>false</ForceBackEndMacroExecution>
   <FieldTags>
     <ScriptBased>
@@ -2260,7 +2263,7 @@
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
-        <Tag>$text</Tag>
+        <Tag>$ascii</Tag>
         <FieldNames>
           <String>$Field</String>
           <String>$Table</String>
@@ -2273,7 +2276,6 @@
           <String>Calendario.Festivo</String>
           <String>DefaultDimensions.Ciudad</String>
           <String>DefaultDimensions.Departamento</String>
-          <String>DefaultDimensions.DESC_CENTRO_DE_COSTO</String>
           <String>DefaultDimensions.DESC_COLECCION</String>
           <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
           <String>DefaultDimensions.DESC_FLUJO_DE_EFECTIVO</String>
@@ -2285,6 +2287,7 @@
           <String>DefaultDimensions.DESC_TERCERO</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
           <String>DefaultDimensions.DIMENSION_LINEA</String>
+          <String>DefaultDimensions.DIMENSION_MAINACCOUNT</String>
           <String>DefaultDimensions.DIMENSION_SUBLINEA</String>
           <String>DefaultDimensions.NombreCoordinador</String>
           <String>DefaultDimensions.Pais</String>
@@ -2324,10 +2327,10 @@
           <String>Producto.TipoTejido</String>
           <String>OrdenMaterial</String>
           <String>IdOrdenProd</String>
+          <String>SK.Insumo</String>
           <String>INVENTDIMID</String>
           <String>UNITID</String>
-          <String>VENDID</String>
-          <String>NombreInsumo</String>
+          <String>IdInsumo</String>
           <String>UnidadInsumo</String>
           <String>IdGrupoCosto</String>
           <String>NombreGrupoCosto</String>
@@ -2337,7 +2340,269 @@
           <String>CONDICIONPAGO</String>
           <String>PEDIDOCREADOPOR</String>
           <String>GRUPOCOMISION</String>
-          <String>NOMBREARTICULO</String>
+          <String>NOMBREESTADOLINEA</String>
+          <String>NUMEROVARIANTE</String>
+          <String>ESTILO</String>
+          <String>SITIO</String>
+          <String>UNIDADMEDIDA</String>
+          <String>RAZONDEVOLUCION</String>
+          <String>RAZONGRUPO</String>
+          <String>TAXGROUP</String>
+          <String>TAXGROUPNAME</String>
+          <String>GRUPOVENTAS</String>
+          <String>NUMEROFACTURA</String>
+          <String>NOMBREFACTURADOR</String>
+          <String>NOMBREREESTABLECERESTADO</String>
+          <String>PEDIDORETORNADO</String>
+          <String>NombreLocalidad</String>
+          <String>Cliente.Ciudad</String>
+          <String>Cliente.Departamento</String>
+          <String>Cliente.GrupoCliente</String>
+          <String>Cliente.IdPais</String>
+          <String>Cliente.NombreCompleto</String>
+          <String>Cliente.PaginaWeb</String>
+          <String>Cliente.Pais</String>
+          <String>Cliente.TipoCliente</String>
+          <String>Cliente.Zona</String>
+          <String>CostosProduccion.CALCGROUPID</String>
+          <String>CostosProduccion.COSTGROUPID</String>
+          <String>CostosProduccion.DERIVEDREFNUM</String>
+          <String>CostosProduccion.INVENTDIMID</String>
+          <String>CostosProduccion.INVENTDIMSTR</String>
+          <String>RpProduccion.IdOPMaestra</String>
+          <String>CostosProduccion.OPRID</String>
+          <String>CostosProduccion.TRANSREFTYPE</String>
+          <String>CostosProduccion.UnidadVenta</String>
+          <String>CostosProduccion.VENDID</String>
+          <String>COLLECTREFPRODID</String>
+          <String>PRODID</String>
+          <String>OrdenProd.INVENTBATCHID</String>
+          <String>OrdenProd.NAME</String>
+          <String>OrdenProd.PRODSTATUSNAME</String>
+          <String>OrdenProd.INVENTTRANSID</String>
+          <String>OrdenProd.INVENTREFID</String>
+          <String>OrdenProd.INVENTREFTRANSID</String>
+          <String>OrdenProd.PRODPOOLID</String>
+          <String>OrdenProd.PROPERTYID</String>
+          <String>OrdenProd.BOMID</String>
+          <String>OrdenProd.ROUTEID</String>
+          <String>OrdenProd.REQPLANIDSCHED</String>
+          <String>OrdenProd.REQPOID</String>
+          <String>OrdenProd.INVENTDIMID</String>
+          <String>OrdenProd.PRODORIGID</String>
+          <String>OrdenProd.PROJID</String>
+          <String>OrdenProd.PROJCATEGORYID</String>
+          <String>OrdenProd.PROJLINEPROPERTYID</String>
+          <String>OrdenProd.PROJTRANSID</String>
+          <String>OrdenProd.PROJSALESCURRENCYID</String>
+          <String>OrdenProd.PROJSALESUNITID</String>
+          <String>OrdenProd.PROJTAXGROUPID</String>
+          <String>OrdenProd.PROJTAXITEMGROUPID</String>
+          <String>OrdenProd.ACTIVITYNUMBER</String>
+          <String>OrdenProd.PRICEGROUP_RU</String>
+          <String>OrdenProd.CURRENCYCODE_RU</String>
+          <String>OrdenProd.PBAID</String>
+          <String>OrdenProd.PMFCONSORDID</String>
+          <String>OrdenProd.CREATEDBY</String>
+          <String>OrdenProd.AP_QST_MASTERPRODORDID</String>
+          <String>OrdenProd.AP_QST_PROCESSNAME</String>
+          <String>OrdenProd.AP_QST_MOVJOURNALID</String>
+          <String>OrdenProd.AP_QST_SALESID</String>
+          <String>ProdCalcTrans.COSTGROUPID</String>
+          <String>ProdCalcTrans.CALCGROUPID</String>
+          <String>ProdCalcTrans.INVENTDIMSTR</String>
+          <String>ProdCalcTrans.UNITID</String>
+          <String>ProdCalcTrans.OPRID</String>
+          <String>OrdenesCompra.PURCHID</String>
+          <String>OrdenesCompra.PURCHNAME</String>
+          <String>OrdenesCompra.CREATEDBY</String>
+          <String>OrdenesCompra.CURRENCYCODE</String>
+          <String>OrdenesCompra.PAYMENT</String>
+          <String>OrdenesCompra.CASHDISC</String>
+          <String>OrdenesCompra.VENDGROUP</String>
+          <String>OrdenesCompra.LINEDISC</String>
+          <String>OrdenesCompra.PRICEGROUPID</String>
+          <String>OrdenesCompra.MULTILINEDISC</String>
+          <String>OrdenesCompra.ENDDISC</String>
+          <String>OrdenesCompra.TAXGROUP</String>
+          <String>OrdenesCompra.DLVTERM</String>
+          <String>OrdenesCompra.DLVMODE</String>
+          <String>OrdenesCompra.CONTACTPERSONID</String>
+          <String>OrdenesCompra.INVENTSITEID</String>
+          <String>OrdenesCompra.PURCHPOOLID</String>
+          <String>OrdenesCompra.PAYMMODE</String>
+          <String>OrdenesCompra.PAYMSPEC</String>
+          <String>OrdenesCompra.PURCHSTATUSNAME</String>
+          <String>OrdenesCompra.PURCHDOCUMENTSTATENAME</String>
+          <String>OrdenesCompra.PURCHASETYPENAME</String>
+          <String>VENPACKINGLIPID</String>
+          <String>OrdenesCompra.LineasOC.ITEMID</String>
+          <String>OrdenesCompra.LineasOC.NAME</String>
+          <String>OrdenesCompra.LineasOC.TAXGROUP</String>
+          <String>OrdenesCompra.LineasOC.CURRENCYCODE</String>
+          <String>OrdenesCompra.LineasOC.EXTERNALITEMID</String>
+          <String>OrdenesCompra.LineasOC.PURCHUNIT</String>
+          <String>OrdenesCompra.LineasOC.INVENTTRANSID</String>
+          <String>OrdenesCompra.LineasOC.VENDGROUP</String>
+          <String>OrdenesCompra.LineasOC.INVENTDIMID</String>
+          <String>OrdenesCompra.LineasOC.ASSETGROUP</String>
+          <String>OrdenesCompra.LineasOC.INVENTREFID</String>
+          <String>RecepcionesOP.PURCHID</String>
+          <String>RecepcionesOP.INVENTTRANSID</String>
+          <String>RecepcionesOP.ITEMID</String>
+          <String>RecepcionesOP.INVENTDIMID</String>
+          <String>RecepcionesOP.INVENTSIZEID</String>
+          <String>RpProduccion.ClaseReferencia</String>
+          <String>RpProduccion.Coleccion</String>
+          <String>RpProduccion.EstadoProd</String>
+          <String>RpProduccion.GrupoOP</String>
+          <String>RpProduccion.DiarioTransfTela</String>
+          <String>RpProduccion.IdLinea</String>
+          <String>RpProduccion.IdOPHija</String>
+          <String>RpProduccion.IdSublinea</String>
+          <String>RpProduccion.IdTaller</String>
+          <String>RpProduccion.KeyTemp</String>
+          <String>RpProduccion.Linea</String>
+          <String>RpProduccion.Marca</String>
+          <String>RpProduccion.NombreOperacion</String>
+          <String>RpProduccion.Sublinea</String>
+          <String>Precio.Canal</String>
+          <String>Precio.Metrica</String>
+          <String>Precio.Divisa</String>
+          <String>PedidosTransfer.CODTRANSFERENCIA</String>
+          <String>PedidosTransfer.NOMBREALMACENDESTINO</String>
+          <String>PedidosTransfer.NOMBREALMACENORIGEN</String>
+          <String>PedidosTransfer.ESTADOTRANSFERENCIA</String>
+          <String>PedidosTransfer.ORDENPRODUCMAESTRA</String>
+          <String>PedidosTransfer.CODICG</String>
+          <String>PedidosTransfer.UBICACION</String>
+          <String>RutasPicking.RUTAPICKING</String>
+          <String>RutasPicking.CODIGOENVIO</String>
+          <String>RutasPicking.ESTADOMANIPULACION</String>
+          <String>RutasPicking.NUMEROPEDIDO</String>
+          <String>RutasPicking.CODIGOTRABAJADOR</String>
+          <String>RutasPicking.NOMBRETRABAJADOR</String>
+          <String>RutasPicking.NOMBRECLIENTE</String>
+          <String>RutasPicking.CODIGOALMACEN</String>
+          <String>RutasPicking.ALMACEN</String>
+          <String>RutasPicking.UBICACION</String>
+          <String>RutasPicking.TALLA</String>
+          <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
+          <String>InventarioDisponible.NOMBREALMACEN</String>
+          <String>InventarioDisponible.UBICACION</String>
+          <String>MovimientosArticulos.DESCMOVIMIENTO</String>
+          <String>MovimientosArticulos.NOMBREALMACEN</String>
+          <String>MovimientosArticulos.CODIGODIARIO</String>
+          <String>MovimientosArticulos.CONTABILIZADO</String>
+          <String>MovimientosArticulos.ORDENPRODMAESTRA</String>
+          <String>MovimientosArticulos.ORDENPRODUC</String>
+          <String>%EntradaProductoKey</String>
+          <String>EntradaProducto.CODDIARIO</String>
+          <String>EntradaProducto.TIPOTRANSF</String>
+          <String>EntradaProducto.FECHATRANSF</String>
+          <String>EntradaProducto.CODARTICULO</String>
+          <String>EntradaProducto.COLORID</String>
+          <String>EntradaProducto.TALLA</String>
+          <String>EntradaProducto.CANTTRANSFE</String>
+          <String>EntradaProducto.CODORDENPROD</String>
+          <String>Contabilidad.DIMENSION_CENTRO_DE_COSTO</String>
+          <String>Contabilidad.EC.Canal</String>
+          <String>Contabilidad.DIMENSION_LINEA</String>
+          <String>Contabilidad.DESC_MARCA</String>
+          <String>Contabilidad.DESC_CENTRO_DE_COSTO</String>
+          <String>Contabilidad.NOMBRE_CUENTA_N1</String>
+          <String>Contabilidad.NOMBRE_CUENTA_N2</String>
+          <String>Contabilidad.NOMBRE_CUENTA_N3</String>
+          <String>Contabilidad.NOMBRE_CUENTA_N4</String>
+          <String>Contabilidad.NOMBRE_AUXILIAR</String>
+          <String>Venta.IdFactura</String>
+          <String>Venta.AsientoFactura</String>
+          <String>Venta.Creador</String>
+          <String>Dimensiones</String>
+          <String>Calculos</String>
+        </FieldNames>
+      </FieldTagData>
+      <FieldTagData>
+        <Tag>$text</Tag>
+        <FieldNames>
+          <String>$Field</String>
+          <String>$Table</String>
+          <String>$Info</String>
+          <String>Calendario.nomMes</String>
+          <String>Calendario.MonthYear</String>
+          <String>Calendario.Semestre</String>
+          <String>Calendario.nomTrim</String>
+          <String>Calendario.SemanaMes</String>
+          <String>Calendario.Festivo</String>
+          <String>DefaultDimensions.Ciudad</String>
+          <String>DefaultDimensions.Departamento</String>
+          <String>DefaultDimensions.DESC_CENTRO_DE_COSTO</String>
+          <String>DefaultDimensions.DESC_COLECCION</String>
+          <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
+          <String>DefaultDimensions.DESC_FLUJO_DE_EFECTIVO</String>
+          <String>DefaultDimensions.DESC_LINEA</String>
+          <String>DefaultDimensions.DESC_MAINACCOUNT</String>
+          <String>DefaultDimensions.DESC_MARCA</String>
+          <String>DefaultDimensions.DESC_PROYECTO</String>
+          <String>DefaultDimensions.DESC_SUBLINEA</String>
+          <String>DefaultDimensions.DESC_TERCERO</String>
+          <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
+          <String>DefaultDimensions.DIMENSION_LINEA</String>
+          <String>DefaultDimensions.DIMENSION_MAINACCOUNT</String>
+          <String>DefaultDimensions.DIMENSION_SUBLINEA</String>
+          <String>DefaultDimensions.NombreCoordinador</String>
+          <String>DefaultDimensions.Pais</String>
+          <String>DefaultDimensions.EC.Canal</String>
+          <String>DefaultDimensions.ZonaGeografica</String>
+          <String>Producto.IdSublinea</String>
+          <String>Producto.AparienciaDetallada</String>
+          <String>Producto.AparienciaGeneral</String>
+          <String>Producto.BandaPrecio</String>
+          <String>Producto.Categoria</String>
+          <String>Producto.ClasificacionInventario</String>
+          <String>Producto.Clima</String>
+          <String>Producto.Coleccion</String>
+          <String>Producto.Cuello</String>
+          <String>Producto.Diseñador</String>
+          <String>Producto.Emitido</String>
+          <String>Producto.Estilo</String>
+          <String>Producto.Genero</String>
+          <String>Producto.GeneroMat</String>
+          <String>Producto.GrupoProductos</String>
+          <String>Producto.Lavado</String>
+          <String>Producto.Linea</String>
+          <String>Producto.Manga</String>
+          <String>Producto.Marca</String>
+          <String>Producto.NivelModa</String>
+          <String>Producto.NonmbreCategoria</String>
+          <String>Producto.OperacionUso</String>
+          <String>Producto.Patronista</String>
+          <String>Producto.Seguimiento</String>
+          <String>Producto.Silueta</String>
+          <String>Producto.Sublinea</String>
+          <String>Producto.SubTipo</String>
+          <String>Producto.Tipo</String>
+          <String>Producto.TipoAdquisicion</String>
+          <String>Producto.TipoPrenda</String>
+          <String>Producto.TipoProducto</String>
+          <String>Producto.TipoTejido</String>
+          <String>OrdenMaterial</String>
+          <String>IdOrdenProd</String>
+          <String>SK.Insumo</String>
+          <String>INVENTDIMID</String>
+          <String>UNITID</String>
+          <String>IdInsumo</String>
+          <String>NombreInsumo</String>
+          <String>AliasInsumo</String>
+          <String>UnidadInsumo</String>
+          <String>IdGrupoCosto</String>
+          <String>NombreGrupoCosto</String>
+          <String>IDPEDIDO</String>
+          <String>NOMBRETIPOPEDIDO</String>
+          <String>NOMBREESTADOPEDIDO</String>
+          <String>CONDICIONPAGO</String>
+          <String>PEDIDOCREADOPOR</String>
+          <String>GRUPOCOMISION</String>
           <String>NOMBREESTADOLINEA</String>
           <String>NUMEROVARIANTE</String>
           <String>ESTILO</String>
@@ -2379,7 +2644,6 @@
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.NAME</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
-          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.INVENTTRANSID</String>
           <String>OrdenProd.INVENTREFID</String>
           <String>OrdenProd.INVENTREFTRANSID</String>
@@ -2414,10 +2678,6 @@
           <String>ProdCalcTrans.INVENTDIMSTR</String>
           <String>ProdCalcTrans.UNITID</String>
           <String>ProdCalcTrans.OPRID</String>
-          <String>InventTransOP.DATEFINANCIAL</String>
-          <String>InventTransOP.QTY</String>
-          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
-          <String>InventTransOP.COSTAMOUNTPOSTED</String>
           <String>OrdenesCompra.PURCHID</String>
           <String>OrdenesCompra.PURCHNAME</String>
           <String>OrdenesCompra.CREATEDBY</String>
@@ -2454,7 +2714,9 @@
           <String>OrdenesCompra.LineasOC.INVENTREFID</String>
           <String>RecepcionesOP.PURCHID</String>
           <String>RecepcionesOP.INVENTTRANSID</String>
+          <String>RecepcionesOP.ITEMID</String>
           <String>RecepcionesOP.INVENTDIMID</String>
+          <String>RecepcionesOP.INVENTSIZEID</String>
           <String>RpProduccion.ClaseReferencia</String>
           <String>RpProduccion.Coleccion</String>
           <String>RpProduccion.EstadoProd</String>
@@ -2483,10 +2745,13 @@
           <String>RutasPicking.CODIGOENVIO</String>
           <String>RutasPicking.ESTADOMANIPULACION</String>
           <String>RutasPicking.NUMEROPEDIDO</String>
+          <String>RutasPicking.CODIGOTRABAJADOR</String>
           <String>RutasPicking.NOMBRETRABAJADOR</String>
           <String>RutasPicking.NOMBRECLIENTE</String>
+          <String>RutasPicking.CODIGOALMACEN</String>
           <String>RutasPicking.ALMACEN</String>
           <String>RutasPicking.UBICACION</String>
+          <String>RutasPicking.TALLA</String>
           <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
           <String>InventarioDisponible.NOMBREALMACEN</String>
           <String>InventarioDisponible.UBICACION</String>
@@ -2496,10 +2761,16 @@
           <String>MovimientosArticulos.CONTABILIZADO</String>
           <String>MovimientosArticulos.ORDENPRODMAESTRA</String>
           <String>MovimientosArticulos.ORDENPRODUC</String>
+          <String>%EntradaProductoKey</String>
           <String>EntradaProducto.CODDIARIO</String>
           <String>EntradaProducto.TIPOTRANSF</String>
+          <String>EntradaProducto.FECHATRANSF</String>
+          <String>EntradaProducto.CODARTICULO</String>
+          <String>EntradaProducto.COLORID</String>
           <String>EntradaProducto.TALLA</String>
+          <String>EntradaProducto.CANTTRANSFE</String>
           <String>EntradaProducto.CODORDENPROD</String>
+          <String>Contabilidad.DIMENSION_CENTRO_DE_COSTO</String>
           <String>Contabilidad.EC.Canal</String>
           <String>Contabilidad.DIMENSION_LINEA</String>
           <String>Contabilidad.DESC_MARCA</String>
@@ -2509,228 +2780,6 @@
           <String>Contabilidad.NOMBRE_CUENTA_N3</String>
           <String>Contabilidad.NOMBRE_CUENTA_N4</String>
           <String>Contabilidad.NOMBRE_AUXILIAR</String>
-          <String>Venta.IdFactura</String>
-          <String>Venta.AsientoFactura</String>
-          <String>Venta.Creador</String>
-          <String>Dimensiones</String>
-          <String>Calculos</String>
-        </FieldNames>
-      </FieldTagData>
-      <FieldTagData>
-        <Tag>$ascii</Tag>
-        <FieldNames>
-          <String>$Table</String>
-          <String>$Info</String>
-          <String>Calendario.nomMes</String>
-          <String>Calendario.MonthYear</String>
-          <String>Calendario.Semestre</String>
-          <String>Calendario.nomTrim</String>
-          <String>Calendario.SemanaMes</String>
-          <String>DefaultDimensions.Ciudad</String>
-          <String>DefaultDimensions.DESC_COLECCION</String>
-          <String>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</String>
-          <String>DefaultDimensions.DESC_MAINACCOUNT</String>
-          <String>DefaultDimensions.DESC_MARCA</String>
-          <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
-          <String>DefaultDimensions.DIMENSION_LINEA</String>
-          <String>DefaultDimensions.DIMENSION_SUBLINEA</String>
-          <String>DefaultDimensions.NombreCoordinador</String>
-          <String>DefaultDimensions.Pais</String>
-          <String>DefaultDimensions.EC.Canal</String>
-          <String>DefaultDimensions.ZonaGeografica</String>
-          <String>Producto.IdSublinea</String>
-          <String>Producto.AparienciaDetallada</String>
-          <String>Producto.AparienciaGeneral</String>
-          <String>Producto.BandaPrecio</String>
-          <String>Producto.ClasificacionInventario</String>
-          <String>Producto.Clima</String>
-          <String>Producto.Coleccion</String>
-          <String>Producto.Cuello</String>
-          <String>Producto.Diseñador</String>
-          <String>Producto.Emitido</String>
-          <String>Producto.Estilo</String>
-          <String>Producto.Genero</String>
-          <String>Producto.GeneroMat</String>
-          <String>Producto.GrupoProductos</String>
-          <String>Producto.Lavado</String>
-          <String>Producto.Manga</String>
-          <String>Producto.Marca</String>
-          <String>Producto.NivelModa</String>
-          <String>Producto.NonmbreCategoria</String>
-          <String>Producto.OperacionUso</String>
-          <String>Producto.Silueta</String>
-          <String>Producto.SubTipo</String>
-          <String>Producto.TipoAdquisicion</String>
-          <String>Producto.TipoPrenda</String>
-          <String>Producto.TipoProducto</String>
-          <String>Producto.TipoTejido</String>
-          <String>OrdenMaterial</String>
-          <String>IdOrdenProd</String>
-          <String>INVENTDIMID</String>
-          <String>UNITID</String>
-          <String>VENDID</String>
-          <String>UnidadInsumo</String>
-          <String>IdGrupoCosto</String>
-          <String>NombreGrupoCosto</String>
-          <String>IDPEDIDO</String>
-          <String>NOMBRETIPOPEDIDO</String>
-          <String>NOMBREESTADOPEDIDO</String>
-          <String>CONDICIONPAGO</String>
-          <String>PEDIDOCREADOPOR</String>
-          <String>GRUPOCOMISION</String>
-          <String>NOMBREESTADOLINEA</String>
-          <String>NUMEROVARIANTE</String>
-          <String>ESTILO</String>
-          <String>SITIO</String>
-          <String>UNIDADMEDIDA</String>
-          <String>RAZONDEVOLUCION</String>
-          <String>RAZONGRUPO</String>
-          <String>TAXGROUP</String>
-          <String>TAXGROUPNAME</String>
-          <String>GRUPOVENTAS</String>
-          <String>NUMEROFACTURA</String>
-          <String>NOMBREFACTURADOR</String>
-          <String>NOMBREREESTABLECERESTADO</String>
-          <String>PEDIDORETORNADO</String>
-          <String>Cliente.GrupoCliente</String>
-          <String>Cliente.IdPais</String>
-          <String>Cliente.PaginaWeb</String>
-          <String>Cliente.Zona</String>
-          <String>CostosProduccion.CALCGROUPID</String>
-          <String>CostosProduccion.COSTGROUPID</String>
-          <String>CostosProduccion.DERIVEDREFNUM</String>
-          <String>CostosProduccion.INVENTDIMID</String>
-          <String>CostosProduccion.INVENTDIMSTR</String>
-          <String>RpProduccion.IdOPMaestra</String>
-          <String>CostosProduccion.OPRID</String>
-          <String>CostosProduccion.UnidadVenta</String>
-          <String>CostosProduccion.VENDID</String>
-          <String>COLLECTREFPRODID</String>
-          <String>PRODID</String>
-          <String>OrdenProd.INVENTBATCHID</String>
-          <String>OrdenProd.NAME</String>
-          <String>OrdenProd.PRODSTATUSNAME</String>
-          <String>OrdenProd.QTYGOOD</String>
-          <String>OrdenProd.INVENTTRANSID</String>
-          <String>OrdenProd.INVENTREFID</String>
-          <String>OrdenProd.INVENTREFTRANSID</String>
-          <String>OrdenProd.PRODPOOLID</String>
-          <String>OrdenProd.PROPERTYID</String>
-          <String>OrdenProd.BOMID</String>
-          <String>OrdenProd.ROUTEID</String>
-          <String>OrdenProd.REQPLANIDSCHED</String>
-          <String>OrdenProd.REQPOID</String>
-          <String>OrdenProd.INVENTDIMID</String>
-          <String>OrdenProd.PRODORIGID</String>
-          <String>OrdenProd.PROJID</String>
-          <String>OrdenProd.PROJCATEGORYID</String>
-          <String>OrdenProd.PROJLINEPROPERTYID</String>
-          <String>OrdenProd.PROJTRANSID</String>
-          <String>OrdenProd.PROJSALESCURRENCYID</String>
-          <String>OrdenProd.PROJSALESUNITID</String>
-          <String>OrdenProd.PROJTAXGROUPID</String>
-          <String>OrdenProd.PROJTAXITEMGROUPID</String>
-          <String>OrdenProd.ACTIVITYNUMBER</String>
-          <String>OrdenProd.PRICEGROUP_RU</String>
-          <String>OrdenProd.CURRENCYCODE_RU</String>
-          <String>OrdenProd.PBAID</String>
-          <String>OrdenProd.PMFCONSORDID</String>
-          <String>OrdenProd.CREATEDBY</String>
-          <String>OrdenProd.AP_QST_MASTERPRODORDID</String>
-          <String>OrdenProd.AP_QST_PROCESSNAME</String>
-          <String>OrdenProd.AP_QST_MOVJOURNALID</String>
-          <String>OrdenProd.AP_QST_SALESID</String>
-          <String>ProdCalcTrans.COSTGROUPID</String>
-          <String>ProdCalcTrans.CALCGROUPID</String>
-          <String>ProdCalcTrans.INVENTDIMSTR</String>
-          <String>ProdCalcTrans.UNITID</String>
-          <String>ProdCalcTrans.OPRID</String>
-          <String>InventTransOP.DATEFINANCIAL</String>
-          <String>InventTransOP.QTY</String>
-          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
-          <String>InventTransOP.COSTAMOUNTPOSTED</String>
-          <String>OrdenesCompra.PURCHID</String>
-          <String>OrdenesCompra.CREATEDBY</String>
-          <String>OrdenesCompra.CURRENCYCODE</String>
-          <String>OrdenesCompra.PAYMENT</String>
-          <String>OrdenesCompra.CASHDISC</String>
-          <String>OrdenesCompra.VENDGROUP</String>
-          <String>OrdenesCompra.LINEDISC</String>
-          <String>OrdenesCompra.PRICEGROUPID</String>
-          <String>OrdenesCompra.MULTILINEDISC</String>
-          <String>OrdenesCompra.ENDDISC</String>
-          <String>OrdenesCompra.TAXGROUP</String>
-          <String>OrdenesCompra.DLVTERM</String>
-          <String>OrdenesCompra.DLVMODE</String>
-          <String>OrdenesCompra.CONTACTPERSONID</String>
-          <String>OrdenesCompra.INVENTSITEID</String>
-          <String>OrdenesCompra.PURCHPOOLID</String>
-          <String>OrdenesCompra.PAYMMODE</String>
-          <String>OrdenesCompra.PAYMSPEC</String>
-          <String>OrdenesCompra.PURCHSTATUSNAME</String>
-          <String>OrdenesCompra.PURCHDOCUMENTSTATENAME</String>
-          <String>OrdenesCompra.PURCHASETYPENAME</String>
-          <String>VENPACKINGLIPID</String>
-          <String>OrdenesCompra.LineasOC.ITEMID</String>
-          <String>OrdenesCompra.LineasOC.TAXGROUP</String>
-          <String>OrdenesCompra.LineasOC.CURRENCYCODE</String>
-          <String>OrdenesCompra.LineasOC.EXTERNALITEMID</String>
-          <String>OrdenesCompra.LineasOC.PURCHUNIT</String>
-          <String>OrdenesCompra.LineasOC.INVENTTRANSID</String>
-          <String>OrdenesCompra.LineasOC.VENDGROUP</String>
-          <String>OrdenesCompra.LineasOC.INVENTDIMID</String>
-          <String>OrdenesCompra.LineasOC.ASSETGROUP</String>
-          <String>OrdenesCompra.LineasOC.INVENTREFID</String>
-          <String>RecepcionesOP.PURCHID</String>
-          <String>RecepcionesOP.INVENTTRANSID</String>
-          <String>RecepcionesOP.INVENTDIMID</String>
-          <String>RpProduccion.Coleccion</String>
-          <String>RpProduccion.EstadoProd</String>
-          <String>RpProduccion.GrupoOP</String>
-          <String>RpProduccion.DiarioTransfTela</String>
-          <String>RpProduccion.IdLinea</String>
-          <String>RpProduccion.IdOPHija</String>
-          <String>RpProduccion.IdSublinea</String>
-          <String>RpProduccion.IdTaller</String>
-          <String>RpProduccion.KeyTemp</String>
-          <String>RpProduccion.Linea</String>
-          <String>RpProduccion.Marca</String>
-          <String>RpProduccion.NombreOperacion</String>
-          <String>RpProduccion.Sublinea</String>
-          <String>Precio.Canal</String>
-          <String>Precio.Metrica</String>
-          <String>Precio.Divisa</String>
-          <String>PedidosTransfer.CODTRANSFERENCIA</String>
-          <String>PedidosTransfer.NOMBREALMACENDESTINO</String>
-          <String>PedidosTransfer.NOMBREALMACENORIGEN</String>
-          <String>PedidosTransfer.ESTADOTRANSFERENCIA</String>
-          <String>PedidosTransfer.ORDENPRODUCMAESTRA</String>
-          <String>PedidosTransfer.CODICG</String>
-          <String>PedidosTransfer.UBICACION</String>
-          <String>RutasPicking.RUTAPICKING</String>
-          <String>RutasPicking.CODIGOENVIO</String>
-          <String>RutasPicking.ESTADOMANIPULACION</String>
-          <String>RutasPicking.NUMEROPEDIDO</String>
-          <String>RutasPicking.NOMBRETRABAJADOR</String>
-          <String>RutasPicking.NOMBRECLIENTE</String>
-          <String>RutasPicking.ALMACEN</String>
-          <String>RutasPicking.UBICACION</String>
-          <String>RutasPicking.ESTADOMANIPULACIONLINEA</String>
-          <String>InventarioDisponible.NOMBREALMACEN</String>
-          <String>InventarioDisponible.UBICACION</String>
-          <String>MovimientosArticulos.NOMBREALMACEN</String>
-          <String>MovimientosArticulos.CODIGODIARIO</String>
-          <String>MovimientosArticulos.ORDENPRODMAESTRA</String>
-          <String>MovimientosArticulos.ORDENPRODUC</String>
-          <String>EntradaProducto.CODDIARIO</String>
-          <String>EntradaProducto.TALLA</String>
-          <String>EntradaProducto.CODORDENPROD</String>
-          <String>Contabilidad.EC.Canal</String>
-          <String>Contabilidad.DIMENSION_LINEA</String>
-          <String>Contabilidad.DESC_MARCA</String>
-          <String>Contabilidad.NOMBRE_CUENTA_N1</String>
-          <String>Contabilidad.NOMBRE_CUENTA_N2</String>
-          <String>Contabilidad.NOMBRE_CUENTA_N3</String>
           <String>Venta.IdFactura</String>
           <String>Venta.AsientoFactura</String>
           <String>Venta.Creador</String>
@@ -2771,7 +2820,6 @@
           <String>TIPOPEDIDO</String>
           <String>FECHACREACIONPEDIDO</String>
           <String>PENDIENTEENTREGA</String>
-          <String>CODARTICULO</String>
           <String>NUMEROLINEA</String>
           <String>PRECIOUNITARIO</String>
           <String>CANTIDAD</String>
@@ -2817,6 +2865,7 @@
           <String>OrdenProd.PROJLINKEDTOORDER</String>
           <String>OrdenProd.INVENTCOLORID</String>
           <String>OrdenProd.PRODSTATUS</String>
+          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.PRODPRIO</String>
           <String>OrdenProd.PRODLOCKED</String>
           <String>OrdenProd.PRODTYPE</String>
@@ -2884,6 +2933,10 @@
           <String>ProdCalcTrans.REALCOSTAMOUNT</String>
           <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
           <String>ProdCalcTrans.REALCOSTUNIT</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
+          <String>InventTransOP.QTY</String>
+          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
+          <String>InventTransOP.COSTAMOUNTPOSTED</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -2953,7 +3006,6 @@
           <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdTrabAudita</String>
           <String>RpProduccion.Nivel</String>
-          <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
@@ -2961,10 +3013,12 @@
           <String>%PedidosTransferKey</String>
           <String>PedidosTransfer.COLORID</String>
           <String>PedidosTransfer.CANTTRANSFERENCIA</String>
-          <String>PedidosTransfer.FECHARECIBIDO</String>
           <String>PedidosTransfer.FECHAENVIO</String>
+          <String>PedidosTransfer.FECHARECIBIDOLINEA</String>
+          <String>PedidosTransfer.FECHAENVIOLINEA</String>
           <String>%RutasPickingKey</String>
           <String>RutasPicking.TIEMPOACTIVACION</String>
+          <String>RutasPicking.CODIGOCLIENTE</String>
           <String>RutasPicking.CODARTICULO</String>
           <String>RutasPicking.CODCOLOR</String>
           <String>RutasPicking.CANTSELECCIONADA</String>
@@ -2986,9 +3040,6 @@
           <String>%MovimientoProductoKey</String>
           <String>MovimientosArticulos.CANTDIARIO</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>%EntradaProductoKey</String>
-          <String>EntradaProducto.FECHATRANSF</String>
-          <String>EntradaProducto.CANTTRANSFE</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
@@ -3031,18 +3082,14 @@
           <String>Producto.IdMarca</String>
           <String>Producto.IdSubTipo</String>
           <String>PRODLINETYPE</String>
-          <String>BOMQTY</String>
           <String>%OrdenesPedidoKey</String>
           <String>DEFAULTDIMENSIONPEDIDO</String>
           <String>ESTADOPEDIDO</String>
           <String>TIPOPEDIDO</String>
           <String>PENDIENTEENTREGA</String>
-          <String>CODARTICULO</String>
           <String>NUMEROLINEA</String>
-          <String>PRECIOUNITARIO</String>
           <String>CANTIDAD</String>
           <String>ESTADOLINEA</String>
-          <String>DESCUENTO</String>
           <String>COLOR</String>
           <String>RECIDLINE</String>
           <String>PORCENTAJE</String>
@@ -3076,6 +3123,7 @@
           <String>OrdenProd.PROJLINKEDTOORDER</String>
           <String>OrdenProd.INVENTCOLORID</String>
           <String>OrdenProd.PRODSTATUS</String>
+          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.PRODPRIO</String>
           <String>OrdenProd.PRODLOCKED</String>
           <String>OrdenProd.PRODTYPE</String>
@@ -3135,6 +3183,7 @@
           <String>ProdCalcTrans.QTY</String>
           <String>ProdCalcTrans.CONSUMPCONSTANT</String>
           <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -3169,8 +3218,6 @@
           <String>OrdenesCompra.LineasOC.ITEMREFTYPE</String>
           <String>RecepcionesOP.DELIVERYDATE</String>
           <String>RecepcionesOP.LINENUM</String>
-          <String>RecepcionesOP.ORDERED</String>
-          <String>RecepcionesOP.QTY</String>
           <String>RecepcionesOP.REMAIN</String>
           <String>RecepcionesOP.PRICEUNIT</String>
           <String>RecepcionesOP.VENDPACKINGSLIPJOUR</String>
@@ -3195,38 +3242,37 @@
           <String>RpProduccion.IdMarca</String>
           <String>RpProduccion.IdTrabAudita</String>
           <String>RpProduccion.Nivel</String>
-          <String>Precio.IdProducto</String>
           <String>Precio.Importe</String>
           <String>Precio.FechaAplicacion</String>
           <String>Precio.FechaVigencia</String>
           <String>%PedidosTransferKey</String>
           <String>PedidosTransfer.COLORID</String>
           <String>PedidosTransfer.CANTTRANSFERENCIA</String>
-          <String>PedidosTransfer.FECHARECIBIDO</String>
           <String>PedidosTransfer.FECHAENVIO</String>
+          <String>PedidosTransfer.FECHARECIBIDOLINEA</String>
+          <String>PedidosTransfer.FECHAENVIOLINEA</String>
           <String>%RutasPickingKey</String>
+          <String>RutasPicking.CODIGOCLIENTE</String>
           <String>RutasPicking.CODARTICULO</String>
           <String>RutasPicking.CODCOLOR</String>
           <String>RutasPicking.CANTSELECCIONADA</String>
           <String>RutasPicking.CANTPROGRAMADA</String>
           <String>InventarioDisponible.CANTRECIBIDA</String>
-          <String>InventarioDisponible.CANTDEDUCIDA</String>
           <String>InventarioDisponible.CANTREGISTRADA</String>
           <String>InventarioDisponible.CANTRECOGIDA</String>
-          <String>InventarioDisponible.CANTRESERVADA</String>
-          <String>InventarioDisponible.ENORDEN</String>
           <String>InventarioDisponible.LLEGADA</String>
           <String>InventarioDisponible.ORDENADARESERVADA</String>
           <String>%MovimientoProductoKey</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>%EntradaProductoKey</String>
-          <String>EntradaProducto.FECHATRANSF</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
           <String>Contabilidad.CUENTA_N3</String>
           <String>Contabilidad.CUENTA_N4</String>
           <String>Contabilidad.CUENTA_N5</String>
+          <String>Contabilidad.DEBITO</String>
+          <String>Contabilidad.CREDITO</String>
+          <String>Contabilidad.MOVIMIENTO</String>
           <String>Contabilidad.ANO</String>
           <String>Contabilidad.FECHAVENCIMIENTO</String>
           <String>Venta.IdEstadoFactura</String>
@@ -3237,6 +3283,7 @@
       <FieldTagData>
         <Tag>$timestamp</Tag>
         <FieldNames>
+          <String>SK.FECHA</String>
           <String>Calendario.%_Fechakey</String>
           <String>Calendario.NumericMonthYear</String>
           <String>Calendario.DateMMDD</String>
@@ -3246,6 +3293,7 @@
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.BOMDATE</String>
           <String>OrdenProd.DLVTIME</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.CREATEDDATETIME</String>
@@ -3254,31 +3302,35 @@
           <String>RpProduccion.FechaCreacionRef</String>
           <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>Precio.FechaModificacion</String>
+          <String>PedidosTransfer.FECHAENVIO</String>
           <String>RutasPicking.TIEMPOACTIVACION</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>EntradaProducto.FECHATRANSF</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
+          <String>Contabilidad.FECHAVENCIMIENTO</String>
           <String>Venta.FechaFactura</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
         <Tag>$date</Tag>
         <FieldNames>
+          <String>SK.FECHA</String>
           <String>Calendario.%_Fechakey</String>
           <String>Calendario.NumericMonthYear</String>
           <String>Calendario.DateMMDD</String>
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.BOMDATE</String>
           <String>OrdenProd.DLVTIME</String>
+          <String>InventTransOP.DATEFINANCIAL</String>
           <String>OrdenesCompra.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>RecepcionesOP.DELIVERYDATE</String>
           <String>RpProduccion.FechaCreacionOrden</String>
           <String>RpProduccion.FechaCreacionRef</String>
           <String>RpProduccion.FechaEstimadaEntrega</String>
+          <String>PedidosTransfer.FECHAENVIO</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>EntradaProducto.FECHATRANSF</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
+          <String>Contabilidad.FECHAVENCIMIENTO</String>
           <String>Venta.FechaFactura</String>
         </FieldNames>
       </FieldTagData>
