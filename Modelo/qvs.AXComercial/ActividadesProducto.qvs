@@ -1,33 +1,33 @@
 /******************************************************************************************************
-     Fecha : 03/10/2016
-     ----------------------------------------------------------------------------------------------------
-     Detalle :
-     Creación del Modelo: Actividades de Productos
-     -------------------------------------------------------------------------------------------------
-     Fecha       |   Desarrollador   |   Modificación
-     -------------------------------------------------------------------------------------------------
-     03/10/2016  |   Alejandro Saa G |   Inicio de Configuración
+	Fecha : 03/10/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Actividades de Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	03/10/2016  |   Alejandro Saa G |   Inicio de Configuración
 *****************************************************************************************************/
 ActividadesProducto:
-LOAD
-     ITEMRELATION&ITEMSIZE&ITEMCOLOR as CK.ProductoTallaColor,
-     JOURNALNAME,
-     NAME as DescripcionDiario,
-     JOURNALNUM,
-     DEFAULTRELATION,
-     ACCOUNTCODE,
-     ACCOUNTRELATION,
-     ITEMCODE,
-     ITEMRELATION,
-     QTYAMOUNTFROM,
-     QTYAMOUNTTO,
-     UNIT,
-     AMOUNT,
-     Date(FROMDATE, 'YYYYMMDD') as DesdeFecha,
-     Date(TODATE, 'YYYYMMDD') as HastaFecha,
-     COSTPRICEUNIT,
-     ITEMCOLOR,
-     ITEMSIZE
-FROM
-[..\QVD\QST_ActividadesProducto.QVD]
-(qvd);
+	LOAD
+		ITEMRELATION&ITEMSIZE&ITEMCOLOR as CK.ProductoTallaColor,
+		JOURNALNAME,
+		NAME as DescripcionDiario,
+		JOURNALNUM,
+		DEFAULTRELATION,
+		ACCOUNTCODE,
+		ACCOUNTRELATION,
+		ITEMCODE,
+		ITEMRELATION,
+		QTYAMOUNTFROM,
+		QTYAMOUNTTO,
+		UNIT,
+		AMOUNT,
+		Date(FROMDATE, 'YYYYMMDD')         as DesdeFecha,
+		Date(TODATE, 'YYYYMMDD') as HastaFecha,
+		COSTPRICEUNIT,
+		ITEMCOLOR,
+		ITEMSIZE
+	FROM
+	[..\QVD\QST_ActividadesProducto.QVD]
+	(qvd);
