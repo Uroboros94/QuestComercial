@@ -229,7 +229,10 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>if(Contabilidad.CUENTA_N2='21' and Contabilidad.FACTURAORIGEN &lt;&gt; '',Contabilidad.FECHAVENCIMIENTO - Contabilidad.ACCOUNTINGDATE)</v>
+        <v>Sum({&lt;
+	Contabilidad.CUENTA_N2={'21'},
+	Contabilidad.FACTURAORIGEN -= {''}
+	&gt;}Contabilidad.FECHAVENCIMIENTO - Contabilidad.ACCOUNTINGDATE)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -308,10 +311,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>UNKNOWN</Type>
-        <nDec>10</nDec>
+        <Type>INTEGER</Type>
+        <nDec>0</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>#.##0</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -4799,7 +4802,10 @@
           <InternalId>1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>if(Contabilidad.CUENTA_N2='21' and Contabilidad.FACTURAORIGEN &lt;&gt; '',Contabilidad.FECHAVENCIMIENTO - Contabilidad.ACCOUNTINGDATE)</v>
+              <v>Sum({&lt;
+	Contabilidad.CUENTA_N2={'21'},
+	Contabilidad.FACTURAORIGEN -= {''}
+	&gt;}Contabilidad.FECHAVENCIMIENTO - Contabilidad.ACCOUNTINGDATE)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4848,10 +4854,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>UNKNOWN</Type>
-              <nDec>10</nDec>
+              <Type>INTEGER</Type>
+              <nDec>0</nDec>
               <UseThou>0</UseThou>
-              <Fmt></Fmt>
+              <Fmt>#.##0</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
