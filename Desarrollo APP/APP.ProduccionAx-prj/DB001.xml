@@ -40,8 +40,6 @@
       <Name>
         <v>Saldo de Producción</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
@@ -3317,7 +3315,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>322</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3904,7 +3902,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>322</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -4491,7 +4489,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>344</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -5078,7 +5076,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>344</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -5669,7 +5667,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>581</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6260,7 +6258,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>581</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6655,12 +6653,12 @@
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -8380,14 +8378,9 @@
     <TruncateLabel>true</TruncateLabel>
     <ScaleChartSizeRects></ScaleChartSizeRects>
     <FastChangeRefSizeRect></FastChangeRefSizeRect>
-    <PieChartSectorOutlineColor>
-      <Red>100</Red>
-      <Green>100</Green>
-      <Blue>100</Blue>
-      <Alpha>100</Alpha>
-    </PieChartSectorOutlineColor>
+    <PieChartSectorOutlineColor></PieChartSectorOutlineColor>
     <ShowTotalWithInsideValues>false</ShowTotalWithInsideValues>
-    <GridBubbleScalingMode>AREA_SCALING</GridBubbleScalingMode>
+    <GridBubbleScalingMode>LINEAR_SCALING</GridBubbleScalingMode>
   </ChartProperties>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
@@ -8396,6 +8389,10 @@
       <int>581</int>
       <int>581</int>
       <int>303</int>
+      <int>300</int>
+      <int>300</int>
+      <int>300</int>
+      <int>300</int>
       <int>300</int>
     </ColWidths>
     <Striping>
@@ -8953,6 +8950,10 @@
       <int>2</int>
       <int>3</int>
       <int>4</int>
+      <int>5</int>
+      <int>6</int>
+      <int>7</int>
+      <int>8</int>
     </InterFieldSortOrder>
     <ExpressionPosition>1</ExpressionPosition>
     <NumberOfLeftDimensions>1</NumberOfLeftDimensions>
@@ -8970,7 +8971,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -11058,10 +11061,7 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_COND</Type>
-            <Expression>vSheetDsg='Seguimiento'</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -11750,10 +11750,7 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_COND</Type>
-            <Expression>vSheetDsg='Seguimiento'</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -12258,7 +12255,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>322</ColWidth>
+            <ColWidth>300</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -12450,10 +12447,7 @@
             <LineStyleExp></LineStyleExp>
             <ShowValueExp></ShowValueExp>
           </AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_COND</Type>
-            <Expression>vSheetDsg='Costos'</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -12958,7 +12952,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>344</ColWidth>
+            <ColWidth>300</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -13150,10 +13144,7 @@
             <LineStyleExp></LineStyleExp>
             <ShowValueExp></ShowValueExp>
           </AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_COND</Type>
-            <Expression>vSheetDsg='Costos'</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -13662,7 +13653,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>581</ColWidth>
+            <ColWidth>300</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -13842,10 +13833,7 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_COND</Type>
-            <Expression>vSheetDsg='Logistica'</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>
@@ -14354,7 +14342,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>581</ColWidth>
+            <ColWidth>300</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -14534,10 +14522,7 @@
             <MinorStepMode>0</MinorStepMode>
           </AxisData>
           <AttributeExpressions></AttributeExpressions>
-          <EnableCondition>
-            <Type>COND_EX_COND</Type>
-            <Expression>vSheetDsg='Logistica'</Expression>
-          </EnableCondition>
+          <EnableCondition></EnableCondition>
         </Data>
         <SubExpressions></SubExpressions>
       </MainExpressionData>

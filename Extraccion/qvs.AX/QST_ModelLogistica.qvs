@@ -21,8 +21,9 @@ PedidosTransfer:
     	TALLA,
     	UBICACION,
     	CANTTRANSFERENCIA,
-      FECHARECIBIDO,
-      FECHAENVIO
+      FECHAENVIO,
+      FECHARECIBIDOLINEA,
+      FECHAENVIOLINEA
     FROM QST_MODELLOGISTICA;
 
 STORE PedidosTransfer INTO [..\QVD\PedidosTransfer.QVD](qvd);
