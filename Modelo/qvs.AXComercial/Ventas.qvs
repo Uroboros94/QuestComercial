@@ -14,15 +14,14 @@
 Venta:
 	LOAD 
 		SALESID										as SK.Pedido, 
+		CUENTACLIENTE								as Venta.IdCliente,
 
 		ESTADOFACTURA 								as Venta.IdEstadoFactura,
-		CUENTACLIENTE								as Venta.IdCliente,
 		IDFACTURA									as Venta.IdFactura, 
 		SALESID										as Venta.IdPedido, 
 		ASIENTOFACTURA								as Venta.IdAsiento, 
 		DIASVENCIDOS								as Venta.DiasVencidos, 
 		DIMENSIONDEFAULTFACTSERV					as Venta.FactServ, 
-		DIMENSIONDEFAULTSALES						as Venta.Sales, 
 		DIVISA 										as Venta.Divisa, 
 		NOMBREESTADOFACTURA							as Venta.EstadoFactura, 
 		Date(FECHAFACTURA,'YYYYMMDD')				as Venta.FechaFactura,
@@ -38,8 +37,7 @@ Venta:
 		Num(VALORLINEA)								as Venta.ValorFactura, 
 		Num(VALORFACTURADIVISATRANS)				as Venta.ValorFacturaDivisaTrans, 
 		Num(VALORLIQUIDADO)							as Venta.ValorLiquidado, 
-		VENCIDA 									as Venta.EsVencida,
-		NOMBREVENCIDA								as Venta.NombreVencida, 
+		NOMBREVENCIDA 								as Venta.EsVencida,
 		Date(CREATEDDATETIME)						as Venta.FechaCreacion, 
 		CREATEDBY									as Venta.Creador,
 		Num(CANTIDAD) 								as Venta.CantidadVentas
@@ -47,11 +45,12 @@ Venta:
 	[..\QVD\QST_MODELFACTURAS.QVD]
 	(qvd);
 
-		//CUENTACLIENTE								as SK.Cliente,
+		//VENCIDA								as Venta.DescEsVencida, 
 		//MODULOGENERACION,
 		//NOMBREMODULOGENERACION, 
 		//CONDICIONPAGO, 
 		//NOMBRECLIENTE, 
+		//DIMENSIONDEFAULTSALES						as Venta.Sales, 
 		//DATAAREAID, 
 		//RECVERSION, 
 		//PARTITION, 

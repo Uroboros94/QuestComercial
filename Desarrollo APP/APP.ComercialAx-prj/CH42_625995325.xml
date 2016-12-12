@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(PedidosVenta.ValorNeto)</v>
+        <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}PedidosVenta.ValorNeto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,7 +254,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(Venta.ValorFactura)</v>
+        <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Venta.ValorFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1972,9 +1972,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>0</Red>
+                <Green>0</Green>
+                <Blue>160</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -2009,10 +2009,10 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
+              <Red>68</Red>
+              <Green>114</Green>
+              <Blue>196</Blue>
+              <Alpha>80</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -2432,7 +2432,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>203</ColWidth>
+      <ColWidth>228</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -5307,15 +5307,15 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>250</int>
+      <int>228</int>
       <int>125</int>
       <int>272</int>
       <int>313</int>
       <int>269</int>
       <int>319</int>
-      <int>300</int>
-      <int>288</int>
-      <int>325</int>
+      <int>275</int>
+      <int>241</int>
+      <int>238</int>
       <int>284</int>
       <int>300</int>
       <int>300</int>
@@ -5939,7 +5939,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(PedidosVenta.ValorNeto)</v>
+              <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}PedidosVenta.ValorNeto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6529,7 +6529,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Venta.ValorFactura)</v>
+              <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Venta.ValorFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
