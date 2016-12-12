@@ -15,6 +15,7 @@ Venta:
 	LOAD 
 		SALESID										as SK.Pedido, 
 		CUENTACLIENTE								as Venta.IdCliente,
+		ASIENTOFACTURA								as SK.Asiento, 
 
 		ESTADOFACTURA 								as Venta.IdEstadoFactura,
 		IDFACTURA									as Venta.IdFactura, 

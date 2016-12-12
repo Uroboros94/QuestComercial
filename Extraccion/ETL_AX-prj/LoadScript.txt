@@ -21,10 +21,11 @@ SET CollationLocale='es-CO';
 //OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsAX;Data Source=QUEST-DBAX;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is dYEQeIRNJbaICSIGQJMKTcC);
 
 /*Pruebas*/
-//OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsPr2AX;Data Source=10.75.28.43;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is CXYMYIRNJbaICSIGQJMKTVB);
+OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsPr2AX;Data Source=10.75.28.43;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is CXYMYIRNJbaICSIGQJMKTVB);
 
 /*Pre-PRD*/
-OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftPRODAX;Data Source=10.75.28.46;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-85086;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is DfTOSIRNJbaICSIGQJMKDdD);
+//OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftPRODAX;Data Source=10.75.28.46;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-85086;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is DfTOSIRNJbaICSIGQJMKDdD);
+
 ///$tab Dimensiones
 /****************** Cargue de Dimensiones ******************/
 
@@ -82,6 +83,8 @@ $(Must_Include=qvs.ax\maestrolocalidades.qvs);
 $(Must_Include=qvs.ax\ap_qst_mastercalctrans.qvs);
 ///$tab Hechos
 /****************** Cargue de Hechos ******************/
+/*Recaudo*/
+$(Must_Include=qvs.ax\homologaciónpagos.qvs);
 
 /*Cartera*/
 $(Must_Include=qvs.ax\qst_cartera.qvs);
