@@ -7,6 +7,7 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	12/12/2016  |   malemos         |   Inicio de Configuración 
+	13/12/2016	|	malemos			|	Adición de Pronto Pago
 *****************************************************************************************************/
 QST_Modelledgertrans:	
 	LOAD	
@@ -21,6 +22,18 @@ QST_Modelledgertrans:
 	[..\QVD\QST_Modelledgertrans.QVD]
 	(qvd)
 	where CUENTA_N2 = '13';		
+
+Mapping
+ProntoPago:
+	LOAD
+		VOUCHER as Documento,
+		Num(DEBITO+CREDITO) as Movimiento
+	FROM 
+	[..\QVD\QST_Modelledgertrans.QVD]
+	(qvd)
+	where
+	VOUCHER like 'RC%' and
+	CUENTA_N5 = '53053501';
 
 Mapping
 ReteFuente:
@@ -62,6 +75,7 @@ Recaudo_Temp2:
 		Documento,
 		ApplyMap('ReteFuente', Documento, 1.16)		as %Base,
 		ApplyMap('Factura_Asiento', Documento)		as Asiento,
+		ApplyMap('ProntoPago', Documento)			as ProntoPago,
 		Num(Debito+Credito)							as Movimiento
 	resident Recaudo_Temp;
 	DROP Table Recaudo_Temp;
@@ -72,7 +86,7 @@ Recaudo_Temp3:
 		Date(Fecha,'DD/MM/YYYY')					as FechaRecaudo,
 		Documento									as IdRecaudo,
 		Asiento 									as IdAsiento,
-		%Base,
+		num(ProntoPago)								as ProntoPago,
 		Movimiento 									as Movimiento,
 		(Movimiento/%Base)*0.16						as ValorIva,
 		If(%Base<>1.135,0,(Movimiento/%Base)*0.025)	as ValorReteFuente
@@ -85,6 +99,7 @@ Recaudo:
 		IdRecaudo									as Recaudo.IdRecaudo,
 		IdAsiento									as Recaudo.IdAsiento,
 		Auxiliar									as Recaudo.Cuenta,
+		ProntoPago									as Recaudo.ProntoPago,
 		FechaRecaudo								as Recaudo.FechaRecaudo,
 		Movimiento									as Recaudo.Movimiento,
 		ValorIva									as Recaudo.ValorIva,
