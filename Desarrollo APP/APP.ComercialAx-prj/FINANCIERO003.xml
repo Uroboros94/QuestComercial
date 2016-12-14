@@ -255,16 +255,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -280,23 +271,14 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>RangeSum(Above([Cargos],0,rowno())) -RangeSum(Above([Abonos],0,rowno()))</v>
+        <v>RangeSum(Above(TOTAL [Cargos],0,rowno(TOTAL))) -RangeSum(Above(TOTAL [Abonos],0,rowno(TOTAL)))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -305,16 +287,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>false</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -330,16 +303,7 @@
       <AggregationMode>0</AggregationMode>
       <Accumulate>0</Accumulate>
       <UsePartialSum>true</UsePartialSum>
-      <SortCriteria>
-        <SortByState>0</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <CycleGroup>-1</CycleGroup>
       <Show></Show>
       <Comment></Comment>
@@ -2638,7 +2602,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>256</ColWidth>
+      <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2665,11 +2629,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Cartera.FechaUltAsiento</Name>
+        <Name>Cartera.AsientoFactura</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Doc. Compensación</v>
+        <v>Documento Compen.</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -2824,13 +2788,10 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>353</ColWidth>
+      <ColWidth>300</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition>
-        <Type>COND_EX_TRUE</Type>
-        <Expression>0</Expression>
-      </EnableCondition>
+      <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -2864,8 +2825,8 @@
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>-1</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -3013,13 +2974,10 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>141</ColWidth>
+      <ColWidth>106</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition>
-        <Type>COND_EX_TRUE</Type>
-        <Expression>0</Expression>
-      </EnableCondition>
+      <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4427,9 +4385,9 @@
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>228</int>
-      <int>256</int>
-      <int>353</int>
-      <int>141</int>
+      <int>300</int>
+      <int>300</int>
+      <int>106</int>
       <int>306</int>
       <int>300</int>
       <int>306</int>
@@ -4929,12 +4887,12 @@
     <InterFieldSortOrder>
       <int>0</int>
       <int>2</int>
-      <int>3</int>
-      <int>1</int>
-      <int>4</int>
-      <int>5</int>
       <int>6</int>
       <int>7</int>
+      <int>3</int>
+      <int>4</int>
+      <int>5</int>
+      <int>1</int>
     </InterFieldSortOrder>
     <ExpressionPosition>4</ExpressionPosition>
     <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
@@ -4948,8 +4906,9 @@
     <ShowSortIndicators>true</ShowSortIndicators>
     <ShowSelectIndicators>true</ShowSelectIndicators>
     <DisplayOrder>
+      <int>3</int>
       <int>4</int>
-      <int>4</int>
+      <int>1</int>
     </DisplayOrder>
     <IndentMode>false</IndentMode>
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
@@ -4986,7 +4945,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Cartera.FechaUltAsiento</DimName>
+          <DimName>Cartera.AsientoFactura</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5020,16 +4979,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -5610,16 +5560,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -6191,7 +6132,7 @@
           <InternalId>2</InternalId>
           <ExpressionData>
             <Definition>
-              <v>RangeSum(Above([Cargos],0,rowno())) -RangeSum(Above([Abonos],0,rowno()))</v>
+              <v>RangeSum(Above(TOTAL [Cargos],0,rowno(TOTAL))) -RangeSum(Above(TOTAL [Abonos],0,rowno(TOTAL)))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6200,16 +6141,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>false</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
@@ -6790,16 +6722,7 @@
             <AggregationMode>0</AggregationMode>
             <Accumulate>0</Accumulate>
             <UsePartialSum>true</UsePartialSum>
-            <SortCriteria>
-              <SortByState>0</SortByState>
-              <SortByFrequency>0</SortByFrequency>
-              <SortByNumeric>1</SortByNumeric>
-              <SortByAscii>1</SortByAscii>
-              <SortByLoadOrder>0</SortByLoadOrder>
-              <SortByExpression>0</SortByExpression>
-              <Expression></Expression>
-              <SortByGreyness>0</SortByGreyness>
-            </SortCriteria>
+            <SortCriteria></SortCriteria>
             <CycleGroup>-1</CycleGroup>
             <Show></Show>
             <Comment></Comment>
