@@ -24,28 +24,6 @@ QST_Modelledgertrans:
 	where CUENTA_N2 = '13';		
 
 Mapping
-ProntoPago:
-	LOAD
-		VOUCHER as Documento,
-		Num(DEBITO+CREDITO) as Movimiento
-	FROM 
-	[..\QVD\QST_Modelledgertrans.QVD]
-	(qvd)
-	where
-	VOUCHER like 'RC%' and
-	CUENTA_N5 = '53053501';
-
-Mapping
-ReteFuente:
-	LOAD
-		VOUCHER				as Documento,
-		1.135				as %Base
-	Resident QST_Modelledgertrans
-	Where
-		CUENTA_N4 = '135515';
-
-
-Mapping
 Factura_Asiento:
 	LOAD
 		Pago,
@@ -54,6 +32,25 @@ Factura_Asiento:
 	[..\QVD\HomologacionPagos.QVD]
 	(qvd);
 
+Mapping
+ProntoPago:
+	LOAD
+		ApplyMap('Factura_Asiento', VOUCHER, Null()) as Documento,
+		Num(DEBITO+CREDITO) as Movimiento
+	FROM 
+	[..\QVD\QST_Modelledgertrans.QVD]
+	(qvd)
+	where
+	CUENTA_N5 = '53053501';
+
+Mapping
+ReteFuente:
+	LOAD	
+		VOUCHER				as Documento,
+		1.135				as %Base
+	Resident QST_Modelledgertrans
+	Where
+		CUENTA_N4 = '135515';
 
 Recaudo_Temp:
 	LOAD  
@@ -68,34 +65,43 @@ Recaudo_Temp:
 		AND CUENTA_N3 = '1305';
 	DROP Table QST_Modelledgertrans;
 
-Recaudo_Temp2:
+Recaudo_Temp2_1:
 	LOAD
 		Auxiliar,
 		Fecha,
 		Documento,
-		ApplyMap('ReteFuente', Documento, 1.16)		as %Base,
 		ApplyMap('Factura_Asiento', Documento)		as Asiento,
-		ApplyMap('ProntoPago', Documento)			as ProntoPago,
 		Num(Debito+Credito)							as Movimiento
 	resident Recaudo_Temp;
 	DROP Table Recaudo_Temp;
+
+Recaudo_Temp2:
+	LOAD
+		*,
+		ApplyMap('ReteFuente',Asiento,1.16)		as %Base,
+		ApplyMap('ProntoPago',Asiento,0)		as ProntoPago
+	resident Recaudo_Temp2_1;
+	DROP Table Recaudo_Temp2_1;
 
 Recaudo_Temp3:
 	LOAD
 		Auxiliar,
 		Date(Fecha,'DD/MM/YYYY')					as FechaRecaudo,
+		%Base,
 		Documento									as IdRecaudo,
 		Asiento 									as IdAsiento,
 		num(ProntoPago)								as ProntoPago,
 		Movimiento 									as Movimiento,
 		(Movimiento/%Base)*0.16						as ValorIva,
-		If(%Base<>1.135,0,(Movimiento/%Base)*0.025)	as ValorReteFuente
+		If(%Base<>1.135,0,
+			((Movimiento/%Base)*0.025))				as ValorReteFuente
 	Resident Recaudo_Temp2;
 	DROP Table Recaudo_Temp2;
 
 Recaudo:
 	LOAD
 		IdAsiento									as SK.Asiento,
+		%Base,
 		IdRecaudo									as Recaudo.IdRecaudo,
 		IdAsiento									as Recaudo.IdAsiento,
 		Auxiliar									as Recaudo.Cuenta,

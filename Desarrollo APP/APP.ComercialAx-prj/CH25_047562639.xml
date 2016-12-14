@@ -235,7 +235,7 @@
     <WindowTitle>
       <v>Causas de devolución</v>
     </WindowTitle>
-    <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
+    <GraphMode>GRAPH_MODE_PIE</GraphMode>
     <TotalString></TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
@@ -337,7 +337,7 @@
         <Thou>.</Thou>
       </NumberPresentation>
       <PrimaryAxis>true</PrimaryAxis>
-      <ShowExpressionLabel>true</ShowExpressionLabel>
+      <ShowExpressionLabel>false</ShowExpressionLabel>
       <SavedPresentation>
         <Type>UNKNOWN</Type>
         <nDec>10</nDec>
@@ -1733,7 +1733,7 @@
       <RelativePosition></RelativePosition>
       <RelativePositionType>0</RelativePositionType>
       <Transparent>true</Transparent>
-      <Show>true</Show>
+      <Show>false</Show>
       <DockedPosition>POSITION_TOP</DockedPosition>
       <BgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -1780,16 +1780,21 @@
     <Legend>
       <Font></Font>
       <Position>
-        <Left>1120</Left>
-        <Top>201</Top>
-        <Width>280</Width>
-        <Height>525</Height>
+        <Left>709</Left>
+        <Top>0</Top>
+        <Width>600</Width>
+        <Height>797</Height>
       </Position>
-      <RelativePosition></RelativePosition>
-      <RelativePositionType>0</RelativePositionType>
+      <RelativePosition>
+        <Left>3FE15F43D286139A</Left>
+        <Top>0000000000000000</Top>
+        <Width>3FDD671B0CEFED2F</Width>
+        <Height>3FF0000000000000</Height>
+      </RelativePosition>
+      <RelativePositionType>2</RelativePositionType>
       <Show>true</Show>
       <ShowNumbers>false</ShowNumbers>
-      <DockedPosition>POSITION_RIGHT</DockedPosition>
+      <DockedPosition>POSITION_FREE</DockedPosition>
       <BgColor>
         <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
@@ -1826,7 +1831,7 @@
         <SecondaryCol></SecondaryCol>
         <Alpha>255</Alpha>
       </TextColor>
-      <UserSized>false</UserSized>
+      <UserSized>true</UserSized>
       <OnTop>true</OnTop>
       <Style>0</Style>
       <BorderColor></BorderColor>
@@ -2012,7 +2017,7 @@
     <TrendLineWidth>5</TrendLineWidth>
     <ColorMap>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2030,7 +2035,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2048,7 +2053,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2066,7 +2071,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2084,7 +2089,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2102,7 +2107,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2120,7 +2125,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2138,7 +2143,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2156,7 +2161,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2174,7 +2179,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2192,7 +2197,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2210,7 +2215,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2228,7 +2233,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2246,7 +2251,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2264,7 +2269,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2282,7 +2287,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2300,7 +2305,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2318,7 +2323,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2336,7 +2341,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2354,7 +2359,7 @@
         <Alpha>255</Alpha>
       </ColorAreaDef>
       <ColorAreaDef>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Mode>COLORAREA_SOLID</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_VERT</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -2382,7 +2387,7 @@
     <RightAxisPosition>
       <Left>980</Left>
       <Top>201</Top>
-      <Width>140</Width>
+      <Width>-153</Width>
       <Height>525</Height>
     </RightAxisPosition>
     <TopAxisPosition>
@@ -2398,7 +2403,7 @@
       <Height>174</Height>
     </BottomAxisPosition>
     <LeftAxisUserSized>false</LeftAxisUserSized>
-    <RightAxisUserSized>false</RightAxisUserSized>
+    <RightAxisUserSized>true</RightAxisUserSized>
     <TopAxisUserSized>false</TopAxisUserSized>
     <BottomAxisUserSized>false</BottomAxisUserSized>
     <WorkArea>
@@ -3314,7 +3319,7 @@
               <Thou>.</Thou>
             </NumberPresentation>
             <PrimaryAxis>true</PrimaryAxis>
-            <ShowExpressionLabel>true</ShowExpressionLabel>
+            <ShowExpressionLabel>false</ShowExpressionLabel>
             <SavedPresentation>
               <Type>UNKNOWN</Type>
               <nDec>10</nDec>
