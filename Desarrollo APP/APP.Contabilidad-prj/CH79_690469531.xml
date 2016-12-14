@@ -49,8 +49,6 @@
       <Name>
         <v>Real vs Ppto</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -2451,12 +2449,12 @@ sum(Contabilidad.MOVIMIENTO)</v>
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -5098,7 +5096,9 @@ sum(Contabilidad.MOVIMIENTO)</v>
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -5111,7 +5111,15 @@ sum(Contabilidad.MOVIMIENTO)</v>
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N2 &amp;'-'&amp; Contabilidad.NOMBRE_CUENTA_N2</DimName>
           <ElemNo></ElemNo>
@@ -5119,7 +5127,7 @@ sum(Contabilidad.MOVIMIENTO)</v>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N3 &amp;'-'&amp; Contabilidad.NOMBRE_CUENTA_N3</DimName>
           <ElemNo></ElemNo>
@@ -5127,7 +5135,7 @@ sum(Contabilidad.MOVIMIENTO)</v>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N4 &amp;'-'&amp; Contabilidad.NOMBRE_CUENTA_N4</DimName>
           <ElemNo></ElemNo>
@@ -5138,14 +5146,6 @@ sum(Contabilidad.MOVIMIENTO)</v>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N6 &amp;'-'&amp; Contabilidad.NOMBRE_CUENTA_N6</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
