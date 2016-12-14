@@ -7,7 +7,7 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	09/22/2016  |   malemos         |   Inicio de Configuración
-	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros 
+	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros
 *****************************************************************************************************/
 Colores:
 	Mapping LOAD Color as IdColor,
@@ -19,10 +19,10 @@ Colores:
 Generos:
 	Mapping
 	LOAD
-		Producto.Genero  	as Genero, 
-		Producto.IdGenero	as Id
+		DescripcionGenero  	as Genero,
+		IdGenero	as Id
 	FROM
-	[..\QVD\PLM\_Producto.QVD]
+	[..\QVD\PLM\Producto_QV.QVD]
 	(qvd);
 
 
