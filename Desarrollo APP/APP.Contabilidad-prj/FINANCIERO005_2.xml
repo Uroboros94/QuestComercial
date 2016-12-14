@@ -49,8 +49,6 @@
       <Name>
         <v>Recaudo por Centro de Operación (Detalle)</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -919,12 +917,12 @@
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -2649,14 +2647,9 @@
     <TruncateLabel>true</TruncateLabel>
     <ScaleChartSizeRects></ScaleChartSizeRects>
     <FastChangeRefSizeRect></FastChangeRefSizeRect>
-    <PieChartSectorOutlineColor>
-      <Red>100</Red>
-      <Green>100</Green>
-      <Blue>100</Blue>
-      <Alpha>100</Alpha>
-    </PieChartSectorOutlineColor>
+    <PieChartSectorOutlineColor></PieChartSectorOutlineColor>
     <ShowTotalWithInsideValues>false</ShowTotalWithInsideValues>
-    <GridBubbleScalingMode>AREA_SCALING</GridBubbleScalingMode>
+    <GridBubbleScalingMode>LINEAR_SCALING</GridBubbleScalingMode>
   </ChartProperties>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
@@ -3165,7 +3158,7 @@
       <int>3</int>
       <int>0</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>-1</ExpressionPosition>
+    <ExpressionPosition>255</ExpressionPosition>
     <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
@@ -3181,7 +3174,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -3194,7 +3189,15 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Contabilidad.NOMBRE_AUXILIAR</DimName>
           <ElemNo></ElemNo>
@@ -3204,20 +3207,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Contabilidad.VOUCHER</DimName>
-          <ElemNo>
-            <int>995</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BFJDLTAwMDAwMDAwMwA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
           <DimName>Contabilidad.ACCOUNTINGDATE</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -3226,7 +3215,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>EC.NombreCompleto</DimName>
+          <DimName>Contabilidad.VOUCHER</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

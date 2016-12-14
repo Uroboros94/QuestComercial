@@ -49,8 +49,6 @@
       <Name>
         <v>Gastos No Operacionales</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -3978,12 +3976,12 @@
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -6670,7 +6668,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>true</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -6723,7 +6723,7 @@
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>0</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>(sum({&lt;Contabilidad.CUENTA_N2 = {'53'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
@@ -7313,7 +7313,7 @@
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>1</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>(sum({&lt;Contabilidad.CUENTA_N2 = {'53'} , Contabilidad.ANO = {$(=(vAñoSeleccion-1))}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
@@ -7903,7 +7903,7 @@
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>2</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>(sum({&lt;Contabilidad.CUENTA_N2 = {'53'} , Contabilidad.ANO = {$(=(vAñoSeleccion-2))}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
@@ -8493,7 +8493,7 @@
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>4</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>Column(1)-Column(2)</v>
@@ -9083,7 +9083,7 @@
     <ArrayOfMainExpressionData>
       <MainExpressionData>
         <Data>
-          <InternalId>3</InternalId>
+          <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
               <v>(Column(1) - Column(2)) / Column(2)</v>

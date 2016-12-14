@@ -49,8 +49,6 @@
       <Name>
         <v>Est. Result x EC</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -925,12 +923,12 @@
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -3354,7 +3352,7 @@
       <int>5</int>
       <int>4</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>-1</ExpressionPosition>
+    <ExpressionPosition>255</ExpressionPosition>
     <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
@@ -3373,7 +3371,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>true</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -3386,7 +3386,7 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N1&amp;'-'&amp;Contabilidad.NOMBRE_CUENTA_N1</DimName>
           <ElemNo></ElemNo>
@@ -3394,7 +3394,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N2&amp;'-'&amp;Contabilidad.NOMBRE_CUENTA_N2</DimName>
           <ElemNo></ElemNo>
@@ -3402,7 +3402,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Contabilidad.CUENTA_N3&amp;'-'&amp;Contabilidad.NOMBRE_CUENTA_N3</DimName>
           <ElemNo></ElemNo>
