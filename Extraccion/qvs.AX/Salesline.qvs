@@ -61,7 +61,8 @@ Salesline:
         ESTADODOCUMENTO,
         IMPORTEFACTURA,
         TIPONOTACREDITO,
-        NOTAABONO
+        NOTAABONO,
+        FECHAFACTURA
     FROM "QST_MODELSALESLINE";
 
 STORE Salesline INTO [..\QVD\Salesline.QVD](qvd);
