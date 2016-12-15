@@ -49,8 +49,6 @@
       <Name>
         <v>Detalle CIF</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -1936,12 +1934,12 @@
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -6224,14 +6222,9 @@
     <TruncateLabel>true</TruncateLabel>
     <ScaleChartSizeRects></ScaleChartSizeRects>
     <FastChangeRefSizeRect></FastChangeRefSizeRect>
-    <PieChartSectorOutlineColor>
-      <Red>100</Red>
-      <Green>100</Green>
-      <Blue>100</Blue>
-      <Alpha>100</Alpha>
-    </PieChartSectorOutlineColor>
+    <PieChartSectorOutlineColor></PieChartSectorOutlineColor>
     <ShowTotalWithInsideValues>false</ShowTotalWithInsideValues>
-    <GridBubbleScalingMode>AREA_SCALING</GridBubbleScalingMode>
+    <GridBubbleScalingMode>LINEAR_SCALING</GridBubbleScalingMode>
   </ChartProperties>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
@@ -6790,7 +6783,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -6829,7 +6824,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Contabilidad.NOMBRE_AUXILIAR</DimName>
+          <DimName>EC.IdICG</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6837,7 +6832,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Contabilidad.DESC_CENTRO_DE_COSTO</DimName>
+          <DimName>EC.IdCanal</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6846,6 +6849,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Contabilidad.DIMENSION_CENTRO_DE_COSTO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Contabilidad.DESC_CENTRO_DE_COSTO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6862,6 +6873,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Contabilidad.DIMENSION_TERCERO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Contabilidad.NOMBRE_AUXILIAR</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -6894,30 +6913,6 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Contabilidad.CUENTA_N2</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>EC.IdCanal</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>EC.IdICG</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>EC.NombreCompleto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

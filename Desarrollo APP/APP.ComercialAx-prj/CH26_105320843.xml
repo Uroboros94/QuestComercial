@@ -49,8 +49,6 @@
       <Name>
         <v>Devoluciones</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
@@ -926,9 +924,9 @@
       <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
-        <OtherMode>OTHER_OFF</OtherMode>
+        <OtherMode>OTHER_COUNTED</OtherMode>
         <OtherCounted>
-          <v>10</v>
+          <v>11</v>
         </OtherCounted>
         <OtherLimit>
           <v>0.05</v>
@@ -2664,14 +2662,9 @@
     <TruncateLabel>true</TruncateLabel>
     <ScaleChartSizeRects></ScaleChartSizeRects>
     <FastChangeRefSizeRect></FastChangeRefSizeRect>
-    <PieChartSectorOutlineColor>
-      <Red>100</Red>
-      <Green>100</Green>
-      <Blue>100</Blue>
-      <Alpha>100</Alpha>
-    </PieChartSectorOutlineColor>
+    <PieChartSectorOutlineColor></PieChartSectorOutlineColor>
     <ShowTotalWithInsideValues>false</ShowTotalWithInsideValues>
-    <GridBubbleScalingMode>AREA_SCALING</GridBubbleScalingMode>
+    <GridBubbleScalingMode>LINEAR_SCALING</GridBubbleScalingMode>
   </ChartProperties>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
@@ -3180,7 +3173,7 @@
       <int>4</int>
       <int>1</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>-1</ExpressionPosition>
+    <ExpressionPosition>255</ExpressionPosition>
     <NumberOfLeftDimensions>4</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
@@ -3196,7 +3189,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -3209,37 +3204,9 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Calendario.nomMes</DimName>
-          <ElemNo>
-            <int>10</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BE5vdgA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.Genero</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAAAAA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3248,14 +3215,24 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.TipoPrenda</DimName>
-          <ElemNo>
-            <int>0</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAAAAA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Genero</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>

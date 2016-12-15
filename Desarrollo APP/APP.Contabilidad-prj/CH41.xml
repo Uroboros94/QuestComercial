@@ -40,8 +40,6 @@
       <Name>
         <v>Activo Corriente</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>false</AllowMinimize>
       <AutoMinimize>false</AutoMinimize>
@@ -1684,7 +1682,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>319</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2169,7 +2167,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>319</ColWidth>
+      <ColWidth>300</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2949,12 +2947,12 @@
           <v>0.05</v>
         </OtherLimit>
         <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
+        <SuppressOther>true</SuppressOther>
         <ForceBadValueKeeping>true</ForceBadValueKeeping>
         <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
         <GlobalOtherGrouping>false</GlobalOtherGrouping>
         <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <OtherSortMode>OTHER_SORT_DEFAULT</OtherSortMode>
         <TotalMode>TOTAL_OFF</TotalMode>
         <ReferencedExpression></ReferencedExpression>
       </OtherTotalSpec>
@@ -4315,7 +4313,9 @@
       <int>300</int>
       <int>319</int>
       <int>319</int>
-      <int>319</int>
+      <int>300</int>
+      <int>100</int>
+      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -4813,6 +4813,8 @@
       <int>1</int>
       <int>2</int>
       <int>3</int>
+      <int>4</int>
+      <int>5</int>
     </InterFieldSortOrder>
     <ExpressionPosition>1</ExpressionPosition>
     <NumberOfLeftDimensions>1</NumberOfLeftDimensions>
@@ -4830,7 +4832,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -6410,7 +6414,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>319</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6983,7 +6987,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>319</ColWidth>
+            <ColWidth>300</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
