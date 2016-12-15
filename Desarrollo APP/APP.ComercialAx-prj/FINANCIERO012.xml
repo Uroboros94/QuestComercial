@@ -49,6 +49,8 @@
       <Name>
         <v>Liquidación de Comisiones</v>
       </Name>
+      <Bmp enctype="base64"></Bmp>
+      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -227,7 +229,8 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(Recaudo.Movimiento)</v>
+        <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.Movimiento)
+//Sum(Recaudo.Movimiento)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -252,7 +255,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(Recaudo.ValorIva)</v>
+        <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.ValorIva)
+//Sum(Recaudo.ValorIva)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -277,7 +281,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(Recaudo.ReteFuente)</v>
+        <v>sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.ReteFuente)
+//sum(Recaudo.ReteFuente)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -302,7 +307,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(Recaudo.ProntoPago)</v>
+        <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.ProntoPago)
+//Sum(Recaudo.ProntoPago)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -327,7 +333,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(Recaudo.FechaRecaudo - Venta.FechaCreacion)</v>
+        <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.FechaRecaudo - Venta.FechaFactura)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2397,10 +2403,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>INTEGER</Type>
-        <nDec>10</nDec>
+        <Type>FIX</Type>
+        <nDec>2</nDec>
         <UseThou>0</UseThou>
-        <Fmt>#.##0</Fmt>
+        <Fmt>#.##0,00</Fmt>
         <Dec>,</Dec>
         <Thou>.</Thou>
       </NumberPresentation>
@@ -2740,7 +2746,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>88</ColWidth>
+      <ColWidth>109</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7602,7 +7608,7 @@
       <int>300</int>
       <int>300</int>
       <int>300</int>
-      <int>88</int>
+      <int>109</int>
       <int>300</int>
       <int>300</int>
       <int>300</int>
@@ -8133,9 +8139,7 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown>
-      <v>-10</v>
-    </MaxNumShown>
+    <MaxNumShown></MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -8148,23 +8152,7 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Calendario.%_Fechakey</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Recaudo.FechaRecaudo</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>EC.IdICG</DimName>
           <ElemNo></ElemNo>
@@ -8172,7 +8160,31 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>Calendario.%_Fechakey</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Id</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>Cliente.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>PedidosVenta.IdVendedor</DimName>
           <ElemNo></ElemNo>
@@ -8180,7 +8192,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>PedidosVenta.Vendedor</DimName>
           <ElemNo></ElemNo>
@@ -8190,25 +8202,41 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Cliente.Id</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Cliente.NombreCompleto</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Recaudo.IdAsiento</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>0</int>
+            <int>1</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BFFTVC0xMDAwMDAwMAA=
+            </Blob>
+            <Blob>
+                BEZDLTM5MDA3AA==
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Recaudo.FechaRecaudo</DimName>
+          <ElemNo>
+            <int>-2</int>
+            <int>0</int>
+            <int>1</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AA==
+            </Blob>
+            <Blob>
+                AgAAAADg2uRA
+            </Blob>
+            <Blob>
+                AgAAAACg2+RA
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -8231,7 +8259,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Recaudo.Movimiento)</v>
+              <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.Movimiento)
+//Sum(Recaudo.Movimiento)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8814,7 +8843,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Recaudo.ValorIva)</v>
+              <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.ValorIva)
+//Sum(Recaudo.ValorIva)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -9397,7 +9427,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(Recaudo.ReteFuente)</v>
+              <v>sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.ReteFuente)
+//sum(Recaudo.ReteFuente)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -9980,7 +10011,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Recaudo.ProntoPago)</v>
+              <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.ProntoPago)
+//Sum(Recaudo.ProntoPago)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -10563,7 +10595,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Recaudo.FechaRecaudo - Venta.FechaCreacion)</v>
+              <v>Sum({&lt;PedidosVenta.IdTipoPedido = {'3'}&gt;}Recaudo.FechaRecaudo - Venta.FechaFactura)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -10612,10 +10644,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>INTEGER</Type>
-              <nDec>10</nDec>
+              <Type>FIX</Type>
+              <nDec>2</nDec>
               <UseThou>0</UseThou>
-              <Fmt>#.##0</Fmt>
+              <Fmt>#.##0,00</Fmt>
               <Dec>,</Dec>
               <Thou>.</Thou>
             </NumberPresentation>
@@ -10955,7 +10987,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>88</ColWidth>
+            <ColWidth>109</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

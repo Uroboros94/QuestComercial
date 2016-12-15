@@ -554,12 +554,12 @@
     <String>1</String>
     <String>Recaudo</String>
     <String>182</String>
+    <String>1</String>
+    <String>Recaudo</String>
+    <String>183</String>
     <String>2</String>
     <String>PedidosVenta</String>
     <String>LinkTable</String>
-    <String>183</String>
-    <String>1</String>
-    <String>PedidosVenta</String>
     <String>184</String>
     <String>1</String>
     <String>PedidosVenta</String>
@@ -657,12 +657,12 @@
     <String>1</String>
     <String>PedidosVenta</String>
     <String>216</String>
+    <String>1</String>
+    <String>PedidosVenta</String>
+    <String>217</String>
     <String>2</String>
     <String>Presupuesto</String>
     <String>LinkTable</String>
-    <String>217</String>
-    <String>1</String>
-    <String>Presupuesto</String>
     <String>218</String>
     <String>1</String>
     <String>Presupuesto</String>
@@ -697,12 +697,12 @@
     <String>1</String>
     <String>Presupuesto</String>
     <String>229</String>
+    <String>1</String>
+    <String>Presupuesto</String>
+    <String>230</String>
     <String>2</String>
     <String>Calendario</String>
     <String>LinkTable</String>
-    <String>230</String>
-    <String>1</String>
-    <String>Calendario</String>
     <String>231</String>
     <String>1</String>
     <String>Calendario</String>
@@ -752,6 +752,9 @@
     <String>1</String>
     <String>Calendario</String>
     <String>247</String>
+    <String>1</String>
+    <String>Calendario</String>
+    <String>248</String>
     <String>1</String>
     <String>Calendario</String>
   </FieldSrcTables>
@@ -1092,7 +1095,6 @@
           <String>Venta.Creador</String>
           <String>Recaudo.IdRecaudo</String>
           <String>Recaudo.IdAsiento</String>
-          <String>Recaudo.ProntoPago</String>
           <String>CK.PedidoClienteFecha</String>
           <String>PedidosVenta.Id</String>
           <String>PedidosVenta.IdVendedor</String>
@@ -1183,7 +1185,6 @@
           <String>Venta.Creador</String>
           <String>Recaudo.IdRecaudo</String>
           <String>Recaudo.IdAsiento</String>
-          <String>Recaudo.ProntoPago</String>
           <String>CK.PedidoClienteFecha</String>
           <String>PedidosVenta.Id</String>
           <String>PedidosVenta.IdVendedor</String>
@@ -1272,7 +1273,9 @@
           <String>Venta.ValorLiquidado</String>
           <String>Venta.FechaCreacion</String>
           <String>Venta.CantidadVentas</String>
+          <String>%Base</String>
           <String>Recaudo.Cuenta</String>
+          <String>Recaudo.ProntoPago</String>
           <String>Recaudo.FechaRecaudo</String>
           <String>Recaudo.Movimiento</String>
           <String>Recaudo.ValorIva</String>
@@ -1349,10 +1352,7 @@
           <String>Cartera.FechaFactura</String>
           <String>Cartera.FechaVencimiento</String>
           <String>Cartera.PorcentajeProntoPago</String>
-          <String>Cartera.SaldoCorrienteTotal</String>
           <String>Cartera.FechaUltLiquidacion</String>
-          <String>Cartera.ValorFivisaLiquidada</String>
-          <String>Cartera.ValorLiquidado</String>
           <String>Cartera.Vencida</String>
           <String>Venta.IdEstadoFactura</String>
           <String>Venta.DiasVencidos</String>
@@ -1361,14 +1361,11 @@
           <String>Venta.FechaCierre</String>
           <String>Venta.FechaVencimiento</String>
           <String>Venta.FechaUltLiquidacion</String>
-          <String>Venta.SaldoCorrienteTotal</String>
-          <String>Venta.ValorDivisaLiquidada</String>
-          <String>Venta.ValorLiquidado</String>
           <String>Venta.CantidadVentas</String>
           <String>Recaudo.Cuenta</String>
+          <String>Recaudo.ProntoPago</String>
           <String>Recaudo.FechaRecaudo</String>
           <String>Recaudo.Movimiento</String>
-          <String>Recaudo.ReteFuente</String>
           <String>PedidosVenta.Id_CO</String>
           <String>PedidosVenta.IdNumLinea</String>
           <String>PedidosVenta.IdCliente</String>

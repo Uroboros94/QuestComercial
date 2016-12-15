@@ -10,7 +10,7 @@
 
 Producto:
 	LOAD
-		CK.IdLlaveProducto,
+		CK.IdLlaveProducto, 
 		SK.IdPLM,
 		SK.Producto,
 		num(Date#(Left(SK.Fecha,10),'DD/MM/YYYY'))						as SK.FECHA,
@@ -73,5 +73,5 @@ Producto:
 		Producto.IdUnidadMedidaInventario,
 		Producto.IdUnidadMedidaVenta
 	FROM
-	[..\QVD\PLM\Producto_QV.QVD]
+	[..\QVD\PLM\_Producto.QVD]
 	(qvd);

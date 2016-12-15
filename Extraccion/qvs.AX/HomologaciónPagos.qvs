@@ -16,7 +16,7 @@ HomologacionPagos:
 	From QST_MODELLEDGERTRANS 	as Contabilidad
 		inner join CUSTTRANS 	as transacciones on transacciones.LastSettleVoucher = Contabilidad.Voucher
 	Where 
-		transacciones.TRANSTYPE = '15';
+		transacciones.TRANSTYPE in ('15','27');
 
 
 STORE HomologacionPagos INTO [..\QVD\HomologacionPagos.QVD](qvd);
