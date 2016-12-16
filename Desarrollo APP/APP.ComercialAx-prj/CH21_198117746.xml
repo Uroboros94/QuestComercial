@@ -232,7 +232,8 @@
         <v>Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	PedidosVenta.IdTipoPedido={&quot;3&quot;}&gt;} Venta.CantidadVentas)</v>
+	PedidosVenta.IdTipoPedido={&quot;3&quot;}
+	&gt;} Venta.CantidadVentas)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2581,7 +2582,8 @@
               <v>Sum({&lt;
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-	PedidosVenta.IdTipoPedido={&quot;3&quot;}&gt;} Venta.CantidadVentas)</v>
+	PedidosVenta.IdTipoPedido={&quot;3&quot;}
+	&gt;} Venta.CantidadVentas)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
