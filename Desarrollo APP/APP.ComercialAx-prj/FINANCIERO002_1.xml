@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Saldo Corriente vencido por edades</v>
+        <v>Informe de Edad de Cartera</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -219,7 +219,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Saldo Corriente vencido por edades</v>
+      <v>Informe de Edad de Cartera</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString></TotalString>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -256,7 +256,7 @@
       <Definition>
         <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -283,7 +283,7 @@
       <Definition>
         <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -310,7 +310,7 @@
       <Definition>
         <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -337,7 +337,7 @@
       <Definition>
         <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;90&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -362,11 +362,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Total Corriente] + 
-[Total Corriente (0 - 30)] + 
-[Total Corriente (31 - 60)] + 
-[Total Corriente (61-90)]+
-[Total Corriente (&gt;90)]</v>
+        <v>Column(1)
++Column(2)
++Column(3)
++Column(4)
++Column(5)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -760,7 +760,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>284</ColWidth>
+      <ColWidth>272</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -892,7 +892,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Total Corriente (0 - 30)</v>
+        <v>Vencido con edad: (0 - 30)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -1245,7 +1245,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>413</ColWidth>
+      <ColWidth>272</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1377,7 +1377,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Total Corriente (31 - 60)</v>
+        <v>Vencido con edad: (31 - 60)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -1730,7 +1730,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>434</ColWidth>
+      <ColWidth>272</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1862,7 +1862,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Total Corriente (61-90)</v>
+        <v>Vencido con edad: (61-90)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -2215,7 +2215,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>416</ColWidth>
+      <ColWidth>272</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2347,7 +2347,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Total Corriente (&gt;90)</v>
+        <v>Vencido con edad: (&gt;90)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -2700,7 +2700,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>384</ColWidth>
+      <ColWidth>272</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3185,7 +3185,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>363</ColWidth>
+      <ColWidth>272</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3464,7 +3464,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>147</ColWidth>
+      <ColWidth>272</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3650,7 +3650,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>272</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3836,7 +3836,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>272</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4022,7 +4022,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>272</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -5751,17 +5751,17 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>147</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
+      <int>272</int>
+      <int>272</int>
+      <int>272</int>
+      <int>272</int>
       <int>278</int>
-      <int>284</int>
-      <int>413</int>
-      <int>434</int>
-      <int>416</int>
-      <int>384</int>
-      <int>363</int>
+      <int>272</int>
+      <int>272</int>
+      <int>272</int>
+      <int>272</int>
+      <int>272</int>
+      <int>272</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -6273,7 +6273,7 @@
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
     <InnerPixWidth>300</InnerPixWidth>
-    <AllowPivoting>true</AllowPivoting>
+    <AllowPivoting>false</AllowPivoting>
     <PivotAlwaysFullyExpanded>false</PivotAlwaysFullyExpanded>
     <AllowMenuSort>true</AllowMenuSort>
     <ShowSortIndicators>true</ShowSortIndicators>
@@ -6298,7 +6298,7 @@
     <SuppressPivotExpandIconsOnPrint>true</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
@@ -6306,7 +6306,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
@@ -6314,7 +6314,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.Id</DimName>
           <ElemNo></ElemNo>
@@ -6349,7 +6349,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6741,7 +6741,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>284</ColWidth>
+            <ColWidth>272</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6941,7 +6941,7 @@
             <Definition>
               <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6980,7 +6980,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Total Corriente (0 - 30)</v>
+              <v>Vencido con edad: (0 - 30)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -7333,7 +7333,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>413</ColWidth>
+            <ColWidth>272</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -7533,7 +7533,7 @@
             <Definition>
               <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7572,7 +7572,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Total Corriente (31 - 60)</v>
+              <v>Vencido con edad: (31 - 60)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -7925,7 +7925,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>434</ColWidth>
+            <ColWidth>272</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -8125,7 +8125,7 @@
             <Definition>
               <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8164,7 +8164,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Total Corriente (61-90)</v>
+              <v>Vencido con edad: (61-90)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -8517,7 +8517,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>416</ColWidth>
+            <ColWidth>272</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -8717,7 +8717,7 @@
             <Definition>
               <v>Sum({&lt;	
 		Cartera.DiasVencidos ={&quot;&gt;90&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8756,7 +8756,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Total Corriente (&gt;90)</v>
+              <v>Vencido con edad: (&gt;90)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -9109,7 +9109,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>384</ColWidth>
+            <ColWidth>272</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -9307,11 +9307,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Total Corriente] + 
-[Total Corriente (0 - 30)] + 
-[Total Corriente (31 - 60)] + 
-[Total Corriente (61-90)]+
-[Total Corriente (&gt;90)]</v>
+              <v>Column(1)
++Column(2)
++Column(3)
++Column(4)
++Column(5)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -9703,7 +9703,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>363</ColWidth>
+            <ColWidth>284</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
