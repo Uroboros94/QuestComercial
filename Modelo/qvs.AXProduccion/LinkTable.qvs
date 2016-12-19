@@ -98,18 +98,24 @@ LinkTable:
     %MovimientoProductoKey,
     %KEYPRODUCT as SK.KEYPRODUCT,
     %FECHAKEY as SK.FECHA,
-    MovimientosArticulos.ORDENPRODUC
+    MovimientosArticulos.PEDIDOREFERENCIA
   Resident MovimientosArticulos;
   Left Join (MovimientosArticulos_tmp)
   LOAD
     %OrdenesProduccionKey,
-    COLLECTREFPRODID as MovimientosArticulos.ORDENPRODUC
+    COLLECTREFPRODID as MovimientosArticulos.PEDIDOREFERENCIA
   Resident OrdenProd;
+  Left Join (MovimientosArticulos_tmp)
+  LOAD
+    %OrdenesCompraKey,
+    OrdenesCompra.PURCHID as MovimientosArticulos.PEDIDOREFERENCIA
+  Resident OrdenesCompra;
 
   Concatenate(LinkTable)
   LOAD
     %MovimientoProductoKey,
     %OrdenesProduccionKey,
+    %OrdenesCompraKey,
     SK.KEYPRODUCT,
     SK.FECHA
   Resident MovimientosArticulos_tmp;

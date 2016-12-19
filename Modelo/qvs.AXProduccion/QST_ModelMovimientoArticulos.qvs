@@ -23,8 +23,10 @@ MovimientosArticulos:
     Date(FECHADIARIO)         as %FECHAKEY,
     CODIGODIARIO,
     CONTABILIZADO,
-    ORDENPRODMAESTRA,
-    ORDENPRODUC
+    //ORDENPRODMAESTRA,
+    //ORDENPRODUC,
+    NOMBREMOVIMIENTO,
+    PEDIDOREFERENCIA
   FROM
   [..\QVD\QST_ModelMovimientoArticulos.QVD]
   (qvd);
