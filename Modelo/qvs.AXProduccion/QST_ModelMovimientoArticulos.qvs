@@ -7,7 +7,7 @@ Fecha       |   Desarrollador    |   Modificación
 08/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
 *****************************************************************************************************/
 QUALIFY *;
-UNQUALIFY %MovimientoProductoKey, %KEYPRODUCT, %FECHAKEY;
+UNQUALIFY %MovimientoProductoKey, %KEYPRODUCT, %FECHAKEY, %IDLOCALIDAD;
 MovimientosArticulos:
   LOAD
     AutoNumber(RecNo())				as %MovimientoProductoKey,
@@ -15,7 +15,7 @@ MovimientosArticulos:
     DESCMOVIMIENTO,
     CANTDIARIO,
     NOMBREALMACEN,
-    CODALMACEN,
+    CODALMACEN as %IDLOCALIDAD,
     COLORID,
     TALLA,
     CODARTICULO,
@@ -26,7 +26,9 @@ MovimientosArticulos:
     //ORDENPRODMAESTRA,
     //ORDENPRODUC,
     NOMBREMOVIMIENTO,
-    PEDIDOREFERENCIA
+    PEDIDOREFERENCIA,
+    TIPOTRANS,
+    DESCTIPOTRANS
   FROM
   [..\QVD\QST_ModelMovimientoArticulos.QVD]
   (qvd);

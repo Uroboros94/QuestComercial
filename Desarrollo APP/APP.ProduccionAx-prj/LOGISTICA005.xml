@@ -900,7 +900,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>188</ColWidth>
+      <ColWidth>228</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -1086,7 +1086,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>288</ColWidth>
+      <ColWidth>325</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -1113,8 +1113,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>MovimientosArticulos.CODALMACEN</Name>
-        <Type>PRESENT</Type>
+        <Name>MovimientosArticulos.%IDLOCALIDAD</Name>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Id Almacen</v>
@@ -1485,7 +1485,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.Referencia</Name>
+        <Name>MovimientosArticulos.CODARTICULO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2202,7 +2202,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>150</ColWidth>
+      <ColWidth>216</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4916,14 +4916,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.Referencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -4973,6 +4965,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>MovimientosArticulos.PEDIDOREFERENCIA</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.CODARTICULO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5381,7 +5381,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>375</ColWidth>
+            <ColWidth>284</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

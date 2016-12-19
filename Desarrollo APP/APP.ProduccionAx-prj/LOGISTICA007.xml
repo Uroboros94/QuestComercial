@@ -227,7 +227,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(EntradaProducto.CANTTRANSFE)</v>
+        <v>Sum({&lt;MovimientosArticulos.TIPOTRANS = {'3', '22'}&gt;} MovimientosArticulos.CANTDIARIO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -741,7 +741,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>EntradaProducto.FECHATRANSF</Name>
+        <Name>MovimientosArticulos.FECHADIARIO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -927,7 +927,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>EntradaProducto.CODDIARIO</Name>
+        <Name>MovimientosArticulos.CODIGODIARIO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1113,7 +1113,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>EntradaProducto.TIPOTRANSF</Name>
+        <Name>MovimientosArticulos.DESCTIPOTRANS</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -1485,7 +1485,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.Referencia</Name>
+        <Name>MovimientosArticulos.CODARTICULO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2229,7 +2229,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>EntradaProducto.CODORDENPROD</Name>
+        <Name>MovimientosArticulos.PEDIDOREFERENCIA</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4502,39 +4502,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>EntradaProducto.FECHATRANSF</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>EntradaProducto.CODDIARIO</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>EntradaProducto.TIPOTRANSF</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>NombreLocalidad</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4566,14 +4534,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>EntradaProducto.CODORDENPROD</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.IdColor</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -4583,6 +4543,46 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.Talla</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.FECHADIARIO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.CODIGODIARIO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.PEDIDOREFERENCIA</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.CODARTICULO</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.DESCTIPOTRANS</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4599,7 +4599,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(EntradaProducto.CANTTRANSFE)</v>
+              <v>Sum({&lt;MovimientosArticulos.TIPOTRANS = {'3', '22'}&gt;} MovimientosArticulos.CANTDIARIO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
