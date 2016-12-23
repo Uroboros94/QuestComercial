@@ -227,7 +227,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Aggr(Sum(MovimientosArticulos.CANTDIARIO), MovimientosArticulos.CODARTICULO, MovimientosArticulos.COLORID, MovimientosArticulos.TALLA, MovimientosArticulos.PEDIDOREFERENCIA)</v>
+        <v>Aggr(Sum(MovimientosArticulos.CANTDIARIO), MovimientosArticulos.CODIGODIARIO, MovimientosArticulos.CODARTICULO, MovimientosArticulos.COLORID, MovimientosArticulos.TALLA)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2811,7 +2811,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
+        <Name>MovimientosArticulos.ORDENPRODMAESTRA</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -2960,7 +2960,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -3004,7 +3004,7 @@
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Número</v>
+        <v>Producción</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -3149,7 +3149,7 @@
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -4983,14 +4983,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>MovimientosArticulos.COLORID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -5000,6 +4992,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>MovimientosArticulos.TALLA</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>MovimientosArticulos.ORDENPRODMAESTRA</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -5016,7 +5016,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Aggr(Sum(MovimientosArticulos.CANTDIARIO), MovimientosArticulos.CODARTICULO, MovimientosArticulos.COLORID, MovimientosArticulos.TALLA, MovimientosArticulos.PEDIDOREFERENCIA)</v>
+              <v>Aggr(Sum(MovimientosArticulos.CANTDIARIO), MovimientosArticulos.CODIGODIARIO, MovimientosArticulos.CODARTICULO, MovimientosArticulos.COLORID, MovimientosArticulos.TALLA)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
