@@ -3375,7 +3375,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)</Name>
+        <Name>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -3552,7 +3552,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.FechaProgInicio</Name>
+        <Name>OrdenProd.LATESTSCHEDDATE</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3711,7 +3711,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>247</ColWidth>
+      <ColWidth>284</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3738,7 +3738,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.FechaProgFin</Name>
+        <Name>OrdenProd.CALCDATE</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3924,7 +3924,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.FechaRealEntrega</Name>
+        <Name>OrdenProd.DLVDATE</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4482,8 +4482,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.CantidadEstimada</Name>
-        <Type>PRESENT</Type>
+        <Name>=Aggr(Sum(OrdenProd.CantProgramada), OrdenProd.AP_QST_MASTERPRODORDID)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Cantidad Programada</v>
@@ -4662,8 +4662,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.CantidadConfirmada</Name>
-        <Type>PRESENT</Type>
+        <Name>=Aggr(Sum(RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Cantidad Confirmada</v>
@@ -5019,7 +5019,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)</Name>
+        <Name>=Calendario.%_Fechakey</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -5373,7 +5373,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - (Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)), 'DD'))</Name>
+        <Name>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -7466,7 +7466,7 @@
       <int>300</int>
       <int>294</int>
       <int>300</int>
-      <int>247</int>
+      <int>284</int>
       <int>300</int>
       <int>222</int>
       <int>209</int>
@@ -8088,38 +8088,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.FechaProgInicio</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.FechaProgFin</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.FechaRealEntrega</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.TipoPrenda</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -8136,22 +8104,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>RpProduccion.CantidadEstimada</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.CantidadConfirmada</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaEstimacion), RpProduccion.Referencia)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -8160,23 +8112,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>='PROGRAMACIÓN'</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - (Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)), 'DD'))</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -8201,6 +8137,70 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>RpProduccion.NombreOperacion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Calendario.%_Fechakey</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.LATESTSCHEDDATE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.CALCDATE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.DLVDATE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(OrdenProd.CantProgramada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
