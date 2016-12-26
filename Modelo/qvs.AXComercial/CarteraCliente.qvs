@@ -55,7 +55,7 @@ CarteraCliente_tmp:
 		//SALESID,
 
 Concatenate(CarteraCliente_tmp)
-	LOAD 
+	LOAD
 		ASIENTOFACTURA,
 		CONDICIONPAGO,
 		CUENTACLIENTE					as IDCLIENTE,
@@ -125,7 +125,7 @@ CarteraCliente:
 		Num(SALDOVENCIDOTOTAL)							as Cartera.SaldoVencidoTotal,
 		TIPOPAGO										as Cartera.TipoPago,
 		ULTIMAFECHALIQUIDACION							as Cartera.FechaUltLiquidacion,
-		ULTIMOASIENTOLIQUIDACION						as Cartera.FechaUltAsiento,
+		ULTIMOASIENTOLIQUIDACION						as Cartera.UltAsientoLiquidacion,
 		Num(VALORDIVISALIQUIDADA)						as Cartera.ValorFivisaLiquidada,
 		Num(VALORFACTURA)								as Cartera.ValorFactura,
 		Num(VALORFACTURADIVISATRANS)					as Cartera.ValorFacturaDivisaTrans,
@@ -139,4 +139,3 @@ CarteraCliente:
 		//NOMBRECLIENTE,
 		//NOMBREMODULOGENERACION,
 		//SALESID,
-

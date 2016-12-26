@@ -98,7 +98,6 @@ LinkTable:
     %MovimientoProductoKey,
     %KEYPRODUCT as SK.KEYPRODUCT,
     %FECHAKEY as SK.FECHA,
-    MovimientosArticulos.ORDENPRODMAESTRA,
     MovimientosArticulos.PEDIDOREFERENCIA,
     MovimientosArticulos.ORDENPRODUC,
     %IDLOCALIDAD    as SK.IDLOCALIDAD
@@ -107,11 +106,6 @@ LinkTable:
   LOAD
     %OrdenesProduccionKey,
     COLLECTREFPRODID as MovimientosArticulos.ORDENPRODUC
-  Resident OrdenProd;
-  Left Join(MovimientosArticulos_tmp)
-  LOAD
-    %OrdenesProduccionKey,
-    OrdenProd.AP_QST_MASTERPRODORDID as MovimientosArticulos.ORDENPRODMAESTRA
   Resident OrdenProd;
   Left Join (MovimientosArticulos_tmp) //Recepcion de articulos.
   LOAD

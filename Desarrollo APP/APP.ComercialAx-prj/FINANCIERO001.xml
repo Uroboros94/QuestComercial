@@ -49,8 +49,6 @@
       <Name>
         <v>Informe de Cartera</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -5671,7 +5669,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -5684,29 +5684,15 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Cliente.NombreCompleto</DimName>
+          <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>EC.IdEC</DimName>
-          <ElemNo>
-            <int>74</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAXMJA
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
@@ -5714,7 +5700,15 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Ciudad</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cliente.Id</DimName>
           <ElemNo></ElemNo>
@@ -5722,7 +5716,15 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.NombreCompleto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cartera.IdFactura</DimName>
           <ElemNo></ElemNo>
@@ -5730,7 +5732,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cartera.FechaFactura</DimName>
           <ElemNo></ElemNo>
@@ -5741,14 +5743,6 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cartera.FechaVencimiento</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>Cliente.Ciudad</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
