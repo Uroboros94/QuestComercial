@@ -26,6 +26,7 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -1695,32 +1696,33 @@
     <String>1</String>
     <String>MovimientosArticulos</String>
     <String>554</String>
-    <String>1</String>
-    <String>Contabilidad</String>
+    <String>2</String>
+    <String>EntradaProducto</String>
+    <String>LinkTable</String>
     <String>555</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>556</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>557</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>558</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>559</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>560</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>561</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>562</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>563</String>
     <String>1</String>
     <String>Contabilidad</String>
@@ -1762,26 +1764,53 @@
     <String>Contabilidad</String>
     <String>576</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>577</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>578</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>579</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>580</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>581</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>582</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>583</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>584</String>
+    <String>1</String>
+    <String>Contabilidad</String>
+    <String>585</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>586</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>587</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>588</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>589</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>590</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>591</String>
+    <String>1</String>
+    <String>Facturacion</String>
+    <String>592</String>
     <String>1</String>
     <String>Facturacion</String>
   </FieldSrcTables>
@@ -2017,6 +2046,7 @@
           <String>%PedidosTransferKey</String>
           <String>%RutasPickingKey</String>
           <String>%MovimientoProductoKey</String>
+          <String>%EntradaProductoKey</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2257,6 +2287,8 @@
           <String>MovimientosArticulos.NOMBREMOVIMIENTO</String>
           <String>MovimientosArticulos.PEDIDOREFERENCIA</String>
           <String>MovimientosArticulos.DESCTIPOTRANS</String>
+          <String>EntradaProducto.CODDIARIO</String>
+          <String>EntradaProducto.CODORDENPROD</String>
           <String>Contabilidad.EC.Canal</String>
           <String>Contabilidad.DIMENSION_LINEA</String>
           <String>Contabilidad.DESC_MARCA</String>
@@ -2489,6 +2521,8 @@
           <String>MovimientosArticulos.NOMBREMOVIMIENTO</String>
           <String>MovimientosArticulos.PEDIDOREFERENCIA</String>
           <String>MovimientosArticulos.DESCTIPOTRANS</String>
+          <String>EntradaProducto.CODDIARIO</String>
+          <String>EntradaProducto.CODORDENPROD</String>
           <String>Contabilidad.EC.Canal</String>
           <String>Contabilidad.DIMENSION_LINEA</String>
           <String>Contabilidad.DESC_MARCA</String>
@@ -2758,6 +2792,11 @@
           <String>MovimientosArticulos.CANTDIARIO</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
           <String>MovimientosArticulos.TIPOTRANS</String>
+          <String>%EntradaProductoKey</String>
+          <String>EntradaProducto.COSTEFISICO</String>
+          <String>EntradaProducto.FECHATRANSF</String>
+          <String>EntradaProducto.COLORID</String>
+          <String>EntradaProducto.CANTTRANSFE</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
@@ -2921,6 +2960,7 @@
           <String>OrdenesCompra.LineasOC.SHIPPINGDATEREQUESTED</String>
           <String>OrdenesCompra.LineasOC.DELIVERYDATE</String>
           <String>OrdenesCompra.LineasOC.PURCHRECEIVEDNOW</String>
+          <String>OrdenesCompra.LineasOC.REMAINPURCHPHYSICAL</String>
           <String>OrdenesCompra.LineasOC.PRICEUNIT</String>
           <String>OrdenesCompra.LineasOC.LINEPERCENT</String>
           <String>OrdenesCompra.LineasOC.LINEDISC</String>
@@ -2990,6 +3030,10 @@
           <String>%MovimientoProductoKey</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
           <String>MovimientosArticulos.TIPOTRANS</String>
+          <String>%EntradaProductoKey</String>
+          <String>EntradaProducto.FECHATRANSF</String>
+          <String>EntradaProducto.COLORID</String>
+          <String>EntradaProducto.CANTTRANSFE</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
@@ -3006,7 +3050,6 @@
       <FieldTagData>
         <Tag>$timestamp</Tag>
         <FieldNames>
-          <String>SK.FECHA</String>
           <String>Calendario.%_Fechakey</String>
           <String>Calendario.NumericMonthYear</String>
           <String>Calendario.DateMMDD</String>
@@ -3035,7 +3078,6 @@
       <FieldTagData>
         <Tag>$date</Tag>
         <FieldNames>
-          <String>SK.FECHA</String>
           <String>Calendario.%_Fechakey</String>
           <String>Calendario.NumericMonthYear</String>
           <String>Calendario.DateMMDD</String>

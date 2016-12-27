@@ -123,5 +123,28 @@ LinkTable:
     SK.IDLOCALIDAD
   Resident MovimientosArticulos_tmp;
 
+  EntradaProducto_tmp:
+  LOAD
+    %EntradaProductoKey,
+    %KEYPRODUCT			as SK.KEYPRODUCT,
+		%FECHAKEY				as SK.FECHA,
+    %IDLOCALIDAD    as SK.IDLOCALIDAD,
+    EntradaProducto.CODORDENPROD
+  Resident EntradaProducto;
+  Left Join(EntradaProducto_tmp)
+  LOAD
+    %OrdenesCompraKey,
+    OrdenesCompra.PURCHID as EntradaProducto.CODORDENPROD
+  Resident OrdenesCompra;
+
+  Concatenate(LinkTable)
+  LOAD
+    %EntradaProductoKey,
+    %OrdenesCompraKey,
+    SK.KEYPRODUCT,
+		SK.FECHA,
+    SK.IDLOCALIDAD
+  Resident EntradaProducto_tmp;
+
 	DROP Fields %DEFAULTDIMENSION,%FECHAKEY,%KEYPRODUCT, %IDLOCALIDAD;
-  DROP Tables OrdenesCompra_tmp, RutasPicking_tmp, PedidosTransfer_tmp, MovimientosArticulos_tmp;
+  DROP Tables OrdenesCompra_tmp, RutasPicking_tmp, PedidosTransfer_tmp, EntradaProducto_tmp, MovimientosArticulos_tmp;
