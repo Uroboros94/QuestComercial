@@ -11,9 +11,9 @@ Fecha       |   Desarrollador   |   Modificación
 LineListaMaterial:
 Sql Select
 	Case LM.UnidadMedidaMaterial
-		When '01' Then 'Metros'
+		When '01' Then 'm'
 		When '02' Then 'Kilogramos'
-		When '03' Then 'Unidades'
+		When '03' Then 'UND'
 		When '04' Then 'Yardas'
 	End As UnitId
 	, LM.CodigoMaterial As ItemId
@@ -22,8 +22,8 @@ Sql Select
 	, RTrim(LM.CodigoProducto) As ItemBOMId
 	, 'Si' As BOM_Approved
 	, Case SubString(LM.CodigoMaterial, 1, 2)
-		When 'TE' Then 'MP001'
-		Else 'MP002'
+		When 'TE' Then 'MP002'
+		Else 'MP001'
 	End As InventLocationId
 	, 'QUEST_GRAL' As InventSiteId
 	, Row_Number() Over(Partition By RTrim(CodigoProducto) + RTrim(TallaProducto) + RTrim(ColorProducto) Order By LM.CodigoMaterial Desc) As LineNum
@@ -58,21 +58,24 @@ Sql Select
 	End As BOMType
 From [INTERFAZPLM].dbo.[ListaMateriales_QV] As LM
 Union all
-Select 
-	UnitId, 
-	ItemId, 
-	BOMQty, 
-	BOM_Name, 
-	ItemBOMId, 
-	BOM_Approved, 
-	InventLocationId, 
-	InventSiteId, 
-	LineNum, 
-	BOM_BOMId, 
-	InventSizeId, 
-	InventColorId, 
+Select
+	CASE UnitId
+    WHEN 'Unidades' THEN ' UND'
+    WHEN 'Metros' THEN 'm'
+  END As UnitId,
+	ItemId,
+	BOMQty,
+	BOM_Name,
+	ItemBOMId,
+	BOM_Approved,
+	InventLocationId,
+	InventSiteId,
+	LineNum,
+	BOM_BOMId,
+	InventSizeId,
+	InventColorId,
 	OprNum, BOMType
 From [INTERFAZPLM].dbo.TempServicios;
-	
+
 STORE LineListaMaterial INTO [..\QVD\PLM\LineListaMaterial.QVD](qvd);
 DROP TABLE LineListaMaterial;
