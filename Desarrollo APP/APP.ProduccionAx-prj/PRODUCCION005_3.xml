@@ -1401,7 +1401,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Ini
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -3405,8 +3405,14 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Ini
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>OrdenProd.PRODSTATUSNAME</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BEluaWNpYWRvAA==
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>

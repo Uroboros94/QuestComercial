@@ -3931,24 +3931,50 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3))</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AgAAAAAAwFtA
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.Referencia</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>15641</int>
+            <int>15643</int>
+            <int>15644</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BFFVRTExMTE2MDAxNAA=
+            </Blob>
+            <Blob>
+                BFFVRTExMTE2MDAxOAA=
+            </Blob>
+            <Blob>
+                BFFVRTExMTE2MDAxOQA=
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Aggr(Only({&lt;RpProduccion.Nivel = {&quot;$(=Max(RpProduccion.Nivel))&quot;}&gt;} RpProduccion.IdTaller), COLLECTREFPRODID)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>-2</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AA==
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
@@ -3979,8 +4005,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Sum(TOTAL OrdenProd.CantProgramada)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AgAAAAAAftJA
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>

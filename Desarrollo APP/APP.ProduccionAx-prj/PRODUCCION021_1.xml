@@ -5105,12 +5105,22 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.TipoPrenda</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>-2</int>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AA==
+            </Blob>
+            <Blob>
+                AgAAAAAAAAAA
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
@@ -5118,7 +5128,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>=Aggr(Sum(OrdenProd.CantProgramada), Productos.IdLinea)</DimName>
           <ElemNo></ElemNo>
