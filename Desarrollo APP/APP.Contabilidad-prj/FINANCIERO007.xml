@@ -228,8 +228,7 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;
-	Contabilidad.CUENTA_N2={'21'},
-	Contabilidad.FACTURAORIGEN -= {''}
+	Contabilidad.CUENTA_N2={'21'}//, Contabilidad.FACTURAORIGEN -= {''}
 	&gt;}Contabilidad.FECHAVENCIMIENTO - Contabilidad.ACCOUNTINGDATE)</v>
       </Definition>
       <Enable>true</Enable>
@@ -256,8 +255,7 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;
-		Contabilidad.CUENTA_N5={'21051001'},
-		Contabilidad.FACTURAORIGEN -= {''}
+		Contabilidad.CUENTA_N5={'21051001'}//, Contabilidad.FACTURAORIGEN -= {''}
 	&gt;}Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
@@ -4798,8 +4796,7 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;
-	Contabilidad.CUENTA_N2={'21'},
-	Contabilidad.FACTURAORIGEN -= {''}
+	Contabilidad.CUENTA_N2={'21'}//, Contabilidad.FACTURAORIGEN -= {''}
 	&gt;}Contabilidad.FECHAVENCIMIENTO - Contabilidad.ACCOUNTINGDATE)</v>
             </Definition>
             <Enable>true</Enable>
@@ -5386,8 +5383,7 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;
-		Contabilidad.CUENTA_N5={'21051001'},
-		Contabilidad.FACTURAORIGEN -= {''}
+		Contabilidad.CUENTA_N5={'21051001'}//, Contabilidad.FACTURAORIGEN -= {''}
 	&gt;}Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>

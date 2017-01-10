@@ -311,12 +311,12 @@
     <String>1</String>
     <String>Clientes</String>
     <String>101</String>
+    <String>1</String>
+    <String>Clientes</String>
+    <String>102</String>
     <String>2</String>
     <String>EstructuraComercial</String>
     <String>LinkTable</String>
-    <String>102</String>
-    <String>1</String>
-    <String>EstructuraComercial</String>
     <String>103</String>
     <String>1</String>
     <String>EstructuraComercial</String>
@@ -349,7 +349,7 @@
     <String>EstructuraComercial</String>
     <String>113</String>
     <String>1</String>
-    <String>CarteraCliente</String>
+    <String>EstructuraComercial</String>
     <String>114</String>
     <String>1</String>
     <String>CarteraCliente</String>
@@ -450,19 +450,19 @@
     <String>1</String>
     <String>CarteraCliente</String>
     <String>147</String>
+    <String>1</String>
+    <String>CarteraCliente</String>
+    <String>148</String>
     <String>2</String>
     <String>Venta</String>
     <String>LinkTable</String>
-    <String>148</String>
+    <String>149</String>
     <String>1</String>
     <String>Venta</String>
-    <String>149</String>
+    <String>150</String>
     <String>2</String>
     <String>Venta</String>
     <String>Recaudo</String>
-    <String>150</String>
-    <String>1</String>
-    <String>Venta</String>
     <String>151</String>
     <String>1</String>
     <String>Venta</String>
@@ -537,7 +537,7 @@
     <String>Venta</String>
     <String>175</String>
     <String>1</String>
-    <String>Recaudo</String>
+    <String>Venta</String>
     <String>176</String>
     <String>1</String>
     <String>Recaudo</String>
@@ -563,12 +563,12 @@
     <String>1</String>
     <String>Recaudo</String>
     <String>184</String>
+    <String>1</String>
+    <String>Recaudo</String>
+    <String>185</String>
     <String>2</String>
     <String>PedidosVenta</String>
     <String>LinkTable</String>
-    <String>185</String>
-    <String>1</String>
-    <String>PedidosVenta</String>
     <String>186</String>
     <String>1</String>
     <String>PedidosVenta</String>
@@ -666,12 +666,12 @@
     <String>1</String>
     <String>PedidosVenta</String>
     <String>218</String>
+    <String>1</String>
+    <String>PedidosVenta</String>
+    <String>219</String>
     <String>2</String>
     <String>Presupuesto</String>
     <String>LinkTable</String>
-    <String>219</String>
-    <String>1</String>
-    <String>Presupuesto</String>
     <String>220</String>
     <String>1</String>
     <String>Presupuesto</String>
@@ -706,12 +706,12 @@
     <String>1</String>
     <String>Presupuesto</String>
     <String>231</String>
+    <String>1</String>
+    <String>Presupuesto</String>
+    <String>232</String>
     <String>2</String>
     <String>Calendario</String>
     <String>LinkTable</String>
-    <String>232</String>
-    <String>1</String>
-    <String>Calendario</String>
     <String>233</String>
     <String>1</String>
     <String>Calendario</String>
@@ -765,14 +765,17 @@
     <String>Calendario</String>
     <String>250</String>
     <String>1</String>
-    <String>Dimensiones</String>
+    <String>Calendario</String>
     <String>251</String>
     <String>1</String>
-    <String>Calculos</String>
+    <String>Dimensiones</String>
     <String>252</String>
     <String>1</String>
-    <String>ReportesAdhoc</String>
+    <String>Calculos</String>
     <String>253</String>
+    <String>1</String>
+    <String>ReportesAdhoc</String>
+    <String>254</String>
     <String>1</String>
     <String>ReportesAdhoc</String>
   </FieldSrcTables>
@@ -1081,6 +1084,7 @@
           <String>Cliente.Pais</String>
           <String>Cliente.TipoCliente</String>
           <String>Cliente.Zona</String>
+          <String>Cliente.CondicionPago</String>
           <String>EC.Canal</String>
           <String>EC.NombreCompleto</String>
           <String>EC.Cuidad</String>
@@ -1185,6 +1189,7 @@
           <String>Cliente.Pais</String>
           <String>Cliente.TipoCliente</String>
           <String>Cliente.Zona</String>
+          <String>Cliente.CondicionPago</String>
           <String>EC.Canal</String>
           <String>EC.NombreCompleto</String>
           <String>EC.Cuidad</String>
@@ -1261,7 +1266,6 @@
           <String>DesdeFecha</String>
           <String>HastaFecha</String>
           <String>COSTPRICEUNIT</String>
-          <String>INVENTCOLORID</String>
           <String>DATEPHYSICAL</String>
           <String>DATEFINANCIAL</String>
           <String>QTY</String>
@@ -1367,7 +1371,6 @@
           <String>DesdeFecha</String>
           <String>HastaFecha</String>
           <String>COSTPRICEUNIT</String>
-          <String>INVENTCOLORID</String>
           <String>DATEPHYSICAL</String>
           <String>DATEFINANCIAL</String>
           <String>Cliente.Cupo</String>
@@ -1395,7 +1398,6 @@
           <String>Venta.FechaUltLiquidacion</String>
           <String>Venta.CantidadVentas</String>
           <String>Recaudo.Cuenta</String>
-          <String>Recaudo.ProntoPago</String>
           <String>Recaudo.FechaRecaudo</String>
           <String>Recaudo.Movimiento</String>
           <String>PedidosVenta.Id_CO</String>

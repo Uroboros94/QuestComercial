@@ -252,14 +252,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)</v>
+        <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -284,14 +277,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)</v>
+        <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -316,14 +302,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)</v>
+        <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -348,14 +327,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)</v>
+        <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -6757,14 +6729,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)</v>
+              <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Corte&quot;}&gt;} ProdCalcTrans.QTY)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7354,14 +7319,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)</v>
+              <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Estampado&quot;}&gt;} ProdCalcTrans.QTY)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7951,14 +7909,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)</v>
+              <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Confeccion&quot;}&gt;} ProdCalcTrans.QTY)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8548,14 +8499,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({$&lt;AP_QST_ProdReport.OperacionInicial = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY) 
-+ Sum({$&lt;AP_QST_ProdReport.Operacion2 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion3 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion4 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion5 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion6 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.Operacion7 = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)
-+ Sum({$&lt;AP_QST_ProdReport.OperacionFinal = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)</v>
+              <v>Sum({$&lt;RpProduccion.NombreOperacion = {&quot;Lavado&quot;}&gt;} ProdCalcTrans.QTY)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

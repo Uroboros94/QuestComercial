@@ -252,7 +252,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -277,7 +278,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -302,7 +304,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -327,7 +330,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -6288,7 +6292,7 @@
     <SuppressPivotExpandIconsOnPrint>true</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
@@ -6296,7 +6300,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
@@ -6304,7 +6308,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.Id</DimName>
           <ElemNo></ElemNo>
@@ -6312,7 +6316,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
@@ -6929,7 +6933,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7519,7 +7524,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8109,7 +8115,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8699,7 +8706,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>//Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)
+Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

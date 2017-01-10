@@ -277,7 +277,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Cantidad Programada] - [Total en Producción]
+        <v>[Cantidad Programada] - [Variación en UND]
 //(Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) / ((Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) - (Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.PdteEnsamblar)))</v>
       </Definition>
       <Enable>true</Enable>
@@ -8120,7 +8120,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Cantidad Programada] - [Total en Producción]
+              <v>[Cantidad Programada] - [Variación en UND]
 //(Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) / ((Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.CantProgramada)) - (Sum(TOTAL {&lt;Producto.Talla =&gt;} OrdenProd.PdteEnsamblar)))</v>
             </Definition>
             <Enable>true</Enable>
