@@ -254,9 +254,14 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
+        <v>If(WildMatch(Contabilidad.TRANSACTIONCURRENCYCODE, 'USD'), 
+	Sum({&lt;
 		Contabilidad.CUENTA_N5={'21051001'}//, Contabilidad.FACTURAORIGEN -= {''}
-	&gt;}Contabilidad.MOVIMIENTO)</v>
+	&gt;}Contabilidad.TRANSACTIONCURRENCYAMOUNT), 
+	Sum({&lt;
+		Contabilidad.CUENTA_N5={'21051001'}//, Contabilidad.FACTURAORIGEN -= {''}
+	&gt;}Contabilidad.MOVIMIENTO)
+)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -784,7 +789,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Moviimiento</v>
+        <v>Movimiento</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -5382,9 +5387,14 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
+              <v>If(WildMatch(Contabilidad.TRANSACTIONCURRENCYCODE, 'USD'), 
+	Sum({&lt;
 		Contabilidad.CUENTA_N5={'21051001'}//, Contabilidad.FACTURAORIGEN -= {''}
-	&gt;}Contabilidad.MOVIMIENTO)</v>
+	&gt;}Contabilidad.TRANSACTIONCURRENCYAMOUNT), 
+	Sum({&lt;
+		Contabilidad.CUENTA_N5={'21051001'}//, Contabilidad.FACTURAORIGEN -= {''}
+	&gt;}Contabilidad.MOVIMIENTO)
+)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5423,7 +5433,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Moviimiento</v>
+              <v>Movimiento</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>

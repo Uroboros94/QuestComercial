@@ -25,6 +25,32 @@ Generos:
 	[..\QVD\PLM\Producto_QV.QVD]
 	(qvd);
 
+Tallas:
+	Mapping
+	LOAD * Inline [
+		Talla, Orden
+		XS, 1
+		S, 2
+		M, 3
+		L, 4
+		XL, 5
+		8, 8
+		10, 10
+		12, 12
+		14, 14
+		16, 16
+		18, 18
+		20, 20
+		24, 24
+		26, 26
+		28, 28
+		30, 30
+		32, 32
+		34, 34
+		36, 36
+		38, 38
+		40, 40
+	];
 
 Producto_Temp:
 	LOAD
@@ -186,7 +212,7 @@ Producto:
 		Marca								as Producto.Marca,
 		NivelModa							as Producto.NivelModa,
 		Nombre								as Producto.Nombre,
-		NonmbreCategoria					as Producto.NonmbreCategoria,
+		NonmbreCategoria					as Producto.NombreCategoria,
 		OperacionUso						as Producto.OperacionUso,
 		Patronista							as Producto.Patronista,
 		Referencia							as Producto.Referencia,
@@ -194,7 +220,7 @@ Producto:
 		Silueta								as Producto.Silueta,
 		Sublinea							as Producto.Sublinea,
 		SubTipo								as Producto.SubTipo,
-		Talla								as Producto.Talla,
+		Dual(Talla, ApplyMap('Tallas', Talla))			as Producto.Talla,
 		Tipo								as Producto.Tipo,
 		TipoAdquisicion						as Producto.TipoAdquisicion,
 		TipoPrenda							as Producto.TipoPrenda,
