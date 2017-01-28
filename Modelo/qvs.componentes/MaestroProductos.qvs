@@ -34,7 +34,7 @@ Tallas:
 		M, 3
 		L, 4
 		XL, 5
-		8, 8
+		08, 8
 		10, 10
 		12, 12
 		14, 14
@@ -65,7 +65,7 @@ Producto_Temp:
 		DESCGRUPODIMSEGUIMIENTO,
 		CODARTICULO,
 		NOMBRESUBTIPOPRODUCTO,
-		TALLA,
+		If(IsNum(TALLA), If(TALLA < 10, '0'&TALLA, TALLA), TALLA) as TALLA,
 		NOMBRETIPOPRODUCTO
 	FROM
 	[..\QVD\QST_MaestroProductos.QVD]
@@ -120,7 +120,6 @@ Producto_Temp2:
 	FROM
 	[..\QVD\QST_MaestroProductosAtributes.QVD]
 	(qvd);
-
 
 //******************************************************************************************
 DimFinanTemp:
@@ -185,6 +184,8 @@ Producto:
 		CK.ProductoTallaColor,
 		SK.KEYPRODUCT,
 		SK.Producto,
+		Coleccion&Upper(Marca)&Genero&IdLinea&Right(IdSublinea, 2)
+			&If(Len(TipoAdquisicion) < 2, '0'&TipoAdquisicion, TipoAdquisicion) as CK.IdLlaveProducto,
 		IdColor								as Producto.IdColor,
 		ApplyMap('Generos',Genero)&IdLinea	as Producto.IdLinea,
 		IdMarca								as Producto.IdMarca,

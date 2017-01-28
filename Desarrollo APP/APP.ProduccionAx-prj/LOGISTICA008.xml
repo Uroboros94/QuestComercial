@@ -254,10 +254,10 @@
       <Definition>
         <v>//Aggr(
 Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
-	TIPOPEDIDO = {'3'},
-	ESTADOLINEA = {'3'}
+	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+	//TIPOPEDIDO = {'3'},
+	//ESTADOLINEA = {'3'}
 	&gt;} CANTIDAD - PENDIENTEENTREGA)//, Venta.IdFactura)</v>
       </Definition>
       <Enable>true</Enable>
@@ -314,10 +314,10 @@ Sum({&lt;
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
-	TIPOPEDIDO = {'3'},
-	ESTADOLINEA = {'3'}
+	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+	//TIPOPEDIDO = {'3'},
+	//ESTADOLINEA = {'3'}
 	&gt;} ((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO))</v>
       </Definition>
       <Enable>true</Enable>
@@ -4291,7 +4291,7 @@ Sum({&lt;
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.Referencia</Name>
+        <Name>CODARTICULO</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4313,7 +4313,7 @@ Sum({&lt;
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>0</LabelAdjust>
+      <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
       <NumAdjust>2</NumAdjust>
@@ -6901,7 +6901,7 @@ Sum({&lt;
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.Referencia</DimName>
+          <DimName>CODARTICULO</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -7503,10 +7503,10 @@ Sum({&lt;
             <Definition>
               <v>//Aggr(
 Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
-	TIPOPEDIDO = {'3'},
-	ESTADOLINEA = {'3'}
+	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+	//TIPOPEDIDO = {'3'},
+	//ESTADOLINEA = {'3'}
 	&gt;} CANTIDAD - PENDIENTEENTREGA)//, Venta.IdFactura)</v>
             </Definition>
             <Enable>true</Enable>
@@ -8679,10 +8679,10 @@ Sum({&lt;
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;
-	Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}, 
-	TIPOPEDIDO = {'3'},
-	ESTADOLINEA = {'3'}
+	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+	//TIPOPEDIDO = {'3'},
+	//ESTADOLINEA = {'3'}
 	&gt;} ((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO))</v>
             </Definition>
             <Enable>true</Enable>
