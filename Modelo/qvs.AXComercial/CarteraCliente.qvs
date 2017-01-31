@@ -44,6 +44,8 @@ CarteraCliente_tmp:
 		VALORFACTURADIVISATRANS,
 		VALORLIQUIDADO,
 		VENCIDA,
+		TIPOMEDIOPAGO,
+		NOMBREMEDIOPAGO,
 		'Parcial' as ESTADOCARTERA
 	FROM
 	[..\QVD\QST_Cartera.QVD]
@@ -131,7 +133,9 @@ CarteraCliente:
 		Num(VALORFACTURADIVISATRANS)					as Cartera.ValorFacturaDivisaTrans,
 		Num(VALORLIQUIDADO)								as Cartera.ValorLiquidado,
 		VENCIDA 										as Cartera.Vencida,
-		ESTADOCARTERA									as Cartera.Estado
+		ESTADOCARTERA									as Cartera.Estado,
+		TIPOMEDIOPAGO 								as Cartera.TipoMedioPago,
+		NOMBREMEDIOPAGO								as Cartera.NombreMedioPago
 	Resident CarteraCliente_tmp;
 	DROP Table CarteraCliente_tmp;
 		//DATAAREAID,

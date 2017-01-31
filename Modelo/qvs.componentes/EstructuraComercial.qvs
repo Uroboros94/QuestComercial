@@ -13,10 +13,10 @@ MapCanalEC:
 		01,Retail
 		05,Sede principal
 		06,E-Commerce
-		07,Multimarca	
+		07,Multimarca
 		08,Concesiones
 		09,Franquicias
-		10,Licitaciones 
+		10,Licitaciones
 		14,Quruba];
 
 EstructuraComercial:
@@ -29,9 +29,8 @@ EstructuraComercial:
 		DESC_ESTRUCTURA_COMERCIAL												as EC.NombreCompleto
 	FROM
 		[..\QVD\DefaulDimensions.QVD](qvd)
-	where Len(DIMENSION_ESTRUCTURA_COMERCIAL)>2
-		and DESC_ESTRUCTURA_COMERCIAL<>'';
-		
+	where Len(DIMENSION_ESTRUCTURA_COMERCIAL)>2;
+
 	Left Join
 	LOAD
 		Ciudad																	as EC.Cuidad,
@@ -40,7 +39,7 @@ EstructuraComercial:
 		Departamento															as EC.Departamento,
 		NombreCoordinador														as EC.Coordinador,
 		Pais																	as EC.Pais,
-		ZonaGeografica															as EC.Zona	
+		ZonaGeografica															as EC.Zona
 	FROM
 	[..\QVD\DIM_FrontsGeneral.QVD]
 	(qvd);

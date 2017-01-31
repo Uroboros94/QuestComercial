@@ -318,7 +318,7 @@ Sum({&lt;
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
 	//TIPOPEDIDO = {'3'},
 	//ESTADOLINEA = {'3'}
-	&gt;} ((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO))</v>
+	&gt;} (((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO)) + IMPORTEFACTURA)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -8683,7 +8683,7 @@ Sum({&lt;
 	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
 	//TIPOPEDIDO = {'3'},
 	//ESTADOLINEA = {'3'}
-	&gt;} ((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO))</v>
+	&gt;} (((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO)) + IMPORTEFACTURA)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

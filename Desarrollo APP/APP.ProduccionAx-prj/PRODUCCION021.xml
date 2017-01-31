@@ -227,7 +227,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>count({&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.DIMENSION_LINEA)</v>
+        <v>count({&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.DIMENSION_LINEA)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -252,7 +252,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'6','7'}&gt;}Contabilidad.MOVIMIENTO)</v>
+        <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'6','7'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -277,7 +277,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)</v>
+        <v>(Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)) * -1</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -302,8 +302,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)/
-Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
+        <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)/
+Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)
 </v>
       </Definition>
       <Enable>true</Enable>
@@ -3803,11 +3803,11 @@ Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.TipoPrenda</Name>
+        <Name>Producto.Marca</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
-        <v>Tipo Prenda</v>
+        <v>Marca</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
@@ -6830,65 +6830,41 @@ Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.TipoPrenda</DimName>
-          <ElemNo>
-            <int>1</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BAA=
-            </Blob>
-          </ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Contabilidad.EC.Canal</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.IdLinea</DimName>
-          <ElemNo>
-            <int>22</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                AgAAAAAAAABA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.Linea</DimName>
-          <ElemNo>
-            <int>40</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BEJvdG9uZXMA
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.Referencia</DimName>
-          <ElemNo>
-            <int>9862</int>
-          </ElemNo>
-          <ElemValues>
-            <Blob>
-                BElOQ04wMjM5OQA=
-            </Blob>
-          </ElemValues>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>Producto.Marca</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
         </Pos>
       </ExpansionData>
     </ExpansionInfo>
@@ -6903,7 +6879,7 @@ Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>count({&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.DIMENSION_LINEA)</v>
+              <v>count({&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.DIMENSION_LINEA)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7493,7 +7469,7 @@ Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'6','7'}&gt;}Contabilidad.MOVIMIENTO)</v>
+              <v>Sum({&lt;Contabilidad.CUENTA_N1 = {'6','7'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8076,7 +8052,7 @@ Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)</v>
+              <v>(Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)) * -1</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8659,8 +8635,8 @@ Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)/
-Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}&gt;}Contabilidad.MOVIMIENTO)
+              <v>Sum({&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)/
+Sum(TOTAL{&lt;Contabilidad.CUENTA_N2 = {'41'}, Producto.Referencia = {'QUE*', 'QU*'}&gt;}Contabilidad.MOVIMIENTO)
 </v>
             </Definition>
             <Enable>true</Enable>

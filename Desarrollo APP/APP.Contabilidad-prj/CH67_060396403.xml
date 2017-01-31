@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Ventas / Utilidad Neta</v>
+        <v>Utilidad o Perdida</v>
       </Name>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
@@ -217,7 +217,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Ventas / Utilidad Neta</v>
+      <v>Utilidad o Perdida</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>rank(column(3))</v>
+        <v>rank(column(2))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -258,7 +258,7 @@
 //((sum({&lt;Contabilidad.CUENTA_N5 = {'41202701', '41352401', '41751501', '41752001', '41753501'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision
 //((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -315,7 +315,7 @@
       <Definition>
         <v>Column(3)/Column(2)</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -3846,9 +3846,9 @@
     <ColWidths>
       <int>691</int>
       <int>103</int>
-      <int>341</int>
       <int>413</int>
-      <int>278</int>
+      <int>100</int>
+      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -4363,7 +4363,7 @@
       <int>0</int>
       <int>1</int>
       <int>1</int>
-      <int>5</int>
+      <int>1</int>
     </DisplayOrder>
     <IndentMode>false</IndentMode>
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
@@ -4403,7 +4403,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>rank(column(3))</v>
+              <v>rank(column(2))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4997,7 +4997,7 @@
 //((sum({&lt;Contabilidad.CUENTA_N5 = {'41202701', '41352401', '41751501', '41752001', '41753501'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision
 //((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>
@@ -6184,7 +6184,7 @@
             <Definition>
               <v>Column(3)/Column(2)</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>

@@ -8,6 +8,7 @@
 	-------------------------------------------------------------------------------------------------
 	09/20/2016	|	malemos			|	Inicio de Configuración
 	09/24/2016  |	Alejandro S		|	Agregar campos PORCENTAJEPRONTOPAGO, DESCRIPCIONPRONTOPAGO, IDVENDEDOR, NOMBREVENDEDOR.
+	30/01/2017  |	Alejandro S		|	Agregar campos TIPOMEDIOPAGO y NOMBREMEDIOPAGO.
 *****************************************************************************************************/
 QST_Cartera:
 	SQL SELECT
@@ -47,7 +48,9 @@ QST_Cartera:
 		VALORFACTURA,
 		VALORFACTURADIVISATRANS,
 		VALORLIQUIDADO,
-		VENCIDA
+		VENCIDA,
+		TIPOMEDIOPAGO,
+		NOMBREMEDIOPAGO
 	FROM "QST_MODELCARTERA";
 		//PARTITION,
 		//RECID,
