@@ -2994,7 +2994,10 @@
       <ColWidth>272</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_COND</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -3018,8 +3021,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=RpProduccion.FechaCreacionOrden</Name>
-        <Type>IS_EXPR</Type>
+        <Name>RpProduccion.FechaCreacionRef</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Fecha Aprobación Referencia</v>
@@ -8074,14 +8077,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=RpProduccion.FechaCreacionOrden</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>=Aggr(Max(RpProduccion.FechaRealEntrega), COLLECTREFPRODID)&amp;' '&amp;'DP '&amp;Interval(RpProduccion.FechaProgInicio - RpProduccion.FechaRealEntrega, 'DD')</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -8203,6 +8198,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>=Aggr(Sum(OrdenProd.CantProgramada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>RpProduccion.FechaCreacionRef</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

@@ -40,11 +40,12 @@ Rutas_Produccion:
 	[..\QVD\Rutas_Produccion.QVD]
 	(qvd);
 
-FOR counter =1 to 8 step 1
+FOR counter =1 to 9 step 1
 Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$(counter));
 	RpProduccion:
 		LOAD
 			ROUTEQTYGOOD$(counter)								as RpProduccion.CantidadBuena,
+			QTYERROR$(counter)								as RpProduccion.CantidadMala,
 			QTYSTUP                                 			as RpProduccion.CantidadConfirmada,
 			QTYCALC                                 			as RpProduccion.CantidadEstimada,
 			GARMENTTYPE											as RpProduccion.ClaseReferencia,

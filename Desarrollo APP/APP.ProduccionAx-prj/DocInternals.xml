@@ -1510,7 +1510,7 @@
     <String>RpProduccion</String>
     <String>491</String>
     <String>1</String>
-    <String>ListadoPrecios</String>
+    <String>RpProduccion</String>
     <String>492</String>
     <String>1</String>
     <String>ListadoPrecios</String>
@@ -1536,12 +1536,12 @@
     <String>1</String>
     <String>ListadoPrecios</String>
     <String>500</String>
+    <String>1</String>
+    <String>ListadoPrecios</String>
+    <String>501</String>
     <String>2</String>
     <String>PedidosTransfer</String>
     <String>LinkTable</String>
-    <String>501</String>
-    <String>1</String>
-    <String>PedidosTransfer</String>
     <String>502</String>
     <String>1</String>
     <String>PedidosTransfer</String>
@@ -1588,12 +1588,12 @@
     <String>1</String>
     <String>PedidosTransfer</String>
     <String>517</String>
+    <String>1</String>
+    <String>PedidosTransfer</String>
+    <String>518</String>
     <String>2</String>
     <String>RutasPicking</String>
     <String>LinkTable</String>
-    <String>518</String>
-    <String>1</String>
-    <String>RutasPicking</String>
     <String>519</String>
     <String>1</String>
     <String>RutasPicking</String>
@@ -1647,7 +1647,7 @@
     <String>RutasPicking</String>
     <String>536</String>
     <String>1</String>
-    <String>InventarioDisponible</String>
+    <String>RutasPicking</String>
     <String>537</String>
     <String>1</String>
     <String>InventarioDisponible</String>
@@ -1706,12 +1706,12 @@
     <String>1</String>
     <String>InventarioDisponible</String>
     <String>556</String>
+    <String>1</String>
+    <String>InventarioDisponible</String>
+    <String>557</String>
     <String>2</String>
     <String>MovimientosArticulos</String>
     <String>LinkTable</String>
-    <String>557</String>
-    <String>1</String>
-    <String>MovimientosArticulos</String>
     <String>558</String>
     <String>1</String>
     <String>MovimientosArticulos</String>
@@ -1761,12 +1761,12 @@
     <String>1</String>
     <String>MovimientosArticulos</String>
     <String>574</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
+    <String>575</String>
     <String>2</String>
     <String>EntradaProducto</String>
     <String>LinkTable</String>
-    <String>575</String>
-    <String>1</String>
-    <String>EntradaProducto</String>
     <String>576</String>
     <String>1</String>
     <String>EntradaProducto</String>
@@ -1790,7 +1790,7 @@
     <String>EntradaProducto</String>
     <String>583</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>EntradaProducto</String>
     <String>584</String>
     <String>1</String>
     <String>Contabilidad</String>
@@ -1856,7 +1856,7 @@
     <String>Contabilidad</String>
     <String>605</String>
     <String>1</String>
-    <String>Facturacion</String>
+    <String>Contabilidad</String>
     <String>606</String>
     <String>1</String>
     <String>Facturacion</String>
@@ -1880,8 +1880,11 @@
     <String>Facturacion</String>
     <String>613</String>
     <String>1</String>
-    <String>INLFED</String>
+    <String>Facturacion</String>
     <String>614</String>
+    <String>1</String>
+    <String>INLFED</String>
+    <String>615</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -2386,19 +2389,37 @@
           <String>DefaultDimensions.EC.Canal</String>
           <String>DefaultDimensions.ZonaGeografica</String>
           <String>Producto.IdSublinea</String>
+          <String>Producto.AparienciaDetallada</String>
+          <String>Producto.AparienciaGeneral</String>
+          <String>Producto.BandaPrecio</String>
           <String>Producto.Categoria</String>
+          <String>Producto.ClasificacionInventario</String>
           <String>Producto.Clima</String>
           <String>Producto.Coleccion</String>
+          <String>Producto.Cuello</String>
+          <String>Producto.Diseñador</String>
           <String>Producto.Emitido</String>
           <String>Producto.Estilo</String>
+          <String>Producto.Genero</String>
+          <String>Producto.GeneroMat</String>
+          <String>Producto.GrupoProductos</String>
           <String>Producto.Lavado</String>
           <String>Producto.Linea</String>
+          <String>Producto.Manga</String>
           <String>Producto.Marca</String>
+          <String>Producto.NivelModa</String>
           <String>Producto.NombreCategoria</String>
+          <String>Producto.OperacionUso</String>
+          <String>Producto.Patronista</String>
           <String>Producto.Seguimiento</String>
+          <String>Producto.Silueta</String>
           <String>Producto.Sublinea</String>
           <String>Producto.SubTipo</String>
           <String>Producto.Tipo</String>
+          <String>Producto.TipoAdquisicion</String>
+          <String>Producto.TipoPrenda</String>
+          <String>Producto.TipoProducto</String>
+          <String>Producto.TipoTejido</String>
           <String>OrdenMaterial</String>
           <String>IdOrdenProd</String>
           <String>INVENTDIMID</String>
@@ -2632,19 +2653,37 @@
           <String>DefaultDimensions.EC.Canal</String>
           <String>DefaultDimensions.ZonaGeografica</String>
           <String>Producto.IdSublinea</String>
+          <String>Producto.AparienciaDetallada</String>
+          <String>Producto.AparienciaGeneral</String>
+          <String>Producto.BandaPrecio</String>
           <String>Producto.Categoria</String>
+          <String>Producto.ClasificacionInventario</String>
           <String>Producto.Clima</String>
           <String>Producto.Coleccion</String>
+          <String>Producto.Cuello</String>
+          <String>Producto.Diseñador</String>
           <String>Producto.Emitido</String>
           <String>Producto.Estilo</String>
+          <String>Producto.Genero</String>
+          <String>Producto.GeneroMat</String>
+          <String>Producto.GrupoProductos</String>
           <String>Producto.Lavado</String>
           <String>Producto.Linea</String>
+          <String>Producto.Manga</String>
           <String>Producto.Marca</String>
+          <String>Producto.NivelModa</String>
           <String>Producto.NombreCategoria</String>
+          <String>Producto.OperacionUso</String>
+          <String>Producto.Patronista</String>
           <String>Producto.Seguimiento</String>
+          <String>Producto.Silueta</String>
           <String>Producto.Sublinea</String>
           <String>Producto.SubTipo</String>
           <String>Producto.Tipo</String>
+          <String>Producto.TipoAdquisicion</String>
+          <String>Producto.TipoPrenda</String>
+          <String>Producto.TipoProducto</String>
+          <String>Producto.TipoTejido</String>
           <String>OrdenMaterial</String>
           <String>IdOrdenProd</String>
           <String>INVENTDIMID</String>
@@ -3062,6 +3101,7 @@
           <String>OPRNUM</String>
           <String>OPRNUMNEXT</String>
           <String>RpProduccion.CantidadBuena</String>
+          <String>RpProduccion.CantidadMala</String>
           <String>RpProduccion.CantidadConfirmada</String>
           <String>RpProduccion.CantidadEstimada</String>
           <String>RpProduccion.CobroTaller</String>
@@ -3315,6 +3355,7 @@
           <String>OPRNUM</String>
           <String>OPRNUMNEXT</String>
           <String>RpProduccion.CantidadBuena</String>
+          <String>RpProduccion.CantidadMala</String>
           <String>RpProduccion.CantidadConfirmada</String>
           <String>RpProduccion.CantidadEstimada</String>
           <String>RpProduccion.CobroTaller</String>
@@ -3329,7 +3370,6 @@
           <String>RpProduccion.FechaProgInicio</String>
           <String>RpProduccion.FechaReal</String>
           <String>RpProduccion.FechaRealEntrega</String>
-          <String>RpProduccion.DiarioTransferenciaNT</String>
           <String>RpProduccion.FechaRealFinOper</String>
           <String>RpProduccion.FechaTallerDiff</String>
           <String>RpProduccion.IdEstadoProd</String>
