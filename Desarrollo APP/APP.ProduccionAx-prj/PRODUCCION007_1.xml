@@ -4665,7 +4665,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Sum(RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</Name>
+        <Name>=Aggr(Sum(DISTINCT RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -4845,7 +4845,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaEstimacion), RpProduccion.Referencia)</Name>
+        <Name>=Aggr(Max(RpProduccion.FechaEstimacion), RpProduccion.IdOPMaestra)</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -8101,14 +8101,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaEstimacion), RpProduccion.Referencia)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>='PROGRAMACIÓN'</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -8134,14 +8126,6 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>RpProduccion.NombreOperacion</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Sum(RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -8206,6 +8190,22 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>RpProduccion.FechaCreacionRef</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(DISTINCT RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Max(RpProduccion.FechaEstimacion), RpProduccion.IdOPMaestra)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
