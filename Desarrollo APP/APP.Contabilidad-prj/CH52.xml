@@ -227,8 +227,8 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.SALDO_FINAL) *-1)+
-	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO) *-1)+
+	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -253,8 +253,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.SALDO_FINAL) *-1) + 
-	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.MOVIMIENTO) *-1) + 
+	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -279,8 +279,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.SALDO_FINAL) *-1) +
-	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.MOVIMIENTO) *-1) +
+	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -3901,8 +3901,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.SALDO_FINAL) *-1)+
-	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO) *-1)+
+	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4417,8 +4417,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.SALDO_FINAL) *-1) + 
-	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.MOVIMIENTO) *-1) + 
+	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5001,8 +5001,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.SALDO_FINAL) *-1) +
-	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'81'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.MOVIMIENTO) *-1) +
+	sum({&lt;Contabilidad.CUENTA_N2 = {'94','96'} , Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

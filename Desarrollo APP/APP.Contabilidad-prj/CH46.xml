@@ -227,7 +227,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>(sum({&lt;Contabilidad.CUENTA_N1 = {'1'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+        <v>(sum({&lt;Contabilidad.CUENTA_N1 = {'1'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -4298,7 +4298,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(sum({&lt;Contabilidad.CUENTA_N1 = {'1'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.SALDO_FINAL))/vDivision</v>
+              <v>(sum({&lt;Contabilidad.CUENTA_N1 = {'1'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
