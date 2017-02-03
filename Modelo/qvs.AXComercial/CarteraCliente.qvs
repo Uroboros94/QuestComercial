@@ -44,6 +44,8 @@ CarteraCliente_tmp:
 		VALORFACTURADIVISATRANS,
 		VALORLIQUIDADO,
 		VENCIDA,
+		TIPOMEDIOPAGO,
+		NOMBREMEDIOPAGO,
 		'Parcial' as ESTADOCARTERA
 	FROM
 	[..\QVD\QST_Cartera.QVD]
@@ -55,7 +57,7 @@ CarteraCliente_tmp:
 		//SALESID,
 
 Concatenate(CarteraCliente_tmp)
-	LOAD 
+	LOAD
 		ASIENTOFACTURA,
 		CONDICIONPAGO,
 		CUENTACLIENTE					as IDCLIENTE,
@@ -125,13 +127,15 @@ CarteraCliente:
 		Num(SALDOVENCIDOTOTAL)							as Cartera.SaldoVencidoTotal,
 		TIPOPAGO										as Cartera.TipoPago,
 		ULTIMAFECHALIQUIDACION							as Cartera.FechaUltLiquidacion,
-		ULTIMOASIENTOLIQUIDACION						as Cartera.FechaUltAsiento,
+		ULTIMOASIENTOLIQUIDACION						as Cartera.UltAsientoLiquidacion,
 		Num(VALORDIVISALIQUIDADA)						as Cartera.ValorFivisaLiquidada,
 		Num(VALORFACTURA)								as Cartera.ValorFactura,
 		Num(VALORFACTURADIVISATRANS)					as Cartera.ValorFacturaDivisaTrans,
 		Num(VALORLIQUIDADO)								as Cartera.ValorLiquidado,
 		VENCIDA 										as Cartera.Vencida,
-		ESTADOCARTERA									as Cartera.Estado
+		ESTADOCARTERA									as Cartera.Estado,
+		TIPOMEDIOPAGO 								as Cartera.TipoMedioPago,
+		NOMBREMEDIOPAGO								as Cartera.NombreMedioPago
 	Resident CarteraCliente_tmp;
 	DROP Table CarteraCliente_tmp;
 		//DATAAREAID,
@@ -139,4 +143,3 @@ CarteraCliente:
 		//NOMBRECLIENTE,
 		//NOMBREMODULOGENERACION,
 		//SALESID,
-

@@ -1671,8 +1671,9 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.Nombre</Name>
-        <Type>PRESENT</Type>
+        <Name>=Producto.Nombre
+</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Descripción Articulo</v>
@@ -4459,17 +4460,17 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>0</int>
-      <int>10</int>
-      <int>9</int>
-      <int>5</int>
-      <int>6</int>
-      <int>7</int>
       <int>1</int>
       <int>2</int>
       <int>3</int>
-      <int>8</int>
-      <int>11</int>
       <int>4</int>
+      <int>5</int>
+      <int>6</int>
+      <int>7</int>
+      <int>8</int>
+      <int>9</int>
+      <int>10</int>
+      <int>11</int>
     </InterFieldSortOrder>
     <ExpressionPosition>255</ExpressionPosition>
     <NumberOfLeftDimensions>11</NumberOfLeftDimensions>
@@ -4503,14 +4504,6 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>NombreLocalidad</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.Nombre</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4583,6 +4576,15 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>MovimientosArticulos.DESCTIPOTRANS</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Producto.Nombre
+</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

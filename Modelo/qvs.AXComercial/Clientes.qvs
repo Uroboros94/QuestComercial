@@ -10,7 +10,7 @@
 	11/17/2016	|	malemos			|	Correccion de Modelamiento de datos.
 *****************************************************************************************************/
 Clientes:
-	LOAD 
+	LOAD
 		ACCOUNTNUM					as SK.Cliente,
 		ACCOUNTNUM					as Cliente.Id,
 		CITYVALUE					as Cliente.Ciudad,
@@ -31,29 +31,28 @@ Clientes:
 		MAINPHONE					as Cliente.TelefonoPpal,
 		NOMBREDIRPARTYTYPE			as Cliente.TipoCliente,
 		NOMBREIDENTIFICATIONTYPE	as Cliente.TipoIdentificacion,
-		SALESDISTRICT				as Cliente.Zona
+		SALESDISTRICT				as Cliente.Zona,
+		PAYMTERMVALUE       as Cliente.CondicionPago
 	FROM
 	[..\QVD\QST_MaestroClientes.QVD]
 	(qvd);
-		//CURRENCY,		
-		//CUSTGROUPVALUE,		
-		//DATAAREAID,		
-		//DIMENSIONDEFAULT,		
-		//FIRSTNAME,		
-		//IDENTIFICATIONTYPE,		
-		//IDVENDEDOR,		
-		//LASTNAME,		
-		//MANDATORYCREDITLIMIT,		
-		//MIDDLENAME,		
-		//NOMBREMANDATORYCREDITLIMIT,		
-		//NOMBREVENDEDOR,		
-		//PARTITION,		
-		//PAYMMODEID,		
-		//PAYMMODEVALUE,		
-		//PAYMTERMID,		
-		//PAYMTERMVALUE,		
-		//RECID,		
-		//RECVERSION,		
-		//SECONDLASTNAME,		
-
-
+		//CURRENCY,
+		//CUSTGROUPVALUE,
+		//DATAAREAID,
+		//DIMENSIONDEFAULT,
+		//FIRSTNAME,
+		//IDENTIFICATIONTYPE,
+		//IDVENDEDOR,
+		//LASTNAME,
+		//MANDATORYCREDITLIMIT,
+		//MIDDLENAME,
+		//NOMBREMANDATORYCREDITLIMIT,
+		//NOMBREVENDEDOR,
+		//PARTITION,
+		//PAYMMODEID,
+		//PAYMMODEVALUE,
+		//PAYMTERMID,
+		//PAYMTERMVALUE,
+		//RECID,
+		//RECVERSION,
+		//SECONDLASTNAME,

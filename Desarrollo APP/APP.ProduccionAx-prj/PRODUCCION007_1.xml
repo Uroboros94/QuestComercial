@@ -302,7 +302,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - RpProduccion.FechaRealEntrega, 'DD')</v>
+        <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2460,192 +2460,6 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.Referencia</Name>
-        <Type>PRESENT</Type>
-      </PseudoDef>
-      <Title>
-        <v>Referencia</v>
-      </Title>
-      <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
-      <ShowAll>false</ShowAll>
-      <ShowLabel>true</ShowLabel>
-      <ShowLegend>true</ShowLegend>
-      <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>0</ShowPartialSums>
-      <LabelAdjust>1</LabelAdjust>
-      <LabelVerticalAdjust>4</LabelVerticalAdjust>
-      <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
-      <VerticalAdjust>4</VerticalAdjust>
-      <DimCellVariations>
-        <CellVariationDef>
-          <PreMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreMinorBorder>
-          <PostMinorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostMinorBorder>
-          <MajorBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </MajorBorder>
-          <PreTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PreTotalBorder>
-          <PostTotalBorder>
-            <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
-            <ExtraBorderSpace16>0</ExtraBorderSpace16>
-          </PostTotalBorder>
-          <SizeMod>0</SizeMod>
-          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
-          <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
-          <BgColor>
-            <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </BgColor>
-          <TotalFgColor></TotalFgColor>
-          <TotalBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </TotalBgColor>
-          <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
-          <OtherFgColor></OtherFgColor>
-          <OtherBgColor>
-            <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </OtherBgColor>
-        </CellVariationDef>
-      </DimCellVariations>
-      <DropdownSelect>true</DropdownSelect>
-      <ImageRepresentation></ImageRepresentation>
-      <ExcludedValuesMode>0</ExcludedValuesMode>
-      <DefaultSearchMode>0</DefaultSearchMode>
-      <SelectionStyle>SS_USER_PREF</SelectionStyle>
-      <MaxStringLength>0</MaxStringLength>
-      <AttributeExpressions></AttributeExpressions>
-      <PageBreaks>NO_BREAKS</PageBreaks>
-      <MaxNumShown></MaxNumShown>
-      <Spacing></Spacing>
-      <ColWidth>244</ColWidth>
-      <OverrideGroupSort>false</OverrideGroupSort>
-      <Show></Show>
-      <EnableCondition></EnableCondition>
-      <Comment></Comment>
-      <OtherTotalSpec>
-        <OtherMode>OTHER_OFF</OtherMode>
-        <OtherCounted>
-          <v>10</v>
-        </OtherCounted>
-        <OtherLimit>
-          <v>0.05</v>
-        </OtherLimit>
-        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
-        <SuppressOther>false</SuppressOther>
-        <ForceBadValueKeeping>true</ForceBadValueKeeping>
-        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
-        <GlobalOtherGrouping>false</GlobalOtherGrouping>
-        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
-        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
-        <TotalMode>TOTAL_OFF</TotalMode>
-        <ReferencedExpression></ReferencedExpression>
-      </OtherTotalSpec>
-      <OtherString></OtherString>
-    </ChartDimensionDataDef>
-    <ChartDimensionDataDef>
-      <PseudoDef>
         <Name>=If(SubStringCount(RpProduccion.Referencia, 'QUE') &gt; 0, Mid(RpProduccion.Referencia, 4, 3), Left(RpProduccion.Referencia, 3))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
@@ -2806,6 +2620,192 @@
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
       <ColWidth>153</ColWidth>
+      <OverrideGroupSort>false</OverrideGroupSort>
+      <Show></Show>
+      <EnableCondition></EnableCondition>
+      <Comment></Comment>
+      <OtherTotalSpec>
+        <OtherMode>OTHER_OFF</OtherMode>
+        <OtherCounted>
+          <v>10</v>
+        </OtherCounted>
+        <OtherLimit>
+          <v>0.05</v>
+        </OtherLimit>
+        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
+        <SuppressOther>false</SuppressOther>
+        <ForceBadValueKeeping>true</ForceBadValueKeeping>
+        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
+        <GlobalOtherGrouping>false</GlobalOtherGrouping>
+        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
+        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <TotalMode>TOTAL_OFF</TotalMode>
+        <ReferencedExpression></ReferencedExpression>
+      </OtherTotalSpec>
+      <OtherString></OtherString>
+    </ChartDimensionDataDef>
+    <ChartDimensionDataDef>
+      <PseudoDef>
+        <Name>RpProduccion.Referencia</Name>
+        <Type>PRESENT</Type>
+      </PseudoDef>
+      <Title>
+        <v>Referencia</v>
+      </Title>
+      <TotalString></TotalString>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowAll>false</ShowAll>
+      <ShowLabel>true</ShowLabel>
+      <ShowLegend>true</ShowLegend>
+      <NullSuppression>false</NullSuppression>
+      <ShowPartialSums>0</ShowPartialSums>
+      <LabelAdjust>1</LabelAdjust>
+      <LabelVerticalAdjust>4</LabelVerticalAdjust>
+      <TextAdjust>0</TextAdjust>
+      <NumAdjust>2</NumAdjust>
+      <VerticalAdjust>4</VerticalAdjust>
+      <DimCellVariations>
+        <CellVariationDef>
+          <PreMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreMinorBorder>
+          <PostMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostMinorBorder>
+          <MajorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </MajorBorder>
+          <PreTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreTotalBorder>
+          <PostTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostTotalBorder>
+          <SizeMod>0</SizeMod>
+          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+          <TotalSizeMod>0</TotalSizeMod>
+          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+          <FgColor>
+            <Col>
+              <Red>54</Red>
+              <Green>54</Green>
+              <Blue>54</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </FgColor>
+          <BgColor>
+            <Col>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </BgColor>
+          <TotalFgColor></TotalFgColor>
+          <TotalBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </TotalBgColor>
+          <OtherSizeMod>0</OtherSizeMod>
+          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherFgColor></OtherFgColor>
+          <OtherBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </OtherBgColor>
+        </CellVariationDef>
+      </DimCellVariations>
+      <DropdownSelect>true</DropdownSelect>
+      <ImageRepresentation></ImageRepresentation>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <MaxStringLength>0</MaxStringLength>
+      <AttributeExpressions></AttributeExpressions>
+      <PageBreaks>NO_BREAKS</PageBreaks>
+      <MaxNumShown></MaxNumShown>
+      <Spacing></Spacing>
+      <ColWidth>244</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2994,7 +2994,10 @@
       <ColWidth>272</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
-      <EnableCondition></EnableCondition>
+      <EnableCondition>
+        <Type>COND_EX_COND</Type>
+        <Expression>0</Expression>
+      </EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -3018,8 +3021,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=RpProduccion.FechaCreacionOrden</Name>
-        <Type>IS_EXPR</Type>
+        <Name>RpProduccion.FechaCreacionRef</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Fecha Aprobación Referencia</v>
@@ -3375,7 +3378,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)</Name>
+        <Name>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -3552,7 +3555,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.FechaProgInicio</Name>
+        <Name>OrdenProd.LATESTSCHEDDATE</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3711,7 +3714,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>247</ColWidth>
+      <ColWidth>284</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3738,7 +3741,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.FechaProgFin</Name>
+        <Name>OrdenProd.CALCDATE</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -3924,7 +3927,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.FechaRealEntrega</Name>
+        <Name>OrdenProd.DLVDATE</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -4482,8 +4485,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.CantidadEstimada</Name>
-        <Type>PRESENT</Type>
+        <Name>=Aggr(Sum(OrdenProd.CantProgramada), OrdenProd.AP_QST_MASTERPRODORDID)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Cantidad Programada</v>
@@ -4662,8 +4665,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>RpProduccion.CantidadConfirmada</Name>
-        <Type>PRESENT</Type>
+        <Name>=Aggr(Sum(DISTINCT RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</Name>
+        <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
         <v>Cantidad Confirmada</v>
@@ -4842,7 +4845,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaEstimacion), RpProduccion.Referencia)</Name>
+        <Name>=Aggr(Max(RpProduccion.FechaEstimacion), RpProduccion.IdOPMaestra)</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -4866,9 +4869,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>0</Red>
+                <Green>128</Green>
+                <Blue>192</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -4948,10 +4951,10 @@
           </FgColor>
           <BgColor>
             <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
+              <Red>0</Red>
+              <Green>128</Green>
+              <Blue>192</Blue>
+              <Alpha>144</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -5019,7 +5022,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)</Name>
+        <Name>=Calendario.%_Fechakey</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -5043,9 +5046,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>0</Red>
+                <Green>128</Green>
+                <Blue>192</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -5125,10 +5128,10 @@
           </FgColor>
           <BgColor>
             <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
+              <Red>0</Red>
+              <Green>128</Green>
+              <Blue>192</Blue>
+              <Alpha>154</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -5220,9 +5223,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>0</Red>
+                <Green>128</Green>
+                <Blue>192</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -5302,10 +5305,10 @@
           </FgColor>
           <BgColor>
             <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
+              <Red>0</Red>
+              <Green>128</Green>
+              <Blue>192</Blue>
+              <Alpha>154</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -5373,7 +5376,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - (Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)), 'DD'))</Name>
+        <Name>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -5397,9 +5400,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>0</Red>
+                <Green>128</Green>
+                <Blue>192</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -5479,10 +5482,10 @@
           </FgColor>
           <BgColor>
             <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
+              <Red>0</Red>
+              <Green>128</Green>
+              <Blue>192</Blue>
+              <Alpha>159</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -5574,9 +5577,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>255</Red>
+                <Green>255</Green>
+                <Blue>0</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -5658,8 +5661,8 @@
             <Col>
               <Red>255</Red>
               <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
+              <Blue>0</Blue>
+              <Alpha>154</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -5751,9 +5754,9 @@
             <LineStyle>32</LineStyle>
             <Color>
               <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
+                <Red>255</Red>
+                <Green>255</Green>
+                <Blue>0</Blue>
                 <Alpha>255</Alpha>
               </Col>
               <IsCalculated>false</IsCalculated>
@@ -5835,8 +5838,8 @@
             <Col>
               <Red>255</Red>
               <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
+              <Blue>0</Blue>
+              <Alpha>149</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
@@ -5912,13 +5915,15 @@
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
-        <SortByState>1</SortByState>
+        <SortByState>0</SortByState>
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
+        <SortByExpression>1</SortByExpression>
+        <Expression>
+          <v>Only({&lt;ITEMROUTE = p(RpProduccion.Referencia), NAME = p(RpProduccion.NombreOperacion)&gt;} OPRNUM)</v>
+        </Expression>
         <SortByGreyness>0</SortByGreyness>
       </SortCriteria>
       <ShowAll>false</ShowAll>
@@ -7460,13 +7465,13 @@
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>272</int>
-      <int>244</int>
       <int>153</int>
+      <int>244</int>
       <int>272</int>
       <int>300</int>
       <int>294</int>
       <int>300</int>
-      <int>247</int>
+      <int>284</int>
       <int>300</int>
       <int>222</int>
       <int>209</int>
@@ -7488,7 +7493,7 @@
     <Striping>
       <int>1</int>
     </Striping>
-    <StyleNumber>11</StyleNumber>
+    <StyleNumber>-1</StyleNumber>
     <MultiLine>2</MultiLine>
     <HeaderMultiLine>3</HeaderMultiLine>
     <TableTotalPosition>0</TableTotalPosition>
@@ -7978,8 +7983,8 @@
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>0</int>
-      <int>1</int>
       <int>2</int>
+      <int>1</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
@@ -8072,47 +8077,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=RpProduccion.FechaCreacionOrden</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>=Aggr(Max(RpProduccion.FechaRealEntrega), COLLECTREFPRODID)&amp;' '&amp;'DP '&amp;Interval(RpProduccion.FechaProgInicio - RpProduccion.FechaRealEntrega, 'DD')</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.FechaProgInicio</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.FechaProgFin</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.FechaRealEntrega</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -8136,47 +8101,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>RpProduccion.CantidadEstimada</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>RpProduccion.CantidadConfirmada</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaEstimacion), RpProduccion.Referencia)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>='PROGRAMACIÓN'</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - (Aggr(Max({&lt;RpProduccion.EstadoProd = {'Iniciado'}&gt;} RpProduccion.FechaRealEntrega), RpProduccion.Referencia)), 'DD'))</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -8201,6 +8126,86 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>RpProduccion.NombreOperacion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Calendario.%_Fechakey</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(RpProduccion.CantidadEstimada), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Max(CostosProduccion.TRANSDATE), RpProduccion.IdOPMaestra)&amp;' - DP: '&amp;(Interval(Date(Today()) - Calendario.%_Fechakey, 'DD'))</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.LATESTSCHEDDATE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.CALCDATE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.DLVDATE</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(OrdenProd.CantProgramada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>RpProduccion.FechaCreacionRef</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(DISTINCT RpProduccion.CantidadConfirmada), OrdenProd.AP_QST_MASTERPRODORDID)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Max(RpProduccion.FechaEstimacion), RpProduccion.IdOPMaestra)</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -9987,7 +9992,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - RpProduccion.FechaRealEntrega, 'DD')</v>
+              <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

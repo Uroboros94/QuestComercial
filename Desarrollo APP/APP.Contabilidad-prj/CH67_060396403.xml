@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Ventas / Utilidad Neta</v>
+        <v>Utilidad o Perdida</v>
       </Name>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
@@ -217,7 +217,7 @@
     <ReadOnly>false</ReadOnly>
     <FastChange></FastChange>
     <WindowTitle>
-      <v>Ventas / Utilidad Neta</v>
+      <v>Utilidad o Perdida</v>
     </WindowTitle>
     <GraphMode>GRAPH_MODE_STRAIGHTTABLE</GraphMode>
     <TotalString>
@@ -229,7 +229,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>rank(column(3))</v>
+        <v>rank(column(2))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,9 +254,11 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision</v>
+        <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision
+//((sum({&lt;Contabilidad.CUENTA_N5 = {'41202701', '41352401', '41751501', '41752001', '41753501'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision
+//((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -285,7 +287,8 @@
 				sum({&lt;Contabilidad.CUENTA_N2 = {'42'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO)) -
 					sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO)) -
 						sum({&lt;Contabilidad.CUENTA_N2 = {'53'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO) -
-						 	sum({&lt;Contabilidad.CUENTA_N2 = {'54'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
+						 	sum({&lt;Contabilidad.CUENTA_N2 = {'54'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision
+/*sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.CREDITO)*/</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -312,7 +315,7 @@
       <Definition>
         <v>Column(3)/Column(2)</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -1674,7 +1677,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>328</ColWidth>
+      <ColWidth>413</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -3843,9 +3846,9 @@
     <ColWidths>
       <int>691</int>
       <int>103</int>
-      <int>341</int>
-      <int>328</int>
-      <int>278</int>
+      <int>413</int>
+      <int>100</int>
+      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -4360,7 +4363,7 @@
       <int>0</int>
       <int>1</int>
       <int>1</int>
-      <int>5</int>
+      <int>1</int>
     </DisplayOrder>
     <IndentMode>false</IndentMode>
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
@@ -4400,7 +4403,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>rank(column(3))</v>
+              <v>rank(column(2))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -4990,9 +4993,11 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision</v>
+              <v>((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision
+//((sum({&lt;Contabilidad.CUENTA_N5 = {'41202701', '41352401', '41751501', '41752001', '41753501'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision
+//((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.DEBITO) * -1))/vDivision</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>
@@ -5586,7 +5591,8 @@
 				sum({&lt;Contabilidad.CUENTA_N2 = {'42'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO)) -
 					sum({&lt;Contabilidad.CUENTA_N3 = {'6180'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO)) -
 						sum({&lt;Contabilidad.CUENTA_N2 = {'53'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO) -
-						 	sum({&lt;Contabilidad.CUENTA_N2 = {'54'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision</v>
+						 	sum({&lt;Contabilidad.CUENTA_N2 = {'54'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.MOVIMIENTO))/vDivision
+/*sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(vAñoSeleccion)}&gt;} Contabilidad.CREDITO)*/</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5978,7 +5984,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>328</ColWidth>
+            <ColWidth>413</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -6178,7 +6184,7 @@
             <Definition>
               <v>Column(3)/Column(2)</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>

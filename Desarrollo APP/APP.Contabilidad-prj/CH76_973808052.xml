@@ -227,7 +227,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion)}&gt;}Contabilidad.SALDO_FINAL)))/vDivision</v>
+        <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion)}&gt;}Contabilidad.MOVIMIENTO)))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -243,7 +243,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;}Contabilidad.SALDO_FINAL)))/vDivision</v>
+        <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;}Contabilidad.MOVIMIENTO)))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -259,7 +259,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;}Contabilidad.SALDO_FINAL)))/vDivision</v>
+        <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;}Contabilidad.MOVIMIENTO)))/vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -6253,7 +6253,7 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Nombre_Cuentas</DimName>
           <ElemNo></ElemNo>
@@ -6280,7 +6280,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion)}&gt;}Contabilidad.SALDO_FINAL)))/vDivision</v>
+              <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion)}&gt;}Contabilidad.MOVIMIENTO)))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6861,7 +6861,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;}Contabilidad.SALDO_FINAL)))/vDivision</v>
+              <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-1)}&gt;}Contabilidad.MOVIMIENTO)))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7442,7 +7442,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;}Contabilidad.SALDO_FINAL)))/vDivision</v>
+              <v>(fabs(sum({&lt;Contabilidad.ANO = {$(vAñoSeleccion-2)}&gt;}Contabilidad.MOVIMIENTO)))/vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

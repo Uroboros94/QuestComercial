@@ -49,8 +49,6 @@
       <Name>
         <v>Liquidación de Comisiones</v>
       </Name>
-      <Bmp enctype="base64"></Bmp>
-      <BmpMode>0</BmpMode>
       <Detached>false</Detached>
       <AllowMinimize>true</AllowMinimize>
       <AutoMinimize>true</AutoMinimize>
@@ -8139,7 +8137,9 @@
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
     <ExpressionVtBorderMode>BORDER_LOGICCELL</ExpressionVtBorderMode>
     <UseOnlyFirstDimLabel>false</UseOnlyFirstDimLabel>
-    <MaxNumShown></MaxNumShown>
+    <MaxNumShown>
+      <v>-10</v>
+    </MaxNumShown>
     <Horizontal>false</Horizontal>
     <HorizontalDimWidth>0</HorizontalDimWidth>
     <HorizontalExpWidth>0</HorizontalExpWidth>
@@ -8152,67 +8152,15 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>EC.IdICG</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>Calendario.%_Fechakey</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>Cliente.Id</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>Cliente.NombreCompleto</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>PedidosVenta.IdVendedor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>true</ExcludeList>
-        <Pos>
-          <DimName>PedidosVenta.Vendedor</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Recaudo.IdAsiento</DimName>
+          <DimName>Calendario.%_Fechakey</DimName>
           <ElemNo>
-            <int>0</int>
-            <int>1</int>
+            <int>334</int>
           </ElemNo>
           <ElemValues>
             <Blob>
-                BFFTVC0xMDAwMDAwMAA=
-            </Blob>
-            <Blob>
-                BEZDLTM5MDA3AA==
+                AgAAAAAA2uRA
             </Blob>
           </ElemValues>
         </Pos>
@@ -8222,19 +8170,95 @@
         <Pos>
           <DimName>Recaudo.FechaRecaudo</DimName>
           <ElemNo>
-            <int>-2</int>
             <int>0</int>
-            <int>1</int>
           </ElemNo>
           <ElemValues>
             <Blob>
-                AA==
-            </Blob>
-            <Blob>
                 AgAAAADg2uRA
             </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>EC.IdICG</DimName>
+          <ElemNo>
+            <int>74</int>
+          </ElemNo>
+          <ElemValues>
             <Blob>
-                AgAAAACg2+RA
+                AgAAAAAAAHlA
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.IdVendedor</DimName>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BAA=
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>PedidosVenta.Vendedor</DimName>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BFNBTkRSQSBURVJFU0EgUk9KQVMA
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.Id</DimName>
+          <ElemNo>
+            <int>711</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AgAAAIDFJHBB
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Cliente.NombreCompleto</DimName>
+          <ElemNo>
+            <int>690</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BFlJTEJFUiBZT0FOIFJFVkVMTwA=
+            </Blob>
+          </ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Recaudo.IdAsiento</DimName>
+          <ElemNo>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                BFFTVC0xMDAwMDAwMAA=
             </Blob>
           </ElemValues>
         </Pos>

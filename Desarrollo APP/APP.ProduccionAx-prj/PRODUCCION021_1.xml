@@ -2643,11 +2643,11 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Aggr(Sum(OrdenProd.CantProgramada), Productos.IdLinea)</Name>
+        <Name>=Aggr(Sum(OrdenProd.CantProgramada), Producto.IdLinea)</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
-        <v>Tota Uni.</v>
+        <v>Total Uni.</v>
       </Title>
       <TotalString></TotalString>
       <SortCriteria></SortCriteria>
@@ -2820,7 +2820,7 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>=Num(Aggr(Sum(ProdCalcTrans.ESTCOSTUNIT), Productos.IdLinea), '$#.##0')</Name>
+        <Name>=Num(Aggr(Sum(ProdCalcTrans.ESTCOSTUNIT), Producto.IdLinea), '$#.##0')</Name>
         <Type>IS_EXPR</Type>
       </PseudoDef>
       <Title>
@@ -5105,12 +5105,22 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.TipoPrenda</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
+          <ElemNo>
+            <int>-2</int>
+            <int>0</int>
+          </ElemNo>
+          <ElemValues>
+            <Blob>
+                AA==
+            </Blob>
+            <Blob>
+                AgAAAAAAAAAA
+            </Blob>
+          </ElemValues>
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.IdLinea</DimName>
           <ElemNo></ElemNo>
@@ -5120,23 +5130,23 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>=Aggr(Sum(OrdenProd.CantProgramada), Productos.IdLinea)</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>=Num(Aggr(Sum(ProdCalcTrans.ESTCOSTUNIT), Productos.IdLinea), '$#.##0')</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>=Aggr(Sum(OrdenProd.CantProgramada), Producto.IdLinea)</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>=Num(Aggr(Sum(ProdCalcTrans.ESTCOSTUNIT), Producto.IdLinea), '$#.##0')</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

@@ -280,11 +280,11 @@
     <ExpressionData>
       <Definition>
         <v>(
-(sum({&lt;Contabilidad.CUENTA_N2 = {'61'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
-(sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
-(sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
+(sum({&lt;Contabilidad.CUENTA_N3 = {'6120', '6135'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))//-
+//(sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))//-
+//(sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
 
-)/vDivision</v>
+)///vDivision</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -309,10 +309,12 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>(
+        <v>/*(
 (sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))+
 (sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
-)/vDivision</v>
+)/vDivision*/
+Sum({&lt;Contabilidad.CUENTA_N3 = {'6180'}&gt;} Contabilidad.MOVIMIENTO) +
+Sum({&lt;Contabilidad.CUENTA_N5 = {'61202702', '61352402'}&gt;} Contabilidad.MOVIMIENTO)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -366,13 +368,14 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>((((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision) - ((
+        <v>//((((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision) - ((
+((Column(2)) - ((
 (sum({&lt;Contabilidad.CUENTA_N2 = {'61'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
 (sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
 (sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
 )/vDivision))
- / 
- (((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision)</v>
+ / (Column(2))
+// (((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2221,7 +2224,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>294</ColWidth>
+      <ColWidth>359</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -5396,7 +5399,7 @@
       <int>103</int>
       <int>341</int>
       <int>319</int>
-      <int>294</int>
+      <int>359</int>
       <int>319</int>
       <int>303</int>
     </ColWidths>
@@ -7154,11 +7157,11 @@
           <ExpressionData>
             <Definition>
               <v>(
-(sum({&lt;Contabilidad.CUENTA_N2 = {'61'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
-(sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
-(sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
+(sum({&lt;Contabilidad.CUENTA_N3 = {'6120', '6135'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))//-
+//(sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))//-
+//(sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
 
-)/vDivision</v>
+)///vDivision</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7748,10 +7751,12 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>(
+              <v>/*(
 (sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))+
 (sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
-)/vDivision</v>
+)/vDivision*/
+Sum({&lt;Contabilidad.CUENTA_N3 = {'6180'}&gt;} Contabilidad.MOVIMIENTO) +
+Sum({&lt;Contabilidad.CUENTA_N5 = {'61202702', '61352402'}&gt;} Contabilidad.MOVIMIENTO)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8143,7 +8148,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>294</ColWidth>
+            <ColWidth>359</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -8935,13 +8940,14 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>((((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision) - ((
+              <v>//((((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision) - ((
+((Column(2)) - ((
 (sum({&lt;Contabilidad.CUENTA_N2 = {'61'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
 (sum({&lt;Contabilidad.CUENTA_N3 = {'6180','6198'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))-
 (sum({&lt;Contabilidad.CUENTA_N5 = {'6120270104','61352404'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO))
 )/vDivision))
- / 
- (((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision)</v>
+ / (Column(2))
+// (((sum({&lt;Contabilidad.CUENTA_N2 = {'41'} , Contabilidad.ANO = {$(=(vAñoSeleccion))}&gt;} Contabilidad.MOVIMIENTO) * -1))/vDivision)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
