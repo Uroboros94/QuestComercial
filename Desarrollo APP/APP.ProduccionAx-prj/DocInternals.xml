@@ -28,7 +28,6 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
-    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -1680,33 +1679,32 @@
     <String>1</String>
     <String>MovimientosArticulos</String>
     <String>548</String>
-    <String>2</String>
-    <String>EntradaProducto</String>
-    <String>LinkTable</String>
+    <String>1</String>
+    <String>MovimientosArticulos</String>
     <String>549</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>550</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>551</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>552</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>553</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>554</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>555</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>556</String>
     <String>1</String>
-    <String>EntradaProducto</String>
+    <String>Contabilidad</String>
     <String>557</String>
     <String>1</String>
     <String>Contabilidad</String>
@@ -1751,56 +1749,32 @@
     <String>Contabilidad</String>
     <String>571</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>572</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>573</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>574</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>575</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>576</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>577</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>578</String>
     <String>1</String>
-    <String>Contabilidad</String>
+    <String>Facturacion</String>
     <String>579</String>
     <String>1</String>
-    <String>Facturacion</String>
-    <String>580</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>581</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>582</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>583</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>584</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>585</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>586</String>
-    <String>1</String>
-    <String>Facturacion</String>
-    <String>587</String>
-    <String>1</String>
     <String>INLFED</String>
-    <String>588</String>
+    <String>580</String>
     <String>1</String>
     <String>INLFED-1</String>
   </FieldSrcTables>
@@ -2249,7 +2223,6 @@
           <String>%PedidosTransferKey</String>
           <String>%RutasPickingKey</String>
           <String>%MovimientoProductoKey</String>
-          <String>%EntradaProductoKey</String>
         </FieldNames>
       </FieldTagData>
       <FieldTagData>
@@ -2298,7 +2271,6 @@
           <String>DefaultDimensions.DESC_SUBLINEA</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
           <String>DefaultDimensions.DIMENSION_COLECCION</String>
-          <String>DefaultDimensions.DIMENSION_MAINACCOUNT</String>
           <String>DefaultDimensions.DIMENSION_SUBLINEA</String>
           <String>DefaultDimensions.NombreCoordinador</String>
           <String>DefaultDimensions.Pais</String>
@@ -2327,28 +2299,51 @@
           <String>UnidadInsumo</String>
           <String>IdGrupoCosto</String>
           <String>NombreGrupoCosto</String>
+          <String>%OrdenesPedidoKey</String>
           <String>IDPEDIDO</String>
+          <String>DEFAULTDIMENSIONPEDIDO</String>
+          <String>ESTADOPEDIDO</String>
+          <String>TIPOPEDIDO</String>
           <String>NOMBRETIPOPEDIDO</String>
           <String>NOMBREESTADOPEDIDO</String>
           <String>CONDICIONPAGO</String>
+          <String>FECHACREACIONPEDIDO</String>
+          <String>PENDIENTEENTREGA</String>
           <String>PEDIDOCREADOPOR</String>
           <String>GRUPOCOMISION</String>
+          <String>CODARTICULO</String>
+          <String>NUMEROLINEA</String>
+          <String>NOMBREARTICULO</String>
+          <String>PRECIOUNITARIO</String>
+          <String>CANTIDAD</String>
+          <String>ESTADOLINEA</String>
           <String>NOMBREESTADOLINEA</String>
+          <String>VALORNETO</String>
+          <String>DESCUENTO</String>
           <String>NUMEROVARIANTE</String>
+          <String>TALLA</String>
+          <String>COLOR</String>
           <String>ESTILO</String>
           <String>SITIO</String>
+          <String>ALMACEN</String>
+          <String>RECIDLINE</String>
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
           <String>TAXGROUP</String>
           <String>TAXGROUPNAME</String>
           <String>GRUPOVENTAS</String>
+          <String>PORCENTAJE</String>
+          <String>STOCK</String>
           <String>NUMEROFACTURA</String>
           <String>NOMBREFACTURADOR</String>
+          <String>REESTABLECERESTADO</String>
           <String>NOMBREREESTABLECERESTADO</String>
           <String>PEDIDORETORNADO</String>
+          <String>IMPORTEFACTURA</String>
           <String>TIPONOTACREDITO</String>
           <String>NOTAABONO</String>
+          <String>FECHAFACTURA</String>
           <String>NombreLocalidad</String>
           <String>Cliente.Ciudad</String>
           <String>Cliente.Departamento</String>
@@ -2375,7 +2370,6 @@
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.NAME</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
-          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.INVENTTRANSID</String>
           <String>OrdenProd.INVENTREFID</String>
           <String>OrdenProd.INVENTREFTRANSID</String>
@@ -2489,9 +2483,7 @@
           <String>MovimientosArticulos.CONTABILIZADO</String>
           <String>MovimientosArticulos.NOMBREMOVIMIENTO</String>
           <String>MovimientosArticulos.PEDIDOREFERENCIA</String>
-          <String>EntradaProducto.CODDIARIO</String>
-          <String>EntradaProducto.TIPOTRANSF</String>
-          <String>EntradaProducto.CODORDENPROD</String>
+          <String>MovimientosArticulos.DESCTIPOTRANS</String>
           <String>Contabilidad.EC.Canal</String>
           <String>Contabilidad.DIMENSION_LINEA</String>
           <String>Contabilidad.DESC_MARCA</String>
@@ -2531,7 +2523,6 @@
           <String>DefaultDimensions.DESC_SUBLINEA</String>
           <String>DefaultDimensions.DESC_TIPO_DE_TIENDA</String>
           <String>DefaultDimensions.DIMENSION_COLECCION</String>
-          <String>DefaultDimensions.DIMENSION_MAINACCOUNT</String>
           <String>DefaultDimensions.DIMENSION_SUBLINEA</String>
           <String>DefaultDimensions.NombreCoordinador</String>
           <String>DefaultDimensions.Pais</String>
@@ -2560,28 +2551,51 @@
           <String>UnidadInsumo</String>
           <String>IdGrupoCosto</String>
           <String>NombreGrupoCosto</String>
+          <String>%OrdenesPedidoKey</String>
           <String>IDPEDIDO</String>
+          <String>DEFAULTDIMENSIONPEDIDO</String>
+          <String>ESTADOPEDIDO</String>
+          <String>TIPOPEDIDO</String>
           <String>NOMBRETIPOPEDIDO</String>
           <String>NOMBREESTADOPEDIDO</String>
           <String>CONDICIONPAGO</String>
+          <String>FECHACREACIONPEDIDO</String>
+          <String>PENDIENTEENTREGA</String>
           <String>PEDIDOCREADOPOR</String>
           <String>GRUPOCOMISION</String>
+          <String>CODARTICULO</String>
+          <String>NUMEROLINEA</String>
+          <String>NOMBREARTICULO</String>
+          <String>PRECIOUNITARIO</String>
+          <String>CANTIDAD</String>
+          <String>ESTADOLINEA</String>
           <String>NOMBREESTADOLINEA</String>
+          <String>VALORNETO</String>
+          <String>DESCUENTO</String>
           <String>NUMEROVARIANTE</String>
+          <String>TALLA</String>
+          <String>COLOR</String>
           <String>ESTILO</String>
           <String>SITIO</String>
+          <String>ALMACEN</String>
+          <String>RECIDLINE</String>
           <String>UNIDADMEDIDA</String>
           <String>RAZONDEVOLUCION</String>
           <String>RAZONGRUPO</String>
           <String>TAXGROUP</String>
           <String>TAXGROUPNAME</String>
           <String>GRUPOVENTAS</String>
+          <String>PORCENTAJE</String>
+          <String>STOCK</String>
           <String>NUMEROFACTURA</String>
           <String>NOMBREFACTURADOR</String>
+          <String>REESTABLECERESTADO</String>
           <String>NOMBREREESTABLECERESTADO</String>
           <String>PEDIDORETORNADO</String>
+          <String>IMPORTEFACTURA</String>
           <String>TIPONOTACREDITO</String>
           <String>NOTAABONO</String>
+          <String>FECHAFACTURA</String>
           <String>NombreLocalidad</String>
           <String>Cliente.Ciudad</String>
           <String>Cliente.CorreoPpal</String>
@@ -2610,7 +2624,6 @@
           <String>OrdenProd.INVENTBATCHID</String>
           <String>OrdenProd.NAME</String>
           <String>OrdenProd.PRODSTATUSNAME</String>
-          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.INVENTTRANSID</String>
           <String>OrdenProd.INVENTREFID</String>
           <String>OrdenProd.INVENTREFTRANSID</String>
@@ -2725,9 +2738,7 @@
           <String>MovimientosArticulos.CONTABILIZADO</String>
           <String>MovimientosArticulos.NOMBREMOVIMIENTO</String>
           <String>MovimientosArticulos.PEDIDOREFERENCIA</String>
-          <String>EntradaProducto.CODDIARIO</String>
-          <String>EntradaProducto.TIPOTRANSF</String>
-          <String>EntradaProducto.CODORDENPROD</String>
+          <String>MovimientosArticulos.DESCTIPOTRANS</String>
           <String>Contabilidad.EC.Canal</String>
           <String>Contabilidad.DIMENSION_LINEA</String>
           <String>Contabilidad.DESC_MARCA</String>
@@ -2770,25 +2781,6 @@
           <String>Producto.IdSubTipo</String>
           <String>PRODLINETYPE</String>
           <String>BOMQTY</String>
-          <String>%OrdenesPedidoKey</String>
-          <String>DEFAULTDIMENSIONPEDIDO</String>
-          <String>ESTADOPEDIDO</String>
-          <String>TIPOPEDIDO</String>
-          <String>FECHACREACIONPEDIDO</String>
-          <String>PENDIENTEENTREGA</String>
-          <String>NUMEROLINEA</String>
-          <String>PRECIOUNITARIO</String>
-          <String>CANTIDAD</String>
-          <String>ESTADOLINEA</String>
-          <String>VALORNETO</String>
-          <String>DESCUENTO</String>
-          <String>COLOR</String>
-          <String>RECIDLINE</String>
-          <String>PORCENTAJE</String>
-          <String>STOCK</String>
-          <String>REESTABLECERESTADO</String>
-          <String>IMPORTEFACTURA</String>
-          <String>FECHAFACTURA</String>
           <String>Cliente.Cupo</String>
           <String>Cliente.IdTipoCliente</String>
           <String>CostosProduccion.AP_QST_QTYCHARGEACUM</String>
@@ -2822,8 +2814,8 @@
           <String>%OrdenesProduccionKey</String>
           <String>OrdenProd.PROJLINKEDTOORDER</String>
           <String>OrdenProd.INVENTCOLORID</String>
-          <String>OrdenProd.PRODGROUPID</String>
           <String>OrdenProd.PRODSTATUS</String>
+          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.PRODPRIO</String>
           <String>OrdenProd.PRODLOCKED</String>
           <String>OrdenProd.PRODTYPE</String>
@@ -2999,10 +2991,7 @@
           <String>MovimientosArticulos.CANTDIARIO</String>
           <String>MovimientosArticulos.COLORID</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>%EntradaProductoKey</String>
-          <String>EntradaProducto.FECHATRANSF</String>
-          <String>EntradaProducto.COLORID</String>
-          <String>EntradaProducto.CANTTRANSFE</String>
+          <String>MovimientosArticulos.TIPOTRANS</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
@@ -3045,23 +3034,6 @@
           <String>Producto.IdMarca</String>
           <String>Producto.IdSubTipo</String>
           <String>PRODLINETYPE</String>
-          <String>%OrdenesPedidoKey</String>
-          <String>DEFAULTDIMENSIONPEDIDO</String>
-          <String>ESTADOPEDIDO</String>
-          <String>TIPOPEDIDO</String>
-          <String>PENDIENTEENTREGA</String>
-          <String>NUMEROLINEA</String>
-          <String>PRECIOUNITARIO</String>
-          <String>CANTIDAD</String>
-          <String>ESTADOLINEA</String>
-          <String>VALORNETO</String>
-          <String>DESCUENTO</String>
-          <String>COLOR</String>
-          <String>RECIDLINE</String>
-          <String>PORCENTAJE</String>
-          <String>STOCK</String>
-          <String>REESTABLECERESTADO</String>
-          <String>FECHAFACTURA</String>
           <String>Cliente.Cupo</String>
           <String>Cliente.IdTipoCliente</String>
           <String>CostosProduccion.AP_QST_QTYCHARGEACUM</String>
@@ -3090,8 +3062,8 @@
           <String>%OrdenesProduccionKey</String>
           <String>OrdenProd.PROJLINKEDTOORDER</String>
           <String>OrdenProd.INVENTCOLORID</String>
-          <String>OrdenProd.PRODGROUPID</String>
           <String>OrdenProd.PRODSTATUS</String>
+          <String>OrdenProd.QTYGOOD</String>
           <String>OrdenProd.PRODPRIO</String>
           <String>OrdenProd.PRODLOCKED</String>
           <String>OrdenProd.PRODTYPE</String>
@@ -3153,9 +3125,6 @@
           <String>ProdCalcTrans.CONSUMPCONSTANT</String>
           <String>ProdCalcTrans.REALCOSTADJUSTMENT</String>
           <String>InventTransOP.DATEFINANCIAL</String>
-          <String>InventTransOP.QTY</String>
-          <String>InventTransOP.COSTAMOUNTPHYSICAL</String>
-          <String>InventTransOP.COSTAMOUNTPOSTED</String>
           <String>%OrdenesCompraKey</String>
           <String>OrdenesCompra.ORDERACCOUNT</String>
           <String>OrdenesCompra.INVOICEACCOUNT</String>
@@ -3235,15 +3204,11 @@
           <String>InventarioDisponible.CANTREGISTRADA</String>
           <String>InventarioDisponible.CANTRECOGIDA</String>
           <String>InventarioDisponible.LLEGADA</String>
-          <String>InventarioDisponible.ORDENADARESERVADA</String>
           <String>%MovimientoProductoKey</String>
           <String>MovimientosArticulos.CANTDIARIO</String>
           <String>MovimientosArticulos.COLORID</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>%EntradaProductoKey</String>
-          <String>EntradaProducto.FECHATRANSF</String>
-          <String>EntradaProducto.COLORID</String>
-          <String>EntradaProducto.CANTTRANSFE</String>
+          <String>MovimientosArticulos.TIPOTRANS</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Contabilidad.CUENTA_N1</String>
           <String>Contabilidad.CUENTA_N2</String>
@@ -3266,7 +3231,6 @@
           <String>Calendario.DateMMDD</String>
           <String>DefaultDimensions.CREATEDDATETIME</String>
           <String>DefaultDimensions.MODIFIEDDATETIME</String>
-          <String>FECHACREACIONPEDIDO</String>
           <String>OrdenProd.DLVDATE</String>
           <String>OrdenProd.BOMDATE</String>
           <String>OrdenProd.DLVTIME</String>
@@ -3282,7 +3246,6 @@
           <String>PedidosTransfer.FECHAENVIO</String>
           <String>RutasPicking.TIEMPOACTIVACION</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>EntradaProducto.FECHATRANSF</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Venta.FechaFactura</String>
         </FieldNames>
@@ -3306,7 +3269,6 @@
           <String>RpProduccion.FechaEstimadaEntrega</String>
           <String>PedidosTransfer.FECHAENVIO</String>
           <String>MovimientosArticulos.FECHADIARIO</String>
-          <String>EntradaProducto.FECHATRANSF</String>
           <String>Contabilidad.ACCOUNTINGDATE</String>
           <String>Venta.FechaFactura</String>
         </FieldNames>
