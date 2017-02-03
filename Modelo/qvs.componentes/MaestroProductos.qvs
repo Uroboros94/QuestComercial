@@ -227,5 +227,6 @@ Producto:
 		TipoPrenda							as Producto.TipoPrenda,
 		TipoProducto						as Producto.TipoProducto,
 		TipoTejido							as Producto.TipoTejido
-	Resident Producto_Temp2;
+	Resident Producto_Temp2
+	Where not WildMatch(Coleccion, 'SERV_PN');
 	Drop Table Producto_Temp2;

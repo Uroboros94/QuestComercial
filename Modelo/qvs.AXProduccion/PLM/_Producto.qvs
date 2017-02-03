@@ -1,0 +1,148 @@
+﻿/*****************************************************************************************************
+	Detalle :
+	Transformacion de Dimensiones: Producto
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	11/03/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+Producto_temp:
+	LOAD
+		*
+	FROM [..\QVD\PLM\Producto_QV.QVD](qvd);
+
+Mapping
+Generos:
+	LOAD Distinct
+		IdGenero,
+		DescripcionGenero
+	Resident Producto_temp;
+
+Mapping
+Lineas:
+	LOAD Distinct
+		IdGenero & Right(IdLinea,2),
+		DescripcionLinea
+	Resident Producto_temp;
+
+Mapping
+Sublineas:
+	LOAD Distinct
+		Right(IdSublinea,2),
+		DescripcionSublinea
+	Resident Producto_temp;
+
+Mapping
+TiposAquision:
+	LOAD Distinct
+		IdTipoAquision,
+		DescripcionTipoAquision
+	Resident Producto_temp;
+
+Mapping
+TiposProducto:
+	LOAD Distinct
+		IdTipoProducto,
+		DescripcionTipoProducto
+	Resident Producto_temp;
+
+
+ProductoPLM:
+	LOAD
+		//IdColeccion&Upper(DescripcionMarca)&IdGenero
+		//&Right(IdLinea,2)&Right(IdSublinea,2)&IdTipoAquision 		as CK.IdLlaveProducto,
+		//***********************************************************************************************
+		IdColeccion&Upper(DescripcionMarca)&IdGenero
+		&Right(IdLinea,2)&Right(IdSublinea,2)&IdTipoAquision 		as Temp,
+		//***********************************************************************************************
+		IdPLM 																		as SK.IdPLM,
+		CodigoProducto																as SK.Producto,
+		Date(___CT)																	as SK.Fecha,
+		Date(___CT)																	as ProductoPLM.Fecha,
+		CodigoProducto																as ProductoPLM.IdProducto,
+		Costo																		as ProductoPLM.Costo,
+		Descripcion 																as ProductoPLM.Descripcion,
+		DescripcionBanda															as ProductoPLM.Banda,
+		DescripcionClima 															as ProductoPLM.Clima,
+		DescripcionColeccion														as ProductoPLM.Coleccion,
+		DescripcionCuello 															as ProductoPLM.Cuello,
+		DescripcionError 															as ProductoPLM.Error,
+		DescripcionGenero 															as ProductoPLM.Genero,
+		DescripcionGrupoProducto													as ProductoPLM.GrupoProducto,
+		DescripcionLavado															as ProductoPLM.Lavado,
+		DescripcionLinea															as ProductoPLM.Linea,
+		DescripcionManga															as ProductoPLM.Manga,
+		DescripcionMarca															as ProductoPLM.Marca,
+		DescripcionNivelModa														as ProductoPLM.NivelModa,
+		DescripcionPatronista														as ProductoPLM.Patronista,
+		DescripcionProcedencia														as ProductoPLM.Procedencia,
+		DescripcionSilueta															as ProductoPLM.Silueta,
+		DescripcionSublinea															as ProductoPLM.Sublinea,
+		DescripcionTipoAquision														as ProductoPLM.TipoAquision,
+		DescripcionTipoPrenda														as ProductoPLM.TipoPrenda,
+		DescripcionTipoProducto														as ProductoPLM.TipoProducto,
+		DesUnidadMedidaInventario													as ProductoPLM.UnidadMedidaInventario,
+		desUnidadMedidaVenta														as ProductoPLM.UnidadMedidaVenta,
+		Diseñador																	as ProductoPLM.Diseñador,
+		EstadoAprobacion															as ProductoPLM.EstadoAprobacion,
+		If(IsNull(EstadoAprobacionComite),'En desarrollo',EstadoAprobacionComite)	as ProductoPLM.EstadoAprobacionComite,
+		EstadoExportacion 															as ProductoPLM.EstadoExportacion,
+		EstadoSincronizacion 														as ProductoPLM.EstadoSincronizacion,
+		FechaActualizacion 															as ProductoPLM.FechaActualizacion,
+		FechaCreacion 																as ProductoPLM.FechaCreacion,
+		IdBanda 																	as ProductoPLM.IdBanda,
+		IdClima 																	as ProductoPLM.IdClima,
+		IdColeccion 																as ProductoPLM.IdColeccion,
+		IdCuello 																	as ProductoPLM.IdCuello,
+		IdGenero 																	as ProductoPLM.IdGenero,
+		IdGrupoProducto 															as ProductoPLM.IdGrupoProducto,
+		IdLavado 																	as ProductoPLM.IdLavado,
+		IdGenero & Right(IdLinea,2) 												as ProductoPLM.IdLinea,
+		IdManga 																	as ProductoPLM.IdManga,
+		IdMarca 																	as ProductoPLM.IdMarca,
+		IdNivelModa 																as ProductoPLM.IdNivelModa,
+		IdPatronista 																as ProductoPLM.IdPatronista,
+		IdPLM 																		as ProductoPLM.IdPLM,
+		IdProcedencia 																as ProductoPLM.IdProcedencia,
+		IdSilueta 																	as ProductoPLM.IdSilueta,
+		Right(IdSublinea,2)															as ProductoPLM.IdSublinea,
+		IdTipoAquision 																as ProductoPLM.IdTipoAdquisicion,
+		IdTipoPrenda 																as ProductoPLM.IdTipoPrenda,
+		IdTipoProducto 																as ProductoPLM.IdTipoProducto,
+		LoteAprobado																as ProductoPLM.LoteAprobado,
+		QST_Style_StatusBOM_enum													as ProductoPLM.EstadoBOM,
+		QST_StyleAttr_SisproCode_string												as ProductoPLM.IdSisproCode,
+		Semanaentrada																as ProductoPLM.Semanaentrada,
+		UnidadMedidaInventario 														as ProductoPLM.IdUnidadMedidaInventario,
+		UnidadMedidaVenta 															as ProductoPLM.IdUnidadMedidaVenta//,
+		//Theme																				as ProductoPLM.TemaProducto
+	Resident Producto_temp;
+	Drop Table Producto_temp;
+	Concatenate
+	LOAD
+		CK.IdLlaveProducto as Temp,
+		Ppto.Marca 												as ProductoPLM.Marca,
+		Ppto.IdGenero 											as ProductoPLM.IdGenero,
+		ApplyMap('Generos',Ppto.IdGenero,null()) 				as ProductoPLM.Genero,
+		Ppto.IdLinea 											as ProductoPLM.IdLinea,
+		ApplyMap('Lineas',Ppto.IdLinea,null()) 					as ProductoPLM.Linea,
+		Ppto.IdSubLinea 										as ProductoPLM.IdSublinea,
+		ApplyMap('Sublineas',Ppto.IdSubLinea,null()) 			as ProductoPLM.Sublinea,
+		Ppto.IdTipoProducto										as ProductoPLM.IdTipoProducto,
+		ApplyMap('TiposProducto',Ppto.IdTipoProducto,null())	as ProductoPLM.TipoProducto,
+		Ppto.IdTipoAdquisicion									as ProductoPLM.IdTipoAdquisicion,
+		ApplyMap('TiposAquision',Ppto.IdTipoAdquisicion,null())	as ProductoPLM.TipoAquision,
+		Ppto.IdColeccion										as ProductoPLM.IdColeccion,
+		Ppto.IdColeccion										as ProductoPLM.Coleccion,
+		'En desarrollo'											as ProductoPLM.EstadoAprobacion,
+		'En desarrollo'											as ProductoPLM.EstadoAprobacionComite
+	//FROM
+	//[..\QVD\PLM\_Presupuesto.QVD]
+	//(qvd)
+	Resident Presupuesto
+	Where not Exists(Temp,CK.IdLlaveProducto);
+
+//STORE Producto INTO [..\QVD\PLM\_Producto.QVD](qvd);
+DROP Field Temp;
+//DROP TABLE Producto;
