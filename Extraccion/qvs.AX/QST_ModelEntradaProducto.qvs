@@ -4,27 +4,20 @@
 -------------------------------------------------------------------------------------------------
 Fecha       |   Desarrollador    |   Modificación
 -------------------------------------------------------------------------------------------------
-08/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+09/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
 *****************************************************************************************************/
-MovimientosArticulos:
+EntradaProducto:
   SQL SELECT
-    DESCMOVIMIENTO,
-	  CANTDIARIO,
-    NOMBREALMACEN,
-    CODALMACEN,
-	  COLORID,
-	  TALLA,
-	  CODARTICULO,
-	  FECHADIARIO,
-	  CODIGODIARIO,
-    CONTABILIZADO,
-    ORDENPRODMAESTRA,
-    ORDENPRODUC,
-    NOMBREMOVIMIENTO,
-    PEDIDOREFERENCIA,
-    TIPOTRANS,
-    DESCTIPOTRANS
-  FROM QST_MODELMOVIMIENTOARTICULOS;
+    CODDIARIO,
+    COSTEFISICO,
+    FECHATRANSF,
+    CODLOCALIDAD,
+    CODARTICULO,
+    COLORID,
+    TALLA,
+    CANTTRANSFE,
+    CODORDENPROD
+  FROM QST_MODELENTRADAPRODUCTO;
 
-STORE MovimientosArticulos INTO [..\QVD\QST_ModelMovimientoArticulos.QVD](qvd);
-DROP TABLE MovimientosArticulos;
+STORE EntradaProducto INTO [..\QVD\QST_ModelEntradaProducto.QVD](qvd);
+DROP TABLE EntradaProducto;

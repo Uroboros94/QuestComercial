@@ -328,7 +328,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Cantidad Programada] - Aggr(Sum(RpProduccion.CantidadBuena), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+        <v>[Cantidad Programada] - Sum(RpProduccion.CantidadBuena)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -12929,7 +12929,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Cantidad Programada] - Aggr(Sum(RpProduccion.CantidadBuena), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+              <v>[Cantidad Programada] - Sum(RpProduccion.CantidadBuena)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

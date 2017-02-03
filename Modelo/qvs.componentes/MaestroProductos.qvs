@@ -25,6 +25,32 @@ Generos:
 	[..\QVD\PLM\Producto_QV.QVD]
 	(qvd);
 
+Tallas:
+	Mapping
+	LOAD * Inline [
+		Talla, Orden
+		XS, 1
+		S, 2
+		M, 3
+		L, 4
+		XL, 5
+		08, 8
+		10, 10
+		12, 12
+		14, 14
+		16, 16
+		18, 18
+		20, 20
+		24, 24
+		26, 26
+		28, 28
+		30, 30
+		32, 32
+		34, 34
+		36, 36
+		38, 38
+		40, 40
+	];
 
 Producto_Temp:
 	LOAD
@@ -39,7 +65,7 @@ Producto_Temp:
 		DESCGRUPODIMSEGUIMIENTO,
 		CODARTICULO,
 		NOMBRESUBTIPOPRODUCTO,
-		TALLA,
+		If(IsNum(TALLA), If(TALLA < 10, '0'&TALLA, TALLA), TALLA) as TALLA,
 		NOMBRETIPOPRODUCTO
 	FROM
 	[..\QVD\QST_MaestroProductos.QVD]
@@ -94,7 +120,6 @@ Producto_Temp2:
 	FROM
 	[..\QVD\QST_MaestroProductosAtributes.QVD]
 	(qvd);
-
 
 //******************************************************************************************
 DimFinanTemp:
@@ -159,6 +184,8 @@ Producto:
 		CK.ProductoTallaColor,
 		SK.KEYPRODUCT,
 		SK.Producto,
+		Coleccion&Upper(Marca)&Genero&IdLinea&Right(IdSublinea, 2)
+			&If(Len(TipoAdquisicion) < 2, '0'&TipoAdquisicion, TipoAdquisicion) as CK.IdLlaveProducto,
 		IdColor								as Producto.IdColor,
 		ApplyMap('Generos',Genero)&IdLinea	as Producto.IdLinea,
 		IdMarca								as Producto.IdMarca,
@@ -186,7 +213,7 @@ Producto:
 		Marca								as Producto.Marca,
 		NivelModa							as Producto.NivelModa,
 		Nombre								as Producto.Nombre,
-		NonmbreCategoria					as Producto.NonmbreCategoria,
+		NonmbreCategoria					as Producto.NombreCategoria,
 		OperacionUso						as Producto.OperacionUso,
 		Patronista							as Producto.Patronista,
 		Referencia							as Producto.Referencia,
@@ -194,7 +221,7 @@ Producto:
 		Silueta								as Producto.Silueta,
 		Sublinea							as Producto.Sublinea,
 		SubTipo								as Producto.SubTipo,
-		Talla								as Producto.Talla,
+		Dual(Talla, ApplyMap('Tallas', Talla))			as Producto.Talla,
 		Tipo								as Producto.Tipo,
 		TipoAdquisicion						as Producto.TipoAdquisicion,
 		TipoPrenda							as Producto.TipoPrenda,

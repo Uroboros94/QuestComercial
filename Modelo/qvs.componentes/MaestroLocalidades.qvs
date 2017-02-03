@@ -11,6 +11,7 @@ Fecha       |   Desarrollador     |   Modificación
 MaestroLocalidades:
   LOAD
     INVENTLOCATIONID as SK.IDLOCALIDAD,
+    INVENTLOCATIONID as CodLocalidad,
     NAME as NombreLocalidad
   FROM
   [..\QVD\MaestroLocalidades.QVD]

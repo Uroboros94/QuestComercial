@@ -229,8 +229,8 @@
       <Definition>
         <v>Sum(
 	{&lt;
-		Contabilidad.CUENTA_N4 = {'523550'}, 
-//		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
+		Contabilidad.CUENTA_N5 = {'52355001'}, 
+		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203'}, 
 		Contabilidad.ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
 	&gt;} 	Contabilidad.MOVIMIENTO)</v>
       </Definition>
@@ -282,9 +282,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Valor Flete] + [Venta]</v>
+        <v>[Valor Flete] / [Venta]</v>
       </Definition>
-      <Enable>false</Enable>
+      <Enable>true</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -3440,7 +3440,7 @@
       <int>300</int>
       <int>375</int>
       <int>344</int>
-      <int>100</int>
+      <int>300</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -4003,8 +4003,8 @@
             <Definition>
               <v>Sum(
 	{&lt;
-		Contabilidad.CUENTA_N4 = {'523550'}, 
-//		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203','200102'}, 
+		Contabilidad.CUENTA_N5 = {'52355001'}, 
+		Contabilidad.DIMENSION_CENTRO_DE_COSTO = {'200202', '200203'}, 
 		Contabilidad.ANO = {&quot;$(=Year(Max(SK.FECHA)))&quot;}
 	&gt;} 	Contabilidad.MOVIMIENTO)</v>
             </Definition>
@@ -5179,9 +5179,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Valor Flete] + [Venta]</v>
+              <v>[Valor Flete] / [Venta]</v>
             </Definition>
-            <Enable>false</Enable>
+            <Enable>true</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>

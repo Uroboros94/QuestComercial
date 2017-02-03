@@ -29,11 +29,23 @@ FROM
 [..\QVD\WrkCtrTable.QVD]
 (qvd);
 
-FOR counter =1 to 8 step 1
+Rutas_Produccion:
+	LOAD ROUTEID,
+		 OPRNUM,
+		 OPRNUMNEXT,
+		 OPRID,
+		 NAME,
+		 ITEMID as ITEMROUTE
+	FROM
+	[..\QVD\Rutas_Produccion.QVD]
+	(qvd);
+
+FOR counter =1 to 9 step 1
 Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$(counter));
 	RpProduccion:
 		LOAD
 			ROUTEQTYGOOD$(counter)								as RpProduccion.CantidadBuena,
+			QTYERROR$(counter)								as RpProduccion.CantidadMala,
 			QTYSTUP                                 			as RpProduccion.CantidadConfirmada,
 			QTYCALC                                 			as RpProduccion.CantidadEstimada,
 			GARMENTTYPE											as RpProduccion.ClaseReferencia,
@@ -74,8 +86,25 @@ Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$
 			SUBLINE												as RpProduccion.Sublinea
 		FROM
 		[..\QVD\AP_QST_ProdReport.QVD]
-		(qvd);
+		(qvd)
+		Where ROUTEQTYGOOD$(counter) > 0;
+
+		/*Left Join(RpProduccion)
+		LOAD
+			OPRNUM as RpProduccion.NumOper,
+			NAME as RpProduccion.NombreOperacion,
+			ITEMROUTE as RpProduccion.Referencia
+		Resident Rutas_Produccion
+		Where WildMatch(NAME, '$(vOper)')
+		and WildMatch(ITEMROUTE, '$(vArt)');*/
+
+			LET vOper = Peek('RpProduccion.NombreOperacion', -1, 'RpProduccion');
+			LET vArt = Peek('RpProduccion.Referencia', -1, 'RpProduccion');
 NEXT;
+
+LET vOper = Null();
+LET vArt = Null();
+//Drop Table Rutas_Produccion;
 
 //			ROUTEDATEDIFF1,
 //			ROUTEDATEDIFF2,
