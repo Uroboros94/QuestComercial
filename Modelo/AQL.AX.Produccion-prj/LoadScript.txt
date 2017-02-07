@@ -92,11 +92,10 @@ $(Must_Include=qvs.axproduccion\contabilidad.qvs);
 /* Facturación */
 $(Must_Include=qvs.axproduccion\facturacion.qvs);
 
+/*Link Table*/
 $(Must_Include=qvs.axproduccion\linktable.qvs);
 ///$tab Exit
 TRACE Modelo Finalizado;
 EXIT SCRIPT;
 ///$tab Temp
-
-
 $(Include=qvs.axproduccion\bomcalctrans.qvs);
