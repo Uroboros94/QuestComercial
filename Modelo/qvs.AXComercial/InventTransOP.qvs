@@ -28,8 +28,8 @@ FROM
 
 left join
 
-LOAD Code as ITEMID,
-	FilePath
+LOAD CodigoProducto as ITEMID,
+	RutaProducto
 FROM
 [..\QVD\PLM\FotosStyle.QVD]
 (qvd);
@@ -48,6 +48,6 @@ LOAD CK.ProductoTallaColor,
 	QTY,
 	COSTAMOUNTPHYSICAL,
 	COSTAMOUNTPOSTED,
-	If(LEN(FilePath) > 0, 'Si', 'No') as TIENEFOTO
+	If(LEN(RutaProducto) > 0, 'Si', 'No') as TIENEFOTO
 Resident tmp_InventTransOP;
 DROP Table tmp_InventTransOP;
