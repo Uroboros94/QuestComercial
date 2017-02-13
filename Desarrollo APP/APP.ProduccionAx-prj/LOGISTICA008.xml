@@ -229,7 +229,7 @@
       <Definition>
         <v>If([Unidades] &gt; 0, Only({&lt;SK.DEFAULTDIMENSION = p(DEFAULTDIMENSIONPEDIDO)&gt;} DefaultDimensions.EC.Canal))</v>
       </Definition>
-      <Enable>true</Enable>
+      <Enable>false</Enable>
       <Present>false</Present>
       <Relative>false</Relative>
       <BrutalSum>false</BrutalSum>
@@ -252,13 +252,17 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>//Aggr(
-Sum({&lt;
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
-	//TIPOPEDIDO = {'3'},
-	//ESTADOLINEA = {'3'}
-	&gt;} CANTIDAD - PENDIENTEENTREGA)//, Venta.IdFactura)</v>
+        <v>Sum({&lt;	TIPOPEDIDO = {'3'}
+		&gt;}	CANTIDAD - PENDIENTEENTREGA)
+/*Cambios anteriores*/
+//, Venta.IdFactura)
+//Aggr(
+//{&lt;
+//	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+//	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+
+//	//ESTADOLINEA = {'3'}
+//	&gt;}</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -313,12 +317,15 @@ Sum({&lt;
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
-	//TIPOPEDIDO = {'3'},
-	//ESTADOLINEA = {'3'}
-	&gt;} (((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO)) + IMPORTEFACTURA)</v>
+        <v>Sum({&lt;	TIPOPEDIDO = {'3'}
+		&gt;}	(((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO)) + IMPORTEFACTURA)
+/*Cambios Anteriores*/
+//{&lt;
+//	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+//	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+
+//	//ESTADOLINEA = {'3'}
+//	&gt;} </v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2960,7 +2967,7 @@ Sum({&lt;
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
-        <Type>COND_EX_COND</Type>
+        <Type>COND_EX_TRUE</Type>
         <Expression>0</Expression>
       </EnableCondition>
       <Comment></Comment>
@@ -3135,7 +3142,7 @@ Sum({&lt;
           </OtherBgColor>
         </CellVariationDef>
       </DimCellVariations>
-      <DropdownSelect>false</DropdownSelect>
+      <DropdownSelect>true</DropdownSelect>
       <ImageRepresentation></ImageRepresentation>
       <ExcludedValuesMode>0</ExcludedValuesMode>
       <DefaultSearchMode>0</DefaultSearchMode>
@@ -6312,9 +6319,9 @@ Sum({&lt;
       <int>300</int>
       <int>234</int>
       <int>300</int>
-      <int>300</int>
       <int>172</int>
       <int>300</int>
+      <int>100</int>
       <int>100</int>
       <int>100</int>
     </ColWidths>
@@ -6810,8 +6817,8 @@ Sum({&lt;
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
-      <int>0</int>
       <int>1</int>
+      <int>0</int>
       <int>2</int>
       <int>3</int>
       <int>4</int>
@@ -6839,10 +6846,9 @@ Sum({&lt;
     <ShowSortIndicators>true</ShowSortIndicators>
     <ShowSelectIndicators>true</ShowSelectIndicators>
     <DisplayOrder>
-      <int>0</int>
-      <int>1</int>
       <int>10</int>
       <int>2</int>
+      <int>1</int>
     </DisplayOrder>
     <IndentMode>false</IndentMode>
     <DimensionVtBorderMode>BORDER_LOGICCELL</DimensionVtBorderMode>
@@ -6962,7 +6968,7 @@ Sum({&lt;
             <Definition>
               <v>If([Unidades] &gt; 0, Only({&lt;SK.DEFAULTDIMENSION = p(DEFAULTDIMENSIONPEDIDO)&gt;} DefaultDimensions.EC.Canal))</v>
             </Definition>
-            <Enable>true</Enable>
+            <Enable>false</Enable>
             <Present>false</Present>
             <Relative>false</Relative>
             <BrutalSum>false</BrutalSum>
@@ -7550,13 +7556,17 @@ Sum({&lt;
           <InternalId>3</InternalId>
           <ExpressionData>
             <Definition>
-              <v>//Aggr(
-Sum({&lt;
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
-	//TIPOPEDIDO = {'3'},
-	//ESTADOLINEA = {'3'}
-	&gt;} CANTIDAD - PENDIENTEENTREGA)//, Venta.IdFactura)</v>
+              <v>Sum({&lt;	TIPOPEDIDO = {'3'}
+		&gt;}	CANTIDAD - PENDIENTEENTREGA)
+/*Cambios anteriores*/
+//, Venta.IdFactura)
+//Aggr(
+//{&lt;
+//	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+//	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+
+//	//ESTADOLINEA = {'3'}
+//	&gt;}</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8741,12 +8751,15 @@ Sum({&lt;
           <InternalId>4</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;
-	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
-	//TIPOPEDIDO = {'3'},
-	//ESTADOLINEA = {'3'}
-	&gt;} (((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO)) + IMPORTEFACTURA)</v>
+              <v>Sum({&lt;	TIPOPEDIDO = {'3'}
+		&gt;}	(((CANTIDAD - PENDIENTEENTREGA) * PRECIOUNITARIO)) + IMPORTEFACTURA)
+/*Cambios Anteriores*/
+//{&lt;
+//	//Calendario.ano = {&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
+//	SK.FECHA = {&quot;&lt;=$(=num(addmonths(max(today()),0)))&quot;}//, 
+
+//	//ESTADOLINEA = {'3'}
+//	&gt;} </v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

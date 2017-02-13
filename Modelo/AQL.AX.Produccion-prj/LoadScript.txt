@@ -7,8 +7,8 @@ SET MoneyFormat='$#.##0,00;-$#.##0,00';
 SET TimeFormat='h:mm:ss TT';
 SET DateFormat='DD/MM/YYYY';
 SET TimestampFormat='DD/MM/YYYY h:mm:ss[.fff] TT';
-SET MonthNames='ene.;feb.;mar.;abr.;may.;jun.;jul.;ago.;sep.;oct.;nov.;dic.';
-SET DayNames='lun.;mar.;mié.;jue.;vie.;sáb.;dom.';
+SET MonthNames='Ene;Feb;Mar;Abr;May;Jun;Jul;Ago;Sep;Oct;Nov;Dic';
+SET DayNames='lun;mar;mié;jue;vie;sáb;dom';
 SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
 SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
 SET FirstWeekDay=0;
@@ -17,10 +17,9 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
+$(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
 ///$tab Dimensiones
 /*Carga de Dimensiones*/
-/*Calendario*/
-$(Must_Include=qvs.componentes\calendario.qvs);
 
 /*Dafault Dimensions*/
 $(Must_Include=qvs.componentes\defaultdimensions.qvs);
@@ -94,8 +93,32 @@ $(Must_Include=qvs.axproduccion\facturacion.qvs);
 
 /*Link Table*/
 $(Must_Include=qvs.axproduccion\linktable.qvs);
+
+
+
+///$tab Calendario
+CALL Qvc.CalendarFromField('SK.FECHA');
+
+//--------------------------------------------------------------------------------------------------
+// Procesamiento de la Tabla en Memoria para Crear Columnas Nuevas...
+
+Calendario:
+Load Distinct
+	num(SK.FECHA)			as SK.FECHA,
+	SK.FECHA					as Calendario.%_Fechakey,
+	Year 						as Calendario.ano,
+	Month						as Calendario.nomMes,
+	[Year-Month]				as Calendario.MonthYear,
+	Day						as Calendario.dia,
+	Weekday					as Calendario.nombreDia,
+	Week(SK.FECHA)			as Calendario.semana,
+	Replace(Quarter,'Q','T')	as Calendario.trimestre
+Resident MasterCalendar;
+DROP Table MasterCalendar;
+
+
+
 ///$tab Exit
+CALL Qvc.Cleanup;
 TRACE Modelo Finalizado;
 EXIT SCRIPT;
-///$tab Temp
-$(Include=qvs.axproduccion\bomcalctrans.qvs);

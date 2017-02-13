@@ -302,7 +302,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
+        <v>Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -9992,7 +9992,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
+              <v>Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
