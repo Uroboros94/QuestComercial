@@ -1,4 +1,4 @@
-/*Variables Iniciales*/
+/*	Variables Iniciales	*/
 SET ThousandSep='.';
 SET DecimalSep=',';
 SET MoneyThousandSep='.';
@@ -67,8 +67,8 @@ $(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
 	$(Must_Include=qvs.axproduccion\contabilidad.qvs);
 	//$(Must_Include=qvs.axproduccion\cif.qvs);
 
-	/*Seguimiento de la linea de Producción*/
-	$(Must_Include=qvs.axproduccion\ap_qst_prodreport.qvs);
+	/*Matriz de Producción*/
+	$(Must_Include=qvs.axproduccion\RpProduccion.qvs);
 
 	/*Listado de precios*/
 	$(Must_Include=qvs.axproduccion\listadoprecios.qvs);
