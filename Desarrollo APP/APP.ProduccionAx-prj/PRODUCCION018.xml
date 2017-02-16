@@ -227,7 +227,9 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum(ProdCalcTrans.COSTAMOUNT / ProdCalcTrans.QTY) /
+Count(OrdenProd.AP_QST_MASTERPRODORDID)
+</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -15818,7 +15820,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum(ProdCalcTrans.COSTAMOUNT / ProdCalcTrans.QTY) /
+Count(OrdenProd.AP_QST_MASTERPRODORDID)
+</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

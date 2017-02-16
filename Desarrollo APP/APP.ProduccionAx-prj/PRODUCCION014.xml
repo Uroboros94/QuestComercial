@@ -741,8 +741,8 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>IdGrupoCosto</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Insumo.IdGrupoCosto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Tipo Insumo</v>
@@ -1113,8 +1113,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>IdInsumo</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Insumo.IdInsumo</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Id Insumo</v>
@@ -1299,8 +1299,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>NombreInsumo</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Insumo.NombreInsumo</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Nombre Insumo</v>
@@ -2652,10 +2652,10 @@
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>300</int>
+      <int>300</int>
+      <int>275</int>
+      <int>1163</int>
       <int>481</int>
-      <int>100</int>
-      <int>100</int>
-      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -3188,14 +3188,6 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>IdGrupoCosto</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Producto.Coleccion</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -3204,7 +3196,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>IdInsumo</DimName>
+          <DimName>Insumo.IdGrupoCosto</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -3212,7 +3204,15 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>NombreInsumo</DimName>
+          <DimName>Insumo.IdInsumo</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Insumo.NombreInsumo</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
