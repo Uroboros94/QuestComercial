@@ -378,7 +378,8 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+        <v>Sum(RpProduccion.CobroTaller)
+//Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -403,7 +404,12 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Unds Cobros] * Aggr(Only({&lt;ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+        <v>[Unds Cobros] 
+*
+Aggr(
+	Only({&lt;
+		ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), 
+		COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -14095,7 +14101,8 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+              <v>Sum(RpProduccion.CobroTaller)
+//Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14685,7 +14692,12 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Unds Cobros] * Aggr(Only({&lt;ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+              <v>[Unds Cobros] 
+*
+Aggr(
+	Only({&lt;
+		ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), 
+		COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
