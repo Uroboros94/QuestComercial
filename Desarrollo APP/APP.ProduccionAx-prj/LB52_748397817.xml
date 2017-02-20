@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,21 +28,21 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>10000</PointSize1000>
+        <FontName>Roboto Bk</FontName>
+        <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>true</Bold>
+        <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
@@ -94,7 +94,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -121,7 +121,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -227,8 +227,16 @@
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top></Top>
-      <Bottom></Bottom>
+      <Top>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Top>
+      <Bottom>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>

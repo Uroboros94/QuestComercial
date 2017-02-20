@@ -134,7 +134,7 @@ OrdenesCompra_Tmp:
 		ITEMREFTYPE
 	FROM
 	[..\QVD\PurchLine.QVD]
-	(qvd);
+	(qvd) Where not ITEMID like 'S*';
 	Left Join (LineasOC_Tmp)
 	LOAD
 		INVENTDIMID,
@@ -150,7 +150,7 @@ OrdenesCompra_tmp2:
 	LOAD
 		//ENCABEZADO PEDIDO COMPRA
 		PURCHID,
-    PURCHNAME,
+    	PURCHNAME,
 		ORDERACCOUNT,
 		INVOICEACCOUNT,
 		DEFAULTDIMENSION,

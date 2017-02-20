@@ -2,11 +2,12 @@
 	Fecha : 05/10/2016
 	-------------------------------------------------------------------------------------------------
 	 Detalle :
-		Creación del Modelo: AP_QST_ProdReport
+		Creación del Modelo: Matriz De desarrollo
 	-------------------------------------------------------------------------------------------------
 	Fecha       |   Desarrollador   |   CarteraCliente
 	-------------------------------------------------------------------------------------------------
-	05/10/2016  |   malemos         |   Inicio de Configuración
+	05/10/2016	|	malemos	|	Inicio de Configuración.
+	15/02/2017	|	malemos	|	Correccion de Fallas.
 *****************************************************************************************************/
 EstadosProd:
 Mapping
@@ -44,50 +45,57 @@ FOR counter =1 to 9 step 1
 Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$(counter));
 	RpProduccion:
 		LOAD
-			ROUTEQTYGOOD$(counter)								as RpProduccion.CantidadBuena,
+			ROUTEQTYGOOD$(counter)							as RpProduccion.CantidadBuena,
 			QTYERROR$(counter)								as RpProduccion.CantidadMala,
 			QTYSTUP                                 			as RpProduccion.CantidadConfirmada,
 			QTYCALC                                 			as RpProduccion.CantidadEstimada,
-			GARMENTTYPE											as RpProduccion.ClaseReferencia,
-			QTYCHARGE$(counter)									as RpProduccion.CobroTaller,
-			COLLECTION											as RpProduccion.Coleccion,
+			GARMENTTYPE									as RpProduccion.ClaseReferencia,
+			QTYCHARGE$(counter)								as RpProduccion.CobroTaller,
+			COLLECTION									as RpProduccion.Coleccion,
 			ApplyMap('EstadosProd',PRODSTATUS,Null())			as RpProduccion.EstadoProd,
 			Date(PRODORDERCREATEDATE, 'DD/MM/YYYY') 			as RpProduccion.FechaCreacionOrden,
 			Date(ITEMCREATEDATE, 'DD/MM/YYYY')      			as RpProduccion.FechaCreacionRef,
-			Date(CALCDATE, 'DD/MM/YYYY')  						as RpProduccion.FechaEstimacion,
-			Date(DLVDATE, 'DD/MM/YYYY')							as RpProduccion.FechaEstimadaEntrega,
-			Date(ROUTEESTIMATEDDATE$(counter), 'DD/MM/YYYY')	as RpProduccion.FechaEstimFinOper,
+			Date(CALCDATE, 'DD/MM/YYYY')  					as RpProduccion.FechaEstimacion,
+			Date(DLVDATE, 'DD/MM/YYYY')						as RpProduccion.FechaEstimadaEntrega,
+			Date(ROUTEESTIMATEDDATE$(counter), 'DD/MM/YYYY')		as RpProduccion.FechaEstimFinOper,
 			Date($(vROUTEINILDATE),'DD/MM/YYYY')				as RpProduccion.FechaInicioOperacion,
-			Date(RELEASEDDATE,'DD/MM/YYYY')						as RpProduccion.FechaLiberacion,
-			Date(SCHEDEND, 'DD/MM/YYYY')  						as RpProduccion.FechaProgFin,
-			Date(SCHEDDATE, 'DD/MM/YYYY') 						as RpProduccion.FechaProgInicio,
-			Date(REALDATE,'DD/MM/YYYY')							as RpProduccion.FechaReal,
+			Date(RELEASEDDATE,'DD/MM/YYYY')					as RpProduccion.FechaLiberacion,
+			Date(SCHEDEND, 'DD/MM/YYYY')  					as RpProduccion.FechaProgFin,
+			Date(SCHEDDATE, 'DD/MM/YYYY') 					as RpProduccion.FechaProgInicio,
+			Date(REALDATE,'DD/MM/YYYY')						as RpProduccion.FechaReal,
 			Date(FINISHEDDATE, 'DD/MM/YYYY')        			as RpProduccion.FechaRealEntrega,
-			Date(FINISHEDJOURNALDATETIME, 'DD/MM/YYYY')   as RpProduccion.DiarioTransferenciaNT,
+			Date(FINISHEDJOURNALDATETIME, 'DD/MM/YYYY')			as RpProduccion.DiarioTransferenciaNT,
 			Date(ROUTEREALDATE$(counter), 'DD/MM/YYYY')			as RpProduccion.FechaRealFinOper,
 			Date(ROUTEDATEDIFF$(counter), 'DD/MM/YYYY')			as RpProduccion.FechaTallerDiff,
-			PRODPOOLID											as RpProduccion.GrupoOP,
-			PRODSTATUS											as RpProduccion.IdEstadoProd,
-			REPORTFINISHEDJOURNALID					as RpProduccion.DiarioTransfTela,
-			DIMLINE												as RpProduccion.IdLinea,
-			DIMBRAND											as RpProduccion.IdMarca,
-			PRODID												as RpProduccion.IdOPHija,
-			AP_QST_MASTERPRODORDID								as RpProduccion.IdOPMaestra,
-			DIMSUBLINE											as RpProduccion.IdSublinea,
+			PRODPOOLID									as RpProduccion.GrupoOP,
+			PRODSTATUS									as RpProduccion.IdEstadoProd,
+			REPORTFINISHEDJOURNALID							as RpProduccion.DiarioTransfTela,
+			DIMLINE										as RpProduccion.IdLinea,
+			DIMBRAND										as RpProduccion.IdMarca,
+			PRODID										as RpProduccion.IdOPHija,
+			AP_QST_MASTERPRODORDID							as RpProduccion.IdOPMaestra,
+			DIMSUBLINE									as RpProduccion.IdSublinea,
 			ApplyMap('Taller', ROUTEWRKCTRID$(counter), Null())	as RpProduccion.IdTaller,
-			WORKERAUDIT											as RpProduccion.IdTrabAudita,
-			INVENTDIMID											as RpProduccion.KeyTemp,
-			LINE												as RpProduccion.Linea,
-			BRAND												as RpProduccion.Marca,
+			WORKERAUDIT									as RpProduccion.IdTrabAudita,
+			INVENTDIMID									as RpProduccion.KeyTemp,
+			LINE											as RpProduccion.Linea,
+			BRAND										as RpProduccion.Marca,
 			if(OPRNAME$(counter)='',Null(),$(counter))			as RpProduccion.Nivel,
-			OPRNAME$(counter)									as RpProduccion.NombreOperacion,
-			ITEMID												as RpProduccion.Referencia,
-			PRODID                              		    	as COLLECTREFPRODID,
-			SUBLINE												as RpProduccion.Sublinea
+			OPRNAME$(counter)								as RpProduccion.NombreOperacion,
+			ITEMID										as RpProduccion.Referencia,
+			PRODID                              		    		as COLLECTREFPRODID,
+			SUBLINE										as RpProduccion.Sublinea
 		FROM
 		[..\QVD\AP_QST_ProdReport.QVD]
-		(qvd)
-		Where ROUTEQTYGOOD$(counter) > 0;
+		(qvd);
+		//Where ROUTEQTYGOOD$(counter) > 0;
+
+			LET vOper = Peek('RpProduccion.NombreOperacion', -1, 'RpProduccion');
+			LET vArt = Peek('RpProduccion.Referencia', -1, 'RpProduccion');
+NEXT;
+
+LET vOper = Null();
+LET vArt = Null();
 
 		/*Left Join(RpProduccion)
 		LOAD
@@ -98,12 +106,7 @@ Let vROUTEINILDATE = if($(counter)=1,'ROUTEINILDATE'&$(counter),'ROUTEINIDATE'&$
 		Where WildMatch(NAME, '$(vOper)')
 		and WildMatch(ITEMROUTE, '$(vArt)');*/
 
-			LET vOper = Peek('RpProduccion.NombreOperacion', -1, 'RpProduccion');
-			LET vArt = Peek('RpProduccion.Referencia', -1, 'RpProduccion');
-NEXT;
 
-LET vOper = Null();
-LET vArt = Null();
 //Drop Table Rutas_Produccion;
 
 //			ROUTEDATEDIFF1,

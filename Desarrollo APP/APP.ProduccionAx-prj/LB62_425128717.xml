@@ -31,23 +31,23 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
+        <FontName>Roboto Bk</FontName>
         <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>true</Bold>
+        <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Estado Transferencia</v>
+        <v>Mov. Articulo</v>
       </Name>
       <Detached>false</Detached>
       <AllowMinimize>false</AllowMinimize>
@@ -204,8 +204,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_SIX</ScrollStyle>
-      <ScrollWidth>38</ScrollWidth>
+      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
+      <ScrollWidth>29</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -227,8 +227,16 @@
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top></Top>
-      <Bottom></Bottom>
+      <Top>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Top>
+      <Bottom>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>
@@ -261,11 +269,11 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>PedidosTransfer.ESTADOTRANSFERENCIA</Name>
+    <Name>MovimientosArticulos.NOMBREMOVIMIENTO</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
-    <v>Estado Transferencia</v>
+    <v>Mov. Articulo</v>
   </Title>
   <PrintSettings>
     <Landscape>true</Landscape>

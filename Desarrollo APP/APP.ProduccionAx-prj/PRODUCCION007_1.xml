@@ -31,16 +31,16 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -302,7 +302,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
+        <v>Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -696,7 +696,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>188</ColWidth>
+      <ColWidth>216</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -1181,7 +1181,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>188</ColWidth>
+      <ColWidth>206</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2291,7 +2291,7 @@
       <ShowAll>false</ShowAll>
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
-      <NullSuppression>false</NullSuppression>
+      <NullSuppression>true</NullSuppression>
       <ShowPartialSums>0</ShowPartialSums>
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
@@ -2430,7 +2430,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>272</ColWidth>
+      <ColWidth>228</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -2805,7 +2805,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>244</ColWidth>
+      <ColWidth>247</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3171,7 +3171,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>191</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3348,7 +3348,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>294</ColWidth>
+      <ColWidth>341</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition>
@@ -4458,7 +4458,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>225</ColWidth>
+      <ColWidth>134</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -7464,18 +7464,18 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>272</int>
+      <int>228</int>
       <int>153</int>
-      <int>244</int>
+      <int>247</int>
       <int>272</int>
-      <int>300</int>
-      <int>294</int>
+      <int>191</int>
+      <int>341</int>
       <int>300</int>
       <int>284</int>
       <int>300</int>
       <int>222</int>
       <int>209</int>
-      <int>225</int>
+      <int>134</int>
       <int>247</int>
       <int>234</int>
       <int>253</int>
@@ -7485,8 +7485,8 @@
       <int>225</int>
       <int>300</int>
       <int>300</int>
-      <int>188</int>
-      <int>188</int>
+      <int>216</int>
+      <int>206</int>
       <int>213</int>
       <int>300</int>
     </ColWidths>
@@ -8614,7 +8614,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>188</ColWidth>
+            <ColWidth>216</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -9204,7 +9204,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>188</ColWidth>
+            <ColWidth>206</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -9992,7 +9992,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
+              <v>Sum(RpProduccion.CantidadBuena)&amp;' - DP '&amp;Interval(RpProduccion.FechaEstimadaEntrega - SK.FECHA, 'DD')</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

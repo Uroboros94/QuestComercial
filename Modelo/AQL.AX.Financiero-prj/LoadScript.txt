@@ -18,11 +18,11 @@ SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
 ///$tab Hechos
-/*Maestro de Estrucutura comerciales*/
-$(Must_Include=qvs.componentes\estructuracomercial.qvs);
-///$tab Dimensiones
 /*Contabilidad*/
 $(Must_Include=qvs.axfinanciero\contabilidad.qvs);
+///$tab Dimensiones
+/*Maestro de Estrucutura comerciales*/
+$(Must_Include=qvs.componentes\estructuracomercial.qvs);
 ///$tab Exit Script
 TRACE Modelo Terminado;
 EXIT SCRIPT;

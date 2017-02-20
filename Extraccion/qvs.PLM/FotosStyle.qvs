@@ -5,12 +5,13 @@
 Fecha       |   Desarrollador   |   Modificación
 -------------------------------------------------------------------------------------------------
 09/22/2016  |   malemos         |   Inicio de Configuración
+02/02/2017  |   Alejandro Saa G |   Cambio del nombre de la tabla y de los atributos
 *****************************************************************************************************/
 FotosStyle:
-SQL SELECT 
-	Code,
-	FilePath
-FROM "_FotosStyle_";
+SQL SELECT
+	CodigoProducto,
+	RutaProducto
+FROM "FotosSyle";
 
 STORE FotosStyle INTO [..\QVD\PLM\FotosStyle.QVD](qvd);
 DROP TABLE FotosStyle;

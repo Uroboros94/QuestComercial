@@ -31,16 +31,16 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -3312,7 +3312,7 @@
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>1</ShowPartialSums>
+      <ShowPartialSums>0</ShowPartialSums>
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
@@ -4036,7 +4036,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>NombreGrupoCosto</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Grupo</v>
@@ -4222,7 +4222,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>IdInsumo</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Código del Insumo</v>
@@ -4408,7 +4408,7 @@
     <ChartDimensionDataDef>
       <PseudoDef>
         <Name>NombreInsumo</Name>
-        <Type>PRESENT</Type>
+        <Type>NOT_PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Descripcion del Insumo</v>
@@ -4428,7 +4428,7 @@
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
       <NullSuppression>false</NullSuppression>
-      <ShowPartialSums>1</ShowPartialSums>
+      <ShowPartialSums>0</ShowPartialSums>
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
@@ -6113,15 +6113,15 @@
       <int>200</int>
       <int>300</int>
       <int>288</int>
-      <int>219</int>
-      <int>288</int>
-      <int>459</int>
       <int>284</int>
       <int>263</int>
       <int>300</int>
       <int>228</int>
       <int>284</int>
       <int>263</int>
+      <int>100</int>
+      <int>100</int>
+      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -6636,7 +6636,7 @@
     <OuterPixWidth>300</OuterPixWidth>
     <InnerPixWidth>300</InnerPixWidth>
     <AllowPivoting>true</AllowPivoting>
-    <PivotAlwaysFullyExpanded>true</PivotAlwaysFullyExpanded>
+    <PivotAlwaysFullyExpanded>false</PivotAlwaysFullyExpanded>
     <AllowMenuSort>true</AllowMenuSort>
     <ShowSortIndicators>true</ShowSortIndicators>
     <ShowSelectIndicators>true</ShowSelectIndicators>
@@ -6660,7 +6660,7 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.TipoAdquisicion</DimName>
           <ElemNo></ElemNo>
@@ -6668,7 +6668,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
           <ElemNo></ElemNo>
@@ -6676,7 +6676,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
@@ -6684,7 +6684,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>NombreGrupoCosto</DimName>
           <ElemNo></ElemNo>
@@ -6700,7 +6700,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>IdInsumo</DimName>
           <ElemNo></ElemNo>
@@ -6708,7 +6708,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>OrdenProd.PRODSTATUSNAME</DimName>
           <ElemNo></ElemNo>

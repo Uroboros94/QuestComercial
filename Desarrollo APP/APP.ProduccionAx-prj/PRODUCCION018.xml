@@ -31,16 +31,16 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -227,7 +227,9 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum(ProdCalcTrans.COSTAMOUNT / ProdCalcTrans.QTY) /
+Count(OrdenProd.AP_QST_MASTERPRODORDID)
+</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -11990,10 +11992,10 @@
       </Title>
       <TotalString></TotalString>
       <SortCriteria>
-        <SortByState>1</SortByState>
+        <SortByState>0</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -12175,16 +12177,7 @@
         <v>Tipo Prenda</v>
       </Title>
       <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <ShowAll>false</ShowAll>
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
@@ -12361,16 +12354,7 @@
         <v>Referencia</v>
       </Title>
       <TotalString></TotalString>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>1</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-        <SortByGreyness>0</SortByGreyness>
-      </SortCriteria>
+      <SortCriteria></SortCriteria>
       <ShowAll>false</ShowAll>
       <ShowLabel>true</ShowLabel>
       <ShowLegend>true</ShowLegend>
@@ -12379,7 +12363,7 @@
       <LabelAdjust>1</LabelAdjust>
       <LabelVerticalAdjust>4</LabelVerticalAdjust>
       <TextAdjust>0</TextAdjust>
-      <NumAdjust>2</NumAdjust>
+      <NumAdjust>0</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <DimCellVariations>
         <CellVariationDef>
@@ -15836,7 +15820,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum(ProdCalcTrans.COSTAMOUNT / ProdCalcTrans.QTY) /
+Count(OrdenProd.AP_QST_MASTERPRODORDID)
+</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

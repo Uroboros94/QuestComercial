@@ -4,7 +4,7 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -28,11 +28,11 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
@@ -40,7 +40,7 @@
       </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
-        <PointSize1000>10000</PointSize1000>
+        <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -94,7 +94,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>165</Alpha>
       </ActiveBgColor>
       <BgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
@@ -121,7 +121,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -215,8 +215,8 @@
       <StateName></StateName>
     </Frame>
     <ReadOnly>false</ReadOnly>
-    <NumAdjust>2</NumAdjust>
-    <TextAdjust>0</TextAdjust>
+    <NumAdjust>1</NumAdjust>
+    <TextAdjust>1</TextAdjust>
     <MultiLine>1</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
@@ -243,7 +243,7 @@
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </Right>
     </Borders>
-    <MultiColumn>true</MultiColumn>
+    <MultiColumn>false</MultiColumn>
     <OrderByRow>true</OrderByRow>
     <HideExcluded>false</HideExcluded>
     <SelectionStyle>SS_USER_PREF</SelectionStyle>
@@ -252,7 +252,7 @@
     <ExcludedValuesMode>0</ExcludedValuesMode>
     <DefaultSearchMode>0</DefaultSearchMode>
     <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
-    <FixedColumnsCount>2</FixedColumnsCount>
+    <FixedColumnsCount>-1</FixedColumnsCount>
     <LayoutDependentPrint>true</LayoutDependentPrint>
     <PrintAllValues>false</PrintAllValues>
     <HierarchySeparator>/</HierarchySeparator>
@@ -360,7 +360,7 @@
   <SortCriteria>
     <SortByState>1</SortByState>
     <SortByFrequency>0</SortByFrequency>
-    <SortByNumeric>0</SortByNumeric>
+    <SortByNumeric>-1</SortByNumeric>
     <SortByAscii>0</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>

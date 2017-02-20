@@ -31,16 +31,16 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>8500</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -328,7 +328,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Cantidad Programada] - Sum(RpProduccion.CantidadBuena)</v>
+        <v>Sum(RpProduccion.CantidadMala)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -378,7 +378,8 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+        <v>Sum(RpProduccion.CobroTaller)
+//Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -403,7 +404,12 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>[Unds Cobros] * Aggr(Only({&lt;ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+        <v>[Unds Cobros] 
+*
+Aggr(
+	Only({&lt;
+		ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), 
+		COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -12929,7 +12935,7 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Cantidad Programada] - Sum(RpProduccion.CantidadBuena)</v>
+              <v>Sum(RpProduccion.CantidadMala)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14095,7 +14101,8 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+              <v>Sum(RpProduccion.CobroTaller)
+//Aggr(Sum(RpProduccion.CobroTaller), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -14685,7 +14692,12 @@ Only({&lt;RpProduccion.NombreOperacion={'Confeccion'}&gt;} RpProduccion.IdTaller
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>[Unds Cobros] * Aggr(Only({&lt;ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
+              <v>[Unds Cobros] 
+*
+Aggr(
+	Only({&lt;
+		ProdCalcTrans.RESOURCE_ = {&quot;$(=RpProduccion.Referencia)&quot;}&gt;} ProdCalcTrans.ESTCOSTUNIT), 
+		COLLECTREFPRODID, RpProduccion.IdOPMaestra)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

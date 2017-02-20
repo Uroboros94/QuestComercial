@@ -52,6 +52,7 @@ Tallas:
 		40, 40
 	];
 
+
 Producto_Temp:
 	LOAD
 		COLOR,
@@ -69,8 +70,16 @@ Producto_Temp:
 		NOMBRETIPOPRODUCTO
 	FROM
 	[..\QVD\QST_MaestroProductos.QVD]
-	(qvd);
+	(qvd)	
+	where NOMBRETIPOPRODUCTO <> 'Servicio'
+		and not CODARTICULO like 'T*'
+		and not CODARTICULO like 'I*'
+		and not CODARTICULO like 'B*'
+		and not CODARTICULO like 'C*'
+		and not CODARTICULO like 'E*'
+		and not CODARTICULO like 'A*';
 
+noConcatenate
 Producto_Temp2:
 	LOAD
 		CODARTICULO&TALLA&COLOR 			as CK.ProductoTallaColor,
