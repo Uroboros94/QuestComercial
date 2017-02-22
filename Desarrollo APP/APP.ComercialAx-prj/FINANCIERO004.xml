@@ -31,7 +31,7 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
+        <FontName>Calibri</FontName>
         <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
@@ -39,8 +39,8 @@
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -277,7 +277,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(Cliente.Cupo)</v>
+        <v>sum({&lt;
+	Cartera.IdEstadoFactura,
+	Cartera.EstadoFactura&gt;}Cliente.Cupo)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -302,7 +304,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(Cartera.SaldoCorrienteTotal)</v>
+        <v>sum({&lt;
+	Cartera.IdEstadoFactura,
+	Cartera.EstadoFactura&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -327,7 +331,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(Cartera.SaldoVencidoTotal)</v>
+        <v>sum({&lt;
+	Cartera.IdEstadoFactura = {1}&gt;}Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -8228,7 +8233,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(Cliente.Cupo)</v>
+              <v>sum({&lt;
+	Cartera.IdEstadoFactura,
+	Cartera.EstadoFactura&gt;}Cliente.Cupo)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8750,7 +8757,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(Cartera.SaldoCorrienteTotal)</v>
+              <v>sum({&lt;
+	Cartera.IdEstadoFactura,
+	Cartera.EstadoFactura&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -9340,7 +9349,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(Cartera.SaldoVencidoTotal)</v>
+              <v>sum({&lt;
+	Cartera.IdEstadoFactura = {1}&gt;}Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

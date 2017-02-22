@@ -22,8 +22,8 @@
         <Alpha>255</Alpha>
       </Color>
       <Font>
-        <FontName>Century Gothic</FontName>
-        <PointSize1000>18000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>12000</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
         <Italic>false</Italic>
@@ -257,13 +257,27 @@
     <BkgAlpha>0</BkgAlpha>
     <Text>
       <v>='Saldo Inicial: '&amp;
-Num(Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorFactura)-Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorLiquidado),
+Num(
+	Sum({&lt;
+		Cartera.FechaFactura = {&quot;&lt;$(=Min(Cartera.FechaFactura))&quot;},
+		Cartera.IdEstadoFactura = {1}&gt;}Cartera.ValorFactura)
+	-Sum({&lt;
+		Cartera.FechaFactura = {&quot;&lt;$(=Min(Cartera.FechaFactura))&quot;},
+		Cartera.IdEstadoFactura = {1}&gt;}Cartera.ValorLiquidado),
 '$#.##0;-$#.##0') &amp;
  '| Saldo Final: ' &amp;
 Num(
-	(Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorFactura)-Sum({&lt;SK.FECHA = {&quot;&lt;$(=Min(SK.FECHA))&quot;}&gt;}Cartera.ValorLiquidado)) +
-	(Sum(Cartera.ValorFactura)-Sum(Cartera.ValorLiquidado)),
-'$#.##0;-$#.##0')</v>
+	(Sum({&lt;
+		Cartera.FechaFactura = {&quot;&lt;$(=Min(Cartera.FechaFactura))&quot;},
+		Cartera.IdEstadoFactura = {1}&gt;}Cartera.ValorFactura)
+	-Sum({&lt;
+		Cartera.FechaFactura = {&quot;&lt;$(=Min(Cartera.FechaFactura))&quot;},
+		Cartera.IdEstadoFactura = {1}&gt;}Cartera.ValorLiquidado))
+	+(	Sum({&lt;
+			Cartera.IdEstadoFactura = {1}&gt;}Cartera.ValorFactura)
+		-Sum({&lt;
+			Cartera.IdEstadoFactura = {1}&gt;}Cartera.ValorLiquidado)),
+'$#.##0;-$#.##0')  </v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>

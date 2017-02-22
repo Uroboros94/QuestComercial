@@ -126,7 +126,7 @@ CarteraCliente:
 		Num(SALDOTOTALDIVISA)							as Cartera.SaldoTotalDivisa,
 		Num(SALDOVENCIDOTOTAL)							as Cartera.SaldoVencidoTotal,
 		TIPOPAGO										as Cartera.TipoPago,
-		ULTIMAFECHALIQUIDACION							as Cartera.FechaUltLiquidacion,
+		Date(ULTIMAFECHALIQUIDACION,'DD/MM/YYYY')		as Cartera.FechaUltLiquidacion,
 		ULTIMOASIENTOLIQUIDACION						as Cartera.UltAsientoLiquidacion,
 		Num(VALORDIVISALIQUIDADA)						as Cartera.ValorFivisaLiquidada,
 		Num(VALORFACTURA)								as Cartera.ValorFactura,
