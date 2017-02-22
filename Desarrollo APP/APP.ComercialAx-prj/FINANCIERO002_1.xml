@@ -255,8 +255,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	Cartera.SaldoVencidoTotal)</v>
+		Cartera.IdEstadoFactura = {1},
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}	&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -282,8 +282,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	Cartera.SaldoVencidoTotal)</v>
+		Cartera.IdEstadoFactura = {1},
+		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -309,8 +309,8 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	Cartera.SaldoVencidoTotal)</v>
+		Cartera.IdEstadoFactura = {1},
+		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -336,6 +336,7 @@
     <ExpressionData>
       <Definition>
         <v>Sum({&lt;
+		Cartera.IdEstadoFactura = {1},
 		Cartera.DiasVencidos ={&quot;&gt;90&quot;}&gt;}	Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
@@ -6313,7 +6314,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.Id</DimName>
           <ElemNo></ElemNo>
@@ -6321,7 +6322,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
@@ -6941,8 +6942,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	Cartera.SaldoVencidoTotal)</v>
+		Cartera.IdEstadoFactura = {1},
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}	&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7533,8 +7534,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}
-	&gt;}	Cartera.SaldoVencidoTotal)</v>
+		Cartera.IdEstadoFactura = {1},
+		Cartera.DiasVencidos ={&quot;&gt;=31 &lt;=60&quot;}&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8125,8 +8126,8 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}
-	&gt;}	Cartera.SaldoVencidoTotal)</v>
+		Cartera.IdEstadoFactura = {1},
+		Cartera.DiasVencidos ={&quot;&gt;=61 &lt;=90&quot;}&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8717,6 +8718,7 @@
           <ExpressionData>
             <Definition>
               <v>Sum({&lt;
+		Cartera.IdEstadoFactura = {1},
 		Cartera.DiasVencidos ={&quot;&gt;90&quot;}&gt;}	Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
