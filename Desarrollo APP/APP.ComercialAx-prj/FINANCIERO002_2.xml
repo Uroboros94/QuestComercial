@@ -31,7 +31,7 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
+        <FontName>Calibri</FontName>
         <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
@@ -39,8 +39,8 @@
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -229,7 +229,8 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(Cartera.SaldoVencidoTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1}&gt;}Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -254,9 +255,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;
+		Cartera.IdEstadoFactura = {1},	
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}	&gt;}	Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -282,7 +283,7 @@
     <ExpressionData>
       <Definition>
         <v>[Total Vencido] + 
-[Total Corriente]</v>
+[Total Corriente por Vencer en 30 Días]</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -307,7 +308,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>sum(Cartera.ValorLiquidado)</v>
+        <v>sum({&lt;
+	Cartera.Estado = {'Pagada'},
+	Cartera.EstadoFactura&gt;}Cartera.ValorLiquidado)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2796,7 +2799,7 @@
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
+        <SortByNumeric>1</SortByNumeric>
         <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
@@ -5522,7 +5525,7 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cartera.FechaFactura</DimName>
           <ElemNo></ElemNo>
@@ -5538,7 +5541,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cartera.IdVendedor</DimName>
           <ElemNo></ElemNo>
@@ -5546,7 +5549,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
@@ -5565,7 +5568,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Cartera.SaldoVencidoTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1}&gt;}Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6155,9 +6159,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;	
-		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}
-	&gt;}	Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;
+		Cartera.IdEstadoFactura = {1},	
+		Cartera.DiasVencidos ={&quot;&gt;=0 &lt;=30&quot;}	&gt;}	Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6748,7 +6752,7 @@
           <ExpressionData>
             <Definition>
               <v>[Total Vencido] + 
-[Total Corriente]</v>
+[Total Corriente por Vencer en 30 Días]</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7338,7 +7342,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>sum(Cartera.ValorLiquidado)</v>
+              <v>sum({&lt;
+	Cartera.Estado = {'Pagada'},
+	Cartera.EstadoFactura&gt;}Cartera.ValorLiquidado)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

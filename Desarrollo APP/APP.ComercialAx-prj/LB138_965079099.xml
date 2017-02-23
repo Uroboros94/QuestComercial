@@ -1,101 +1,18 @@
-﻿<InputBoxProperties>
-  <PropChanged>false</PropChanged>
+﻿<ListBoxProperties>
   <Layout>
     <Frame>
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SOLID</Mode>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
         <Luminosity>85</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>4</Red>
-            <Green>108</Green>
-            <Blue>193</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </PrimaryCol>
-        <SecondaryCol></SecondaryCol>
-        <Alpha>255</Alpha>
-      </Color>
-      <Font>
-        <FontName>Calibri</FontName>
-        <PointSize1000>8000</PointSize1000>
-        <Underline>false</Underline>
-        <Bold>false</Bold>
-        <Italic>false</Italic>
-        <DropShadow>false</DropShadow>
-      </Font>
-      <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>10000</PointSize1000>
-        <Underline>false</Underline>
-        <Bold>true</Bold>
-        <Italic>false</Italic>
-        <DropShadow>false</DropShadow>
-      </CaptionFont>
-      <Name></Name>
-      <Detached>false</Detached>
-      <AllowMinimize>true</AllowMinimize>
-      <AutoMinimize>false</AutoMinimize>
-      <AllowMaximize>false</AllowMaximize>
-      <AllowInfo>true</AllowInfo>
-      <PrintIcon>false</PrintIcon>
-      <CopyIcon>false</CopyIcon>
-      <XLIcon>false</XLIcon>
-      <SearchIcon>false</SearchIcon>
-      <SelectPossibleIcon>false</SelectPossibleIcon>
-      <SelectExcludedIcon>false</SelectExcludedIcon>
-      <SelectAllIcon>false</SelectAllIcon>
-      <ClearIcon>false</ClearIcon>
-      <ClearOtherIcon>false</ClearOtherIcon>
-      <LockIcon>false</LockIcon>
-      <HelpText></HelpText>
-      <ObjectId></ObjectId>
-      <ShrinkFrameToData>true</ShrinkFrameToData>
-      <ShowCaption>false</ShowCaption>
-      <MultiLine>0</MultiLine>
-      <ActiveBgColor>
-        <Mode>COLORAREA_SOLID</Mode>
-        <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_HORZ</FillDirection>
-        <FillPattern>COLORAREA_PATTERN1</FillPattern>
-        <PrimaryCol>
-          <Col>
-            <Red>210</Red>
-            <Green>210</Green>
-            <Blue>210</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </PrimaryCol>
-        <SecondaryCol>
-          <Col>
-            <Red>153</Red>
-            <Green>153</Green>
-            <Blue>153</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </SecondaryCol>
-        <Alpha>255</Alpha>
-      </ActiveBgColor>
-      <BgColor>
-        <Mode>COLORAREA_SOLID</Mode>
-        <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_HORZ</FillDirection>
-        <FillPattern>COLORAREA_PATTERN1</FillPattern>
-        <PrimaryCol>
-          <Col>
-            <Red>232</Red>
-            <Green>232</Green>
-            <Blue>232</Blue>
+            <Red>255</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -111,7 +28,100 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>255</Alpha>
+        <Alpha>120</Alpha>
+      </Color>
+      <Font>
+        <FontName>Tahoma</FontName>
+        <PointSize1000>8000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </Font>
+      <CaptionFont>
+        <FontName>Tahoma</FontName>
+        <PointSize1000>8000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>true</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </CaptionFont>
+      <Name>
+        <v>Cartera.FechaFactura</v>
+      </Name>
+      <Detached>false</Detached>
+      <AllowMinimize>false</AllowMinimize>
+      <AutoMinimize>false</AutoMinimize>
+      <AllowMaximize>false</AllowMaximize>
+      <AllowInfo>true</AllowInfo>
+      <PrintIcon>false</PrintIcon>
+      <CopyIcon>false</CopyIcon>
+      <XLIcon>false</XLIcon>
+      <SearchIcon>true</SearchIcon>
+      <SelectPossibleIcon>false</SelectPossibleIcon>
+      <SelectExcludedIcon>false</SelectExcludedIcon>
+      <SelectAllIcon>false</SelectAllIcon>
+      <ClearIcon>false</ClearIcon>
+      <ClearOtherIcon>false</ClearOtherIcon>
+      <LockIcon>false</LockIcon>
+      <HelpText></HelpText>
+      <ObjectId></ObjectId>
+      <ShrinkFrameToData>true</ShrinkFrameToData>
+      <ShowCaption>false</ShowCaption>
+      <MultiLine>0</MultiLine>
+      <ActiveBgColor>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Luminosity>85</Luminosity>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
+        <FillPattern>COLORAREA_PATTERN2</FillPattern>
+        <PrimaryCol>
+          <Col>
+            <Red>255</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </PrimaryCol>
+        <SecondaryCol>
+          <Col>
+            <Red>153</Red>
+            <Green>153</Green>
+            <Blue>153</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
+        <Alpha>165</Alpha>
+      </ActiveBgColor>
+      <BgColor>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Luminosity>85</Luminosity>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
+        <FillPattern>COLORAREA_PATTERN1</FillPattern>
+        <PrimaryCol>
+          <Col>
+            <Red>255</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </PrimaryCol>
+        <SecondaryCol>
+          <Col>
+            <Red>200</Red>
+            <Green>200</Green>
+            <Blue>200</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
+        <Alpha>120</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -120,9 +130,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>54</Red>
-            <Green>54</Green>
-            <Blue>54</Blue>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -138,9 +148,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>54</Red>
-            <Green>54</Green>
-            <Blue>54</Blue>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -163,12 +173,7 @@
       <Rainbow>false</Rainbow>
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
-      <Show>
-        <Always>false</Always>
-        <Expression>
-          <v>vSwichMenu = 1</v>
-        </Expression>
-      </Show>
+      <Show></Show>
       <AllowMoveSize>true</AllowMoveSize>
       <AllowCopyClone>true</AllowCopyClone>
       <dummy></dummy>
@@ -194,8 +199,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_SIX</ScrollStyle>
-      <ScrollWidth>38</ScrollWidth>
+      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
+      <ScrollWidth>29</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -209,49 +214,65 @@
       <ExtendedValues></ExtendedValues>
       <StateName></StateName>
     </Frame>
-    <NoOfRows>1</NoOfRows>
-    <ColWidthLabel>153</ColWidthLabel>
-    <ColWidthDrop>42</ColWidthDrop>
-    <ColWidthData>163</ColWidthData>
-    <MemberAttributes>
-      <LInputBoxMemberAttributes>
-        <Label>
-          <v>Comisión</v>
-        </Label>
-        <Name>
-          <v>vComision2</v>
-        </Name>
-        <BkgColor>
-          <Mode>COLORAREA_SOLID</Mode>
-          <Luminosity>85</Luminosity>
-          <FillDirection>COLORAREA_HORZ</FillDirection>
-          <FillPattern>COLORAREA_PATTERN1</FillPattern>
-          <PrimaryCol>
-            <Col>
-              <Red>255</Red>
-              <Green>255</Green>
-              <Blue>255</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </PrimaryCol>
-          <SecondaryCol></SecondaryCol>
-          <Alpha>255</Alpha>
-        </BkgColor>
-        <TextColor></TextColor>
-        <TextAdjust>0</TextAdjust>
-      </LInputBoxMemberAttributes>
-    </MemberAttributes>
     <ReadOnly>false</ReadOnly>
-    <GridStyle>false</GridStyle>
-    <ShowEqualSign>false</ShowEqualSign>
+    <NumAdjust>2</NumAdjust>
+    <TextAdjust>0</TextAdjust>
+    <MultiLine>0</MultiLine>
+    <ShowFrequency>false</ShowFrequency>
+    <FrequencyInPercent>false</FrequencyInPercent>
+    <Longest></Longest>
+    <Borders>
+      <Top>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Top>
+      <Bottom>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Bottom>
+      <Left>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Left>
+      <Right>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Right>
+    </Borders>
+    <MultiColumn>true</MultiColumn>
+    <OrderByRow>true</OrderByRow>
+    <HideExcluded>false</HideExcluded>
+    <SelectionStyle>SS_USER_PREF</SelectionStyle>
+    <ImageRepresentation></ImageRepresentation>
+    <SoftLock>false</SoftLock>
+    <ExcludedValuesMode>0</ExcludedValuesMode>
+    <DefaultSearchMode>0</DefaultSearchMode>
+    <SuppressHorizontalScroll>false</SuppressHorizontalScroll>
+    <FixedColumnsCount>-1</FixedColumnsCount>
+    <LayoutDependentPrint>true</LayoutDependentPrint>
+    <PrintAllValues>false</PrintAllValues>
+    <HierarchySeparator>/</HierarchySeparator>
+    <ShowAsTreeView>false</ShowAsTreeView>
+    <CurrentInfoURL></CurrentInfoURL>
+    <SuppressSearchHighlight>false</SuppressSearchHighlight>
+    <TextColor></TextColor>
+    <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
+    <CellBorders>false</CellBorders>
   </Layout>
+  <Def>
+    <Name>Cartera.FechaFactura</Name>
+    <Type>PRESENT</Type>
+  </Def>
+  <Title></Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>BOTTOM_OF_LAST_PAGE</PrintCurrentSelectionPosition>
-    <ShowTimeStamp>true</ShowTimeStamp>
-    <ShowWindowTitle>true</ShowWindowTitle>
+    <ShowTimeStamp>false</ShowTimeStamp>
+    <ShowWindowTitle>false</ShowWindowTitle>
     <MarginLeft>236</MarginLeft>
     <MarginTop>236</MarginTop>
     <MarginRight>236</MarginRight>
@@ -336,8 +357,22 @@
     <SheetPrintDrawBackGround>false</SheetPrintDrawBackGround>
     <StrDevModeExtra></StrDevModeExtra>
   </PrintSettings>
-  <TextAdjust>0</TextAdjust>
-  <NumAdjust>0</NumAdjust>
-  <MultiColumn>false</MultiColumn>
+  <SortCriteria>
+    <SortByState>1</SortByState>
+    <SortByFrequency>0</SortByFrequency>
+    <SortByNumeric>-1</SortByNumeric>
+    <SortByAscii>0</SortByAscii>
+    <SortByLoadOrder>0</SortByLoadOrder>
+    <SortByExpression>0</SortByExpression>
+    <Expression></Expression>
+    <SortByGreyness>0</SortByGreyness>
+  </SortCriteria>
+  <NumberPresentation></NumberPresentation>
+  <ExpandedNodes></ExpandedNodes>
   <OnSelectActionItems></OnSelectActionItems>
-</InputBoxProperties>
+  <SuppressAutoSortByState>false</SuppressAutoSortByState>
+  <Expressions></Expressions>
+  <NullSymbol>-</NullSymbol>
+  <MissingSymbol>-</MissingSymbol>
+  <MoreSearchSettings></MoreSearchSettings>
+</ListBoxProperties>

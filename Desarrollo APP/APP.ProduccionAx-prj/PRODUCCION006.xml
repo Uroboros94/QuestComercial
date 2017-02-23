@@ -228,7 +228,7 @@
     <ExpressionData>
       <Definition>
         <v>[Costo Total]/
-Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -253,7 +253,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Ini
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -279,7 +279,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Ini
     <ExpressionData>
       <Definition>
         <v>[Costo Total Actual]/
-Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -304,7 +304,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+        <v>Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -2462,8 +2462,8 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>IdGrupoCosto</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Insumo.IdGrupoCosto</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Proceso</v>
@@ -2628,6 +2628,192 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
         <Type>COND_EX_TRUE</Type>
         <Expression>IdGrupoCosto = 'TELA'</Expression>
       </EnableCondition>
+      <Comment></Comment>
+      <OtherTotalSpec>
+        <OtherMode>OTHER_OFF</OtherMode>
+        <OtherCounted>
+          <v>10</v>
+        </OtherCounted>
+        <OtherLimit>
+          <v>0.05</v>
+        </OtherLimit>
+        <OtherLimitMode>OTHER_GT_LIMIT</OtherLimitMode>
+        <SuppressOther>false</SuppressOther>
+        <ForceBadValueKeeping>true</ForceBadValueKeeping>
+        <ApplyEvenWhenPossiblyWrongResult>true</ApplyEvenWhenPossiblyWrongResult>
+        <GlobalOtherGrouping>false</GlobalOtherGrouping>
+        <OtherCollapseInnerDimensions>false</OtherCollapseInnerDimensions>
+        <OtherSortMode>OTHER_SORT_DESCENDING</OtherSortMode>
+        <TotalMode>TOTAL_OFF</TotalMode>
+        <ReferencedExpression></ReferencedExpression>
+      </OtherTotalSpec>
+      <OtherString></OtherString>
+    </ChartDimensionDataDef>
+    <ChartDimensionDataDef>
+      <PseudoDef>
+        <Name>OrdenProd.AP_QST_MASTERPRODORDID</Name>
+        <Type>PRESENT</Type>
+      </PseudoDef>
+      <Title>
+        <v>OPM</v>
+      </Title>
+      <TotalString></TotalString>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+        <SortByGreyness>0</SortByGreyness>
+      </SortCriteria>
+      <ShowAll>false</ShowAll>
+      <ShowLabel>true</ShowLabel>
+      <ShowLegend>true</ShowLegend>
+      <NullSuppression>false</NullSuppression>
+      <ShowPartialSums>0</ShowPartialSums>
+      <LabelAdjust>0</LabelAdjust>
+      <LabelVerticalAdjust>4</LabelVerticalAdjust>
+      <TextAdjust>0</TextAdjust>
+      <NumAdjust>2</NumAdjust>
+      <VerticalAdjust>4</VerticalAdjust>
+      <DimCellVariations>
+        <CellVariationDef>
+          <PreMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreMinorBorder>
+          <PostMinorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostMinorBorder>
+          <MajorBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </MajorBorder>
+          <PreTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PreTotalBorder>
+          <PostTotalBorder>
+            <LineStyle>32</LineStyle>
+            <Color>
+              <Col>
+                <Red>220</Red>
+                <Green>220</Green>
+                <Blue>220</Blue>
+                <Alpha>255</Alpha>
+              </Col>
+              <IsCalculated>false</IsCalculated>
+              <ColorExpr></ColorExpr>
+            </Color>
+            <ExtraBorderSpace16>0</ExtraBorderSpace16>
+          </PostTotalBorder>
+          <SizeMod>0</SizeMod>
+          <StyleMod>FONTSTYLE_REGULAR</StyleMod>
+          <TotalSizeMod>0</TotalSizeMod>
+          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
+          <FgColor>
+            <Col>
+              <Red>54</Red>
+              <Green>54</Green>
+              <Blue>54</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </FgColor>
+          <BgColor>
+            <Col>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </BgColor>
+          <TotalFgColor></TotalFgColor>
+          <TotalBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </TotalBgColor>
+          <OtherSizeMod>0</OtherSizeMod>
+          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherFgColor></OtherFgColor>
+          <OtherBgColor>
+            <Col>
+              <Red>245</Red>
+              <Green>245</Green>
+              <Blue>245</Blue>
+              <Alpha>255</Alpha>
+            </Col>
+            <IsCalculated>false</IsCalculated>
+            <ColorExpr></ColorExpr>
+          </OtherBgColor>
+        </CellVariationDef>
+      </DimCellVariations>
+      <DropdownSelect>false</DropdownSelect>
+      <ImageRepresentation></ImageRepresentation>
+      <ExcludedValuesMode>0</ExcludedValuesMode>
+      <DefaultSearchMode>0</DefaultSearchMode>
+      <SelectionStyle>SS_USER_PREF</SelectionStyle>
+      <MaxStringLength>0</MaxStringLength>
+      <AttributeExpressions></AttributeExpressions>
+      <PageBreaks>NO_BREAKS</PageBreaks>
+      <MaxNumShown></MaxNumShown>
+      <Spacing></Spacing>
+      <ColWidth>300</ColWidth>
+      <OverrideGroupSort>false</OverrideGroupSort>
+      <Show></Show>
+      <EnableCondition></EnableCondition>
       <Comment></Comment>
       <OtherTotalSpec>
         <OtherMode>OTHER_OFF</OtherMode>
@@ -4029,10 +4215,11 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
     <ColWidths>
       <int>459</int>
       <int>300</int>
+      <int>300</int>
+      <int>300</int>
       <int>328</int>
       <int>350</int>
       <int>328</int>
-      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -4528,13 +4715,14 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
     <InterFieldSortOrder>
       <int>0</int>
       <int>1</int>
+      <int>6</int>
       <int>2</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
     </InterFieldSortOrder>
-    <ExpressionPosition>2</ExpressionPosition>
-    <NumberOfLeftDimensions>2</NumberOfLeftDimensions>
+    <ExpressionPosition>3</ExpressionPosition>
+    <NumberOfLeftDimensions>3</NumberOfLeftDimensions>
     <LeftCollapsed>false</LeftCollapsed>
     <TopCollapsed>false</TopCollapsed>
     <OuterPixWidth>300</OuterPixWidth>
@@ -4577,7 +4765,15 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>IdGrupoCosto</DimName>
+          <DimName>Insumo.IdGrupoCosto</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>OrdenProd.AP_QST_MASTERPRODORDID</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -4595,7 +4791,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
           <ExpressionData>
             <Definition>
               <v>[Costo Total]/
-Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5185,7 +5381,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Ini
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;OrdenProd.PRODSTATUSNAME = {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -5776,7 +5972,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME = {'Ini
           <ExpressionData>
             <Definition>
               <v>[Costo Total Actual]/
-Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6366,7 +6562,7 @@ Sum(Total &lt;OrdenProd.PRODSTATUSNAME&gt; {&lt;OrdenProd.PRODSTATUSNAME -= {'In
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
+              <v>Sum({&lt;OrdenProd.PRODSTATUSNAME -= {'Iniciado','Terminado'}, Insumo.IdGrupoCosto -= {&quot;-&quot;}&gt;} ProdCalcTrans.COSTAMOUNT)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

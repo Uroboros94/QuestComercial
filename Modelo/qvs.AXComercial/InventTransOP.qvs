@@ -28,7 +28,8 @@ FROM
 
 left join
 
-LOAD CodigoProducto as ITEMID,
+LOAD 
+	CodigoProducto as ITEMID,
 	RutaProducto
 FROM
 [..\QVD\PLM\FotosStyle.QVD]

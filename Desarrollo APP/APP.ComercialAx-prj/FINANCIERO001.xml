@@ -31,7 +31,7 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
+        <FontName>Calibri</FontName>
         <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
@@ -39,8 +39,8 @@
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -227,7 +227,8 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(Cartera.SaldoVencidoTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura -= {2}&gt;}Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -252,7 +253,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura -= {2}&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -302,7 +304,8 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Avg(Cartera.DiasVencidos)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura -= {2}&gt;}Cartera.DiasVencidos)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -5716,7 +5719,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>true</ExcludeList>
+        <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
@@ -5759,7 +5762,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Cartera.SaldoVencidoTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura -= {2}&gt;}Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6349,7 +6353,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura -= {2}&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7529,7 +7534,8 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Avg(Cartera.DiasVencidos)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura -= {2}&gt;}Cartera.DiasVencidos)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

@@ -31,7 +31,7 @@
         <Alpha>120</Alpha>
       </Color>
       <Font>
-        <FontName>Tahoma</FontName>
+        <FontName>Calibri</FontName>
         <PointSize1000>8000</PointSize1000>
         <Underline>false</Underline>
         <Bold>false</Bold>
@@ -39,8 +39,8 @@
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
+        <FontName>Calibri</FontName>
+        <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
         <Italic>false</Italic>
@@ -227,7 +227,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(Cartera.SaldoVencidoTotal)</v>
+        <v>Sum({&lt;Cartera.IdEstadoFactura = {1}&gt;}Cartera.SaldoVencidoTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -252,7 +252,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -277,7 +279,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -302,7 +306,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -327,7 +333,9 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+        <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -3454,7 +3462,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>388</ColWidth>
+      <ColWidth>172</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3640,7 +3648,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>388</ColWidth>
+      <ColWidth>244</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -3826,7 +3834,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>388</ColWidth>
+      <ColWidth>194</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4012,7 +4020,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>388</ColWidth>
+      <ColWidth>269</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4198,7 +4206,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>300</ColWidth>
+      <ColWidth>256</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -5741,11 +5749,11 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>388</int>
-      <int>388</int>
-      <int>388</int>
-      <int>388</int>
-      <int>300</int>
+      <int>172</int>
+      <int>281</int>
+      <int>194</int>
+      <int>269</int>
+      <int>256</int>
       <int>388</int>
       <int>388</int>
       <int>388</int>
@@ -6288,7 +6296,7 @@
     <SuppressPivotExpandIconsOnPrint>true</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>EC.IdEC</DimName>
           <ElemNo></ElemNo>
@@ -6296,7 +6304,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cartera.Vendedor</DimName>
           <ElemNo></ElemNo>
@@ -6304,7 +6312,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.Id</DimName>
           <ElemNo></ElemNo>
@@ -6312,7 +6320,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Cliente.NombreCompleto</DimName>
           <ElemNo></ElemNo>
@@ -6339,7 +6347,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(Cartera.SaldoVencidoTotal)</v>
+              <v>Sum({&lt;Cartera.IdEstadoFactura = {1}&gt;}Cartera.SaldoVencidoTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -6929,7 +6937,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;0&lt;=30&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -7519,7 +7529,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;30&lt;=60&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8109,7 +8121,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;60&lt;=90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -8699,7 +8713,9 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum({&lt;Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
+              <v>Sum({&lt;
+	Cartera.IdEstadoFactura = {1},
+	Cartera.DiasPorVencer={&quot;&gt;90&quot;}&gt;}Cartera.SaldoCorrienteTotal)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
