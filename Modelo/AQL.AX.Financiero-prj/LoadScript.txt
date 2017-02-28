@@ -17,6 +17,8 @@ SET ReferenceDay=0;
 SET FirstMonthOfYear=1;
 SET CollationLocale='es-CO';
 
+/*Configuracion*/
+$(Must_Include=qvs.axfinanciero\configuracion.qvs);
 ///$tab Hechos
 /*Contabilidad*/
 $(Must_Include=qvs.axfinanciero\contabilidad.qvs);

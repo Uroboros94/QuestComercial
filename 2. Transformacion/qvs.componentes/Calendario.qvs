@@ -1,0 +1,40 @@
+﻿/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	 Creación del Modelo: Calendario
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+QUALIFY *;
+UNQUALIFY SK.FECHA;
+Calendario:
+	 LOAD 
+	 	num(Fecha)						as SK.FECHA,
+		Año					  			as ano, 
+		Capitalize(Mes)					as nomMes, 
+		Capitalize(MonthYear)			as MonthYear, 
+		Date(%_Fechakey,'DD/MM/YYYY')	as %_Fechakey, 
+		NumericMonthYear, 
+		NumericMonth, 
+		Semestre, 
+		Trimestre						as nomTrim,
+		trimestre, 
+		Week							as semana,
+		SemanaMes, 
+		Weekday							as nombreDia, 
+		Dia								as dia, 
+		DateMMDD,
+		CYTD,
+		FPYTD,
+		Festivo, 
+		EsFestivo
+	 FROM
+		  [..\QVD\Calendario_Final.QVD]
+		  (qvd)
+	 WHERE Fecha >= '01/01/2016';
+
+UNQUALIFY *;
