@@ -7482,7 +7482,7 @@ Aggr(
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.TipoAdquisicion</Name>
+        <Name>Producto.Tipo_de_adquisicion</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -7854,7 +7854,7 @@ Aggr(
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.TipoPrenda</Name>
+        <Name>Producto.Tipo_de_prenda</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
@@ -10548,14 +10548,6 @@ Aggr(
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.TipoAdquisicion</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
           <DimName>Calendario.ano</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
@@ -10564,7 +10556,15 @@ Aggr(
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.TipoPrenda</DimName>
+          <DimName>Producto.Tipo_de_adquisicion</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>false</ExcludeList>
+        <Pos>
+          <DimName>Producto.Tipo_de_prenda</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

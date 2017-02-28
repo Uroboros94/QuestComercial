@@ -1,56 +1,16 @@
-﻿///$tab Main
-SET ThousandSep='.';
-SET DecimalSep=',';
-SET MoneyThousandSep='.';
-SET MoneyDecimalSep=',';
-SET MoneyFormat='$#.##0,00;-$#.##0,00';
-SET TimeFormat='h:mm:ss TT';
-SET DateFormat='DD/MM/YYYY';
-SET TimestampFormat='DD/MM/YYYY h:mm:ss[.fff] TT';
-SET MonthNames='ene.;feb.;mar.;abr.;may.;jun.;jul.;ago.;sep.;oct.;nov.;dic.';
-SET DayNames='lun.;mar.;mié.;jue.;vie.;sáb.;dom.';
-SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
-SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
-SET FirstWeekDay=0;
-SET BrokenWeeks=1;
-SET ReferenceDay=0;
-SET FirstMonthOfYear=1;
-SET CollationLocale='es-CO';
+﻿///$tab Carga
+/*Load*/
+$(Must_Include=qvs.axcomercial\#loadscript.qvs);
 
-// Declaración Librería...
-$(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
+///$tab Exit Script
+CALL Qvc.Cleanup;
+TRACE Modelo Finalizado;
+EXIT SCRIPT;
 
 
-	
-///$tab Carga
-/*Productos Aprobados*/
-$(must_Include=qvs.componentes\maestroproductos.qvs);
-$(must_Include=qvs.axcomercial\actividadesproducto.qvs);
-$(must_Include=qvs.axcomercial\inventtransop.qvs);
-
-/*Clientes*/
-$(must_Include=qvs.axcomercial\clientes.qvs);
-
-/*Estructura Comercial*/
-$(must_Include=qvs.componentes\estructuracomercial.qvs);
-
-/*Cartera*/
-$(must_Include=qvs.axcomercial\carteracliente.qvs);
-
-/*Ventas*/
-$(must_Include=qvs.axcomercial\ventas.qvs);
-
-/*Recaudo de Ventas*/
-$(Must_Include=qvs.axcomercial\recaudo.qvs);
-
-/*Pedidos y ventas*/
-$(must_Include=qvs.axcomercial\pedidosventa.qvs);
-
-/*Presupuesto*/
-$(must_Include=qvs.axcomercial\presupuesto.qvs);
-
-/*Calendario*/
-$(must_Include=qvs.componentes\calendario.qvs);
+///$tab Main
+/*Script*/
+$(Must_Include=qvs.axcomercial\#loadscript.qvs);
 ///$tab LinkTable
 LinkTable_Temp:
 	LOAD
@@ -86,10 +46,4 @@ LinkTable:
 	DROP Table LinkTable_Temp;
 	
 	
-
-///$tab Exit Script
-CALL Qvc.Cleanup;
-TRACE Modelo Finalizado;
-EXIT SCRIPT;
-
 

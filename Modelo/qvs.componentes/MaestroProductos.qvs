@@ -10,17 +10,17 @@
 	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros
 *****************************************************************************************************/
 Colores:
-	Mapping LOAD Color as IdColor,
+	Mapping LOAD 
+		Color 							as IdColor,
 		QST_ColorSpec_colorQuest_string as NombreColor
 	FROM
 	[..\QVD\PLM\MaestroColores.QVD]
 	(qvd);
 
 Generos:
-	Mapping
-	LOAD
+	Mapping	LOAD
 		DescripcionGenero  	as Genero,
-		IdGenero	as Id
+		IdGenero			as Id
 	FROM
 	[..\QVD\PLM\Producto_QV.QVD]
 	(qvd);
@@ -194,48 +194,50 @@ Producto:
 		SK.KEYPRODUCT,
 		SK.Producto,
 		Coleccion&Upper(Marca)&Genero&IdLinea&Right(IdSublinea, 2)
-			&If(Len(TipoAdquisicion) < 2, '0'&TipoAdquisicion, TipoAdquisicion) as CK.IdLlaveProducto,
-		IdColor								as Producto.IdColor,
-		ApplyMap('Generos',Genero)&IdLinea	as Producto.IdLinea,
-		IdMarca								as Producto.IdMarca,
-		IdSublinea							as Producto.IdSublinea,
-		IdSubTipo							as Producto.IdSubTipo,
-		AparienciaDetallada					as Producto.AparienciaDetallada,
-		AparienciaGeneral					as Producto.AparienciaGeneral,
-		BandaPrecio							as Producto.BandaPrecio,
-		Categoria							as Producto.Categoria,
-		ClasificacionInventario				as Producto.ClasificacionInventario,
-		Clima								as Producto.Clima,
-		CodigoBarras						as Producto.CodigoBarras,
-		Coleccion							as Producto.Coleccion,
-		Color								as Producto.Color,
-		Cuello								as Producto.Cuello,
-		Diseñador							as Producto.Diseñador,
-		Emitido								as Producto.Emitido,
-		Estilo								as Producto.Estilo,
-		Genero								as Producto.Genero,
-		GeneroMat							as Producto.GeneroMat,
-		GrupoProductos						as Producto.GrupoProductos,
-		Lavado								as Producto.Lavado,
-		Linea								as Producto.Linea,
-		Manga								as Producto.Manga,
-		Marca								as Producto.Marca,
-		NivelModa							as Producto.NivelModa,
-		Nombre								as Producto.Nombre,
-		NonmbreCategoria					as Producto.NombreCategoria,
-		OperacionUso						as Producto.OperacionUso,
-		Patronista							as Producto.Patronista,
-		Referencia							as Producto.Referencia,
-		Seguimiento							as Producto.Seguimiento,
-		Silueta								as Producto.Silueta,
-		Sublinea							as Producto.Sublinea,
-		SubTipo								as Producto.SubTipo,
-		Dual(Talla, ApplyMap('Tallas', Talla))			as Producto.Talla,
-		Tipo								as Producto.Tipo,
-		TipoAdquisicion						as Producto.TipoAdquisicion,
-		TipoPrenda							as Producto.TipoPrenda,
-		TipoProducto						as Producto.TipoProducto,
-		TipoTejido							as Producto.TipoTejido
+			&If(Len(TipoAdquisicion) < 2, 
+				'0'&TipoAdquisicion, 
+				TipoAdquisicion) 				as CK.IdLlaveProducto,
+		IdColor									as Producto.IdColor,
+		ApplyMap('Generos',Genero)&IdLinea		as Producto.IdLinea,
+		IdMarca									as Producto.IdMarca,
+		IdSublinea								as Producto.IdSublinea,
+		IdSubTipo								as Producto.IdSubTipo,
+		AparienciaDetallada						as Producto.AparienciaDetallada,
+		AparienciaGeneral						as Producto.AparienciaGeneral,
+		BandaPrecio								as Producto.BandaPrecio,
+		Categoria								as Producto.Categoria,
+		ClasificacionInventario					as Producto.ClasificacionInventario,
+		Clima									as Producto.Clima,
+		CodigoBarras							as Producto.CodigoBarras,
+		Coleccion								as Producto.Coleccion,
+		Color									as Producto.Color,
+		Cuello									as Producto.Cuello,
+		Diseñador								as Producto.Diseñador,
+		Emitido									as Producto.Emitido,
+		Estilo									as Producto.Estilo,
+		Genero									as Producto.Genero,
+		GeneroMat								as Producto.GeneroMat,
+		GrupoProductos							as Producto.GrupoProductos,
+		Lavado									as Producto.Lavado,
+		Linea									as Producto.Linea,
+		Manga									as Producto.Manga,
+		Marca									as Producto.Marca,
+		NivelModa								as Producto.NivelModa,
+		Nombre									as Producto.Nombre,
+		NonmbreCategoria						as Producto.NombreCategoria,
+		OperacionUso							as Producto.OperacionUso,
+		Patronista								as Producto.Patronista,
+		Referencia								as Producto.Referencia,
+		Seguimiento								as Producto.Seguimiento,
+		Silueta									as Producto.Silueta,
+		Sublinea								as Producto.Sublinea,
+		SubTipo									as Producto.SubTipo,
+		Dual(Talla, ApplyMap('Tallas', Talla))	as Producto.Talla,
+		Tipo									as Producto.Tipo,
+		TipoAdquisicion							as Producto.TipoAdquisicion,
+		TipoPrenda								as Producto.TipoPrenda,
+		TipoProducto							as Producto.TipoProducto,
+		TipoTejido								as Producto.TipoTejido
 	Resident Producto_Temp2
 	Where not WildMatch(Coleccion, 'SERV_PN');
 	Drop Table Producto_Temp2;
