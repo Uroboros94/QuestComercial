@@ -1,0 +1,23 @@
+/*****************************************************************************************************
+    Detalle :
+    Extracción de Dimensiones: InventTable - Financial Dim
+    -------------------------------------------------------------------------------------------------
+    Fecha       |   Desarrollador   |   Modificación
+    -------------------------------------------------------------------------------------------------
+    10/25/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+DimensionesFinancieras:
+	SQL Select 
+		IT.ItemId, 
+		DD.REPORTCOLUMNNAME, 
+		DD.Name, 
+		DD.DISPLAYVALUE, 
+		DT.DESCRIPTION
+	From InventTable As IT 
+		Left Join DEFAULTDIMENSIONVIEW 		As DD ON DD.DEFAULTDIMENSION =  IT.DEFAULTDIMENSION
+		Inner Join DIMENSIONATTRIBUTE 		As DA ON DD.NAME = DA.NAME
+		Inner Join DIMENSIONFINANCIALTAG 	As DT ON DT.RECID = DD.ENTITYINSTANCE;
+
+STORE DimensionesFinancieras INTO [$(vRutaOri)DimensionesFinancieras.QVD](qvd);
+DROP TABLE DimensionesFinancieras;

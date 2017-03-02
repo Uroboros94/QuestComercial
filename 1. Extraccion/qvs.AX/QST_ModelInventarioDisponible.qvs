@@ -1,0 +1,31 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Inventario Disponible
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+04/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+InventarioDisponible:
+  SQL SELECT
+  	CODARTICULO,
+  	TALLA,
+  	COLOR,
+  	CODALMACEN,
+  	NOMBREALMACEN,
+  	UBICACION,
+  	CANTPUBLICADA,
+  	CANTRECIBIDA,
+  	CANTDEDUCIDA,
+  	CANTREGISTRADA,
+  	CANTRECOGIDA,
+  	CANTRESERVADA,
+  	CANTDISPONIBLE,
+  	ENORDEN,
+  	ORDENADA,
+  	LLEGADA,
+  	ORDENADARESERVADA
+  FROM QST_MODELINVENTARIODISPONIBLE;
+
+STORE InventarioDisponible INTO [$(vRutaOri)QST_ModelInventarioDisponible.QVD](qvd);
+DROP TABLE InventarioDisponible;

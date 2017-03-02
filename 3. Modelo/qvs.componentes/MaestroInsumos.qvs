@@ -1,0 +1,24 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Creación del Modelo: Maestro de Insumos.
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador     |   Modificación
+-------------------------------------------------------------------------------------------------
+06/10/2016  |   Alejandro Saa G.	|   Inicio de Configuración
+02/03/2017	|	malemos				|	Carga de QVD transformado
+*****************************************************************************************************/
+Insumo:
+LOAD 
+	SK.Insumo, 
+    Insumo.IdInsumo, 
+    Insumo.AliasInsumo, 
+    Insumo.NombreInsumo, 
+    Insumo.UnidadInsumo, 
+    Insumo.IdGrupoCosto, 
+    Insumo.NombreGrupoCosto
+FROM
+[$(vRutaTra)_Insumo.QVD]
+(qvd);
+

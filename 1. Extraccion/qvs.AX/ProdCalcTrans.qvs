@@ -1,0 +1,61 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: ProdCalcTrans
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/26/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+ProdCalcTrans:
+SQL SELECT 
+    COLLECTREFPRODID,
+    COLLECTREFLEVEL,
+    LINENUM,
+    CALCTYPE,
+    IDREFTABLEID,
+    IDREFRECID,
+    TRANSREFID,
+    BOM,
+    COSTGROUPID,
+    QTY,
+    COSTAMOUNT,
+    COSTMARKUP,
+    SALESAMOUNT,
+    SALESMARKUP,
+    TRANSDATE,
+    "RESOURCE_",
+    UNITID,
+    OPRID,
+    INVENTDIMSTR,
+    CONSUMPVARIABLE,
+    CONSUMPCONSTANT,
+    REALQTY,
+    REALCONSUMP,
+    REALCOSTAMOUNT,
+    REALCOSTADJUSTMENT,
+    SALESPRICEMODELUSED,
+    PRODUCTION,
+    OPRNUM,
+    DERIVEDREFERENCE,
+    DERIVEDREFNUM,
+    INVENTDIMID,
+    VENDID,
+    CONSUMPTYPE,
+    PRICEDISCQTY,
+    COSTPRICEMODELUSED,
+    CALCGROUPID,
+    TRANSREFTYPE,
+    "FINANCIALINDIRECTAMOUNT_RU",
+    PMFCOSTALLOCATION,
+    PMFCOSTALLOCATIONPCT,
+    PMFOVERHEADAMT,
+    PMFOVERHEADPCT,
+    //DATAAREAID,
+    //RECVERSION,
+    //PARTITION,
+    //RECID,
+    "AP_QST_QTYCHARGEACUM"
+FROM PRODCALCTRANS;
+
+STORE ProdCalcTrans INTO [$(vRutaOri)ProdCalcTrans.QVD](qvd);
+DROP TABLE ProdCalcTrans;

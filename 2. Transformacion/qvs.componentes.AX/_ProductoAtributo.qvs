@@ -1,0 +1,91 @@
+/****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Maestro de Atributos del Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	02/24/2017  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+AtributosTemp:
+	LOAD 
+		CODARTICULO, 
+		ATRIBUTO, 
+		VALOR
+	FROM
+	[$(vRutaOri)QST_ModelProdutosAtributos.QVD]
+	(qvd);
+
+noConcatenate
+atributos:
+	LOAD Distinct
+		Capitalize(ATRIBUTO) as AtributoTemp
+	Resident AtributosTemp;
+
+noConcatenate
+AtributosFinal1:
+	LOAD
+		'-'	as referenciaTemp
+	Resident AtributosTemp;
+
+FOR Each AtributoTemp in FieldValueList('AtributoTemp')	
+	Join (AtributosFinal1) LOAD
+		'-' 			as $(AtributoTemp)
+	Resident atributos
+	where AtributoTemp = '$(AtributoTemp)';
+NEXT AtributoTemp;
+
+Drop Table atributos;
+noConcatenate
+Atributos: LOAD * Resident AtributosFinal1 Where referenciaTemp <> '-';
+DROP Table AtributosFinal1;
+
+noConcatenate
+ReferenciasTemp:
+	LOAD Distinct
+		CODARTICULO	as referenciaTemp
+	Resident AtributosTemp
+	Order By CODARTICULO;
+	
+LET contador = 1;
+FOR Each referencia in FieldValueList('referenciaTemp')
+	AtributosTemp2:
+		LOAD
+			CODARTICULO 			as Referencia, 
+			Capitalize(ATRIBUTO)	as Atributo, 
+			Capitalize(VALOR)		as Valor
+		Resident AtributosTemp
+		Where CODARTICULO = '$(referencia)';
+	
+	noConcatenate
+	ReferenciasTemp2:
+		LOAD
+			referenciaTemp
+		Resident ReferenciasTemp
+		Where referenciaTemp = '$(referencia)';
+
+	FOR Each atributo in FieldValueList('Atributo')	
+			left Join (ReferenciasTemp2) LOAD
+				Referencia 		as referenciaTemp, 
+				Valor 			as $(atributo)
+			Resident AtributosTemp2
+			where Atributo = '$(atributo)';
+	NEXT atributo;
+
+	Concatenate(Atributos) LOAD * Resident ReferenciasTemp2;
+
+	DROP Tables AtributosTemp2,ReferenciasTemp2;
+NEXT referencia;
+
+Rename Field referenciaTemp to SK.Producto;
+DROP Tables AtributosTemp,ReferenciasTemp;
+
+Qualify *;
+UnQualify SK.Producto;
+	Producto:
+		LOAD * Resident Atributos;	
+UnQualify *;
+
+STORE Producto INTO [$(vRutaTra)_AtributosProducto.QVD](qvd);
+Drop Tables Atributos,Producto;

@@ -1,0 +1,36 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: ProdTableJour
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+ProdTableJour:
+SQL SELECT 
+    PRODID,
+    ITEMID,
+    INVENTTRANSID,
+    TRANSDATE,
+    JOURNALTYPE,
+    QTYGOOD,
+    VOUCHER,
+    AMOUNTFINANCIAL,
+    ADJUSTMENT,
+    QTYERROR,
+    AMOUNTPHYSICAL,
+    SCRAPVOUCHER,
+    CANCELED,
+    OPENPRODORDER,
+    "AMOUNTFINANCIALSECCUR_RU",
+    PDSCWBATCHERR,
+    PDSCWBATCHGOOD,
+    MODIFIEDDATETIME
+    //DATAAREAID,
+    //RECVERSION,
+    //PARTITION,
+    //RECID
+FROM PRODTABLEJOUR;
+
+STORE ProdTableJour INTO [$(vRutaOri)ProdTableJour.QVD](qvd);
+DROP TABLE ProdTableJour;

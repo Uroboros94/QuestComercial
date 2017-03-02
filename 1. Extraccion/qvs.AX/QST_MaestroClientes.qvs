@@ -1,0 +1,57 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Extracción de Dimensiones: Maestro De Clientes
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/20/2016  |   malemos         |   Inicio de Configuración
+09/24/2016  |   alejandro saa g |   Agregar campo: SALESDISTRICT
+*****************************************************************************************************/
+QST_MaestroClientes:
+SQL SELECT
+	ACCOUNTNUM,
+	DIGIT,
+	IDENTIFICATIONTYPE,
+	NOMBREIDENTIFICATIONTYPE,
+	IDENTIFICATIONNUM,
+	CUSTGROUPID,
+	CREDITMAX,
+	"CURRENCY",
+	NAME,
+	FIRSTNAME,
+	MIDDLENAME,
+	LASTNAME,
+	SECONDLASTNAME,
+	DIRPARTYTYPE,
+	NOMBREDIRPARTYTYPE,
+	MAINEMAIL,
+	MAINPHONE,
+	MAINURL,
+	PAYMTERMID,
+	COUNTRYID,
+	COUNTRYVALUE,
+	STATEID,
+	STATEVALUE,
+	CITYID,
+	CITYVALUE,
+	CUSTGROUPVALUE,
+	//DATAAREAID,
+	//RECVERSION,
+	//PARTITION,
+	//RECID,
+	ADDRESSING,
+	PAYMTERMVALUE,
+	PAYMMODEID,
+	PAYMMODEVALUE,
+	MANDATORYCREDITLIMIT,
+	NOMBREMANDATORYCREDITLIMIT,
+	DIMENSIONDEFAULT,
+	IDVENDEDOR,
+	NOMBREVENDEDOR,
+  	SALESDISTRICT
+FROM "QST_MODELCUSTTABLE";
+
+STORE QST_MaestroClientes INTO [$(vRutaOri)QST_MaestroClientes.QVD](qvd);
+DROP TABLE QST_MaestroClientes;

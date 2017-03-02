@@ -1,0 +1,122 @@
+/*****************************************************************************************************
+	Fecha : 20/09/2016
+	-------------------------------------------------------------------------------------------------
+	 Detalle :
+		Creación del Modelo: DefaultDimensions
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   CarteraCliente
+	-------------------------------------------------------------------------------------------------
+	09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+Mapping
+MapCanalEC:
+	LOAD * Inline [
+		idCanal,Canal
+		01,Retail
+		05,Sede principal
+		06,E-Commerce
+		07,Multimarca
+		08,Concesiones
+		09,Franquicias
+		10,Licitaciones
+		14,Quruba];
+
+DefaultDimensions_temp:
+	LOAD
+		CodHomologacion,
+		CREATEDDATETIME,
+		DEFAULTDIMENSION                        AS SK.DEFAULTDIMENSION,
+		DESC_CENTRO_DE_COSTO,
+		DESC_COLECCION,
+		DESC_ESTRUCTURA_COMERCIAL,
+		DESC_FLUJO_DE_EFECTIVO,
+		DESC_LINEA,
+		DESC_MAINACCOUNT,
+		DESC_MARCA,
+		DESC_PROYECTO,
+		DESC_SUBLINEA,
+		DESC_TERCERO,
+		DESC_TIPO_DE_TIENDA,
+		DIMENSION_CENTRO_DE_COSTO,
+		DIMENSION_COLECCION,
+		DIMENSION_ESTRUCTURA_COMERCIAL,
+		DIMENSION_FLUJO_DE_EFECTIVO,
+		DIMENSION_LINEA,
+		DIMENSION_MAINACCOUNT,
+		DIMENSION_MARCA,
+		DIMENSION_PROYECTO,
+		DIMENSION_SUBLINEA,
+		DIMENSION_TERCERO,
+		DIMENSION_TIPO_DE_TIENDA,
+		Left(DIMENSION_ESTRUCTURA_COMERCIAL, 2) 									              as EC.IdCanal,
+		ApplyMap('MapCanalEC', Left(DIMENSION_ESTRUCTURA_COMERCIAL, 2), Null())	as EC.Canal,
+		MODIFIEDDATETIME
+	FROM
+	[$(vRutaOri)DefaulDimensions.QVD]
+	(qvd);
+		//DATAAREAID,
+		//PARTITION,
+		//RECID,
+		//RECVERSION
+
+	Left Join
+	LOAD
+		Ciudad,
+		CodCoordinador,
+		CodHomologacion,
+		Departamento,
+		NombreCoordinador,
+		Pais,
+		ZonaGeografica
+	FROM
+	[$(vRutaOriBiQuest)DIM_FrontsGeneral.QVD]
+	(qvd);
+
+QUALIFY *;
+UNQUALIFY SK.DEFAULTDIMENSION, CodICG;
+DefaultDimensions:
+	LOAD
+		Ciudad,
+		CodCoordinador,
+		CodHomologacion AS CodICG,
+		CREATEDDATETIME,
+		Departamento,
+		DESC_CENTRO_DE_COSTO,
+		DESC_COLECCION,
+		DESC_ESTRUCTURA_COMERCIAL,
+		DESC_FLUJO_DE_EFECTIVO,
+		DESC_LINEA,
+		DESC_MAINACCOUNT,
+		DESC_MARCA,
+		DESC_PROYECTO,
+		DESC_SUBLINEA,
+		DESC_TERCERO,
+		DESC_TIPO_DE_TIENDA,
+		DIMENSION_CENTRO_DE_COSTO,
+		DIMENSION_COLECCION,
+		DIMENSION_ESTRUCTURA_COMERCIAL,
+		DIMENSION_FLUJO_DE_EFECTIVO,
+		DIMENSION_LINEA,
+		DIMENSION_MAINACCOUNT,
+		DIMENSION_MARCA,
+		DIMENSION_PROYECTO,
+		DIMENSION_SUBLINEA,
+		DIMENSION_TERCERO,
+		DIMENSION_TIPO_DE_TIENDA,
+		MODIFIEDDATETIME,
+		NombreCoordinador,
+		Pais,
+		EC.IdCanal,
+		EC.Canal,
+		SK.DEFAULTDIMENSION,
+		ZonaGeografica
+	Resident DefaultDimensions_temp;
+	DROP Table DefaultDimensions_temp;
+UNQUALIFY *;
+
+STORE DefaultDimensions INTO [$(vRutaTra)_DefaultDimensions.QVD](qvd);
+Drop Table DefaultDimensions;
+		//PARTITION,
+		//RECID,
+		//RECVERSION,
+		//DATAAREAID

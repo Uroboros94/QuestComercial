@@ -1,0 +1,48 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Modelo de Hechos: Estructuras Comerciales
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+10/12/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+Mapping
+MapCanalEC:
+	LOAD * Inline [
+		idCanal,Canal
+		01,Retail
+		05,Sede principal
+		06,E-Commerce
+		07,Multimarca
+		08,Concesiones
+		09,Franquicias
+		10,Licitaciones
+		14,Quruba];
+
+EstructuraComercial:
+	LOAD Distinct
+		DIMENSION_ESTRUCTURA_COMERCIAL											as SK.ID_CO,
+		CodHomologacion															as EC.IdICG,
+		DIMENSION_ESTRUCTURA_COMERCIAL											as EC.IdEC,
+		Left(DIMENSION_ESTRUCTURA_COMERCIAL,2) 									as EC.IdCanal,
+		ApplyMap('MapCanalEC',Left(DIMENSION_ESTRUCTURA_COMERCIAL,2),Null()) 	as EC.Canal,
+		DESC_ESTRUCTURA_COMERCIAL												as EC.NombreCompleto
+	FROM
+		[$(vRutaOri)DefaulDimensions.QVD](qvd)
+	where Len(DIMENSION_ESTRUCTURA_COMERCIAL)>2;
+
+	Left Join
+	LOAD
+		Ciudad																	as EC.Cuidad,
+		CodCoordinador															as EC.IdCoordinador,
+		CodHomologacion															as EC.IdICG,
+		Departamento															as EC.Departamento,
+		NombreCoordinador														as EC.Coordinador,
+		Pais																	as EC.Pais,
+		ZonaGeografica															as EC.Zona
+	FROM
+	[$(vRutaOriBiQuest)DIM_FrontsGeneral.QVD]
+	(qvd);
+
+STORE EstructuraComercial INTO [$(vRutaTra)_EstructuraComercial.QVD](qvd);
+Drop Table EstructuraComercial;	

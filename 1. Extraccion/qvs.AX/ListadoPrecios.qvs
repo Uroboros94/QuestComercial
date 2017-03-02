@@ -1,0 +1,60 @@
+﻿/*----------------------------------------------------------------------------------------------------
+    Detalle :
+    Extracción de Dimensiones: De listado de precios
+    -------------------------------------------------------------------------------------------------
+    Fecha       |   Desarrollador   |   Modificación
+    -------------------------------------------------------------------------------------------------
+    11/01/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+
+ListadoPrecios:
+SQL Select 
+	PAdmin.NAME,			// Nombre del Canal
+	ACCOUNTRELATION, 		// Código de Cuenta
+	ITEMRELATION, 			// Código de Referencia
+	UNITID, 				// Unidad de Medida 
+	AMOUNT, 				// Importe en Divisa
+	CURRENCY, 				// Divisa
+	FROMDATE,				// Fecha de Aplicación
+	TODATE,					// Fecha de Vigencia
+	MODIFIEDDATETIME		// Fecha de Modificación del Precio
+	/* Otros Campos
+		--RELATION, 				-- Precio de Ventas 
+		--ITEMCODE,
+		--ACCOUNTCODE,
+		--AGREEMENT, -- 
+		--QUANTITYAMOUNTFROM,
+		--PERCENT1,
+		--PERCENT2,
+		--QUANTITYAMOUNTTO,
+		--DELIVERYTIME,
+		--SEARCHAGAIN,
+		--PRICEUNIT,
+		--MARKUP,
+		--ALLOCATEMARKUP,
+		--MODULE,
+		--LINENUM,
+		--PAT.JOURNALNUM,
+		--PRICEDISCTABLEREF,
+		--LOG,
+		--INVENTDIMID,
+		--CALENDARDAYS,
+		--DIFFERENTFROMPOSTED,
+		--GENERICCURRENCY,
+		--MUSTBEDELETED,
+		--AGREEMENTHEADEREXT_RU,
+		--DISREGARDLEADTIME,
+		--INVENTBAILEEFREEDAYS_RU,
+		--MAXIMUMRETAILPRICE_IN,
+		--PDSCALCULATIONID,
+		--PAT.DATAAREAID,
+		--PAT.RECVERSION,
+		--PAT.PARTITION,
+		--PAT.RECID
+	*/	
+From PriceDiscAdmTrans As PAT
+	Inner Join PriceDiscAdmTable As PAdmin ON Padmin.JOURNALNUM = PAT.JOURNALNUM;
+
+
+STORE ListadoPrecios INTO [$(vRutaOri)ListadoPrecios.QVD](qvd);
+DROP TABLE ListadoPrecios;

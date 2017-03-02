@@ -1,0 +1,26 @@
+/******************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	 Detalle :
+		Creación del Modelo: Maestro de Insumos.
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador     |   Modificación
+	-------------------------------------------------------------------------------------------------
+	06/10/2016  |   Alejandro Saa G.	|   Inicio de Configuración
+	02/03/2016	|	Malemos				|	Ajuste en el nombre AP_QST_ITEMNAME  <--> NAMEALIAS
+*****************************************************************************************************/
+Insumo:
+	LOAD
+		ITEMID          as SK.Insumo,
+		ITEMID          as Insumo.IdInsumo, 
+		AP_QST_ITEMNAME as Insumo.AliasInsumo,
+		NAMEALIAS       as Insumo.NombreInsumo,
+		BOMUNITID       as Insumo.UnidadInsumo,
+		COSTGROUPID     as Insumo.IdGrupoCosto,
+		NAME            as Insumo.NombreGrupoCosto
+	FROM
+	[$(vRutaOri)MaestroInsumos.QVD]
+	(qvd);
+
+STORE Insumo INTO [$(vRutaTra)_Insumo.QVD](qvd);
+Drop Table Insumo;

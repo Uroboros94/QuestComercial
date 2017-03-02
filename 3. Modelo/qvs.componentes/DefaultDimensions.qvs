@@ -1,0 +1,50 @@
+/*****************************************************************************************************
+	Fecha : 20/09/2016
+	-------------------------------------------------------------------------------------------------
+	 Detalle :
+		Creación del Modelo: DefaultDimensions
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   CarteraCliente
+	-------------------------------------------------------------------------------------------------
+	22/09/2016  |   malemos         |   Inicio de Configuración
+	02/03/207	|	malemos			|	Carga desde QVD Transformado
+*****************************************************************************************************/
+DefaultDimensions:
+LOAD
+	DefaultDimensions.Ciudad, 
+	DefaultDimensions.CodCoordinador, 
+	CodICG, 
+	DefaultDimensions.CREATEDDATETIME, 
+	DefaultDimensions.Departamento, 
+	DefaultDimensions.DESC_CENTRO_DE_COSTO, 
+	DefaultDimensions.DESC_COLECCION, 
+	DefaultDimensions.DESC_ESTRUCTURA_COMERCIAL, 
+	DefaultDimensions.DESC_FLUJO_DE_EFECTIVO, 
+	DefaultDimensions.DESC_LINEA, 
+	DefaultDimensions.DESC_MAINACCOUNT, 
+	DefaultDimensions.DESC_MARCA, 
+	DefaultDimensions.DESC_PROYECTO, 
+	DefaultDimensions.DESC_SUBLINEA, 
+	DefaultDimensions.DESC_TERCERO, 
+	DefaultDimensions.DESC_TIPO_DE_TIENDA, 
+	DefaultDimensions.DIMENSION_CENTRO_DE_COSTO, 
+	DefaultDimensions.DIMENSION_COLECCION, 
+	DefaultDimensions.DIMENSION_ESTRUCTURA_COMERCIAL, 
+	DefaultDimensions.DIMENSION_FLUJO_DE_EFECTIVO, 
+	DefaultDimensions.DIMENSION_LINEA, 
+	DefaultDimensions.DIMENSION_MAINACCOUNT, 
+	DefaultDimensions.DIMENSION_MARCA, 
+	DefaultDimensions.DIMENSION_PROYECTO, 
+	DefaultDimensions.DIMENSION_SUBLINEA, 
+	DefaultDimensions.DIMENSION_TERCERO, 
+	DefaultDimensions.DIMENSION_TIPO_DE_TIENDA, 
+	DefaultDimensions.MODIFIEDDATETIME, 
+	DefaultDimensions.NombreCoordinador, 
+	DefaultDimensions.Pais, 
+	DefaultDimensions.EC.IdCanal, 
+	DefaultDimensions.EC.Canal, 
+	SK.DEFAULTDIMENSION, 
+	DefaultDimensions.ZonaGeografica
+FROM
+[$(vRutaTra)_DefaultDimensions.QVD]
+(qvd);

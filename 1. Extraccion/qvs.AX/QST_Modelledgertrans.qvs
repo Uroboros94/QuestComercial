@@ -1,0 +1,75 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+	Extracción de Dimensiones: Contabilidad
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/26/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+QST_Modelledgertrans:
+	SQL SELECT     
+		LEDGERACCOUNT,
+		TRANSACTIONCURRENCYCODE,
+		TRANSACTIONCURRENCYAMOUNT,
+		ACCOUNTINGCURRENCYAMOUNT,
+		REPORTINGCURRENCYAMOUNT,
+		ACCOUNTINGDATE,
+		LEDGER,
+		VOUCHER,
+		JOURNALCATEGORY,
+		NOMBREJOURNALCATEGORY,
+		JOURNALNUMBER,
+		SUBLEDGERVOUCHER,
+		SUBLEDGERVOUCHERDATAAREAID,
+		LEDGERDIMENSION,
+		POSTINGLAYER,
+		NOMBREPOSTINGLAYER,
+		POSTINGTYPE,
+		NOMBREPOSTINGTYPE,
+		MAINACCOUNTID,
+		"DIMENSION_CENTRO_DE_COSTO",
+		"DIMENSION_COLECCION",
+		"DIMENSION_ESTRUCTURA_COMERCIAL",
+		"DIMENSION_FLUJO_DE_EFECTIVO",
+		"DIMENSION_LINEA",
+		"DIMENSION_MARCA",
+		"DIMENSION_PROYECTO",
+		"DIMENSION_SUBLINEA",
+		"DIMENSION_TERCERO",
+		"DIMENSION_TIPO_DE_TIENDA",
+		"DIMENSION_MAINACCOUNT",
+		"DESC_MAINACCOUNT",
+		"DESC_TIPO_DE_TIENDA",
+		"DESC_TERCERO",
+		"DESC_SUBLINEA",
+		"DESC_PROYECTO",
+		"DESC_MARCA",
+		"DESC_LINEA",
+		"DESC_FLUJO_DE_EFECTIVO",
+		"DESC_ESTRUCTURA_COMERCIAL",
+		"DESC_COLECCION",
+		"DESC_CENTRO_DE_COSTO",
+		"CUENTA_N1",
+		"CUENTA_N2",
+		"CUENTA_N3",
+		"CUENTA_N4",
+		"CUENTA_N5",
+		"NOMBRE_CUENTA_N1",
+		"NOMBRE_CUENTA_N2",
+		"NOMBRE_CUENTA_N3",
+		"NOMBRE_CUENTA_N4",
+		"NOMBRE_CUENTA_N5",
+		DEBITO,
+		CREDITO,
+		ANIO,
+		ISCREDIT,
+		NOMBREISCREDIT,
+		MES,
+		DIA,
+		DESC_FACTURA,
+		FACTURAORIGEN,
+		FECHAVENCIMIENTO
+	FROM "QST_MODELLEDGERTRANS";
+
+STORE QST_Modelledgertrans INTO [$(vRutaOri)QST_Modelledgertrans.QVD](qvd);
+DROP TABLE QST_Modelledgertrans;

@@ -1,0 +1,20 @@
+﻿///$tab Main
+Binary [..\3. modelo\aql.ax.financiero.qvw];
+
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$ #.##0;($ #.##0)';
+SET TimeFormat='hh:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff] TT';
+SET MonthNames='ene;feb;mar;abr;may;jun;jul;ago;sep;oct;nov;dic';
+SET DayNames='lun;mar;mié;jue;vie;sáb;dom';
+///$tab Dimensiones
+LOAD * INLINE [
+    Detalle
+    Tipo
+    Cuenta
+];
+

@@ -1,0 +1,30 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Logistica
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+08/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+MovimientosArticulos:
+  SQL SELECT
+    DESCMOVIMIENTO,
+	  CANTDIARIO,
+    NOMBREALMACEN,
+    CODALMACEN,
+	  COLORID,
+	  TALLA,
+	  CODARTICULO,
+	  FECHADIARIO,
+	  CODIGODIARIO,
+    CONTABILIZADO,
+    ORDENPRODMAESTRA,
+    ORDENPRODUC,
+    NOMBREMOVIMIENTO,
+    PEDIDOREFERENCIA,
+    TIPOTRANS,
+    DESCTIPOTRANS
+  FROM QST_MODELMOVIMIENTOARTICULOS;
+
+STORE MovimientosArticulos INTO [$(vRutaOri)QST_ModelMovimientoArticulos.QVD](qvd);
+DROP TABLE MovimientosArticulos;

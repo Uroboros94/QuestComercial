@@ -1,0 +1,234 @@
+﻿/****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Maestro de Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016	|	malemos			|	Inicio de Configuración
+	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros
+	24/02/2017	|	malemos			|	Ajuste en la carga de los atributos
+*****************************************************************************************************/
+Colores:
+	Mapping LOAD 
+		Color 							as IdColor,
+		QST_ColorSpec_colorQuest_string as NombreColor
+	FROM
+	[$(vRutaOriPLM)MaestroColores.QVD]
+	(qvd);
+
+Generos:
+	Mapping
+	LOAD
+		DescripcionGenero  	as Genero,
+		IdGenero			as Id
+	FROM
+	[$(vRutaOriPLM)Producto_QV.QVD]
+	(qvd);
+
+TipoAdquisicion:
+	Mapping
+	LOAD
+		DescripcionTipoAquision as Genero,
+		IdTipoAquision			as Id
+	FROM
+	[$(vRutaOriPLM)Producto_QV.QVD]
+	(qvd);	
+
+Tallas:
+	Mapping
+	LOAD * Inline [
+		Talla, Orden
+		XS, 1
+		S, 2
+		M, 3
+		L, 4
+		XL, 5
+		08, 8
+		10, 10
+		12, 12
+		14, 14
+		16, 16
+		18, 18
+		20, 20
+		24, 24
+		26, 26
+		28, 28
+		30, 30
+		32, 32
+		34, 34
+		36, 36
+		38, 38
+		40, 40
+	];
+
+Producto_Temp:
+	LOAD
+		COLOR,
+		SUBTIPOPRODUCTO,
+		CATEGORYRECID,
+		NOMBRECATEGORIA,
+		CODIGOBARRAS,
+		NOMBREEMITIDO,
+		ESTILO,
+		NOMBREPRODUCTO,
+		DESCGRUPODIMSEGUIMIENTO,
+		CODARTICULO,
+		NOMBRESUBTIPOPRODUCTO,
+		If(IsNum(TALLA), If(TALLA < 10, '0'&TALLA, TALLA), TALLA) as TALLA,
+		NOMBRETIPOPRODUCTO
+	FROM
+	[$(vRutaOri)QST_MaestroProductos.QVD]
+	(qvd)	
+	where NOMBRETIPOPRODUCTO <> 'Servicio';
+
+noConcatenate
+Producto_Temp2:
+	LOAD
+		CODARTICULO&TALLA&COLOR 			as CK.ProductoTallaColor,
+		CODARTICULO&TALLA&COLOR 			as SK.KEYPRODUCT,
+		CODARTICULO							as SK.Producto,
+		CATEGORYRECID 						as CATEGORYRECID,
+		CODARTICULO 						as Referencia,
+		COLOR								as IdColor,
+		SUBTIPOPRODUCTO 					as IdSubTipo,
+		NOMBRECATEGORIA 					as Categoria,
+		CODIGOBARRAS    					as CodigoBarras,
+		NOMBREEMITIDO   					as Emitido,
+		ESTILO  							as Estilo,
+		ApplyMap('Colores', COLOR) 			as Color,
+		NOMBREPRODUCTO  					as Nombre,
+		DESCGRUPODIMSEGUIMIENTO	 			as Seguimiento,
+		NOMBRESUBTIPOPRODUCTO  				as SubTipo,
+		TALLA   							as Talla,
+		NOMBRETIPOPRODUCTO  				as Tipo
+	Resident Producto_Temp;
+	Drop Table Producto_Temp;
+
+	Left Join (Producto_Temp2)
+	LOAD
+		Producto.Genero 										as Genero,
+		ApplyMap('Generos',Producto.Genero)						as IdGenero,
+		Producto.Tipo_de_adquisicion							as TipoAdquisicion,
+		ApplyMap('TipoAdquisicion',Producto.Tipo_de_adquisicion)	as IdTipoAquision,
+		SK.Producto 											as SK.Producto
+	FROM [$(vRutaTra)_AtributosProducto.QVD](qvd); 
+
+
+//******************************************************************************************
+DimFinanTemp:
+	LOAD
+		ItemId,
+		Name,
+		DISPLAYVALUE,
+		DESCRIPTION
+	FROM
+	[$(vRutaOri)DimensionesFinancieras.QVD]
+	(qvd)
+	Where Match(Name,'LINEA','SUBLINEA','MARCA','COLECCION');
+
+Campos:
+	LOAD Distinct
+		Capitalize(Name) As Campo
+	Resident DimFinanTemp;
+
+LET contador = 0;
+LET vCampo = Peek('Campo', $(contador)-1, 'Campos');
+
+DimFinan:
+	LOAD
+		ItemId 				as IdItemp,
+		DISPLAYVALUE 		as Id$(vCampo),
+		DESCRIPTION			as $(vCampo)
+	Resident DimFinanTemp
+	Where Capitalize(Name) = '$(vCampo)';
+
+FOR contador = 1 to 4 step 1
+	LET vCampo = Peek('Campo', $(contador)-1, 'Campos');
+	TRACE $(vCampo);
+	Left Join
+		LOAD
+			ItemId 			as IdItemp,
+			DISPLAYVALUE 	as Id$(vCampo),
+			DESCRIPTION		as $(vCampo)
+		Resident DimFinanTemp
+		Where Capitalize(Name) = '$(vCampo)';
+NEXT;
+
+Left Join (Producto_Temp2) LOAD
+		IdColeccion						as Coleccion,
+		IdItemp							as Referencia,
+		Right(IdLinea,2)				as IdLinea,
+		IdMarca							as IdMarca,
+		PurgeChar(IdSublinea,'BSINPTM') as IdSublinea,
+		Linea							as Linea,
+		Marca							as Marca,
+		Sublinea 						as Sublinea
+	Resident DimFinan;
+
+LET contador = Null();
+LET vCampo = Null();
+DROP Tables Campos,DimFinanTemp,DimFinan;
+//******************************************************************************************
+noConcatenate
+Producto:
+	LOAD
+		CK.ProductoTallaColor,
+		SK.KEYPRODUCT,
+		SK.Producto,
+		(	Coleccion&
+			Upper(Marca)&
+			IdGenero&
+			IdLinea&
+			IdSublinea&
+			IdTipoAquision) 					as CK.IdLlaveProducto,
+		IdColor									as Producto.IdColor,
+		IdGenero&IdLinea						as Producto.IdLinea,
+		IdMarca									as Producto.IdMarca,
+		IdSublinea								as Producto.IdSublinea,
+		IdSubTipo								as Producto.IdSubTipo,
+		Categoria								as Producto.Categoria,
+		CodigoBarras							as Producto.CodigoBarras,
+		Coleccion								as Producto.Coleccion,
+		Color									as Producto.Color,
+		Emitido									as Producto.Emitido,
+		Estilo									as Producto.Estilo,
+		Linea									as Producto.Linea,
+		Marca									as Producto.Marca,
+		Nombre									as Producto.Nombre,
+		Referencia								as Producto.Referencia,
+		Seguimiento								as Producto.Seguimiento,
+		Sublinea								as Producto.Sublinea,
+		SubTipo									as Producto.SubTipo,
+		Dual(Talla, ApplyMap('Tallas', Talla))	as Producto.Talla,
+		Tipo									as Producto.Tipo
+	Resident Producto_Temp2
+	Where not WildMatch(Coleccion, 'SERV_PN');
+	Drop Table Producto_Temp2;
+	/*Atributos*/
+	Left Join(Producto) LOAD * FROM [$(vRutaTra)_AtributosProducto.QVD] (qvd);
+
+STORE Producto INTO [$(vRutaTra)_Producto.QVD](qvd);
+Drop Table Producto;	
+		//AparienciaDetallada				as Producto.AparienciaDetallada,
+		//AparienciaGeneral					as Producto.AparienciaGeneral,
+		//BandaPrecio						as Producto.BandaPrecio,
+		//ClasificacionInventario			as Producto.ClasificacionInventario,
+		//Clima							as Producto.Clima,
+		//Cuello							as Producto.Cuello,
+		//Diseñador						as Producto.Diseñador,
+		//Genero							as Producto.Genero,
+		//GeneroMat						as Producto.GeneroMat,
+		//GrupoProductos					as Producto.GrupoProductos,
+		//Lavado							as Producto.Lavado,
+		//Manga							as Producto.Manga,
+		//NivelModa						as Producto.NivelModa,
+		//NonmbreCategoria					as Producto.NombreCategoria,
+		//OperacionUso						as Producto.OperacionUso,
+		//Patronista						as Producto.Patronista,
+		//Silueta							as Producto.Silueta,
+		//TipoAdquisicion					as Producto.TipoAdquisicion,
+		//TipoPrenda						as Producto.TipoPrenda,
+		//TipoProducto						as Producto.TipoProducto,
+		//TipoTejido						as Producto.TipoTejido

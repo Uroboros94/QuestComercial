@@ -1,0 +1,30 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Logistica
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+01/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+PedidosTransfer:
+  SQL SELECT
+      CODTRANSFERENCIA,
+    	CODALMACENORIGEN,
+    	NOMBREALMACENDESTINO,
+    	CODALMACENDESTINO,
+    	NOMBREALMACENORIGEN,
+    	ESTADOTRANSFERENCIA,
+    	ORDENPRODUCMAESTRA,
+    	CODICG,
+    	CODARTICULO,
+    	COLORID,
+    	TALLA,
+    	UBICACION,
+    	CANTTRANSFERENCIA,
+      FECHAENVIO,
+      FECHARECIBIDOLINEA,
+      FECHAENVIOLINEA
+    FROM QST_MODELLOGISTICA;
+
+STORE PedidosTransfer INTO [$(vRutaOri)PedidosTransfer.QVD](qvd);
+DROP TABLE PedidosTransfer;

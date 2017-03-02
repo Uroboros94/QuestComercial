@@ -1,0 +1,45 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: DefaulDimensions
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+DefaulDimensions:
+	SQL SELECT
+    	SUBSTRING("DIMENSION_ESTRUCTURA_COMERCIAL",3,5) As CodHomologacion,
+		//DATAAREAID,
+		//RECVERSION,
+		//PARTITION,
+		//RECID,
+		DEFAULTDIMENSION,
+		"DIMENSION_CENTRO_DE_COSTO",
+		"DIMENSION_COLECCION",
+		"DIMENSION_ESTRUCTURA_COMERCIAL",
+		"DIMENSION_FLUJO_DE_EFECTIVO",
+		"DIMENSION_LINEA",
+		"DIMENSION_MAINACCOUNT",
+		"DIMENSION_MARCA",
+		"DIMENSION_PROYECTO",
+		"DIMENSION_SUBLINEA",
+		"DIMENSION_TERCERO",
+		"DIMENSION_TIPO_DE_TIENDA",
+		"DESC_CENTRO_DE_COSTO",
+		"DESC_COLECCION",
+		"DESC_ESTRUCTURA_COMERCIAL",
+		"DESC_FLUJO_DE_EFECTIVO",
+		"DESC_LINEA",
+		"DESC_MAINACCOUNT",
+		"DESC_MARCA",
+		"DESC_PROYECTO",
+		"DESC_SUBLINEA",
+		"DESC_TERCERO",
+		"DESC_TIPO_DE_TIENDA",
+		MODIFIEDDATETIME,
+		CREATEDDATETIME
+	FROM "QST_MODELDEFAULTDIMENSIONVIEW";
+
+
+STORE DefaulDimensions INTO [$(vRutaOri)DefaulDimensions.QVD](qvd);
+DROP TABLE DefaulDimensions;

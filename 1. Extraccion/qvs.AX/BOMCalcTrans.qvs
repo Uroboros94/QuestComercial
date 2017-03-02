@@ -1,0 +1,78 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: BOMCalcTrans
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/26/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+BOMCalcTrans:
+	LOAD
+		BOMID,
+		PRICECALCID,
+		ITEMID,
+		INVENTSIZEID,
+		INVENTCOLORID,
+		COSTPRICE_CAB,
+		COSTMARKUP_CAB,
+		SALESPRICE_CAB,
+		SALESMARKUP_CAB,
+		QTY_CAB,
+		TRANSDATE,
+		CALCGROUPID,
+		RESOURCE_,
+		LEVEL_,
+		COSTGROUPID,
+		OPRID,
+		CONSUMPTIONVARIABLE,
+		UNITID,
+		COSTPRICE,
+		SALESPRICE,
+		QTY,
+		COSTPRICEQTY,
+		SALESPRICEQTY,
+		LINENUM,
+		OPRNUM,
+		COSTPRICEUNIT,
+		COSTMARKUPQTY,
+		SALESMARKUPQTY,
+		INVENTDIMID,
+		ROUTEID;
+	SQL SELECT 
+		BOMCT.BOMID,
+		BOMCT.PRICECALCID,
+		BOMCT.ITEMID,
+		ID.INVENTSIZEID,
+		ID.INVENTCOLORID,
+		BOMCT.COSTPRICE		AS COSTPRICE_CAB,
+		BOMCT.COSTMARKUP	AS COSTMARKUP_CAB,
+		BOMCT.SALESPRICE	AS SALESPRICE_CAB,
+		BOMCT.SALESMARKUP	AS SALESMARKUP_CAB,
+		BOMCT.QTY			AS QTY_CAB,
+		BOMCTR.TRANSDATE,
+		BOMCTR.CALCGROUPID,
+		BOMCTR.RESOURCE_,
+		BOMCTR.LEVEL_,
+		BOMCTR.COSTGROUPID,
+		BOMCTR.OPRID,
+		BOMCTR.CONSUMPTIONVARIABLE,
+		BOMCTR.UNITID,
+		BOMCTR.COSTPRICE,
+		BOMCTR.SALESPRICE,
+		BOMCTR.QTY,
+		BOMCTR.COSTPRICEQTY,
+		BOMCTR.SALESPRICEQTY,
+		BOMCTR.LINENUM,
+		BOMCTR.OPRNUM,
+		BOMCTR.COSTPRICEUNIT,
+		BOMCTR.COSTMARKUPQTY,
+		BOMCTR.SALESMARKUPQTY,
+		BOMCT.INVENTDIMID,
+		BOMCT.ROUTEID
+	FROM 	BOMCALCTABLE 		AS BOMCT
+		LEFT JOIN INVENTDIM 	AS ID ON BOMCT.INVENTDIMID=ID.INVENTDIMID
+		LEFT JOIN BOMCALCTRANS 	AS BOMCTR ON BOMCT.PRICECALCID=BOMCTR.PRICECALCID;
+
+STORE BOMCalcTrans INTO [$(vRutaOri)BOMCalcTrans.QVD](qvd);
+DROP TABLE BOMCalcTrans;
+

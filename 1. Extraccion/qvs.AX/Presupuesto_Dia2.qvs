@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: PRESUPUESTO_DIA2
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/28/2016  |   Alejandro Saa G.|   Inicio de Configuración
+*****************************************************************************************************/
+Presupuesto_Dia2:
+  SQL SELECT
+    DIA,
+		MES,
+    ANO,
+    FECHA,
+    LINEA,
+    CODBARRAS,
+    LINEABAS,
+    ESTILO      as PresupuestoEstilo,
+    ALMACEN     as CodICG,
+    UNIDADES,
+    PESOS
+  FROM PRESUPUESTO_DIA2
+  WHERE ANO = 2016 AND MES >= 8;
+
+  STORE Presupuesto_Dia2 INTO [$(vRutaOri)Presupuesto_Dia2.QVD](qvd);
+  DROP TABLE Presupuesto_Dia2;

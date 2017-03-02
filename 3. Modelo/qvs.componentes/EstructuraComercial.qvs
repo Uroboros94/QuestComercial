@@ -1,0 +1,25 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+	Modelo de Hechos: Estructuras Comerciales
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+10/12/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+EstructuraComercial:
+LOAD
+	EC.IdICG, 
+	SK.ID_CO, 
+	EC.IdEC, 
+	EC.IdCanal, 
+	EC.Canal, 
+	EC.NombreCompleto, 
+	EC.Cuidad, 
+	EC.IdCoordinador, 
+	EC.Departamento, 
+	EC.Coordinador, 
+	EC.Pais, 
+	EC.Zona
+FROM
+[$(vRutaTra)_EstructuraComercial.QVD]
+(qvd);

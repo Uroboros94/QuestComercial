@@ -1,0 +1,29 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: WrkCtrTable
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+27/10/2016  |   Alejandro Saa G |   Inicio de Configuración
+*****************************************************************************************************/
+WrkCtrTable:
+  SQL SELECT
+    wct.WRKCTRID,
+    wct.NAME,
+    wct.EFFECTIVITYPCT,
+    wct.OPERATIONSCHEDPCT,
+    CASE wct.WRKCTRTYPE
+    WHEN 0 THEN 'Proveedor'
+    WHEN 1 THEN 'Recursos humanos'
+    WHEN 2 THEN 'Equipo'
+    WHEN 3 THEN 'Herramienta'
+    WHEN 4 THEN 'Ubicación'
+    WHEN 5 THEN 'Grupo de recursos' END as WRKCTRTYPE,
+    ct.CATEGORYNAME,
+    rp.NAME as ROUTENAME
+  FROM WrkCtrTable wct
+  left join CategoryTable ct on (ct.CATEGORYID = wct.PROCESSCATEGORYID)
+  left join RouteGroup rp on (rp.ROUTEGROUPID = wct.ROUTEGROUPID);
+
+STORE WrkCtrTable INTO [$(vRutaOri)WrkCtrTable.QVD](qvd);
+DROP TABLE WrkCtrTable;
