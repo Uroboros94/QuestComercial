@@ -19,11 +19,11 @@
 
 /*Variables Personalizadas*/
 	SET vRutaTra = '..\QVD\AX\TRA\';
+	SET vRutaOri = '..\QVD\AX\ORI\';
 	SET vRutaOriPLM = '..\QVD\PLM\ORI\';
 
-/*	Componentes	*/
+/*Componentes*/
 $(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
-
 
 /*TAB1: Dimensiones*/
 /*COMPONENTES GENERALES*/
@@ -35,6 +35,7 @@ $(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
 
 	/*Maestro de Productos*/
 	$(Must_Include=qvs.componentes\producto.qvs);
+	$(Must_Include=qvs.axproduccion\ListaCosto.qvs);
 
 	/*Maestro de Insumos*/
 	$(Must_Include=qvs.componentes\maestroinsumos.qvs);
@@ -109,12 +110,12 @@ $(Must_Include=qvs.componentes\qvc_runtime\qvc.qvs);
 	Load Distinct
 		num(SK.FECHA)				as SK.FECHA,
 		SK.FECHA					as Calendario.%_Fechakey,
-		Year 					as Calendario.ano,
-		Month					as Calendario.nomMes,
+		Year 						as Calendario.ano,
+		Month						as Calendario.nomMes,
 		[Year-Month]				as Calendario.MonthYear,
-		Day						as Calendario.dia,
-		Weekday					as Calendario.nombreDia,
+		Day							as Calendario.dia,
+		Weekday						as Calendario.nombreDia,
 		Week(SK.FECHA)				as Calendario.semana,
-		Replace(Quarter,'Q','T')		as Calendario.trimestre
+		Replace(Quarter,'Q','T')	as Calendario.trimestre
 	Resident MasterCalendar;
 	DROP Table MasterCalendar;

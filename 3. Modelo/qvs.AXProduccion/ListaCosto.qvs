@@ -1,0 +1,47 @@
+QST_ModelProductosListaPrecios:
+	LOAD
+		CODARTICULO,
+		FECHAACTIVACION, 
+		PRECIO 
+	FROM
+	[$(vRutaOri)QST_ModelProductosListaPrecios.QVD]
+	(qvd);
+
+noConcatenate
+ProductoCostoTemp:
+	LOAD
+		CODARTICULO							as SK.Producto,
+		Date(FECHAACTIVACION,'DD/MM/YYYY')	as FechaInicio, 
+		Num(PRECIO) 						as Costo
+	Resident QST_ModelProductosListaPrecios
+	Where Not CODARTICULO like 'S*'
+	Order By 
+		CODARTICULO desc,
+		FECHAACTIVACION desc; 
+	DROP Table QST_ModelProductosListaPrecios;
+	
+ProductoCostoTemp2:
+	LOAD
+		SK.Producto,
+		Costo,
+		FechaInicio,
+		Peek(FechaInicio,0)	as tempm,
+		if(SK.Producto = Peek(SK.Producto),Peek(FechaInicio),Date#('12/12/9999','DD/MM/YYYY')) as FechaFin
+	Resident ProductoCostoTemp
+	Order By 
+		SK.Producto desc,
+		FechaInicio desc; 	
+	DROP Table ProductoCostoTemp;
+
+ListaCosto:
+	LOAD
+		SK.Producto,
+		SK.Producto 	as ListaCosto.IdProducto,	
+		FechaInicio		as ListaCosto.FechaInicio,
+		FechaFin		as ListaCosto.FechaFin,
+		Costo 			as ListaCosto.Costo
+	Resident ProductoCostoTemp2;
+	DROP Table ProductoCostoTemp2;
+
+//STORE ListaCosto INTO [$(vRutaTra)_ListaCosto.QVD](qvd);
+//Drop Table ListaCosto;

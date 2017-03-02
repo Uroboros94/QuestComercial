@@ -227,8 +227,8 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>Sum(ProdCalcTrans.COSTAMOUNT / ProdCalcTrans.QTY) /
-Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
+        <v>Sum({&lt;
+	ListaCosto.FechaFin = {'12/12/9999'}&gt;}ListaCosto.Costo)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1193,7 +1193,7 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>284</ColWidth>
+      <ColWidth>238</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -12169,8 +12169,8 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.TipoPrenda</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Tipo_de_prenda</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Tipo Prenda</v>
@@ -15230,8 +15230,9 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
       <int>281</int>
+      <int>266</int>
       <int>294</int>
-      <int>284</int>
+      <int>238</int>
       <int>153</int>
       <int>153</int>
       <int>153</int>
@@ -15241,7 +15242,6 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
       <int>191</int>
       <int>266</int>
       <int>363</int>
-      <int>100</int>
       <int>100</int>
       <int>100</int>
     </ColWidths>
@@ -15738,8 +15738,8 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
       <int>0</int>
-      <int>2</int>
       <int>1</int>
+      <int>2</int>
       <int>3</int>
       <int>4</int>
       <int>5</int>
@@ -15794,7 +15794,7 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.TipoPrenda</DimName>
+          <DimName>Producto.Referencia</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15802,7 +15802,7 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Producto.Referencia</DimName>
+          <DimName>Producto.Tipo_de_prenda</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -15819,8 +15819,8 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(ProdCalcTrans.COSTAMOUNT / ProdCalcTrans.QTY) /
-Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
+              <v>Sum({&lt;
+	ListaCosto.FechaFin = {'12/12/9999'}&gt;}ListaCosto.Costo)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -16212,7 +16212,7 @@ Count(OrdenProd.AP_QST_MASTERPRODORDID)</v>
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>284</ColWidth>
+            <ColWidth>238</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

@@ -37,7 +37,7 @@ SET vRutaOri = '..\QVD\AX\ORI\';
 	/*Maestro de Productos*/
 	$(Must_Include=qvs.ax\qst_maestroproductos.qvs);
 	$(Must_Include=qvs.ax\QST_ModelProdutosAtributos.qvs);/*Atributos del Producto*/
-	//$(Must_Include=qvs.ax\productmaster.qvs);///*Maestro de Productos*/
+	$(Must_Include=qvs.ax\QST_ModelProductosListaPrecios.qvs);/*Listado de Costos*/
 
 	///*Estructura Comercial*/
 	//$(Must_Include=qvs.ax\estructuracomercial.qvs);
