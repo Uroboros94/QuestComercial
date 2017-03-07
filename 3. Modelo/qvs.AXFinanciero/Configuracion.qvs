@@ -1,0 +1,44 @@
+﻿/******************************************************************************************************
+	  Detalle :
+		Modelo de Dimensiones: Configuraciones Contables
+	 -------------------------------------------------------------------------------------------------
+	 Fecha       |   Desarrollador   |   Modificación
+	 -------------------------------------------------------------------------------------------------
+	 24/02/2017  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+Mapp.Desc.Trime:
+	Mapping load * Inline [
+		C.Mes, T.NumDes
+		01, T1
+		02, T1
+		03, T1
+		04, T2
+		05, T2
+		06, T2
+		07, T3
+		08, T3
+		09, T3
+		10, T4
+		11, T4
+		12, T4
+	];
+
+Mapping
+DescCapas:
+	LOAD
+		Num([Id del Enum])		as Id,
+		Capitalize(Descripción)	as Descripción
+	FROM
+	[..\Fuentes\DescEnumAX.xlsx]
+	(ooxml, embedded labels, table is [Capa de Registro]);
+
+NullMapTemp:
+	LOAD
+		'' as Valor, null() as Remplazo
+	AutoGenerate 1;		
+	Concatenate (NullMapTemp) LOAD
+		' ' as Valor, null() as Remplazo
+	AutoGenerate 1;
+
+NullMap: Mapping LOAD * Resident NullMapTemp;
+DROP Table NullMapTemp;

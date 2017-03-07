@@ -1,0 +1,21 @@
+/*
+Fecha : 09/11/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Creación del Modelo: Maestro de Localidades.
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador     |   Modificación
+-------------------------------------------------------------------------------------------------
+09/11/2016  |   Alejandro Saa G.  |   Inicio de Configuración
+*****************************************************************************************************/
+Localidad:
+	LOAD
+		INVENTLOCATIONID 	as SK.LOCALIDAD,
+		INVENTLOCATIONID 	as Localidad.Id,
+		NAME 				as Localidad.Nombre
+	FROM
+	[$(vRutaOri)MaestroLocalidades.QVD]
+	(qvd);
+
+STORE Localidad INTO [$(vRutaTra)_Localidad.QVD](qvd);
+Drop Table Localidad;

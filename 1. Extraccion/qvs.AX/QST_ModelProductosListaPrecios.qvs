@@ -1,0 +1,17 @@
+/*****************************************************************************************************
+	Detalle :
+	Extracción de Dimensiones: AP_QST_MasterCalcTrans
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	02/03/2017	|	malemos			|	Inicio de Configuración
+*****************************************************************************************************/
+QST_ModelProductosListaPrecios:
+	SQL Select 
+		CODARTICULO,
+		FECHAACTIVACION, 
+		PRECIO 
+	from QST_ModelProductosListaPrecios;
+
+STORE QST_ModelProductosListaPrecios INTO [$(vRutaOri)QST_ModelProductosListaPrecios.QVD](qvd);
+DROP TABLE QST_ModelProductosListaPrecios;

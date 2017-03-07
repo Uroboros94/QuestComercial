@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Picking
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador    |   Modificación
+-------------------------------------------------------------------------------------------------
+03/11/2016  |   Alejandro Saa G  |   Inicio de Configuración
+*****************************************************************************************************/
+RutasPicking:
+  SQL SELECT
+      RUTAPICKING,
+    	CODIGOENVIO,
+    	ESTADOMANIPULACION,
+    	TIEMPOACTIVACION,
+    	NUMEROPEDIDO,
+    	CODIGOTRABAJADOR,
+    	NOMBRETRABAJADOR,
+    	CODIGOCLIENTE,
+    	NOMBRECLIENTE,
+    	CODIGOALMACEN,
+    	ALMACEN,
+    	UBICACION,
+      CODARTICULO,
+    	CODCOLOR,
+    	TALLA,
+    	ESTADOMANIPULACIONLINEA,
+      CANTSELECCIONADA,
+      CANTPROGRAMADA
+    FROM QST_MODELPICKING;
+
+STORE RutasPicking INTO [$(vRutaOri)RutasPicking.QVD](qvd);
+DROP TABLE RutasPicking;

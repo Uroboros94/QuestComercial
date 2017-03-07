@@ -1,0 +1,49 @@
+﻿///$tab Carga
+/*Load*/
+$(Must_Include=qvs.axcomercial\#loadscript.qvs);
+
+///$tab Exit Script
+CALL Qvc.Cleanup;
+TRACE Modelo Finalizado;
+EXIT SCRIPT;
+
+
+///$tab Main
+/*Script*/
+$(Must_Include=qvs.axcomercial\#loadscript.qvs);
+///$tab LinkTable
+LinkTable_Temp:
+	LOAD
+		Distinct
+		PedidosVenta.Id				as IDPEDIDO,
+		PedidosVenta.IdCliente		as IDCLIENTE,
+		PedidosVenta.Fecha 			as FECHA,
+		PedidosVenta.Id_CO			as ID_CO
+	Resident PedidosVenta;
+	Concatenate
+	LOAD
+		Distinct
+		Cartera.IdCliente			as IDCLIENTE,
+		Cartera.FechaFactura		as FECHA
+	Resident CarteraCliente;
+	Concatenate
+	LOAD
+		Distinct
+		Venta.IdCliente				as IDCLIENTE,
+		Venta.FechaFactura			as FECHA
+	Resident Venta;
+	
+LinkTable:
+	LOAD
+		IDPEDIDO&IDCLIENTE&FECHA	as CK.PedidoClienteFecha,
+		ID_CO&FECHA					as CK.ID_COFecha,
+		/**************************************************************************/
+		ID_CO						as SK.ID_CO,
+		IDPEDIDO					as SK.Pedido,
+		IDCLIENTE					as SK.Cliente,
+		FECHA						as SK.FECHA
+	Resident LinkTable_Temp;
+	DROP Table LinkTable_Temp;
+	
+	
+

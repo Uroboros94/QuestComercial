@@ -1,0 +1,23 @@
+/*****************************************************************************************************
+	Fecha : 12/12/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Extracción: Homologación Pagos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	12/12/2016  |   malemos         |   Inicio de Configuración 
+*****************************************************************************************************/
+
+HomologacionPagos:
+	SQL Select Distinct 
+		transacciones.Voucher 	as Pago,
+		Contabilidad.Voucher 	as Asiento 
+	From QST_MODELLEDGERTRANS 	as Contabilidad
+		inner join CUSTTRANS 	as transacciones on transacciones.LastSettleVoucher = Contabilidad.Voucher
+	Where 
+		transacciones.TRANSTYPE in ('15','27');
+
+
+STORE HomologacionPagos INTO [$(vRutaOri)HomologacionPagos.QVD](qvd);
+DROP TABLE HomologacionPagos;

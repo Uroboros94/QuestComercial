@@ -1,0 +1,64 @@
+﻿/****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Maestro de Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016	|	malemos			|	Inicio de Configuración
+	12/02/2016	|	malemos			|	Mapeo de Codigo de Géneros
+	24/02/2017	|	malemos			|	Ajuste en la carga de los atributos
+	02/03/2017	|	malemos			|	Carga de Producto Transformado
+*****************************************************************************************************/
+Producto:
+LOAD 
+	SK.Producto, 
+	Producto.Coleccion, 
+	CK.ProductoTallaColor, 
+	SK.KEYPRODUCT, 
+	CK.IdLlaveProducto, 
+	Producto.IdColor, 
+	Producto.IdLinea, 
+	Producto.IdMarca, 
+	Producto.IdSublinea, 
+	Producto.IdSubTipo, 
+	Producto.Categoria, 
+	Producto.CodigoBarras, 
+	Producto.Color, 
+	Producto.Emitido, 
+	Producto.Estilo, 
+	Producto.Linea, 
+	Producto.Marca, 
+	Producto.Nombre, 
+	Producto.Referencia, 
+	Producto.Seguimiento, 
+	Producto.Sublinea, 
+	Producto.SubTipo, 
+	Producto.Talla, 
+	Producto.Tipo, 
+	Producto.Apariencia_detallada, 
+	Producto.Apariencia_general, 
+	Producto.Banda_de_precio, 
+	Producto.Clasificacion_inventario, 
+	Producto.Composicion, 
+	Producto.Cuello, 
+	Producto.Diseñador, 
+	Producto.Genero, 
+	Producto.Genero_material, 
+	Producto.Grupo_de_productos, 
+	Producto.Lavado, 
+	Producto.Linea_material, 
+	Producto.Manga, 
+	Producto.Material_insumo, 
+	Producto.Nivel_de_moda, 
+	Producto.Operacion_uso, 
+	Producto.Patronista, 
+	Producto.Silueta, 
+	Producto.Tipo_de_adquisicion, 
+	Producto.Tipo_de_prenda, 
+	Producto.Tipo_de_producto, 
+	Producto.Tipologia_de_tejido
+FROM
+[$(vRutaTra)_Producto.QVD]
+(qvd);

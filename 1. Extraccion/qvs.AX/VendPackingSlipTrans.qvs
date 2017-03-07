@@ -1,0 +1,86 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: VendPackingSlipTrans
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/26/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+VendPackingSlipTrans:
+    SQL SELECT 
+        PACKINGSLIPID,
+        DELIVERYDATE,
+        LINENUM,
+        INVENTTRANSID,
+        DESTCOUNTRYREGIONID,
+        ITEMID,
+        EXTERNALITEMID,
+        NAME,
+        ORDERED,
+        QTY,
+        REMAIN,
+        PRICEUNIT,
+        VALUEMST,
+        INVENTREFID,
+        INVENTREFTYPE,
+        PURCHUNIT,
+        TRANSACTIONCODE,
+        INVENTREFTRANSID,
+        INTERCOMPANYINVENTTRANSID,
+        DESTSTATE,
+        REMAININVENT,
+        ORIGPURCHID,
+        RETURNACTIONID,
+        TRANSPORT,
+        INVENTDIMID,
+        STATPROCID,
+        PORT,
+        INVENTDATE,
+        NUMBERSEQUENCEGROUP,
+        DESTCOUNTY,
+        INTRASTATDISPATCHID,
+        INVENTQTY,
+        REASONTABLEREF,
+        PROCUREMENTCATEGORY,
+        ITEMCODEID,
+        ORIGSTATEID,
+        ORIGCOUNTRYREGIONID,
+        WEIGHT,
+        DEFAULTDIMENSION,
+        SOURCEDOCUMENTLINE,
+        WORKERPURCHASER,
+        PURCHASELINEEXPECTEDDELIVERYDATE,
+        PURCHASELINELINENUMBER,
+        VENDPACKINGSLIPJOUR,
+        FULLYMATCHED,
+        COSTLEDGERVOUCHER,
+        ACCOUNTINGDATE,
+        STOCKEDPRODUCT,
+        "NGPCODESTABLE_FR",
+        "RECEIVEDQTY_IN",
+        "REJECTEDQTY_IN",
+        "ACCEPTEDQTY_IN",
+        INVOICETRANSREFRECID,
+        "INTRASTATFULFILLMENTDATE_HU",
+        "CURRENCYCODE_W",
+        "DEVIATIONQTY_RU",
+        "EXCISEVALUE_RU",
+        "VATVALUE_RU",
+        "EXCISEAMOUNT_RU",
+        "VATAMOUNT_RU",
+        "LINEAMOUNT_W",
+        "TAXAMOUNT_RU",
+        "TAXITEMGROUP_RU",
+        "TAXGROUP_RU",
+        "STATISTICVALUE_LT",
+        PDSCWORDERED,
+        PDSCWQTY,
+        PDSCWREMAIN
+        //DATAAREAID,
+        //RECVERSION,
+        //PARTITION,
+        //RECID
+    FROM VENDPACKINGSLIPTRANS;
+
+STORE VendPackingSlipTrans INTO [$(vRutaOri)VendPackingSlipTrans.QVD](qvd);
+DROP TABLE VendPackingSlipTrans;

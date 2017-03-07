@@ -1,0 +1,32 @@
+/*****************************************************************************************************
+Fecha : 05/10/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+     Extracción de materiales de Ordenes de Producción
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   	|   Modificación
+-------------------------------------------------------------------------------------------------
+05/10/2016  |   Alejandro Saa G		|   Inicio de Configuración
+*****************************************************************************************************/
+ListaMaterialesProduccion:
+SQL SELECT
+    pb.PRODID,
+    pt.AP_QST_MASTERPRODORDID,
+    pb.ITEMID,
+    pb.INVENTDIMID,
+    pb.UNITID,
+    pb.PRODLINETYPE,
+    pb.BOMQTY,
+    pb.VENDID
+  FROM PRODBOM pb join PRODTABLE pt on (pt.PRODID = pb.PRODID)
+  group by
+    pb.PRODID,
+    pt.AP_QST_MASTERPRODORDID,
+    pb.ITEMID,
+    pb.INVENTDIMID,
+    pb.UNITID,
+    pb.PRODLINETYPE,
+    pb.BOMQTY,
+    pb.VENDID;
+STORE ListaMaterialesProduccion INTO [$(vRutaOri)ListaMaterialesProduccion.QVD](qvd);
+DROP TABLE ListaMaterialesProduccion;

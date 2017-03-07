@@ -1,0 +1,132 @@
+﻿///$tab Main
+/*Archivo de Carga*/
+$(Must_Include=qvs.ax\#loadscript.qvs);
+///$tab Exit Script
+TRACE Extracción Finalizada;
+EXIT SCRIPT;
+///$tab Conexion Ax
+///*PRD*/
+////OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsAX;Data Source=QUEST-DBAX;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is dYEQeIRNJbaICSIGQJMKTcC);
+//
+///*Pruebas*/
+//OLEDB CONNECT32 TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftDynamicsPr2AX;Data Source=10.75.28.43;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-77662;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is CXYMYIRNJbaICSIGQJMKTVB);
+//
+///*Pre-PRD*/
+////OLEDB CONNECT TO [Provider=SQLOLEDB.1;Persist Security Info=True;User ID=qlikview;Initial Catalog=MicrosoftPRODAX;Data Source=10.75.28.46;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=ML-85086;Use Encryption for Data=False;Tag with column collation when possible=False] (XPassword is DfTOSIRNJbaICSIGQJMKDdD);
+//
+///$tab Dimensiones
+///****************** Cargue de Dimensiones ******************/
+//
+///*Dimensiones predeterminadas*/
+//$(Must_Include=qvs.ax\defauldimensions.qvs);
+//
+///*Maestro de Productos*/
+//$(Must_Include=qvs.ax\qst_maestroproductos.qvs);
+//$(Must_Include=qvs.ax\qst_maestroproductosatributes.qvs);/*Atributos del Producto*/
+////$(Must_Include=qvs.ax\productmaster.qvs);///*Maestro de Productos*/
+//
+/////*Estructura Comercial*/
+////$(Must_Include=qvs.ax\estructuracomercial.qvs);
+//
+///*Maestro de Clientes*/
+//$(Must_Include=qvs.ax\qst_maestroclientes.qvs);
+//
+///*Ordenes de Produccion*/
+//$(Must_Include=qvs.ax\ordenesproduccion.qvs);
+//
+///*Ordenes de Producción detalle*/
+//$(Must_Include=qvs.ax\prodcalctrans.qvs);
+//
+///*Inventarios*/
+//$(Must_Include=qvs.ax\inventdim.qvs);
+//
+///*Tabla de productos diarios*/
+//$(Must_Include=qvs.ax\prodtablejour.qvs);
+//
+///*AP_QST_ProdReport*/
+//$(Must_Include=qvs.ax\ap_qst_prodreport.qvs);
+//
+///*Tabla de actividades de producto.*/
+//$(Must_Include=qvs.ax\qst_actividadesproducto.qvs);
+//
+///* Tabla de materiales de ordenes de producción */
+//$(Must_Include=qvs.ax\listamaterialesproduccion.qvs);
+//
+///* Tabla de insumos. */
+//$(Must_Include=qvs.ax\maestroinsumos.qvs);
+//
+///* Dimensiones Financieras*/
+//$(Must_Include=qvs.ax\dimensionesfinancieras.qvs);
+//
+///* Dimensión de talleres */
+//$(Must_Include=qvs.ax\wrkctrtable.qvs);
+//
+///* Inventario disponible. */
+//$(Must_Include=qvs.ax\qst_modelinventariodisponible.qvs);
+//
+///* Maestro de localidades. */
+//$(Must_Include=qvs.ax\maestrolocalidades.qvs);
+//
+///* Costo de producción. */
+//$(Must_Include=qvs.ax\ap_qst_mastercalctrans.qvs);
+//
+///* Rutas de producción. */
+//$(Must_Include=qvs.ax\rutas_produccion.qvs);
+///$tab Hechos
+///****************** Cargue de Hechos ******************/
+///*Recaudo*/
+//$(Must_Include=qvs.ax\homologaciónpagos.qvs);
+//
+///*Cartera*/
+//$(Must_Include=qvs.ax\qst_cartera.qvs);
+//
+///*Contabilidad*/
+//$(Must_Include=qvs.ax\qst_modelledgertrans.qvs);
+//
+///*BOM - Calculo transaccional*/
+//$(Must_Include=qvs.ax\bomcalctrans.qvs);
+//
+///*Inventario Transaccional*/
+//$(Must_Include=qvs.ax\inventtransop.qvs);
+//
+///*Purch table*/
+//$(Must_Include=qvs.ax\purchtable.qvs);
+//
+///*Puch Line*/
+//$(Must_Include=qvs.ax\purchline.qvs);
+//
+///*VEND PACKING SLIP JOUR*/
+//$(Must_Include=qvs.ax\vendpackingslipjour.qvs);
+//
+///*VEND PACKING SLIP TRANS*/
+//$(Must_Include=qvs.ax\vendpackingsliptrans.qvs);
+//
+///*Vend Invoice Jour*/
+//$(Must_Include=qvs.ax\vendinvoicejour.qvs);
+//
+///*Vend Invoice Trans*/
+//$(Must_Include=qvs.ax\vendinvoicetrans.qvs);
+//
+///*Facturación de Lineas*/
+//$(Must_Include=qvs.ax\QST_MODELFACTURAS.qvs);
+//
+///*Ventas - Sales Line*/
+//$(Must_Include=qvs.ax\salesline.qvs);
+//
+///*Cartera Pagada*/
+//$(Must_Include=qvs.ax\qst_carterapagada.qvs);
+//
+///* Pedidos de transferencia. */
+//$(Must_Include=qvs.ax\qst_modellogistica.qvs);
+//
+///*Listado De precios*/
+//$(Must_Include=qvs.ax\listadoprecios.qvs);
+//
+///* Rutas de picking. */
+//$(Must_Include=qvs.ax\qst_modelpicking.qvs);
+//
+///* Movimientos de articulos. */
+//$(Must_Include=qvs.ax\qst_modelmovimientoarticulos.qvs);
+//
+///* Diaria de entrada de producto. */
+//$(Must_Include=qvs.ax\qst_modelentradaproducto.qvs);

@@ -1,0 +1,58 @@
+/*****************************************************************************************************
+	Detalle :
+	Extracción de Dimensiones: AP_QST_MasterCalcTrans
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	29/11/2016  |   Alejandro Saa   |   Inicio de Configuración
+*****************************************************************************************************/
+AP_QST_MasterCalcTrans:
+	SQL SELECT
+		AP_QST_QTYCHARGEACUM,
+		BOM,
+		CALCGROUPID,
+		CALCTYPE,
+		COLLECTREFLEVEL,
+		CONSUMPCONSTANT,
+		CONSUMPTYPE,
+		CONSUMPVARIABLE,
+		COSTAMOUNT,
+		COSTGROUPID,
+		COSTMARKUP,
+		COSTPRICEMODELUSED,
+		DERIVEDREFERENCE,
+		DERIVEDREFNUM,
+		FINANCIALINDIRECTAMOUNT_RU,
+		IDREFRECID,
+		IDREFTABLEID,
+		INVENTDIMID,
+		INVENTDIMSTR,
+		LINENUM,
+		MASTERPRODORDID,
+		NUMITEMS,
+		OPRID,
+		OPRNUM,
+		PRICEDISCQTY,
+		PRODUCTION,
+		QTY,
+		REALCONSUMP,
+		REALCOSTADJUSTMENT,
+		REALCOSTAMOUNT,
+		REALQTY,
+		RESOURCE_,
+		SALESAMOUNT,
+		SALESMARKUP,
+		SALESPRICEMODELUSED,
+		TRANSDATE,
+		CASE TRANSREFTYPE
+			WHEN 0 THEN 'Pedido de producción'
+			WHEN 1 THEN 'Flujo de producción'
+			WHEN 2 THEN 'Id. de lote interno'
+			WHEN 3 THEN 'Cálculo de la contabilización previa de los costes'
+		END as TRANSREFTYPE,
+		UNITID,
+		VENDID
+	FROM AP_QST_MASTERCALCTRANS;
+
+STORE AP_QST_MasterCalcTrans INTO [$(vRutaOri)AP_QST_MasterCalcTrans.QVD](qvd);
+DROP TABLE AP_QST_MasterCalcTrans;

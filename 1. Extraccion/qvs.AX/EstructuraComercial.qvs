@@ -1,0 +1,31 @@
+/*
+Fecha : 20/09/2016
+----------------------------------------------------------------------------------------------------
+ Detalle :
+	Extracción de Dimensiones: Estructura Comercial (EC)
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+EstructuraComercial:
+	SQL SELECT 
+		DFT.DESCRIPTION		 	AS DIMFINTAG_DESC,
+		DFT.VALUE			 	AS DIMFINTAG_VALUE,
+		DA.NAME				 	AS DIMATTR_NAME,
+		DA.REPORTCOLUMNNAME	 	AS DIMATTR_RPTCOLUM,
+		DAV.GROUPDIMENSION	 	AS DIMATTRVAL_GROUP,
+		DA.RECID			 	AS DIMATTR_RECID,
+		DAV.RECID			 	AS DIMATTRVAL_RECID,
+		DFT.RECID			 	AS DIMFINTAG_RECID
+	FROM
+		DIMENSIONFINANCIALTAG						AS DFT
+		LEFT JOIN DIMENSIONATTRIBUTEDIRCATEGORY		AS DADC		ON DADC.DIRCATEGORY=DFT.FINANCIALTAGCATEGORY
+		LEFT JOIN DIMENSIONATTRIBUTE				AS DA		ON DA.RECID=DADC.DIMENSIONATTRIBUTE
+		LEFT JOIN DIMENSIONATTRIBUTEVALUE			AS DAV		ON DAV.DIMENSIONATTRIBUTE=DA.RECID AND DAV.ENTITYINSTANCE=DFT.RECID
+	WHERE
+		DA.REPORTCOLUMNNAME='EC'
+		AND LEN(DFT.DESCRIPTION)>0;
+
+STORE EstructuraComercial INTO [$(vRutaOri)EstructuraComercial.QVD](qvd);
+DROP TABLE EstructuraComercial;

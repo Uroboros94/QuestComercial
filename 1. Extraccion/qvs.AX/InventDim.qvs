@@ -1,0 +1,38 @@
+/*----------------------------------------------------------------------------------------------------
+	Detalle :
+	Extracción de Dimensiones: InventDim
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/26/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+InventDim:
+	SQL SELECT
+		INVENTDIMID,
+		INVENTBATCHID,
+		WMSLOCATIONID,
+		WMSPALLETID,
+		INVENTSERIALID,
+		INVENTLOCATIONID,
+		CONFIGID,
+		INVENTSIZEID,
+		INVENTCOLORID,
+		INVENTSITEID,
+		"INVENTGTDID_RU",
+		"INVENTPROFILEID_RU",
+		"INVENTOWNERID_RU",
+		INVENTSTYLEID,
+		LICENSEPLATEID,
+		INVENTSTATUSID,
+		SHA1HASH,
+		MODIFIEDDATETIME,
+		MODIFIEDBY,
+		CREATEDDATETIME
+		//DATAAREAID,
+		//RECVERSION,
+		//PARTITION,
+		//RECID
+	FROM INVENTDIM;
+
+STORE InventDim INTO [$(vRutaOri)InventDim.QVD](qvd);
+DROP TABLE InventDim;

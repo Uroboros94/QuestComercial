@@ -1,0 +1,46 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Rutas_Produccion
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+13/01/2017  |   Alejandro Saa G |   Inicio de Configuración: Rutas de preducción.
+*****************************************************************************************************/
+Rutas_Produccion:
+  SQL SELECT
+      r.ROUTEID,
+      r.OPRNUM,
+      r.OPRNUMNEXT,
+      r.OPRID,
+      rt.NAME,
+      rv.ITEMID
+    FROM ROUTE r left join ROUTEOPRTABLE rt on (rt.OPRID = r.OPRID)
+    left join ROUTEVERSION rv on (rv.ROUTEID = r.ROUTEID and  rv.ACTIVE = 1)
+    WHERE r.OPRNUM = 10
+    UNION
+    SELECT
+      r1.ROUTEID,
+      r1.OPRNUM,
+      r1.OPRNUMNEXT,
+      r1.OPRID,
+      r1.NAME,
+      r1.ITEMID
+    FROM
+    (SELECT
+      r.ROUTEID,
+      r.OPRNUM,
+      r.OPRNUMNEXT,
+      r.OPRID,
+      rt.NAME,
+      rv.ITEMID
+    FROM ROUTE r left join ROUTEOPRTABLE rt on (rt.OPRID = r.OPRID)
+    left join ROUTEVERSION rv on (rv.ROUTEID = r.ROUTEID and  rv.ACTIVE = 1)) r1
+    inner join
+    (SELECT
+      r.ROUTEID,
+      r.OPRNUMNEXT
+    FROM ROUTE r left join ROUTEVERSION rv on (rv.ROUTEID = r.ROUTEID and  rv.ACTIVE = 1)) r2
+    on (r2.ROUTEID = r1.ROUTEID and r2.OPRNUMNEXT = r1.OPRNUM);
+
+STORE Rutas_Produccion INTO [$(vRutaOri)Rutas_Produccion.QVD](qvd);
+DROP TABLE Rutas_Produccion;
