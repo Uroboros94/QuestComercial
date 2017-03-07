@@ -22,10 +22,10 @@
         <Alpha>255</Alpha>
       </Color>
       <Font>
-        <FontName>Arial</FontName>
+        <FontName>Calibri</FontName>
         <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>true</Bold>
+        <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>
@@ -252,7 +252,7 @@
     <BkgAlpha>255</BkgAlpha>
     <Text>
       <v>=num((max(Contabilidad.MES)*30) / ((sum({&lt;Contabilidad.CUENTA_N3 = {'6120','6135'} , Contabilidad.ANO = {$(=(vAñoSeleccion))} &gt;} Contabilidad.MOVIMIENTO)) /
-								(sum({&lt;Contabilidad.CUENTA_N3 = {'1430','1435'} , Contabilidad.FECHA = {$(vMesMayorSeleccion)}&gt;}Contabilidad.SALDO_FINAL))),'#.##0') &amp; ' Días'</v>
+								(sum({&lt;Contabilidad.CUENTA_N3 = {'1430','1435'} , Contabilidad.ACCOUNTINGDATE = {$(vMesMayorSeleccion)}&gt;}Contabilidad.MOVIMIENTO))),'#.##0') &amp; ' Días'</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
