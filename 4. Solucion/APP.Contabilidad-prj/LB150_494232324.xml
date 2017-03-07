@@ -47,7 +47,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Contabilidad.CUENTA_N1</v>
+        <v>Cuenta</v>
       </Name>
       <Detached>false</Detached>
       <AllowMinimize>false</AllowMinimize>
@@ -173,7 +173,12 @@
       <Rainbow>false</Rainbow>
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
-      <Show></Show>
+      <Show>
+        <Always>false</Always>
+        <Expression>
+          <v>vSwichMenu = 1</v>
+        </Expression>
+      </Show>
       <AllowMoveSize>true</AllowMoveSize>
       <AllowCopyClone>true</AllowCopyClone>
       <dummy></dummy>
@@ -199,8 +204,8 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </ScrollButtonColor>
-      <ScrollStyle>SCROLL_SIX</ScrollStyle>
-      <ScrollWidth>38</ScrollWidth>
+      <ScrollStyle>SCROLL_LIGHT</ScrollStyle>
+      <ScrollWidth>12</ScrollWidth>
       <AllowModify>true</AllowModify>
       <CopyImageIcon>false</CopyImageIcon>
       <PreserveScrollPosition>false</PreserveScrollPosition>
@@ -216,14 +221,22 @@
     </Frame>
     <ReadOnly>false</ReadOnly>
     <NumAdjust>2</NumAdjust>
-    <TextAdjust>0</TextAdjust>
+    <TextAdjust>1</TextAdjust>
     <MultiLine>0</MultiLine>
     <ShowFrequency>false</ShowFrequency>
     <FrequencyInPercent>false</FrequencyInPercent>
     <Longest></Longest>
     <Borders>
-      <Top></Top>
-      <Bottom></Bottom>
+      <Top>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Top>
+      <Bottom>
+        <LineStyle>32</LineStyle>
+        <Color></Color>
+        <ExtraBorderSpace16>0</ExtraBorderSpace16>
+      </Bottom>
       <Left>
         <LineStyle>32</LineStyle>
         <Color></Color>
@@ -252,14 +265,16 @@
     <CurrentInfoURL></CurrentInfoURL>
     <SuppressSearchHighlight>false</SuppressSearchHighlight>
     <TextColor></TextColor>
-    <PreferredTextSearchMode>TEXT_SEARCH_NONE</PreferredTextSearchMode>
+    <PreferredTextSearchMode>TEXT_SEARCH_NORMAL</PreferredTextSearchMode>
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>Contabilidad.CUENTA_N1</Name>
+    <Name>Contabilidad.CUENTA_N5</Name>
     <Type>PRESENT</Type>
   </Def>
-  <Title></Title>
+  <Title>
+    <v>Cuenta</v>
+  </Title>
   <PrintSettings>
     <Landscape>true</Landscape>
     <PrintCurrentSelectionPosition>NO_SELECTION</PrintCurrentSelectionPosition>
@@ -353,7 +368,7 @@
     <SortByState>0</SortByState>
     <SortByFrequency>0</SortByFrequency>
     <SortByNumeric>1</SortByNumeric>
-    <SortByAscii>0</SortByAscii>
+    <SortByAscii>1</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>
