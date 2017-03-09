@@ -48,6 +48,7 @@ CarteraCliente_tmp:
 		NOMBREMEDIOPAGO,
 		'Parcial' as ESTADOCARTERA
 	FROM
+	[$(vRutaOri)QST_Cartera.QVD]
 	(qvd);
 		//DATAAREAID,
 		//MODULOGENERACION,
@@ -89,6 +90,7 @@ Concatenate(CarteraCliente_tmp)
 		VENCIDA,
 		'Pagada' as ESTADOCARTERA
 	FROM
+	[$(vRutaOri)QST_CarteraPagada.QVD]
 	(qvd)
 	WHERE 
 		ULTIMOASIENTOLIQUIDACION <> '';

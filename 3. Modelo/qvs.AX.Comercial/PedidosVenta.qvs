@@ -15,6 +15,7 @@ EC:
 		DEFAULTDIMENSION,
 		DIMENSION_ESTRUCTURA_COMERCIAL
 	FROM
+	[$(vRutaOri)DefaulDimensions.QVD]
 	(qvd);
  
 
@@ -92,6 +93,7 @@ PedidosVenta_Temp:
 		ESTADODOCUMENTO,
 		STOCK
 	FROM
+	[$(vRutaOri)Salesline.QVD]
 	(qvd);
 
 PedidosVenta:

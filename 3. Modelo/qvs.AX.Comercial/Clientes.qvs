@@ -34,6 +34,7 @@ Clientes:
 		SALESDISTRICT				as Cliente.Zona,
 		PAYMTERMVALUE       		as Cliente.CondicionPago
 	FROM
+	[$(vRutaOri)QST_MaestroClientes.QVD]
 	(qvd);
 		//CURRENCY,
 		//CUSTGROUPVALUE,

@@ -14,6 +14,7 @@ CodigosEC:
 	LOAD
 	CodHomologacion,
 	DIMENSION_ESTRUCTURA_COMERCIAL
+	FROM [$(vRutaOri)DefaulDimensions.QVD]
 	(qvd);
 
 Presupuesto_Temp:
@@ -29,6 +30,7 @@ Presupuesto_Temp:
 		UNIDADES,
 		PESOS
 	FROM
+	[$(vRutaOriBiQuest)Presupuesto_Dia2.QVD]
 	(qvd);
 
 Presupuesto:

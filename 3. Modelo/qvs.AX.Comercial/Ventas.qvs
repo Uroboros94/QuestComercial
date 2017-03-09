@@ -43,6 +43,7 @@ Venta:
 		CREATEDBY									as Venta.Creador,
 		Num(CANTIDAD) 								as Venta.CantidadVentas
 	FROM
+	[$(vRutaOri)QST_MODELFACTURAS.QVD]
 	(qvd);
 
 		//VENCIDA								as Venta.DescEsVencida, 
