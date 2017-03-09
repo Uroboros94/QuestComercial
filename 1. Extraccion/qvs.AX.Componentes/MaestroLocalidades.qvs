@@ -1,0 +1,16 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+    Extracción de Dimensiones: Maestro Localidades (talleres, almacenes)
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador     |   Modificación
+-------------------------------------------------------------------------------------------------
+09/11/2016  |   Alejandro Saa G.  |   Inicio de Configuración
+*****************************************************************************************************/
+MaestroLocalidades:
+  SQL SELECT 
+    INVENTLOCATIONID,
+    NAME
+  FROM INVENTLOCATION;
+
+STORE MaestroLocalidades INTO [$(vRutaOri)MaestroLocalidades.QVD](qvd);
+DROP TABLE MaestroLocalidades;

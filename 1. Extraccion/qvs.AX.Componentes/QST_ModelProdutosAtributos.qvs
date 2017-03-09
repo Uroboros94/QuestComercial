@@ -1,0 +1,18 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+	Extracción de Dimensiones: QST_ModelProdutosAtributos
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador   |   Modificación
+-------------------------------------------------------------------------------------------------
+09/22/2016  |   malemos         |   Inicio de Configuración
+02/24/2017	|	malemos			|	Ajuste en el metodo de obtención de Atribuytos y fuente
+*****************************************************************************************************/
+QST_ModelProdutosAtributos:
+SQL SELECT 
+	CODARTICULO,
+	ATRIBUTO,
+	VALOR
+ FROM QST_ModelProdutosAtributos;
+
+STORE QST_ModelProdutosAtributos INTO [$(vRutaOri)QST_ModelProdutosAtributos.QVD](qvd);
+DROP TABLE QST_ModelProdutosAtributos;
