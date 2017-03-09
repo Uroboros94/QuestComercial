@@ -33,7 +33,7 @@ Calendario:
 		Festivo, 
 		EsFestivo
 	 FROM
-		  [..\QVD\Calendario_Final.QVD]
+		  [$(vRutaOriBiQuest)Calendario_Final.QVD]
 		  (qvd)
 	 WHERE Fecha >= '01/01/2016';
 

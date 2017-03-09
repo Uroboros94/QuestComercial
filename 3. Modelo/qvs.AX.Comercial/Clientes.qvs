@@ -32,9 +32,8 @@ Clientes:
 		NOMBREDIRPARTYTYPE			as Cliente.TipoCliente,
 		NOMBREIDENTIFICATIONTYPE	as Cliente.TipoIdentificacion,
 		SALESDISTRICT				as Cliente.Zona,
-		PAYMTERMVALUE       as Cliente.CondicionPago
+		PAYMTERMVALUE       		as Cliente.CondicionPago
 	FROM
-	[..\QVD\QST_MaestroClientes.QVD]
 	(qvd);
 		//CURRENCY,
 		//CUSTGROUPVALUE,

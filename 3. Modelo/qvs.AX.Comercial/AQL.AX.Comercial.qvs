@@ -19,6 +19,8 @@
 
 /*Variables Personalizadas*/
 	SET vRutaTra = '..\QVD\AX\TRA\';
+	SET vRutaOri = '..\QVD\AX\ORI\';
+	SET vRutaOriBiQuest = '..\QVD\BIQUEST\ORI\';
 	SET vRutaOriPLM = '..\QVD\PLM\ORI\';	
 
 // Declaración Librería...
@@ -27,29 +29,29 @@
 /*	Carga de Tablas	*/
 	/*Productos Aprobados*/
 	$(must_Include=qvs.componentes\maestroproductos.qvs);
-	$(must_Include=qvs.axcomercial\actividadesproducto.qvs);
-	$(must_Include=qvs.axcomercial\inventtransop.qvs);
+	$(must_Include=qvs.ax.comercial\actividadesproducto.qvs);
+	$(must_Include=qvs.ax.comercial\inventtransop.qvs);
 
 	/*Clientes*/
-	$(must_Include=qvs.axcomercial\clientes.qvs);
+	$(must_Include=qvs.ax.comercial\clientes.qvs);
 
 	/*Estructura Comercial*/
 	$(must_Include=qvs.componentes\estructuracomercial.qvs);
 
 	/*Cartera*/
-	$(must_Include=qvs.axcomercial\carteracliente.qvs);
+	$(must_Include=qvs.ax.comercial\carteracliente.qvs);
 
 	/*Ventas*/
-	$(must_Include=qvs.axcomercial\ventas.qvs);
+	$(must_Include=qvs.ax.comercial\ventas.qvs);
 
 	/*Recaudo de Ventas*/
-	$(Must_Include=qvs.axcomercial\recaudo.qvs);
+	$(Must_Include=qvs.ax.comercial\recaudo.qvs);
 
 	/*Pedidos y ventas*/
-	$(must_Include=qvs.axcomercial\pedidosventa.qvs);
+	$(must_Include=qvs.ax.comercial\pedidosventa.qvs);
 
 	/*Presupuesto*/
-	$(must_Include=qvs.axcomercial\presupuesto.qvs);
+	$(must_Include=qvs.ax.comercial\presupuesto.qvs);
 
 	/*Calendario*/
 	$(must_Include=qvs.componentes\calendario.qvs);

@@ -19,7 +19,6 @@ QST_Modelledgertrans:
 		CREDITO, 		
 		DEBITO
 	FROM
-	[..\QVD\QST_Modelledgertrans.QVD]
 	(qvd)
 	where CUENTA_N2 = '13';		
 
@@ -29,7 +28,6 @@ Factura_Asiento:
 		Pago,
 		Asiento
 	FROM
-	[..\QVD\HomologacionPagos.QVD]
 	(qvd);
 
 Mapping
@@ -38,7 +36,6 @@ ProntoPago:
 		ApplyMap('Factura_Asiento', VOUCHER, Null()) as Documento,
 		Num(DEBITO+CREDITO) as Movimiento
 	FROM 
-	[..\QVD\QST_Modelledgertrans.QVD]
 	(qvd)
 	Where
 	CUENTA_N5 = '53053501';

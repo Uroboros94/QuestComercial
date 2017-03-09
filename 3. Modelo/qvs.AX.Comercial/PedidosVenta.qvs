@@ -15,7 +15,6 @@ EC:
 		DEFAULTDIMENSION,
 		DIMENSION_ESTRUCTURA_COMERCIAL
 	FROM
-	[..\QVD\DefaulDimensions.QVD]
 	(qvd);
  
 
@@ -93,7 +92,6 @@ PedidosVenta_Temp:
 		ESTADODOCUMENTO,
 		STOCK
 	FROM
-	[..\QVD\Salesline.QVD]
 	(qvd);
 
 PedidosVenta:

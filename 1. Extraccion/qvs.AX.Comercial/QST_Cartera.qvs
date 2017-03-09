@@ -1,0 +1,60 @@
+﻿/****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Extracción de Dimensiones: Cartera
+	-------------------------------------------------------------------------------------------------
+	Fecha		|	Desarrollador	|	Modificación
+	-------------------------------------------------------------------------------------------------
+	09/20/2016	|	malemos			|	Inicio de Configuración
+	09/24/2016  |	Alejandro S		|	Agregar campos PORCENTAJEPRONTOPAGO, DESCRIPCIONPRONTOPAGO, IDVENDEDOR, NOMBREVENDEDOR.
+	30/01/2017  |	Alejandro S		|	Agregar campos TIPOMEDIOPAGO y NOMBREMEDIOPAGO.
+*****************************************************************************************************/
+QST_Cartera:
+	SQL SELECT
+		ASIENTOFACTURA,
+		CONDICIONPAGO,
+		CREATEDBY,
+		CREATEDDATETIME,
+		CUENTACLIENTE,
+		CUENTACONTABLE,
+		DATAAREAID,
+		DESCRIPCIONPRONTOPAGO,
+		DIASVENCIDOS,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		DIVISA,
+		ESTADOFACTURA,
+		FECHAFACTURA,
+		FECHAVENCIMIENTO,
+		IDFACTURA,
+		IDVENDEDOR,
+		MODULOGENERACION,
+		NOMBRECLIENTE,
+		NOMBREESTADOFACTURA,
+		NOMBREMODULOGENERACION,
+		NOMBREVENCIDA,
+		NOMBREVENDEDOR,
+		PORCENTAJEPRONTOPAGO,
+		SALDOCORRIENTETOTAL,
+		SALDOTOTAL,
+		SALDOTOTALDIVISA,
+		SALDOVENCIDOTOTAL,
+		SALESID,
+		TIPOPAGO,
+		ULTIMAFECHALIQUIDACION,
+		ULTIMOASIENTOLIQUIDACION,
+		VALORDIVISALIQUIDADA,
+		VALORFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORLIQUIDADO,
+		VENCIDA,
+		TIPOMEDIOPAGO,
+		NOMBREMEDIOPAGO
+	FROM "QST_MODELCARTERA";
+		//PARTITION,
+		//RECID,
+		//RECVERSION,
+
+	STORE QST_Cartera INTO [$(vRutaOri)QST_Cartera.QVD](qvd);
+	DROP TABLE QST_Cartera;
