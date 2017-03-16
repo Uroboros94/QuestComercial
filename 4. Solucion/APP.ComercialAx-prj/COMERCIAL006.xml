@@ -497,7 +497,7 @@ Sum({&lt;
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>Sum(PedidosVenta.Stock)</v>
+        <v>Sum(DISTINCT {&lt;PedidosVenta.Almacen = {'A0002'}&gt;} PedidosVenta.Stock)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -16668,7 +16668,7 @@ Sum({&lt;
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>Sum(PedidosVenta.Stock)</v>
+              <v>Sum(DISTINCT {&lt;PedidosVenta.Almacen = {'A0002'}&gt;} PedidosVenta.Stock)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
