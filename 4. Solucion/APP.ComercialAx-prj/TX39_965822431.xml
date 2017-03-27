@@ -1,7 +1,7 @@
 ﻿<TextObjectProperties>
   <Layout>
     <Frame>
-      <BorderWidth>4</BorderWidth>
+      <BorderWidth>0</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
         <Mode>COLORAREA_SOLID</Mode>
@@ -10,15 +10,13 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Red>4</Red>
+            <Green>108</Green>
+            <Blue>193</Blue>
             <Alpha>255</Alpha>
           </Col>
-          <IsCalculated>true</IsCalculated>
-          <ColorExpr>
-            <v>=If(vGrafDespacho = 'Pendiente', rgb(127,30,29), RGB(192,192,192))</v>
-          </ColorExpr>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
         </PrimaryCol>
         <SecondaryCol></SecondaryCol>
         <Alpha>255</Alpha>
@@ -28,7 +26,7 @@
         <PointSize1000>9000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
-        <Italic>false</Italic>
+        <Italic>true</Italic>
         <DropShadow>false</DropShadow>
       </Font>
       <CaptionFont>
@@ -154,7 +152,7 @@
       <FixCornerSize>21</FixCornerSize>
       <RelCornerSize>4059000000000000</RelCornerSize>
       <Power>4000000000000000</Power>
-      <RoundedShape>false</RoundedShape>
+      <RoundedShape>true</RoundedShape>
       <EnableTopLeftRounded>true</EnableTopLeftRounded>
       <EnableTopRightRounded>true</EnableTopRightRounded>
       <EnableBottomLeftRounded>true</EnableBottomLeftRounded>
@@ -219,9 +217,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>255</Red>
-          <Green>255</Green>
-          <Blue>255</Blue>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -242,47 +240,23 @@
           <Blue>248</Blue>
           <Alpha>255</Alpha>
         </Col>
-        <IsCalculated>true</IsCalculated>
-        <ColorExpr>
-          <v>=If(vGrafDespacho = 'Pendiente',rgb(127,30,29), RGB(192,192,192))</v>
-        </ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol>
-        <Col>
-          <Red>255</Red>
-          <Green>0</Green>
-          <Blue>0</Blue>
-          <Alpha>255</Alpha>
-        </Col>
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
-      </SecondaryCol>
+      </PrimaryCol>
+      <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
     </BkgColor>
     <BkgImageSettings></BkgImageSettings>
     <BkgMode>BKG_SOLID</BkgMode>
     <Bmp enctype="base64"></Bmp>
-    <BkgAlpha>255</BkgAlpha>
+    <BkgAlpha>0</BkgAlpha>
     <Text>
-      <v>Despacho Pendiente</v>
+      <v>Filtros</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
     <AllowHorizontalScrollBar>false</AllowHorizontalScrollBar>
-    <ActionItems>
-      <ActionItemDef>
-        <Type>TYPE_SET_VALUE</Type>
-        <Parameters>
-          <StringExpr>
-            <v>vGrafDespacho</v>
-          </StringExpr>
-          <StringExpr>
-            <v>=if(vGrafDespacho = 'Pendiente','','Pendiente')</v>
-          </StringExpr>
-        </Parameters>
-        <StateName></StateName>
-      </ActionItemDef>
-    </ActionItems>
+    <ActionItems></ActionItems>
   </Layout>
   <PrintSettings></PrintSettings>
   <UserSized>true</UserSized>

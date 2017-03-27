@@ -233,7 +233,7 @@
     <WindowTitle>
       <v>Devoluciones</v>
     </WindowTitle>
-    <GraphMode>GRAPH_MODE_BLOCK</GraphMode>
+    <GraphMode>GRAPH_MODE_PIVOTTABLE</GraphMode>
     <TotalString></TotalString>
     <ErrorMessageOverrides></ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
@@ -810,7 +810,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>166</ColWidth>
+      <ColWidth>197</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -837,8 +837,8 @@
     </ChartDimensionDataDef>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Producto.TipoPrenda</Name>
-        <Type>NOT_PRESENT</Type>
+        <Name>Producto.Tipo_de_prenda</Name>
+        <Type>PRESENT</Type>
       </PseudoDef>
       <Title>
         <v>Tipo de Prenda</v>
@@ -1206,7 +1206,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>281</ColWidth>
+      <ColWidth>216</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -2399,11 +2399,11 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>166</int>
+      <int>197</int>
+      <int>191</int>
       <int>222</int>
-      <int>281</int>
+      <int>216</int>
       <int>300</int>
-      <int>100</int>
     </ColWidths>
     <Striping>
       <int>1</int>
@@ -2718,7 +2718,7 @@
     <SuppressPivotExpandIconsOnPrint>false</SuppressPivotExpandIconsOnPrint>
     <ExpansionInfo>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Calendario.nomMes</DimName>
           <ElemNo></ElemNo>
@@ -2726,15 +2726,7 @@
         </Pos>
       </ExpansionData>
       <ExpansionData>
-        <ExcludeList>false</ExcludeList>
-        <Pos>
-          <DimName>Producto.TipoPrenda</DimName>
-          <ElemNo></ElemNo>
-          <ElemValues></ElemValues>
-        </Pos>
-      </ExpansionData>
-      <ExpansionData>
-        <ExcludeList>false</ExcludeList>
+        <ExcludeList>true</ExcludeList>
         <Pos>
           <DimName>Producto.Genero</DimName>
           <ElemNo></ElemNo>
@@ -2745,6 +2737,14 @@
         <ExcludeList>false</ExcludeList>
         <Pos>
           <DimName>Producto.Referencia</DimName>
+          <ElemNo></ElemNo>
+          <ElemValues></ElemValues>
+        </Pos>
+      </ExpansionData>
+      <ExpansionData>
+        <ExcludeList>true</ExcludeList>
+        <Pos>
+          <DimName>Producto.Tipo_de_prenda</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

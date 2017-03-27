@@ -205,7 +205,39 @@
     <OnActivateActionItems></OnActivateActionItems>
     <OnDeactivateActionItems></OnDeactivateActionItems>
     <Extension></Extension>
-    <Background></Background>
+    <Background>
+      <Color>
+        <Mode>COLORAREA_SOLID</Mode>
+        <Luminosity>85</Luminosity>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
+        <FillPattern>COLORAREA_PATTERN1</FillPattern>
+        <PrimaryCol>
+          <Col>
+            <Red>255</Red>
+            <Green>67</Green>
+            <Blue>66</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </PrimaryCol>
+        <SecondaryCol>
+          <Col>
+            <Red>200</Red>
+            <Green>200</Green>
+            <Blue>200</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
+        <Alpha>255</Alpha>
+      </Color>
+      <ImageBlob enctype="base64"></ImageBlob>
+      <ImageLayout></ImageLayout>
+      <UseColor>true</UseColor>
+      <UseImage>false</UseImage>
+    </Background>
     <MenuIcon>false</MenuIcon>
     <ExtendedProperties></ExtendedProperties>
     <ExtendedValues></ExtendedValues>
@@ -234,8 +266,34 @@
     <SecondaryCol></SecondaryCol>
     <Alpha>255</Alpha>
   </TextColor>
-  <TabColor></TabColor>
-  <SingleObjectActiveIndex>1</SingleObjectActiveIndex>
+  <TabColor>
+    <Mode>COLORAREA_SINGLE_COLOR</Mode>
+    <Luminosity>153</Luminosity>
+    <FillDirection>COLORAREA_HORZ</FillDirection>
+    <FillPattern>COLORAREA_PATTERN1</FillPattern>
+    <PrimaryCol>
+      <Col>
+        <Red>255</Red>
+        <Green>136</Green>
+        <Blue>135</Blue>
+        <Alpha>255</Alpha>
+      </Col>
+      <IsCalculated>false</IsCalculated>
+      <ColorExpr></ColorExpr>
+    </PrimaryCol>
+    <SecondaryCol>
+      <Col>
+        <Red>200</Red>
+        <Green>200</Green>
+        <Blue>200</Blue>
+        <Alpha>255</Alpha>
+      </Col>
+      <IsCalculated>false</IsCalculated>
+      <ColorExpr></ColorExpr>
+    </SecondaryCol>
+    <Alpha>255</Alpha>
+  </TabColor>
+  <SingleObjectActiveIndex>0</SingleObjectActiveIndex>
   <GridRows>2</GridRows>
   <GridColumns>2</GridColumns>
   <GridCellSpacing>3</GridCellSpacing>
