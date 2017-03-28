@@ -651,7 +651,7 @@
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
 	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
-	&gt;} PedidosVenta.PrecioUnitario * Venta.CantidadVentas)</v>
+	&gt;} PedidosVenta.ValorNeto)</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -7594,7 +7594,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>300</ColWidth>
+      <ColWidth>306</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -15430,9 +15430,9 @@
       <int>300</int>
       <int>300</int>
       <int>288</int>
-      <int>300</int>
-      <int>300</int>
-      <int>300</int>
+      <int>306</int>
+      <int>100</int>
+      <int>100</int>
       <int>100</int>
       <int>100</int>
       <int>100</int>
@@ -15502,9 +15502,9 @@
       </FgColor>
       <BgColor>
         <Col>
-          <Red>242</Red>
-          <Green>107</Green>
-          <Blue>50</Blue>
+          <Red>27</Red>
+          <Green>134</Green>
+          <Blue>204</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -15577,9 +15577,9 @@
       </FgColor>
       <BgColor>
         <Col>
-          <Red>242</Red>
-          <Green>107</Green>
-          <Blue>50</Blue>
+          <Red>27</Red>
+          <Green>134</Green>
+          <Blue>204</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -24110,7 +24110,7 @@
 	Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
 	SK.FECHA= {&quot;&lt;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
 	PedidosVenta.IdTipoPedido = {&quot;3&quot;}
-	&gt;} PedidosVenta.PrecioUnitario * Venta.CantidadVentas)</v>
+	&gt;} PedidosVenta.ValorNeto)</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -24448,7 +24448,7 @@
                 <Alpha>255</Alpha>
               </TestTubeColor>
             </GaugeSettings>
-            <ColWidth>300</ColWidth>
+            <ColWidth>306</ColWidth>
             <ShowAsPopup>false</ShowAsPopup>
             <Searchable>false</Searchable>
             <LineMode>LINEMODE_STRAIGHT</LineMode>

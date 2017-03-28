@@ -273,10 +273,8 @@
     <Text>
       <v>=Num(
 	Sum({&lt;
-		Calendario.ano={&quot;$(=Year(Max(SK.FECHA)))&quot;}, 
-		SK.FECHA= {&quot;=$(=num(addmonths(max(today()-1),0)))&quot;}, 
-		PedidosVenta.IdTipoPedido={&quot;3&quot;}
-		&gt;} PedidosVenta.PrecioUnitario * Venta.CantidadVentas), '$ #.##0')</v>
+		PedidosVenta.IdTipoPedido={&quot;3&quot;}&gt;} PedidosVenta.ValorNeto)
+	, '$ #.##0')</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>

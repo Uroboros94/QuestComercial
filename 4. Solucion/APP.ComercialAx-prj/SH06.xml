@@ -1831,9 +1831,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>248</Red>
-          <Green>248</Green>
-          <Blue>248</Blue>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -1842,8 +1842,25 @@
       <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
     </BgColor>
-    <FgColor></FgColor>
-    <Mode>1</Mode>
+    <FgColor>
+      <Mode>COLORAREA_SOLID</Mode>
+      <Luminosity>85</Luminosity>
+      <FillDirection>COLORAREA_HORZ</FillDirection>
+      <FillPattern>COLORAREA_PATTERN1</FillPattern>
+      <PrimaryCol>
+        <Col>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </PrimaryCol>
+      <SecondaryCol></SecondaryCol>
+      <Alpha>255</Alpha>
+    </FgColor>
+    <Mode>2</Mode>
   </TabAttr>
   <OnActivateActionItems></OnActivateActionItems>
   <OnDeactivateActionItems></OnDeactivateActionItems>
