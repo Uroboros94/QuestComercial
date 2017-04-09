@@ -5,6 +5,9 @@
 	Fecha       |   Desarrollador   |   Modificación
 	-------------------------------------------------------------------------------------------------
 	11/29/2016  |   malemos         |   Inicio de Configuración
+	09/03/2017	|	malemos			|	Se adicionan nuevos campos (Tipo Id, 
+									|	Fecha de Pedido (YYYYMMDD), Estado del pedido)
+
 *****************************************************************************************************/
 Dimensiones:
 LOAD * INLINE [
@@ -13,6 +16,8 @@ LOAD * INLINE [
 		Cliente
 		Genero
 		Referencia
+		Fecha del Pedido
+		Estado del Pedido
 		Talla
 		Color
 		Causal devolucion
@@ -27,6 +32,7 @@ LOAD * INLINE [
 		Estilo
 		Colección
 		Tipo de Pedido
+		Tipo de Identificación
 		Grupo de venta
 		Descuento
 		% Descontado
