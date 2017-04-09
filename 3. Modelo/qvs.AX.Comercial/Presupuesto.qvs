@@ -1,0 +1,53 @@
+﻿/*****************************************************************************************************
+	Fecha : 28/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Presupuesto_Dia
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/28/2016  |   Alejandro Saa G.|   Inicio de Configuración
+	11/11/2016	|	Malemos			|	Solución a nombre de campos para modelamiento
+*****************************************************************************************************/
+Mapping
+CodigosEC:
+	LOAD
+	CodHomologacion,
+	DIMENSION_ESTRUCTURA_COMERCIAL
+	FROM [$(vRutaOri)DefaulDimensions.QVD]
+	(qvd);
+
+Presupuesto_Temp:
+	LOAD
+		DIA,
+		MES,
+		ANO,
+		FECHA,
+		LINEA,
+		CODBARRAS,
+		PresupuestoEstilo,
+		CodICG,
+		UNIDADES,
+		PESOS
+	FROM
+	[$(vRutaOriBiQuest)Presupuesto_Dia2.QVD]
+	(qvd);
+
+Presupuesto:
+	LOAD
+		ApplyMap('CodigosEC',CodICG)&Date(FECHA, 'YYYYMMDD')	as CK.ID_COFecha,
+		/***********************************************************************/
+		DIA 							as Ppto.Dia,
+		MES 							as Ppto.Mes,
+		ANO 							as Ppto.Año,
+		Date(FECHA, 'YYYYMMDD') 		as Ppto.Fecha,
+		'Semana '&Ceil(Day(FECHA)/7) 	as Ppto.Semana,
+		LINEA							as Ppto.Linea,
+		CODBARRAS						as Ppto.CodBarras,
+		PresupuestoEstilo				as Ppto.PresupuestoEstilo,
+		ApplyMap('CodigosEC',CodICG)	as Ppto.Id_CO,
+		CodICG							as Ppto.IdICG,
+		UNIDADES						as Ppto.Unidades,
+		PESOS							as Ppto.Pesos
+	Resident Presupuesto_Temp;
+	DROP Table Presupuesto_Temp;

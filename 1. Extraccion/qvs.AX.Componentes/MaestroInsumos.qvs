@@ -1,0 +1,21 @@
+/*----------------------------------------------------------------------------------------------------
+ Detalle :
+	Extracción de Dimensiones: MaestroInsumos
+-------------------------------------------------------------------------------------------------
+Fecha       |   Desarrollador     |   Modificación
+-------------------------------------------------------------------------------------------------
+06/10/2016  |   Alejandro Saa G.  |   Inicio de Configuración
+*****************************************************************************************************/
+MaestroInsumos:
+	SQL SELECT
+		it.ITEMID,
+		it.AP_QST_ITEMNAME,
+		it.NAMEALIAS,
+		it.BOMUNITID,
+		it.COSTGROUPID,
+		cg.NAME
+	FROM INVENTTABLE it join BOMCOSTGROUP cg
+		on (cg.COSTGROUPID = it.COSTGROUPID);
+
+STORE MaestroInsumos INTO [$(vRutaOri)MaestroInsumos.QVD](qvd);
+DROP TABLE MaestroInsumos;

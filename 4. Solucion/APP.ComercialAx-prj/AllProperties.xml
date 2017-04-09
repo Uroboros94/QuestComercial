@@ -1807,6 +1807,34 @@ Obtiene la etiqueta definida para cada dimension en el grupo ciclico &quot;Dimen
       <OnChangeActionItems></OnChangeActionItems>
       <Comment></Comment>
     </VariableProperties>
+    <VariableProperties>
+      <Name>vTop</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
   </VariableProperties>
   <BuildNumber>50504</BuildNumber>
   <FieldProperties>
@@ -6718,12 +6746,12 @@ Obtiene la etiqueta definida para cada dimension en el grupo ciclico &quot;Dimen
         <Expression></Expression>
         <SortByGreyness>0</SortByGreyness>
       </SortCriteria>
-      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultTextAdjust>2</DefaultTextAdjust>
       <DefaultNumAdjust>2</DefaultNumAdjust>
       <DefaultMultiLine>0</DefaultMultiLine>
       <DefaultMultiColumn>false</DefaultMultiColumn>
       <DefaultOrderByRow>false</DefaultOrderByRow>
-      <DefaultShowBorders>false</DefaultShowBorders>
+      <DefaultShowBorders>true</DefaultShowBorders>
       <RangeLoInclusive>true</RangeLoInclusive>
       <RangeHiInclusive>true</RangeHiInclusive>
       <FixRangeLen>0000000000000000</FixRangeLen>
@@ -11391,12 +11419,12 @@ Obtiene la etiqueta definida para cada dimension en el grupo ciclico &quot;Dimen
         <Thou></Thou>
       </NumberPresentation>
       <DefaultNumberPresentation>
-        <Type>REAL</Type>
-        <nDec>14</nDec>
+        <Type>MONEY</Type>
+        <nDec>0</nDec>
         <UseThou>1</UseThou>
-        <Fmt>##############</Fmt>
+        <Fmt>$ #.##0;($ #.##0)</Fmt>
         <Dec>,</Dec>
-        <Thou></Thou>
+        <Thou>.</Thou>
       </DefaultNumberPresentation>
       <NumberPresentationSurvive>true</NumberPresentationSurvive>
       <ShowAlternatives>false</ShowAlternatives>
@@ -12737,7 +12765,7 @@ Obtiene la etiqueta definida para cada dimension en el grupo ciclico &quot;Dimen
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>0</SortByNumeric>
+        <SortByNumeric>-1</SortByNumeric>
         <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
@@ -14107,7 +14135,7 @@ Obtiene la etiqueta definida para cada dimension en el grupo ciclico &quot;Dimen
       AAAAAAAAABAAAAAPAAAAAQABAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAA
       AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAAA8AAAABAAEB
       AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-      AQAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAADwAAAAEAAQEAAAQAAAAAAAAAAAAAAAAAAAAA
+      AQAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAEQAAAADwAAAAEAAQEAAAQAAAAAAAAAAAAAAAAAAAAA
       AAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIA
       AAAAAAAAABAAAAAPAAAAAQABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAA
       AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAAA8AAAABAAAB
@@ -14325,7 +14353,7 @@ Obtiene la etiqueta definida para cada dimension en el grupo ciclico &quot;Dimen
       AQAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAADwAAAAEAAAEAAAQAAAAAAAAAAAAAAAAAAAAA
       AAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIA
       AAAAAAAAABAAAAAPAAAAAQABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAA
-      AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAABAAABEAAAAA8AAAABAAAA
+      AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAABAAABEAAAAA8AAAABAP8A
       AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       AQAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAADwAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAAAAA
       AAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIA

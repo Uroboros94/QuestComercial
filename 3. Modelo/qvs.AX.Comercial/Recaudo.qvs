@@ -1,0 +1,115 @@
+/*****************************************************************************************************
+	Fecha : 12/12/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Recaudo de Facturación
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	12/12/2016  |   malemos         |   Inicio de Configuración 
+	13/12/2016	|	malemos			|	Adición de Pronto Pago
+*****************************************************************************************************/
+QST_Modelledgertrans:	
+	LOAD	
+		CUENTA_N3,		
+		CUENTA_N4, 
+		CUENTA_N5,
+		ACCOUNTINGDATE, 	
+		VOUCHER, 		
+		CREDITO, 		
+		DEBITO
+	FROM
+	[$(vRutaOri)QST_Modelledgertrans.QVD]
+	(qvd)
+	where CUENTA_N2 = '13';		
+
+Mapping
+Factura_Asiento:
+	LOAD
+		Pago,
+		Asiento
+	FROM
+	[$(vRutaOriBiQuest)HomologacionPagos.QVD]
+	(qvd);
+
+Mapping
+ProntoPago:
+	LOAD
+		ApplyMap('Factura_Asiento', VOUCHER, Null()) as Documento,
+		Num(DEBITO+CREDITO) as Movimiento
+	FROM 
+	[$(vRutaOri)QST_Modelledgertrans.QVD]
+	(qvd)
+	Where
+	CUENTA_N5 = '53053501';
+
+Mapping
+ReteFuente:
+	LOAD	
+		VOUCHER				as Documento,
+		1.135				as %Base
+	Resident QST_Modelledgertrans
+	Where
+		CUENTA_N4 = '135515';
+
+Recaudo_Temp:
+	LOAD  
+		CUENTA_N5 			as Auxiliar,
+		ACCOUNTINGDATE 		as Fecha,
+		VOUCHER 			as Documento,
+		CREDITO 			as Credito,
+		DEBITO				as Debito
+	Resident QST_Modelledgertrans
+	Where 
+		VOUCHER like 'RC*'
+		AND CUENTA_N3 = '1305';
+	DROP Table QST_Modelledgertrans;
+
+Recaudo_Temp2_1:
+	LOAD
+		Auxiliar,
+		Fecha,
+		Documento,
+		ApplyMap('Factura_Asiento', Documento)		as Asiento,
+		Num(Debito+Credito)							as Movimiento
+	resident Recaudo_Temp;
+	DROP Table Recaudo_Temp;
+
+Recaudo_Temp2:
+	LOAD
+		*,
+		ApplyMap('ReteFuente',Asiento,1.16)		as %Base,
+		ApplyMap('ProntoPago',Asiento,0)		as ProntoPago
+	resident Recaudo_Temp2_1;
+	DROP Table Recaudo_Temp2_1;
+
+Recaudo_Temp3:
+	LOAD
+		Auxiliar,
+		Date(Fecha,'DD/MM/YYYY')					as FechaRecaudo,
+		%Base,
+		Documento									as IdRecaudo,
+		Asiento 									as IdAsiento,
+		num(ProntoPago)								as ProntoPago,
+		Movimiento 									as Movimiento,
+		(Movimiento/%Base)*0.16						as ValorIva,
+		If(%Base<>1.135,0,
+			((Movimiento/%Base)*0.025))				as ValorReteFuente
+	Resident Recaudo_Temp2;
+	DROP Table Recaudo_Temp2;
+
+Recaudo:
+	LOAD
+		IdAsiento									as SK.Asiento,
+		%Base,
+		IdRecaudo									as Recaudo.IdRecaudo,
+		IdAsiento									as Recaudo.IdAsiento,
+		Auxiliar									as Recaudo.Cuenta,
+		ProntoPago									as Recaudo.ProntoPago,
+		FechaRecaudo								as Recaudo.FechaRecaudo,
+		Movimiento									as Recaudo.Movimiento,
+		ValorIva									as Recaudo.ValorIva,
+		ValorReteFuente								as Recaudo.ReteFuente
+	Resident Recaudo_Temp3;
+	DROP Table Recaudo_Temp3;
+

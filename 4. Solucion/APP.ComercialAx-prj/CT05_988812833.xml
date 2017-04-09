@@ -3,15 +3,15 @@
     <BorderWidth>4</BorderWidth>
     <BorderEffect>FLAT</BorderEffect>
     <Color>
-      <Mode>COLORAREA_SINGLE_COLOR</Mode>
-      <Luminosity>85</Luminosity>
+      <Mode>COLORAREA_SOLID</Mode>
+      <Luminosity>178</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
           <Red>255</Red>
-          <Green>0</Green>
-          <Blue>0</Blue>
+          <Green>136</Green>
+          <Blue>135</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -27,7 +27,7 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </SecondaryCol>
-      <Alpha>120</Alpha>
+      <Alpha>255</Alpha>
     </Color>
     <Font>
       <FontName>Calibri</FontName>
@@ -39,7 +39,7 @@
     </Font>
     <CaptionFont>
       <FontName>Calibri</FontName>
-      <PointSize1000>8000</PointSize1000>
+      <PointSize1000>9000</PointSize1000>
       <Underline>false</Underline>
       <Bold>true</Bold>
       <Italic>false</Italic>
@@ -65,44 +65,17 @@
     <ObjectId></ObjectId>
     <ShrinkFrameToData>true</ShrinkFrameToData>
     <ShowCaption>false</ShowCaption>
-    <MultiLine>0</MultiLine>
+    <MultiLine>2</MultiLine>
     <ActiveBgColor>
       <Mode>COLORAREA_SINGLE_COLOR</Mode>
-      <Luminosity>85</Luminosity>
-      <FillDirection>COLORAREA_HORZ</FillDirection>
-      <FillPattern>COLORAREA_PATTERN2</FillPattern>
-      <PrimaryCol>
-        <Col>
-          <Red>255</Red>
-          <Green>0</Green>
-          <Blue>0</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </PrimaryCol>
-      <SecondaryCol>
-        <Col>
-          <Red>153</Red>
-          <Green>153</Green>
-          <Blue>153</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </SecondaryCol>
-      <Alpha>165</Alpha>
-    </ActiveBgColor>
-    <BgColor>
-      <Mode>COLORAREA_SINGLE_COLOR</Mode>
-      <Luminosity>85</Luminosity>
+      <Luminosity>153</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
           <Red>255</Red>
-          <Green>0</Green>
-          <Blue>0</Blue>
+          <Green>136</Green>
+          <Blue>135</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -118,7 +91,34 @@
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </SecondaryCol>
-      <Alpha>120</Alpha>
+      <Alpha>255</Alpha>
+    </ActiveBgColor>
+    <BgColor>
+      <Mode>COLORAREA_SINGLE_COLOR</Mode>
+      <Luminosity>150</Luminosity>
+      <FillDirection>COLORAREA_HORZ</FillDirection>
+      <FillPattern>COLORAREA_PATTERN2</FillPattern>
+      <PrimaryCol>
+        <Col>
+          <Red>178</Red>
+          <Green>47</Green>
+          <Blue>46</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </PrimaryCol>
+      <SecondaryCol>
+        <Col>
+          <Red>153</Red>
+          <Green>153</Green>
+          <Blue>153</Blue>
+          <Alpha>255</Alpha>
+        </Col>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
+      </SecondaryCol>
+      <Alpha>255</Alpha>
     </BgColor>
     <ActiveFgColor>
       <Mode>COLORAREA_SOLID</Mode>
@@ -213,16 +213,25 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>198</Red>
-            <Green>57</Green>
-            <Blue>47</Blue>
+            <Red>255</Red>
+            <Green>67</Green>
+            <Blue>66</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </PrimaryCol>
-        <SecondaryCol></SecondaryCol>
-        <Alpha>120</Alpha>
+        <SecondaryCol>
+          <Col>
+            <Red>200</Red>
+            <Green>200</Green>
+            <Blue>200</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
+        <Alpha>255</Alpha>
       </Color>
       <ImageBlob enctype="base64"></ImageBlob>
       <ImageLayout></ImageLayout>
@@ -257,8 +266,34 @@
     <SecondaryCol></SecondaryCol>
     <Alpha>255</Alpha>
   </TextColor>
-  <TabColor></TabColor>
-  <SingleObjectActiveIndex>1</SingleObjectActiveIndex>
+  <TabColor>
+    <Mode>COLORAREA_SINGLE_COLOR</Mode>
+    <Luminosity>153</Luminosity>
+    <FillDirection>COLORAREA_HORZ</FillDirection>
+    <FillPattern>COLORAREA_PATTERN1</FillPattern>
+    <PrimaryCol>
+      <Col>
+        <Red>255</Red>
+        <Green>136</Green>
+        <Blue>135</Blue>
+        <Alpha>255</Alpha>
+      </Col>
+      <IsCalculated>false</IsCalculated>
+      <ColorExpr></ColorExpr>
+    </PrimaryCol>
+    <SecondaryCol>
+      <Col>
+        <Red>200</Red>
+        <Green>200</Green>
+        <Blue>200</Blue>
+        <Alpha>255</Alpha>
+      </Col>
+      <IsCalculated>false</IsCalculated>
+      <ColorExpr></ColorExpr>
+    </SecondaryCol>
+    <Alpha>255</Alpha>
+  </TabColor>
+  <SingleObjectActiveIndex>0</SingleObjectActiveIndex>
   <GridRows>2</GridRows>
   <GridColumns>2</GridColumns>
   <GridCellSpacing>3</GridCellSpacing>

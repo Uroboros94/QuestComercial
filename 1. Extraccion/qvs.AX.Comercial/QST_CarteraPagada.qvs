@@ -1,0 +1,49 @@
+/*****************************************************************************************************
+	Fecha : 11/10/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Extracción de Dimensiones: Cartera Pagada
+	-------------------------------------------------------------------------------------------------
+	Fecha	    |	Desarrollador	  |	Modificación
+	-------------------------------------------------------------------------------------------------
+	11/10/2016	|	Alejandro Saa G	|	Inicio de Configuración
+*****************************************************************************************************/
+QST_CarteraPagada:
+	SQL SELECT
+		ASIENTOFACTURA,
+		CONDICIONPAGO,
+		CUENTACLIENTE,
+		DESCRIPCIONPRONTOPAGO,
+		DIASVENCIDOS,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		DIVISA,
+		ESTADOFACTURA,
+		FECHAFACTURA,
+		FECHAVENCIMIENTO,
+		IDFACTURA,
+		IDVENDEDOR,
+		MODULOGENERACION,
+		NOMBRECLIENTE,
+		NOMBREESTADOFACTURA,
+		NOMBREMODULOGENERACION,
+		NOMBREVENCIDA,
+		NOMBREVENDEDOR,
+		PORCENTAJEPRONTOPAGO,
+		SALDOCORRIENTETOTAL,
+		SALDOTOTAL,
+		SALDOTOTALDIVISA,
+		SALDOVENCIDOTOTAL,
+		SALESID,
+		TIPOPAGO,
+		ULTIMAFECHALIQUIDACION,
+		ULTIMOASIENTOLIQUIDACION,
+		VALORDIVISALIQUIDADA,
+		VALORFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORLIQUIDADO,
+		VENCIDA
+	FROM QST_MODELCARTERAPAGADA;
+
+STORE QST_CarteraPagada INTO [$(vRutaOri)QST_CarteraPagada.QVD](qvd);
+DROP TABLE QST_CarteraPagada;

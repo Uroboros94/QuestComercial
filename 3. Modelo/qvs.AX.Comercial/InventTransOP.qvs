@@ -1,0 +1,54 @@
+/******************************************************************************************************
+	Fecha : 03/10/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Invent Trans OP
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	03/10/2016  |   Alejandro Saa G |   Inicio de Configuración
+*****************************************************************************************************/
+tmp_InventTransOP:
+LOAD ITEMID&INVENTSIZEID&INVENTCOLORID as CK.ProductoTallaColor,
+	ITEMID,
+	INVENTSIZEID,
+	INVENTCOLORID,
+	INVENTLOCATIONID,
+	WMSLOCATIONID,
+	INVENTSITEID,
+	REFERENCEID,
+	DATEPHYSICAL,
+	DATEFINANCIAL,
+	QTY,
+	COSTAMOUNTPHYSICAL,
+	COSTAMOUNTPOSTED
+FROM
+[$(vRutaOri)InventTransOP.QVD]
+(qvd);
+
+left join
+
+LOAD 
+	CodigoProducto as ITEMID,
+	RutaProducto
+FROM
+[$(vRutaOriPLM)FotosStyle.QVD]
+(qvd);
+
+InventTransOP:
+LOAD CK.ProductoTallaColor,
+	ITEMID,
+	INVENTSIZEID,
+	INVENTCOLORID,
+	INVENTLOCATIONID,
+	WMSLOCATIONID,
+	INVENTSITEID,
+	REFERENCEID,
+	DATEPHYSICAL,
+	DATEFINANCIAL,
+	QTY,
+	COSTAMOUNTPHYSICAL,
+	COSTAMOUNTPOSTED,
+	If(LEN(RutaProducto) > 0, 'Si', 'No') as TIENEFOTO
+Resident tmp_InventTransOP;
+DROP Table tmp_InventTransOP;

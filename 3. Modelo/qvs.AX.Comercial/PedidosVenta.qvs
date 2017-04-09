@@ -1,0 +1,156 @@
+/*
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: PedidosVenta
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016  |   malemos         |   Inicio de Configuración
+	11/17/2016	|	malemos			|	Rediseño de modelamiento de datos, para su correcta ejecución.
+*****************************************************************************************************/
+Mapping
+EC:
+	LOAD
+		DEFAULTDIMENSION,
+		DIMENSION_ESTRUCTURA_COMERCIAL
+	FROM
+	[$(vRutaOri)DefaulDimensions.QVD]
+	(qvd);
+ 
+
+PedidosVenta_Temp:	
+	LOAD
+		IDPEDIDO,
+		IDCLIENTE,
+		IDVENDEDOR,
+		ESTADOPEDIDO,
+		ESTADOLINEA,
+		TIPOPEDIDO,
+		CODARTICULO,
+		TAXGROUP,
+		Num(NUMEROLINEA)								as NUMEROLINEA,
+		date(floor(FECHACREACIONPEDIDO),'YYYYMMDD')		as FECHACREACIONPEDIDO,
+		NOMBREESTADOPEDIDO,
+		NOMBRETIPOPEDIDO,
+		CONDICIONPAGO,
+		Num(PENDIENTEENTREGA)							as PENDIENTEENTREGA,
+		PEDIDOCREADOPOR,
+		GRUPOCOMISION,
+		Money(PRECIOUNITARIO,'$ #.##0;($ #.##0)')		as PRECIOUNITARIO,
+		Num(CANTIDAD)									as CANTIDAD,
+		NOMBREESTADOLINEA,
+		Num(VALORNETO)									as VALORNETO,
+		Num(DESCUENTO)									as DESCUENTO,
+		SITIO,
+		ALMACEN,
+		UNIDADMEDIDA,
+		If(Len(RAZONDEVOLUCION)>0,RAZONDEVOLUCION,'NO ESPECIFICADO') as RAZONDEVOLUCION,
+		NOMBREVENDEDOR,
+		RAZONGRUPO,
+		TALLA,
+		COLOR,
+		ApplyMap('EC',DEFAULTDIMENSIONLINEA)	as DEFAULTDIMENSIONLINEA,
+		TAXGROUPNAME,
+		GRUPOVENTAS,
+		Num(PORCENTAJE)							as PORCENTAJE,
+		ESTADODOCUMENTO,
+		STOCK;
+	LOAD	
+		IDPEDIDO,
+		IDCLIENTE,
+		IDVENDEDOR,
+		ESTADOPEDIDO,
+		ESTADOLINEA,
+		TIPOPEDIDO,
+		CODARTICULO,
+		TAXGROUP,
+		NUMEROLINEA,
+		TALLA,
+		DEFAULTDIMENSIONLINEA,
+		COLOR,
+		FECHACREACIONPEDIDO,
+		NOMBREESTADOPEDIDO,
+		NOMBREVENDEDOR,
+		NOMBRETIPOPEDIDO,
+		CONDICIONPAGO,
+		PENDIENTEENTREGA,
+		PEDIDOCREADOPOR,
+		GRUPOCOMISION,
+		PRECIOUNITARIO,
+		CANTIDAD,
+		NOMBREESTADOLINEA,
+		VALORNETO,
+		DESCUENTO,
+		SITIO,
+		ALMACEN,
+		UNIDADMEDIDA,
+		RAZONDEVOLUCION,
+		RAZONGRUPO,
+		TAXGROUPNAME,
+		GRUPOVENTAS,
+		PORCENTAJE,
+		ESTADODOCUMENTO,
+		STOCK
+	FROM
+	[$(vRutaOri)Salesline.QVD]
+	(qvd);
+
+PedidosVenta:
+	LOAD 
+		IDPEDIDO&IDCLIENTE&FECHACREACIONPEDIDO	as CK.PedidoClienteFecha,
+		CODARTICULO&TALLA&COLOR 				as CK.ProductoTallaColor,
+		/*****************************************************************************/
+		DEFAULTDIMENSIONLINEA					as PedidosVenta.Id_CO, 
+		IDPEDIDO 								as PedidosVenta.Id,
+		NUMEROLINEA								as PedidosVenta.IdNumLinea,
+		IDCLIENTE								as PedidosVenta.IdCliente,
+		IDVENDEDOR								as PedidosVenta.IdVendedor,
+		ESTADOPEDIDO							as PedidosVenta.IdEstadoPedido, 
+		ESTADOLINEA								as PedidosVenta.IdEstadoLinea, 
+		TIPOPEDIDO 								as PedidosVenta.IdTipoPedido,
+		CODARTICULO								as PedidosVenta.IdProducto, 
+		TAXGROUP 								as PedidosVenta.IdGrupoImpuestos,
+		FECHACREACIONPEDIDO 					as PedidosVenta.Fecha,
+		NOMBREESTADOPEDIDO 						as PedidosVenta.EstadoPedido, 
+		NOMBREVENDEDOR 							as PedidosVenta.Vendedor,
+		NOMBRETIPOPEDIDO 						as PedidosVenta.TipoPedido, 
+		CONDICIONPAGO							as PedidosVenta.CondicionPago, 
+		PENDIENTEENTREGA						as PedidosVenta.PendienteXEntrega, 
+		PEDIDOCREADOPOR							as PedidosVenta.Creador, 
+		GRUPOCOMISION							as PedidosVenta.GrupoComision, 
+		PRECIOUNITARIO							as PedidosVenta.PrecioUnitario, 
+		CANTIDAD								as PedidosVenta.Cantidad, 
+		NOMBREESTADOLINEA						as PedidosVenta.EstadoLinea, 
+		ESTADODOCUMENTO							AS PedidosVenta.EstadoDocumento,
+		VALORNETO								as PedidosVenta.ValorNeto, 
+		DESCUENTO								as PedidosVenta.Descuento, 
+		SITIO									as PedidosVenta.Sitio, 
+		ALMACEN									as PedidosVenta.Almacen, 
+		UNIDADMEDIDA							as PedidosVenta.UnidadMedida, 
+		RAZONDEVOLUCION							as PedidosVenta.RazonDevolucion,
+		RAZONGRUPO								as PedidosVenta.RazonGrupo,
+		TAXGROUPNAME							as PedidosVenta.GrupoImpuestos,
+		GRUPOVENTAS								as PedidosVenta.GrupoVentas,
+		PORCENTAJE								as PedidosVenta.Porcentaje,
+		STOCK									as PedidosVenta.Stock
+	Resident PedidosVenta_Temp;
+	Drop Table PedidosVenta_Temp;
+
+ 		//CODARTICULO&TALLA&COLOR  			as PedidoProductoTallaColor,
+		//NOMBRECLIENTE, 
+		//DEFAULTDIMENSIONPEDIDO, 
+		//FECHACREACIONPEDIDO, 
+		//FECHACREACIONPEDIDOTZID,
+		//DATAAREAID, 
+		//RECVERSION, 
+		//PARTITION, 
+		//RECID, 
+		//NOMBREARTICULO, 
+		//NUMEROVARIANTE							as , 
+		//TALLA, 
+		//COLOR, 
+		//ESTILO, 
+		//RECIDLINE, 
+		//IDVENDEDOR, 
+

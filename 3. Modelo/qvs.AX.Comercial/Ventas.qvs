@@ -1,0 +1,58 @@
+/*****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Ventas
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/22/2016  |   malemos         |   Inicio de Configuración
+	11/17/2016	|	malemos			| 	Remodelamiento de datos, (Formateos necesarios para mayor rendimiento)
+	12/01/2016	|	malemos			|	Se ajusta el campo de asiento de la factura con Sk
+									|	Se modificá se consultó 
+*****************************************************************************************************/
+Venta:
+	LOAD 
+		SALESID										as SK.Pedido, 
+		CUENTACLIENTE								as Venta.IdCliente,
+		ASIENTOFACTURA								as SK.Asiento, 
+
+		ESTADOFACTURA 								as Venta.IdEstadoFactura,
+		IDFACTURA									as Venta.IdFactura, 
+		SALESID										as Venta.IdPedido, 
+		ASIENTOFACTURA								as Venta.IdAsiento, 
+		DIASVENCIDOS								as Venta.DiasVencidos, 
+		DIMENSIONDEFAULTFACTSERV					as Venta.FactServ, 
+		DIVISA 										as Venta.Divisa, 
+		NOMBREESTADOFACTURA							as Venta.EstadoFactura, 
+		Date(FECHAFACTURA,'YYYYMMDD')				as Venta.FechaFactura,
+		Date(FECHACIERRE,'YYYYMMDD')				as Venta.FechaCierre,
+		Date(FECHAVENCIMIENTO,'YYYYMMDD')			as Venta.FechaVencimiento,
+		Date(ULTIMAFECHALIQUIDACION,'YYYYMMDD')		as Venta.FechaUltLiquidacion, 
+		Num(SALDOCORRIENTETOTAL)					as Venta.SaldoCorrienteTotal, 
+		Num(SALDOTOTAL)								as Venta.SaldoTotal, 
+		Num(SALDOTOTALDIVISA)						as Venta.SaldoTotalDivisa, 
+		Num(SALDOVENCIDOTOTAL)						as Venta.SaldoVencidoTotal, 
+		ULTIMOASIENTOLIQUIDACION					as Venta.UltimoAsientoLiquidacion,
+		Num(VALORDIVISALIQUIDADA)					as Venta.ValorDivisaLiquidada, 
+		Num(VALORLINEA)								as Venta.ValorFactura, 
+		Num(VALORFACTURADIVISATRANS)				as Venta.ValorFacturaDivisaTrans, 
+		Num(VALORLIQUIDADO)							as Venta.ValorLiquidado, 
+		NOMBREVENCIDA 								as Venta.EsVencida,
+		Date(CREATEDDATETIME)						as Venta.FechaCreacion, 
+		CREATEDBY									as Venta.Creador,
+		Num(CANTIDAD) 								as Venta.CantidadVentas
+	FROM
+	[$(vRutaOri)QST_MODELFACTURAS.QVD]
+	(qvd);
+
+		//VENCIDA								as Venta.DescEsVencida, 
+		//MODULOGENERACION,
+		//NOMBREMODULOGENERACION, 
+		//CONDICIONPAGO, 
+		//NOMBRECLIENTE, 
+		//DIMENSIONDEFAULTSALES						as Venta.Sales, 
+		//DATAAREAID, 
+		//RECVERSION, 
+		//PARTITION, 
+		//RECID

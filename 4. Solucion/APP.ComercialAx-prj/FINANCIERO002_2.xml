@@ -4,15 +4,15 @@
       <BorderWidth>4</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
-        <Luminosity>85</Luminosity>
+        <Mode>COLORAREA_SOLID</Mode>
+        <Luminosity>178</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
             <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Green>136</Green>
+            <Blue>135</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -28,7 +28,7 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>120</Alpha>
+        <Alpha>255</Alpha>
       </Color>
       <Font>
         <FontName>Calibri</FontName>
@@ -71,41 +71,14 @@
       <MultiLine>2</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SINGLE_COLOR</Mode>
-        <Luminosity>85</Luminosity>
-        <FillDirection>COLORAREA_HORZ</FillDirection>
-        <FillPattern>COLORAREA_PATTERN2</FillPattern>
-        <PrimaryCol>
-          <Col>
-            <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </PrimaryCol>
-        <SecondaryCol>
-          <Col>
-            <Red>153</Red>
-            <Green>153</Green>
-            <Blue>153</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </SecondaryCol>
-        <Alpha>165</Alpha>
-      </ActiveBgColor>
-      <BgColor>
-        <Mode>COLORAREA_SINGLE_COLOR</Mode>
-        <Luminosity>85</Luminosity>
+        <Luminosity>153</Luminosity>
         <FillDirection>COLORAREA_HORZ</FillDirection>
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
             <Red>255</Red>
-            <Green>0</Green>
-            <Blue>0</Blue>
+            <Green>136</Green>
+            <Blue>135</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -121,7 +94,34 @@
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </SecondaryCol>
-        <Alpha>120</Alpha>
+        <Alpha>255</Alpha>
+      </ActiveBgColor>
+      <BgColor>
+        <Mode>COLORAREA_SINGLE_COLOR</Mode>
+        <Luminosity>150</Luminosity>
+        <FillDirection>COLORAREA_HORZ</FillDirection>
+        <FillPattern>COLORAREA_PATTERN2</FillPattern>
+        <PrimaryCol>
+          <Col>
+            <Red>178</Red>
+            <Green>47</Green>
+            <Blue>46</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </PrimaryCol>
+        <SecondaryCol>
+          <Col>
+            <Red>153</Red>
+            <Green>153</Green>
+            <Blue>153</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
+        <Alpha>255</Alpha>
       </BgColor>
       <ActiveFgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -490,88 +490,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -585,22 +531,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -975,88 +921,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -1070,22 +962,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -1460,88 +1352,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -1555,22 +1393,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -1945,88 +1783,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -2040,22 +1824,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -2430,88 +2214,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -2525,22 +2255,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -2820,88 +2550,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -2915,22 +2591,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -3006,88 +2682,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -3101,22 +2723,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -3195,88 +2817,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -3290,22 +2858,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -3381,88 +2949,34 @@
         <CellVariationDef>
           <PreMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreMinorBorder>
           <PostMinorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostMinorBorder>
           <MajorBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </MajorBorder>
           <PreTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>220</Red>
-                <Green>220</Green>
-                <Blue>220</Blue>
-                <Alpha>0</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PreTotalBorder>
           <PostTotalBorder>
             <LineStyle>32</LineStyle>
-            <Color>
-              <Col>
-                <Red>0</Red>
-                <Green>0</Green>
-                <Blue>160</Blue>
-                <Alpha>255</Alpha>
-              </Col>
-              <IsCalculated>false</IsCalculated>
-              <ColorExpr></ColorExpr>
-            </Color>
+            <Color></Color>
             <ExtraBorderSpace16>0</ExtraBorderSpace16>
           </PostTotalBorder>
           <SizeMod>0</SizeMod>
           <StyleMod>FONTSTYLE_REGULAR</StyleMod>
           <TotalSizeMod>0</TotalSizeMod>
-          <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-          <FgColor>
-            <Col>
-              <Red>54</Red>
-              <Green>54</Green>
-              <Blue>54</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </FgColor>
+          <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+          <FgColor></FgColor>
           <BgColor>
             <Col>
               <Red>255</Red>
@@ -3476,22 +2990,22 @@
           <TotalFgColor></TotalFgColor>
           <TotalBgColor>
             <Col>
-              <Red>68</Red>
-              <Green>114</Green>
-              <Blue>196</Blue>
-              <Alpha>48</Alpha>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
+              <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
             <ColorExpr></ColorExpr>
           </TotalBgColor>
           <OtherSizeMod>0</OtherSizeMod>
-          <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+          <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
           <OtherFgColor></OtherFgColor>
           <OtherBgColor>
             <Col>
-              <Red>245</Red>
-              <Green>245</Green>
-              <Blue>245</Blue>
+              <Red>255</Red>
+              <Green>255</Green>
+              <Blue>255</Blue>
               <Alpha>255</Alpha>
             </Col>
             <IsCalculated>false</IsCalculated>
@@ -5003,72 +4517,27 @@
     <LabelCellVariation>
       <PreMinorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PreMinorBorder>
       <PostMinorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PostMinorBorder>
       <MajorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </MajorBorder>
       <PreTotalBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PreTotalBorder>
       <PostTotalBorder>
         <LineStyle>64</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PostTotalBorder>
       <SizeMod>0</SizeMod>
@@ -5087,9 +4556,9 @@
       </FgColor>
       <BgColor>
         <Col>
-          <Red>68</Red>
-          <Green>114</Green>
-          <Blue>196</Blue>
+          <Red>27</Red>
+          <Green>134</Green>
+          <Blue>204</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -5123,88 +4592,34 @@
     <PseudoDimCellVariation>
       <PreMinorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PreMinorBorder>
       <PostMinorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PostMinorBorder>
       <MajorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </MajorBorder>
       <PreTotalBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PreTotalBorder>
       <PostTotalBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PostTotalBorder>
       <SizeMod>0</SizeMod>
       <StyleMod>FONTSTYLE_REGULAR</StyleMod>
       <TotalSizeMod>0</TotalSizeMod>
-      <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-      <FgColor>
-        <Col>
-          <Red>54</Red>
-          <Green>54</Green>
-          <Blue>54</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </FgColor>
+      <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+      <FgColor></FgColor>
       <BgColor>
         <Col>
           <Red>255</Red>
@@ -5218,22 +4633,22 @@
       <TotalFgColor></TotalFgColor>
       <TotalBgColor>
         <Col>
-          <Red>245</Red>
-          <Green>245</Green>
-          <Blue>245</Blue>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </TotalBgColor>
       <OtherSizeMod>0</OtherSizeMod>
-      <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+      <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
       <OtherFgColor></OtherFgColor>
       <OtherBgColor>
         <Col>
-          <Red>245</Red>
-          <Green>245</Green>
-          <Blue>245</Blue>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -5243,88 +4658,34 @@
     <DefaultDimCellVariation>
       <PreMinorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PreMinorBorder>
       <PostMinorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PostMinorBorder>
       <MajorBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </MajorBorder>
       <PreTotalBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PreTotalBorder>
       <PostTotalBorder>
         <LineStyle>32</LineStyle>
-        <Color>
-          <Col>
-            <Red>220</Red>
-            <Green>220</Green>
-            <Blue>220</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </Color>
+        <Color></Color>
         <ExtraBorderSpace16>0</ExtraBorderSpace16>
       </PostTotalBorder>
       <SizeMod>0</SizeMod>
       <StyleMod>FONTSTYLE_REGULAR</StyleMod>
       <TotalSizeMod>0</TotalSizeMod>
-      <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-      <FgColor>
-        <Col>
-          <Red>54</Red>
-          <Green>54</Green>
-          <Blue>54</Blue>
-          <Alpha>255</Alpha>
-        </Col>
-        <IsCalculated>false</IsCalculated>
-        <ColorExpr></ColorExpr>
-      </FgColor>
+      <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+      <FgColor></FgColor>
       <BgColor>
         <Col>
           <Red>255</Red>
@@ -5338,22 +4699,22 @@
       <TotalFgColor></TotalFgColor>
       <TotalBgColor>
         <Col>
-          <Red>245</Red>
-          <Green>245</Green>
-          <Blue>245</Blue>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
         <ColorExpr></ColorExpr>
       </TotalBgColor>
       <OtherSizeMod>0</OtherSizeMod>
-      <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+      <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
       <OtherFgColor></OtherFgColor>
       <OtherBgColor>
         <Col>
-          <Red>245</Red>
-          <Green>245</Green>
-          <Blue>245</Blue>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -5364,88 +4725,34 @@
       <CellVariationDef>
         <PreMinorBorder>
           <LineStyle>32</LineStyle>
-          <Color>
-            <Col>
-              <Red>220</Red>
-              <Green>220</Green>
-              <Blue>220</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </Color>
+          <Color></Color>
           <ExtraBorderSpace16>0</ExtraBorderSpace16>
         </PreMinorBorder>
         <PostMinorBorder>
           <LineStyle>32</LineStyle>
-          <Color>
-            <Col>
-              <Red>220</Red>
-              <Green>220</Green>
-              <Blue>220</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </Color>
+          <Color></Color>
           <ExtraBorderSpace16>0</ExtraBorderSpace16>
         </PostMinorBorder>
         <MajorBorder>
           <LineStyle>32</LineStyle>
-          <Color>
-            <Col>
-              <Red>220</Red>
-              <Green>220</Green>
-              <Blue>220</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </Color>
+          <Color></Color>
           <ExtraBorderSpace16>0</ExtraBorderSpace16>
         </MajorBorder>
         <PreTotalBorder>
           <LineStyle>32</LineStyle>
-          <Color>
-            <Col>
-              <Red>220</Red>
-              <Green>220</Green>
-              <Blue>220</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </Color>
+          <Color></Color>
           <ExtraBorderSpace16>0</ExtraBorderSpace16>
         </PreTotalBorder>
         <PostTotalBorder>
           <LineStyle>32</LineStyle>
-          <Color>
-            <Col>
-              <Red>220</Red>
-              <Green>220</Green>
-              <Blue>220</Blue>
-              <Alpha>255</Alpha>
-            </Col>
-            <IsCalculated>false</IsCalculated>
-            <ColorExpr></ColorExpr>
-          </Color>
+          <Color></Color>
           <ExtraBorderSpace16>0</ExtraBorderSpace16>
         </PostTotalBorder>
         <SizeMod>0</SizeMod>
         <StyleMod>FONTSTYLE_REGULAR</StyleMod>
         <TotalSizeMod>0</TotalSizeMod>
-        <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-        <FgColor>
-          <Col>
-            <Red>54</Red>
-            <Green>54</Green>
-            <Blue>54</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </FgColor>
+        <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+        <FgColor></FgColor>
         <BgColor>
           <Col>
             <Red>255</Red>
@@ -5459,22 +4766,22 @@
         <TotalFgColor></TotalFgColor>
         <TotalBgColor>
           <Col>
-            <Red>245</Red>
-            <Green>245</Green>
-            <Blue>245</Blue>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </TotalBgColor>
         <OtherSizeMod>0</OtherSizeMod>
-        <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+        <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
         <OtherFgColor></OtherFgColor>
         <OtherBgColor>
           <Col>
-            <Red>245</Red>
-            <Green>245</Green>
-            <Blue>245</Blue>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -5722,88 +5029,34 @@
               <CellVariationDef>
                 <PreMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreMinorBorder>
                 <PostMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostMinorBorder>
                 <MajorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </MajorBorder>
                 <PreTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>0</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreTotalBorder>
                 <PostTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>0</Red>
-                      <Green>0</Green>
-                      <Blue>160</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostTotalBorder>
                 <SizeMod>0</SizeMod>
                 <StyleMod>FONTSTYLE_REGULAR</StyleMod>
                 <TotalSizeMod>0</TotalSizeMod>
-                <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-                <FgColor>
-                  <Col>
-                    <Red>54</Red>
-                    <Green>54</Green>
-                    <Blue>54</Blue>
-                    <Alpha>255</Alpha>
-                  </Col>
-                  <IsCalculated>false</IsCalculated>
-                  <ColorExpr></ColorExpr>
-                </FgColor>
+                <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+                <FgColor></FgColor>
                 <BgColor>
                   <Col>
                     <Red>255</Red>
@@ -5817,22 +5070,22 @@
                 <TotalFgColor></TotalFgColor>
                 <TotalBgColor>
                   <Col>
-                    <Red>68</Red>
-                    <Green>114</Green>
-                    <Blue>196</Blue>
-                    <Alpha>48</Alpha>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
+                    <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
                   <ColorExpr></ColorExpr>
                 </TotalBgColor>
                 <OtherSizeMod>0</OtherSizeMod>
-                <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+                <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
                 <OtherFgColor></OtherFgColor>
                 <OtherBgColor>
                   <Col>
-                    <Red>245</Red>
-                    <Green>245</Green>
-                    <Blue>245</Blue>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
                     <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
@@ -6314,88 +5567,34 @@
               <CellVariationDef>
                 <PreMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreMinorBorder>
                 <PostMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostMinorBorder>
                 <MajorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </MajorBorder>
                 <PreTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>0</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreTotalBorder>
                 <PostTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>0</Red>
-                      <Green>0</Green>
-                      <Blue>160</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostTotalBorder>
                 <SizeMod>0</SizeMod>
                 <StyleMod>FONTSTYLE_REGULAR</StyleMod>
                 <TotalSizeMod>0</TotalSizeMod>
-                <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-                <FgColor>
-                  <Col>
-                    <Red>54</Red>
-                    <Green>54</Green>
-                    <Blue>54</Blue>
-                    <Alpha>255</Alpha>
-                  </Col>
-                  <IsCalculated>false</IsCalculated>
-                  <ColorExpr></ColorExpr>
-                </FgColor>
+                <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+                <FgColor></FgColor>
                 <BgColor>
                   <Col>
                     <Red>255</Red>
@@ -6409,22 +5608,22 @@
                 <TotalFgColor></TotalFgColor>
                 <TotalBgColor>
                   <Col>
-                    <Red>68</Red>
-                    <Green>114</Green>
-                    <Blue>196</Blue>
-                    <Alpha>48</Alpha>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
+                    <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
                   <ColorExpr></ColorExpr>
                 </TotalBgColor>
                 <OtherSizeMod>0</OtherSizeMod>
-                <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+                <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
                 <OtherFgColor></OtherFgColor>
                 <OtherBgColor>
                   <Col>
-                    <Red>245</Red>
-                    <Green>245</Green>
-                    <Blue>245</Blue>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
                     <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
@@ -6905,88 +6104,34 @@
               <CellVariationDef>
                 <PreMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreMinorBorder>
                 <PostMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostMinorBorder>
                 <MajorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </MajorBorder>
                 <PreTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>0</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreTotalBorder>
                 <PostTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>0</Red>
-                      <Green>0</Green>
-                      <Blue>160</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostTotalBorder>
                 <SizeMod>0</SizeMod>
                 <StyleMod>FONTSTYLE_REGULAR</StyleMod>
                 <TotalSizeMod>0</TotalSizeMod>
-                <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-                <FgColor>
-                  <Col>
-                    <Red>54</Red>
-                    <Green>54</Green>
-                    <Blue>54</Blue>
-                    <Alpha>255</Alpha>
-                  </Col>
-                  <IsCalculated>false</IsCalculated>
-                  <ColorExpr></ColorExpr>
-                </FgColor>
+                <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+                <FgColor></FgColor>
                 <BgColor>
                   <Col>
                     <Red>255</Red>
@@ -7000,22 +6145,22 @@
                 <TotalFgColor></TotalFgColor>
                 <TotalBgColor>
                   <Col>
-                    <Red>68</Red>
-                    <Green>114</Green>
-                    <Blue>196</Blue>
-                    <Alpha>48</Alpha>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
+                    <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
                   <ColorExpr></ColorExpr>
                 </TotalBgColor>
                 <OtherSizeMod>0</OtherSizeMod>
-                <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+                <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
                 <OtherFgColor></OtherFgColor>
                 <OtherBgColor>
                   <Col>
-                    <Red>245</Red>
-                    <Green>245</Green>
-                    <Blue>245</Blue>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
                     <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
@@ -7497,88 +6642,34 @@
               <CellVariationDef>
                 <PreMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreMinorBorder>
                 <PostMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostMinorBorder>
                 <MajorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </MajorBorder>
                 <PreTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>0</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreTotalBorder>
                 <PostTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>0</Red>
-                      <Green>0</Green>
-                      <Blue>160</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostTotalBorder>
                 <SizeMod>0</SizeMod>
                 <StyleMod>FONTSTYLE_REGULAR</StyleMod>
                 <TotalSizeMod>0</TotalSizeMod>
-                <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-                <FgColor>
-                  <Col>
-                    <Red>54</Red>
-                    <Green>54</Green>
-                    <Blue>54</Blue>
-                    <Alpha>255</Alpha>
-                  </Col>
-                  <IsCalculated>false</IsCalculated>
-                  <ColorExpr></ColorExpr>
-                </FgColor>
+                <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+                <FgColor></FgColor>
                 <BgColor>
                   <Col>
                     <Red>255</Red>
@@ -7592,22 +6683,22 @@
                 <TotalFgColor></TotalFgColor>
                 <TotalBgColor>
                   <Col>
-                    <Red>68</Red>
-                    <Green>114</Green>
-                    <Blue>196</Blue>
-                    <Alpha>48</Alpha>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
+                    <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
                   <ColorExpr></ColorExpr>
                 </TotalBgColor>
                 <OtherSizeMod>0</OtherSizeMod>
-                <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+                <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
                 <OtherFgColor></OtherFgColor>
                 <OtherBgColor>
                   <Col>
-                    <Red>245</Red>
-                    <Green>245</Green>
-                    <Blue>245</Blue>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
                     <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
@@ -8087,88 +7178,34 @@
               <CellVariationDef>
                 <PreMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreMinorBorder>
                 <PostMinorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostMinorBorder>
                 <MajorBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </MajorBorder>
                 <PreTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>220</Red>
-                      <Green>220</Green>
-                      <Blue>220</Blue>
-                      <Alpha>0</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PreTotalBorder>
                 <PostTotalBorder>
                   <LineStyle>32</LineStyle>
-                  <Color>
-                    <Col>
-                      <Red>0</Red>
-                      <Green>0</Green>
-                      <Blue>160</Blue>
-                      <Alpha>255</Alpha>
-                    </Col>
-                    <IsCalculated>false</IsCalculated>
-                    <ColorExpr></ColorExpr>
-                  </Color>
+                  <Color></Color>
                   <ExtraBorderSpace16>0</ExtraBorderSpace16>
                 </PostTotalBorder>
                 <SizeMod>0</SizeMod>
                 <StyleMod>FONTSTYLE_REGULAR</StyleMod>
                 <TotalSizeMod>0</TotalSizeMod>
-                <TotalStyleMod>FONTSTYLE_BOLD</TotalStyleMod>
-                <FgColor>
-                  <Col>
-                    <Red>54</Red>
-                    <Green>54</Green>
-                    <Blue>54</Blue>
-                    <Alpha>255</Alpha>
-                  </Col>
-                  <IsCalculated>false</IsCalculated>
-                  <ColorExpr></ColorExpr>
-                </FgColor>
+                <TotalStyleMod>FONTSTYLE_REGULAR</TotalStyleMod>
+                <FgColor></FgColor>
                 <BgColor>
                   <Col>
                     <Red>255</Red>
@@ -8182,22 +7219,22 @@
                 <TotalFgColor></TotalFgColor>
                 <TotalBgColor>
                   <Col>
-                    <Red>68</Red>
-                    <Green>114</Green>
-                    <Blue>196</Blue>
-                    <Alpha>48</Alpha>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
+                    <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>
                   <ColorExpr></ColorExpr>
                 </TotalBgColor>
                 <OtherSizeMod>0</OtherSizeMod>
-                <OtherStyleMod>FONTSTYLE_BOLD</OtherStyleMod>
+                <OtherStyleMod>FONTSTYLE_REGULAR</OtherStyleMod>
                 <OtherFgColor></OtherFgColor>
                 <OtherBgColor>
                   <Col>
-                    <Red>245</Red>
-                    <Green>245</Green>
-                    <Blue>245</Blue>
+                    <Red>255</Red>
+                    <Green>255</Green>
+                    <Blue>255</Blue>
                     <Alpha>255</Alpha>
                   </Col>
                   <IsCalculated>false</IsCalculated>

@@ -1,0 +1,147 @@
+/*****************************************************************************************************
+	Fecha : 20/09/2016
+	----------------------------------------------------------------------------------------------------
+	Detalle :
+	Creación del Modelo: Maestro de Productos
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   CarteraCliente
+	-------------------------------------------------------------------------------------------------
+	09/22/2016  |   malemos         |   Inicio de Configuración
+	11/11/2016	|	malemos			|	Identado y borrado de datos no necesarios
+*****************************************************************************************************/
+CarteraCliente_tmp:
+	LOAD
+		ASIENTOFACTURA,
+		CONDICIONPAGO,
+		CREATEDBY,
+		CREATEDDATETIME,
+		CUENTACLIENTE				as IDCLIENTE,
+		CUENTACONTABLE,
+		DESCRIPCIONPRONTOPAGO,
+		DIASVENCIDOS,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		DIVISA,
+		ESTADOFACTURA,
+		Num(Today()-FECHAVENCIMIENTO)	as DiasPorVencer,
+		FECHAFACTURA,
+		FECHAVENCIMIENTO,
+		IDFACTURA,
+		IDVENDEDOR,
+		NOMBREESTADOFACTURA,
+		NOMBREVENCIDA,
+		NOMBREVENDEDOR,
+		PORCENTAJEPRONTOPAGO,
+		SALDOCORRIENTETOTAL,
+		SALDOTOTAL,
+		SALDOTOTALDIVISA,
+		SALDOVENCIDOTOTAL,
+		TIPOPAGO,
+		ULTIMAFECHALIQUIDACION,
+		ULTIMOASIENTOLIQUIDACION,
+		VALORDIVISALIQUIDADA,
+		VALORFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORLIQUIDADO,
+		VENCIDA,
+		TIPOMEDIOPAGO,
+		NOMBREMEDIOPAGO,
+		'Parcial' as ESTADOCARTERA
+	FROM
+	[$(vRutaOri)QST_Cartera.QVD]
+	(qvd);
+		//DATAAREAID,
+		//MODULOGENERACION,
+		//NOMBRECLIENTE,
+		//NOMBREMODULOGENERACION,
+		//SALESID,
+
+Concatenate(CarteraCliente_tmp)
+	LOAD
+		ASIENTOFACTURA,
+		CONDICIONPAGO,
+		CUENTACLIENTE									as IDCLIENTE,
+		DESCRIPCIONPRONTOPAGO,
+		DIASVENCIDOS,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		DIVISA,
+		ESTADOFACTURA,
+		Num(Today()-FECHAVENCIMIENTO)					as DiasPorVencer,
+		FECHAFACTURA 									as ULTIMAFECHALIQUIDACION,
+		FECHAVENCIMIENTO,				
+		IDFACTURA 										as ULTIMOASIENTOLIQUIDACION,
+		IDVENDEDOR,
+		NOMBREESTADOFACTURA,
+		NOMBREVENCIDA,
+		NOMBREVENDEDOR,
+		PORCENTAJEPRONTOPAGO,
+		SALDOCORRIENTETOTAL,
+		SALDOTOTAL,
+		SALDOTOTALDIVISA,
+		SALDOVENCIDOTOTAL,
+		TIPOPAGO,
+		ULTIMAFECHALIQUIDACION							as FECHAFACTURA,
+		ULTIMOASIENTOLIQUIDACION						as IDFACTURA,
+		VALORDIVISALIQUIDADA,
+		if(VALORLIQUIDADO<=0,VALORFACTURA,0)			as VALORFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORLIQUIDADO,
+		VENCIDA,
+		'Pagada' as ESTADOCARTERA
+	FROM
+	[$(vRutaOri)QST_CarteraPagada.QVD]
+	(qvd)
+	WHERE 
+		ULTIMOASIENTOLIQUIDACION <> '';
+		//MODULOGENERACION,
+		//NOMBRECLIENTE,
+		//NOMBREMODULOGENERACION,
+		//SALESID,
+
+CarteraCliente:
+	LOAD
+		IDCLIENTE										as SK.Cliente,
+		IDCLIENTE										as Cartera.IdCliente,
+		IDFACTURA										as Cartera.IdFactura,
+		IDVENDEDOR										as Cartera.IdVendedor,
+		ESTADOFACTURA									as Cartera.IdEstadoFactura,
+		ASIENTOFACTURA									as Cartera.AsientoFactura,
+		CUENTACONTABLE									as Cartera.CuentaContable,
+		CONDICIONPAGO									as Cartera.CondicionPago,
+		CREATEDBY										as Cartera.Creador,
+		Date(Left(CREATEDDATETIME, 10),'DD/MM/YYYY')	as Cartera.FechaCreacion,
+		DESCRIPCIONPRONTOPAGO							as Cartera.ProntoPago,
+		DIASVENCIDOS									as Cartera.DiasVencidos,
+		DIMENSIONDEFAULTFACTSERV						as Cartera.FactServ,
+		DIMENSIONDEFAULTSALES							as Cartera.Sales,
+		DIVISA											as Cartera.Divisa,
+		DiasPorVencer									as Cartera.DiasPorVencer,
+		Date(Left(FECHAFACTURA, 10),'DD/MM/YYYY')		as Cartera.FechaFactura,
+		Date(Left(FECHAVENCIMIENTO, 10),'DD/MM/YYYY')	as Cartera.FechaVencimiento,
+		NOMBREVENCIDA									as Cartera.EsVencida,
+		NOMBREESTADOFACTURA								as Cartera.EstadoFactura,
+		NOMBREVENDEDOR									as Cartera.Vendedor,
+		PORCENTAJEPRONTOPAGO							as Cartera.PorcentajeProntoPago,
+		Num(SALDOCORRIENTETOTAL)						as Cartera.SaldoCorrienteTotal,
+		Num(SALDOTOTAL)									as Cartera.SaldoTotal,
+		Num(SALDOTOTALDIVISA)							as Cartera.SaldoTotalDivisa,
+		Num(SALDOVENCIDOTOTAL)							as Cartera.SaldoVencidoTotal,
+		TIPOPAGO										as Cartera.TipoPago,
+		Date(ULTIMAFECHALIQUIDACION,'DD/MM/YYYY')		as Cartera.FechaUltLiquidacion,
+		ULTIMOASIENTOLIQUIDACION						as Cartera.UltAsientoLiquidacion,
+		Num(VALORDIVISALIQUIDADA)						as Cartera.ValorFivisaLiquidada,
+		Num(VALORFACTURA)								as Cartera.ValorFactura,
+		Num(VALORFACTURADIVISATRANS)					as Cartera.ValorFacturaDivisaTrans,
+		Num(VALORLIQUIDADO)								as Cartera.ValorLiquidado,
+		VENCIDA 										as Cartera.Vencida,
+		ESTADOCARTERA									as Cartera.Estado,
+		TIPOMEDIOPAGO 									as Cartera.TipoMedioPago,
+		NOMBREMEDIOPAGO									as Cartera.NombreMedioPago
+	Resident CarteraCliente_tmp;
+	DROP Table CarteraCliente_tmp;
+		//DATAAREAID,
+		//MODULOGENERACION,
+		//NOMBRECLIENTE,
+		//NOMBREMODULOGENERACION,
+		//SALESID,

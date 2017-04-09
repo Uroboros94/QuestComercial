@@ -1,0 +1,51 @@
+/****************************************************************************************************
+	Detalle :
+	Extracción de Dimensiones: QST_MODELFACTURAS
+	-------------------------------------------------------------------------------------------------
+	Fecha       |   Desarrollador   |   Modificación
+	-------------------------------------------------------------------------------------------------
+	09/26/2016  |   malemos         |   Inicio de Configuración
+*****************************************************************************************************/
+QST_MODELFACTURAS:
+	SQL SELECT
+		ASIENTOFACTURA,
+		CONDICIONPAGO,
+		CUENTACLIENTE,
+		DIASVENCIDOS,
+		DIMENSIONDEFAULTFACTSERV,
+		DIMENSIONDEFAULTSALES,
+		DIVISA,
+		ESTADOFACTURA,
+		NOMBREESTADOFACTURA,
+		FECHACIERRE,
+		FECHAFACTURA,
+		FECHAVENCIMIENTO,
+		IDFACTURA,
+		MODULOGENERACION,
+		NOMBREMODULOGENERACION,
+		NOMBRECLIENTE,
+		SALDOCORRIENTETOTAL,
+		SALDOTOTAL,
+		SALDOTOTALDIVISA,
+		SALDOVENCIDOTOTAL,
+		SALESID,
+		ULTIMAFECHALIQUIDACION,
+		ULTIMOASIENTOLIQUIDACION,
+		VALORDIVISALIQUIDADA,
+		VALORFACTURA,
+		VALORFACTURADIVISATRANS,
+		VALORLIQUIDADO,
+		VENCIDA,
+		NOMBREVENCIDA,
+		CREATEDDATETIME,
+		CREATEDBY,
+		CANTIDAD,
+		VALORLINEA
+	FROM "QST_MODELFACTURAS";
+		//DATAAREAID,
+		//RECVERSION,
+		//PARTITION,
+		//RECID,
+
+STORE QST_MODELFACTURAS INTO [$(vRutaOri)QST_MODELFACTURAS.QVD](qvd);
+DROP TABLE QST_MODELFACTURAS;

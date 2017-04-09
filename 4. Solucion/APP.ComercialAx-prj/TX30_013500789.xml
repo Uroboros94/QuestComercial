@@ -17,7 +17,7 @@
           </Col>
           <IsCalculated>true</IsCalculated>
           <ColorExpr>
-            <v>=If(vGrafDespacho = 'Despacho', RGB(255,0,0),RGB(192,192,192))</v>
+            <v>=If(vGrafDespacho = 'Despacho',rgb(127,30,29),RGB(192,192,192))</v>
           </ColorExpr>
         </PrimaryCol>
         <SecondaryCol></SecondaryCol>
@@ -154,7 +154,7 @@
       <FixCornerSize>21</FixCornerSize>
       <RelCornerSize>4059000000000000</RelCornerSize>
       <Power>4000000000000000</Power>
-      <RoundedShape>true</RoundedShape>
+      <RoundedShape>false</RoundedShape>
       <EnableTopLeftRounded>true</EnableTopLeftRounded>
       <EnableTopRightRounded>true</EnableTopRightRounded>
       <EnableBottomLeftRounded>true</EnableBottomLeftRounded>
@@ -231,7 +231,7 @@
       <Alpha>255</Alpha>
     </TextColor>
     <BkgColor>
-      <Mode>COLORAREA_SINGLE_COLOR</Mode>
+      <Mode>COLORAREA_SOLID</Mode>
       <Luminosity>85</Luminosity>
       <FillDirection>COLORAREA_HORZ</FillDirection>
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
@@ -244,7 +244,7 @@
         </Col>
         <IsCalculated>true</IsCalculated>
         <ColorExpr>
-          <v>=If(vGrafDespacho = 'Despacho', RGB(255,0,0), RGB(192,192,192))</v>
+          <v>=If(vGrafDespacho = 'Despacho', rgb(127,30,29), RGB(192,192,192))</v>
         </ColorExpr>
       </PrimaryCol>
       <SecondaryCol></SecondaryCol>
