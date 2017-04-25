@@ -29,12 +29,12 @@ Factura_Asiento:
 		Pago,
 		Asiento
 	FROM
-	[$(vRutaOriBiQuest)HomologacionPagos.QVD]
+	[$(vRutaOri)HomologacionPagos.QVD]
 	(qvd);
 
 Mapping
 ProntoPago:
-	LOAD
+	LOAD		
 		ApplyMap('Factura_Asiento', VOUCHER, Null()) as Documento,
 		Num(DEBITO+CREDITO) as Movimiento
 	FROM 
@@ -52,6 +52,7 @@ ReteFuente:
 	Where
 		CUENTA_N4 = '135515';
 
+/*	Inicio	*/
 Recaudo_Temp:
 	LOAD  
 		CUENTA_N5 			as Auxiliar,
